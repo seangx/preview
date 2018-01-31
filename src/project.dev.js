@@ -449,108 +449,6 @@ require = function e(t, n, r) {
     "./game-ctl": "game-ctl",
     "./player-data": "player-data"
   } ],
-  audio: [ function(require, module, exports) {
-    "use strict";
-    cc._RF.push(module, "8754ckuxmJEbYg4B3VwnexS", "audio");
-    "use strict";
-    var DeviceType = {
-      iPhone: 1,
-      iPad: 2,
-      Weixin: 3,
-      PC: 4,
-      unknown: 5
-    };
-    function AudioUtils() {
-      var that = {};
-      var _record = null;
-      that.device = DeviceType.unknown;
-      var agent = navigator.userAgent;
-      console.log(agent);
-      agent.indexOf("MicroMessenger") >= 0 ? that.device = DeviceType.Weixin : agent.indexOf("iPhone") >= 0 ? that.device = DeviceType.iPhone : agent.indexOf("iPad") >= 0 ? that.device = DeviceType.iPad : that.device = DeviceType.PC;
-      console.log(that.device);
-      that.init = function() {
-        switch (that.device) {
-         case DeviceType.PC:
-          console.log("init pc");
-          initPC();
-          break;
-
-         case DeviceType.Weixin:
-          console.log("init wx");
-          initWeixin();
-        }
-      };
-      var initWeixin = function initWeixin() {
-        MUtils.wxReady(function() {
-          console.log("wx ready....");
-        });
-      };
-      var initPC = function initPC() {
-        navigator.mediaDevices.getUserMedia({
-          video: false,
-          audio: true
-        }).then(function(stream) {
-          console.log("pc初始化设备....");
-          var context = new AudioContext();
-          var source = context.createMediaStreamSource(stream);
-          _record = new Recorder(source);
-        }).catch(function(e) {
-          console.log(e);
-        });
-      };
-      var pcBeginRecord = function pcBeginRecord() {
-        console.log("pc开始录音......");
-        _record.stop();
-        _record.clear();
-        _record.record();
-      };
-      var pcEndRecord = function pcEndRecord(cb) {
-        console.log("pc结束录音......");
-        _record.stop();
-        _record.exportWAV(cb, "audio/wav");
-      };
-      var wxBeginRecord = function wxBeginRecord(cb) {
-        console.log("wx开始录音.....");
-        wx.startRecord();
-      };
-      var wxEndRecord = function wxEndRecord(cb) {
-        console.log("wx结束录音......");
-        wx.stopRecord({
-          success: function success(res) {
-            var localId = res.localId;
-            wx.playVoice({
-              localId: localId
-            });
-            cb();
-          }
-        });
-      };
-      that.beginRecord = function() {
-        switch (that.device) {
-         case DeviceType.PC:
-          pcBeginRecord();
-          break;
-
-         case DeviceType.Weixin:
-          wxBeginRecord();
-        }
-      };
-      that.endRecord = function(cb) {
-        var data = null;
-        switch (that.device) {
-         case DeviceType.PC:
-          pcEndRecord(cb);
-          break;
-
-         case DeviceType.Weixin:
-          wxEndRecord(cb);
-        }
-      };
-      return that;
-    }
-    window.run = AudioUtils();
-    cc._RF.pop();
-  }, {} ],
   "bg-controller": [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "80a351DW0ZOAY4jrUIzlhBr", "bg-controller");
@@ -574,17 +472,11 @@ require = function e(t, n, r) {
       onLoad: function onLoad() {},
       update: function update(dt) {
         if (_global2.default.account.gameCtl.isRunning()) {
-          for (var i = 0; i < this.bgList.length; i++) {
-            var node = this.bgList[i];
-            node.position = cc.p(node.position.x - this.bgSpeed * dt * defines.timeScale, node.position.y);
-          }
-          for (var _i = 0; _i < this.bgList.length; _i++) {
-            var _node = this.bgList[_i];
-            if (_node.position.x < -_node.width) {
-              var index = _i + 1;
-              index > this.bgList.length - 1 && (index = 0);
-              _node.position = cc.p(this.bgList[index].position.x + _node.width, _node.position.y);
-            }
+          for (var i = 0; i < this.bgList.length; i++) this.bgList[i].x -= this.bgSpeed * dt * defines.timeScale;
+          for (var _i = 0; _i < this.bgList.length; _i++) if (this.bgList[_i].position.x < -this.bgList[_i].width) {
+            var index = _i + 1;
+            index > this.bgList.length - 1 && (index = 0);
+            this.bgList[_i].x = this.bgList[index].x + this.bgList[_i].width;
           }
         }
       }
@@ -1286,48 +1178,13 @@ require = function e(t, n, r) {
         this.node.position.x + .5 * this.node.width < -.5 * cc.winSize.width && (this.node.dead = true);
       },
       onDestroy: function onDestroy() {
-        console.log("destroy");
+        console.log("销毁障碍物");
       }
     });
     cc._RF.pop();
   }, {
     "./../../global": "global"
   } ],
-  test: [ function(require, module, exports) {
-    "use strict";
-    cc._RF.push(module, "637491nATVC74dTGbQqpBON", "test");
-    "use strict";
-    cc.Class({
-      extends: cc.Component,
-      properties: {},
-      onLoad: function onLoad() {
-        var self = this;
-        run.init();
-      },
-      onRecordBegin: function onRecordBegin(event) {
-        run.beginRecord();
-      },
-      onRecordEnd: function onRecordEnd(event) {
-        run.endRecord(function(res) {
-          console.log(res);
-        });
-      },
-      onPlayRecord: function onPlayRecord(event) {
-        console.log("结束并播放....");
-        var self = this;
-        self.rec.getBuffer(function getBufferCallback(buffers) {
-          var newSource = self.rec.context.createBufferSource();
-          var newBuffer = self.rec.context.createBuffer(2, buffers[0].length, self.rec.context.sampleRate);
-          newBuffer.getChannelData(0).set(buffers[0]);
-          newBuffer.getChannelData(1).set(buffers[1]);
-          newSource.buffer = newBuffer;
-          newSource.connect(self.rec.context.destination);
-          newSource.start(0);
-        });
-      }
-    });
-    cc._RF.pop();
-  }, {} ],
   "tips-ctl": [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "d915eFyCSdCor4UBzNBwfsh", "tips-ctl");
@@ -1456,4 +1313,5 @@ require = function e(t, n, r) {
   }, {
     "./../global": "global"
   } ]
-}, {}, [ "audio", "test", "account", "game-ctl", "player-data", "bg-controller", "DragonBonesCtrl", "dargon-bone-ctl", "jump", "mask-progress", "tips-ctl", "game", "player", "coin", "enemy", "stub", "stub-controller", "ui-controller", "global", "event-listener" ]);
+}, {}, [ "account", "game-ctl", "player-data", "bg-controller", "DragonBonesCtrl", "dargon-bone-ctl", "jump", "mask-progress", "tips-ctl", "game", "player", "coin", "enemy", "stub", "stub-controller", "ui-controller", "global", "event-listener" ]);
+//# sourceMappingURL=project.dev.js.map

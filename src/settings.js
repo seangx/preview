@@ -1,5 +1,5 @@
-_CCSettings = {
-    "platform": "web-desktop",
+window._CCSettings = {
+    "platform": "web-mobile",
     "groupList": [
         "default"
     ],
@@ -49,31 +49,85 @@ _CCSettings = {
                 "resources/font/font_numb.png",
                 "cc.Texture2D"
             ],
-            "ca/jt+2oRF2I8K0amN7FXz": [
-                "resources/game/bg/中景",
+            "e5ue1NTZBF+6L4rC9Nd4LX": [
+                "resources/game/bg/after_scene_1",
                 "cc.SpriteFrame",
                 1
             ],
-            "19GwCGbAFAT5FwOb02ZDmo": [
-                "resources/game/bg/中景.png",
+            "784rrBbcdOVqchEgLhfoXq": [
+                "resources/game/bg/after_scene_1.png",
                 "cc.Texture2D"
             ],
-            "e3f4tJgVZGCY6t7U7Lcg1i": [
-                "resources/game/bg/前景",
+            "4bR7Y9O9FID7o/674lWv8v": [
+                "resources/game/bg/after_scene_2",
                 "cc.SpriteFrame",
                 1
             ],
-            "511t4pnvdBRqZnJE07rKhS": [
-                "resources/game/bg/前景.png",
+            "89m9b06DZNGL4Lc9lMXFhS": [
+                "resources/game/bg/after_scene_2.png",
                 "cc.Texture2D"
             ],
-            "fdnxM+WwpJyKeXubrR6aja": [
-                "resources/game/bg/后景",
+            "4amEpoi4xFsL4gY2nWiz+2": [
+                "resources/game/bg/after_scene_3",
                 "cc.SpriteFrame",
                 1
             ],
-            "e3pquhzclIQ4m2oDlRmMuT": [
-                "resources/game/bg/后景.png",
+            "aaWuYFOeJPC6eb3v1SRTy1": [
+                "resources/game/bg/after_scene_3.png",
+                "cc.Texture2D"
+            ],
+            "5dYEIqhpNI8a2PVMr98DDu": [
+                "resources/game/bg/before_scene_1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "6dYGoWOa9JBo6kAIJsubQy": [
+                "resources/game/bg/before_scene_1.png",
+                "cc.Texture2D"
+            ],
+            "47/38LOdpDn55+oOIPZllw": [
+                "resources/game/bg/before_scene_2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "81uuksaGVI0ZKR1Q9pArXi": [
+                "resources/game/bg/before_scene_2.png",
+                "cc.Texture2D"
+            ],
+            "3a2nQLzl9Jc5wzXd6ZoSg5": [
+                "resources/game/bg/before_scene_3",
+                "cc.SpriteFrame",
+                1
+            ],
+            "66oZBNqgBCwIIKFWKCXwqP": [
+                "resources/game/bg/before_scene_3.png",
+                "cc.Texture2D"
+            ],
+            "a3dJk/2cdOVKAklxsmtvQu": [
+                "resources/game/bg/middle_scene_1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "e2I6psqipBgKfwYPt5zFh6": [
+                "resources/game/bg/middle_scene_1.png",
+                "cc.Texture2D"
+            ],
+            "7coLWd2XlMwL1J62aHBLPa": [
+                "resources/game/bg/middle_scene_2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "8cqH2Y4+5BFKzfCNsFmJTx": [
+                "resources/game/bg/middle_scene_2.png",
+                "cc.Texture2D"
+            ],
+            "965vaOGChK86YrGiEVVsid": [
+                "resources/game/bg/middle_scene_3",
+                "cc.SpriteFrame",
+                1
+            ],
+            "48TOUFtzpKY6rjT76TEqPD": [
+                "resources/game/bg/middle_scene_3.png",
                 "cc.Texture2D"
             ],
             "3fFK//mABA3YTzP+rgfd9a": [
@@ -273,73 +327,6 @@ _CCSettings = {
                 "resources/sound/jump.mp3",
                 "cc.AudioClip"
             ],
-            "5fq3zPGztHw4/ZoJ2WyTDN": [
-                "resources/temp/bg",
-                "cc.SpriteFrame",
-                1
-            ],
-            "84ZPQYX/VGcrUamXqwANRo": [
-                "resources/temp/bg.png",
-                "cc.Texture2D"
-            ],
-            "60n/POZ3FC4qR4k+RB9Bb9": [
-                "resources/temp/bg_0",
-                "cc.SpriteFrame",
-                1
-            ],
-            "ddCO9RuXtCs7hRY5Jb9uI+": [
-                "resources/temp/bg_0.png",
-                "cc.Texture2D"
-            ],
-            "75oHir9khKGqYM4MnIm0vi": [
-                "resources/temp/button_down",
-                "cc.SpriteFrame",
-                1
-            ],
-            "acMRdq539Epok72SktD6AI": [
-                "resources/temp/button_down.png",
-                "cc.Texture2D"
-            ],
-            "8cinjOjgFOqKbSEPBXTHH7": [
-                "resources/temp/button_up",
-                "cc.SpriteFrame",
-                1
-            ],
-            "5ckARlkF1A/6uO+qaWmF2F": [
-                "resources/temp/button_up.png",
-                "cc.Texture2D"
-            ],
-            "d2DE7b4XFOep1QZ6arP5fa": [
-                "resources/temp/ji",
-                "cc.SpriteFrame",
-                1
-            ],
-            "5efL/yDJJByZqFaY/lGuJ3": [
-                "resources/temp/ji.png",
-                "cc.Texture2D"
-            ],
-            "3dCz+RjdxGbp1H39J/YtXq": [
-                "resources/temp/timg (1).psd",
-                "cc.RawAsset"
-            ],
-            "9bRLaq7JtKro4G7Y5wP/cc": [
-                "resources/temp/xiangz",
-                "cc.SpriteFrame",
-                1
-            ],
-            "c1ZKH/ctxGcpivvXxqdO9N": [
-                "resources/temp/xiangz.png",
-                "cc.Texture2D"
-            ],
-            "50SYA2uL5KWqT9QeRJzxjA": [
-                "resources/temp/zhangai",
-                "cc.SpriteFrame",
-                1
-            ],
-            "32Z/PTs11HRI0LxY7KtHha": [
-                "resources/temp/zhangai.png",
-                "cc.Texture2D"
-            ],
             "c4XoB5wpBM7JoCuG65+vQS": [
                 "resources/ui/bar",
                 "cc.SpriteFrame",
@@ -432,10 +419,6 @@ _CCSettings = {
             ]
         },
         "internal": {
-            "71VhFCTINJM6/Ky3oX9nBT": [
-                "image/default_btn_disabled.png",
-                "cc.Texture2D"
-            ],
             "e8Ueib+qJEhL6mXAHdnwbi": [
                 "image/default_btn_normal.png",
                 "cc.Texture2D"
@@ -447,9 +430,6 @@ _CCSettings = {
         }
     },
     "jsList": [
-        "assets/script/lib/jquery-1.12.3.min.js",
-        "assets/script/lib/recorder.js",
-        "assets/script/lib/utils.js",
         "assets/scripts/defines.js"
     ],
     "launchScene": "db://assets/scene/game.fire",
@@ -457,58 +437,50 @@ _CCSettings = {
         {
             "url": "db://assets/scene/game.fire",
             "uuid": "0cXJp4WRtE4r8t1ouIvddX"
-        },
-        {
-            "url": "db://assets/scene/test.fire",
-            "uuid": "c2BeqkJmxDTJqy9L4gcCGq"
         }
     ],
     "packedAssets": {
-        "06be3851d": [
-            "3fJddpBY5H+bAmvk8jQTJQ",
-            "977b+CqBJAa4IHS+iruUCh"
-        ],
-        "06ee5ab9d": [
-            "8evuUQIRVKGqqvO0cQrvhi",
-            "945Yq82Y1B6rEet5ZR4PTF",
-            "ac8P04yttHy7nPuu9IGPNX",
-            "e3y4dPhJdAyr8TWAenboKO",
-            "f0txYfLLBIwI0cSzK+RoSJ"
-        ],
-        "0818e2172": [
+        "047ce994f": [
             "03++qRW4lGRZ/l6uLgUY44",
             "0cXJp4WRtE4r8t1ouIvddX",
             "0enD9IivZC74NjxnCY8r+t",
             "21qczJHY9HWIdV/KyC57WB",
             "2bXsWvC21C6L9Ffmx19uc6",
+            "3a2nQLzl9Jc5wzXd6ZoSg5",
             "3eIPRKoX5IVIczczYK8/pt",
             "3fFK//mABA3YTzP+rgfd9a",
+            "47/38LOdpDn55+oOIPZllw",
             "48+LtRXwVODoFEpUg06PCw",
-            "50SYA2uL5KWqT9QeRJzxjA",
+            "4amEpoi4xFsL4gY2nWiz+2",
+            "4bR7Y9O9FID7o/674lWv8v",
+            "5dYEIqhpNI8a2PVMr98DDu",
             "70KzjGiZxIOK7Lumfuip7V",
+            "7coLWd2XlMwL1J62aHBLPa",
             "86fYgp56JLApmCJ47j1veT",
+            "8evuUQIRVKGqqvO0cQrvhi",
+            "945Yq82Y1B6rEet5ZR4PTF",
+            "965vaOGChK86YrGiEVVsid",
             "9aeoDysf5EJoxUSn6q7adP",
+            "a3dJk/2cdOVKAklxsmtvQu",
             "a68VwOXfFGtIW6g4qS3wca",
             "acrBZ6zkNJ0JGYdVKDjAWF",
             "ac8P04yttHy7nPuu9IGPNX",
             "c4XoB5wpBM7JoCuG65+vQS",
-            "ca/jt+2oRF2I8K0amN7FXz",
             "cb9V0XW+5ImZ14XYBzt3Bj",
             "e3frdj071MNIs82MlxDYoK",
-            "e3f4tJgVZGCY6t7U7Lcg1i",
+            "e3y4dPhJdAyr8TWAenboKO",
+            "e5ue1NTZBF+6L4rC9Nd4LX",
             "e8lNP9GQRCGKlb5K9lU0sQ",
             "e97GVMl6JHh5Ml5qEDdSGa",
             "f0BIwQ8D5Ml7nTNQbh1YlS",
-            "f1hO0bFGlN3K2jLXx7YXBy",
-            "fdnxM+WwpJyKeXubrR6aja"
+            "f0txYfLLBIwI0cSzK+RoSJ",
+            "f1hO0bFGlN3K2jLXx7YXBy"
         ],
-        "08515dab2": [
-            "29FYIk+N1GYaeWH/q1NxQO",
-            "c2BeqkJmxDTJqy9L4gcCGq",
-            "e97GVMl6JHh5Ml5qEDdSGa",
-            "f0BIwQ8D5Ml7nTNQbh1YlS"
+        "06be3851d": [
+            "3fJddpBY5H+bAmvk8jQTJQ",
+            "977b+CqBJAa4IHS+iruUCh"
         ]
     },
-    "orientation": "portrait",
+    "orientation": "landscape",
     "debug": true
 };
