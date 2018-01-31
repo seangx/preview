@@ -1680,6 +1680,7 @@
       "_parent": {
         "__id__": 53
       },
+      "_active": false,
       "_components": [
         {
           "__type__": "cc.Label",
