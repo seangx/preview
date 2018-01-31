@@ -125,6 +125,7 @@
             "__uuid__": "dfdblk2/FLNJoccqvV4gU1"
           },
           "_loop": true,
+          "playOnLoad": true,
           "preload": true
         }
       ],
