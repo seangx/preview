@@ -481,6 +481,6 @@ window._CCSettings = {
             "977b+CqBJAa4IHS+iruUCh"
         ]
     },
-    "orientation": "landscape",
+    "orientation": "portrait",
     "debug": true
 };
