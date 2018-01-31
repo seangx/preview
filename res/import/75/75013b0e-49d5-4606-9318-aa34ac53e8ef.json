@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "role3_tex",
+    "texture": "4fFXFP8fpCIq8aam9PPilR",
+    "rect": [
+      1,
+      1,
+      252,
+      387
+    ],
+    "offset": [
+      -1,
+      61.5
+    ],
+    "originalSize": [
+      256,
+      512
+    ]
+  }
+}

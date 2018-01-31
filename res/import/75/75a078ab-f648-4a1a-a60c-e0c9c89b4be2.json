@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "button_down",
+    "texture": "acMRdq539Epok72SktD6AI",
+    "rect": [
+      0,
+      0,
+      195,
+      178
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      195,
+      178
+    ]
+  }
+}
