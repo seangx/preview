@@ -1,5 +1,5 @@
 window._CCSettings = {
-    "platform": "web-mobile",
+    "platform": "web-desktop",
     "groupList": [
         "default"
     ],
@@ -481,6 +481,6 @@ window._CCSettings = {
             "977b+CqBJAa4IHS+iruUCh"
         ]
     },
-    "orientation": "portrait",
+    "orientation": "landscape",
     "debug": true
 };
