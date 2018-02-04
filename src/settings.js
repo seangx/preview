@@ -192,6 +192,74 @@ window._CCSettings = {
                 "resources/game/role/autumn_tex.png",
                 "cc.Texture2D"
             ],
+            "4b60Sa9QJEea662aUhzS5o": [
+                "resources/game/role/monsters_s_bee_ske.json",
+                "dragonBones.DragonBonesAsset"
+            ],
+            "35YY1V2D1FZqsEFHz9GtZ/": [
+                "resources/game/role/monsters_s_bee_tex",
+                "cc.SpriteFrame",
+                1
+            ],
+            "34kqNKwFZB0bYr9Sk88KER": [
+                "resources/game/role/monsters_s_bee_tex.json",
+                "dragonBones.DragonBonesAtlasAsset"
+            ],
+            "5bL49LEEFFAYY/z9YIESc+": [
+                "resources/game/role/monsters_s_bee_tex.png",
+                "cc.Texture2D"
+            ],
+            "18ZKXC6qtGUZ3r50dPaxTh": [
+                "resources/game/role/monsters_s_flower_ske.json",
+                "dragonBones.DragonBonesAsset"
+            ],
+            "cdzXlyh9dBuqO5L3Kvpz+G": [
+                "resources/game/role/monsters_s_flower_tex",
+                "cc.SpriteFrame",
+                1
+            ],
+            "b0S3lEOvdGqK0Hz3M5OXfI": [
+                "resources/game/role/monsters_s_flower_tex.json",
+                "dragonBones.DragonBonesAtlasAsset"
+            ],
+            "49VxabJvBNTpgjNaqWvTH6": [
+                "resources/game/role/monsters_s_flower_tex.png",
+                "cc.Texture2D"
+            ],
+            "30Afk96GdJOJ49yGQEu2EK": [
+                "resources/game/role/monsters_s_frog_ske.json",
+                "dragonBones.DragonBonesAsset"
+            ],
+            "109iPCe+dEoIoDHAvKr7C1": [
+                "resources/game/role/monsters_s_frog_tex",
+                "cc.SpriteFrame",
+                1
+            ],
+            "43VH57ojRAHayk130Hhn7q": [
+                "resources/game/role/monsters_s_frog_tex.json",
+                "dragonBones.DragonBonesAtlasAsset"
+            ],
+            "easLAoHQJOt6aZOiO8QT7h": [
+                "resources/game/role/monsters_s_frog_tex.png",
+                "cc.Texture2D"
+            ],
+            "b3X3LCG7JJ16dvq1H7mSBE": [
+                "resources/game/role/monsters_s_snails_ske.json",
+                "dragonBones.DragonBonesAsset"
+            ],
+            "ae/MONxCBPWrq+nt+z4WHS": [
+                "resources/game/role/monsters_s_snails_tex",
+                "cc.SpriteFrame",
+                1
+            ],
+            "ebu9zfQxhPwpuVsejyxz/r": [
+                "resources/game/role/monsters_s_snails_tex.json",
+                "dragonBones.DragonBonesAtlasAsset"
+            ],
+            "ebN/McecdLH4UPpRCpWRXs": [
+                "resources/game/role/monsters_s_snails_tex.png",
+                "cc.Texture2D"
+            ],
             "33mUgHTSBHs7wiUPA4FAVU": [
                 "resources/game/role/role1_ske.json",
                 "dragonBones.DragonBonesAsset"
@@ -327,6 +395,96 @@ window._CCSettings = {
                 "resources/sound/jump.mp3",
                 "cc.AudioClip"
             ],
+            "99pdSpMPFNm6YMNQTQHqSt": [
+                "resources/ui/0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "aalYs0c+xDfr+uWgMq5w3K": [
+                "resources/ui/0.png",
+                "cc.Texture2D"
+            ],
+            "9060XlpOJBwY9mTUYt/uZc": [
+                "resources/ui/1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "05Z/q5TV5FiJMeNh4TtK66": [
+                "resources/ui/1.png",
+                "cc.Texture2D"
+            ],
+            "6cQksaEaFFtJ/YiX6FTiXq": [
+                "resources/ui/2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "43c8aSU9RDEZkoRmhhOJLZ": [
+                "resources/ui/2.png",
+                "cc.Texture2D"
+            ],
+            "b1yEiPjY5MgJhGeOTbwiKx": [
+                "resources/ui/3",
+                "cc.SpriteFrame",
+                1
+            ],
+            "c0PJ+8YzhAMIMsC9ouoqPv": [
+                "resources/ui/3.png",
+                "cc.Texture2D"
+            ],
+            "caZykIfsFC6ZmArgHqE8M9": [
+                "resources/ui/4",
+                "cc.SpriteFrame",
+                1
+            ],
+            "96mShScftLVKHEyFx50iA9": [
+                "resources/ui/4.png",
+                "cc.Texture2D"
+            ],
+            "b4CdADwZRFeY5soHMHbcl3": [
+                "resources/ui/5",
+                "cc.SpriteFrame",
+                1
+            ],
+            "b6AW/h8+tHeaatEUvhB/hX": [
+                "resources/ui/5.png",
+                "cc.Texture2D"
+            ],
+            "d8PSOKsc5FW4/6oFCmQIwe": [
+                "resources/ui/6",
+                "cc.SpriteFrame",
+                1
+            ],
+            "794N7olIhPb69vYoms3Yz+": [
+                "resources/ui/6.png",
+                "cc.Texture2D"
+            ],
+            "baitzBGbFH3YFRyOupMlro": [
+                "resources/ui/7",
+                "cc.SpriteFrame",
+                1
+            ],
+            "a7A7c3dKtDyrvph2/lyN16": [
+                "resources/ui/7.png",
+                "cc.Texture2D"
+            ],
+            "63QP5knSVFDovobYBdkgWX": [
+                "resources/ui/8",
+                "cc.SpriteFrame",
+                1
+            ],
+            "1azXosFvtFvaqo7vzJxinf": [
+                "resources/ui/8.png",
+                "cc.Texture2D"
+            ],
+            "9eaRzfw4pPnbkmZKbFiErE": [
+                "resources/ui/9",
+                "cc.SpriteFrame",
+                1
+            ],
+            "45GUfE3GNMX7w7Nx+8YwNL": [
+                "resources/ui/9.png",
+                "cc.Texture2D"
+            ],
             "c4XoB5wpBM7JoCuG65+vQS": [
                 "resources/ui/bar",
                 "cc.SpriteFrame",
@@ -334,6 +492,69 @@ window._CCSettings = {
             ],
             "30JNKUlpJG9Kxpzhw8rMdJ": [
                 "resources/ui/bar.png",
+                "cc.Texture2D"
+            ],
+            "baWpwWQcxCz5k4iBQDOuTN": [
+                "resources/ui/box",
+                "cc.SpriteFrame",
+                1
+            ],
+            "e1JN/8V+FKWIwp8N+2bTNH": [
+                "resources/ui/box.png",
+                "cc.Texture2D"
+            ],
+            "324suiSC1D5ZCDaR4qxoFV": [
+                "resources/ui/box2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "9d4/WEKqpNKbheGTRO6Fco": [
+                "resources/ui/box2.png",
+                "cc.Texture2D"
+            ],
+            "70TtCsqf5Fao5LWGI9MEG8": [
+                "resources/ui/bt_jump1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "8ajUwFSmJLjaqK0zk4XPUI": [
+                "resources/ui/bt_jump1.png",
+                "cc.Texture2D"
+            ],
+            "cdv8AVm2VDd73x5q/hVODO": [
+                "resources/ui/bt_jump2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "d3BHh/vjJIvqxxiwpYjuMp": [
+                "resources/ui/bt_jump2.png",
+                "cc.Texture2D"
+            ],
+            "5281gpe55OvYRm38+sgtOF": [
+                "resources/ui/bt_run1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "e01bAmC5BDhrYeTeMyEQeJ": [
+                "resources/ui/bt_run1.png",
+                "cc.Texture2D"
+            ],
+            "4ab47Fm3NO34vB3eOhsvcj": [
+                "resources/ui/bt_run2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "6aJrpB3bdA1Z0JSfZcIF15": [
+                "resources/ui/bt_run2.png",
+                "cc.Texture2D"
+            ],
+            "afuZ6Mg0pB0YAwiEmuKug+": [
+                "resources/ui/card_bag",
+                "cc.SpriteFrame",
+                1
+            ],
+            "4a5AzMYiZAbrirecsegENA": [
+                "resources/ui/card_bag.png",
                 "cc.Texture2D"
             ],
             "ac8P04yttHy7nPuu9IGPNX": [
@@ -416,15 +637,50 @@ window._CCSettings = {
             "ebXpkrQkxAHIem36mUa7wO": [
                 "resources/ui/icon_run2.png",
                 "cc.Texture2D"
+            ],
+            "bafrsu7JpHyLz6y+WufK67": [
+                "resources/ui/icon_run_bar1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "2c0Gwzz5xJOKIB5pDcP7Us": [
+                "resources/ui/icon_run_bar1.png",
+                "cc.Texture2D"
+            ],
+            "7c7FaD/H9PSLfFfFFtfChE": [
+                "resources/ui/icon_run_bar2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "a8xXNnSglOyosLtlh5wHjs": [
+                "resources/ui/icon_run_bar2.png",
+                "cc.Texture2D"
+            ],
+            "84ROF9QJ1ELqD43kB872FX": [
+                "resources/ui/m",
+                "cc.SpriteFrame",
+                1
+            ],
+            "66Tpa8UftAg52JKCEbWUPk": [
+                "resources/ui/m.png",
+                "cc.Texture2D"
             ]
         },
         "internal": {
+            "71VhFCTINJM6/Ky3oX9nBT": [
+                "image/default_btn_disabled.png",
+                "cc.Texture2D"
+            ],
             "e8Ueib+qJEhL6mXAHdnwbi": [
                 "image/default_btn_normal.png",
                 "cc.Texture2D"
             ],
             "b4P/PCArtIdIH38t6mlw8Y": [
                 "image/default_btn_pressed.png",
+                "cc.Texture2D"
+            ],
+            "02delMVqdBD70a/HSD99FK": [
+                "image/default_sprite_splash.png",
                 "cc.Texture2D"
             ]
         }
@@ -440,45 +696,62 @@ window._CCSettings = {
         }
     ],
     "packedAssets": {
-        "047ce994f": [
-            "03++qRW4lGRZ/l6uLgUY44",
+        "06be3851d": [
+            "3fJddpBY5H+bAmvk8jQTJQ",
+            "977b+CqBJAa4IHS+iruUCh"
+        ],
+        "07b7dc815": [
             "0cXJp4WRtE4r8t1ouIvddX",
-            "0enD9IivZC74NjxnCY8r+t",
             "21qczJHY9HWIdV/KyC57WB",
+            "29FYIk+N1GYaeWH/q1NxQO",
             "2bXsWvC21C6L9Ffmx19uc6",
             "3a2nQLzl9Jc5wzXd6ZoSg5",
             "3eIPRKoX5IVIczczYK8/pt",
             "3fFK//mABA3YTzP+rgfd9a",
             "47/38LOdpDn55+oOIPZllw",
             "48+LtRXwVODoFEpUg06PCw",
+            "4ab47Fm3NO34vB3eOhsvcj",
             "4amEpoi4xFsL4gY2nWiz+2",
             "4bR7Y9O9FID7o/674lWv8v",
+            "5281gpe55OvYRm38+sgtOF",
             "5dYEIqhpNI8a2PVMr98DDu",
+            "63QP5knSVFDovobYBdkgWX",
+            "6cQksaEaFFtJ/YiX6FTiXq",
             "70KzjGiZxIOK7Lumfuip7V",
+            "70TtCsqf5Fao5LWGI9MEG8",
             "7coLWd2XlMwL1J62aHBLPa",
+            "7c7FaD/H9PSLfFfFFtfChE",
+            "84ROF9QJ1ELqD43kB872FX",
             "86fYgp56JLApmCJ47j1veT",
             "8evuUQIRVKGqqvO0cQrvhi",
+            "9060XlpOJBwY9mTUYt/uZc",
             "945Yq82Y1B6rEet5ZR4PTF",
             "965vaOGChK86YrGiEVVsid",
+            "99pdSpMPFNm6YMNQTQHqSt",
             "9aeoDysf5EJoxUSn6q7adP",
+            "9eaRzfw4pPnbkmZKbFiErE",
+            "a2MjXRFdtLlYQ5ouAFv/+R",
             "a3dJk/2cdOVKAklxsmtvQu",
             "a68VwOXfFGtIW6g4qS3wca",
             "acrBZ6zkNJ0JGYdVKDjAWF",
             "ac8P04yttHy7nPuu9IGPNX",
+            "b1yEiPjY5MgJhGeOTbwiKx",
+            "b4CdADwZRFeY5soHMHbcl3",
+            "bafrsu7JpHyLz6y+WufK67",
+            "baitzBGbFH3YFRyOupMlro",
             "c4XoB5wpBM7JoCuG65+vQS",
-            "cb9V0XW+5ImZ14XYBzt3Bj",
+            "caZykIfsFC6ZmArgHqE8M9",
+            "cdv8AVm2VDd73x5q/hVODO",
+            "d8PSOKsc5FW4/6oFCmQIwe",
             "e3frdj071MNIs82MlxDYoK",
             "e3y4dPhJdAyr8TWAenboKO",
             "e5ue1NTZBF+6L4rC9Nd4LX",
             "e8lNP9GQRCGKlb5K9lU0sQ",
             "e97GVMl6JHh5Ml5qEDdSGa",
+            "eb/MiJ3mpGg6FhnYeLgw5o",
             "f0BIwQ8D5Ml7nTNQbh1YlS",
             "f0txYfLLBIwI0cSzK+RoSJ",
             "f1hO0bFGlN3K2jLXx7YXBy"
-        ],
-        "06be3851d": [
-            "3fJddpBY5H+bAmvk8jQTJQ",
-            "977b+CqBJAa4IHS+iruUCh"
         ]
     },
     "orientation": "landscape",

@@ -25,8 +25,7 @@
   for (var i = 0; i < entry.length; i++) newRequire(entry[i]);
   return newRequire;
 })({
-  1: [ (function(require, module, exports) {}), {} ],
-  2: [ (function(require, module, exports) {
+  1: [ (function(require, module, exports) {
     cc._LogInfos = cc._LogInfos || {};
     var engineVersion;
     engineVersion = "1.8.1";
@@ -88,10 +87,10 @@
       _engineInitCalled = true;
     };
   }), {
-    "./cocos2d/core/platform/CCSys": 181,
-    "./cocos2d/core/utils": 221
+    "./cocos2d/core/platform/CCSys": 184,
+    "./cocos2d/core/utils": 224
   } ],
-  3: [ (function(require, module, exports) {
+  2: [ (function(require, module, exports) {
     var logList;
     var Enum = require("./cocos2d/core/platform/CCEnum");
     cc.DebugMode = Enum({
@@ -217,9 +216,9 @@
       };
     }
   }), {
-    "./cocos2d/core/platform/CCEnum": 174
+    "./cocos2d/core/platform/CCEnum": 177
   } ],
-  4: [ (function(require, module, exports) {
+  3: [ (function(require, module, exports) {
     true;
     var logs = {
       "1000": "cc.ActionManager.addAction(): action must be non-null",
@@ -746,7 +745,7 @@
     };
     cc._LogInfos = logs;
   }), {} ],
-  5: [ (function(require, module, exports) {
+  4: [ (function(require, module, exports) {
     cc.Action = cc._Class.extend({
       ctor: function() {
         this.originalTarget = null;
@@ -953,7 +952,7 @@
       return new cc.Follow(followedNode, rect);
     };
   }), {} ],
-  6: [ (function(require, module, exports) {
+  5: [ (function(require, module, exports) {
     cc.cardinalSplineAt = function(p0, p1, p2, p3, tension, t) {
       var t2 = t * t;
       var t3 = t2 * t;
@@ -1147,7 +1146,7 @@
       return new cc.CatmullRomBy(dt, points);
     };
   }), {} ],
-  7: [ (function(require, module, exports) {
+  6: [ (function(require, module, exports) {
     cc.ActionEase = cc.ActionInterval.extend({
       _inner: null,
       ctor: function(action) {
@@ -2248,7 +2247,7 @@
       return cc._easeCubicActionInOut;
     };
   }), {} ],
-  8: [ (function(require, module, exports) {
+  7: [ (function(require, module, exports) {
     cc.ActionInstant = cc.FiniteTimeAction.extend({
       isDone: function() {
         return true;
@@ -2464,7 +2463,7 @@
       return new cc.CallFunc(selector, selectorTarget, data);
     };
   }), {} ],
-  9: [ (function(require, module, exports) {
+  8: [ (function(require, module, exports) {
     cc.ActionInterval = cc.FiniteTimeAction.extend({
       _elapsed: 0,
       _firstTick: false,
@@ -3907,7 +3906,7 @@
       return new cc.TargetedAction(target, action);
     };
   }), {} ],
-  10: [ (function(require, module, exports) {
+  9: [ (function(require, module, exports) {
     var HashElement = function() {
       this.actions = [];
       this.target = null;
@@ -4092,7 +4091,7 @@
     });
     false;
   }), {} ],
-  11: [ (function(require, module, exports) {
+  10: [ (function(require, module, exports) {
     require("./CCActionManager");
     require("./CCAction");
     require("./CCActionInterval");
@@ -4100,14 +4099,14 @@
     require("./CCActionEase");
     require("./CCActionCatmullRom");
   }), {
-    "./CCAction": 5,
-    "./CCActionCatmullRom": 6,
-    "./CCActionEase": 7,
-    "./CCActionInstant": 8,
-    "./CCActionInterval": 9,
-    "./CCActionManager": 10
+    "./CCAction": 4,
+    "./CCActionCatmullRom": 5,
+    "./CCActionEase": 6,
+    "./CCActionInstant": 7,
+    "./CCActionInterval": 8,
+    "./CCActionManager": 9
   } ],
-  12: [ (function(require, module, exports) {
+  11: [ (function(require, module, exports) {
     var JS = cc.js;
     var Playable = require("./playable");
     var DynamicAnimCurve = require("./animation-curves").DynamicAnimCurve;
@@ -4363,13 +4362,13 @@
     false;
     module.exports = AnimationAnimator;
   }), {
-    "../core/utils/binary-search": 218,
-    "./animation-curves": 14,
-    "./motion-path-helper": 20,
-    "./playable": 21,
-    "./types": 22
+    "../core/utils/binary-search": 221,
+    "./animation-curves": 13,
+    "./motion-path-helper": 19,
+    "./playable": 20,
+    "./types": 21
   } ],
-  13: [ (function(require, module, exports) {
+  12: [ (function(require, module, exports) {
     var AnimationClip = cc.Class({
       name: "cc.AnimationClip",
       extends: cc.Asset,
@@ -4429,7 +4428,7 @@
     });
     cc.AnimationClip = module.exports = AnimationClip;
   }), {} ],
-  14: [ (function(require, module, exports) {
+  13: [ (function(require, module, exports) {
     var bezierByTime = require("./bezier").bezierByTime;
     var binarySearch = require("../core/utils/binary-search").binarySearchEpsilon;
     var WrapModeMask = require("./types").WrapModeMask;
@@ -4628,11 +4627,11 @@
       quickFindIndex: quickFindIndex
     };
   }), {
-    "../core/utils/binary-search": 218,
-    "./bezier": 17,
-    "./types": 22
+    "../core/utils/binary-search": 221,
+    "./bezier": 16,
+    "./types": 21
   } ],
-  15: [ (function(require, module, exports) {
+  14: [ (function(require, module, exports) {
     var JS = cc.js;
     var AnimationManager = cc.Class({
       ctor: function() {
@@ -4673,7 +4672,7 @@
     });
     cc.AnimationManager = module.exports = AnimationManager;
   }), {} ],
-  16: [ (function(require, module, exports) {
+  15: [ (function(require, module, exports) {
     var JS = cc.js;
     var Playable = require("./playable");
     var Types = require("./types");
@@ -4878,10 +4877,10 @@
     }));
     cc.AnimationState = module.exports = AnimationState;
   }), {
-    "./playable": 21,
-    "./types": 22
+    "./playable": 20,
+    "./types": 21
   } ],
-  17: [ (function(require, module, exports) {
+  16: [ (function(require, module, exports) {
     function bezier(C1, C2, C3, C4, t) {
       var t1 = 1 - t;
       return C1 * t1 * t1 * t1 + 3 * C2 * t1 * t1 * t + 3 * C3 * t1 * t * t + C4 * t * t * t;
@@ -4933,7 +4932,7 @@
       bezierByTime: bezierByTime
     };
   }), {} ],
-  18: [ (function(require, module, exports) {
+  17: [ (function(require, module, exports) {
     var Easing = {
       constant: function() {
         return 0;
@@ -5095,7 +5094,7 @@
     Easing.bounceOutIn = _makeOutIn(Easing.bounceIn, Easing.bounceOut);
     cc.Easing = module.exports = Easing;
   }), {} ],
-  19: [ (function(require, module, exports) {
+  18: [ (function(require, module, exports) {
     require("./bezier");
     require("./easing");
     require("./types");
@@ -5106,17 +5105,17 @@
     require("./animation-state");
     require("./animation-animator");
   }), {
-    "./animation-animator": 12,
-    "./animation-clip": 13,
-    "./animation-curves": 14,
-    "./animation-manager": 15,
-    "./animation-state": 16,
-    "./bezier": 17,
-    "./easing": 18,
-    "./motion-path-helper": 20,
-    "./types": 22
+    "./animation-animator": 11,
+    "./animation-clip": 12,
+    "./animation-curves": 13,
+    "./animation-manager": 14,
+    "./animation-state": 15,
+    "./bezier": 16,
+    "./easing": 17,
+    "./motion-path-helper": 19,
+    "./types": 21
   } ],
-  20: [ (function(require, module, exports) {
+  19: [ (function(require, module, exports) {
     var DynamicAnimCurve = require("./animation-curves").DynamicAnimCurve;
     var computeRatioByType = require("./animation-curves").computeRatioByType;
     var bezier = require("./bezier").bezier;
@@ -5331,11 +5330,11 @@
       Bezier: Bezier
     };
   }), {
-    "../core/utils/binary-search": 218,
-    "./animation-curves": 14,
-    "./bezier": 17
+    "../core/utils/binary-search": 221,
+    "./animation-curves": 13,
+    "./bezier": 16
   } ],
-  21: [ (function(require, module, exports) {
+  20: [ (function(require, module, exports) {
     var JS = cc.js;
     function Playable() {
       this._isPlaying = false;
@@ -5390,7 +5389,7 @@
     };
     module.exports = Playable;
   }), {} ],
-  22: [ (function(require, module, exports) {
+  21: [ (function(require, module, exports) {
     var JS = cc.js;
     var WrapModeMask = {
       Loop: 2,
@@ -5434,7 +5433,7 @@
       WrappedInfo: WrappedInfo
     };
   }), {} ],
-  23: [ (function(require, module, exports) {
+  22: [ (function(require, module, exports) {
     var EventTarget = require("../core/event/event-target");
     var sys = require("../core/platform/CCSys");
     var touchBinded = false;
@@ -5713,10 +5712,10 @@
     })(WebAudioElement.prototype);
     module.exports = cc.Audio = Audio;
   }), {
-    "../core/event/event-target": 111,
-    "../core/platform/CCSys": 181
+    "../core/event/event-target": 113,
+    "../core/platform/CCSys": 184
   } ],
-  24: [ (function(require, module, exports) {
+  23: [ (function(require, module, exports) {
     var Audio = require("./CCAudio");
     var instanceId = 0;
     var id2audio = {};
@@ -5931,10 +5930,10 @@
     Module.removed(audioEngine);
     Module.deprecated(audioEngine);
   }), {
-    "./CCAudio": 23,
-    "./deprecated": 25
+    "./CCAudio": 22,
+    "./deprecated": 24
   } ],
-  25: [ (function(require, module, exports) {
+  24: [ (function(require, module, exports) {
     var js = cc.js;
     exports.removed = function(audioEngine) {
       function willPlayMusicError() {
@@ -6086,7 +6085,7 @@
       }));
     };
   }), {} ],
-  26: [ (function(require, module, exports) {
+  25: [ (function(require, module, exports) {
     cc.ClippingNode = _ccsg.Node.extend({
       inverted: false,
       _alphaThreshold: 0,
@@ -6160,7 +6159,7 @@
     cc.defineGetterSetter(_p, "stencil", _p.getStencil, _p.setStencil);
     cc.defineGetterSetter(_p, "alphaThreshold", _p.getAlphaThreshold, _p.setAlphaThreshold);
   }), {} ],
-  27: [ (function(require, module, exports) {
+  26: [ (function(require, module, exports) {
     require("../shape-nodes/CCDrawNode");
     cc.ClippingNode.CanvasRenderCmd = function(renderable) {
       this._rootCtor(renderable);
@@ -6213,9 +6212,9 @@
       this._dirtyFlag = 0;
     };
   }), {
-    "../shape-nodes/CCDrawNode": 270
+    "../shape-nodes/CCDrawNode": 274
   } ],
-  28: [ (function(require, module, exports) {
+  27: [ (function(require, module, exports) {
     require("../core/CCDrawingPrimitives");
     function setProgram(node, program) {
       node.shaderProgram = program;
@@ -6368,9 +6367,9 @@
       cc.ClippingNode.WebGLRenderCmd._layer--;
     };
   }), {
-    "../core/CCDrawingPrimitives": 37
+    "../core/CCDrawingPrimitives": 36
   } ],
-  29: [ (function(require, module, exports) {
+  28: [ (function(require, module, exports) {
     cc.Codec = {
       name: "Jacob__Codec"
     };
@@ -6406,10 +6405,10 @@
       return ar;
     };
   }), {
-    "./base64": 30,
-    "./gzip": 31
+    "./base64": 29,
+    "./gzip": 30
   } ],
-  30: [ (function(require, module, exports) {
+  29: [ (function(require, module, exports) {
     var Misc = require("../core/utils/misc");
     var strValue = Misc.BASE64_VALUES;
     var Base64 = {
@@ -6443,9 +6442,9 @@
     };
     module.exports = Base64;
   }), {
-    "../core/utils/misc": 222
+    "../core/utils/misc": 225
   } ],
-  31: [ (function(require, module, exports) {
+  30: [ (function(require, module, exports) {
     var GZip = function Jacob__GZip(data) {
       this.data = data;
       this.debug = false;
@@ -6839,7 +6838,7 @@
     };
     module.exports = GZip;
   }), {} ],
-  32: [ (function(require, module, exports) {
+  31: [ (function(require, module, exports) {
     (function() {
       "use strict";
       function i(a) {
@@ -7828,7 +7827,7 @@
     _p.Inflate.prototype.decompress = _p.Inflate.prototype["decompress"];
     module.exports = _p;
   }), {} ],
-  33: [ (function(require, module, exports) {
+  32: [ (function(require, module, exports) {
     cc.configuration = {
       ERROR: 0,
       STRING: 1,
@@ -7940,7 +7939,7 @@
       }
     };
   }), {} ],
-  34: [ (function(require, module, exports) {
+  33: [ (function(require, module, exports) {
     var EventTarget = require("./event/event-target");
     var Class = require("./platform/_CCClass");
     var AutoReleaseUtils = require("./load-pipeline/auto-release-utils");
@@ -8506,14 +8505,14 @@
     cc.Director.PROJECTION_CUSTOM = 3;
     cc.Director.PROJECTION_DEFAULT = cc.Director.PROJECTION_2D;
   }), {
-    "./component-scheduler": 71,
-    "./event/event-listeners": 110,
-    "./event/event-target": 111,
-    "./load-pipeline/auto-release-utils": 131,
-    "./node-activator": 144,
-    "./platform/_CCClass": 184
+    "./component-scheduler": 70,
+    "./event/event-listeners": 112,
+    "./event/event-target": 113,
+    "./load-pipeline/auto-release-utils": 134,
+    "./node-activator": 147,
+    "./platform/_CCClass": 187
   } ],
-  35: [ (function(require, module, exports) {
+  34: [ (function(require, module, exports) {
     require("./CCDirector");
     require("./CCGame");
     cc.game.once(cc.game.EVENT_RENDERER_INITED, (function() {
@@ -8546,10 +8545,10 @@
       }
     }));
   }), {
-    "./CCDirector": 34,
-    "./CCGame": 40
+    "./CCDirector": 33,
+    "./CCGame": 39
   } ],
-  36: [ (function(require, module, exports) {
+  35: [ (function(require, module, exports) {
     require("./CCDirector");
     require("./CCGame");
     require("../kazmath");
@@ -8667,22 +8666,22 @@
       };
     }));
   }), {
-    "../kazmath": 242,
-    "./CCDirector": 34,
-    "./CCGame": 40
+    "../kazmath": 246,
+    "./CCDirector": 33,
+    "./CCGame": 39
   } ],
-  37: [ (function(require, module, exports) {
+  36: [ (function(require, module, exports) {
     var game = require("./CCGame");
     cc._drawingUtil = null;
     game.once(game.EVENT_RENDERER_INITED, (function() {
       cc._renderType === game.RENDER_TYPE_WEBGL ? cc._drawingUtil = new (require("./CCDrawingPrimitivesWebGL"))(cc._renderContext) : cc._drawingUtil = new (require("./CCDrawingPrimitivesCanvas"))(cc._renderContext);
     }));
   }), {
-    "./CCDrawingPrimitivesCanvas": 38,
-    "./CCDrawingPrimitivesWebGL": 39,
-    "./CCGame": 40
+    "./CCDrawingPrimitivesCanvas": 37,
+    "./CCDrawingPrimitivesWebGL": 38,
+    "./CCGame": 39
   } ],
-  38: [ (function(require, module, exports) {
+  37: [ (function(require, module, exports) {
     var DrawingPrimitiveCanvas = cc._Class.extend({
       _cacheArray: [],
       ctor: function(renderContext) {
@@ -8885,7 +8884,7 @@
     });
     module.exports = DrawingPrimitiveCanvas;
   }), {} ],
-  39: [ (function(require, module, exports) {
+  38: [ (function(require, module, exports) {
     var macro = cc.macro;
     var DrawingPrimitiveWebGL = cc._Class.extend({
       _initialized: false,
@@ -9132,7 +9131,7 @@
     });
     module.exports = DrawingPrimitiveWebGL;
   }), {} ],
-  40: [ (function(require, module, exports) {
+  39: [ (function(require, module, exports) {
     var EventTarget = require("./event/event-target");
     var View;
     true;
@@ -9476,12 +9475,12 @@
     cc.js.addon(game, EventTarget.prototype);
     cc.game = module.exports = game;
   }), {
-    "../audio/CCAudioEngine": 24,
-    "./event/event-target": 111,
-    "./platform/CCInputManager": 176,
-    "./platform/CCView": 182
+    "../audio/CCAudioEngine": 23,
+    "./event/event-target": 113,
+    "./platform/CCInputManager": 179,
+    "./platform/CCView": 185
   } ],
-  41: [ (function(require, module, exports) {
+  40: [ (function(require, module, exports) {
     "use strict";
     var PrefabHelper = require("./utils/prefab-helper");
     var SgHelper = require("./utils/scene-graph-helper");
@@ -10496,13 +10495,13 @@
     Node.EventType = EventType;
     cc.Node = module.exports = Node;
   }), {
-    "./event/event": 112,
-    "./utils/base-node": 217,
-    "./utils/misc": 222,
-    "./utils/prefab-helper": 224,
-    "./utils/scene-graph-helper": 225
+    "./event/event": 114,
+    "./utils/base-node": 220,
+    "./utils/misc": 225,
+    "./utils/prefab-helper": 227,
+    "./utils/scene-graph-helper": 228
   } ],
-  42: [ (function(require, module, exports) {
+  41: [ (function(require, module, exports) {
     var NIL = function() {};
     cc.Scene = cc.Class({
       name: "cc.Scene",
@@ -10541,9 +10540,9 @@
     });
     module.exports = cc.Scene;
   }), {
-    "./CCNode": 41
+    "./CCNode": 40
   } ],
-  43: [ (function(require, module, exports) {
+  42: [ (function(require, module, exports) {
     var MAX_POOL_SIZE = 20;
     var ListEntry = function(prev, next, callback, target, priority, paused, markedForDeletion) {
       this.prev = prev;
@@ -11051,7 +11050,7 @@
     cc.Scheduler.PRIORITY_SYSTEM = 1 << 31;
     cc.Scheduler.PRIORITY_NON_SYSTEM = cc.Scheduler.PRIORITY_SYSTEM + 1;
   }), {} ],
-  44: [ (function(require, module, exports) {
+  43: [ (function(require, module, exports) {
     var RawAsset = require("./CCRawAsset");
     cc.Asset = cc.Class({
       name: "cc.Asset",
@@ -11101,9 +11100,9 @@
     });
     module.exports = cc.Asset;
   }), {
-    "./CCRawAsset": 50
+    "./CCRawAsset": 49
   } ],
-  45: [ (function(require, module, exports) {
+  44: [ (function(require, module, exports) {
     var AudioClip = cc.Class({
       name: "cc.AudioClip",
       extends: cc.RawAsset
@@ -11111,7 +11110,7 @@
     cc.AudioClip = AudioClip;
     module.exports = AudioClip;
   }), {} ],
-  46: [ (function(require, module, exports) {
+  45: [ (function(require, module, exports) {
     var BitmapFont = cc.Class({
       name: "cc.BitmapFont",
       extends: cc.Font,
@@ -11132,7 +11131,7 @@
     cc.BitmapFont = BitmapFont;
     module.exports = BitmapFont;
   }), {} ],
-  47: [ (function(require, module, exports) {
+  46: [ (function(require, module, exports) {
     var Font = cc.Class({
       name: "cc.Font",
       extends: cc.Asset
@@ -11140,7 +11139,7 @@
     cc.Font = Font;
     module.exports = Font;
   }), {} ],
-  48: [ (function(require, module, exports) {
+  47: [ (function(require, module, exports) {
     var LabelAtlas = cc.Class({
       name: "cc.LabelAtlas",
       extends: cc.BitmapFont
@@ -11148,7 +11147,7 @@
     cc.LabelAtlas = LabelAtlas;
     module.exports = LabelAtlas;
   }), {} ],
-  49: [ (function(require, module, exports) {
+  48: [ (function(require, module, exports) {
     var Prefab = cc.Class({
       name: "cc.Prefab",
       extends: cc.Asset,
@@ -11182,9 +11181,9 @@
     cc.Prefab = module.exports = Prefab;
     cc.js.obsolete(cc, "cc._Prefab", "Prefab");
   }), {
-    "../platform/instantiate-jit": 191
+    "../platform/instantiate-jit": 194
   } ],
-  50: [ (function(require, module, exports) {
+  49: [ (function(require, module, exports) {
     var CCObject = require("../platform/CCObject");
     cc.RawAsset = cc.Class({
       name: "cc.RawAsset",
@@ -11206,9 +11205,9 @@
     });
     module.exports = cc.RawAsset;
   }), {
-    "../platform/CCObject": 178
+    "../platform/CCObject": 181
   } ],
-  51: [ (function(require, module, exports) {
+  50: [ (function(require, module, exports) {
     var Scene = cc.Class({
       name: "cc.SceneAsset",
       extends: cc.Asset,
@@ -11220,7 +11219,7 @@
     cc.SceneAsset = Scene;
     module.exports = Scene;
   }), {} ],
-  52: [ (function(require, module, exports) {
+  51: [ (function(require, module, exports) {
     var Script = cc.Class({
       name: "cc.Script",
       extends: cc.Asset
@@ -11242,7 +11241,7 @@
     });
     cc._TypeScript = TypeScript;
   }), {} ],
-  53: [ (function(require, module, exports) {
+  52: [ (function(require, module, exports) {
     var SpriteAtlas = cc.Class({
       name: "cc.SpriteAtlas",
       extends: cc.Asset,
@@ -11272,7 +11271,7 @@
     cc.SpriteAtlas = SpriteAtlas;
     module.exports = SpriteAtlas;
   }), {} ],
-  54: [ (function(require, module, exports) {
+  53: [ (function(require, module, exports) {
     var TTFFont = cc.Class({
       name: "cc.TTFFont",
       extends: cc.Font
@@ -11280,7 +11279,7 @@
     cc.TTFFont = TTFFont;
     module.exports = TTFFont;
   }), {} ],
-  55: [ (function(require, module, exports) {
+  54: [ (function(require, module, exports) {
     require("./CCRawAsset");
     require("./CCAsset");
     require("./CCFont");
@@ -11295,21 +11294,21 @@
     require("./CCBitmapFont");
     require("./CCLabelAtlas");
   }), {
-    "../sprites/CCSpriteFrame": 211,
-    "../textures/CCTexture2D": 212,
-    "./CCAsset": 44,
-    "./CCAudioClip": 45,
-    "./CCBitmapFont": 46,
-    "./CCFont": 47,
-    "./CCLabelAtlas": 48,
-    "./CCPrefab": 49,
-    "./CCRawAsset": 50,
-    "./CCSceneAsset": 51,
-    "./CCScripts": 52,
-    "./CCSpriteAtlas": 53,
-    "./CCTTFFont": 54
+    "../sprites/CCSpriteFrame": 214,
+    "../textures/CCTexture2D": 215,
+    "./CCAsset": 43,
+    "./CCAudioClip": 44,
+    "./CCBitmapFont": 45,
+    "./CCFont": 46,
+    "./CCLabelAtlas": 47,
+    "./CCPrefab": 48,
+    "./CCRawAsset": 49,
+    "./CCSceneAsset": 50,
+    "./CCScripts": 51,
+    "./CCSpriteAtlas": 52,
+    "./CCTTFFont": 53
   } ],
-  56: [ (function(require, module, exports) {
+  55: [ (function(require, module, exports) {
     var Misc = require("../utils/misc");
     var ActionManagerExist = !!cc.ActionManager;
     var emptyFunc = function() {};
@@ -12178,9 +12177,9 @@
     };
     Misc.propertyDefine(_ccsg.Node, SameNameGetSets, DiffNameGetSets);
   }), {
-    "../utils/misc": 222
+    "../utils/misc": 225
   } ],
-  57: [ (function(require, module, exports) {
+  56: [ (function(require, module, exports) {
     cc.CustomRenderCmd = function(target, func) {
       this._needDraw = true;
       this._target = target;
@@ -12585,7 +12584,7 @@
     _ccsg.Node.RenderCmd.prototype.originUpdateStatus = _ccsg.Node.RenderCmd.prototype.updateStatus;
     _ccsg.Node.RenderCmd.prototype._originSyncStatus = _ccsg.Node.RenderCmd.prototype._syncStatus;
   }), {} ],
-  58: [ (function(require, module, exports) {
+  57: [ (function(require, module, exports) {
     _ccsg.Node.CanvasRenderCmd = function(renderable) {
       this._ctor(renderable);
       this._currentRegion = new cc.Region();
@@ -12633,7 +12632,7 @@
       return blendFunc ? blendFunc.src === cc.macro.SRC_ALPHA && blendFunc.dst === cc.macro.ONE || blendFunc.src === cc.macro.ONE && blendFunc.dst === cc.macro.ONE ? "lighter" : blendFunc.src === cc.macro.ZERO && blendFunc.dst === cc.macro.SRC_ALPHA ? "destination-in" : blendFunc.src === cc.macro.ZERO && blendFunc.dst === cc.macro.ONE_MINUS_SRC_ALPHA ? "destination-out" : "source-over" : "source-over";
     };
   }), {} ],
-  59: [ (function(require, module, exports) {
+  58: [ (function(require, module, exports) {
     _ccsg.Node.WebGLRenderCmd = function(renderable) {
       this._ctor(renderable);
       this._shaderProgram = null;
@@ -12649,7 +12648,7 @@
       return this._shaderProgram;
     };
   }), {} ],
-  60: [ (function(require, module, exports) {
+  59: [ (function(require, module, exports) {
     var TOP = 1;
     var MID = 2;
     var BOT = 4;
@@ -12867,7 +12866,7 @@
     };
     false;
   }), {} ],
-  61: [ (function(require, module, exports) {
+  60: [ (function(require, module, exports) {
     var cullingDirtyFlag;
     true;
     cullingDirtyFlag = _ccsg.Node._dirtyFlags.cullingDirty;
@@ -13072,9 +13071,9 @@
     });
     module.exports = cc.Camera = Camera;
   }), {
-    "./CCSGCameraNode": 62
+    "./CCSGCameraNode": 61
   } ],
-  62: [ (function(require, module, exports) {
+  61: [ (function(require, module, exports) {
     var tempMat = new cc.math.Matrix4();
     var CameraNode = _ccsg.Node.extend({
       ctor: function() {
@@ -13124,7 +13123,7 @@
     });
     module.exports = _ccsg.CameraNode = CameraNode;
   }), {} ],
-  63: [ (function(require, module, exports) {
+  62: [ (function(require, module, exports) {
     cc.Collider.Box = cc.Class({
       properties: {
         _offset: cc.v2(0, 0),
@@ -13161,7 +13160,7 @@
     });
     cc.BoxCollider = module.exports = BoxCollider;
   }), {} ],
-  64: [ (function(require, module, exports) {
+  63: [ (function(require, module, exports) {
     cc.Collider.Circle = cc.Class({
       properties: {
         _offset: cc.v2(0, 0),
@@ -13195,7 +13194,7 @@
     });
     cc.CircleCollider = module.exports = CircleCollider;
   }), {} ],
-  65: [ (function(require, module, exports) {
+  64: [ (function(require, module, exports) {
     var Collider = cc.Class({
       name: "cc.Collider",
       extends: cc.Component,
@@ -13221,7 +13220,7 @@
     });
     cc.Collider = module.exports = Collider;
   }), {} ],
-  66: [ (function(require, module, exports) {
+  65: [ (function(require, module, exports) {
     var Contact = require("./CCContact");
     var CollisionType = Contact.CollisionType;
     var tempRect = cc.rect();
@@ -13483,9 +13482,9 @@
     }));
     cc.CollisionManager = module.exports = CollisionManager;
   }), {
-    "./CCContact": 67
+    "./CCContact": 66
   } ],
-  67: [ (function(require, module, exports) {
+  66: [ (function(require, module, exports) {
     var Intersection = require("./CCIntersection");
     var CollisionType = cc.Enum({
       None: 0,
@@ -13531,9 +13530,9 @@
     Contact.CollisionType = CollisionType;
     module.exports = Contact;
   }), {
-    "./CCIntersection": 68
+    "./CCIntersection": 67
   } ],
-  68: [ (function(require, module, exports) {
+  67: [ (function(require, module, exports) {
     var Intersection = {};
     function lineLine(a1, a2, b1, b2) {
       var ua_t = (b2.x - b1.x) * (a1.y - b1.y) - (b2.y - b1.y) * (a1.x - b1.x);
@@ -13653,7 +13652,7 @@
     Intersection.pointLineDistance = pointLineDistance;
     cc.Intersection = module.exports = Intersection;
   }), {} ],
-  69: [ (function(require, module, exports) {
+  68: [ (function(require, module, exports) {
     cc.Collider.Polygon = cc.Class({
       properties: {
         threshold: {
@@ -13689,20 +13688,20 @@
     });
     cc.PolygonCollider = module.exports = PolygonCollider;
   }), {} ],
-  70: [ (function(require, module, exports) {
+  69: [ (function(require, module, exports) {
     require("./CCCollisionManager");
     require("./CCCollider");
     require("./CCBoxCollider");
     require("./CCCircleCollider");
     require("./CCPolygonCollider");
   }), {
-    "./CCBoxCollider": 63,
-    "./CCCircleCollider": 64,
-    "./CCCollider": 65,
-    "./CCCollisionManager": 66,
-    "./CCPolygonCollider": 69
+    "./CCBoxCollider": 62,
+    "./CCCircleCollider": 63,
+    "./CCCollider": 64,
+    "./CCCollisionManager": 65,
+    "./CCPolygonCollider": 68
   } ],
-  71: [ (function(require, module, exports) {
+  70: [ (function(require, module, exports) {
     require("./platform/CCClass");
     var Flags = require("./platform/CCObject").Flags;
     var JsArray = require("./platform/js").array;
@@ -13935,12 +13934,12 @@
     });
     module.exports = ComponentScheduler;
   }), {
-    "./platform/CCClass": 172,
-    "./platform/CCObject": 178,
-    "./platform/js": 193,
-    "./utils/misc": 222
+    "./platform/CCClass": 175,
+    "./platform/CCObject": 181,
+    "./platform/js": 196,
+    "./utils/misc": 225
   } ],
-  72: [ (function(require, module, exports) {
+  71: [ (function(require, module, exports) {
     var AnimationAnimator = require("../../animation/animation-animator");
     var AnimationClip = require("../../animation/animation-clip");
     function equalClips(clip1, clip2) {
@@ -14175,11 +14174,11 @@
     });
     cc.Animation = module.exports = Animation;
   }), {
-    "../../animation/animation-animator": 12,
-    "../../animation/animation-clip": 13,
-    "./CCComponent": 77
+    "../../animation/animation-animator": 11,
+    "../../animation/animation-clip": 12,
+    "./CCComponent": 76
   } ],
-  73: [ (function(require, module, exports) {
+  72: [ (function(require, module, exports) {
     var AudioSource = cc.Class({
       name: "cc.AudioSource",
       extends: require("./CCComponent"),
@@ -14359,9 +14358,9 @@
     });
     cc.AudioSource = module.exports = AudioSource;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  74: [ (function(require, module, exports) {
+  73: [ (function(require, module, exports) {
     var BlockEvents = [ "touchstart", "touchmove", "touchend", "mousedown", "mousemove", "mouseup", "mouseenter", "mouseleave", "mousewheel" ];
     function stopPropagation(event) {
       event.stopPropagation();
@@ -14383,9 +14382,9 @@
     });
     cc.BlockInputEvents = module.exports = BlockInputEvents;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  75: [ (function(require, module, exports) {
+  74: [ (function(require, module, exports) {
     var Transition = cc.Enum({
       NONE: 0,
       COLOR: 1,
@@ -14690,9 +14689,9 @@
     });
     cc.Button = module.exports = Button;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  76: [ (function(require, module, exports) {
+  75: [ (function(require, module, exports) {
     var designResolutionWrapper = {
       getContentSize: function() {
         return cc.visibleRect;
@@ -14809,9 +14808,9 @@
     });
     cc.Canvas = module.exports = Canvas;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  77: [ (function(require, module, exports) {
+  76: [ (function(require, module, exports) {
     var CCObject = require("../platform/CCObject");
     var JS = require("../platform/js");
     var idGenerater = new (require("../platform/id-generater"))("Comp");
@@ -14978,11 +14977,11 @@
     Component.prototype.__scriptUuid = "";
     cc.Component = module.exports = Component;
   }), {
-    "../platform/CCObject": 178,
-    "../platform/id-generater": 189,
-    "../platform/js": 193
+    "../platform/CCObject": 181,
+    "../platform/id-generater": 192,
+    "../platform/js": 196
   } ],
-  78: [ (function(require, module, exports) {
+  77: [ (function(require, module, exports) {
     cc.Component.EventHandler = cc.Class({
       name: "cc.ClickEvent",
       properties: {
@@ -15030,7 +15029,7 @@
       }
     });
   }), {} ],
-  79: [ (function(require, module, exports) {
+  78: [ (function(require, module, exports) {
     require("../editbox/CCSGEditBox");
     var KeyboardReturnType = _ccsg.EditBox.KeyboardReturnType;
     var InputMode = _ccsg.EditBox.InputMode;
@@ -15275,9 +15274,9 @@
     false;
     cc.EditBox = module.exports = EditBox;
   }), {
-    "../editbox/CCSGEditBox": 103
+    "../editbox/CCSGEditBox": 105
   } ],
-  80: [ (function(require, module, exports) {
+  79: [ (function(require, module, exports) {
     require("../label/CCSGLabel");
     require("../label/CCSGLabelCanvasRenderCmd");
     require("../label/CCSGLabelWebGLRenderCmd");
@@ -15541,11 +15540,11 @@
     });
     cc.Label = module.exports = Label;
   }), {
-    "../label/CCSGLabel": 123,
-    "../label/CCSGLabelCanvasRenderCmd": 124,
-    "../label/CCSGLabelWebGLRenderCmd": 125
+    "../label/CCSGLabel": 126,
+    "../label/CCSGLabelCanvasRenderCmd": 127,
+    "../label/CCSGLabelWebGLRenderCmd": 128
   } ],
-  81: [ (function(require, module, exports) {
+  80: [ (function(require, module, exports) {
     var LabelOutline = cc.Class({
       name: "cc.LabelOutline",
       extends: require("./CCComponent"),
@@ -15598,9 +15597,9 @@
     });
     cc.LabelOutline = module.exports = LabelOutline;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  82: [ (function(require, module, exports) {
+  81: [ (function(require, module, exports) {
     var Type = cc.Enum({
       NONE: 0,
       HORIZONTAL: 1,
@@ -16119,9 +16118,9 @@
     });
     cc.Layout = module.exports = Layout;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  83: [ (function(require, module, exports) {
+  82: [ (function(require, module, exports) {
     require("../../clipping-nodes/CCClippingNode");
     require("../../clipping-nodes/CCClippingNodeCanvasRenderCmd");
     require("../../clipping-nodes/CCClippingNodeWebGLRenderCmd");
@@ -16301,12 +16300,12 @@
     false;
     cc.Mask = module.exports = Mask;
   }), {
-    "../../clipping-nodes/CCClippingNode": 26,
-    "../../clipping-nodes/CCClippingNodeCanvasRenderCmd": 27,
-    "../../clipping-nodes/CCClippingNodeWebGLRenderCmd": 28,
-    "../../shape-nodes/CCDrawNode": 270
+    "../../clipping-nodes/CCClippingNode": 25,
+    "../../clipping-nodes/CCClippingNodeCanvasRenderCmd": 26,
+    "../../clipping-nodes/CCClippingNodeWebGLRenderCmd": 27,
+    "../../shape-nodes/CCDrawNode": 274
   } ],
-  84: [ (function(require, module, exports) {
+  83: [ (function(require, module, exports) {
     var SizeMode = cc.Enum({
       Unified: 0,
       Free: 1
@@ -16609,7 +16608,7 @@
     });
     cc.PageView = module.exports = PageView;
   }), {} ],
-  85: [ (function(require, module, exports) {
+  84: [ (function(require, module, exports) {
     var Direction = cc.Enum({
       HORIZONTAL: 0,
       VERTICAL: 1
@@ -16703,9 +16702,9 @@
     });
     cc.PageViewIndicator = module.exports = PageViewIndicator;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  86: [ (function(require, module, exports) {
+  85: [ (function(require, module, exports) {
     var Mode = cc.Enum({
       HORIZONTAL: 0,
       VERTICAL: 1,
@@ -16836,9 +16835,9 @@
     });
     cc.ProgressBar = module.exports = ProgressBar;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  87: [ (function(require, module, exports) {
+  86: [ (function(require, module, exports) {
     var RendererInSG = cc.Class({
       extends: require("./CCSGComponent"),
       name: "cc._RendererInSG",
@@ -16897,7 +16896,7 @@
   }), {
     "./CCSGComponent": 89
   } ],
-  88: [ (function(require, module, exports) {
+  87: [ (function(require, module, exports) {
     var RendererUnderSG = cc.Class({
       extends: require("./CCSGComponent"),
       name: "cc._RendererUnderSG",
@@ -16939,6 +16938,487 @@
   }), {
     "./CCSGComponent": 89
   } ],
+  88: [ (function(require, module, exports) {
+    require("../label/CCHtmlTextParser");
+    require("../label/CCTextUtils");
+    var HorizontalAlign = cc.TextAlignment;
+    var VerticalAlign = cc.VerticalTextAlignment;
+    function debounce(func, wait, immediate) {
+      var timeout;
+      return function() {
+        var context = this;
+        var later = function() {
+          timeout = null;
+          immediate || func.apply(context, arguments);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        callNow && func.apply(context, arguments);
+      };
+    }
+    var RichText = cc.Class({
+      name: "cc.RichText",
+      extends: cc._RendererUnderSG,
+      ctor: function() {
+        this._textArray = null;
+        this._labelSegments = [];
+        this._labelSegmentsCache = [];
+        this._linesWidth = [];
+        this._resetState();
+        false;
+        this._updateRichTextStatus = this._updateRichText;
+      },
+      editor: false,
+      properties: {
+        string: {
+          default: "<color=#00ff00>Rich</c><color=#0fffff>Text</color>",
+          multiline: true,
+          tooltip: false,
+          notify: function() {
+            this._updateRichTextStatus();
+          }
+        },
+        horizontalAlign: {
+          default: HorizontalAlign.LEFT,
+          type: HorizontalAlign,
+          tooltip: false,
+          animatable: false,
+          notify: function(oldValue) {
+            if (this.horizontalAlign === oldValue) return;
+            this._layoutDirty = true;
+            this._updateRichTextStatus();
+          }
+        },
+        fontSize: {
+          default: 40,
+          tooltip: false,
+          notify: function(oldValue) {
+            if (this.fontSize === oldValue) return;
+            this._layoutDirty = true;
+            this._updateRichTextStatus();
+          }
+        },
+        font: {
+          default: null,
+          type: cc.TTFFont,
+          tooltip: false,
+          notify: function(oldValue) {
+            if (this.font === oldValue) return;
+            this._layoutDirty = true;
+            (true, this.font) && this._onTTFLoaded();
+            this._updateRichTextStatus();
+          }
+        },
+        maxWidth: {
+          default: 0,
+          tooltip: false,
+          notify: function(oldValue) {
+            if (this.maxWidth === oldValue) return;
+            this._layoutDirty = true;
+            this._updateRichTextStatus();
+          }
+        },
+        lineHeight: {
+          default: 40,
+          tooltip: false,
+          notify: function(oldValue) {
+            if (this.lineHeight === oldValue) return;
+            this._layoutDirty = true;
+            this._updateRichTextStatus();
+          }
+        },
+        imageAtlas: {
+          default: null,
+          type: cc.SpriteAtlas,
+          tooltip: false,
+          notify: function(oldValue) {
+            if (this.imageAtlas === oldValue) return;
+            this._layoutDirty = true;
+            this._updateRichTextStatus();
+          }
+        },
+        handleTouchEvent: {
+          default: true,
+          tooltip: false,
+          notify: function(oldValue) {
+            if (this.handleTouchEvent === oldValue) return;
+            this.enabledInHierarchy && (this.handleTouchEvent ? this._addEventListeners() : this._removeEventListeners());
+          }
+        }
+      },
+      statics: {
+        HorizontalAlign: HorizontalAlign,
+        VerticalAlign: VerticalAlign
+      },
+      onEnable: function() {
+        this._super();
+        this.handleTouchEvent && this._addEventListeners();
+      },
+      onDisable: function() {
+        this._super();
+        this.handleTouchEvent && this._removeEventListeners();
+      },
+      _addEventListeners: function() {
+        this.node.on(cc.Node.EventType.TOUCH_END, this._onTouchEnded, this);
+      },
+      _removeEventListeners: function() {
+        this.node.off(cc.Node.EventType.TOUCH_END, this._onTouchEnded, this);
+      },
+      _createSgNode: function() {
+        var sgNode = new _ccsg.Node();
+        sgNode.setCascadeOpacityEnabled(true);
+        var self = this;
+        sgNode.setColor = function() {
+          self._updateLabelSegmentTextAttributes();
+        };
+        sgNode._setContentSize = sgNode.setContentSize;
+        sgNode.setContentSize = function() {};
+        return sgNode;
+      },
+      _updateLabelSegmentTextAttributes: function() {
+        this._labelSegments.forEach(function(item) {
+          this._applyTextAttribute(item);
+        }.bind(this));
+      },
+      _initSgNode: function() {
+        this._updateRichText();
+        true;
+        this._onTTFLoaded();
+      },
+      _createFontLabel: function(string) {
+        return _ccsg.Label.pool.get(string, this.font, null, this.fontSize);
+      },
+      _getFontRawUrl: function() {
+        var isAsset = this.font instanceof cc.TTFFont;
+        var fntRawUrl = isAsset ? this.font.rawUrl : "";
+        return fntRawUrl;
+      },
+      _onTTFLoaded: function() {
+        var rawUrl = this._getFontRawUrl();
+        if (!rawUrl) return;
+        var self = this;
+        var callback = function() {
+          self._layoutDirty = true;
+          self._updateRichText();
+        };
+        cc.CustomFontLoader.loadTTF(rawUrl, callback);
+      },
+      _measureText: function(styleIndex, string) {
+        var self = this;
+        var func = function(string) {
+          var label;
+          if (0 === self._labelSegmentsCache.length) {
+            label = self._createFontLabel(string);
+            self._labelSegmentsCache.push(label);
+          } else {
+            label = self._labelSegmentsCache[0];
+            label.setString(string);
+          }
+          label._styleIndex = styleIndex;
+          self._applyTextAttribute(label);
+          var labelSize = label.getContentSize();
+          return labelSize.width;
+        };
+        return string ? func(string) : func;
+      },
+      _onTouchEnded: function(event) {
+        var components = this.node.getComponents(cc.Component);
+        for (var i = 0; i < this._labelSegments.length; ++i) {
+          var labelSegment = this._labelSegments[i];
+          var clickHandler = labelSegment._clickHandler;
+          if (clickHandler && this._containsTouchLocation(labelSegment, event.touch.getLocation())) {
+            components.forEach((function(component) {
+              component.enabledInHierarchy && component[clickHandler] && component[clickHandler](event);
+            }));
+            event.stopPropagation();
+          }
+        }
+      },
+      _containsTouchLocation: function(label, point) {
+        var myRect = label.getBoundingBoxToWorld();
+        return cc.rectContainsPoint(myRect, point);
+      },
+      _resetState: function() {
+        var sgNode = this._sgNode;
+        sgNode && sgNode.removeAllChildren();
+        this._labelSegments.length = 0;
+        this._labelSegmentsCache.length = 0;
+        this._linesWidth.length = 0;
+        this._lineOffsetX = 0;
+        this._lineCount = 1;
+        this._labelWidth = 0;
+        this._labelHeight = 0;
+        this._layoutDirty = true;
+      },
+      _addLabelSegment: function(stringToken, styleIndex) {
+        var labelSegment;
+        if (0 === this._labelSegmentsCache.length) labelSegment = this._createFontLabel(stringToken); else {
+          labelSegment = this._labelSegmentsCache.pop();
+          labelSegment.setString(stringToken);
+        }
+        labelSegment._styleIndex = styleIndex;
+        labelSegment._lineCount = this._lineCount;
+        this._applyTextAttribute(labelSegment);
+        labelSegment.setAnchorPoint(0, 0);
+        this._sgNode.addChild(labelSegment);
+        this._labelSegments.push(labelSegment);
+        var size;
+        false;
+        return labelSegment;
+      },
+      _updateRichTextWithMaxWidth: function(labelString, labelWidth, styleIndex) {
+        var fragmentWidth = labelWidth;
+        var labelSegment;
+        if (this._lineOffsetX > 0 && fragmentWidth + this._lineOffsetX > this.maxWidth) {
+          var checkStartIndex = 0;
+          while (this._lineOffsetX <= this.maxWidth) {
+            var checkEndIndex = this._getFirstWordLen(labelString, checkStartIndex, labelString.length);
+            var checkString = labelString.substr(checkStartIndex, checkEndIndex);
+            var checkStringWidth = this._measureText(styleIndex, checkString);
+            if (!(this._lineOffsetX + checkStringWidth <= this.maxWidth)) {
+              if (checkStartIndex > 0) {
+                var remainingString = labelString.substr(0, checkStartIndex);
+                this._addLabelSegment(remainingString, styleIndex);
+                labelString = labelString.substr(checkStartIndex, labelString.length);
+                fragmentWidth = this._measureText(styleIndex, labelString);
+              }
+              this._updateLineInfo();
+              break;
+            }
+            this._lineOffsetX += checkStringWidth;
+            checkStartIndex += checkEndIndex;
+          }
+        }
+        if (fragmentWidth > this.maxWidth) {
+          var fragments = cc.TextUtils.fragmentText(labelString, fragmentWidth, this.maxWidth, this._measureText(styleIndex));
+          for (var k = 0; k < fragments.length; ++k) {
+            var splitString = fragments[k];
+            labelSegment = this._addLabelSegment(splitString, styleIndex);
+            var labelSize = labelSegment.getContentSize();
+            this._lineOffsetX += labelSize.width;
+            fragments.length > 1 && k < fragments.length - 1 && this._updateLineInfo();
+          }
+        } else {
+          this._lineOffsetX += fragmentWidth;
+          this._addLabelSegment(labelString, styleIndex);
+        }
+      },
+      _isLastComponentCR: function(stringToken) {
+        return stringToken.length - 1 === stringToken.lastIndexOf("\n");
+      },
+      _updateLineInfo: function() {
+        this._linesWidth.push(this._lineOffsetX);
+        this._lineOffsetX = 0;
+        this._lineCount++;
+      },
+      _needsUpdateTextLayout: function(newTextArray) {
+        if (this._layoutDirty || !this._textArray || !newTextArray) return true;
+        if (this._textArray.length !== newTextArray.length) return true;
+        for (var i = 0; i < this._textArray.length; ++i) {
+          var oldItem = this._textArray[i];
+          var newItem = newTextArray[i];
+          if (oldItem.text != newItem.text) return true;
+          if (oldItem.style) {
+            if (newItem.style) {
+              if (oldItem.style.size !== newItem.style.size || oldItem.style.italic !== newItem.style.italic || oldItem.style.isImage !== newItem.style.isImage) return true;
+              if (oldItem.style.isImage === newItem.style.isImage && oldItem.style.src !== newItem.style.src) return true;
+            } else if (oldItem.style.size || oldItem.style.italic || oldItem.style.isImage) return true;
+          } else if (newItem.style && (newItem.style.size || newItem.style.italic || newItem.style.isImage)) return true;
+        }
+        return false;
+      },
+      _onSpriteFrameLoaded: function(event, spriteFrame) {
+        var newSpriteFrame;
+        newSpriteFrame = spriteFrame || event.target;
+        var sprite = newSpriteFrame.__sprite;
+        sprite.setSpriteFrame(newSpriteFrame);
+      },
+      _applySpriteFrame: function(spriteFrame) {
+        if (spriteFrame) if (spriteFrame.textureLoaded()) this._onSpriteFrameLoaded(null, spriteFrame); else {
+          spriteFrame.once("load", this._onSpriteFrameLoaded, this);
+          spriteFrame.ensureLoadTexture();
+        }
+      },
+      _addRichTextImageElement: function(richTextElement) {
+        var spriteFrameName = richTextElement.style.src;
+        var spriteFrame = this.imageAtlas.getSpriteFrame(spriteFrameName);
+        if (spriteFrame) {
+          var sprite = new cc.Scale9Sprite();
+          sprite.setAnchorPoint(0, 0);
+          spriteFrame.__sprite = sprite;
+          this._sgNode.addChild(sprite);
+          this._labelSegments.push(sprite);
+          var spriteRect = spriteFrame.getRect();
+          var scaleFactor = 1;
+          var spriteWidth = spriteRect.width;
+          var spriteHeight = spriteRect.height;
+          var expectWidth = richTextElement.style.imageWidth;
+          var expectHeight = richTextElement.style.imageHeight;
+          if (expectHeight > 0 && expectHeight < this.lineHeight) {
+            scaleFactor = expectHeight / spriteHeight;
+            spriteWidth *= scaleFactor;
+            spriteHeight *= scaleFactor;
+          } else {
+            scaleFactor = this.lineHeight / spriteHeight;
+            spriteWidth *= scaleFactor;
+            spriteHeight *= scaleFactor;
+          }
+          expectWidth > 0 && (spriteWidth = expectWidth);
+          if (this.maxWidth > 0) {
+            this._lineOffsetX + spriteWidth > this.maxWidth && this._updateLineInfo();
+            this._lineOffsetX += spriteWidth;
+          } else {
+            this._lineOffsetX += spriteWidth;
+            this._lineOffsetX > this._labelWidth && (this._labelWidth = this._lineOffsetX);
+          }
+          this._applySpriteFrame(spriteFrame);
+          sprite.setContentSize(spriteWidth, spriteHeight);
+          sprite._lineCount = this._lineCount;
+          richTextElement.style.event && richTextElement.style.event.click && (sprite._clickHandler = richTextElement.style.event.click);
+        } else cc.warnID(4400);
+      },
+      _updateRichText: function() {
+        if (!this.enabled) return;
+        var newTextArray = cc.htmlTextParser.parse(this.string);
+        if (!this._needsUpdateTextLayout(newTextArray)) {
+          this._textArray = newTextArray;
+          this._updateLabelSegmentTextAttributes();
+          return;
+        }
+        this._textArray = newTextArray;
+        this._resetState();
+        var lastEmptyLine = false;
+        var label;
+        var labelSize;
+        for (var i = 0; i < this._textArray.length; ++i) {
+          var richTextElement = this._textArray[i];
+          var text = richTextElement.text;
+          if ("" === text) {
+            if (richTextElement.style && richTextElement.style.newline) {
+              this._updateLineInfo();
+              continue;
+            }
+            if (richTextElement.style && richTextElement.style.isImage && this.imageAtlas) {
+              this._addRichTextImageElement(richTextElement);
+              continue;
+            }
+          }
+          var multilineTexts = text.split("\n");
+          for (var j = 0; j < multilineTexts.length; ++j) {
+            var labelString = multilineTexts[j];
+            if ("" === labelString) {
+              if (this._isLastComponentCR(text) && j == multilineTexts.length - 1) continue;
+              this._updateLineInfo();
+              lastEmptyLine = true;
+              continue;
+            }
+            lastEmptyLine = false;
+            if (this.maxWidth > 0) {
+              var labelWidth = this._measureText(i, labelString);
+              this._updateRichTextWithMaxWidth(labelString, labelWidth, i);
+              multilineTexts.length > 1 && j < multilineTexts.length - 1 && this._updateLineInfo();
+            } else {
+              label = this._addLabelSegment(labelString, i);
+              labelSize = label.getContentSize();
+              this._lineOffsetX += labelSize.width;
+              this._lineOffsetX > this._labelWidth && (this._labelWidth = this._lineOffsetX);
+              multilineTexts.length > 1 && j < multilineTexts.length - 1 && this._updateLineInfo();
+            }
+          }
+        }
+        lastEmptyLine || this._linesWidth.push(this._lineOffsetX);
+        this.maxWidth > 0 && (this._labelWidth = this.maxWidth);
+        this._labelHeight = this._lineCount * this.lineHeight;
+        this.node.setContentSize(this._labelWidth, this._labelHeight);
+        this._sgNode._setContentSize(this._labelWidth, this._labelHeight);
+        this._updateRichTextPosition();
+        this._layoutDirty = false;
+      },
+      _getFirstWordLen: function(text, startIndex, textLen) {
+        var character = text.charAt(startIndex);
+        if (cc.TextUtils.isUnicodeCJK(character) || cc.TextUtils.isUnicodeSpace(character)) return 1;
+        var len = 1;
+        for (var index = startIndex + 1; index < textLen; ++index) {
+          character = text.charAt(index);
+          if (cc.TextUtils.isUnicodeSpace(character) || cc.TextUtils.isUnicodeCJK(character)) break;
+          len++;
+        }
+        return len;
+      },
+      _updateRichTextPosition: function() {
+        var nextTokenX = 0;
+        var nextLineIndex = 1;
+        var totalLineCount = this._lineCount;
+        for (var i = 0; i < this._labelSegments.length; ++i) {
+          var label = this._labelSegments[i];
+          var lineCount = label._lineCount;
+          if (lineCount > nextLineIndex) {
+            nextTokenX = 0;
+            nextLineIndex = lineCount;
+          }
+          var lineOffsetX = 0;
+          switch (this.horizontalAlign) {
+           case cc.TextAlignment.LEFT:
+            lineOffsetX = 0;
+            break;
+
+           case cc.TextAlignment.CENTER:
+            lineOffsetX = (this._labelWidth - this._linesWidth[lineCount - 1]) / 2;
+            break;
+
+           case cc.TextAlignment.RIGHT:
+            lineOffsetX = this._labelWidth - this._linesWidth[lineCount - 1];
+          }
+          label.setPositionX(nextTokenX + lineOffsetX);
+          var labelSize = label.getContentSize();
+          var positionY = (totalLineCount - lineCount) * this.lineHeight;
+          label instanceof cc.Scale9Sprite && (positionY += (this.lineHeight - label.getContentSize().height) / 2);
+          label.setPositionY(positionY);
+          lineCount === nextLineIndex && (nextTokenX += labelSize.width);
+        }
+      },
+      _convertLiteralColorValue: function(color) {
+        var colorValue = color.toUpperCase();
+        return cc.Color[colorValue] ? cc.Color[colorValue] : cc.hexToColor(color);
+      },
+      _applyTextAttribute: function(label) {
+        if (label instanceof cc.Scale9Sprite) return;
+        var index = label._styleIndex;
+        label.setLineHeight(this.lineHeight);
+        label.setVerticalAlign(VerticalAlign.CENTER);
+        var textStyle = null;
+        this._textArray[index] && (textStyle = this._textArray[index].style);
+        textStyle && textStyle.color ? label.setColor(this._convertLiteralColorValue(textStyle.color)) : label.setColor(this.node.color);
+        textStyle && textStyle.bold ? label.enableBold(true) : label.enableBold(false);
+        textStyle && textStyle.italic ? label.enableItalics(true) : label.enableItalics(false);
+        textStyle && textStyle.underline ? label.enableUnderline(true) : label.enableUnderline(false);
+        if (textStyle && textStyle.outline) {
+          label.setOutlined(true);
+          label.setOutlineColor(this._convertLiteralColorValue(textStyle.outline.color));
+          label.setOutlineWidth(textStyle.outline.width);
+          label.setMargin(textStyle.outline.width);
+        } else {
+          label.setOutlined(false);
+          label.setMargin(0);
+        }
+        textStyle && textStyle.size ? label.setFontSize(textStyle.size) : label.setFontSize(this.fontSize);
+        textStyle && textStyle.event && textStyle.event.click && (label._clickHandler = textStyle.event.click);
+      },
+      onDestroy: function() {
+        this._super();
+        for (var i = 0; i < this._labelSegments.length; ++i) {
+          this._labelSegments[i].removeFromParent(true);
+          _ccsg.Label.pool.put(this._labelSegments[i]);
+        }
+        this._resetState();
+      }
+    });
+    cc.RichText = module.exports = RichText;
+  }), {
+    "../label/CCHtmlTextParser": 125,
+    "../label/CCTextUtils": 129
+  } ],
   89: [ (function(require, module, exports) {
     var SceneGraphHelper = require("../utils/scene-graph-helper");
     var SGComponent = cc.Class({
@@ -16963,8 +17443,8 @@
     });
     cc._SGComponent = module.exports = SGComponent;
   }), {
-    "../utils/scene-graph-helper": 225,
-    "./CCComponent": 77
+    "../utils/scene-graph-helper": 228,
+    "./CCComponent": 76
   } ],
   90: [ (function(require, module, exports) {
     var GETTINGSHORTERFACTOR = 20;
@@ -17156,7 +17636,7 @@
     });
     cc.Scrollbar = module.exports = Scrollbar;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
   91: [ (function(require, module, exports) {
     var NUMBER_OF_GATHERED_TOUCHES_FOR_MOVE_SPEED = 5;
@@ -17944,7 +18424,7 @@
     });
     cc.ScrollView = module.exports = ScrollView;
   }), {
-    "./CCViewGroup": 98
+    "./CCViewGroup": 100
   } ],
   92: [ (function(require, module, exports) {
     var Direction = cc.Enum({
@@ -18069,7 +18549,7 @@
     });
     cc.Slider = module.exports = Slider;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
   93: [ (function(require, module, exports) {
     var Base = require("./CCRendererUnderSG");
@@ -18333,8 +18813,8 @@
     misc.propertyDefine(Sprite, SameNameGetSets, DiffNameGetSets);
     cc.Sprite = module.exports = Sprite;
   }), {
-    "../utils/misc": 222,
-    "./CCRendererUnderSG": 88
+    "../utils/misc": 225,
+    "./CCRendererUnderSG": 87
   } ],
   94: [ (function(require, module, exports) {
     var SpriteDistortion = cc.Class({
@@ -18384,9 +18864,71 @@
     });
     cc.SpriteDistortion = module.exports = SpriteDistortion;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
   95: [ (function(require, module, exports) {
+    var ComponentType = cc.Enum({
+      NONE: 0,
+      CHECKBOX: 1,
+      TEXT_ATLAS: 2,
+      SLIDER_BAR: 3,
+      LIST_VIEW: 4,
+      PAGE_VIEW: 5
+    });
+    var ListDirection = cc.Enum({
+      VERTICAL: 0,
+      HORIZONTAL: 1
+    });
+    var VerticalAlign = cc.Enum({
+      TOP: 0,
+      CENTER: 1,
+      BOTTOM: 2
+    });
+    var HorizontalAlign = cc.Enum({
+      LEFT: 0,
+      CENTER: 1,
+      RIGHT: 2
+    });
+    var StudioComponent = cc.Class({
+      name: "cc.StudioComponent",
+      extends: cc.Component,
+      editor: false,
+      properties: false,
+      statics: {
+        ComponentType: ComponentType,
+        ListDirection: ListDirection,
+        VerticalAlign: VerticalAlign,
+        HorizontalAlign: HorizontalAlign
+      }
+    });
+    var PrefabHelper = require("../utils/prefab-helper");
+    StudioComponent.PlaceHolder = cc.Class({
+      name: "cc.StudioComponent.PlaceHolder",
+      extends: cc.Component,
+      properties: {
+        _baseUrl: "",
+        nestedPrefab: cc.Prefab
+      },
+      onLoad: function() {
+        if (!this.nestedPrefab) {
+          false;
+          return;
+        }
+        this._replaceWithNestedPrefab();
+      },
+      _replaceWithNestedPrefab: function() {
+        var node = this.node;
+        var _prefab = node._prefab;
+        _prefab.root = node;
+        _prefab.asset = this.nestedPrefab;
+        PrefabHelper.syncWithPrefab(node);
+      }
+    });
+    cc.StudioComponent = module.exports = StudioComponent;
+  }), {
+    "../utils/prefab-helper": 227
+  } ],
+  96: [ (function(require, module, exports) {
     var Toggle = cc.Class({
       name: "cc.Toggle",
       extends: require("./CCButton"),
@@ -18480,11 +19022,11 @@
       return null;
     }));
   }), {
-    "../platform/js": 193,
-    "./CCButton": 75,
-    "./CCToggleGroup": 97
+    "../platform/js": 196,
+    "./CCButton": 74,
+    "./CCToggleGroup": 98
   } ],
-  96: [ (function(require, module, exports) {
+  97: [ (function(require, module, exports) {
     var ToggleContainer = cc.Class({
       name: "cc.ToggleContainer",
       extends: cc.Component,
@@ -18532,9 +19074,9 @@
     }));
     cc.ToggleContainer = module.exports = ToggleContainer;
   }), {
-    "../platform/js": 193
+    "../platform/js": 196
   } ],
-  97: [ (function(require, module, exports) {
+  98: [ (function(require, module, exports) {
     var ToggleGroup = cc.Class({
       name: "cc.ToggleGroup",
       extends: cc.Component,
@@ -18596,18 +19138,191 @@
     }));
     cc.ToggleGroup = module.exports = ToggleGroup;
   }), {
-    "../platform/js": 193
+    "../platform/js": 196
   } ],
-  98: [ (function(require, module, exports) {
+  99: [ (function(require, module, exports) {
+    require("../videoplayer/CCSGVideoPlayer");
+    var EventType = _ccsg.VideoPlayer.EventType;
+    var ResourceType = cc.Enum({
+      REMOTE: 0,
+      LOCAL: 1
+    });
+    var VideoPlayer = cc.Class({
+      name: "cc.VideoPlayer",
+      extends: cc._RendererUnderSG,
+      editor: false,
+      properties: {
+        _resourceType: ResourceType.REMOTE,
+        resourceType: {
+          tooltip: false,
+          type: ResourceType,
+          set: function(value) {
+            this._resourceType = value;
+            this._updateVideoSource();
+          },
+          get: function() {
+            return this._resourceType;
+          }
+        },
+        _remoteURL: "",
+        remoteURL: {
+          tooltip: false,
+          type: cc.String,
+          set: function(url) {
+            this._remoteURL = url;
+            this._updateVideoSource();
+          },
+          get: function() {
+            return this._remoteURL;
+          }
+        },
+        _clip: {
+          default: null,
+          url: cc.RawAsset
+        },
+        clip: {
+          tooltip: false,
+          get: function() {
+            return this._clip;
+          },
+          set: function(value) {
+            "string" !== typeof value && (value = "");
+            this._clip = value;
+            this._updateVideoSource();
+          },
+          url: cc.RawAsset
+        },
+        currentTime: {
+          tooltip: false,
+          type: cc.Float,
+          set: function(time) {
+            this._sgNode && this._sgNode.seekTo(time);
+          },
+          get: function() {
+            if (this._sgNode) return this._sgNode.currentTime();
+            return -1;
+          }
+        },
+        keepAspectRatio: {
+          tooltip: false,
+          default: true,
+          type: cc.Boolean,
+          notify: function() {
+            this._sgNode.setKeepAspectRatioEnabled(this.keepAspectRatio);
+          }
+        },
+        isFullscreen: {
+          tooltip: false,
+          default: false,
+          type: cc.Boolean,
+          notify: function() {
+            this._sgNode.setFullScreenEnabled(this.isFullscreen);
+          }
+        },
+        videoPlayerEvent: {
+          default: [],
+          type: cc.Component.EventHandler
+        }
+      },
+      statics: {
+        EventType: EventType,
+        ResourceType: ResourceType
+      },
+      onLoad: function() {
+        false;
+      },
+      _createSgNode: function() {
+        false;
+        return new _ccsg.VideoPlayer();
+      },
+      _updateVideoSource: function() {
+        var sgNode = this._sgNode;
+        this.resourceType === ResourceType.REMOTE ? sgNode.setURL(this.remoteURL) : sgNode.setURL(this._clip || "");
+      },
+      _initSgNode: function() {
+        var sgNode = this._sgNode;
+        if (sgNode) {
+          true;
+          sgNode.createDomElementIfNeeded();
+          this._updateVideoSource();
+          sgNode.seekTo(this.currentTime);
+          sgNode.setKeepAspectRatioEnabled(this.keepAspectRatio);
+          sgNode.setFullScreenEnabled(this.isFullscreen);
+          sgNode.setContentSize(this.node.getContentSize());
+          this.pause();
+          true;
+          sgNode.setEventListener(EventType.PLAYING, this.onPlaying.bind(this));
+          sgNode.setEventListener(EventType.PAUSED, this.onPasued.bind(this));
+          sgNode.setEventListener(EventType.STOPPED, this.onStopped.bind(this));
+          sgNode.setEventListener(EventType.COMPLETED, this.onCompleted.bind(this));
+          sgNode.setEventListener(EventType.META_LOADED, this.onMetaLoaded.bind(this));
+          sgNode.setEventListener(EventType.CLICKED, this.onClicked.bind(this));
+          sgNode.setEventListener(EventType.READY_TO_PLAY, this.onReadyToPlay.bind(this));
+        }
+      },
+      onReadyToPlay: function() {
+        cc.Component.EventHandler.emitEvents(this.videoPlayerEvent, this, EventType.READY_TO_PLAY);
+        this.node.emit("ready-to-play", this);
+      },
+      onMetaLoaded: function() {
+        cc.Component.EventHandler.emitEvents(this.videoPlayerEvent, this, EventType.META_LOADED);
+        this.node.emit("meta-loaded", this);
+      },
+      onClicked: function() {
+        cc.Component.EventHandler.emitEvents(this.videoPlayerEvent, this, EventType.CLICKED);
+        this.node.emit("clicked", this);
+      },
+      onPlaying: function() {
+        cc.Component.EventHandler.emitEvents(this.videoPlayerEvent, this, EventType.PLAYING);
+        this.node.emit("playing", this);
+      },
+      onPasued: function() {
+        cc.Component.EventHandler.emitEvents(this.videoPlayerEvent, this, EventType.PAUSED);
+        this.node.emit("paused", this);
+      },
+      onStopped: function() {
+        cc.Component.EventHandler.emitEvents(this.videoPlayerEvent, this, EventType.STOPPED);
+        this.node.emit("stopped", this);
+      },
+      onCompleted: function() {
+        cc.Component.EventHandler.emitEvents(this.videoPlayerEvent, this, EventType.COMPLETED);
+        this.node.emit("completed", this);
+      },
+      play: function() {
+        this._sgNode && this._sgNode.play();
+      },
+      resume: function() {
+        this._sgNode && this._sgNode.resume();
+      },
+      pause: function() {
+        this._sgNode && this._sgNode.pause();
+      },
+      stop: function() {
+        this._sgNode && this._sgNode.stop();
+      },
+      getDuration: function() {
+        if (this._sgNode) return this._sgNode.duration();
+        return -1;
+      },
+      isPlaying: function() {
+        if (this._sgNode) return this._sgNode.isPlaying();
+        return false;
+      }
+    });
+    cc.VideoPlayer = module.exports = VideoPlayer;
+  }), {
+    "../videoplayer/CCSGVideoPlayer": 239
+  } ],
+  100: [ (function(require, module, exports) {
     var ViewGroup = cc.Class({
       name: "cc.ViewGroup",
       extends: require("./CCComponent")
     });
     cc.ViewGroup = module.exports = ViewGroup;
   }), {
-    "./CCComponent": 77
+    "./CCComponent": 76
   } ],
-  99: [ (function(require, module, exports) {
+  101: [ (function(require, module, exports) {
     require("../webview/CCSGWebView");
     var EventType = _ccsg.WebView.EventType;
     function emptyCallback() {}
@@ -18693,9 +19408,9 @@
     });
     cc.WebView = module.exports = WebView;
   }), {
-    "../webview/CCSGWebView": 236
+    "../webview/CCSGWebView": 240
   } ],
-  100: [ (function(require, module, exports) {
+  102: [ (function(require, module, exports) {
     var WidgetManager = require("../base-ui/CCWidgetManager");
     var AlignFlags = WidgetManager._AlignFlags;
     var TOP = AlignFlags.TOP;
@@ -18969,10 +19684,10 @@
     });
     cc.Widget = module.exports = Widget;
   }), {
-    "../base-ui/CCWidgetManager": 60,
-    "./CCComponent": 77
+    "../base-ui/CCWidgetManager": 59,
+    "./CCComponent": 76
   } ],
-  101: [ (function(require, module, exports) {
+  103: [ (function(require, module, exports) {
     require("./CCComponent");
     require("./CCRendererInSG");
     require("./CCRendererUnderSG");
@@ -18980,38 +19695,38 @@
     require("./missing-script");
     module.exports = [ require("./CCSprite"), require("./CCWidget"), require("./CCCanvas"), require("./CCAudioSource"), require("./CCAnimation"), require("./CCButton"), require("./CCLabel"), require("./CCProgressBar"), require("./CCMask"), require("./CCScrollBar"), require("./CCScrollView"), require("./CCPageViewIndicator"), require("./CCPageView"), require("./CCSlider"), require("./CCLayout"), require("./CCEditBox"), require("./CCVideoPlayer"), require("./CCWebView"), require("./CCSpriteDistortion"), require("./CCLabelOutline"), require("./CCRichText"), require("./CCToggleContainer"), require("./CCToggleGroup"), require("./CCToggle"), require("./CCBlockInputEvents") ];
   }), {
-    "./CCAnimation": 72,
-    "./CCAudioSource": 73,
-    "./CCBlockInputEvents": 74,
-    "./CCButton": 75,
-    "./CCCanvas": 76,
-    "./CCComponent": 77,
-    "./CCComponentEventHandler": 78,
-    "./CCEditBox": 79,
-    "./CCLabel": 80,
-    "./CCLabelOutline": 81,
-    "./CCLayout": 82,
-    "./CCMask": 83,
-    "./CCPageView": 84,
-    "./CCPageViewIndicator": 85,
-    "./CCProgressBar": 86,
-    "./CCRendererInSG": 87,
-    "./CCRendererUnderSG": 88,
-    "./CCRichText": 1,
+    "./CCAnimation": 71,
+    "./CCAudioSource": 72,
+    "./CCBlockInputEvents": 73,
+    "./CCButton": 74,
+    "./CCCanvas": 75,
+    "./CCComponent": 76,
+    "./CCComponentEventHandler": 77,
+    "./CCEditBox": 78,
+    "./CCLabel": 79,
+    "./CCLabelOutline": 80,
+    "./CCLayout": 81,
+    "./CCMask": 82,
+    "./CCPageView": 83,
+    "./CCPageViewIndicator": 84,
+    "./CCProgressBar": 85,
+    "./CCRendererInSG": 86,
+    "./CCRendererUnderSG": 87,
+    "./CCRichText": 88,
     "./CCScrollBar": 90,
     "./CCScrollView": 91,
     "./CCSlider": 92,
     "./CCSprite": 93,
     "./CCSpriteDistortion": 94,
-    "./CCToggle": 95,
-    "./CCToggleContainer": 96,
-    "./CCToggleGroup": 97,
-    "./CCVideoPlayer": 1,
-    "./CCWebView": 99,
-    "./CCWidget": 100,
-    "./missing-script": 102
+    "./CCToggle": 96,
+    "./CCToggleContainer": 97,
+    "./CCToggleGroup": 98,
+    "./CCVideoPlayer": 99,
+    "./CCWebView": 101,
+    "./CCWidget": 102,
+    "./missing-script": 104
   } ],
-  102: [ (function(require, module, exports) {
+  104: [ (function(require, module, exports) {
     var JS = cc.js;
     var BUILTIN_CLASSID_RE = require("../utils/misc").BUILTIN_CLASSID_RE;
     var MissingClass = cc.Class({
@@ -19062,9 +19777,9 @@
     });
     cc._MissingScript = module.exports = MissingScript;
   }), {
-    "../utils/misc": 222
+    "../utils/misc": 225
   } ],
-  103: [ (function(require, module, exports) {
+  105: [ (function(require, module, exports) {
     var SCROLLY = 40;
     var LEFT_PADDING = 2;
     var DELAY_TIME = 400;
@@ -19861,10 +20576,10 @@
       };
     })(_ccsg.EditBox._polyfill);
   }), {
-    "../platform/CCSys": 181,
-    "../platform/utils": 197
+    "../platform/CCSys": 184,
+    "../platform/utils": 200
   } ],
-  104: [ (function(require, module, exports) {
+  106: [ (function(require, module, exports) {
     var JS = cc.js;
     require("../event/event");
     var EventMouse = function(eventType, bubbles) {
@@ -20029,9 +20744,9 @@
     cc.Event.EventKeyboard = EventKeyboard;
     module.exports = cc.Event;
   }), {
-    "../event/event": 112
+    "../event/event": 114
   } ],
-  105: [ (function(require, module, exports) {
+  107: [ (function(require, module, exports) {
     cc.EventListener = cc._Class.extend({
       ctor: function(type, listenerID, callback) {
         this._onEvent = callback;
@@ -20272,7 +20987,7 @@
     });
     cc._EventListenerKeyboard.LISTENER_ID = "__cc_keyboard";
   }), {} ],
-  106: [ (function(require, module, exports) {
+  108: [ (function(require, module, exports) {
     var _EventListenerVector = cc._Class.extend({
       ctor: function() {
         this._fixedListeners = [];
@@ -20892,7 +21607,7 @@
       }
     };
   }), {} ],
-  107: [ (function(require, module, exports) {
+  109: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     var EventType = cc.Enum({
       KEY_DOWN: "keydown",
@@ -20958,9 +21673,9 @@
     true;
     cc.systemEvent = new cc.SystemEvent();
   }), {
-    "../event/event-target": 111
+    "../event/event-target": 113
   } ],
-  108: [ (function(require, module, exports) {
+  110: [ (function(require, module, exports) {
     cc.Touch = cc._Class.extend({
       ctor: function(x, y, id) {
         this._lastModified = 0;
@@ -21038,20 +21753,20 @@
       }
     });
   }), {} ],
-  109: [ (function(require, module, exports) {
+  111: [ (function(require, module, exports) {
     require("./CCTouch");
     require("./CCEventListener");
     require("./CCEventManager");
     require("./CCEvent");
     require("./CCSystemEvent");
   }), {
-    "./CCEvent": 104,
-    "./CCEventListener": 105,
-    "./CCEventManager": 106,
-    "./CCSystemEvent": 107,
-    "./CCTouch": 108
+    "./CCEvent": 106,
+    "./CCEventListener": 107,
+    "./CCEventManager": 108,
+    "./CCSystemEvent": 109,
+    "./CCTouch": 110
   } ],
-  110: [ (function(require, module, exports) {
+  112: [ (function(require, module, exports) {
     var JS = cc.js;
     var CallbacksHandler = require("../platform/callbacks-invoker").CallbacksHandler;
     function EventListeners() {
@@ -21083,9 +21798,9 @@
     module.exports = EventListeners;
     false;
   }), {
-    "../platform/callbacks-invoker": 186
+    "../platform/callbacks-invoker": 189
   } ],
-  111: [ (function(require, module, exports) {
+  113: [ (function(require, module, exports) {
     var EventListeners = require("./event-listeners");
     require("./event");
     var JS = cc.js;
@@ -21263,10 +21978,10 @@
     EventTarget.prototype._EventTargetTargetOff = EventTarget.prototype.targetOff;
     cc.EventTarget = module.exports = EventTarget;
   }), {
-    "./event": 112,
-    "./event-listeners": 110
+    "./event": 114,
+    "./event-listeners": 112
   } ],
-  112: [ (function(require, module, exports) {
+  114: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     cc.Event = function(type, bubbles) {
       this.type = type;
@@ -21342,18 +22057,18 @@
     cc.Event.EventCustom = EventCustom;
     module.exports = cc.Event;
   }), {
-    "../platform/js": 193
+    "../platform/js": 196
   } ],
-  113: [ (function(require, module, exports) {
+  115: [ (function(require, module, exports) {
     require("./event");
     require("./event-listeners");
     require("./event-target");
   }), {
-    "./event": 112,
-    "./event-listeners": 110,
-    "./event-target": 111
+    "./event": 114,
+    "./event-listeners": 112,
+    "./event-target": 113
   } ],
-  114: [ (function(require, module, exports) {
+  116: [ (function(require, module, exports) {
     "use strict";
     module.exports = earcut;
     function earcut(data, holeIndices, dim) {
@@ -21745,7 +22460,7 @@
       return result;
     };
   }), {} ],
-  115: [ (function(require, module, exports) {
+  117: [ (function(require, module, exports) {
     var Js = cc.js;
     var LineCap = require("./types").LineCap;
     var LineJoin = require("./types").LineJoin;
@@ -21877,10 +22592,10 @@
     };
     module.exports = CanvasRenderCmd;
   }), {
-    "./helper": 119,
-    "./types": 121
+    "./helper": 121,
+    "./types": 123
   } ],
-  116: [ (function(require, module, exports) {
+  118: [ (function(require, module, exports) {
     var CanvasRenderCmd = require("./graphics-canvas-cmd");
     var WebGLRenderCmd = require("./graphics-webgl-cmd");
     var LineCap = require("./types").LineCap;
@@ -21992,11 +22707,11 @@
     };
     module.exports = GraphicsNode;
   }), {
-    "./graphics-canvas-cmd": 115,
-    "./graphics-webgl-cmd": 117,
-    "./types": 121
+    "./graphics-canvas-cmd": 117,
+    "./graphics-webgl-cmd": 119,
+    "./types": 123
   } ],
-  117: [ (function(require, module, exports) {
+  119: [ (function(require, module, exports) {
     var LineCap = require("./types").LineCap;
     var LineJoin = require("./types").LineJoin;
     var Earcut = require("./earcut");
@@ -22701,11 +23416,11 @@
     };
     module.exports = WebGLRenderCmd;
   }), {
-    "./earcut": 114,
-    "./helper": 119,
-    "./types": 121
+    "./earcut": 116,
+    "./helper": 121,
+    "./types": 123
   } ],
-  118: [ (function(require, module, exports) {
+  120: [ (function(require, module, exports) {
     var LineCap = require("./types").LineCap;
     var LineJoin = require("./types").LineJoin;
     var Graphics = cc.Class({
@@ -22836,9 +23551,9 @@
     });
     cc.Graphics = module.exports = Graphics;
   }), {
-    "./types": 121
+    "./types": 123
   } ],
-  119: [ (function(require, module, exports) {
+  121: [ (function(require, module, exports) {
     var PI = Math.PI;
     var min = Math.min;
     var max = Math.max;
@@ -22905,7 +23620,7 @@
       roundRect: roundRect
     };
   }), {} ],
-  120: [ (function(require, module, exports) {
+  122: [ (function(require, module, exports) {
     "use strict";
     var GraphicsNode;
     true;
@@ -22916,11 +23631,11 @@
     }
     require("./graphics");
   }), {
-    "../utils/misc": 222,
-    "./graphics": 118,
-    "./graphics-node": 116
+    "../utils/misc": 225,
+    "./graphics": 120,
+    "./graphics-node": 118
   } ],
-  121: [ (function(require, module, exports) {
+  123: [ (function(require, module, exports) {
     "use strict";
     var LineCap = cc.Enum({
       BUTT: 0,
@@ -22937,7 +23652,7 @@
       LineJoin: LineJoin
     };
   }), {} ],
-  122: [ (function(require, module, exports) {
+  124: [ (function(require, module, exports) {
     require("./platform");
     require("./assets");
     true;
@@ -22951,19 +23666,249 @@
     require("./camera/CCCamera");
     require("./base-ui/CCWidgetManager");
   }), {
-    "./CCNode": 41,
-    "./CCScene": 42,
-    "./assets": 55,
-    "./base-ui/CCWidgetManager": 60,
-    "./camera/CCCamera": 61,
-    "./collider": 70,
-    "./collider/CCIntersection": 68,
-    "./components": 101,
-    "./graphics": 120,
-    "./physics": 155,
-    "./platform": 190
+    "./CCNode": 40,
+    "./CCScene": 41,
+    "./assets": 54,
+    "./base-ui/CCWidgetManager": 59,
+    "./camera/CCCamera": 60,
+    "./collider": 69,
+    "./collider/CCIntersection": 67,
+    "./components": 103,
+    "./graphics": 122,
+    "./physics": 158,
+    "./platform": 193
   } ],
-  123: [ (function(require, module, exports) {
+  125: [ (function(require, module, exports) {
+    var eventRegx = /^(click)(\s)*=/;
+    var imageAttrReg = /(\s)*src(\s)*=|(\s)*height(\s)*=|(\s)*width(\s)*=|(\s)*click(\s)*=/;
+    cc.HtmlTextParser = function() {
+      this._parsedObject = {};
+      this._specialSymbolArray = [];
+      this._specialSymbolArray.push([ /&lt;/g, "<" ]);
+      this._specialSymbolArray.push([ /&gt;/g, ">" ]);
+      this._specialSymbolArray.push([ /&amp;/g, "&" ]);
+      this._specialSymbolArray.push([ /&quot;/g, '"' ]);
+      this._specialSymbolArray.push([ /&apos;/g, "'" ]);
+    };
+    cc.HtmlTextParser.prototype = {
+      constructor: cc.HtmlTextParser,
+      parse: function(htmlString) {
+        this._resultObjectArray = [];
+        this._stack = [];
+        var startIndex = 0;
+        var length = htmlString.length;
+        while (startIndex < length) {
+          var tagBeginIndex = htmlString.indexOf("<", startIndex);
+          if (tagBeginIndex < 0) {
+            this._stack.pop();
+            this._processResult(htmlString.substring(startIndex));
+            startIndex = length;
+          } else {
+            this._processResult(htmlString.substring(startIndex, tagBeginIndex));
+            var tagEndIndex = htmlString.indexOf(">", startIndex);
+            -1 === tagEndIndex ? tagEndIndex = tagBeginIndex : "/" === htmlString.charAt(tagBeginIndex + 1) ? this._stack.pop() : this._addToStack(htmlString.substring(tagBeginIndex + 1, tagEndIndex));
+            startIndex = tagEndIndex + 1;
+          }
+        }
+        return this._resultObjectArray;
+      },
+      _attributeToObject: function(attribute) {
+        attribute = attribute.trim();
+        var obj = {};
+        var header = attribute.match(/^(color|size)(\s)*=/);
+        var tagName;
+        var nextSpace;
+        var eventObj;
+        var eventHanlderString;
+        if (header) {
+          tagName = header[0];
+          attribute = attribute.substring(tagName.length).trim();
+          if ("" === attribute) return obj;
+          nextSpace = attribute.indexOf(" ");
+          switch (tagName[0]) {
+           case "c":
+            obj.color = nextSpace > -1 ? attribute.substring(0, nextSpace).trim() : attribute;
+            break;
+
+           case "s":
+            obj.size = parseInt(attribute);
+          }
+          if (nextSpace > -1) {
+            eventHanlderString = attribute.substring(nextSpace + 1).trim();
+            eventObj = this._processEventHandler(eventHanlderString);
+            obj.event = eventObj;
+          }
+          return obj;
+        }
+        header = attribute.match(/^(br(\s)*\/)/);
+        if (header && header[0].length > 0) {
+          tagName = header[0].trim();
+          if (tagName.startsWith("br") && "/" === tagName[tagName.length - 1]) {
+            obj.isNewLine = true;
+            this._resultObjectArray.push({
+              text: "",
+              style: {
+                newline: true
+              }
+            });
+            return obj;
+          }
+        }
+        header = attribute.match(/^(img(\s)*src(\s)*=[^>]+\/)/);
+        if (header && header[0].length > 0) {
+          tagName = header[0].trim();
+          if (tagName.startsWith("img") && "/" === tagName[tagName.length - 1]) {
+            header = attribute.match(imageAttrReg);
+            var tagValue;
+            var remainingArgument;
+            var isValidImageTag = false;
+            while (header) {
+              attribute = attribute.substring(attribute.indexOf(header[0]));
+              tagName = attribute.substr(0, header[0].length);
+              remainingArgument = attribute.substring(tagName.length).trim();
+              nextSpace = remainingArgument.indexOf(" ");
+              tagValue = nextSpace > -1 ? remainingArgument.substr(0, nextSpace) : remainingArgument;
+              tagName = tagName.replace(/[^a-zA-Z]/g, "").trim();
+              tagName = tagName.toLocaleLowerCase();
+              attribute = remainingArgument.substring(nextSpace).trim();
+              if ("src" === tagName) {
+                obj.isImage = true;
+                tagValue.endsWith("/") && (tagValue = tagValue.substring(0, tagValue.length - 1));
+                if (0 === tagValue.indexOf("'")) {
+                  isValidImageTag = true;
+                  tagValue = tagValue.substring(1, tagValue.length - 1);
+                } else if (0 === tagValue.indexOf('"')) {
+                  isValidImageTag = true;
+                  tagValue = tagValue.substring(1, tagValue.length - 1);
+                }
+                obj.src = tagValue;
+              } else "height" === tagName ? obj.imageHeight = parseInt(tagValue) : "width" === tagName ? obj.imageWidth = parseInt(tagValue) : "click" === tagName && (obj.event = this._processEventHandler(tagName + "=" + tagValue));
+              header = attribute.match(imageAttrReg);
+            }
+            isValidImageTag && obj.isImage && this._resultObjectArray.push({
+              text: "",
+              style: obj
+            });
+            return {};
+          }
+        }
+        header = attribute.match(/^(outline(\s)*[^>]*)/);
+        if (header) {
+          attribute = header[0].substring("outline".length).trim();
+          var defaultOutlineObject = {
+            color: "#ffffff",
+            width: 1
+          };
+          if (attribute) {
+            var outlineAttrReg = /(\s)*color(\s)*=|(\s)*width(\s)*=|(\s)*click(\s)*=/;
+            header = attribute.match(outlineAttrReg);
+            var tagValue;
+            while (header) {
+              attribute = attribute.substring(attribute.indexOf(header[0]));
+              tagName = attribute.substr(0, header[0].length);
+              remainingArgument = attribute.substring(tagName.length).trim();
+              nextSpace = remainingArgument.indexOf(" ");
+              tagValue = nextSpace > -1 ? remainingArgument.substr(0, nextSpace) : remainingArgument;
+              tagName = tagName.replace(/[^a-zA-Z]/g, "").trim();
+              tagName = tagName.toLocaleLowerCase();
+              attribute = remainingArgument.substring(nextSpace).trim();
+              "click" === tagName ? obj.event = this._processEventHandler(tagName + "=" + tagValue) : "color" === tagName ? defaultOutlineObject.color = tagValue : "width" === tagName && (defaultOutlineObject.width = parseInt(tagValue));
+              header = attribute.match(outlineAttrReg);
+            }
+          }
+          obj.outline = defaultOutlineObject;
+        }
+        header = attribute.match(/^(on|u|b|i)(\s)*/);
+        if (header && header[0].length > 0) {
+          tagName = header[0];
+          attribute = attribute.substring(tagName.length).trim();
+          switch (tagName[0]) {
+           case "u":
+            obj.underline = true;
+            break;
+
+           case "i":
+            obj.italic = true;
+            break;
+
+           case "b":
+            obj.bold = true;
+          }
+          if ("" === attribute) return obj;
+          eventObj = this._processEventHandler(attribute);
+          obj.event = eventObj;
+        }
+        return obj;
+      },
+      _processEventHandler: function(eventString) {
+        var index = 0;
+        var obj = {};
+        var eventNames = eventString.match(eventRegx);
+        var isValidTag = false;
+        while (eventNames) {
+          var eventName = eventNames[0];
+          var eventValue = "";
+          isValidTag = false;
+          eventString = eventString.substring(eventName.length).trim();
+          if ('"' === eventString.charAt(0)) {
+            index = eventString.indexOf('"', 1);
+            if (index > -1) {
+              eventValue = eventString.substring(1, index).trim();
+              isValidTag = true;
+            }
+            index++;
+          } else if ("'" === eventString.charAt(0)) {
+            index = eventString.indexOf("'", 1);
+            if (index > -1) {
+              eventValue = eventString.substring(1, index).trim();
+              isValidTag = true;
+            }
+            index++;
+          } else {
+            var match = eventString.match(/(\S)+/);
+            eventValue = match ? match[0] : "";
+            index = eventValue.length;
+          }
+          if (isValidTag) {
+            eventName = eventName.substring(0, eventName.length - 1).trim();
+            obj[eventName] = eventValue;
+          }
+          eventString = eventString.substring(index).trim();
+          eventNames = eventString.match(eventRegx);
+        }
+        return obj;
+      },
+      _addToStack: function(attribute) {
+        var obj = this._attributeToObject(attribute);
+        if (0 === this._stack.length) this._stack.push(obj); else {
+          if (obj.isNewLine || obj.isImage) return;
+          var previousTagObj = this._stack[this._stack.length - 1];
+          for (var key in previousTagObj) obj[key] || (obj[key] = previousTagObj[key]);
+          this._stack.push(obj);
+        }
+      },
+      _processResult: function(value) {
+        if ("" === value) return;
+        value = this._escapeSpecialSymbol(value);
+        this._stack.length > 0 ? this._resultObjectArray.push({
+          text: value,
+          style: this._stack[this._stack.length - 1]
+        }) : this._resultObjectArray.push({
+          text: value
+        });
+      },
+      _escapeSpecialSymbol: function(str) {
+        for (var i = 0; i < this._specialSymbolArray.length; ++i) {
+          var key = this._specialSymbolArray[i][0];
+          var value = this._specialSymbolArray[i][1];
+          str = str.replace(key, value);
+        }
+        return str;
+      }
+    };
+    cc.htmlTextParser = new cc.HtmlTextParser();
+  }), {} ],
+  126: [ (function(require, module, exports) {
     require("./CCTextUtils");
     var EventTarget = require("../event/event-target");
     var JS = require("../platform/js");
@@ -23867,11 +24812,11 @@
       set: _ccsg.Node.prototype._setHeight
     });
   }), {
-    "../event/event-target": 111,
-    "../platform/js": 193,
-    "./CCTextUtils": 126
+    "../event/event-target": 113,
+    "../platform/js": 196,
+    "./CCTextUtils": 129
   } ],
-  124: [ (function(require, module, exports) {
+  127: [ (function(require, module, exports) {
     (function() {
       _ccsg.Label.TTFLabelBaker = function() {};
       var proto = _ccsg.Label.TTFLabelBaker.prototype = Object.create(Object.prototype);
@@ -24219,7 +25164,7 @@
       };
     })();
   }), {} ],
-  125: [ (function(require, module, exports) {
+  128: [ (function(require, module, exports) {
     _ccsg.Label.WebGLRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = true;
@@ -24305,7 +25250,7 @@
       return len;
     };
   }), {} ],
-  126: [ (function(require, module, exports) {
+  129: [ (function(require, module, exports) {
     var CustomFontDescriptor = function() {
       this._status = "unloaded";
       this._observers = [];
@@ -24507,7 +25452,7 @@
     cc.TextUtils = module.exports = TextUtils;
     cc.CustomFontLoader = module.exports = CustomFontLoader;
   }), {} ],
-  127: [ (function(require, module, exports) {
+  130: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var Pipeline = require("./pipeline");
     var LoadingItems = require("./loading-items");
@@ -24856,18 +25801,18 @@
     false;
     module.exports = cc.loader;
   }), {
-    "../platform/js": 193,
-    "../platform/utils": 197,
-    "./asset-loader": 128,
-    "./asset-table": 129,
-    "./auto-release-utils": 131,
-    "./downloader": 132,
-    "./loader": 135,
-    "./loading-items": 136,
-    "./pipeline": 139,
-    "./released-asset-checker": 140
+    "../platform/js": 196,
+    "../platform/utils": 200,
+    "./asset-loader": 131,
+    "./asset-table": 132,
+    "./auto-release-utils": 134,
+    "./downloader": 135,
+    "./loader": 138,
+    "./loading-items": 139,
+    "./pipeline": 142,
+    "./released-asset-checker": 143
   } ],
-  128: [ (function(require, module, exports) {
+  131: [ (function(require, module, exports) {
     var Path = require("../utils/CCPath");
     var Pipeline = require("./pipeline");
     var LoadingItems = require("./loading-items");
@@ -24917,11 +25862,11 @@
     };
     Pipeline.AssetLoader = module.exports = AssetLoader;
   }), {
-    "../utils/CCPath": 215,
-    "./loading-items": 136,
-    "./pipeline": 139
+    "../utils/CCPath": 218,
+    "./loading-items": 139,
+    "./pipeline": 142
   } ],
-  129: [ (function(require, module, exports) {
+  132: [ (function(require, module, exports) {
     var pushToMap = require("../utils/misc").pushToMap;
     function Entry(uuid, type) {
       this.uuid = uuid;
@@ -25002,9 +25947,9 @@
     };
     module.exports = AssetTable;
   }), {
-    "../utils/misc": 222
+    "../utils/misc": 225
   } ],
-  130: [ (function(require, module, exports) {
+  133: [ (function(require, module, exports) {
     var Path = require("../utils/CCPath");
     var sys = require("../platform/CCSys");
     var Pipeline = require("./pipeline");
@@ -25069,12 +26014,12 @@
     }
     module.exports = downloadAudio;
   }), {
-    "../../audio/CCAudioEngine": 24,
-    "../platform/CCSys": 181,
-    "../utils/CCPath": 215,
-    "./pipeline": 139
+    "../../audio/CCAudioEngine": 23,
+    "../platform/CCSys": 184,
+    "../utils/CCPath": 218,
+    "./pipeline": 142
   } ],
-  131: [ (function(require, module, exports) {
+  134: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     function parseDepends(key, parsed) {
       var item = cc.loader.getItem(key);
@@ -25139,9 +26084,9 @@
       }
     };
   }), {
-    "../platform/js": 193
+    "../platform/js": 196
   } ],
-  132: [ (function(require, module, exports) {
+  135: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var sys = require("../platform/CCSys");
     var Path = require("../utils/CCPath");
@@ -25341,17 +26286,17 @@
     };
     Pipeline.Downloader = module.exports = Downloader;
   }), {
-    "../platform/CCSys": 181,
-    "../platform/js": 193,
-    "../utils/CCPath": 215,
-    "../utils/misc": 222,
-    "./audio-downloader": 130,
-    "./pack-downloader": 138,
-    "./pipeline": 139,
-    "./text-downloader": 141,
-    "./utils": 142
+    "../platform/CCSys": 184,
+    "../platform/js": 196,
+    "../utils/CCPath": 218,
+    "../utils/misc": 225,
+    "./audio-downloader": 133,
+    "./pack-downloader": 141,
+    "./pipeline": 142,
+    "./text-downloader": 144,
+    "./utils": 145
   } ],
-  133: [ (function(require, module, exports) {
+  136: [ (function(require, module, exports) {
     require("./downloader");
     require("./loader");
     require("./json-unpacker");
@@ -25359,14 +26304,14 @@
     require("./pipeline");
     require("./CCLoader");
   }), {
-    "./CCLoader": 127,
-    "./downloader": 132,
-    "./json-unpacker": 134,
-    "./loader": 135,
-    "./loading-items": 136,
-    "./pipeline": 139
+    "./CCLoader": 130,
+    "./downloader": 135,
+    "./json-unpacker": 137,
+    "./loader": 138,
+    "./loading-items": 139,
+    "./pipeline": 142
   } ],
-  134: [ (function(require, module, exports) {
+  137: [ (function(require, module, exports) {
     function JsonUnpacker() {
       this.jsons = {};
       this.state = -1;
@@ -25386,7 +26331,7 @@
     false;
     module.exports = JsonUnpacker;
   }), {} ],
-  135: [ (function(require, module, exports) {
+  138: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var sys = require("../platform/CCSys");
     var Pipeline = require("./pipeline");
@@ -25456,14 +26401,14 @@
     };
     Pipeline.Loader = module.exports = Loader;
   }), {
-    "../platform/CCSys": 181,
-    "../platform/js": 193,
-    "../textures/CCTexture2D": 212,
-    "../utils/misc": 222,
-    "./pipeline": 139,
-    "./uuid-loader": 143
+    "../platform/CCSys": 184,
+    "../platform/js": 196,
+    "../textures/CCTexture2D": 215,
+    "../utils/misc": 225,
+    "./pipeline": 142,
+    "./uuid-loader": 146
   } ],
-  136: [ (function(require, module, exports) {
+  139: [ (function(require, module, exports) {
     var CallbacksInvoker = require("../platform/callbacks-invoker");
     var Path = require("../utils/CCPath");
     var JS = require("../platform/js");
@@ -25747,11 +26692,11 @@
     };
     cc.LoadingItems = module.exports = LoadingItems;
   }), {
-    "../platform/callbacks-invoker": 186,
-    "../platform/js": 193,
-    "../utils/CCPath": 215
+    "../platform/callbacks-invoker": 189,
+    "../platform/js": 196,
+    "../utils/CCPath": 218
   } ],
-  137: [ (function(require, module, exports) {
+  140: [ (function(require, module, exports) {
     var Pipeline = require("./pipeline");
     var ID = "MD5Pipe";
     var ExtnameRegex = /(\.[^.\n\\/]*)$/;
@@ -25789,9 +26734,9 @@
     };
     Pipeline.MD5Pipe = module.exports = MD5Pipe;
   }), {
-    "./pipeline": 139
+    "./pipeline": 142
   } ],
-  138: [ (function(require, module, exports) {
+  141: [ (function(require, module, exports) {
     var JsonUnpacker = require("./json-unpacker");
     var pushToMap = require("../utils/misc").pushToMap;
     var uuidToPack = {};
@@ -25880,10 +26825,10 @@
     };
     false;
   }), {
-    "../utils/misc": 222,
-    "./json-unpacker": 134
+    "../utils/misc": 225,
+    "./json-unpacker": 137
   } ],
-  139: [ (function(require, module, exports) {
+  142: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var LoadingItems = require("./loading-items");
     var ItemState = LoadingItems.ItemState;
@@ -26020,10 +26965,10 @@
     };
     cc.Pipeline = module.exports = Pipeline;
   }), {
-    "../platform/js": 193,
-    "./loading-items": 136
+    "../platform/js": 196,
+    "./loading-items": 139
   } ],
-  140: [ (function(require, module, exports) {
+  143: [ (function(require, module, exports) {
     true;
     var JS;
     var tmpInfo;
@@ -26077,9 +27022,9 @@
       module.exports = ReleasedAssetChecker;
     })();
   }), {
-    "../platform/js": 193
+    "../platform/js": 196
   } ],
-  141: [ (function(require, module, exports) {
+  144: [ (function(require, module, exports) {
     var sys = require("../platform/CCSys");
     false;
     var urlAppendTimestamp = require("./utils").urlAppendTimestamp;
@@ -26114,10 +27059,10 @@
       xhr.send(null);
     };
   }), {
-    "../platform/CCSys": 181,
-    "./utils": 142
+    "../platform/CCSys": 184,
+    "./utils": 145
   } ],
-  142: [ (function(require, module, exports) {
+  145: [ (function(require, module, exports) {
     var _noCacheRex = /\?/;
     module.exports = {
       urlAppendTimestamp: function(url) {
@@ -26126,7 +27071,7 @@
       }
     };
   }), {} ],
-  143: [ (function(require, module, exports) {
+  146: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     require("../platform/deserialize");
     var LoadingItems = require("./loading-items");
@@ -26281,11 +27226,11 @@
     module.exports = loadUuid;
     loadUuid.isSceneObj = isSceneObj;
   }), {
-    "../platform/deserialize": 188,
-    "../platform/js": 193,
-    "./loading-items": 136
+    "../platform/deserialize": 191,
+    "../platform/js": 196,
+    "./loading-items": 139
   } ],
-  144: [ (function(require, module, exports) {
+  147: [ (function(require, module, exports) {
     var CompScheduler = require("./component-scheduler");
     var Flags = require("./platform/CCObject").Flags;
     var JS = require("./platform/js");
@@ -26454,12 +27399,12 @@
     });
     module.exports = NodeActivator;
   }), {
-    "./component-scheduler": 71,
-    "./platform/CCObject": 178,
-    "./platform/js": 193,
-    "./utils/misc": 222
+    "./component-scheduler": 70,
+    "./platform/CCObject": 181,
+    "./platform/js": 196,
+    "./utils/misc": 225
   } ],
-  145: [ (function(require, module, exports) {
+  148: [ (function(require, module, exports) {
     var PTM_RATIO = require("./CCPhysicsTypes").PTM_RATIO;
     var ContactType = require("./CCPhysicsTypes").ContactType;
     var pools = [];
@@ -26678,9 +27623,9 @@
     PhysicsContact.ContactType = ContactType;
     cc.PhysicsContact = module.exports = PhysicsContact;
   }), {
-    "./CCPhysicsTypes": 147
+    "./CCPhysicsTypes": 150
   } ],
-  146: [ (function(require, module, exports) {
+  149: [ (function(require, module, exports) {
     var ContactType = require("./CCPhysicsTypes").ContactType;
     var BodyType = require("./CCPhysicsTypes").BodyType;
     var RayCastType = require("./CCPhysicsTypes").RayCastType;
@@ -26963,9 +27908,9 @@
     }));
     cc.PhysicsManager = module.exports = PhysicsManager;
   }), {
-    "./CCPhysicsTypes": 147
+    "./CCPhysicsTypes": 150
   } ],
-  147: [ (function(require, module, exports) {
+  150: [ (function(require, module, exports) {
     var ContactType = {
       BEGIN_CONTACT: "begin-contact",
       END_CONTACT: "end-contact",
@@ -26995,7 +27940,7 @@
       PHYSICS_ANGLE_TO_ANGLE: -180 / Math.PI
     };
   }), {} ],
-  148: [ (function(require, module, exports) {
+  151: [ (function(require, module, exports) {
     function At(i, vertices) {
       var s = vertices.length;
       return vertices[i < 0 ? s - -i % s : i % s];
@@ -27179,7 +28124,7 @@
       IsCounterClockWise: IsCounterClockWise
     };
   }), {} ],
-  149: [ (function(require, module, exports) {
+  152: [ (function(require, module, exports) {
     var PTM_RATIO = require("./CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("./CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var PHYSICS_ANGLE_TO_ANGLE = require("./CCPhysicsTypes").PHYSICS_ANGLE_TO_ANGLE;
@@ -27573,10 +28518,10 @@
     });
     cc.RigidBody = module.exports = RigidBody;
   }), {
-    "./CCPhysicsTypes": 147,
-    "./utils": 170
+    "./CCPhysicsTypes": 150,
+    "./utils": 173
   } ],
-  150: [ (function(require, module, exports) {
+  153: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PhysicsBoxCollider = cc.Class({
       name: "cc.PhysicsBoxCollider",
@@ -27600,9 +28545,9 @@
     });
     cc.PhysicsBoxCollider = module.exports = PhysicsBoxCollider;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  151: [ (function(require, module, exports) {
+  154: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PhysicsChainCollider = cc.Class({
       name: "cc.PhysicsChainCollider",
@@ -27642,9 +28587,9 @@
     });
     cc.PhysicsChainCollider = module.exports = PhysicsChainCollider;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  152: [ (function(require, module, exports) {
+  155: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PhysicsCircleCollider = cc.Class({
       name: "cc.PhysicsCircleCollider",
@@ -27667,9 +28612,9 @@
     });
     cc.PhysicsCircleCollider = module.exports = PhysicsCircleCollider;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  153: [ (function(require, module, exports) {
+  156: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var getWorldScale = require("../utils").getWorldScale;
     var PhysicsCollider = cc.Class({
@@ -27839,10 +28784,10 @@
     });
     cc.PhysicsCollider = module.exports = PhysicsCollider;
   }), {
-    "../CCPhysicsTypes": 147,
-    "../utils": 170
+    "../CCPhysicsTypes": 150,
+    "../utils": 173
   } ],
-  154: [ (function(require, module, exports) {
+  157: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PolygonSeparator = require("../CCPolygonSeparator");
     var PhysicsPolygonCollider = cc.Class({
@@ -27889,10 +28834,10 @@
     });
     cc.PhysicsPolygonCollider = module.exports = PhysicsPolygonCollider;
   }), {
-    "../CCPhysicsTypes": 147,
-    "../CCPolygonSeparator": 148
+    "../CCPhysicsTypes": 150,
+    "../CCPolygonSeparator": 151
   } ],
-  155: [ (function(require, module, exports) {
+  158: [ (function(require, module, exports) {
     true;
     window.b2 = require("../../../external/box2d/box2d");
     require("./CCPhysicsManager");
@@ -27919,31 +28864,31 @@
     require("./platform/CCPhysicsAABBQueryCallback");
     require("./platform/CCPhysicsRayCastCallback");
   }), {
-    "../../../external/box2d/box2d": 285,
-    "./CCPhysicsContact": 145,
-    "./CCPhysicsManager": 146,
-    "./CCRigidBody": 149,
-    "./collider/CCPhysicsBoxCollider": 150,
-    "./collider/CCPhysicsChainCollider": 151,
-    "./collider/CCPhysicsCircleCollider": 152,
-    "./collider/CCPhysicsCollider": 153,
-    "./collider/CCPhysicsPolygonCollider": 154,
-    "./joint/CCDistanceJoint": 156,
-    "./joint/CCJoint": 157,
-    "./joint/CCMotorJoint": 158,
-    "./joint/CCMouseJoint": 159,
-    "./joint/CCPrismaticJoint": 160,
-    "./joint/CCRevoluteJoint": 161,
-    "./joint/CCRopeJoint": 162,
-    "./joint/CCWeldJoint": 163,
-    "./joint/CCWheelJoint": 164,
-    "./platform/CCPhysicsAABBQueryCallback": 165,
-    "./platform/CCPhysicsContactListner": 166,
-    "./platform/CCPhysicsDebugDraw": 167,
-    "./platform/CCPhysicsRayCastCallback": 168,
-    "./platform/CCPhysicsUtils": 169
+    "../../../external/box2d/box2d": 309,
+    "./CCPhysicsContact": 148,
+    "./CCPhysicsManager": 149,
+    "./CCRigidBody": 152,
+    "./collider/CCPhysicsBoxCollider": 153,
+    "./collider/CCPhysicsChainCollider": 154,
+    "./collider/CCPhysicsCircleCollider": 155,
+    "./collider/CCPhysicsCollider": 156,
+    "./collider/CCPhysicsPolygonCollider": 157,
+    "./joint/CCDistanceJoint": 159,
+    "./joint/CCJoint": 160,
+    "./joint/CCMotorJoint": 161,
+    "./joint/CCMouseJoint": 162,
+    "./joint/CCPrismaticJoint": 163,
+    "./joint/CCRevoluteJoint": 164,
+    "./joint/CCRopeJoint": 165,
+    "./joint/CCWeldJoint": 166,
+    "./joint/CCWheelJoint": 167,
+    "./platform/CCPhysicsAABBQueryCallback": 168,
+    "./platform/CCPhysicsContactListner": 169,
+    "./platform/CCPhysicsDebugDraw": 170,
+    "./platform/CCPhysicsRayCastCallback": 171,
+    "./platform/CCPhysicsUtils": 172
   } ],
-  156: [ (function(require, module, exports) {
+  159: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var DistanceJoint = cc.Class({
       name: "cc.DistanceJoint",
@@ -27996,9 +28941,9 @@
     });
     cc.DistanceJoint = module.exports = DistanceJoint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  157: [ (function(require, module, exports) {
+  160: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var Joint = cc.Class({
       name: "cc.Joint",
@@ -28097,9 +29042,9 @@
     });
     cc.Joint = module.exports = Joint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  158: [ (function(require, module, exports) {
+  161: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var MotorJoint = cc.Class({
@@ -28187,9 +29132,9 @@
     });
     cc.MotorJoint = module.exports = MotorJoint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  159: [ (function(require, module, exports) {
+  162: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var tempB2Vec2 = new b2.Vec2();
     var MouseJoint = cc.Class({
@@ -28320,9 +29265,9 @@
     });
     cc.MouseJoint = module.exports = MouseJoint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  160: [ (function(require, module, exports) {
+  163: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var PrismaticJoint = cc.Class({
@@ -28394,9 +29339,9 @@
     });
     cc.PrismaticJoint = module.exports = PrismaticJoint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  161: [ (function(require, module, exports) {
+  164: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var PHYSICS_ANGLE_TO_ANGLE = require("../CCPhysicsTypes").PHYSICS_ANGLE_TO_ANGLE;
@@ -28482,9 +29427,9 @@
     });
     cc.RevoluteJoint = module.exports = RevoluteJoint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  162: [ (function(require, module, exports) {
+  165: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var RopeJoint = cc.Class({
       name: "cc.RopeJoint",
@@ -28513,9 +29458,9 @@
     });
     cc.RopeJoint = module.exports = RopeJoint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  163: [ (function(require, module, exports) {
+  166: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var WeldJoint = cc.Class({
@@ -28562,9 +29507,9 @@
     });
     cc.WeldJoint = module.exports = WeldJoint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  164: [ (function(require, module, exports) {
+  167: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var WheelJoint = cc.Class({
@@ -28647,9 +29592,9 @@
     });
     cc.WheelJoint = module.exports = WheelJoint;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  165: [ (function(require, module, exports) {
+  168: [ (function(require, module, exports) {
     function PhysicsAABBQueryCallback() {
       this._point = new b2.Vec2();
       this._isPoint = false;
@@ -28681,7 +29626,7 @@
     };
     cc.PhysicsAABBQueryCallback = module.exports = PhysicsAABBQueryCallback;
   }), {} ],
-  166: [ (function(require, module, exports) {
+  169: [ (function(require, module, exports) {
     function PhysicsContactListener() {
       this._contactFixtures = [];
     }
@@ -28728,7 +29673,7 @@
     };
     cc.PhysicsContactListener = module.exports = PhysicsContactListener;
   }), {} ],
-  167: [ (function(require, module, exports) {
+  170: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PhysicsDebugDraw = cc.Class({
       name: "cc.PhysicsDebugDraw",
@@ -28799,9 +29744,9 @@
     });
     cc.PhysicsDebugDraw = module.exports = PhysicsDebugDraw;
   }), {
-    "../CCPhysicsTypes": 147
+    "../CCPhysicsTypes": 150
   } ],
-  168: [ (function(require, module, exports) {
+  171: [ (function(require, module, exports) {
     function PhysicsRayCastCallback() {
       this._type = 0;
       this._fixtures = [];
@@ -28846,7 +29791,7 @@
     };
     cc.PhysicsRayCastCallback = module.exports = PhysicsRayCastCallback;
   }), {} ],
-  169: [ (function(require, module, exports) {
+  172: [ (function(require, module, exports) {
     var PHYSICS_ANGLE_TO_ANGLE = require("../CCPhysicsTypes").PHYSICS_ANGLE_TO_ANGLE;
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var convertToNodeRotation = require("../utils").convertToNodeRotation;
@@ -28879,10 +29824,10 @@
     };
     cc.PhysicsUtils = module.exports = PhysicsUtils;
   }), {
-    "../CCPhysicsTypes": 147,
-    "../utils": 170
+    "../CCPhysicsTypes": 150,
+    "../utils": 173
   } ],
-  170: [ (function(require, module, exports) {
+  173: [ (function(require, module, exports) {
     function getWorldRotation(node) {
       var rot = node.rotationX;
       var parent = node.parent;
@@ -28918,7 +29863,7 @@
       convertToNodeRotation: convertToNodeRotation
     };
   }), {} ],
-  171: [ (function(require, module, exports) {
+  174: [ (function(require, module, exports) {
     var Asset = require("../assets/CCAsset");
     var callInNextTick = require("./utils").callInNextTick;
     var Loader = require("../load-pipeline/CCLoader");
@@ -29079,15 +30024,15 @@
     AssetLibrary._uuidToAsset = {};
     module.exports = cc.AssetLibrary = AssetLibrary;
   }), {
-    "../assets/CCAsset": 44,
-    "../load-pipeline/CCLoader": 127,
-    "../load-pipeline/auto-release-utils": 131,
-    "../load-pipeline/md5-pipe": 137,
-    "../load-pipeline/pack-downloader": 138,
-    "../utils/decode-uuid": 219,
-    "./utils": 197
+    "../assets/CCAsset": 43,
+    "../load-pipeline/CCLoader": 130,
+    "../load-pipeline/auto-release-utils": 134,
+    "../load-pipeline/md5-pipe": 140,
+    "../load-pipeline/pack-downloader": 141,
+    "../utils/decode-uuid": 222,
+    "./utils": 200
   } ],
-  172: [ (function(require, module, exports) {
+  175: [ (function(require, module, exports) {
     var JS = require("./js");
     var Enum = require("./CCEnum");
     var Utils = require("./utils");
@@ -29612,14 +30557,14 @@
     };
     false;
   }), {
-    "./CCEnum": 174,
-    "./attribute": 185,
-    "./js": 193,
-    "./preprocess-class": 194,
-    "./requiring-frame": 195,
-    "./utils": 197
+    "./CCEnum": 177,
+    "./attribute": 188,
+    "./js": 196,
+    "./preprocess-class": 197,
+    "./requiring-frame": 198,
+    "./utils": 200
   } ],
-  173: [ (function(require, module, exports) {
+  176: [ (function(require, module, exports) {
     require("./CCClass");
     var Preprocess = require("./preprocess-class");
     var JS = require("./js");
@@ -29792,12 +30737,12 @@
       mixins: mixins
     };
   }), {
-    "./CCClass": 172,
-    "./js": 193,
-    "./preprocess-class": 194,
-    "./utils": 197
+    "./CCClass": 175,
+    "./js": 196,
+    "./preprocess-class": 197,
+    "./utils": 200
   } ],
-  174: [ (function(require, module, exports) {
+  177: [ (function(require, module, exports) {
     var JS = require("./js");
     function Enum(obj) {
       if ("__enums__" in obj) return obj;
@@ -29844,9 +30789,9 @@
     false;
     module.exports = cc.Enum = Enum;
   }), {
-    "./js": 193
+    "./js": 196
   } ],
-  175: [ (function(require, module, exports) {
+  178: [ (function(require, module, exports) {
     cc.ClassManager || require("./_CCClass");
     var inputManager = require("./CCInputManager");
     inputManager.__instanceId = cc.ClassManager.getNewInstanceId();
@@ -29924,10 +30869,10 @@
       }
     };
   }), {
-    "./CCInputManager": 176,
-    "./_CCClass": 184
+    "./CCInputManager": 179,
+    "./_CCClass": 187
   } ],
-  176: [ (function(require, module, exports) {
+  179: [ (function(require, module, exports) {
     var macro = require("./CCMacro");
     var sys = require("./CCSys");
     var TOUCH_TIMEOUT = macro.TOUCH_TIMEOUT;
@@ -30305,10 +31250,10 @@
     cc.inputManager = inputManager;
     module.exports = inputManager;
   }), {
-    "./CCMacro": 177,
-    "./CCSys": 181
+    "./CCMacro": 180,
+    "./CCSys": 184
   } ],
-  177: [ (function(require, module, exports) {
+  180: [ (function(require, module, exports) {
     require("./_CCClass");
     cc.KEY = {
       none: 0,
@@ -30596,9 +31541,9 @@
     };
     module.exports = cc.macro;
   }), {
-    "./_CCClass": 184
+    "./_CCClass": 187
   } ],
-  178: [ (function(require, module, exports) {
+  181: [ (function(require, module, exports) {
     var JS = require("./js");
     var CCClass = require("./CCClass");
     var Destroyed = 1;
@@ -30759,10 +31704,10 @@
     false, false;
     cc.Object = module.exports = CCObject;
   }), {
-    "./CCClass": 172,
-    "./js": 193
+    "./CCClass": 175,
+    "./js": 196
   } ],
-  179: [ (function(require, module, exports) {
+  182: [ (function(require, module, exports) {
     cc.SAXParser = cc._Class.extend({
       ctor: function() {
         if (window.DOMParser) {
@@ -30833,7 +31778,7 @@
     cc.saxParser = new cc.SAXParser();
     cc.plistParser = new cc.PlistParser();
   }), {} ],
-  180: [ (function(require, module, exports) {
+  183: [ (function(require, module, exports) {
     cc.screen = {
       _supportsFullScreen: false,
       _preOnFullScreenChange: null,
@@ -30884,7 +31829,7 @@
     };
     cc.screen.init();
   }), {} ],
-  181: [ (function(require, module, exports) {
+  184: [ (function(require, module, exports) {
     if (cc.sys) return;
     cc.sys = {};
     var sys = cc.sys;
@@ -31199,7 +32144,7 @@
     };
     module.exports = sys;
   }), {} ],
-  182: [ (function(require, module, exports) {
+  185: [ (function(require, module, exports) {
     var __BrowserGetter = {
       init: function() {
         cc.sys.platform !== cc.sys.WECHAT_GAME && (this.html = document.getElementsByTagName("html")[0]);
@@ -31885,7 +32830,7 @@
     cc.ResolutionPolicy.UNKNOWN = 5;
     module.exports = View;
   }), {} ],
-  183: [ (function(require, module, exports) {
+  186: [ (function(require, module, exports) {
     cc.visibleRect = {
       topLeft: cc.p(0, 0),
       topRight: cc.p(0, 0),
@@ -31923,7 +32868,7 @@
       }
     };
   }), {} ],
-  184: [ (function(require, module, exports) {
+  187: [ (function(require, module, exports) {
     var ClassManager = cc.ClassManager = {
       instanceId: 0 | 998 * Math.random(),
       getNewInstanceId: function() {
@@ -32028,7 +32973,7 @@
     };
     cc._Class = module.exports = Class;
   }), {} ],
-  185: [ (function(require, module, exports) {
+  188: [ (function(require, module, exports) {
     var JS = require("./js");
     var isPlainEmptyObj = require("./utils").isPlainEmptyObj_DEV;
     var DELIMETER = "$_$";
@@ -32116,11 +33061,11 @@
       ScriptUuid: {}
     };
   }), {
-    "./CCClass": 172,
-    "./js": 193,
-    "./utils": 197
+    "./CCClass": 175,
+    "./js": 196,
+    "./utils": 200
   } ],
-  186: [ (function(require, module, exports) {
+  189: [ (function(require, module, exports) {
     var JS = require("./js");
     var fastRemoveAt = JS.array.fastRemoveAt;
     function CallbackList() {
@@ -32244,9 +33189,9 @@
     CallbacksInvoker.CallbacksHandler = CallbacksHandler;
     module.exports = CallbacksInvoker;
   }), {
-    "./js": 193
+    "./js": 196
   } ],
-  187: [ (function(require, module, exports) {
+  190: [ (function(require, module, exports) {
     function deepFlatten(strList, array) {
       for (var i = 0; i < array.length; i++) {
         var item = array[i];
@@ -32263,7 +33208,7 @@
       flattenCodeArray: flattenCodeArray
     };
   }), {} ],
-  188: [ (function(require, module, exports) {
+  191: [ (function(require, module, exports) {
     var JS = require("./js");
     var CCObject = require("./CCObject");
     var Attr = require("./attribute");
@@ -32589,13 +33534,13 @@
       cc.warnID(5302, id);
     };
   }), {
-    "../utils/misc": 222,
-    "./CCClass": 172,
-    "./CCObject": 178,
-    "./attribute": 185,
-    "./js": 193
+    "../utils/misc": 225,
+    "./CCClass": 175,
+    "./CCObject": 181,
+    "./attribute": 188,
+    "./js": 196
   } ],
-  189: [ (function(require, module, exports) {
+  192: [ (function(require, module, exports) {
     var NonUuidMark = ".";
     function IdGenerater(category) {
       this.id = 0 | 998 * Math.random();
@@ -32607,7 +33552,7 @@
     IdGenerater.global = new IdGenerater("global");
     module.exports = IdGenerater;
   }), {} ],
-  190: [ (function(require, module, exports) {
+  193: [ (function(require, module, exports) {
     require("./js");
     require("./CCClass");
     require("./CCClassDecorator");
@@ -32626,23 +33571,23 @@
     true;
     require("./CCVisibleRect");
   }), {
-    "./CCAssetLibrary": 171,
-    "./CCClass": 172,
-    "./CCClassDecorator": 173,
-    "./CCEnum": 174,
-    "./CCMacro": 177,
-    "./CCObject": 178,
-    "./CCSys": 181,
-    "./CCVisibleRect": 183,
-    "./callbacks-invoker": 186,
-    "./deserialize": 188,
-    "./instantiate": 192,
-    "./instantiate-jit": 191,
-    "./js": 193,
-    "./requiring-frame": 195,
-    "./url": 196
+    "./CCAssetLibrary": 174,
+    "./CCClass": 175,
+    "./CCClassDecorator": 176,
+    "./CCEnum": 177,
+    "./CCMacro": 180,
+    "./CCObject": 181,
+    "./CCSys": 184,
+    "./CCVisibleRect": 186,
+    "./callbacks-invoker": 189,
+    "./deserialize": 191,
+    "./instantiate": 195,
+    "./instantiate-jit": 194,
+    "./js": 196,
+    "./requiring-frame": 198,
+    "./url": 199
   } ],
-  191: [ (function(require, module, exports) {
+  194: [ (function(require, module, exports) {
     var CCObject = require("./CCObject");
     var Destroyed = CCObject.Flags.Destroyed;
     var PersistentMask = CCObject.Flags.PersistentMask;
@@ -32916,13 +33861,13 @@
     };
     false;
   }), {
-    "./CCClass": 172,
-    "./CCObject": 178,
-    "./attribute": 185,
-    "./compiler": 187,
-    "./js": 193
+    "./CCClass": 175,
+    "./CCObject": 181,
+    "./attribute": 188,
+    "./compiler": 190,
+    "./js": 196
   } ],
-  192: [ (function(require, module, exports) {
+  195: [ (function(require, module, exports) {
     var CCObject = require("./CCObject");
     var Destroyed = CCObject.Flags.Destroyed;
     var PersistentMask = CCObject.Flags.PersistentMask;
@@ -33044,11 +33989,11 @@
     cc.instantiate = instantiate;
     module.exports = instantiate;
   }), {
-    "./CCObject": 178,
-    "./attribute": 185,
-    "./utils": 197
+    "./CCObject": 181,
+    "./attribute": 188,
+    "./utils": 200
   } ],
-  193: [ (function(require, module, exports) {
+  196: [ (function(require, module, exports) {
     var tempCIDGenerater = new (require("./id-generater"))("TmpCId.");
     function _getPropertyDescriptor(obj, name) {
       while (obj) {
@@ -33404,10 +34349,10 @@
     cc.js = js;
     module.exports = js;
   }), {
-    "../utils/mutable-forward-iterator": 223,
-    "./id-generater": 189
+    "../utils/mutable-forward-iterator": 226,
+    "./id-generater": 192
   } ],
-  194: [ (function(require, module, exports) {
+  197: [ (function(require, module, exports) {
     var SerializableAttrs = {
       url: {
         canUsedInGet: true
@@ -33534,9 +34479,9 @@
       return true;
     };
   }), {
-    "./CCClass": 172
+    "./CCClass": 175
   } ],
-  195: [ (function(require, module, exports) {
+  198: [ (function(require, module, exports) {
     var requiringFrames = [];
     cc._RF = {
       push: function(module, uuid, script) {
@@ -33567,7 +34512,7 @@
     };
     false;
   }), {} ],
-  196: [ (function(require, module, exports) {
+  199: [ (function(require, module, exports) {
     var _mounts = {};
     cc.url = {
       _rawAssets: "",
@@ -33598,7 +34543,7 @@
     };
     module.exports = cc.url;
   }), {} ],
-  197: [ (function(require, module, exports) {
+  200: [ (function(require, module, exports) {
     module.exports = {
       contains: function(refNode, otherNode) {
         if ("function" == typeof refNode.contains) return refNode.contains(otherNode);
@@ -33624,7 +34569,7 @@
     false;
     false;
   }), {} ],
-  198: [ (function(require, module, exports) {
+  201: [ (function(require, module, exports) {
     require("./platform/js");
     require("./value-types");
     require("./utils");
@@ -33646,27 +34591,27 @@
     require("./event-manager");
     require("./renderer");
   }), {
-    "./CCDirector": 34,
-    "./CCDirectorCanvas": 35,
-    "./CCDirectorWebGL": 36,
-    "./CCScheduler": 43,
-    "./event": 113,
-    "./event-manager": 109,
-    "./load-pipeline": 133,
-    "./platform/CCInputExtension": 175,
-    "./platform/CCInputManager": 176,
-    "./platform/CCMacro": 177,
-    "./platform/CCSAXParser": 179,
-    "./platform/CCScreen": 180,
-    "./platform/CCSys": 181,
-    "./platform/CCView": 182,
-    "./platform/js": 193,
-    "./renderer": 202,
-    "./textures": 214,
-    "./utils": 221,
-    "./value-types": 235
+    "./CCDirector": 33,
+    "./CCDirectorCanvas": 34,
+    "./CCDirectorWebGL": 35,
+    "./CCScheduler": 42,
+    "./event": 115,
+    "./event-manager": 111,
+    "./load-pipeline": 136,
+    "./platform/CCInputExtension": 178,
+    "./platform/CCInputManager": 179,
+    "./platform/CCMacro": 180,
+    "./platform/CCSAXParser": 182,
+    "./platform/CCScreen": 183,
+    "./platform/CCSys": 184,
+    "./platform/CCView": 185,
+    "./platform/js": 196,
+    "./renderer": 205,
+    "./textures": 217,
+    "./utils": 224,
+    "./value-types": 238
   } ],
-  199: [ (function(require, module, exports) {
+  202: [ (function(require, module, exports) {
     var Region = function() {
       this._minX = 0;
       this._minY = 0;
@@ -33894,7 +34839,7 @@
     cc.Region = Region;
     cc.DirtyRegion = DirtyRegion;
   }), {} ],
-  200: [ (function(require, module, exports) {
+  203: [ (function(require, module, exports) {
     cc.rendererCanvas = {
       childrenOrderDirty: true,
       assignedZ: 0,
@@ -34195,7 +35140,7 @@
       };
     })();
   }), {} ],
-  201: [ (function(require, module, exports) {
+  204: [ (function(require, module, exports) {
     var _batchedInfo = {
       texture: null,
       blendSrc: null,
@@ -34520,16 +35465,16 @@
       }
     };
   }), {} ],
-  202: [ (function(require, module, exports) {
+  205: [ (function(require, module, exports) {
     require("./RendererCanvas");
     require("./RendererWebGL");
     require("./DirtyRegion");
   }), {
-    "./DirtyRegion": 199,
-    "./RendererCanvas": 200,
-    "./RendererWebGL": 201
+    "./DirtyRegion": 202,
+    "./RendererCanvas": 203,
+    "./RendererWebGL": 204
   } ],
-  203: [ (function(require, module, exports) {
+  206: [ (function(require, module, exports) {
     _ccsg.Scene = _ccsg.Node.extend({
       _className: "Scene",
       ctor: function() {
@@ -34540,7 +35485,7 @@
       }
     });
   }), {} ],
-  204: [ (function(require, module, exports) {
+  207: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     var Misc = require("../utils/misc");
     _ccsg.Sprite = _ccsg.Node.extend({
@@ -34856,10 +35801,10 @@
     };
     Misc.propertyDefine(_ccsg.Sprite, SameNameGetSets, DiffNameGetSets);
   }), {
-    "../event/event-target": 111,
-    "../utils/misc": 222
+    "../event/event-target": 113,
+    "../utils/misc": 225
   } ],
-  205: [ (function(require, module, exports) {
+  208: [ (function(require, module, exports) {
     _ccsg.Sprite.CanvasRenderCmd = function(renderable) {
       this._rootCtor(renderable);
       this._needDraw = true;
@@ -35037,7 +35982,7 @@
       return nCanvas;
     };
   }), {} ],
-  206: [ (function(require, module, exports) {
+  209: [ (function(require, module, exports) {
     var macro = cc.macro;
     _ccsg.Sprite.WebGLRenderCmd = function(renderable) {
       this._rootCtor(renderable);
@@ -35260,7 +36205,7 @@
       return len;
     };
   }), {} ],
-  207: [ (function(require, module, exports) {
+  210: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     function sortIndex(a, b) {
       return a - b;
@@ -36315,9 +37260,9 @@
       RADIAL: 2
     });
   }), {
-    "../event/event-target": 111
+    "../event/event-target": 113
   } ],
-  208: [ (function(require, module, exports) {
+  211: [ (function(require, module, exports) {
     cc.Scale9Sprite.CanvasRenderCmd = function(renderable) {
       this._rootCtor(renderable);
       this._node.loaded() ? this._needDraw = true : this._needDraw = false;
@@ -36438,7 +37383,7 @@
       }
     };
   }), {} ],
-  209: [ (function(require, module, exports) {
+  212: [ (function(require, module, exports) {
     var ccgl = cc.gl;
     cc.Scale9Sprite.WebGLRenderCmd = function(renderable) {
       this._rootCtor(renderable);
@@ -36592,7 +37537,7 @@
       fShader: "precision lowp float;\nvarying vec4 v_fragmentColor;\nvarying vec2 v_texCoord;\nuniform vec2 u_offset;\nuniform vec2 u_offset_tiling;\nconst float PI = 3.14159265359;\nvoid main()\n{\nfloat halfPI = 0.5 * PI;\nfloat maxFactor = sin(halfPI);\nvec2 uv = v_texCoord;\nvec2 xy = 2.0 * uv.xy - 1.0;\nfloat d = length(xy);\nif (d < (2.0-maxFactor)) {\nd = length(xy * maxFactor);\nfloat z = sqrt(1.0 - d * d);\nfloat r = atan(d, z) / PI;\nfloat phi = atan(xy.y, xy.x);\nuv.x = r * cos(phi) + 0.5;\nuv.y = r * sin(phi) + 0.5;\n} else {\ndiscard;\n}\nuv = uv * u_offset_tiling + u_offset;\nuv = fract(uv);\ngl_FragColor = v_fragmentColor * texture2D(CC_Texture0, uv);\n}"
     };
   }), {} ],
-  210: [ (function(require, module, exports) {
+  213: [ (function(require, module, exports) {
     cc.SpriteBatchNode = _ccsg.Node.extend({
       _blendFunc: null,
       _texture: null,
@@ -36683,7 +37628,7 @@
     cc.defineGetterSetter(_p, "texture", _p.getTexture, _p.setTexture);
     cc.defineGetterSetter(_p, "shaderProgram", _p.getShaderProgram, _p.setShaderProgram);
   }), {} ],
-  211: [ (function(require, module, exports) {
+  214: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     cc.SpriteFrame = cc.Class({
       name: "cc.SpriteFrame",
@@ -36856,10 +37801,10 @@
     proto.copy = proto.clone;
     proto.initWithTexture = proto.setTexture;
   }), {
-    "../assets/CCAsset": 44,
-    "../event/event-target": 111
+    "../assets/CCAsset": 43,
+    "../event/event-target": 113
   } ],
-  212: [ (function(require, module, exports) {
+  215: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     var sys = require("../platform/CCSys");
     var JS = require("../platform/js");
@@ -37323,16 +38268,16 @@
     }));
     cc.Texture2D = module.exports = Texture2D;
   }), {
-    "../CCGame": 40,
-    "../assets/CCRawAsset": 50,
-    "../event/event-target": 111,
-    "../platform/CCClass": 172,
-    "../platform/CCSys": 181,
-    "../platform/_CCClass": 184,
-    "../platform/js": 193,
-    "../utils/misc": 222
+    "../CCGame": 39,
+    "../assets/CCRawAsset": 49,
+    "../event/event-target": 113,
+    "../platform/CCClass": 175,
+    "../platform/CCSys": 184,
+    "../platform/_CCClass": 187,
+    "../platform/js": 196,
+    "../utils/misc": 225
   } ],
-  213: [ (function(require, module, exports) {
+  216: [ (function(require, module, exports) {
     var game = require("../CCGame");
     var Texture2D = require("./CCTexture2D");
     var textureCache = {
@@ -37509,17 +38454,17 @@
     }));
     cc.textureCache = module.exports = textureCache;
   }), {
-    "../CCGame": 40,
-    "./CCTexture2D": 212
+    "../CCGame": 39,
+    "./CCTexture2D": 215
   } ],
-  214: [ (function(require, module, exports) {
+  217: [ (function(require, module, exports) {
     require("./CCTexture2D");
     require("./CCTextureCache");
   }), {
-    "./CCTexture2D": 212,
-    "./CCTextureCache": 213
+    "./CCTexture2D": 215,
+    "./CCTextureCache": 216
   } ],
-  215: [ (function(require, module, exports) {
+  218: [ (function(require, module, exports) {
     require("../platform/CCSys");
     var EXTNAME_RE = /(\.[^\.\/\?\\]*)(\?.*)?$/;
     var NORMALIZE_RE = /[^\.\/]+\/\.\.\//;
@@ -37594,9 +38539,9 @@
     };
     module.exports = cc.path;
   }), {
-    "../platform/CCSys": 181
+    "../platform/CCSys": 184
   } ],
-  216: [ (function(require, module, exports) {
+  219: [ (function(require, module, exports) {
     var PStats = require("../../../external/pstats/pstats");
     var macro = require("../platform/CCMacro");
     var _fps = document.createElement("div");
@@ -37680,10 +38625,10 @@
       }
     };
   }), {
-    "../../../external/pstats/pstats": 286,
-    "../platform/CCMacro": 177
+    "../../../external/pstats/pstats": 311,
+    "../platform/CCMacro": 180
   } ],
-  217: [ (function(require, module, exports) {
+  220: [ (function(require, module, exports) {
     var Flags = require("../platform/CCObject").Flags;
     var Misc = require("./misc");
     var IdGenerater = require("../platform/id-generater");
@@ -38122,11 +39067,11 @@
     false;
     cc._BaseNode = module.exports = BaseNode;
   }), {
-    "../platform/CCObject": 178,
-    "../platform/id-generater": 189,
-    "./misc": 222
+    "../platform/CCObject": 181,
+    "../platform/id-generater": 192,
+    "./misc": 225
   } ],
-  218: [ (function(require, module, exports) {
+  221: [ (function(require, module, exports) {
     var EPSILON = 1e-6;
     function binarySearchEpsilon(array, value) {
       for (var l = 0, h = array.length - 1, m = h >>> 1; l <= h; m = l + h >>> 1) {
@@ -38142,7 +39087,7 @@
       binarySearchEpsilon: binarySearchEpsilon
     };
   }), {} ],
-  219: [ (function(require, module, exports) {
+  222: [ (function(require, module, exports) {
     var Base64Values = require("./misc").BASE64_VALUES;
     var HexChars = "0123456789abcdef".split("");
     var _t = [ "", "", "", "" ];
@@ -38165,9 +39110,9 @@
     };
     false;
   }), {
-    "./misc": 222
+    "./misc": 225
   } ],
-  220: [ (function(require, module, exports) {
+  223: [ (function(require, module, exports) {
     cc.find = module.exports = function(path, referenceNode) {
       if (null == path) {
         cc.errorID(5600);
@@ -38201,19 +39146,19 @@
       return match;
     };
   }), {} ],
-  221: [ (function(require, module, exports) {
+  224: [ (function(require, module, exports) {
     require("./CCPath");
     true, true;
     require("./CCProfiler");
     require("./find");
     require("./mutable-forward-iterator");
   }), {
-    "./CCPath": 215,
-    "./CCProfiler": 216,
-    "./find": 220,
-    "./mutable-forward-iterator": 223
+    "./CCPath": 218,
+    "./CCProfiler": 219,
+    "./find": 223,
+    "./mutable-forward-iterator": 226
   } ],
-  222: [ (function(require, module, exports) {
+  225: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var sys = require("../platform/CCSys");
     var misc = exports;
@@ -38277,10 +39222,10 @@
       } else exists.push(value); else map[key] = pushFront ? [ value, exists ] : [ exists, value ]; else map[key] = value;
     };
   }), {
-    "../platform/CCSys": 181,
-    "../platform/js": 193
+    "../platform/CCSys": 184,
+    "../platform/js": 196
   } ],
-  223: [ (function(require, module, exports) {
+  226: [ (function(require, module, exports) {
     function MutableForwardIterator(array) {
       this.i = 0;
       this.array = array;
@@ -38309,7 +39254,7 @@
     };
     module.exports = MutableForwardIterator;
   }), {} ],
-  224: [ (function(require, module, exports) {
+  227: [ (function(require, module, exports) {
     cc._PrefabInfo = cc.Class({
       name: "cc.PrefabInfo",
       properties: {
@@ -38364,7 +39309,7 @@
       }
     };
   }), {} ],
-  225: [ (function(require, module, exports) {
+  228: [ (function(require, module, exports) {
     var SceneGraphUtils = {
       removeSgNode: function() {
         var sgNode = this._sgNode;
@@ -38381,7 +39326,7 @@
     false;
     module.exports = SceneGraphUtils;
   }), {} ],
-  226: [ (function(require, module, exports) {
+  229: [ (function(require, module, exports) {
     cc.AffineTransform = function(a, b, c, d, tx, ty) {
       this.a = a;
       this.b = b;
@@ -38608,7 +39553,7 @@
       out.ty = determinant * (b * t.tx - a * t.ty);
     };
   }), {} ],
-  227: [ (function(require, module, exports) {
+  230: [ (function(require, module, exports) {
     var ValueType = require("./CCValueType");
     var JS = require("../platform/js");
     var Color = (function() {
@@ -38851,11 +39796,11 @@
     };
     module.exports = cc.Color;
   }), {
-    "../platform/CCClass": 172,
-    "../platform/js": 193,
-    "./CCValueType": 233
+    "../platform/CCClass": 175,
+    "../platform/js": 196,
+    "./CCValueType": 236
   } ],
-  228: [ (function(require, module, exports) {
+  231: [ (function(require, module, exports) {
     var POINT_EPSILON = parseFloat("1.192092896e-07F");
     cc.pNeg = function(point) {
       return cc.p(-point.x, -point.y);
@@ -39021,7 +39966,7 @@
       cc.pMultIn(v, 1 / Math.sqrt(v.x * v.x + v.y * v.y));
     };
   }), {} ],
-  229: [ (function(require, module, exports) {
+  232: [ (function(require, module, exports) {
     var ValueType = require("./CCValueType");
     var JS = require("../platform/js");
     function Rect(x, y, w, h) {
@@ -39184,11 +40129,11 @@
     };
     module.exports = cc.Rect;
   }), {
-    "../platform/CCClass": 172,
-    "../platform/js": 193,
-    "./CCValueType": 233
+    "../platform/CCClass": 175,
+    "../platform/js": 196,
+    "./CCValueType": 236
   } ],
-  230: [ (function(require, module, exports) {
+  233: [ (function(require, module, exports) {
     var ValueType = require("./CCValueType");
     var JS = require("../platform/js");
     function Size(width, height) {
@@ -39233,11 +40178,11 @@
     };
     cc.Size = module.exports = Size;
   }), {
-    "../platform/CCClass": 172,
-    "../platform/js": 193,
-    "./CCValueType": 233
+    "../platform/CCClass": 175,
+    "../platform/js": 196,
+    "./CCValueType": 236
   } ],
-  231: [ (function(require, module, exports) {
+  234: [ (function(require, module, exports) {
     cc.Acceleration = function(x, y, z, timestamp) {
       this.x = x || 0;
       this.y = y || 0;
@@ -39293,7 +40238,7 @@
       BOTTOM: 2
     });
   }), {} ],
-  232: [ (function(require, module, exports) {
+  235: [ (function(require, module, exports) {
     cc.WebGLColor = function(r, g, b, a, arrayBuffer, offset) {
       this._arrayBuffer = arrayBuffer || new ArrayBuffer(cc.WebGLColor.BYTES_PER_ELEMENT);
       this._offset = offset || 0;
@@ -39742,7 +40687,7 @@
     cc.js.getset(_p, "b", _p._getB, _p._setB);
     cc.js.getset(_p, "c", _p._getC, _p._setC);
   }), {} ],
-  233: [ (function(require, module, exports) {
+  236: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     function ValueType() {}
     JS.setClassName("cc.ValueType", ValueType);
@@ -39754,9 +40699,9 @@
     cc.ValueType = ValueType;
     module.exports = ValueType;
   }), {
-    "../platform/js": 193
+    "../platform/js": 196
   } ],
-  234: [ (function(require, module, exports) {
+  237: [ (function(require, module, exports) {
     var ValueType = require("./CCValueType");
     var JS = require("../platform/js");
     var CCClass = require("../platform/CCClass");
@@ -39944,11 +40889,11 @@
     };
     module.exports = cc.Vec2;
   }), {
-    "../platform/CCClass": 172,
-    "../platform/js": 193,
-    "./CCValueType": 233
+    "../platform/CCClass": 175,
+    "../platform/js": 196,
+    "./CCValueType": 236
   } ],
-  235: [ (function(require, module, exports) {
+  238: [ (function(require, module, exports) {
     require("./CCValueType");
     require("./CCVec2");
     require("./CCPointExtension");
@@ -39959,17 +40904,376 @@
     require("./CCAffineTransform");
     require("./CCTypesWebGL");
   }), {
-    "./CCAffineTransform": 226,
-    "./CCColor": 227,
-    "./CCPointExtension": 228,
-    "./CCRect": 229,
-    "./CCSize": 230,
-    "./CCTypes": 231,
-    "./CCTypesWebGL": 232,
-    "./CCValueType": 233,
-    "./CCVec2": 234
+    "./CCAffineTransform": 229,
+    "./CCColor": 230,
+    "./CCPointExtension": 231,
+    "./CCRect": 232,
+    "./CCSize": 233,
+    "./CCTypes": 234,
+    "./CCTypesWebGL": 235,
+    "./CCValueType": 236,
+    "./CCVec2": 237
   } ],
-  236: [ (function(require, module, exports) {
+  239: [ (function(require, module, exports) {
+    var Utils = require("../platform/utils");
+    var sys = require("../platform/CCSys");
+    _ccsg.VideoPlayer = _ccsg.Node.extend({
+      ctor: function() {
+        _ccsg.Node.prototype.ctor.call(this);
+        this._EventList = {};
+      },
+      _createRenderCmd: function() {
+        return new _ccsg.VideoPlayer.RenderCmd(this);
+      },
+      setURL: function(url) {
+        this._renderCmd.updateURL(url);
+      },
+      getURL: function() {
+        return this._renderCmd._url;
+      },
+      play: function() {
+        this._renderCmd.play();
+      },
+      pause: function() {
+        this._renderCmd.pause();
+      },
+      _resume: function() {
+        this._renderCmd.play();
+      },
+      stop: function() {
+        this._renderCmd.stop();
+      },
+      seekTo: function(time) {
+        this._renderCmd.seekTo(time);
+      },
+      isPlaying: function() {
+        return this._renderCmd.isPlaying();
+      },
+      duration: function() {
+        return this._renderCmd.duration();
+      },
+      currentTime: function() {
+        return this._renderCmd.currentTime();
+      },
+      createDomElementIfNeeded: function() {
+        this._renderCmd._video || this._renderCmd.createDom();
+      },
+      setKeepAspectRatioEnabled: function() {
+        cc.logID(7700);
+      },
+      isKeepAspectRatioEnabled: function() {
+        return true;
+      },
+      setFullScreenEnabled: function(enable) {
+        var video = this._renderCmd._video;
+        if (!video) return;
+        enable ? cc.screen.requestFullScreen(video) : cc.screen.exitFullScreen(video);
+      },
+      isFullScreenEnabled: function() {
+        cc.logID(7701);
+      },
+      setEventListener: function(event, callback) {
+        this._EventList[event] = callback;
+      },
+      removeEventListener: function(event) {
+        this._EventList[event] = null;
+      },
+      _dispatchEvent: function(event) {
+        var callback = this._EventList[event];
+        callback && callback.call(this, this, this._renderCmd._video.src);
+      },
+      onPlayEvent: function() {
+        var callback = this._EventList[_ccsg.VideoPlayer.EventType.PLAYING];
+        callback.call(this, this, this._renderCmd._video.src);
+      },
+      setContentSize: function(width, height) {
+        if (void 0 !== width.width && void 0 !== width.height) {
+          height = width.height;
+          width = width.width;
+        }
+        _ccsg.Node.prototype.setContentSize.call(this, width, height);
+        this._renderCmd.updateSize(width, height);
+      },
+      onEnter: function() {
+        _ccsg.Node.prototype.onEnter.call(this);
+        var list = _ccsg.VideoPlayer.elements;
+        -1 === list.indexOf(this) && list.push(this);
+      },
+      cleanup: function() {
+        this._super();
+        this._renderCmd.removeDom();
+      },
+      onExit: function() {
+        _ccsg.Node.prototype.onExit.call(this);
+        var list = _ccsg.VideoPlayer.elements;
+        var index = list.indexOf(this);
+        -1 !== index && list.splice(index, 1);
+      },
+      setVisible: function(visible) {
+        _ccsg.Node.prototype.setVisible.call(this, visible);
+        this._renderCmd.updateVisibility();
+      }
+    });
+    _ccsg.VideoPlayer.elements = [];
+    _ccsg.VideoPlayer.pauseElements = [];
+    cc.eventManager.addCustomListener(cc.game.EVENT_HIDE, (function() {
+      var list = _ccsg.VideoPlayer.elements;
+      for (var node, i = 0; i < list.length; i++) {
+        node = list[i];
+        if (list[i]._playing) {
+          node.pause();
+          _ccsg.VideoPlayer.pauseElements.push(node);
+        }
+      }
+    }));
+    cc.game.on(cc.game.EVENT_SHOW, (function() {
+      var list = _ccsg.VideoPlayer.pauseElements;
+      var node = list.pop();
+      while (node) {
+        node.play();
+        node = list.pop();
+      }
+    }));
+    _ccsg.VideoPlayer.EventType = {
+      PLAYING: 0,
+      PAUSED: 1,
+      STOPPED: 2,
+      COMPLETED: 3,
+      META_LOADED: 4,
+      CLICKED: 5,
+      READY_TO_PLAY: 6
+    };
+    (function(video) {
+      video._polyfill = {
+        devicePixelRatio: false,
+        event: "canplay",
+        canPlayType: []
+      };
+      (function() {
+        var dom = document.createElement("video");
+        if (sys.platform !== sys.WECHAT_GAME) {
+          if (dom.canPlayType("video/ogg")) {
+            video._polyfill.canPlayType.push(".ogg");
+            video._polyfill.canPlayType.push(".ogv");
+          }
+          dom.canPlayType("video/mp4") && video._polyfill.canPlayType.push(".mp4");
+          dom.canPlayType("video/webm") && video._polyfill.canPlayType.push(".webm");
+        }
+      })();
+      cc.sys.browserType === cc.sys.BROWSER_TYPE_FIREFOX && (video._polyfill.autoplayAfterOperation = true);
+      cc.sys.OS_ANDROID !== cc.sys.os || cc.sys.browserType !== cc.sys.BROWSER_TYPE_SOUGOU && cc.sys.browserType !== cc.sys.BROWSER_TYPE_360 || (video._polyfill.zoomInvalid = true);
+      var style = document.createElement("style");
+      style.innerHTML = ".cocosVideo:-moz-full-screen{transform:matrix(1,0,0,1,0,0) !important;}.cocosVideo:full-screen{transform:matrix(1,0,0,1,0,0) !important;}.cocosVideo:-webkit-full-screen{transform:matrix(1,0,0,1,0,0) !important;}";
+      document.head.appendChild(style);
+    })(_ccsg.VideoPlayer);
+    (function(polyfill) {
+      _ccsg.VideoPlayer.RenderCmd = function(node) {
+        this._rootCtor(node);
+        this._video = null;
+        this._url = "";
+        this._played = false;
+        this._playing = false;
+        this._ignorePause = false;
+      };
+      var proto = _ccsg.VideoPlayer.RenderCmd.prototype = Object.create(_ccsg.Node.CanvasRenderCmd.prototype);
+      proto.constructor = _ccsg.VideoPlayer.RenderCmd;
+      proto.transform = function(parentCmd, recursive) {
+        this.originTransform(parentCmd, recursive);
+        this.updateMatrix();
+      };
+      proto.updateMatrix = function() {
+        if (!this._video) return;
+        var node = this._node, scaleX = cc.view._scaleX, scaleY = cc.view._scaleY;
+        var dpr = cc.view._devicePixelRatio;
+        var t = this._worldTransform;
+        scaleX /= dpr;
+        scaleY /= dpr;
+        var container = cc.game.container;
+        var a = t.a * scaleX, b = t.b, c = t.c, d = t.d * scaleY;
+        var offsetX = container && container.style.paddingLeft && parseInt(container.style.paddingLeft);
+        var offsetY = container && container.style.paddingBottom && parseInt(container.style.paddingBottom);
+        var tx = t.tx * scaleX + offsetX, ty = t.ty * scaleY + offsetY;
+        if (polyfill.zoomInvalid) {
+          this.updateSize(node._contentSize.width * a, node._contentSize.height * d);
+          a = 1;
+          d = 1;
+        }
+        var matrix = "matrix(" + a + "," + -b + "," + -c + "," + d + "," + tx + "," + -ty + ")";
+        this._video.style["transform"] = matrix;
+        this._video.style["-webkit-transform"] = matrix;
+        this._video.style["transform-origin"] = "0px 100% 0px";
+        this._video.style["-webkit-transform-origin"] = "0px 100% 0px";
+      };
+      proto.updateURL = function(path) {
+        cc.loader.md5Pipe && (path = cc.loader.md5Pipe.transformURL(path));
+        var source, video, extname;
+        var node = this._node;
+        if (this._url == path) return;
+        this._url = path;
+        cc.loader.resPath && !/^http/.test(path) && (path = cc.path.join(cc.loader.resPath, path));
+        this.removeDom();
+        this.createDom();
+        this.bindEvent();
+        video = this._video;
+        var cb = function() {
+          if (true == this._loaded) return;
+          this._loaded = true;
+          node.setContentSize(node._contentSize.width, node._contentSize.height);
+          video.currentTime = 0;
+          node._dispatchEvent(_ccsg.VideoPlayer.EventType.READY_TO_PLAY);
+          this.updateVisibility();
+          this.updateMatrix();
+        }.bind(this);
+        video.oncanplay = cb;
+        video.style["visibility"] = "hidden";
+        this._loaded = false;
+        this._played = false;
+        this._playing = false;
+        source = document.createElement("source");
+        source.src = path;
+        video.appendChild(source);
+        extname = cc.path.extname(path);
+        for (var i = 0; i < polyfill.canPlayType.length; i++) if (extname !== polyfill.canPlayType[i]) {
+          source = document.createElement("source");
+          source.src = path.replace(extname, polyfill.canPlayType[i]);
+          video.appendChild(source);
+        }
+      };
+      proto.bindEvent = function() {
+        var node = this._node, video = this._video, self = this;
+        video.onloadedmetadata = function() {
+          node._dispatchEvent(_ccsg.VideoPlayer.EventType.META_LOADED);
+        };
+        video.addEventListener("ended", function() {
+          if (self._video !== video) return;
+          this._playing = false;
+          node._dispatchEvent(_ccsg.VideoPlayer.EventType.COMPLETED);
+        }.bind(this));
+        video.addEventListener("play", (function() {
+          if (self._video !== video) return;
+          node._dispatchEvent(_ccsg.VideoPlayer.EventType.PLAYING);
+        }));
+        video.addEventListener("pause", (function() {
+          if (self._ignorePause || self._video !== video) return;
+          node._dispatchEvent(_ccsg.VideoPlayer.EventType.PAUSED);
+        }));
+        video.addEventListener("click", (function() {
+          node._dispatchEvent(_ccsg.VideoPlayer.EventType.CLICKED);
+        }));
+      };
+      proto.updateVisibility = function() {
+        var node = this._node;
+        if (!this._video) return;
+        var video = this._video;
+        if (node.visible) video.style.visibility = "visible"; else {
+          video.style.visibility = "hidden";
+          video.pause();
+          this._playing = false;
+        }
+      };
+      proto.createDom = function() {
+        var video = document.createElement("video");
+        video.style.position = "absolute";
+        video.style.bottom = "0px";
+        video.style.left = "0px";
+        video.className = "cocosVideo";
+        video.setAttribute("preload", true);
+        video.setAttribute("webkit-playsinline", "");
+        video.setAttribute("playsinline", "");
+        this._video = video;
+        cc.game.container.appendChild(video);
+      };
+      proto.removeDom = function() {
+        var video = this._video;
+        if (video) {
+          var hasChild = Utils.contains(cc.game.container, video);
+          hasChild && cc.game.container.removeChild(video);
+        }
+        this._video = null;
+        this._url = "";
+      };
+      proto.updateSize = function(width, height) {
+        var video = this._video;
+        if (!video) return;
+        video.style["width"] = width + "px";
+        video.style["height"] = height + "px";
+      };
+      proto.play = function() {
+        var video = this._video;
+        if (!video || !this._node.isVisible()) return;
+        this._played = true;
+        if (this._playing) return;
+        if (_ccsg.VideoPlayer._polyfill.autoplayAfterOperation) {
+          var self = this;
+          setTimeout((function() {
+            video.play();
+            self._playing = true;
+          }), 20);
+        } else {
+          video.play();
+          this._playing = true;
+        }
+      };
+      proto.pause = function() {
+        var video = this._video;
+        if (!this._playing) return;
+        this._playing = false;
+        if (!video) return;
+        video.pause();
+      };
+      proto.stop = function() {
+        var video = this._video;
+        if (!video || !this._node.isVisible()) return;
+        this._ignorePause = true;
+        video.pause();
+        var node = this._node;
+        setTimeout(function() {
+          node._dispatchEvent(_ccsg.VideoPlayer.EventType.STOPPED);
+          this._ignorePause = false;
+        }.bind(this), 0);
+        video.currentTime = 0;
+        this._playing = false;
+      };
+      proto.seekTo = function(sec) {
+        var video = this._video;
+        if (!video) return;
+        if (this._loaded) video.currentTime = sec; else {
+          var cb = function() {
+            video.currentTime = sec;
+            video.removeEventListener(polyfill.event, cb);
+          };
+          video.addEventListener(polyfill.event, cb);
+        }
+        _ccsg.VideoPlayer._polyfill.autoplayAfterOperation && this.isPlaying() && setTimeout((function() {
+          video.play();
+        }), 20);
+      };
+      proto.isPlaying = function() {
+        var video = this._video;
+        _ccsg.VideoPlayer._polyfill.autoplayAfterOperation && this._playing && setTimeout((function() {
+          video.play();
+        }), 20);
+        return this._playing;
+      };
+      proto.duration = function() {
+        var video = this._video;
+        var duration = -1;
+        if (!video) return duration;
+        duration = video.duration;
+        duration <= 0 && cc.logID(7702);
+        return duration;
+      };
+      proto.currentTime = function() {
+        var video = this._video;
+        if (!video) return -1;
+        return video.currentTime;
+      };
+    })(_ccsg.VideoPlayer._polyfill);
+  }), {
+    "../platform/CCSys": 184,
+    "../platform/utils": 200
+  } ],
+  240: [ (function(require, module, exports) {
     var Utils = require("../platform/utils");
     _ccsg.WebView = _ccsg.Node.extend({
       ctor: function() {
@@ -40216,9 +41520,9 @@
       };
     })(_ccsg.WebView._polyfill);
   }), {
-    "../platform/utils": 197
+    "../platform/utils": 200
   } ],
-  237: [ (function(require, module, exports) {
+  241: [ (function(require, module, exports) {
     var js = cc.js;
     var deprecateEnum;
     var markAsRemoved;
@@ -40227,7 +41531,7 @@
     var ERR;
     false;
   }), {} ],
-  238: [ (function(require, module, exports) {
+  242: [ (function(require, module, exports) {
     require("./core/CCGame");
     require("./actions");
     require("./core/base-nodes/CCSGNode");
@@ -40247,26 +41551,26 @@
     require("./render-texture/CCRenderTextureCanvasRenderCmd");
     require("./render-texture/CCRenderTextureWebGLRenderCmd");
   }), {
-    "./actions": 11,
-    "./core/CCConfiguration": 33,
-    "./core/CCGame": 40,
-    "./core/base-nodes/CCSGNode": 56,
-    "./core/base-nodes/CCSGNodeBaseRenderCmd": 57,
-    "./core/base-nodes/CCSGNodeCanvasRenderCmd": 58,
-    "./core/base-nodes/CCSGNodeWebGLRenderCmd": 59,
-    "./core/scenes/CCSGScene": 203,
-    "./core/sprites/CCSGSprite": 204,
-    "./core/sprites/CCSGSpriteCanvasRenderCmd": 205,
-    "./core/sprites/CCSGSpriteWebGLRenderCmd": 206,
-    "./core/sprites/CCScale9Sprite": 207,
-    "./core/sprites/CCScale9SpriteCanvasRenderCmd": 208,
-    "./core/sprites/CCScale9SpriteWebGLRenderCmd": 209,
-    "./core/sprites/CCSpriteBatchNode": 210,
-    "./render-texture/CCRenderTexture": 262,
-    "./render-texture/CCRenderTextureCanvasRenderCmd": 263,
-    "./render-texture/CCRenderTextureWebGLRenderCmd": 264
+    "./actions": 10,
+    "./core/CCConfiguration": 32,
+    "./core/CCGame": 39,
+    "./core/base-nodes/CCSGNode": 55,
+    "./core/base-nodes/CCSGNodeBaseRenderCmd": 56,
+    "./core/base-nodes/CCSGNodeCanvasRenderCmd": 57,
+    "./core/base-nodes/CCSGNodeWebGLRenderCmd": 58,
+    "./core/scenes/CCSGScene": 206,
+    "./core/sprites/CCSGSprite": 207,
+    "./core/sprites/CCSGSpriteCanvasRenderCmd": 208,
+    "./core/sprites/CCSGSpriteWebGLRenderCmd": 209,
+    "./core/sprites/CCScale9Sprite": 210,
+    "./core/sprites/CCScale9SpriteCanvasRenderCmd": 211,
+    "./core/sprites/CCScale9SpriteWebGLRenderCmd": 212,
+    "./core/sprites/CCSpriteBatchNode": 213,
+    "./render-texture/CCRenderTexture": 266,
+    "./render-texture/CCRenderTextureCanvasRenderCmd": 267,
+    "./render-texture/CCRenderTextureWebGLRenderCmd": 268
   } ],
-  239: [ (function(require, module, exports) {
+  243: [ (function(require, module, exports) {
     cc.math.AABB = function(min, max) {
       this.min = min || new cc.math.Vec3();
       this.max = max || new cc.math.Vec3();
@@ -40287,7 +41591,7 @@
       return pOut;
     };
   }), {} ],
-  240: [ (function(require, module, exports) {
+  244: [ (function(require, module, exports) {
     cc.math.Matrix4Stack = function(top, stack) {
       this.top = top;
       this.stack = stack || [];
@@ -40327,7 +41631,7 @@
       this._matrixPool.push(matrix);
     };
   }), {} ],
-  241: [ (function(require, module, exports) {
+  245: [ (function(require, module, exports) {
     var math = cc.math;
     math.KM_GL_MODELVIEW = 5888;
     math.KM_GL_PROJECTION = 5889;
@@ -40443,7 +41747,7 @@
       }
     };
   }), {} ],
-  242: [ (function(require, module, exports) {
+  246: [ (function(require, module, exports) {
     require("./utility");
     require("./vec2");
     require("./vec3");
@@ -40457,20 +41761,20 @@
     require("./gl/mat4stack");
     require("./gl/matrix");
   }), {
-    "./aabb": 239,
-    "./gl/mat4stack": 240,
-    "./gl/matrix": 241,
-    "./mat3": 243,
-    "./mat4": 244,
-    "./plane": 245,
-    "./quaternion": 246,
-    "./ray2": 247,
-    "./utility": 248,
-    "./vec2": 249,
-    "./vec3": 250,
-    "./vec4": 251
+    "./aabb": 243,
+    "./gl/mat4stack": 244,
+    "./gl/matrix": 245,
+    "./mat3": 247,
+    "./mat4": 248,
+    "./plane": 249,
+    "./quaternion": 250,
+    "./ray2": 251,
+    "./utility": 252,
+    "./vec2": 253,
+    "./vec3": 254,
+    "./vec4": 255
   } ],
-  243: [ (function(require, module, exports) {
+  247: [ (function(require, module, exports) {
     true;
     window.Uint16Array = window.Uint16Array || window.Array;
     window.Float32Array = window.Float32Array || window.Array;
@@ -40690,7 +41994,7 @@
       return cc.math.Quaternion.rotationMatrix(this).toAxisAndAngle();
     };
   }), {} ],
-  244: [ (function(require, module, exports) {
+  248: [ (function(require, module, exports) {
     cc.math.Matrix4 = function(mat4) {
       mat4 && mat4.mat ? this.mat = new Float32Array(mat4.mat) : this.mat = new Float32Array(16);
     };
@@ -41298,7 +42602,7 @@
       return temp.toAxisAndAngle();
     };
   }), {} ],
-  245: [ (function(require, module, exports) {
+  249: [ (function(require, module, exports) {
     cc.math.Plane = function(a, b, c, d) {
       if (a && void 0 === b) {
         this.a = a.a;
@@ -41362,7 +42666,7 @@
       return cc.math.Plane.POINT_ON_PLANE;
     };
   }), {} ],
-  246: [ (function(require, module, exports) {
+  250: [ (function(require, module, exports) {
     cc.math.Quaternion = function(x, y, z, w) {
       if (x && void 0 === y) {
         this.x = x.x;
@@ -41600,7 +42904,7 @@
       return retVec;
     };
   }), {} ],
-  247: [ (function(require, module, exports) {
+  251: [ (function(require, module, exports) {
     cc.math.Ray2 = function(start, dir) {
       this.start = start || new cc.math.Vec2();
       this.dir = dir || new cc.math.Vec2();
@@ -41680,7 +42984,7 @@
       return intersected;
     };
   }), {} ],
-  248: [ (function(require, module, exports) {
+  252: [ (function(require, module, exports) {
     cc.math = cc.math || {};
     cc.math.EPSILON = 1 / 64;
     cc.math.square = function(s) {
@@ -41690,7 +42994,7 @@
       return lhs + cc.math.EPSILON > rhs && lhs - cc.math.EPSILON < rhs;
     };
   }), {} ],
-  249: [ (function(require, module, exports) {
+  253: [ (function(require, module, exports) {
     cc.math.Vec2 = function(x, y) {
       if (void 0 === y) {
         this.x = x.x;
@@ -41760,7 +43064,7 @@
       return this.x < vec.x + cc.math.EPSILON && this.x > vec.x - cc.math.EPSILON && this.y < vec.y + cc.math.EPSILON && this.y > vec.y - cc.math.EPSILON;
     };
   }), {} ],
-  250: [ (function(require, module, exports) {
+  254: [ (function(require, module, exports) {
     cc.math.Vec3 = cc.math.Vec3 = function(x, y, z) {
       if (x && void 0 === y) {
         this.x = x.x;
@@ -41889,7 +43193,7 @@
       return tyArr;
     };
   }), {} ],
-  251: [ (function(require, module, exports) {
+  255: [ (function(require, module, exports) {
     cc.math.Vec4 = function(x, y, z, w) {
       if (x && void 0 === y) {
         this.x = x.x;
@@ -41996,7 +43300,7 @@
       return tyArr;
     };
   }), {} ],
-  252: [ (function(require, module, exports) {
+  256: [ (function(require, module, exports) {
     require("./CCSGMotionStreak");
     require("./CCSGMotionStreakWebGLRenderCmd");
     var MotionStreak = cc.Class({
@@ -42132,10 +43436,10 @@
     });
     cc.MotionStreak = module.exports = MotionStreak;
   }), {
-    "./CCSGMotionStreak": 253,
-    "./CCSGMotionStreakWebGLRenderCmd": 254
+    "./CCSGMotionStreak": 257,
+    "./CCSGMotionStreakWebGLRenderCmd": 258
   } ],
-  253: [ (function(require, module, exports) {
+  257: [ (function(require, module, exports) {
     function vertexLineToPolygon(points, stroke, vertices, offset, nuPoints) {
       nuPoints += offset;
       if (nuPoints <= 1) return;
@@ -42479,7 +43783,7 @@
       set: motionStreakPro.setPositionY
     });
   }), {} ],
-  254: [ (function(require, module, exports) {
+  258: [ (function(require, module, exports) {
     _ccsg.MotionStreak.WebGLRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = true;
@@ -42523,7 +43827,7 @@
       }
     };
   }), {} ],
-  255: [ (function(require, module, exports) {
+  259: [ (function(require, module, exports) {
     var Zlib = require("../compression/zlib.min");
     var PNGReader = cc._Class.extend({
       ctor: function(data) {
@@ -42807,16 +44111,16 @@
     });
     module.exports = PNGReader;
   }), {
-    "../compression/zlib.min": 32
+    "../compression/zlib.min": 31
   } ],
-  256: [ (function(require, module, exports) {
+  260: [ (function(require, module, exports) {
     var ParticleAsset = cc.Class({
       name: "cc.ParticleAsset",
       extends: cc.RawAsset
     });
     cc.ParticleAsset = module.exports = ParticleAsset;
   }), {} ],
-  257: [ (function(require, module, exports) {
+  261: [ (function(require, module, exports) {
     require("./CCParticleAsset");
     require("./CCSGParticleSystem");
     require("./CCSGParticleSystemCanvasRenderCmd");
@@ -43152,12 +44456,12 @@
     });
     cc.ParticleSystem = module.exports = ParticleSystem;
   }), {
-    "./CCParticleAsset": 256,
-    "./CCSGParticleSystem": 258,
-    "./CCSGParticleSystemCanvasRenderCmd": 259,
-    "./CCSGParticleSystemWebGLRenderCmd": 260
+    "./CCParticleAsset": 260,
+    "./CCSGParticleSystem": 262,
+    "./CCSGParticleSystemCanvasRenderCmd": 263,
+    "./CCSGParticleSystemWebGLRenderCmd": 264
   } ],
-  258: [ (function(require, module, exports) {
+  262: [ (function(require, module, exports) {
     var PNGReader = require("./CCPNGReader");
     var tiffReader = require("./CCTIFFReader");
     require("../compression/ZipUtils");
@@ -44087,11 +45391,11 @@
       GROUPED: 2
     });
   }), {
-    "../compression/ZipUtils": 29,
-    "./CCPNGReader": 255,
-    "./CCTIFFReader": 261
+    "../compression/ZipUtils": 28,
+    "./CCPNGReader": 259,
+    "./CCTIFFReader": 265
   } ],
-  259: [ (function(require, module, exports) {
+  263: [ (function(require, module, exports) {
     _ccsg.ParticleSystem.CanvasRenderCmd = function(renderable) {
       this._rootCtor(renderable);
       this._needDraw = true;
@@ -44214,7 +45518,7 @@
       }
     };
   }), {} ],
-  260: [ (function(require, module, exports) {
+  264: [ (function(require, module, exports) {
     _ccsg.ParticleSystem.WebGLRenderCmd = function(renderable) {
       this._rootCtor(renderable);
       this._needDraw = true;
@@ -44446,7 +45750,7 @@
       selParticle.isChangeColor = true;
     };
   }), {} ],
-  261: [ (function(require, module, exports) {
+  265: [ (function(require, module, exports) {
     var tiffReader = {
       _littleEndian: false,
       _tiffData: null,
@@ -44855,7 +46159,7 @@
     };
     module.exports = tiffReader;
   }), {} ],
-  262: [ (function(require, module, exports) {
+  266: [ (function(require, module, exports) {
     cc.RenderTexture = _ccsg.Node.extend({
       sprite: null,
       clearFlags: 0,
@@ -44992,7 +46296,7 @@
       return new cc.RenderTexture(width, height, format, depthStencilFormat);
     };
   }), {} ],
-  263: [ (function(require, module, exports) {
+  267: [ (function(require, module, exports) {
     cc.RenderTexture.CanvasRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = false;
@@ -45051,7 +46355,7 @@
       cc.log("clearDepth isn't supported on Cocos2d-Html5");
     };
   }), {} ],
-  264: [ (function(require, module, exports) {
+  268: [ (function(require, module, exports) {
     var misc = require("../core/utils/misc");
     cc.RenderTexture.WebGLRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
@@ -45257,9 +46561,9 @@
       node.end();
     };
   }), {
-    "../core/utils/misc": 222
+    "../core/utils/misc": 225
   } ],
-  265: [ (function(require, module, exports) {
+  269: [ (function(require, module, exports) {
     var macro = cc.macro;
     var math = cc.math;
     cc.GLProgram = cc._Class.extend({
@@ -45647,7 +46951,7 @@
       return cc.GLProgram._highpSupported;
     };
   }), {} ],
-  266: [ (function(require, module, exports) {
+  270: [ (function(require, module, exports) {
     var _currentProjectionMatrix = -1;
     var macro = cc.macro;
     var ENABLE_GL_STATE_CACHE = macro.ENABLE_GL_STATE_CACHE;
@@ -45742,7 +47046,7 @@
       ENABLE_GL_STATE_CACHE;
     };
   }), {} ],
-  267: [ (function(require, module, exports) {
+  271: [ (function(require, module, exports) {
     var shaders = cc.PresetShaders;
     var macro = cc.macro;
     cc.shaderCache = {
@@ -45876,7 +47180,7 @@
       }
     };
   }), {} ],
-  268: [ (function(require, module, exports) {
+  272: [ (function(require, module, exports) {
     cc.PresetShaders = {
       POSITION_UCOLOR_FRAG: "precision lowp float;\nvarying vec4 v_fragmentColor;\nvoid main()\n{\ngl_FragColor = v_fragmentColor;\n}",
       POSITION_UCOLOR_VERT: "attribute vec4 a_position;\nuniform vec4 u_color;\nuniform float u_pointSize;\nvarying lowp vec4 v_fragmentColor;\nvoid main(void)\n{\ngl_Position = (CC_PMatrix * CC_MVMatrix) * a_position;\ngl_PointSize = u_pointSize;\nv_fragmentColor = u_color;\n}",
@@ -45898,18 +47202,18 @@
       EX_SWITCHMASK_FRAG: "precision lowp float;\nvarying vec4 v_fragmentColor;\nvarying vec2 v_texCoord;\nuniform sampler2D u_texture;\nuniform sampler2D u_mask;\nvoid main()\n{\nvec4 texColorc=texture2D(u_texture, v_texCoord);\nvec4 maskColor=texture2D(u_mask, v_texCoord);\nvec4 finalColor=vec4(texColor.r, texColor.g, texColor.b, maskColor.a*texColor.a);\ngl_FragColor=v_fragmentColor*finalColor;\n}"
     };
   }), {} ],
-  269: [ (function(require, module, exports) {
+  273: [ (function(require, module, exports) {
     require("./CCShaders");
     require("./CCShaderCache");
     require("./CCGLProgram");
     require("./CCGLStateCache");
   }), {
-    "./CCGLProgram": 265,
-    "./CCGLStateCache": 266,
-    "./CCShaderCache": 267,
-    "./CCShaders": 268
+    "./CCGLProgram": 269,
+    "./CCGLStateCache": 270,
+    "./CCShaderCache": 271,
+    "./CCShaders": 272
   } ],
-  270: [ (function(require, module, exports) {
+  274: [ (function(require, module, exports) {
     var __t = function(v) {
       return {
         u: v.x,
@@ -46627,10 +47931,10 @@
       }
     }));
   }), {
-    "./CCDrawNodeCanvasRenderCmd": 271,
-    "./CCDrawNodeWebGLRenderCmd": 272
+    "./CCDrawNodeCanvasRenderCmd": 275,
+    "./CCDrawNodeWebGLRenderCmd": 276
   } ],
-  271: [ (function(require, module, exports) {
+  275: [ (function(require, module, exports) {
     cc.DrawNode.CanvasRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = true;
@@ -46706,7 +48010,7 @@
       locIsStroke && ctx.stroke();
     };
   }), {} ],
-  272: [ (function(require, module, exports) {
+  276: [ (function(require, module, exports) {
     cc.DrawNode.WebGLRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = true;
@@ -46732,7 +48036,2592 @@
       }
     };
   }), {} ],
-  273: [ (function(require, module, exports) {
+  277: [ (function(require, module, exports) {
+    _ccsg.TMXLayer = _ccsg.Node.extend({
+      tiles: null,
+      tileset: null,
+      layerOrientation: null,
+      properties: null,
+      layerName: "",
+      _texture: null,
+      _textures: null,
+      _texGrids: null,
+      _spriteTiles: null,
+      _layerSize: null,
+      _mapTileSize: null,
+      _opacity: 255,
+      _minGID: null,
+      _maxGID: null,
+      _vertexZvalue: null,
+      _useAutomaticVertexZ: null,
+      _reusedTile: null,
+      _contentScaleFactor: null,
+      _staggerAxis: null,
+      _staggerIndex: null,
+      _hexSideLength: 0,
+      _className: "TMXLayer",
+      ctor: function(tilesetInfo, layerInfo, mapInfo) {
+        cc.SpriteBatchNode.prototype.ctor.call(this);
+        this._layerSize = cc.size(0, 0);
+        this._mapTileSize = cc.size(0, 0);
+        this._spriteTiles = {};
+        this._staggerAxis = cc.TiledMap.StaggerAxis.STAGGERAXIS_Y;
+        this._staggerIndex = cc.TiledMap.StaggerIndex.STAGGERINDEX_EVEN;
+        void 0 !== mapInfo && this.initWithTilesetInfo(tilesetInfo, layerInfo, mapInfo);
+      },
+      _createRenderCmd: function() {
+        return cc._renderType === cc.game.RENDER_TYPE_CANVAS ? new _ccsg.TMXLayer.CanvasRenderCmd(this) : new _ccsg.TMXLayer.WebGLRenderCmd(this);
+      },
+      _fillTextureGrids: function(tileset, texId) {
+        var tex = this._textures[texId];
+        if (!tex.isLoaded()) {
+          tex.once("load", (function() {
+            this._fillTextureGrids(tileset, texId);
+          }), this);
+          return;
+        }
+        if (!tileset.imageSize.width || !tileset.imageSize.height) {
+          tileset.imageSize.width = tex.width;
+          tileset.imageSize.height = tex.height;
+        }
+        var tw = tileset._tileSize.width, th = tileset._tileSize.height, imageW = tex.width, imageH = tex.height, spacing = tileset.spacing, margin = tileset.margin, cols = Math.floor((imageW - 2 * margin + spacing) / (tw + spacing)), rows = Math.floor((imageH - 2 * margin + spacing) / (th + spacing)), count = rows * cols, gid = tileset.firstGid, maxGid = tileset.firstGid + count, grids = this._texGrids, grid = null, override = !!grids[gid], texelCorrect = cc.macro.FIX_ARTIFACTS_BY_STRECHING_TEXEL_TMX ? .5 : 0;
+        for (;gid < maxGid; ++gid) {
+          override && !grids[gid] && (override = false);
+          if (!override && grids[gid]) break;
+          grid = {
+            texId: texId,
+            x: 0,
+            y: 0,
+            width: tw,
+            height: th,
+            t: 0,
+            l: 0,
+            r: 0,
+            b: 0
+          };
+          tileset.rectForGID(gid, grid);
+          grid.x += texelCorrect;
+          grid.y += texelCorrect;
+          grid.width -= 2 * texelCorrect;
+          grid.height -= 2 * texelCorrect;
+          grid.t = grid.y / imageH;
+          grid.l = grid.x / imageW;
+          grid.r = (grid.x + grid.width) / imageW;
+          grid.b = (grid.y + grid.height) / imageH;
+          grids[gid] = grid;
+        }
+      },
+      initWithTilesetInfo: function(tilesetInfo, layerInfo, mapInfo) {
+        var size = layerInfo._layerSize;
+        this.layerName = layerInfo.name;
+        this.tiles = layerInfo._tiles;
+        this.properties = layerInfo.properties;
+        this._layerSize = size;
+        this._minGID = layerInfo._minGID;
+        this._maxGID = layerInfo._maxGID;
+        this._opacity = layerInfo._opacity;
+        this._staggerAxis = mapInfo.getStaggerAxis();
+        this._staggerIndex = mapInfo.getStaggerIndex();
+        this._hexSideLength = mapInfo.getHexSideLength();
+        this.tileset = tilesetInfo;
+        this.layerOrientation = mapInfo.orientation;
+        this._mapTileSize = mapInfo.getTileSize();
+        var tilesets = mapInfo._tilesets;
+        if (tilesets) {
+          var i, len = tilesets.length, tileset, tex;
+          this._textures = new Array(len);
+          this._texGrids = [];
+          for (i = 0; i < len; ++i) {
+            tileset = tilesets[i];
+            tex = cc.textureCache.addImage(tileset.sourceImage, (function(tex) {
+              tex.setAliasTexParameters();
+            }));
+            this._textures[i] = tex;
+            this._fillTextureGrids(tileset, i);
+            tileset === tilesetInfo && (this._texture = tex);
+          }
+        }
+        var offset = this._calculateLayerOffset(layerInfo.offset);
+        this.setPosition(offset);
+        this._parseInternalProperties();
+        if (this.layerOrientation === cc.TiledMap.Orientation.HEX) {
+          var width = 0, height = 0;
+          if (this._staggerAxis === cc.TiledMap.StaggerAxis.STAGGERAXIS_X) {
+            height = mapInfo._tileSize.height * (this._layerSize.height + .5);
+            width = (mapInfo._tileSize.width + this._hexSideLength) * Math.floor(this._layerSize.width / 2) + mapInfo._tileSize.width * (this._layerSize.width % 2);
+          } else {
+            width = mapInfo._tileSize.width * (this._layerSize.width + .5);
+            height = (mapInfo._tileSize.height + this._hexSideLength) * Math.floor(this._layerSize.height / 2) + mapInfo._tileSize.height * (this._layerSize.height % 2);
+          }
+          this.setContentSize(width, height);
+        } else this.setContentSize(this._layerSize.width * this._mapTileSize.width, this._layerSize.height * this._mapTileSize.height);
+        this._useAutomaticVertexZ = false;
+        this._vertexZvalue = 0;
+        return true;
+      },
+      visit: function(parent) {
+        var cmd = this._renderCmd, parentCmd = parent ? parent._renderCmd : null;
+        if (!this._visible) {
+          cmd._propagateFlagsDown(parentCmd);
+          return;
+        }
+        var renderer = cc.renderer;
+        cmd.visit(parentCmd);
+        var i, children = this._children, len = children.length, child, isCanvas = cc._renderType === cc.game.RENDER_TYPE_CANVAS, spTiles = this._spriteTiles;
+        if (len > 0) {
+          this._reorderChildDirty && this.sortAllChildren();
+          for (i = 0; i < len; i++) {
+            child = children[i];
+            if (!(child._localZOrder < 0)) break;
+            child.visit(this);
+          }
+          renderer.pushRenderCommand(cmd);
+          for (;i < len; i++) {
+            child = children[i];
+            if (isCanvas && 0 === child._localZOrder && spTiles[child.tag]) {
+              if (isNaN(child._customZ)) {
+                child._vertexZ = renderer.assignedZ;
+                renderer.assignedZ += renderer.assignedZStep;
+              }
+              child._renderCmd.updateStatus();
+              continue;
+            }
+            child.visit(this);
+          }
+        } else renderer.pushRenderCommand(cmd);
+        cc._renderType === cc.game.RENDER_TYPE_WEBGL && renderer.pushRenderCommand(this._renderCmd._disableDepthTestCmd);
+        cmd._dirtyFlag = 0;
+      },
+      getLayerSize: function() {
+        return cc.size(this._layerSize.width, this._layerSize.height);
+      },
+      setLayerSize: function(Var) {
+        this._layerSize.width = Var.width;
+        this._layerSize.height = Var.height;
+      },
+      _getLayerWidth: function() {
+        return this._layerSize.width;
+      },
+      _setLayerWidth: function(width) {
+        this._layerSize.width = width;
+      },
+      _getLayerHeight: function() {
+        return this._layerSize.height;
+      },
+      _setLayerHeight: function(height) {
+        this._layerSize.height = height;
+      },
+      getMapTileSize: function() {
+        return cc.size(this._mapTileSize.width, this._mapTileSize.height);
+      },
+      setMapTileSize: function(Var) {
+        this._mapTileSize.width = Var.width;
+        this._mapTileSize.height = Var.height;
+      },
+      _getTileWidth: function() {
+        return this._mapTileSize.width;
+      },
+      _setTileWidth: function(width) {
+        this._mapTileSize.width = width;
+      },
+      _getTileHeight: function() {
+        return this._mapTileSize.height;
+      },
+      _setTileHeight: function(height) {
+        this._mapTileSize.height = height;
+      },
+      getTiles: function() {
+        return this.tiles;
+      },
+      setTiles: function(Var) {
+        this.tiles = Var;
+      },
+      getTileSet: function() {
+        return this.tileset;
+      },
+      setTileSet: function(Var) {
+        this.tileset = Var;
+      },
+      getLayerOrientation: function() {
+        return this.layerOrientation;
+      },
+      setLayerOrientation: function(Var) {
+        this.layerOrientation = Var;
+      },
+      getProperties: function() {
+        return this.properties;
+      },
+      setProperties: function(Var) {
+        this.properties = Var;
+      },
+      getProperty: function(propertyName) {
+        return this.properties[propertyName];
+      },
+      getLayerName: function() {
+        return this.layerName;
+      },
+      setLayerName: function(layerName) {
+        this.layerName = layerName;
+      },
+      releaseMap: function() {
+        this._spriteTiles = {};
+      },
+      getTileAt: function(pos, y) {
+        if (void 0 === pos) throw new Error("_ccsg.TMXLayer.getTileAt(): pos should be non-null");
+        var x = pos;
+        if (void 0 === y) {
+          x = pos.x;
+          y = pos.y;
+        }
+        if (x >= this._layerSize.width || y >= this._layerSize.height || x < 0 || y < 0) throw new Error("_ccsg.TMXLayer.getTileAt(): invalid position");
+        if (!this.tiles) {
+          cc.logID(7204);
+          return null;
+        }
+        var tile = null, gid = this.getTileGIDAt(x, y);
+        if (0 === gid) return tile;
+        var z = Math.floor(x) + Math.floor(y) * this._layerSize.width;
+        tile = this._spriteTiles[z];
+        if (!tile) {
+          var rect = this._texGrids[gid];
+          var tex = this._textures[rect.texId];
+          tile = new _ccsg.Sprite(tex, rect);
+          tile.setPosition(this.getPositionAt(x, y));
+          var vertexZ = this._vertexZForPos(x, y);
+          tile.setVertexZ(vertexZ);
+          tile.setAnchorPoint(0, 0);
+          tile.setOpacity(this._opacity);
+          this.addChild(tile, vertexZ, z);
+        }
+        return tile;
+      },
+      getTileGIDAt: function(pos, y) {
+        if (void 0 === pos) throw new Error("_ccsg.TMXLayer.getTileGIDAt(): pos should be non-null");
+        var x = pos;
+        if (void 0 === y) {
+          x = pos.x;
+          y = pos.y;
+        }
+        if (x >= this._layerSize.width || y >= this._layerSize.height || x < 0 || y < 0) throw new Error("_ccsg.TMXLayer.getTileGIDAt(): invalid position");
+        if (!this.tiles) {
+          cc.logID(7205);
+          return null;
+        }
+        var idx = Math.floor(x) + Math.floor(y) * this._layerSize.width;
+        var tile = this.tiles[idx];
+        return (tile & cc.TiledMap.TileFlag.FLIPPED_MASK) >>> 0;
+      },
+      setTileGID: function(gid, posOrX, flagsOrY, flags) {
+        if (void 0 === posOrX) throw new Error("_ccsg.TMXLayer.setTileGID(): pos should be non-null");
+        var pos;
+        if (void 0 === flags && posOrX instanceof cc.Vec2) {
+          pos = posOrX;
+          flags = flagsOrY;
+        } else pos = cc.p(posOrX, flagsOrY);
+        pos.x = Math.floor(pos.x);
+        pos.y = Math.floor(pos.y);
+        if (pos.x >= this._layerSize.width || pos.y >= this._layerSize.height || pos.x < 0 || pos.y < 0) throw new Error("_ccsg.TMXLayer.setTileGID(): invalid position");
+        if (!this.tiles) {
+          cc.logID(7206);
+          return;
+        }
+        if (0 !== gid && gid < this.tileset.firstGid) {
+          cc.logID(7207, gid);
+          return;
+        }
+        flags = flags || 0;
+        var currentFlags = this.getTileFlagsAt(pos);
+        var currentGID = this.getTileGIDAt(pos);
+        if (currentGID !== gid || currentFlags !== flags) {
+          var gidAndFlags = (gid | flags) >>> 0;
+          if (0 === gid) this.removeTileAt(pos); else if (0 === currentGID) this._updateTileForGID(gidAndFlags, pos); else {
+            var z = pos.x + pos.y * this._layerSize.width;
+            var sprite = this.getChildByTag(z);
+            if (sprite) {
+              var rect = this._texGrids[gid];
+              var tex = this._textures[rect.texId];
+              sprite.setTexture(tex);
+              sprite.setTextureRect(rect, false);
+              null != flags && this._setupTileSprite(sprite, pos, gidAndFlags);
+              this.tiles[z] = gidAndFlags;
+            } else this._updateTileForGID(gidAndFlags, pos);
+          }
+        }
+      },
+      addChild: function(child, localZOrder, tag) {
+        _ccsg.Node.prototype.addChild.call(this, child, localZOrder, tag);
+        if (void 0 !== tag) {
+          this._spriteTiles[tag] = child;
+          child._vertexZ = this._vertexZ + cc.renderer.assignedZStep * tag / this.tiles.length;
+        }
+      },
+      removeChild: function(child, cleanup) {
+        this._spriteTiles[child.tag] && (this._spriteTiles[child.tag] = null);
+        _ccsg.Node.prototype.removeChild.call(this, child, cleanup);
+      },
+      getTileFlagsAt: function(pos, y) {
+        if (!pos) throw new Error("_ccsg.TMXLayer.getTileFlagsAt(): pos should be non-null");
+        void 0 !== y && (pos = cc.p(pos, y));
+        if (pos.x >= this._layerSize.width || pos.y >= this._layerSize.height || pos.x < 0 || pos.y < 0) throw new Error("_ccsg.TMXLayer.getTileFlagsAt(): invalid position");
+        if (!this.tiles) {
+          cc.logID(7208);
+          return null;
+        }
+        var idx = Math.floor(pos.x) + Math.floor(pos.y) * this._layerSize.width;
+        var tile = this.tiles[idx];
+        return (tile & cc.TiledMap.TileFlag.FLIPPED_ALL) >>> 0;
+      },
+      removeTileAt: function(pos, y) {
+        if (!pos) throw new Error("_ccsg.TMXLayer.removeTileAt(): pos should be non-null");
+        void 0 !== y && (pos = cc.p(pos, y));
+        if (pos.x >= this._layerSize.width || pos.y >= this._layerSize.height || pos.x < 0 || pos.y < 0) throw new Error("_ccsg.TMXLayer.removeTileAt(): invalid position");
+        if (!this.tiles) {
+          cc.logID(7209);
+          return;
+        }
+        var gid = this.getTileGIDAt(pos);
+        if (0 !== gid) {
+          var z = Math.floor(pos.x) + Math.floor(pos.y) * this._layerSize.width;
+          this.tiles[z] = 0;
+          var sprite = this._spriteTiles[z];
+          sprite && this.removeChild(sprite, true);
+        }
+      },
+      getPositionAt: function(pos, y) {
+        void 0 !== y && (pos = cc.p(pos, y));
+        pos.x = Math.floor(pos.x);
+        pos.y = Math.floor(pos.y);
+        var ret = cc.p(0, 0);
+        switch (this.layerOrientation) {
+         case cc.TiledMap.Orientation.ORTHO:
+          ret = this._positionForOrthoAt(pos);
+          break;
+
+         case cc.TiledMap.Orientation.ISO:
+          ret = this._positionForIsoAt(pos);
+          break;
+
+         case cc.TiledMap.Orientation.HEX:
+          ret = this._positionForHexAt(pos);
+        }
+        return ret;
+      },
+      _positionForIsoAt: function(pos) {
+        return cc.p(this._mapTileSize.width / 2 * (this._layerSize.width + pos.x - pos.y - 1), this._mapTileSize.height / 2 * (2 * this._layerSize.height - pos.x - pos.y - 2));
+      },
+      _positionForOrthoAt: function(pos) {
+        return cc.p(pos.x * this._mapTileSize.width, (this._layerSize.height - pos.y - 1) * this._mapTileSize.height);
+      },
+      _positionForHexAt: function(pos) {
+        var xy = cc.p(0, 0);
+        var offset = this.tileset.tileOffset;
+        var odd_even = this._staggerIndex === cc.TiledMap.StaggerIndex.STAGGERINDEX_ODD ? 1 : -1;
+        switch (this._staggerAxis) {
+         case cc.TiledMap.StaggerAxis.STAGGERAXIS_Y:
+          var diffX = 0;
+          pos.y % 2 === 1 && (diffX = this._mapTileSize.width / 2 * odd_even);
+          xy = cc.p(pos.x * this._mapTileSize.width + diffX + offset.x, (this._layerSize.height - pos.y - 1) * (this._mapTileSize.height - (this._mapTileSize.height - this._hexSideLength) / 2) - offset.y);
+          break;
+
+         case cc.TiledMap.StaggerAxis.STAGGERAXIS_X:
+          var diffY = 0;
+          pos.x % 2 === 1 && (diffY = this._mapTileSize.height / 2 * -odd_even);
+          xy = cc.p(pos.x * (this._mapTileSize.width - (this._mapTileSize.width - this._hexSideLength) / 2) + offset.x, (this._layerSize.height - pos.y - 1) * this._mapTileSize.height + diffY - offset.y);
+        }
+        return xy;
+      },
+      _calculateLayerOffset: function(pos) {
+        var ret = cc.p(0, 0);
+        switch (this.layerOrientation) {
+         case cc.TiledMap.Orientation.ORTHO:
+          ret = cc.p(pos.x * this._mapTileSize.width, -pos.y * this._mapTileSize.height);
+          break;
+
+         case cc.TiledMap.Orientation.ISO:
+          ret = cc.p(this._mapTileSize.width / 2 * (pos.x - pos.y), this._mapTileSize.height / 2 * (-pos.x - pos.y));
+          break;
+
+         case cc.TiledMap.Orientation.HEX:
+          if (this._staggerAxis === cc.TiledMap.StaggerAxis.STAGGERAXIS_Y) {
+            var diffX = this._staggerIndex === cc.TiledMap.StaggerIndex.STAGGERINDEX_EVEN ? this._mapTileSize.width / 2 : 0;
+            ret = cc.p(pos.x * this._mapTileSize.width + diffX, -pos.y * (this._mapTileSize.height - (this._mapTileSize.width - this._hexSideLength) / 2));
+          } else if (this._staggerAxis === cc.TiledMap.StaggerAxis.STAGGERAXIS_X) {
+            var diffY = this._staggerIndex === cc.TiledMap.StaggerIndex.STAGGERINDEX_ODD ? this._mapTileSize.height / 2 : 0;
+            ret = cc.p(pos.x * (this._mapTileSize.width - (this._mapTileSize.width - this._hexSideLength) / 2), -pos.y * this._mapTileSize.height + diffY);
+          }
+        }
+        return ret;
+      },
+      _updateTileForGID: function(gid, pos) {
+        if (!this._texGrids[gid]) return;
+        var idx = 0 | pos.x + pos.y * this._layerSize.width;
+        idx < this.tiles.length && (this.tiles[idx] = gid);
+      },
+      _parseInternalProperties: function() {
+        var vertexz = this.getProperty("cc_vertexz");
+        if (vertexz) if ("automatic" === vertexz) {
+          this._useAutomaticVertexZ = true;
+          var alphaFuncVal = this.getProperty("cc_alpha_func");
+          var alphaFuncValue = 0;
+          alphaFuncVal && (alphaFuncValue = parseFloat(alphaFuncVal));
+          if (cc._renderType === cc.game.RENDER_TYPE_WEBGL) {
+            this.shaderProgram = cc.shaderCache.programForKey(cc.macro.SHADER_SPRITE_POSITION_TEXTURECOLORALPHATEST);
+            this.shaderProgram.use();
+            this.shaderProgram.setUniformLocationWith1f(cc.UNIFORM_ALPHA_TEST_VALUE_S, alphaFuncValue);
+          }
+        } else this._vertexZvalue = parseInt(vertexz, 10);
+      },
+      _setupTileSprite: function(sprite, pos, gid) {
+        var posInPixel = this.getPositionAt(pos);
+        sprite.setPosition(posInPixel);
+        sprite.setVertexZ(this._vertexZForPos(pos));
+        sprite.setAnchorPoint(0, 0);
+        sprite.setOpacity(this._opacity);
+        sprite.setFlippedX(false);
+        sprite.setFlippedY(false);
+        sprite.setRotation(0);
+        if ((gid & cc.TiledMap.TileFlag.DIAGONAL) >>> 0) {
+          sprite.setAnchorPoint(.5, .5);
+          sprite.setPosition(posInPixel.x + sprite.width / 2, posInPixel.y + sprite.height / 2);
+          var flag = (gid & (cc.TiledMap.TileFlag.HORIZONTAL | cc.TiledMap.TileFlag.VERTICAL) >>> 0) >>> 0;
+          if (flag === cc.TiledMap.TileFlag.HORIZONTAL) sprite.setRotation(90); else if (flag === cc.TiledMap.TileFlag.VERTICAL) sprite.setRotation(270); else if (flag === (cc.TiledMap.TileFlag.VERTICAL | cc.TiledMap.TileFlag.HORIZONTAL) >>> 0) {
+            sprite.setRotation(90);
+            sprite.setFlippedX(true);
+          } else {
+            sprite.setRotation(270);
+            sprite.setFlippedX(true);
+          }
+        } else {
+          (gid & cc.TiledMap.TileFlag.HORIZONTAL) >>> 0 && sprite.setFlippedX(true);
+          (gid & cc.TiledMap.TileFlag.VERTICAL) >>> 0 && sprite.setFlippedY(true);
+        }
+      },
+      _vertexZForPos: function(x, y) {
+        if (void 0 === y) {
+          y = x.y;
+          x = x.x;
+        }
+        var ret = 0;
+        var maxVal = 0;
+        if (this._useAutomaticVertexZ) switch (this.layerOrientation) {
+         case cc.TiledMap.Orientation.ISO:
+          maxVal = this._layerSize.width + this._layerSize.height;
+          ret = -(maxVal - (x + y));
+          break;
+
+         case cc.TiledMap.Orientation.ORTHO:
+          ret = -(this._layerSize.height - y);
+          break;
+
+         case cc.TiledMap.Orientation.HEX:
+          cc.logID(7210);
+          break;
+
+         default:
+          cc.logID(7211);
+        } else ret = this._vertexZvalue;
+        return ret;
+      }
+    });
+  }), {} ],
+  278: [ (function(require, module, exports) {
+    require("../shape-nodes/CCDrawNode");
+    _ccsg.TMXObject = cc.Class({
+      properties: {
+        sgNode: null,
+        offset: cc.p(0, 0),
+        gid: 0,
+        name: "",
+        type: null,
+        id: 0,
+        objectVisible: true,
+        objectSize: cc.size(0, 0),
+        objectRotation: 0,
+        _properties: null,
+        _groupSize: cc.size(0, 0)
+      },
+      initWithInfo: function(objInfo, mapInfo, groupSize, color) {
+        this.setProperties(objInfo);
+        this.setObjectName(objInfo.name);
+        this.id = objInfo.id;
+        this.gid = objInfo.gid;
+        this.type = objInfo.type;
+        this.offset = cc.p(objInfo.x, objInfo.y);
+        this.objectSize = cc.size(objInfo.width, objInfo.height);
+        this.objectVisible = objInfo.visible;
+        this.objectRotation = objInfo.rotation;
+        this._groupSize = groupSize;
+        this.type === cc.TiledMap.TMXObjectType.IMAGE ? this.sgNode = new _ccsg.TMXObjectImage(this, mapInfo) : this.sgNode = new _ccsg.TMXObjectShape(this, mapInfo, color);
+      },
+      getObjectName: function() {
+        return this.name;
+      },
+      getProperty: function(propName) {
+        return this._properties[propName];
+      },
+      getProperties: function() {
+        return this._properties;
+      },
+      setObjectName: function(name) {
+        this.name = name;
+      },
+      setProperties: function(props) {
+        this._properties = props;
+      }
+    });
+    _ccsg.TMXObjectImage = _ccsg.Sprite.extend({
+      _container: null,
+      ctor: function(container, mapInfo) {
+        _ccsg.Sprite.prototype.ctor.call(this);
+        this._container = container;
+        this.initWithMapInfo(mapInfo);
+      },
+      initWithMapInfo: function(mapInfo) {
+        if (!this._container.gid) return false;
+        var useTileset;
+        var tilesets = mapInfo.getTilesets();
+        for (var i = tilesets.length - 1; i >= 0; i--) {
+          var tileset = tilesets[i];
+          if ((this._container.gid & cc.TiledMap.TileFlag.FLIPPED_MASK) >>> 0 >= tileset.firstGid) {
+            useTileset = tileset;
+            break;
+          }
+        }
+        if (!useTileset) return false;
+        this.setVisible(this._container.objectVisible);
+        var texture = cc.textureCache.addImage(cc.path._normalize(tileset.sourceImage));
+        this._initWithTileset(texture, useTileset);
+        this._initPosWithMapInfo(mapInfo);
+        this.setRotation(this._container.objectRotation);
+        (this._container.gid & cc.TiledMap.TileFlag.HORIZONTAL) >>> 0 && this.setFlippedX(true);
+        (this._container.gid & cc.TiledMap.TileFlag.VERTICAL) >>> 0 && this.setFlippedY(true);
+        return true;
+      },
+      _initWithTileset: function(texture, tileset) {
+        if (!texture.isLoaded()) {
+          texture.once("load", (function() {
+            this._initWithTileset(texture, tileset);
+          }), this);
+          return;
+        }
+        tileset.imageSize.width = texture.width;
+        tileset.imageSize.height = texture.height;
+        var rect = tileset.rectForGID(this._container.gid);
+        this.initWithTexture(texture, rect);
+        this.setScaleX(this._container.objectSize.width / rect.size.width);
+        this.setScaleY(this._container.objectSize.height / rect.size.height);
+      },
+      _initPosWithMapInfo: function(mapInfo) {
+        var mapOri = mapInfo.getOrientation();
+        switch (mapOri) {
+         case cc.TiledMap.Orientation.ORTHO:
+         case cc.TiledMap.Orientation.HEX:
+          this.setAnchorPoint(cc.p(0, 0));
+          this.setPosition(this._container.offset.x, this._container._groupSize.height - this._container.offset.y);
+          break;
+
+         case cc.TiledMap.Orientation.ISO:
+          this.setAnchorPoint(cc.p(.5, 0));
+          var posIdx = cc.p(this._container.offset.x / mapInfo._tileSize.height, this._container.offset.y / mapInfo._tileSize.height);
+          var pos = cc.p(mapInfo._tileSize.width / 2 * (mapInfo._mapSize.width + posIdx.x - posIdx.y), mapInfo._tileSize.height / 2 * (2 * mapInfo._mapSize.height - posIdx.x - posIdx.y));
+          this.setPosition(pos);
+        }
+      }
+    });
+    _ccsg.TMXObjectShape = cc.DrawNode.extend({
+      _container: null,
+      _color: cc.Color.WHITE,
+      _mapOrientation: 0,
+      _mapInfo: null,
+      ctor: function(container, mapInfo, color) {
+        cc.DrawNode.prototype.ctor.call(this);
+        this.setLineWidth(1);
+        this._container = container;
+        this._color = color;
+        this._mapInfo = mapInfo;
+        this._mapOrientation = mapInfo.getOrientation();
+        this._initShape();
+      },
+      _initShape: function() {
+        var originPos;
+        if (cc.TiledMap.Orientation.ISO !== this._mapOrientation) {
+          var startPos = cc.p(0, this._container._groupSize.height);
+          originPos = cc.p(startPos.x + this._container.offset.x, startPos.y - this._container.offset.y);
+        } else originPos = this._getPosByOffset(cc.p(0, 0));
+        this.setPosition(originPos);
+        this.setRotation(this._container.objectRotation);
+        switch (this._container.type) {
+         case cc.TiledMap.TMXObjectType.RECT:
+          this._drawRect();
+          break;
+
+         case cc.TiledMap.TMXObjectType.ELLIPSE:
+          this._drawEllipse();
+          break;
+
+         case cc.TiledMap.TMXObjectType.POLYGON:
+          this._drawPoly(originPos, true);
+          break;
+
+         case cc.TiledMap.TMXObjectType.POLYLINE:
+          this._drawPoly(originPos, false);
+        }
+        this.setVisible(this._container.objectVisible);
+      },
+      _getPosByOffset: function(offset) {
+        var mapSize = this._mapInfo.getMapSize();
+        var tileSize = this._mapInfo.getTileSize();
+        var posIdx = cc.p((this._container.offset.x + offset.x) / tileSize.width * 2, (this._container.offset.y + offset.y) / tileSize.height);
+        return cc.p(tileSize.width / 2 * (mapSize.width + posIdx.x - posIdx.y), tileSize.height / 2 * (2 * mapSize.height - posIdx.x - posIdx.y));
+      },
+      _drawRect: function() {
+        if (cc.TiledMap.Orientation.ISO !== this._mapOrientation) {
+          var objSize = this._container.objectSize;
+          if (objSize.equals(cc.Size.ZERO)) {
+            objSize = cc.size(20, 20);
+            this.setAnchorPoint(cc.p(.5, .5));
+          } else this.setAnchorPoint(cc.p(0, 1));
+          var bl = cc.p(0, 0);
+          var tr = cc.p(objSize.width, objSize.height);
+          this.drawRect(bl, tr, null, this.getLineWidth(), this._color);
+          this.setContentSize(objSize);
+        } else {
+          if (this._container.objectSize.equals(cc.Size.ZERO)) return;
+          var pos1 = this._getPosByOffset(cc.p(0, 0));
+          var pos2 = this._getPosByOffset(cc.p(this._container.objectSize.width, 0));
+          var pos3 = this._getPosByOffset(cc.p(this._container.objectSize.width, this._container.objectSize.height));
+          var pos4 = this._getPosByOffset(cc.p(0, this._container.objectSize.height));
+          var width = pos2.x - pos4.x, height = pos1.y - pos3.y;
+          this.setContentSize(cc.size(width, height));
+          this.setAnchorPoint(cc.p((pos1.x - pos4.x) / width, 1));
+          var origin = cc.p(pos4.x, pos3.y);
+          pos1.subSelf(origin);
+          pos2.subSelf(origin);
+          pos3.subSelf(origin);
+          pos4.subSelf(origin);
+          if (this._container.objectSize.width > 0) {
+            this.drawSegment(pos1, pos2, this.getLineWidth(), this._color);
+            this.drawSegment(pos3, pos4, this.getLineWidth(), this._color);
+          }
+          if (this._container.objectSize.height > 0) {
+            this.drawSegment(pos1, pos4, this.getLineWidth(), this._color);
+            this.drawSegment(pos3, pos2, this.getLineWidth(), this._color);
+          }
+        }
+      },
+      _drawEllipse: function() {
+        var scaleX = 1, scaleY = 1, radius = 0;
+        var center = cc.p(0, 0);
+        var ellipseNode = null;
+        if (cc.TiledMap.Orientation.ISO !== this._mapOrientation) {
+          var objSize = this._container.objectSize;
+          if (objSize.equals(cc.Size.ZERO)) {
+            objSize = cc.size(20, 20);
+            this.setAnchorPoint(cc.p(.5, .5));
+          } else this.setAnchorPoint(cc.p(0, 1));
+          center = cc.p(objSize.width / 2, objSize.height / 2);
+          if (objSize.width > objSize.height) {
+            scaleX = objSize.width / objSize.height;
+            radius = objSize.height / 2;
+          } else {
+            scaleY = objSize.height / objSize.width;
+            radius = objSize.width / 2;
+          }
+          ellipseNode = this;
+          this.setContentSize(objSize);
+        } else {
+          if (this._container.objectSize.equals(cc.Size.ZERO)) return;
+          var pos1 = this._getPosByOffset(cc.p(0, 0));
+          var pos2 = this._getPosByOffset(cc.p(this._container.objectSize.width, 0));
+          var pos3 = this._getPosByOffset(cc.p(this._container.objectSize.width, this._container.objectSize.height));
+          var pos4 = this._getPosByOffset(cc.p(0, this._container.objectSize.height));
+          var width = pos2.x - pos4.x, height = pos1.y - pos3.y;
+          this.setContentSize(cc.size(width, height));
+          this.setAnchorPoint(cc.p((pos1.x - pos4.x) / width, 1));
+          var origin = cc.p(pos4.x, pos3.y);
+          pos1.subSelf(origin);
+          pos2.subSelf(origin);
+          pos3.subSelf(origin);
+          pos4.subSelf(origin);
+          if (this._container.objectSize.width > 0) {
+            this.drawSegment(pos1, pos2, this.getLineWidth(), this._color);
+            this.drawSegment(pos3, pos4, this.getLineWidth(), this._color);
+          }
+          if (this._container.objectSize.height > 0) {
+            this.drawSegment(pos1, pos4, this.getLineWidth(), this._color);
+            this.drawSegment(pos3, pos2, this.getLineWidth(), this._color);
+          }
+          center = this._getPosByOffset(cc.p(this._container.objectSize.width / 2, this._container.objectSize.height / 2));
+          center.subSelf(origin);
+          ellipseNode = new cc.DrawNode();
+          ellipseNode.setLineWidth(this.getLineWidth());
+          ellipseNode.setContentSize(cc.size(width, height));
+          ellipseNode.setAnchorPoint(cc.p(.5, .5));
+          ellipseNode.setPosition(center);
+          this.addChild(ellipseNode);
+          if (this._container.objectSize.width > this._container.objectSize.height) {
+            scaleX = this._container.objectSize.width / this._container.objectSize.height;
+            radius = this._container.objectSize.height / 2;
+          } else {
+            scaleY = this._container.objectSize.height / this._container.objectSize.width;
+            radius = this._container.objectSize.width / 2;
+          }
+          var tileSize = this._mapInfo.getTileSize();
+          var rotateDegree = Math.atan(tileSize.width / tileSize.height);
+          radius /= Math.sin(rotateDegree);
+          ellipseNode.setRotationX(cc.radiansToDegrees(rotateDegree));
+          ellipseNode.setRotationY(90 - cc.radiansToDegrees(rotateDegree));
+        }
+        ellipseNode.drawCircle(center, radius, 0, 50, false, this.getLineWidth(), this._color);
+        ellipseNode.setScaleX(scaleX);
+        ellipseNode.setScaleY(scaleY);
+      },
+      _drawPoly: function(originPos, isPolygon) {
+        var pointsData;
+        var objectInfo = this._container.getProperties();
+        pointsData = isPolygon ? objectInfo.points : objectInfo.polylinePoints;
+        var points = [];
+        var minX = 0, minY = 0, maxX = 0, maxY = 0;
+        for (var i = 0, n = pointsData.length; i < n; i++) {
+          var pointData = pointsData[i];
+          points.push(cc.p(pointData.x, pointData.y));
+          minX = Math.min(minX, pointData.x);
+          minY = Math.min(minY, pointData.y);
+          maxX = Math.max(maxX, pointData.x);
+          maxY = Math.max(maxY, pointData.y);
+        }
+        var width = 0, height = 0;
+        if (cc.TiledMap.Orientation.ISO !== this._mapOrientation) {
+          width = maxX - minX, height = maxY - minY;
+          this.setAnchorPoint(cc.p(-minX / width, maxY / height));
+          for (var j = 0; j < points.length; j++) points[j] = cc.p(points[j].x - minX, -points[j].y + maxY);
+        } else {
+          var bl = this._getPosByOffset(cc.p(minX, maxY));
+          var tr = this._getPosByOffset(cc.p(maxX, minY));
+          var origin = this._getPosByOffset(cc.p(0, 0));
+          width = tr.x - bl.x, height = tr.y - bl.y;
+          this.setAnchorPoint(cc.p((origin.x - bl.x) / width, (origin.y - bl.y) / height));
+          for (var idx = 0; idx < points.length; idx++) {
+            var tempPoint = this._getPosByOffset(points[idx]);
+            points[idx] = cc.p(tempPoint.x - bl.x, tempPoint.y - bl.y);
+          }
+        }
+        this.setContentSize(cc.size(width, height));
+        this.drawPoly(points, null, this.getLineWidth(), this._color, !isPolygon);
+      }
+    });
+  }), {
+    "../shape-nodes/CCDrawNode": 274
+  } ],
+  279: [ (function(require, module, exports) {
+    _ccsg.TMXObjectGroup = _ccsg.Node.extend({
+      properties: null,
+      groupName: "",
+      _positionOffset: null,
+      _mapInfo: null,
+      _objects: [],
+      ctor: function(groupInfo, mapInfo) {
+        _ccsg.Node.prototype.ctor.call(this);
+        this._initGroup(groupInfo, mapInfo);
+      },
+      _initGroup: function(groupInfo, mapInfo) {
+        this.groupName = groupInfo.name;
+        this._positionOffset = groupInfo.offset;
+        this._mapInfo = mapInfo;
+        this.properties = groupInfo.getProperties();
+        var mapSize = mapInfo._mapSize;
+        var tileSize = mapInfo._tileSize;
+        if (mapInfo.orientation === cc.TiledMap.Orientation.HEX) {
+          var width = 0, height = 0;
+          if (mapInfo.getStaggerAxis() === cc.TiledMap.StaggerAxis.STAGGERAXIS_X) {
+            height = tileSize.height * (mapSize.height + .5);
+            width = (tileSize.width + mapInfo.getHexSideLength()) * Math.floor(mapSize.width / 2) + tileSize.width * (mapSize.width % 2);
+          } else {
+            width = tileSize.width * (mapSize.width + .5);
+            height = (tileSize.height + mapInfo.getHexSideLength()) * Math.floor(mapSize.height / 2) + tileSize.height * (mapSize.height % 2);
+          }
+          this.setContentSize(width, height);
+        } else this.setContentSize(mapSize.width * tileSize.width, mapSize.height * tileSize.height);
+        this.setAnchorPoint(cc.p(0, 0));
+        this.setPosition(this._positionOffset.x, -this._positionOffset.y);
+        this.setVisible(groupInfo.visible);
+        var objects = [];
+        groupInfo._objects instanceof Array && (objects = groupInfo._objects);
+        this._objects = [];
+        for (var i = 0, n = objects.length; i < n; i++) {
+          var objInfo = objects[i];
+          var object = new _ccsg.TMXObject();
+          object.initWithInfo(objInfo, mapInfo, this.getContentSize(), groupInfo._color);
+          this._objects.push(object);
+          if (object.sgNode) {
+            object.sgNode.setOpacity(groupInfo._opacity);
+            this.addChild(object.sgNode, i, i);
+          }
+        }
+      },
+      getPositionOffset: function() {
+        return cc.p(this._positionOffset);
+      },
+      setPositionOffset: function(offset) {
+        this._positionOffset.x = offset.x;
+        this._positionOffset.y = offset.y;
+      },
+      getProperties: function() {
+        return this.properties;
+      },
+      setProperties: function(Var) {
+        this.properties = Var;
+      },
+      getGroupName: function() {
+        return this.groupName;
+      },
+      setGroupName: function(groupName) {
+        this.groupName = groupName;
+      },
+      propertyNamed: function(propertyName) {
+        return this.properties[propertyName];
+      },
+      objectNamed: function(objectName) {
+        return this.getObject(objectName);
+      },
+      getObject: function(objectName) {
+        for (var i = 0, len = this._objects.length; i < len; i++) {
+          var obj = this._objects[i];
+          if (obj && obj.getObjectName() === objectName) return obj;
+        }
+        return null;
+      },
+      getObjects: function() {
+        return this._objects;
+      }
+    });
+  }), {} ],
+  280: [ (function(require, module, exports) {
+    require("./CCSGTMXObject");
+    require("./CCTMXXMLParser");
+    _ccsg.TMXTiledMap = _ccsg.Node.extend({
+      properties: null,
+      mapOrientation: null,
+      _mapSize: null,
+      _tileSize: null,
+      _tileProperties: null,
+      _className: "TMXTiledMap",
+      ctor: function(tmxFile, resourcePath) {
+        _ccsg.Node.prototype.ctor.call(this);
+        this._mapSize = cc.size(0, 0);
+        this._tileSize = cc.size(0, 0);
+        void 0 !== resourcePath ? this.initWithXML(tmxFile, resourcePath) : void 0 !== tmxFile && this.initWithTMXFile(tmxFile);
+      },
+      getMapSize: function() {
+        return cc.size(this._mapSize.width, this._mapSize.height);
+      },
+      setMapSize: function(Var) {
+        this._mapSize.width = Var.width;
+        this._mapSize.height = Var.height;
+      },
+      _getMapWidth: function() {
+        return this._mapSize.width;
+      },
+      _setMapWidth: function(width) {
+        this._mapSize.width = width;
+      },
+      _getMapHeight: function() {
+        return this._mapSize.height;
+      },
+      _setMapHeight: function(height) {
+        this._mapSize.height = height;
+      },
+      getTileSize: function() {
+        return cc.size(this._tileSize.width, this._tileSize.height);
+      },
+      setTileSize: function(Var) {
+        this._tileSize.width = Var.width;
+        this._tileSize.height = Var.height;
+      },
+      _getTileWidth: function() {
+        return this._tileSize.width;
+      },
+      _setTileWidth: function(width) {
+        this._tileSize.width = width;
+      },
+      _getTileHeight: function() {
+        return this._tileSize.height;
+      },
+      _setTileHeight: function(height) {
+        this._tileSize.height = height;
+      },
+      getMapOrientation: function() {
+        return this.mapOrientation;
+      },
+      setMapOrientation: function(Var) {
+        this.mapOrientation = Var;
+      },
+      getObjectGroups: function() {
+        var retArr = [], locChildren = this._children;
+        for (var i = 0, len = locChildren.length; i < len; i++) {
+          var group = locChildren[i];
+          group && group instanceof _ccsg.TMXObjectGroup && retArr.push(group);
+        }
+        return retArr;
+      },
+      getProperties: function() {
+        return this.properties;
+      },
+      setProperties: function(Var) {
+        this.properties = Var;
+      },
+      initWithTMXFile: function(tmxFile) {
+        if (!tmxFile || 0 === tmxFile.length) return false;
+        this.width = 0;
+        this.height = 0;
+        var mapInfo = new cc.TMXMapInfo(tmxFile);
+        if (!mapInfo) return false;
+        var locTilesets = mapInfo.getTilesets();
+        locTilesets && 0 !== locTilesets.length || cc.logID(7212);
+        this._buildWithMapInfo(mapInfo);
+        return true;
+      },
+      initWithXML: function(tmxString, resourcePath) {
+        this.width = 0;
+        this.height = 0;
+        var mapInfo = new cc.TMXMapInfo(tmxString, resourcePath);
+        var locTilesets = mapInfo.getTilesets();
+        locTilesets && 0 !== locTilesets.length || cc.logID(7213);
+        this._buildWithMapInfo(mapInfo);
+        return true;
+      },
+      _buildWithMapInfo: function(mapInfo) {
+        this._mapSize = mapInfo.getMapSize();
+        this._tileSize = mapInfo.getTileSize();
+        this.mapOrientation = mapInfo.orientation;
+        this.properties = mapInfo.properties;
+        this._tileProperties = mapInfo.getTileProperties();
+        var oldChildren = this._children;
+        var childCount = oldChildren.length;
+        for (var j = childCount - 1; j >= 0; j--) {
+          var childNode = oldChildren[j];
+          childNode && (childNode instanceof _ccsg.TMXLayer || childNode instanceof _ccsg.TMXObjectGroup) && this.removeChild(childNode);
+        }
+        var idx = 0;
+        var children = mapInfo.getAllChildren();
+        if (children && children.length > 0) for (var i = 0, len = children.length; i < len; i++) {
+          var childInfo = children[i];
+          var child;
+          if (childInfo instanceof cc.TMXLayerInfo && childInfo.visible) {
+            child = this._parseLayer(childInfo, mapInfo);
+            this.addChild(child, idx, idx);
+            this.width = Math.max(this.width, child.width);
+            this.height = Math.max(this.height, child.height);
+            idx++;
+          }
+          if (childInfo instanceof cc.TMXObjectGroupInfo) {
+            child = new _ccsg.TMXObjectGroup(childInfo, mapInfo);
+            this.addChild(child, idx, idx);
+            idx++;
+          }
+        }
+      },
+      allLayers: function() {
+        var retArr = [], locChildren = this._children;
+        for (var i = 0, len = locChildren.length; i < len; i++) {
+          var layer = locChildren[i];
+          layer && layer instanceof _ccsg.TMXLayer && retArr.push(layer);
+        }
+        return retArr;
+      },
+      getLayer: function(layerName) {
+        if (!layerName || 0 === layerName.length) throw new Error("_ccsg.TMXTiledMap.getLayer(): layerName should be non-null or non-empty string.");
+        var locChildren = this._children;
+        for (var i = 0; i < locChildren.length; i++) {
+          var layer = locChildren[i];
+          if (layer && layer instanceof _ccsg.TMXLayer && layer.layerName === layerName) return layer;
+        }
+        return null;
+      },
+      getObjectGroup: function(groupName) {
+        if (!groupName || 0 === groupName.length) throw new Error("_ccsg.TMXTiledMap.getObjectGroup(): groupName should be non-null or non-empty string.");
+        var locChildren = this._children;
+        for (var i = 0; i < locChildren.length; i++) {
+          var group = locChildren[i];
+          if (group && group instanceof _ccsg.TMXObjectGroup && group.groupName === groupName) return group;
+        }
+        return null;
+      },
+      getProperty: function(propertyName) {
+        return this.properties[propertyName.toString()];
+      },
+      propertiesForGID: function(GID) {
+        cc.logID(7214);
+        return this.getPropertiesForGID[GID];
+      },
+      getPropertiesForGID: function(GID) {
+        return this._tileProperties[GID];
+      },
+      _parseLayer: function(layerInfo, mapInfo) {
+        var tileset = this._tilesetForLayer(layerInfo, mapInfo);
+        var layer = new _ccsg.TMXLayer(tileset, layerInfo, mapInfo);
+        layerInfo.ownTiles = false;
+        return layer;
+      },
+      _tilesetForLayer: function(layerInfo, mapInfo) {
+        var size = layerInfo._layerSize;
+        var tilesets = mapInfo.getTilesets();
+        if (tilesets) for (var i = tilesets.length - 1; i >= 0; i--) {
+          var tileset = tilesets[i];
+          if (tileset) for (var y = 0; y < size.height; y++) for (var x = 0; x < size.width; x++) {
+            var pos = x + size.width * y;
+            var gid = layerInfo._tiles[pos];
+            if (0 !== gid && (gid & cc.TiledMap.TileFlag.FLIPPED_MASK) >>> 0 >= tileset.firstGid) return tileset;
+          }
+        }
+        cc.logID(7215, layerInfo.name);
+        return null;
+      }
+    });
+    var _p = _ccsg.TMXTiledMap.prototype;
+    _p.mapWidth;
+    cc.defineGetterSetter(_p, "mapWidth", _p._getMapWidth, _p._setMapWidth);
+    _p.mapHeight;
+    cc.defineGetterSetter(_p, "mapHeight", _p._getMapHeight, _p._setMapHeight);
+    _p.tileWidth;
+    cc.defineGetterSetter(_p, "tileWidth", _p._getTileWidth, _p._setTileWidth);
+    _p.tileHeight;
+    cc.defineGetterSetter(_p, "tileHeight", _p._getTileHeight, _p._setTileHeight);
+  }), {
+    "./CCSGTMXObject": 278,
+    "./CCTMXXMLParser": 283
+  } ],
+  281: [ (function(require, module, exports) {
+    var Orientation = null;
+    var TileFlag = null;
+    var FLIPPED_MASK = null;
+    var StaggerAxis = null;
+    var StaggerIndex = null;
+    _ccsg.TMXLayer.CanvasRenderCmd = function(renderable) {
+      this._rootCtor(renderable);
+      this._needDraw = true;
+      if (!Orientation) {
+        Orientation = cc.TiledMap.Orientation;
+        TileFlag = cc.TiledMap.TileFlag;
+        FLIPPED_MASK = TileFlag.FLIPPED_MASK;
+        StaggerAxis = cc.TiledMap.StaggerAxis;
+        StaggerIndex = cc.TiledMap.StaggerIndex;
+      }
+    };
+    var proto = _ccsg.TMXLayer.CanvasRenderCmd.prototype = Object.create(_ccsg.Node.CanvasRenderCmd.prototype);
+    proto.constructor = _ccsg.TMXLayer.CanvasRenderCmd;
+    proto.rendering = function(ctx, scaleX, scaleY) {
+      var node = this._node, layerOrientation = node.layerOrientation, tiles = node.tiles, alpha = node._opacity / 255;
+      if (!tiles || alpha <= 0 || !node.tileset) return;
+      var maptw = node._mapTileSize.width, mapth = node._mapTileSize.height, tilew = node.tileset._tileSize.width / cc.director._contentScaleFactor, tileh = node.tileset._tileSize.height / cc.director._contentScaleFactor, extw = tilew - maptw, exth = tileh - mapth, winw = cc.winSize.width, winh = cc.winSize.height, rows = node._layerSize.height, cols = node._layerSize.width, grids = node._texGrids, spTiles = node._spriteTiles, wt = this._worldTransform, ox = node._position.x, oy = node._position.y, a = wt.a, b = wt.b, c = wt.c, d = wt.d, mapx = ox * a + oy * c + wt.tx, mapy = ox * b + oy * d + wt.ty;
+      var wrapper = ctx || cc._renderContext, context = wrapper.getContext();
+      var startCol = 0, startRow = 0, maxCol = cols, maxRow = rows;
+      if (cc.macro.ENABLE_TILEDMAP_CULLING && layerOrientation === Orientation.ORTHO) {
+        startCol = Math.floor(-(mapx - extw * a) / (maptw * a));
+        startRow = Math.floor((mapy - exth * d + mapth * rows * d - winh) / (mapth * d));
+        maxCol = Math.ceil((winw - mapx + extw * a) / (maptw * a));
+        maxRow = rows - Math.floor(-(mapy + exth * d) / (mapth * d));
+        startCol < 0 && (startCol = 0);
+        startRow < 0 && (startRow = 0);
+        maxCol > cols && (maxCol = cols);
+        maxRow > rows && (maxRow = rows);
+      }
+      var i, row, col, colOffset = startRow * cols, z, gid, grid, tex, cmd, top, left, bottom, right, dw = tilew, dh = tileh, w = tilew * a, h = tileh * d, gt, gl, gb, gr, flippedX = false, flippedY = false;
+      z = colOffset + startCol;
+      for (i in spTiles) if (i < z && spTiles[i]) {
+        cmd = spTiles[i]._renderCmd;
+        0 === spTiles[i]._localZOrder && !!cmd.rendering && spTiles[i]._visible && cmd.rendering(ctx, scaleX, scaleY);
+      } else if (i >= z) break;
+      wrapper.setTransform(wt, scaleX, scaleY);
+      wrapper.setGlobalAlpha(alpha);
+      var axis, tileOffset, odd_even, diffX1, diffY1;
+      if (layerOrientation === Orientation.HEX) {
+        var index = node._staggerIndex, hexSideLength = node._hexSideLength;
+        axis = node._staggerAxis;
+        tileOffset = node.tileset.tileOffset;
+        odd_even = index === StaggerIndex.STAGGERINDEX_ODD ? 1 : -1;
+        diffX1 = axis === StaggerAxis.STAGGERAXIS_X ? (maptw - hexSideLength) / 2 : 0;
+        diffY1 = axis === StaggerAxis.STAGGERAXIS_Y ? (mapth - hexSideLength) / 2 : 0;
+      }
+      for (row = startRow; row < maxRow; ++row) {
+        for (col = startCol; col < maxCol; ++col) {
+          z = colOffset + col;
+          if (spTiles[z]) {
+            cmd = spTiles[z]._renderCmd;
+            if (0 === spTiles[z]._localZOrder && !!cmd.rendering && spTiles[z]._visible) {
+              cmd.rendering(ctx, scaleX, scaleY);
+              wrapper.setTransform(wt, scaleX, scaleY);
+              wrapper.setGlobalAlpha(alpha);
+            }
+            continue;
+          }
+          gid = node.tiles[z];
+          grid = grids[(gid & FLIPPED_MASK) >>> 0];
+          if (!grid) continue;
+          tex = node._textures[grid.texId];
+          if (!tex || !tex._image) continue;
+          switch (layerOrientation) {
+           case Orientation.ORTHO:
+            left = col * maptw;
+            bottom = -(rows - row - 1) * mapth;
+            break;
+
+           case Orientation.ISO:
+            left = maptw / 2 * (cols + col - row - 1);
+            bottom = -mapth / 2 * (2 * rows - col - row - 2);
+            break;
+
+           case Orientation.HEX:
+            var diffX2 = axis === StaggerAxis.STAGGERAXIS_Y && row % 2 === 1 ? maptw / 2 * odd_even : 0;
+            left = col * (maptw - diffX1) + diffX2 + tileOffset.x;
+            var diffY2 = axis === StaggerAxis.STAGGERAXIS_X && col % 2 === 1 ? mapth / 2 * -odd_even : 0;
+            bottom = -(rows - row - 1) * (mapth - diffY1) - diffY2 + tileOffset.y;
+          }
+          right = left + tilew;
+          top = bottom - tileh;
+          if (layerOrientation === Orientation.ISO) {
+            gb = bottom * d - mapy;
+            if (gb < -winh - h) {
+              col += Math.floor(2 * (-winh - gb) / h) - 1;
+              continue;
+            }
+            gr = mapx + right * a;
+            if (gr < -w) {
+              col += Math.floor(2 * -gr / w) - 1;
+              continue;
+            }
+            gl = mapx + left * a;
+            gt = top * d - mapy;
+            if (gl > winw || gt > 0) {
+              col = maxCol;
+              continue;
+            }
+          }
+          if (gid > TileFlag.DIAGONAL) {
+            flippedX = (gid & TileFlag.HORIZONTAL) >>> 0;
+            flippedY = (gid & TileFlag.VERTICAL) >>> 0;
+          }
+          if (flippedX) {
+            left = -right;
+            context.scale(-1, 1);
+          }
+          if (flippedY) {
+            top = -bottom;
+            context.scale(1, -1);
+          }
+          context.drawImage(tex._image, grid.x, grid.y, grid.width, grid.height, left, top, dw, dh);
+          flippedX && context.scale(-1, 1);
+          flippedY && context.scale(1, -1);
+          cc.g_NumberOfDraws++;
+        }
+        colOffset += cols;
+      }
+      for (i in spTiles) if (i > z && spTiles[i]) {
+        cmd = spTiles[i]._renderCmd;
+        0 === spTiles[i]._localZOrder && !!cmd.rendering && spTiles[i]._visible && cmd.rendering(ctx, scaleX, scaleY);
+      }
+    };
+  }), {} ],
+  282: [ (function(require, module, exports) {
+    var Orientation = null;
+    var TileFlag = null;
+    var FLIPPED_MASK = null;
+    var StaggerAxis = null;
+    var StaggerIndex = null;
+    _ccsg.TMXLayer.WebGLRenderCmd = function(renderableObject) {
+      this._rootCtor(renderableObject);
+      this._needDraw = true;
+      this._vertices = [ {
+        x: 0,
+        y: 0
+      }, {
+        x: 0,
+        y: 0
+      }, {
+        x: 0,
+        y: 0
+      }, {
+        x: 0,
+        y: 0
+      } ];
+      this._color = new Uint32Array(1);
+      this._shaderProgram = cc.shaderCache.programForKey(cc.macro.SHADER_SPRITE_POSITION_TEXTURECOLORALPHATEST);
+      var radian = 90 * Math.PI / 180;
+      this._sin90 = Math.sin(radian);
+      this._cos90 = Math.cos(radian);
+      radian *= 3;
+      this._sin270 = Math.sin(radian);
+      this._cos270 = Math.cos(radian);
+      if (!Orientation) {
+        Orientation = cc.TiledMap.Orientation;
+        TileFlag = cc.TiledMap.TileFlag;
+        FLIPPED_MASK = TileFlag.FLIPPED_MASK;
+        StaggerAxis = cc.TiledMap.StaggerAxis;
+        StaggerIndex = cc.TiledMap.StaggerIndex;
+      }
+      this._disableDepthTestCmd = new cc.CustomRenderCmd(this, _disableDepthTest);
+    };
+    function _disableDepthTest() {
+      cc.renderer.setDepthTest(false);
+    }
+    var proto = _ccsg.TMXLayer.WebGLRenderCmd.prototype = Object.create(_ccsg.Node.WebGLRenderCmd.prototype);
+    proto.constructor = _ccsg.TMXLayer.WebGLRenderCmd;
+    proto.uploadData = function(f32buffer, ui32buffer, vertexDataOffset) {
+      var node = this._node, layerOrientation = node.layerOrientation, tiles = node.tiles, alpha = node._opacity / 255;
+      cc.renderer.setDepthTest(node.layerOrientation === Orientation.ORTHO);
+      if (!tiles || alpha <= 0 || !node.tileset) return 0;
+      var maptw = node._mapTileSize.width, mapth = node._mapTileSize.height, tilew = node.tileset._tileSize.width / cc.director._contentScaleFactor, tileh = node.tileset._tileSize.height / cc.director._contentScaleFactor, extw = tilew - maptw, exth = tileh - mapth, winw = cc.winSize.width, winh = cc.winSize.height, rows = node._layerSize.height, cols = node._layerSize.width, grids = node._texGrids, spTiles = node._spriteTiles, wt = this._worldTransform, a = wt.a, b = wt.b, c = wt.c, d = wt.d, tx = wt.tx, ty = wt.ty, ox = node._position.x, oy = node._position.y, mapx = ox * a + oy * c + tx, mapy = ox * b + oy * d + ty, w = tilew * a, h = tileh * d;
+      var opacity = node._opacity, cr = this._displayedColor.r, cg = this._displayedColor.g, cb = this._displayedColor.b;
+      if (node._opacityModifyRGB) {
+        var ca = opacity / 255;
+        cr *= ca;
+        cg *= ca;
+        cb *= ca;
+      }
+      this._color[0] = opacity << 24 | cb << 16 | cg << 8 | cr;
+      var startCol = 0, startRow = 0, maxCol = cols, maxRow = rows;
+      var cullingA = a, cullingD = d, cullingMapx = mapx, cullingMapy = mapy, cullingW = w, cullingH = h;
+      var enabledCulling = cc.macro.ENABLE_TILEDMAP_CULLING;
+      if (enabledCulling) {
+        if (this._cameraFlag > 0) {
+          var tmpt = cc.affineTransformConcat(wt, cc.Camera.main.viewMatrix);
+          cullingA = tmpt.a;
+          cullingD = tmpt.d;
+          cullingMapx = ox * cullingA + oy * tmpt.c + tmpt.tx;
+          cullingMapy = ox * tmpt.b + oy * cullingD + tmpt.ty;
+          cullingW = tilew * cullingA;
+          cullingH = tileh * cullingD;
+        }
+        if (layerOrientation === Orientation.ORTHO) {
+          startCol = Math.floor(-(cullingMapx - extw * cullingA) / (maptw * cullingA));
+          startRow = Math.floor((cullingMapy - exth * cullingD + mapth * rows * cullingD - winh) / (mapth * cullingD));
+          maxCol = Math.ceil((winw - cullingMapx + extw * cullingA) / (maptw * cullingA));
+          maxRow = rows - Math.floor(-(cullingMapy + exth * cullingD) / (mapth * cullingD));
+          startCol < 0 && (startCol = 0);
+          startRow < 0 && (startRow = 0);
+          maxCol > cols && (maxCol = cols);
+          maxRow > rows && (maxRow = rows);
+        }
+      }
+      var row, col, offset = vertexDataOffset, colOffset = startRow * cols, z, gid, grid, i, top, left, bottom, right, gt, gl, gb, gr, wa = a, wb = b, wc = c, wd = d, wtx = tx, wty = ty, flagged = false, flippedX = false, flippedY = false, vertices = this._vertices, axis, tileOffset, diffX1, diffY1, odd_even;
+      if (layerOrientation === Orientation.HEX) {
+        var index = node._staggerIndex, hexSideLength = node._hexSideLength;
+        axis = node._staggerAxis;
+        tileOffset = node.tileset.tileOffset;
+        odd_even = index === StaggerIndex.STAGGERINDEX_ODD ? 1 : -1;
+        diffX1 = axis === StaggerAxis.STAGGERAXIS_X ? (maptw - hexSideLength) / 2 : 0;
+        diffY1 = axis === StaggerAxis.STAGGERAXIS_Y ? (mapth - hexSideLength) / 2 : 0;
+      }
+      for (row = startRow; row < maxRow; ++row) {
+        for (col = startCol; col < maxCol; ++col) {
+          if (offset + 24 > f32buffer.length) {
+            cc.renderer._increaseBatchingSize((offset - vertexDataOffset) / 6, cc.renderer.VertexType.QUAD);
+            cc.renderer._batchRendering();
+            vertexDataOffset = 0;
+            offset = 0;
+          }
+          z = colOffset + col;
+          if (spTiles[z]) {
+            spTiles[z]._vertexZ = node._vertexZ + cc.renderer.assignedZStep * z / tiles.length;
+            continue;
+          }
+          gid = node.tiles[z];
+          grid = grids[(gid & FLIPPED_MASK) >>> 0];
+          if (!grid) continue;
+          switch (layerOrientation) {
+           case Orientation.ORTHO:
+            left = col * maptw;
+            bottom = (rows - row - 1) * mapth;
+            z = node._vertexZ + cc.renderer.assignedZStep * z / tiles.length;
+            break;
+
+           case Orientation.ISO:
+            left = maptw / 2 * (cols + col - row - 1);
+            bottom = mapth / 2 * (2 * rows - col - row - 2);
+            z = node._vertexZ + cc.renderer.assignedZStep * (node.height - bottom) / node.height;
+            break;
+
+           case Orientation.HEX:
+            var diffX2 = axis === StaggerAxis.STAGGERAXIS_Y && row % 2 === 1 ? maptw / 2 * odd_even : 0;
+            left = col * (maptw - diffX1) + diffX2 + tileOffset.x;
+            var diffY2 = axis === StaggerAxis.STAGGERAXIS_X && col % 2 === 1 ? mapth / 2 * -odd_even : 0;
+            bottom = (rows - row - 1) * (mapth - diffY1) + diffY2 - tileOffset.y;
+            z = node._vertexZ + cc.renderer.assignedZStep * (node.height - bottom) / node.height;
+          }
+          right = left + tilew;
+          top = bottom + tileh;
+          if (enabledCulling && layerOrientation === Orientation.ISO) {
+            gb = cullingMapy + bottom * cullingD;
+            if (gb > winh + cullingH) {
+              col += Math.floor(2 * (gb - winh) / cullingH) - 1;
+              continue;
+            }
+            gr = cullingMapx + right * cullingA;
+            if (gr < -cullingW) {
+              col += Math.floor(2 * -gr / cullingW) - 1;
+              continue;
+            }
+            gl = cullingMapx + left * cullingA;
+            gt = cullingMapy + top * cullingD;
+            if (gl > winw || gt < 0) {
+              col = maxCol;
+              continue;
+            }
+          }
+          if (gid > TileFlag.DIAGONAL) {
+            flagged = true;
+            flippedX = (gid & TileFlag.HORIZONTAL) >>> 0;
+            flippedY = (gid & TileFlag.VERTICAL) >>> 0;
+          }
+          vertices[0].x = left * wa + top * wc + wtx;
+          vertices[0].y = left * wb + top * wd + wty;
+          vertices[1].x = left * wa + bottom * wc + wtx;
+          vertices[1].y = left * wb + bottom * wd + wty;
+          vertices[2].x = right * wa + top * wc + wtx;
+          vertices[2].y = right * wb + top * wd + wty;
+          vertices[3].x = right * wa + bottom * wc + wtx;
+          vertices[3].y = right * wb + bottom * wd + wty;
+          for (i = 0; i < 4; ++i) {
+            f32buffer[offset] = vertices[i].x;
+            f32buffer[offset + 1] = vertices[i].y;
+            f32buffer[offset + 2] = z;
+            ui32buffer[offset + 3] = this._color[0];
+            switch (i) {
+             case 0:
+              f32buffer[offset + 4] = flippedX ? grid.r : grid.l;
+              f32buffer[offset + 5] = flippedY ? grid.b : grid.t;
+              break;
+
+             case 1:
+              f32buffer[offset + 4] = flippedX ? grid.r : grid.l;
+              f32buffer[offset + 5] = flippedY ? grid.t : grid.b;
+              break;
+
+             case 2:
+              f32buffer[offset + 4] = flippedX ? grid.l : grid.r;
+              f32buffer[offset + 5] = flippedY ? grid.b : grid.t;
+              break;
+
+             case 3:
+              f32buffer[offset + 4] = flippedX ? grid.l : grid.r;
+              f32buffer[offset + 5] = flippedY ? grid.t : grid.b;
+            }
+            offset += 6;
+          }
+          if (flagged) {
+            wa = a;
+            wb = b;
+            wc = c;
+            wd = d;
+            wtx = tx;
+            wty = ty;
+            flippedX = false;
+            flippedY = false;
+            flagged = false;
+          }
+        }
+        colOffset += cols;
+      }
+      return (offset - vertexDataOffset) / 6;
+    };
+  }), {} ],
+  283: [ (function(require, module, exports) {
+    require("../compression/ZipUtils");
+    var Zlib = require("../compression/zlib.min");
+    function uint8ArrayToUint32Array(uint8Arr) {
+      if (uint8Arr.length % 4 !== 0) return null;
+      var arrLen = uint8Arr.length / 4;
+      var retArr = window.Uint32Array ? new Uint32Array(arrLen) : [];
+      for (var i = 0; i < arrLen; i++) {
+        var offset = 4 * i;
+        retArr[i] = uint8Arr[offset] + 256 * uint8Arr[offset + 1] + 65536 * uint8Arr[offset + 2] + uint8Arr[offset + 3] * (1 << 24);
+      }
+      return retArr;
+    }
+    cc.TMXLayerInfo = cc._Class.extend({
+      ctor: function() {
+        this.properties = {};
+        this.name = "";
+        this._layerSize = null;
+        this._tiles = [];
+        this.visible = true;
+        this._opacity = 0;
+        this.ownTiles = true;
+        this._minGID = 1e5;
+        this._maxGID = 0;
+        this.offset = cc.p(0, 0);
+      },
+      getProperties: function() {
+        return this.properties;
+      },
+      setProperties: function(value) {
+        this.properties = value;
+      }
+    });
+    cc.TMXObjectGroupInfo = cc._Class.extend({
+      ctor: function() {
+        this.properties = {};
+        this.name = "";
+        this._objects = [];
+        this.visible = true;
+        this._opacity = 0;
+        this._color = new cc.Color(255, 255, 255, 255);
+        this.offset = cc.p(0, 0);
+        this._draworder = "topdown";
+      },
+      getProperties: function() {
+        return this.properties;
+      },
+      setProperties: function(value) {
+        this.properties = value;
+      }
+    });
+    cc.TMXTilesetInfo = cc._Class.extend({
+      ctor: function() {
+        this.name = "";
+        this.firstGid = 0;
+        this.spacing = 0;
+        this.margin = 0;
+        this.sourceImage = "";
+        this.imageSize = cc.size(0, 0);
+        this.tileOffset = cc.p(0, 0);
+        this._tileSize = cc.size(0, 0);
+      },
+      rectForGID: function(gid, result) {
+        var rect = result || cc.rect(0, 0, 0, 0);
+        rect.width = this._tileSize.width;
+        rect.height = this._tileSize.height;
+        gid &= cc.TiledMap.TileFlag.FLIPPED_MASK;
+        gid -= parseInt(this.firstGid, 10);
+        var max_x = parseInt((this.imageSize.width - 2 * this.margin + this.spacing) / (this._tileSize.width + this.spacing), 10);
+        rect.x = parseInt(gid % max_x * (this._tileSize.width + this.spacing) + this.margin, 10);
+        rect.y = parseInt(parseInt(gid / max_x, 10) * (this._tileSize.height + this.spacing) + this.margin, 10);
+        return rect;
+      }
+    });
+    function getPropertyList(node) {
+      var res = [];
+      var properties = node.getElementsByTagName("properties");
+      for (var i = 0; i < properties.length; ++i) {
+        var property = properties[i].getElementsByTagName("property");
+        for (var j = 0; j < property.length; ++j) res.push(property[j]);
+      }
+      return res.length ? res : null;
+    }
+    cc.TMXMapInfo = cc.SAXParser.extend({
+      properties: null,
+      orientation: null,
+      parentElement: null,
+      parentGID: null,
+      layerAttrs: 0,
+      storingCharacters: false,
+      tmxFileName: null,
+      currentString: null,
+      _objectGroups: null,
+      _allChildren: null,
+      _mapSize: null,
+      _tileSize: null,
+      _layers: null,
+      _tilesets: null,
+      _tileProperties: null,
+      _resources: "",
+      _staggerAxis: null,
+      _staggerIndex: null,
+      _hexSideLength: 0,
+      ctor: function(tmxFile, resourcePath) {
+        cc.SAXParser.prototype.ctor.apply(this);
+        this._mapSize = cc.size(0, 0);
+        this._tileSize = cc.size(0, 0);
+        this._layers = [];
+        this._tilesets = [];
+        this._objectGroups = [];
+        this._allChildren = [];
+        this.properties = [];
+        this._tileProperties = {};
+        void 0 !== resourcePath ? this.initWithXML(tmxFile, resourcePath) : void 0 !== tmxFile && this.initWithTMXFile(tmxFile);
+      },
+      getOrientation: function() {
+        return this.orientation;
+      },
+      setOrientation: function(value) {
+        this.orientation = value;
+      },
+      getStaggerAxis: function() {
+        return this._staggerAxis;
+      },
+      setStaggerAxis: function(value) {
+        this._staggerAxis = value;
+      },
+      getStaggerIndex: function() {
+        return this._staggerIndex;
+      },
+      setStaggerIndex: function(value) {
+        this._staggerIndex = value;
+      },
+      getHexSideLength: function() {
+        return this._hexSideLength;
+      },
+      setHexSideLength: function(value) {
+        this._hexSideLength = value;
+      },
+      getMapSize: function() {
+        return cc.size(this._mapSize.width, this._mapSize.height);
+      },
+      setMapSize: function(value) {
+        this._mapSize.width = value.width;
+        this._mapSize.height = value.height;
+      },
+      _getMapWidth: function() {
+        return this._mapSize.width;
+      },
+      _setMapWidth: function(width) {
+        this._mapSize.width = width;
+      },
+      _getMapHeight: function() {
+        return this._mapSize.height;
+      },
+      _setMapHeight: function(height) {
+        this._mapSize.height = height;
+      },
+      getTileSize: function() {
+        return cc.size(this._tileSize.width, this._tileSize.height);
+      },
+      setTileSize: function(value) {
+        this._tileSize.width = value.width;
+        this._tileSize.height = value.height;
+      },
+      _getTileWidth: function() {
+        return this._tileSize.width;
+      },
+      _setTileWidth: function(width) {
+        this._tileSize.width = width;
+      },
+      _getTileHeight: function() {
+        return this._tileSize.height;
+      },
+      _setTileHeight: function(height) {
+        this._tileSize.height = height;
+      },
+      getLayers: function() {
+        return this._layers;
+      },
+      setLayers: function(value) {
+        this._allChildren.push(value);
+        this._layers.push(value);
+      },
+      getTilesets: function() {
+        return this._tilesets;
+      },
+      setTilesets: function(value) {
+        this._tilesets.push(value);
+      },
+      getObjectGroups: function() {
+        return this._objectGroups;
+      },
+      setObjectGroups: function(value) {
+        this._allChildren.push(value);
+        this._objectGroups.push(value);
+      },
+      getAllChildren: function() {
+        return this._allChildren;
+      },
+      getParentElement: function() {
+        return this.parentElement;
+      },
+      setParentElement: function(value) {
+        this.parentElement = value;
+      },
+      getParentGID: function() {
+        return this.parentGID;
+      },
+      setParentGID: function(value) {
+        this.parentGID = value;
+      },
+      getLayerAttribs: function() {
+        return this.layerAttrs;
+      },
+      setLayerAttribs: function(value) {
+        this.layerAttrs = value;
+      },
+      getStoringCharacters: function() {
+        return this.storingCharacters;
+      },
+      setStoringCharacters: function(value) {
+        this.storingCharacters = value;
+      },
+      getProperties: function() {
+        return this.properties;
+      },
+      setProperties: function(value) {
+        this.properties = value;
+      },
+      initWithTMXFile: function(tmxFile) {
+        this._internalInit(tmxFile, null);
+        return this.parseXMLFile(tmxFile);
+      },
+      initWithXML: function(tmxString, resourcePath) {
+        this._internalInit(null, resourcePath);
+        return this.parseXMLString(tmxString);
+      },
+      parseXMLFile: function(tmxFile, isXmlString, tilesetFirstGid) {
+        isXmlString = isXmlString || false;
+        var xmlStr = isXmlString ? tmxFile : cc.loader.getRes(tmxFile);
+        xmlStr || cc.errorID(7220, tmxFile);
+        var mapXML = this._parseXML(xmlStr);
+        var i, j;
+        var map = mapXML.documentElement;
+        var version = map.getAttribute("version");
+        var orientationStr = map.getAttribute("orientation");
+        var staggerAxisStr = map.getAttribute("staggeraxis");
+        var staggerIndexStr = map.getAttribute("staggerindex");
+        var hexSideLengthStr = map.getAttribute("hexsidelength");
+        if ("map" === map.nodeName) {
+          "1.0" !== version && null !== version && cc.logID(7216, version);
+          "orthogonal" === orientationStr ? this.orientation = cc.TiledMap.Orientation.ORTHO : "isometric" === orientationStr ? this.orientation = cc.TiledMap.Orientation.ISO : "hexagonal" === orientationStr ? this.orientation = cc.TiledMap.Orientation.HEX : null !== orientationStr && cc.logID(7217, orientationStr);
+          "x" === staggerAxisStr ? this.setStaggerAxis(cc.TiledMap.StaggerAxis.STAGGERAXIS_X) : "y" === staggerAxisStr && this.setStaggerAxis(cc.TiledMap.StaggerAxis.STAGGERAXIS_Y);
+          "odd" === staggerIndexStr ? this.setStaggerIndex(cc.TiledMap.StaggerIndex.STAGGERINDEX_ODD) : "even" === staggerIndexStr && this.setStaggerIndex(cc.TiledMap.StaggerIndex.STAGGERINDEX_EVEN);
+          hexSideLengthStr && this.setHexSideLength(parseFloat(hexSideLengthStr));
+          var mapSize = cc.size(0, 0);
+          mapSize.width = parseFloat(map.getAttribute("width"));
+          mapSize.height = parseFloat(map.getAttribute("height"));
+          this.setMapSize(mapSize);
+          mapSize = cc.size(0, 0);
+          mapSize.width = parseFloat(map.getAttribute("tilewidth"));
+          mapSize.height = parseFloat(map.getAttribute("tileheight"));
+          this.setTileSize(mapSize);
+          var propertyArr = getPropertyList(map);
+          if (propertyArr) {
+            var aPropertyDict = {};
+            for (i = 0; i < propertyArr.length; i++) aPropertyDict[propertyArr[i].getAttribute("name")] = propertyArr[i].getAttribute("value");
+            this.properties = aPropertyDict;
+          }
+        }
+        var tilesets = map.getElementsByTagName("tileset");
+        if ("map" !== map.nodeName) {
+          tilesets = [];
+          tilesets.push(map);
+        }
+        for (i = 0; i < tilesets.length; i++) {
+          var selTileset = tilesets[i];
+          var tsxName = selTileset.getAttribute("source");
+          if (tsxName) {
+            var currentFirstGID = parseInt(selTileset.getAttribute("firstgid"));
+            var tsxPath = isXmlString ? cc.path.join(this._resources, tsxName) : cc.path.changeBasename(tmxFile, tsxName);
+            this.parseXMLFile(tsxPath, false, currentFirstGID);
+          } else {
+            var tileset = new cc.TMXTilesetInfo();
+            tileset.name = selTileset.getAttribute("name") || "";
+            tileset.firstGid = tilesetFirstGid || (parseInt(selTileset.getAttribute("firstgid")) || 0);
+            tileset.spacing = parseInt(selTileset.getAttribute("spacing")) || 0;
+            tileset.margin = parseInt(selTileset.getAttribute("margin")) || 0;
+            var tilesetSize = cc.size(0, 0);
+            tilesetSize.width = parseFloat(selTileset.getAttribute("tilewidth"));
+            tilesetSize.height = parseFloat(selTileset.getAttribute("tileheight"));
+            tileset._tileSize = tilesetSize;
+            var image = selTileset.getElementsByTagName("image")[0];
+            var imagename = image.getAttribute("source");
+            var num = -1;
+            this.tmxFileName && (num = this.tmxFileName.lastIndexOf("/"));
+            if (-1 !== num) {
+              var dir = this.tmxFileName.substr(0, num + 1);
+              tileset.sourceImage = dir + imagename;
+            } else tileset.sourceImage = this._resources + (this._resources ? "/" : "") + imagename;
+            this.setTilesets(tileset);
+            var offset = selTileset.getElementsByTagName("tileoffset")[0];
+            if (offset) {
+              var offsetX = parseFloat(offset.getAttribute("x"));
+              var offsetY = parseFloat(offset.getAttribute("y"));
+              tileset.tileOffset = cc.p(offsetX, offsetY);
+            }
+            var tiles = selTileset.getElementsByTagName("tile");
+            if (tiles) for (var tIdx = 0; tIdx < tiles.length; tIdx++) {
+              var t = tiles[tIdx];
+              this.parentGID = parseInt(tileset.firstGid) + parseInt(t.getAttribute("id") || 0);
+              var tp = getPropertyList(t);
+              if (tp) {
+                var dict = {};
+                for (j = 0; j < tp.length; j++) {
+                  var name = tp[j].getAttribute("name");
+                  dict[name] = tp[j].getAttribute("value");
+                }
+                this._tileProperties[this.parentGID] = dict;
+              }
+            }
+          }
+        }
+        var childNodes = map.childNodes;
+        for (i = 0; i < childNodes.length; i++) {
+          var childNode = childNodes[i];
+          if (this._shouldIgnoreNode(childNode)) continue;
+          if ("layer" === childNode.nodeName) {
+            var layer = this._parseLayer(childNode);
+            this.setLayers(layer);
+          }
+          if ("objectgroup" === childNode.nodeName) {
+            var objectGroup = this._parseObjectGroup(childNode);
+            this.setObjectGroups(objectGroup);
+          }
+        }
+        return map;
+      },
+      _shouldIgnoreNode: function(node) {
+        return 3 === node.nodeType || 8 === node.nodeType || 4 === node.nodeType;
+      },
+      _parseLayer: function(selLayer) {
+        var data = selLayer.getElementsByTagName("data")[0];
+        var layer = new cc.TMXLayerInfo();
+        layer.name = selLayer.getAttribute("name");
+        var layerSize = cc.size(0, 0);
+        layerSize.width = parseFloat(selLayer.getAttribute("width"));
+        layerSize.height = parseFloat(selLayer.getAttribute("height"));
+        layer._layerSize = layerSize;
+        var visible = selLayer.getAttribute("visible");
+        layer.visible = !("0" == visible);
+        var opacity = selLayer.getAttribute("opacity") || 1;
+        layer._opacity = opacity ? parseInt(255 * parseFloat(opacity)) : 255;
+        layer.offset = cc.p(parseFloat(selLayer.getAttribute("x")) || 0, parseFloat(selLayer.getAttribute("y")) || 0);
+        var nodeValue = "";
+        for (var j = 0; j < data.childNodes.length; j++) nodeValue += data.childNodes[j].nodeValue;
+        nodeValue = nodeValue.trim();
+        var compression = data.getAttribute("compression");
+        var encoding = data.getAttribute("encoding");
+        if (compression && "gzip" !== compression && "zlib" !== compression) {
+          cc.logID(7218);
+          return null;
+        }
+        var tiles;
+        switch (compression) {
+         case "gzip":
+          tiles = cc.Codec.unzipBase64AsArray(nodeValue, 4);
+          break;
+
+         case "zlib":
+          var inflator = new Zlib.Inflate(cc.Codec.Base64.decodeAsArray(nodeValue, 1));
+          tiles = uint8ArrayToUint32Array(inflator.decompress());
+          break;
+
+         case null:
+         case "":
+          if ("base64" === encoding) tiles = cc.Codec.Base64.decodeAsArray(nodeValue, 4); else if ("csv" === encoding) {
+            tiles = [];
+            var csvTiles = nodeValue.split(",");
+            for (var csvIdx = 0; csvIdx < csvTiles.length; csvIdx++) tiles.push(parseInt(csvTiles[csvIdx]));
+          } else {
+            var selDataTiles = data.getElementsByTagName("tile");
+            tiles = [];
+            for (var xmlIdx = 0; xmlIdx < selDataTiles.length; xmlIdx++) tiles.push(parseInt(selDataTiles[xmlIdx].getAttribute("gid")));
+          }
+          break;
+
+         default:
+          this.layerAttrs === cc.TMXLayerInfo.ATTRIB_NONE && cc.logID(7219);
+        }
+        tiles && (layer._tiles = new Uint32Array(tiles));
+        var layerProps = getPropertyList(selLayer);
+        if (layerProps) {
+          var layerProp = {};
+          for (var _j = 0; _j < layerProps.length; _j++) layerProp[layerProps[_j].getAttribute("name")] = layerProps[_j].getAttribute("value");
+          layer.properties = layerProp;
+        }
+        return layer;
+      },
+      _parseObjectGroup: function(selGroup) {
+        var objectGroup = new cc.TMXObjectGroupInfo();
+        objectGroup.name = selGroup.getAttribute("name") || "";
+        objectGroup.offset = cc.p(parseFloat(selGroup.getAttribute("offsetx")), parseFloat(selGroup.getAttribute("offsety")));
+        var opacity = selGroup.getAttribute("opacity") || 1;
+        objectGroup._opacity = opacity ? parseInt(255 * parseFloat(opacity)) : 255;
+        var visible = selGroup.getAttribute("visible");
+        visible && 0 === parseInt(visible) && (objectGroup.visible = false);
+        var color = selGroup.getAttribute("color");
+        color && (objectGroup._color = cc.hexToColor(color));
+        var draworder = selGroup.getAttribute("draworder");
+        draworder && (objectGroup._draworder = draworder);
+        var groupProps = getPropertyList(selGroup);
+        if (groupProps) {
+          var parsedProps = {};
+          for (var j = 0; j < groupProps.length; j++) parsedProps[groupProps[j].getAttribute("name")] = groupProps[j].getAttribute("value");
+          objectGroup.setProperties(parsedProps);
+        }
+        var objects = selGroup.getElementsByTagName("object");
+        var getContentScaleFactor = cc.director.getContentScaleFactor();
+        if (objects) for (var _j2 = 0; _j2 < objects.length; _j2++) {
+          var selObj = objects[_j2];
+          var objectProp = {};
+          objectProp["id"] = selObj.getAttribute("id") || 0;
+          objectProp["name"] = selObj.getAttribute("name") || "";
+          objectProp["width"] = parseFloat(selObj.getAttribute("width")) || 0;
+          objectProp["height"] = parseFloat(selObj.getAttribute("height")) || 0;
+          objectProp["x"] = (selObj.getAttribute("x") || 0) / getContentScaleFactor;
+          objectProp["y"] = (selObj.getAttribute("y") || 0) / getContentScaleFactor;
+          objectProp["rotation"] = parseFloat(selObj.getAttribute("rotation")) || 0;
+          var docObjProps = getPropertyList(selObj);
+          if (docObjProps) for (var k = 0; k < docObjProps.length; k++) objectProp[docObjProps[k].getAttribute("name")] = docObjProps[k].getAttribute("value");
+          var visibleAttr = selObj.getAttribute("visible");
+          objectProp["visible"] = !(visibleAttr && 0 === parseInt(visibleAttr));
+          var gid = selObj.getAttribute("gid");
+          if (gid) {
+            objectProp["gid"] = parseInt(gid);
+            objectProp["type"] = cc.TiledMap.TMXObjectType.IMAGE;
+          }
+          var ellipse = selObj.getElementsByTagName("ellipse");
+          ellipse && ellipse.length > 0 && (objectProp["type"] = cc.TiledMap.TMXObjectType.ELLIPSE);
+          var polygonProps = selObj.getElementsByTagName("polygon");
+          if (polygonProps && polygonProps.length > 0) {
+            objectProp["type"] = cc.TiledMap.TMXObjectType.POLYGON;
+            var selPgPointStr = polygonProps[0].getAttribute("points");
+            selPgPointStr && (objectProp["points"] = this._parsePointsString(selPgPointStr));
+          }
+          var polylineProps = selObj.getElementsByTagName("polyline");
+          if (polylineProps && polylineProps.length > 0) {
+            objectProp["type"] = cc.TiledMap.TMXObjectType.POLYLINE;
+            var selPlPointStr = polylineProps[0].getAttribute("points");
+            selPlPointStr && (objectProp["polylinePoints"] = this._parsePointsString(selPlPointStr));
+          }
+          objectProp["type"] || (objectProp["type"] = cc.TiledMap.TMXObjectType.RECT);
+          objectGroup._objects.push(objectProp);
+        }
+        return objectGroup;
+      },
+      _parsePointsString: function(pointsString) {
+        if (!pointsString) return null;
+        var points = [];
+        var pointsStr = pointsString.split(" ");
+        for (var i = 0; i < pointsStr.length; i++) {
+          var selPointStr = pointsStr[i].split(",");
+          points.push({
+            x: parseFloat(selPointStr[0]),
+            y: parseFloat(selPointStr[1])
+          });
+        }
+        return points;
+      },
+      parseXMLString: function(xmlString) {
+        return this.parseXMLFile(xmlString, true);
+      },
+      getTileProperties: function() {
+        return this._tileProperties;
+      },
+      setTileProperties: function(tileProperties) {
+        this._tileProperties.push(tileProperties);
+      },
+      getCurrentString: function() {
+        return this.currentString;
+      },
+      setCurrentString: function(currentString) {
+        this.currentString = currentString;
+      },
+      getTMXFileName: function() {
+        return this.tmxFileName;
+      },
+      setTMXFileName: function(fileName) {
+        this.tmxFileName = fileName;
+      },
+      _internalInit: function(tmxFileName, resourcePath) {
+        this._tilesets.length = 0;
+        this._layers.length = 0;
+        this.tmxFileName = tmxFileName;
+        resourcePath && (this._resources = resourcePath);
+        this._objectGroups.length = 0;
+        this._allChildren.length = 0;
+        this.properties.length = 0;
+        this._tileProperties.length = 0;
+        this.currentString = "";
+        this.storingCharacters = false;
+        this.layerAttrs = cc.TMXLayerInfo.ATTRIB_NONE;
+        this.parentElement = cc.TiledMap.NONE;
+      }
+    });
+    var _p = cc.TMXMapInfo.prototype;
+    _p.mapWidth;
+    cc.defineGetterSetter(_p, "mapWidth", _p._getMapWidth, _p._setMapWidth);
+    _p.mapHeight;
+    cc.defineGetterSetter(_p, "mapHeight", _p._getMapHeight, _p._setMapHeight);
+    _p.tileWidth;
+    cc.defineGetterSetter(_p, "tileWidth", _p._getTileWidth, _p._setTileWidth);
+    _p.tileHeight;
+    cc.defineGetterSetter(_p, "tileHeight", _p._getTileHeight, _p._setTileHeight);
+    cc.TMXMapInfo.create = function(tmxFile, resourcePath) {
+      return new cc.TMXMapInfo(tmxFile, resourcePath);
+    };
+    cc.TMXLayerInfo.ATTRIB_NONE = 1;
+    cc.TMXLayerInfo.ATTRIB_BASE64 = 2;
+    cc.TMXLayerInfo.ATTRIB_GZIP = 4;
+    cc.TMXLayerInfo.ATTRIB_ZLIB = 8;
+  }), {
+    "../compression/ZipUtils": 28,
+    "../compression/zlib.min": 31
+  } ],
+  284: [ (function(require, module, exports) {
+    require("./CCSGTMXLayer");
+    require("./CCTMXLayerCanvasRenderCmd");
+    require("./CCTMXLayerWebGLRenderCmd");
+    var TiledLayer = cc.Class({
+      name: "cc.TiledLayer",
+      extends: cc._SGComponent,
+      onEnable: function() {
+        this._sgNode && this._sgNode.setVisible(true);
+      },
+      onDisable: function() {
+        this._sgNode && this._sgNode.setVisible(false);
+      },
+      onDestroy: function() {
+        this.node._sizeProvider === this._sgNode && (this.node._sizeProvider = null);
+      },
+      _initSgNode: function() {
+        var sgNode = this._sgNode;
+        if (!sgNode) return;
+        this.enabledInHierarchy || sgNode.setVisible(false);
+        this._registSizeProvider();
+        var node = this.node;
+        sgNode.setAnchorPoint(node.getAnchorPoint());
+      },
+      _replaceSgNode: function(sgNode) {
+        if (sgNode === this._sgNode) return;
+        this._removeSgNode();
+        this.node._sizeProvider === this._sgNode && (this.node._sizeProvider = null);
+        if (sgNode && sgNode instanceof _ccsg.TMXLayer) {
+          this._sgNode = sgNode;
+          false;
+          this._initSgNode();
+        } else this._sgNode = null;
+      },
+      getLayerName: function() {
+        if (this._sgNode) return this._sgNode.getLayerName();
+        return "";
+      },
+      setLayerName: function(layerName) {
+        this._sgNode && this._sgNode.setLayerName(layerName);
+      },
+      getProperty: function(propertyName) {
+        if (this._sgNode) return this._sgNode.getProperty(propertyName);
+        return null;
+      },
+      getPositionAt: function(pos, y) {
+        if (this._sgNode) {
+          void 0 !== y && (pos = cc.p(pos, y));
+          return this._sgNode.getPositionAt(pos);
+        }
+        return null;
+      },
+      removeTileAt: function(pos, y) {
+        if (this._sgNode) {
+          void 0 !== y && (pos = cc.p(pos, y));
+          this._sgNode.removeTileAt(pos);
+        }
+      },
+      setTileGID: function(gid, posOrX, flagsOrY, flags) {
+        if (this._sgNode) {
+          if (void 0 === posOrX) throw new Error("_ccsg.TMXLayer.setTileGID(): pos should be non-null");
+          var pos;
+          if (void 0 === flags && posOrX instanceof cc.Vec2) {
+            pos = posOrX;
+            flags = flagsOrY;
+          } else pos = cc.p(posOrX, flagsOrY);
+          this._sgNode.setTileGID(gid, pos, flags);
+        }
+      },
+      getTileGIDAt: function(pos, y) {
+        if (this._sgNode) {
+          void 0 !== y && (pos = cc.p(pos, y));
+          return this._sgNode.getTileGIDAt(pos);
+        }
+        return 0;
+      },
+      getTileAt: function(pos, y) {
+        if (this._sgNode) {
+          void 0 !== y && (pos = cc.p(pos, y));
+          return this._sgNode.getTileAt(pos);
+        }
+        return null;
+      },
+      releaseMap: function() {
+        this._sgNode && this._sgNode.releaseMap();
+      },
+      setContentSize: function(size, height) {
+        if (this._sgNode) {
+          void 0 !== height && (size = cc.size(size, height));
+          this._sgNode.setContentSize(size);
+        }
+      },
+      getTexture: function() {
+        if (this._sgNode) return this._sgNode.getTexture();
+        return null;
+      },
+      setTexture: function(texture) {
+        this._sgNode && this._sgNode.setTexture(texture);
+      },
+      setTileOpacity: function(opacity) {
+        if (this._sgNode) {
+          false;
+          this._sgNode._opacity = opacity;
+        }
+      },
+      getLayerSize: function() {
+        if (this._sgNode) return this._sgNode.getLayerSize();
+        return cc.size(0, 0);
+      },
+      setLayerSize: function(layerSize) {
+        this._sgNode && this._sgNode.setLayerSize(layerSize);
+      },
+      getMapTileSize: function() {
+        if (this._sgNode) return this._sgNode.getMapTileSize();
+        return cc.size(0, 0);
+      },
+      setMapTileSize: function(tileSize) {
+        this._sgNode && this._sgNode.setMapTileSize(tileSize);
+      },
+      getTiles: function() {
+        if (this._sgNode) return this._sgNode.getTiles();
+        return null;
+      },
+      setTiles: function(tiles) {
+        this._sgNode && this._sgNode.setTiles(tiles);
+      },
+      getTileSet: function() {
+        if (this._sgNode) return this._sgNode.getTileSet();
+        return null;
+      },
+      setTileSet: function(tileset) {
+        this._sgNode && this._sgNode.setTileSet(tileset);
+      },
+      getLayerOrientation: function() {
+        if (this._sgNode) return this._sgNode.getLayerOrientation();
+        return 0;
+      },
+      setLayerOrientation: function(orientation) {
+        this._sgNode && this._sgNode.setLayerOrientation(orientation);
+      },
+      getProperties: function() {
+        if (this._sgNode) return this._sgNode.getProperties();
+        return null;
+      },
+      setProperties: function(properties) {
+        this._sgNode && this._sgNode.setProperties(properties);
+      },
+      _tryRemoveNode: function() {
+        this.node.removeComponent(cc.TiledLayer);
+        1 === this.node._components.length && 0 === this.node.getChildren().length && this.node.removeFromParent();
+      }
+    });
+    cc.TiledLayer = module.exports = TiledLayer;
+  }), {
+    "./CCSGTMXLayer": 277,
+    "./CCTMXLayerCanvasRenderCmd": 281,
+    "./CCTMXLayerWebGLRenderCmd": 282
+  } ],
+  285: [ (function(require, module, exports) {
+    require("./CCTiledMapAsset");
+    require("./CCTiledLayer");
+    require("./CCTiledObjectGroup");
+    require("./CCSGTMXTiledMap");
+    var Orientation = cc.Enum({
+      ORTHO: 0,
+      HEX: 1,
+      ISO: 2
+    });
+    var Property = cc.Enum({
+      NONE: 0,
+      MAP: 1,
+      LAYER: 2,
+      OBJECTGROUP: 3,
+      OBJECT: 4,
+      TILE: 5
+    });
+    var TileFlag = cc.Enum({
+      HORIZONTAL: 2147483648,
+      VERTICAL: 1073741824,
+      DIAGONAL: 536870912,
+      FLIPPED_ALL: 3758096384,
+      FLIPPED_MASK: 536870911
+    });
+    var StaggerAxis = cc.Enum({
+      STAGGERAXIS_X: 0,
+      STAGGERAXIS_Y: 1
+    });
+    var StaggerIndex = cc.Enum({
+      STAGGERINDEX_ODD: 0,
+      STAGGERINDEX_EVEN: 1
+    });
+    var TMXObjectType = cc.Enum({
+      RECT: 0,
+      ELLIPSE: 1,
+      POLYGON: 2,
+      POLYLINE: 3,
+      IMAGE: 4
+    });
+    var TiledMap = cc.Class({
+      name: "cc.TiledMap",
+      extends: cc._RendererInSG,
+      editor: false,
+      statics: {
+        Orientation: Orientation,
+        Property: Property,
+        TileFlag: TileFlag,
+        StaggerAxis: StaggerAxis,
+        StaggerIndex: StaggerIndex,
+        TMXObjectType: TMXObjectType
+      },
+      properties: {
+        _detachedChildren: {
+          default: [],
+          serializable: false
+        },
+        _tmxFile: {
+          default: null,
+          type: cc.TiledMapAsset
+        },
+        tmxAsset: {
+          get: function() {
+            return this._tmxFile;
+          },
+          set: function(value, force) {
+            if (this._tmxFile !== value || false) {
+              this._tmxFile = value;
+              this._applyFile();
+            }
+          },
+          type: cc.TiledMapAsset
+        }
+      },
+      getMapSize: function() {
+        return this._sgNode.getMapSize();
+      },
+      setMapSize: function(mapSize) {
+        this._sgNode.setMapSize(mapSize);
+      },
+      getTileSize: function() {
+        return this._sgNode.getTileSize();
+      },
+      setTileSize: function(tileSize) {
+        this._sgNode.setTileSize(tileSize);
+      },
+      getMapOrientation: function() {
+        return this._sgNode.getMapOrientation();
+      },
+      setMapOrientation: function(orientation) {
+        this._sgNode.setMapOrientation(orientation);
+      },
+      getObjectGroups: function() {
+        var logicChildren = this.node.children;
+        var ret = [];
+        for (var i = 0, n = logicChildren.length; i < n; i++) {
+          var child = logicChildren[i];
+          var tmxGroup = child.getComponent(cc.TiledObjectGroup);
+          tmxGroup && ret.push(tmxGroup);
+        }
+        return ret;
+      },
+      getProperties: function() {
+        return this._sgNode.getProperties();
+      },
+      setProperties: function(properties) {
+        this._sgNode.setProperties(properties);
+      },
+      initWithTMXFile: function(tmxFile) {
+        cc.errorID(7200);
+      },
+      initWithXML: function(tmxString, resourcePath) {
+        cc.errorID(7201);
+      },
+      allLayers: function() {
+        var logicChildren = this.node.children;
+        var ret = [];
+        for (var i = 0, n = logicChildren.length; i < n; i++) {
+          var child = logicChildren[i];
+          var tmxLayer = child.getComponent(cc.TiledLayer);
+          tmxLayer && ret.push(tmxLayer);
+        }
+        return ret;
+      },
+      getLayer: function(layerName) {
+        var logicChildren = this.node.children;
+        for (var i = 0, n = logicChildren.length; i < n; i++) {
+          var child = logicChildren[i];
+          var tmxLayer = child.getComponent(cc.TiledLayer);
+          if (tmxLayer && tmxLayer.getLayerName() === layerName) return tmxLayer;
+        }
+        return null;
+      },
+      getObjectGroup: function(groupName) {
+        var logicChildren = this.node.children;
+        for (var i = 0, n = logicChildren.length; i < n; i++) {
+          var child = logicChildren[i];
+          var tmxGroup = child.getComponent(cc.TiledObjectGroup);
+          if (tmxGroup && tmxGroup.getGroupName() === groupName) return tmxGroup;
+        }
+        return null;
+      },
+      getProperty: function(propertyName) {
+        return this._sgNode.getProperty(propertyName);
+      },
+      getPropertiesForGID: function(GID) {
+        return this._sgNode.getPropertiesForGID(GID);
+      },
+      onEnable: function() {
+        0 === this._detachedChildren.length && this._moveLayersInSgNode(this._sgNode);
+        this._super();
+        this._tmxFile && this._refreshLayerEntities();
+        this.node.on("anchor-changed", this._anchorChanged, this);
+        this.node.on("child-added", this._childAdded, this);
+        this.node.on("child-reorder", this._syncChildrenOrder, this);
+      },
+      onDisable: function() {
+        this._super();
+        this._setLayersEnabled(false);
+        var restoredSgNode = this._plainNode;
+        this._moveLayersInSgNode(restoredSgNode);
+        this.node.off("anchor-changed", this._anchorChanged, this);
+        this.node.off("child-added", this._childAdded, this);
+        this.node.off("child-reorder", this._syncChildrenOrder, this);
+      },
+      onDestroy: function() {
+        this._super();
+        this._removeLayerEntities();
+      },
+      _createSgNode: function() {
+        return new _ccsg.TMXTiledMap();
+      },
+      _initSgNode: function() {
+        this._applyFile();
+      },
+      _resetSgSize: function() {
+        this.node.setContentSize(this._sgNode.getContentSize());
+        this._sgNode.setContentSize(0, 0);
+      },
+      _onMapLoaded: function() {
+        this._refreshLayerEntities();
+        this._enabled ? this._anchorChanged() : this._moveLayersInSgNode(this._sgNode);
+        this._setLayersEnabled(this._enabled);
+        this._resetSgSize();
+      },
+      _setLayersEnabled: function(enabled) {
+        var logicChildren = this.node.getChildren();
+        for (var i = logicChildren.length - 1; i >= 0; i--) {
+          var child = logicChildren[i];
+          var tmxLayer = child.getComponent(cc.TiledLayer);
+          tmxLayer && (tmxLayer.enabled = enabled);
+        }
+      },
+      _moveLayersInSgNode: function(sgNode) {
+        this._detachedChildren.length = 0;
+        var children = sgNode.getChildren();
+        for (var i = children.length - 1; i >= 0; i--) {
+          var child = children[i];
+          if (child instanceof _ccsg.TMXLayer || child instanceof _ccsg.TMXObjectGroup) {
+            sgNode.removeChild(child);
+            var order = child.getLocalZOrder();
+            this._detachedChildren.push({
+              sgNode: child,
+              zorder: order
+            });
+          }
+        }
+      },
+      _removeLayerEntities: function() {
+        var logicChildren = this.node.getChildren();
+        for (var i = logicChildren.length - 1; i >= 0; i--) {
+          var child = logicChildren[i];
+          if (!child.isValid) continue;
+          var tmxLayer = child.getComponent(cc.TiledLayer);
+          tmxLayer && tmxLayer._tryRemoveNode();
+          var tmxGroup = child.getComponent(cc.TiledObjectGroup);
+          tmxGroup && tmxGroup._tryRemoveNode();
+        }
+      },
+      _refreshLayerEntities: function() {
+        var logicChildren = this.node.getChildren();
+        var existedLayers = [];
+        var existedGroups = [];
+        var otherChildrenInfo = [];
+        var i, n;
+        for (i = 0; i < this._detachedChildren.length; i++) {
+          var info = this._detachedChildren[i];
+          this._sgNode.addChild(info.sgNode, info.zorder, info.zorder);
+        }
+        this._detachedChildren.length = 0;
+        var layerNames = this._sgNode.allLayers().map((function(layer) {
+          return layer.getLayerName();
+        }));
+        var groupNames = this._sgNode.getObjectGroups().map((function(group) {
+          return group.getGroupName();
+        }));
+        for (i = logicChildren.length - 1; i >= 0; i--) {
+          var child = logicChildren[i];
+          var tmxLayer = child.getComponent(cc.TiledLayer);
+          var tmxGroup = child.getComponent(cc.TiledObjectGroup);
+          if (tmxLayer) {
+            var layerName = tmxLayer.getLayerName();
+            layerName || (layerName = child._name);
+            if (layerNames.indexOf(layerName) < 0) tmxLayer._tryRemoveNode(); else {
+              existedLayers.push(child);
+              var newSGLayer = this._sgNode.getLayer(layerName);
+              tmxLayer._replaceSgNode(newSGLayer);
+              tmxLayer.enabled = true;
+            }
+          } else if (tmxGroup) {
+            var groupName = tmxGroup.getGroupName();
+            groupName || (groupName = child._name);
+            if (groupNames.indexOf(groupName) < 0) tmxGroup._tryRemoveNode(); else {
+              existedGroups.push(child);
+              var newSGGroup = this._sgNode.getObjectGroup(groupName);
+              tmxGroup._replaceSgNode(newSGGroup);
+              tmxGroup.enabled = newSGGroup.isVisible();
+            }
+          } else otherChildrenInfo.push({
+            child: child,
+            index: child.getSiblingIndex()
+          });
+        }
+        var existedNames = existedLayers.map((function(node) {
+          var tmxLayer = node.getComponent(cc.TiledLayer);
+          return tmxLayer.getLayerName();
+        }));
+        for (i = 0, n = layerNames.length; i < n; i++) {
+          var name = layerNames[i];
+          var sgLayer = this._sgNode.getLayer(name);
+          var theIndex = existedNames.indexOf(name);
+          if (theIndex < 0) {
+            var node = this.node.getChildByName(name);
+            var addedLayer = null;
+            if (node && !node.getComponent(cc._SGComponent)) addedLayer = node.addComponent(cc.TiledLayer); else {
+              node = new cc.Node(name);
+              this.node.addChild(node);
+              addedLayer = node.addComponent(cc.TiledLayer);
+            }
+            node && addedLayer || cc.errorID(7202);
+            addedLayer._replaceSgNode(sgLayer);
+            node.setSiblingIndex(sgLayer.getLocalZOrder());
+            node.setAnchorPoint(this.node.getAnchorPoint());
+          }
+        }
+        var existedGroupNames = existedGroups.map((function(node) {
+          var tmxGroup = node.getComponent(cc.TiledObjectGroup);
+          return tmxGroup.getGroupName();
+        }));
+        for (i = 0, n = groupNames.length; i < n; i++) {
+          name = groupNames[i];
+          var sgGroup = this._sgNode.getObjectGroup(name);
+          theIndex = existedGroupNames.indexOf(name);
+          if (theIndex < 0) {
+            node = this.node.getChildByName(name);
+            var addedGroup = null;
+            if (node && !node.getComponent(cc._SGComponent)) addedGroup = node.addComponent(cc.TiledObjectGroup); else {
+              node = new cc.Node(name);
+              this.node.addChild(node);
+              addedGroup = node.addComponent(cc.TiledObjectGroup);
+            }
+            node && addedGroup || cc.errorID(7202);
+            addedGroup._replaceSgNode(sgGroup);
+            node.setSiblingIndex(sgGroup.getLocalZOrder());
+            node.setAnchorPoint(this.node.getAnchorPoint());
+            addedGroup.enabled = sgGroup.isVisible();
+          }
+        }
+        var curChildren = this.node.getChildren();
+        var curLayerNames = [];
+        for (i = 0, n = curChildren.length; i < n; i++) {
+          child = curChildren[i];
+          tmxLayer = child.getComponent(cc.TiledLayer);
+          tmxGroup = child.getComponent(cc.TiledObjectGroup);
+          (tmxLayer || tmxGroup) && curLayerNames.push(child._name);
+        }
+        var sgLayerNames = [];
+        var sgLayers = [];
+        var sgChildren = this._sgNode.getChildren();
+        for (i = 0, n = sgChildren.length; i < n; i++) {
+          child = sgChildren[i];
+          if (child instanceof _ccsg.TMXLayer) {
+            sgLayerNames.push(child.getLayerName());
+            sgLayers.push(child);
+          } else if (child instanceof _ccsg.TMXObjectGroup) {
+            sgLayerNames.push(child.getGroupName());
+            sgLayers.push(child);
+          }
+        }
+        for (i = sgLayerNames.length - 1; i >= 0; i--) {
+          var curName = sgLayerNames[i];
+          var nodeIdx = curLayerNames.indexOf(curName);
+          if (i !== nodeIdx) {
+            var curNode = this.node.getChildByName(curName);
+            curNode.setSiblingIndex(sgLayers[i].getLocalZOrder());
+          }
+        }
+        for (i = 0, n = otherChildrenInfo.length; i < n; i++) {
+          info = otherChildrenInfo[i];
+          info.child.setSiblingIndex(info.index);
+        }
+        this._syncChildrenOrder();
+      },
+      _anchorChanged: function() {
+        var children = this.node.children;
+        var anchor = this.node.getAnchorPoint();
+        for (var i = 0, n = children.length; i < n; i++) {
+          var child = children[i];
+          var hasLayer = child.getComponent(cc.TiledLayer);
+          hasLayer && child.setAnchorPoint(anchor);
+        }
+      },
+      _childAdded: function(event) {
+        var node = event.detail;
+        if (node) {
+          var tmxLayer = node.getComponent(cc.TiledLayer);
+          var tmxGroup = node.getComponent(cc.TiledObjectGroup);
+          if (!tmxLayer && !tmxGroup) {
+            var childrenCount = this.node.getChildrenCount();
+            node.setSiblingIndex(childrenCount);
+            node._sgNode && node._sgNode.setLocalZOrder(childrenCount);
+          }
+        }
+      },
+      _syncChildrenOrder: function() {
+        var logicChildren = this.node.children;
+        for (var i = 0, n = logicChildren.length; i < n; i++) {
+          var child = logicChildren[i];
+          var tmxLayer = child.getComponent(cc.TiledLayer);
+          var tmxGroup = child.getComponent(cc.TiledObjectGroup);
+          var zOrderValue = child.getSiblingIndex();
+          tmxLayer && tmxLayer._sgNode && tmxLayer._sgNode.setLocalZOrder(zOrderValue);
+          tmxGroup && tmxGroup._sgNode && tmxGroup._sgNode.setLocalZOrder(zOrderValue);
+          child._sgNode && child._sgNode.setLocalZOrder(zOrderValue);
+        }
+      },
+      _applyFile: function() {
+        var sgNode = this._sgNode;
+        var file = this._tmxFile;
+        var self = this;
+        if (file) {
+          var resPath = cc.url._rawAssets + file.tmxFolderPath;
+          resPath = cc.path.stripSep(resPath);
+          false;
+          var ret = sgNode.initWithXML(file.tmxXmlStr, resPath);
+          if (ret) {
+            self._detachedChildren.length = 0;
+            self._onMapLoaded();
+          }
+        } else {
+          var layers = sgNode.allLayers();
+          for (var i = 0, n = layers.length; i < n; i++) sgNode.removeChild(layers[i]);
+          var groups = sgNode.getObjectGroups();
+          for (i = 0, n = groups.length; i < n; i++) sgNode.removeChild(groups[i]);
+          this._detachedChildren.length = 0;
+          self._removeLayerEntities();
+        }
+      }
+    });
+    cc.TiledMap = module.exports = TiledMap;
+    cc.js.obsolete(cc.TiledMap.prototype, "cc.TiledMap.tmxFile", "tmxAsset", true);
+    cc.js.get(cc.TiledMap.prototype, "mapLoaded", (function() {
+      cc.errorID(7203);
+      return [];
+    }), false);
+  }), {
+    "./CCSGTMXTiledMap": 280,
+    "./CCTiledLayer": 284,
+    "./CCTiledMapAsset": 286,
+    "./CCTiledObjectGroup": 287
+  } ],
+  286: [ (function(require, module, exports) {
+    var TiledMapAsset = cc.Class({
+      name: "cc.TiledMapAsset",
+      extends: cc.Asset,
+      properties: {
+        tmxXmlStr: {
+          default: ""
+        },
+        tmxFolderPath: {
+          default: ""
+        },
+        textures: {
+          default: [],
+          url: [ cc.Texture2D ]
+        },
+        tsxFiles: {
+          default: [],
+          url: [ cc.RawAsset ]
+        }
+      },
+      statics: {
+        preventDeferredLoadDependents: true
+      },
+      createNode: false
+    });
+    cc.TiledMapAsset = TiledMapAsset;
+    module.exports = TiledMapAsset;
+  }), {} ],
+  287: [ (function(require, module, exports) {
+    require("./CCSGTMXObjectGroup");
+    var TiledObjectGroup = cc.Class({
+      name: "cc.TiledObjectGroup",
+      extends: cc._SGComponent,
+      onEnable: function() {
+        this._sgNode && this._sgNode.setVisible(true);
+      },
+      onDisable: function() {
+        this._sgNode && this._sgNode.setVisible(false);
+      },
+      onDestroy: function() {
+        this.node._sizeProvider === this._sgNode && (this.node._sizeProvider = null);
+      },
+      _initSgNode: function() {
+        var sgNode = this._sgNode;
+        if (!sgNode) return;
+        this._registSizeProvider();
+        sgNode.setAnchorPoint(this.node.getAnchorPoint());
+      },
+      _replaceSgNode: function(sgNode) {
+        if (sgNode === this._sgNode) return;
+        this._removeSgNode();
+        this.node._sizeProvider === this._sgNode && (this.node._sizeProvider = null);
+        if (sgNode && sgNode instanceof _ccsg.TMXObjectGroup) {
+          this._sgNode = sgNode;
+          false;
+          this._initSgNode();
+        } else this._sgNode = null;
+      },
+      getPositionOffset: function() {
+        if (this._sgNode) return this._sgNode.getPositionOffset();
+        return cc.p(0, 0);
+      },
+      setPositionOffset: function(offset) {
+        this._sgNode && this._sgNode.setPositionOffset(offset);
+      },
+      getProperties: function() {
+        if (this._sgNode) return this._sgNode.getProperties();
+        return null;
+      },
+      setProperties: function(Var) {
+        this._sgNode && this._sgNode.setProperties(Var);
+      },
+      getGroupName: function() {
+        if (this._sgNode) return this._sgNode.getGroupName();
+        return "";
+      },
+      setGroupName: function(groupName) {
+        this._sgNode && this._sgNode.setGroupName(groupName);
+      },
+      getProperty: function(propertyName) {
+        if (this._sgNode) return this._sgNode.propertyNamed(propertyName);
+        return null;
+      },
+      getObject: function(objectName) {
+        if (this._sgNode) return this._sgNode.getObject(objectName);
+        return null;
+      },
+      getObjects: function() {
+        if (this._sgNode) return this._sgNode.getObjects();
+        return [];
+      },
+      _tryRemoveNode: function() {
+        this.node.removeComponent(cc.TiledObjectGroup);
+        1 === this.node._components.length && 0 === this.node.getChildren().length && this.node.removeFromParent();
+      }
+    });
+    cc.TiledObjectGroup = module.exports = TiledObjectGroup;
+  }), {
+    "./CCSGTMXObjectGroup": 279
+  } ],
+  288: [ (function(require, module, exports) {
     require("./cocos2d/core");
     require("./cocos2d/animation");
     false;
@@ -46750,23 +50639,23 @@
     true;
     require("./cocos2d/deprecated");
   }), {
-    "./cocos2d/actions": 11,
-    "./cocos2d/animation": 19,
-    "./cocos2d/core": 122,
-    "./cocos2d/core/components/CCStudioComponent": 1,
-    "./cocos2d/deprecated": 237,
-    "./cocos2d/motion-streak/CCMotionStreak": 252,
-    "./cocos2d/particle/CCParticleAsset": 256,
-    "./cocos2d/particle/CCParticleSystem": 257,
-    "./cocos2d/tilemap/CCTiledMap": 1,
-    "./cocos2d/tilemap/CCTiledMapAsset": 1,
-    "./extensions/ccpool/CCNodePool": 274,
-    "./extensions/ccpool/CCPool": 275,
-    "./extensions/dragonbones": 283,
-    "./extensions/spine": 1,
-    "./external/chipmunk/chipmunk": 1
+    "./cocos2d/actions": 10,
+    "./cocos2d/animation": 18,
+    "./cocos2d/core": 124,
+    "./cocos2d/core/components/CCStudioComponent": 95,
+    "./cocos2d/deprecated": 241,
+    "./cocos2d/motion-streak/CCMotionStreak": 256,
+    "./cocos2d/particle/CCParticleAsset": 260,
+    "./cocos2d/particle/CCParticleSystem": 261,
+    "./cocos2d/tilemap/CCTiledMap": 285,
+    "./cocos2d/tilemap/CCTiledMapAsset": 286,
+    "./extensions/ccpool/CCNodePool": 289,
+    "./extensions/ccpool/CCPool": 290,
+    "./extensions/dragonbones": 298,
+    "./extensions/spine": 307,
+    "./external/chipmunk/chipmunk": 310
   } ],
-  274: [ (function(require, module, exports) {
+  289: [ (function(require, module, exports) {
     cc.NodePool = function(poolHandlerComp) {
       this.poolHandlerComp = poolHandlerComp;
       this._pool = [];
@@ -46801,7 +50690,7 @@
     };
     module.exports = cc.NodePool;
   }), {} ],
-  275: [ (function(require, module, exports) {
+  290: [ (function(require, module, exports) {
     var _args = [];
     cc.pool = {
       _pool: {},
@@ -46858,7 +50747,7 @@
       }
     };
   }), {} ],
-  276: [ (function(require, module, exports) {
+  291: [ (function(require, module, exports) {
     var DefaultArmaturesEnum = cc.Enum({
       default: -1
     });
@@ -47117,7 +51006,7 @@
       }
     });
   }), {} ],
-  277: [ (function(require, module, exports) {
+  292: [ (function(require, module, exports) {
     var EventTarget = require("../../cocos2d/core/event/event-target");
     require("../../cocos2d/shape-nodes/CCDrawNode");
     dragonBones.CCArmatureDisplay = cc.Class({
@@ -47186,10 +51075,10 @@
       }
     });
   }), {
-    "../../cocos2d/core/event/event-target": 111,
-    "../../cocos2d/shape-nodes/CCDrawNode": 270
+    "../../cocos2d/core/event/event-target": 113,
+    "../../cocos2d/shape-nodes/CCDrawNode": 274
   } ],
-  278: [ (function(require, module, exports) {
+  293: [ (function(require, module, exports) {
     var BaseObject = dragonBones.BaseObject;
     dragonBones.CCFactory = cc.Class({
       name: "dragonBones.CCFactory",
@@ -47288,7 +51177,7 @@
       return dragonBones.CCFactory._factory;
     };
   }), {} ],
-  279: [ (function(require, module, exports) {
+  294: [ (function(require, module, exports) {
     dragonBones.CCSlot = cc.Class({
       name: "dragonBones.CCSlot",
       extends: dragonBones.Slot,
@@ -47535,7 +51424,7 @@
       }
     });
   }), {} ],
-  280: [ (function(require, module, exports) {
+  295: [ (function(require, module, exports) {
     dragonBones.CCTextureAtlasData = cc.Class({
       name: "dragonBones.CCTextureAtlasData",
       extends: dragonBones.TextureAtlasData,
@@ -47571,7 +51460,7 @@
       }
     });
   }), {} ],
-  281: [ (function(require, module, exports) {
+  296: [ (function(require, module, exports) {
     var DragonBonesAsset = cc.Class({
       name: "dragonBones.DragonBonesAsset",
       extends: cc.Asset,
@@ -47600,7 +51489,7 @@
     });
     dragonBones.DragonBonesAsset = module.exports = DragonBonesAsset;
   }), {} ],
-  282: [ (function(require, module, exports) {
+  297: [ (function(require, module, exports) {
     var DragonBonesAtlasAsset = cc.Class({
       name: "dragonBones.DragonBonesAtlasAsset",
       extends: cc.Asset,
@@ -47626,7 +51515,7 @@
     });
     dragonBones.DragonBonesAtlasAsset = module.exports = DragonBonesAtlasAsset;
   }), {} ],
-  283: [ (function(require, module, exports) {
+  298: [ (function(require, module, exports) {
     dragonBones = require("./lib/dragonBones");
     dragonBones.DisplayType = {
       Image: 0,
@@ -47677,16 +51566,16 @@
     require("./DragonBonesAtlasAsset");
     require("./ArmatureDisplay");
   }), {
-    "./ArmatureDisplay": 276,
-    "./CCArmatureDisplay": 277,
-    "./CCFactory": 278,
-    "./CCSlot": 279,
-    "./CCTextureData": 280,
-    "./DragonBonesAsset": 281,
-    "./DragonBonesAtlasAsset": 282,
-    "./lib/dragonBones": 284
+    "./ArmatureDisplay": 291,
+    "./CCArmatureDisplay": 292,
+    "./CCFactory": 293,
+    "./CCSlot": 294,
+    "./CCTextureData": 295,
+    "./DragonBonesAsset": 296,
+    "./DragonBonesAtlasAsset": 297,
+    "./lib/dragonBones": 299
   } ],
-  284: [ (function(require, module, exports) {
+  299: [ (function(require, module, exports) {
     var __extends = this && this.__extends || function(d, b) {
       for (var p in b) b.hasOwnProperty(p) && (d[p] = b[p]);
       function __() {
@@ -53344,7 +57233,5958 @@
     })(dragonBones || (dragonBones = {}));
     module.exports = dragonBones;
   }), {} ],
-  285: [ (function(require, module, exports) {
+  300: [ (function(require, module, exports) {
+    var spine = sp.spine;
+    sp._SGSkeleton = _ccsg.Node.extend({
+      _skeleton: null,
+      _rootBone: null,
+      _timeScale: 1,
+      _debugSlots: false,
+      _debugBones: false,
+      _premultipliedAlpha: false,
+      _ownsSkeletonData: null,
+      _atlas: null,
+      ctor: function(skeletonDataFile, atlasFile, scale) {
+        _ccsg.Node.prototype.ctor.call(this);
+        0 === arguments.length ? this.init() : this.initWithArgs(skeletonDataFile, atlasFile, scale);
+      },
+      _createRenderCmd: function() {
+        return cc._renderType === cc.game.RENDER_TYPE_CANVAS ? new sp._SGSkeleton.CanvasRenderCmd(this) : new sp._SGSkeleton.WebGLRenderCmd(this);
+      },
+      init: function() {
+        _ccsg.Node.prototype.init.call(this);
+        this._premultipliedAlpha = cc._renderType === cc.game.RENDER_TYPE_WEBGL && cc.OPTIMIZE_BLEND_FUNC_FOR_PREMULTIPLIED_ALPHA;
+        this.scheduleUpdate();
+      },
+      setDebugSlotsEnabled: function(enabled) {
+        this._debugSlots = enabled;
+      },
+      getDebugSlotsEnabled: function() {
+        return this._debugSlots;
+      },
+      setDebugBonesEnabled: function(enabled) {
+        this._debugBones = enabled;
+      },
+      getDebugBonesEnabled: function() {
+        return this._debugBones;
+      },
+      setTimeScale: function(scale) {
+        this._timeScale = scale;
+      },
+      getTimeScale: function() {
+        return this._timeScale;
+      },
+      initWithArgs: function(skeletonDataFile, atlasFile, scale) {
+        var argSkeletonFile = skeletonDataFile, argAtlasFile = atlasFile, skeletonData, atlas, ownsSkeletonData;
+        if (cc.js.isString(argSkeletonFile)) {
+          if (cc.js.isString(argAtlasFile)) {
+            var data = cc.loader.getRes(argAtlasFile);
+            sp._atlasLoader.setAtlasFile(argAtlasFile);
+            atlas = new spine.TextureAtlas(data, sp._atlasLoader.load.bind(sp._atlasLoader));
+          } else atlas = atlasFile;
+          scale = scale || 1 / cc.director.getContentScaleFactor();
+          var attachmentLoader = new spine.AtlasAttachmentLoader(atlas);
+          var skeletonJsonReader = new spine.SkeletonJson(attachmentLoader);
+          skeletonJsonReader.scale = scale;
+          var skeletonJson = cc.loader.getRes(argSkeletonFile);
+          skeletonData = skeletonJsonReader.readSkeletonData(skeletonJson);
+          atlas.dispose(skeletonJsonReader);
+          ownsSkeletonData = true;
+        } else {
+          skeletonData = skeletonDataFile;
+          ownsSkeletonData = atlasFile;
+        }
+        this.setSkeletonData(skeletonData, ownsSkeletonData);
+        this.init();
+      },
+      getBoundingBox: function() {
+        var minX = cc.macro.FLT_MAX, minY = cc.macro.FLT_MAX, maxX = cc.macro.FLT_MIN, maxY = cc.macro.FLT_MIN;
+        var scaleX = this.getScaleX(), scaleY = this.getScaleY(), vertices, slots = this._skeleton.slots, VERTEX = spine.RegionAttachment;
+        for (var i = 0, slotCount = slots.length; i < slotCount; ++i) {
+          var slot = slots[i];
+          var attachment = slot.attachment;
+          if (!attachment || !(attachment instanceof spine.RegionAttachment)) continue;
+          vertices = attachment.updateWorldVertices(slot, false);
+          minX = Math.min(minX, vertices[VERTEX.X1] * scaleX, vertices[VERTEX.X4] * scaleX, vertices[VERTEX.X2] * scaleX, vertices[VERTEX.X3] * scaleX);
+          minY = Math.min(minY, vertices[VERTEX.Y1] * scaleY, vertices[VERTEX.Y4] * scaleY, vertices[VERTEX.Y2] * scaleY, vertices[VERTEX.Y3] * scaleY);
+          maxX = Math.max(maxX, vertices[VERTEX.X1] * scaleX, vertices[VERTEX.X4] * scaleX, vertices[VERTEX.X2] * scaleX, vertices[VERTEX.X3] * scaleX);
+          maxY = Math.max(maxY, vertices[VERTEX.Y1] * scaleY, vertices[VERTEX.Y4] * scaleY, vertices[VERTEX.Y2] * scaleY, vertices[VERTEX.Y3] * scaleY);
+        }
+        var position = this.getPosition();
+        return cc.rect(position.x + minX, position.y + minY, maxX - minX, maxY - minY);
+      },
+      updateWorldTransform: function() {
+        this._skeleton.updateWorldTransform();
+      },
+      setToSetupPose: function() {
+        this._skeleton.setToSetupPose();
+      },
+      setBonesToSetupPose: function() {
+        this._skeleton.setBonesToSetupPose();
+      },
+      setSlotsToSetupPose: function() {
+        this._skeleton.setSlotsToSetupPose();
+      },
+      findBone: function(boneName) {
+        return this._skeleton.findBone(boneName);
+      },
+      findSlot: function(slotName) {
+        return this._skeleton.findSlot(slotName);
+      },
+      setSkin: function(skinName) {
+        return this._skeleton.setSkinByName(skinName);
+      },
+      getAttachment: function(slotName, attachmentName) {
+        return this._skeleton.getAttachmentByName(slotName, attachmentName);
+      },
+      setAttachment: function(slotName, attachmentName) {
+        this._skeleton.setAttachment(slotName, attachmentName);
+      },
+      setPremultipliedAlpha: function(premultiplied) {
+        this._premultipliedAlpha = premultiplied;
+      },
+      isPremultipliedAlpha: function() {
+        return this._premultipliedAlpha;
+      },
+      setSkeletonData: function(skeletonData, ownsSkeletonData) {
+        null != skeletonData.width && null != skeletonData.height && this.setContentSize(skeletonData.width / cc.director.getContentScaleFactor(), skeletonData.height / cc.director.getContentScaleFactor());
+        this._skeleton = new spine.Skeleton(skeletonData);
+        this._skeleton.updateWorldTransform();
+        this._rootBone = this._skeleton.getRootBone();
+        this._ownsSkeletonData = ownsSkeletonData;
+        this._renderCmd._createChildFormSkeletonData();
+      },
+      getTextureAtlas: function(regionAttachment) {
+        return regionAttachment.region;
+      },
+      getBlendFunc: function() {
+        var slot = this._skeleton.drawOrder[0];
+        if (slot) {
+          var blend = this._renderCmd._getBlendFunc(slot.data.blendMode, this._premultipliedAlpha);
+          return blend;
+        }
+        return {};
+      },
+      setBlendFunc: function(src, dst) {
+        return;
+      },
+      update: function(dt) {
+        this._skeleton.update(dt);
+      }
+    });
+    var proto = sp._SGSkeleton.prototype;
+    Object.defineProperty(proto, "opacityModifyRGB", {
+      get: proto.isOpacityModifyRGB
+    });
+    Object.defineProperty(proto, "_blendFunc", {
+      get: proto.getBlendFunc
+    });
+    Object.defineProperty(proto, "_texture", {
+      get: function() {
+        return this._renderCmd._currTexture;
+      }
+    });
+  }), {} ],
+  301: [ (function(require, module, exports) {
+    var spine = sp.spine;
+    var animEventType = sp.AnimationEventType;
+    sp._atlasLoader = {
+      spAtlasFile: null,
+      setAtlasFile: function(spAtlasFile) {
+        this.spAtlasFile = spAtlasFile;
+      },
+      load: function(line) {
+        var texturePath = cc.path.join(cc.path.dirname(this.spAtlasFile), line);
+        var texture = cc.textureCache.addImage(texturePath);
+        var tex = new sp.SkeletonTexture({
+          width: texture.getPixelWidth(),
+          height: texture.getPixelHeight()
+        });
+        tex.setRealTexture(texture);
+        return tex;
+      },
+      unload: function(obj) {}
+    };
+    sp.TrackEntryListeners = function(startListener, endListener, completeListener, eventListener, interruptListener, disposeListener) {
+      this.startListener = startListener || null;
+      this.endListener = endListener || null;
+      this.completeListener = completeListener || null;
+      this.eventListener = eventListener || null;
+      this.interruptListener = interruptListener || null;
+      this.disposeListener = disposeListener || null;
+      this.callback = null;
+      this.callbackTarget = null;
+      this.skeletonNode = null;
+    };
+    var proto = sp.TrackEntryListeners.prototype;
+    proto.start = function(trackEntry) {
+      this.startListener && this.startListener(trackEntry);
+      this.callback && this.callback.call(this.callbackTarget, this.skeletonNode, trackEntry, animEventType.START, null, 0);
+    };
+    proto.interrupt = function(trackEntry) {
+      this.interruptListener && this.interruptListener(trackEntry);
+      this.callback && this.callback.call(this.callbackTarget, this.skeletonNode, trackEntry, animEventType.INTERRUPT, null, 0);
+    };
+    proto.end = function(trackEntry) {
+      this.endListener && this.endListener(trackEntry);
+      this.callback && this.callback.call(this.callbackTarget, this.skeletonNode, trackEntry, animEventType.END, null, 0);
+    };
+    proto.dispose = function(trackEntry) {
+      this.disposeListener && this.disposeListener(trackEntry);
+      this.callback && this.callback.call(this.callbackTarget, this.skeletonNode, trackEntry, animEventType.DISPOSE, null, 0);
+    };
+    proto.complete = function(trackEntry) {
+      var loopCount = Math.floor(trackEntry.trackTime / trackEntry.animationEnd);
+      this.completeListener && this.completeListener(trackEntry, loopCount);
+      this.callback && this.callback.call(this.callbackTarget, this.skeletonNode, trackEntry, animEventType.COMPLETE, null, loopCount);
+    };
+    proto.event = function(trackEntry, event) {
+      this.eventListener && this.eventListener(trackEntry, event);
+      this.callback && this.callback.call(this.callbackTarget, this.skeletonNode, trackEntry, animEventType.EVENT, event, 0);
+    };
+    sp.TrackEntryListeners.getListeners = function(entry) {
+      entry.listener || (entry.listener = new sp.TrackEntryListeners());
+      return entry.listener;
+    };
+    sp._SGSkeletonAnimation = sp._SGSkeleton.extend({
+      _state: null,
+      _ownsAnimationStateData: false,
+      _listener: null,
+      init: function() {
+        sp._SGSkeleton.prototype.init.call(this);
+        this._ownsAnimationStateData = true;
+        this.setAnimationStateData(new spine.AnimationStateData(this._skeleton.data));
+      },
+      setAnimationStateData: function(stateData) {
+        var state = new spine.AnimationState(stateData);
+        this._listener = new sp.TrackEntryListeners();
+        state.rendererObject = this;
+        state.addListener(this._listener);
+        this._state = state;
+      },
+      setMix: function(fromAnimation, toAnimation, duration) {
+        this._state.data.setMixWith(fromAnimation, toAnimation, duration);
+      },
+      setAnimationListener: function(target, callback) {
+        this._listener.callbackTarget = target;
+        this._listener.callback = callback;
+        this._listener.skeletonNode = this;
+      },
+      setAnimation: function(trackIndex, name, loop) {
+        var animation = this._skeleton.data.findAnimation(name);
+        if (!animation) {
+          cc.logID(7509, name);
+          return null;
+        }
+        return this._state.setAnimationWith(trackIndex, animation, loop);
+      },
+      addAnimation: function(trackIndex, name, loop, delay) {
+        delay = null == delay ? 0 : delay;
+        var animation = this._skeleton.data.findAnimation(name);
+        if (!animation) {
+          cc.logID(7510, name);
+          return null;
+        }
+        return this._state.addAnimationWith(trackIndex, animation, loop, delay);
+      },
+      findAnimation: function(name) {
+        return this._skeleton.data.findAnimation(name);
+      },
+      getCurrent: function(trackIndex) {
+        return this._state.getCurrent(trackIndex);
+      },
+      clearTracks: function() {
+        this._state.clearTracks();
+      },
+      clearTrack: function(trackIndex) {
+        this._state.clearTrack(trackIndex);
+      },
+      update: function(dt) {
+        this._super(dt);
+        dt *= this._timeScale;
+        this._renderCmd.setDirtyFlag(_ccsg.Node._dirtyFlags.contentDirty);
+        this._state.update(dt);
+        this._state.apply(this._skeleton);
+        this._skeleton.updateWorldTransform();
+        this._renderCmd._updateChild();
+      },
+      setStartListener: function(listener) {
+        this._listener.startListener = listener;
+      },
+      setInterruptListener: function(listener) {
+        this._listener.interruptListener = listener;
+      },
+      setEndListener: function(listener) {
+        this._listener.endListener = listener;
+      },
+      setDisposeListener: function(listener) {
+        this._listener.disposeListener = listener;
+      },
+      setCompleteListener: function(listener) {
+        this._listener.completeListener = listener;
+      },
+      setEventListener: function(listener) {
+        this._listener.eventListener = listener;
+      },
+      setTrackStartListener: function(entry, listener) {
+        sp.TrackEntryListeners.getListeners(entry).startListener = listener;
+      },
+      setTrackInterruptListener: function(entry, listener) {
+        sp.TrackEntryListeners.getListeners(entry).interruptListener = listener;
+      },
+      setTrackEndListener: function(entry, listener) {
+        sp.TrackEntryListeners.getListeners(entry).endListener = listener;
+      },
+      setTrackDisposeListener: function(entry, listener) {
+        sp.TrackEntryListeners.getListeners(entry).disposeListener = listener;
+      },
+      setTrackCompleteListener: function(entry, listener) {
+        sp.TrackEntryListeners.getListeners(entry).completeListener = listener;
+      },
+      setTrackEventListener: function(entry, listener) {
+        sp.TrackEntryListeners.getListeners(entry).eventListener = listener;
+      },
+      getState: function() {
+        return this._state;
+      }
+    });
+  }), {} ],
+  302: [ (function(require, module, exports) {
+    require("../../cocos2d/core/CCDrawingPrimitives");
+    var spine = sp.spine;
+    sp._SGSkeleton.CanvasRenderCmd = function(renderableObject) {
+      this._rootCtor(renderableObject);
+      this._needDraw = true;
+    };
+    var proto = sp._SGSkeleton.CanvasRenderCmd.prototype = Object.create(_ccsg.Node.CanvasRenderCmd.prototype);
+    proto.constructor = sp._SGSkeleton.CanvasRenderCmd;
+    proto.rendering = function(wrapper, scaleX, scaleY) {
+      var node = this._node, i, n, slot, slotNode;
+      wrapper = wrapper || cc._renderContext;
+      var locSkeleton = node._skeleton, drawOrder = locSkeleton.drawOrder;
+      for (i = 0, n = drawOrder.length; i < n; i++) {
+        slot = drawOrder[i];
+        slotNode = slot._slotNode;
+        if (slotNode._visible && slotNode._renderCmd && slot.currentSprite) {
+          slotNode._renderCmd.transform(this, true);
+          slot.currentSprite._renderCmd.rendering(wrapper, scaleX, scaleY);
+          slotNode._renderCmd._dirtyFlag = slot.currentSprite._renderCmd._dirtyFlag = 0;
+        }
+      }
+      if (!node._debugSlots && !node._debugBones) return;
+      wrapper.setTransform(this._worldTransform, scaleX, scaleY);
+      wrapper.setGlobalAlpha(1);
+      var attachment, drawingUtil = cc._drawingUtil;
+      if (node._debugSlots) {
+        drawingUtil.setDrawColor(0, 0, 255, 255);
+        drawingUtil.setLineWidth(1);
+        var points = [];
+        for (i = 0, n = locSkeleton.slots.length; i < n; i++) {
+          slot = locSkeleton.drawOrder[i];
+          if (!slot.attachment || !(slot.attachment instanceof spine.RegionAttachment)) continue;
+          attachment = slot.attachment;
+          this._updateRegionAttachmentSlot(attachment, slot, points);
+          drawingUtil.drawPoly(points, 4, true);
+        }
+      }
+      if (node._debugBones) {
+        var bone;
+        drawingUtil.setLineWidth(2);
+        drawingUtil.setDrawColor(255, 0, 0, 255);
+        for (i = 0, n = locSkeleton.bones.length; i < n; i++) {
+          bone = locSkeleton.bones[i];
+          var x = bone.data.length * bone.a + bone.worldX;
+          var y = bone.data.length * bone.c + bone.worldY;
+          drawingUtil.drawLine({
+            x: bone.worldX,
+            y: bone.worldY
+          }, {
+            x: x,
+            y: y
+          });
+        }
+        drawingUtil.setPointSize(4);
+        drawingUtil.setDrawColor(0, 0, 255, 255);
+        for (i = 0, n = locSkeleton.bones.length; i < n; i++) {
+          bone = locSkeleton.bones[i];
+          drawingUtil.drawPoint({
+            x: bone.worldX,
+            y: bone.worldY
+          });
+          0 === i && drawingUtil.setDrawColor(0, 255, 0, 255);
+        }
+      }
+    };
+    proto.updateStatus = function() {
+      this.originUpdateStatus();
+      this._updateCurrentRegions();
+      this._regionFlag = _ccsg.Node.CanvasRenderCmd.RegionStatus.DirtyDouble;
+      this._dirtyFlag &= ~_ccsg.Node._dirtyFlags.contentDirty;
+    };
+    proto.getLocalBB = function() {
+      return this._node.getBoundingBox();
+    };
+    proto._updateRegionAttachmentSlot = function(attachment, slot, points) {
+      if (!points) return;
+      var vertices = attachment.updateWorldVertices(slot, false);
+      var VERTEX = spine.RegionAttachment;
+      points.length = 0;
+      points.push(cc.p(vertices[VERTEX.X1], vertices[VERTEX.Y1]));
+      points.push(cc.p(vertices[VERTEX.X4], vertices[VERTEX.Y4]));
+      points.push(cc.p(vertices[VERTEX.X3], vertices[VERTEX.Y3]));
+      points.push(cc.p(vertices[VERTEX.X2], vertices[VERTEX.Y2]));
+    };
+    proto._createChildFormSkeletonData = function() {
+      var node = this._node;
+      var locSkeleton = node._skeleton, spriteName, sprite;
+      for (var i = 0, n = locSkeleton.slots.length; i < n; i++) {
+        var slot = locSkeleton.slots[i], attachment = slot.attachment;
+        var slotNode = new _ccsg.Node();
+        slot._slotNode = slotNode;
+        if (attachment instanceof spine.RegionAttachment) {
+          spriteName = attachment.region.name;
+          sprite = this._createSprite(slot, attachment);
+          slot.currentSprite = sprite;
+          slot.currentSpriteName = spriteName;
+          slotNode.addChild(sprite);
+        } else attachment instanceof spine.MeshAttachment;
+      }
+    };
+    proto._createSprite = function(slot, attachment) {
+      var rendererObject = attachment.region;
+      var texture = rendererObject.texture.getRealTexture();
+      var rect = new cc.Rect(rendererObject.x, rendererObject.y, rendererObject.width, rendererObject.height);
+      var sprite = new _ccsg.Sprite();
+      sprite.initWithTexture(texture, rect, rendererObject.rotate, false);
+      sprite._rect.width = attachment.width;
+      sprite._rect.height = attachment.height;
+      sprite.setContentSize(attachment.width, attachment.height);
+      sprite.setRotation(-attachment.rotation);
+      sprite.setScale(rendererObject.width / rendererObject.originalWidth * attachment.scaleX, rendererObject.height / rendererObject.originalHeight * attachment.scaleY);
+      slot.sprites = slot.sprites || {};
+      slot.sprites[rendererObject.name] = sprite;
+      return sprite;
+    };
+    proto._updateChild = function() {
+      var locSkeleton = this._node._skeleton, slots = locSkeleton.slots;
+      var color = this._displayedColor, opacity = this._displayedOpacity;
+      var i, n, selSprite, ax, ay;
+      var slot, attachment, slotNode;
+      for (i = 0, n = slots.length; i < n; i++) {
+        slot = slots[i];
+        attachment = slot.attachment;
+        slotNode = slot._slotNode;
+        if (!attachment) {
+          slotNode.setVisible(false);
+          continue;
+        }
+        if (attachment instanceof spine.RegionAttachment) {
+          if (attachment.region && (!slot.currentSpriteName || slot.currentSpriteName !== attachment.name)) {
+            var spriteName = attachment.region.name;
+            void 0 !== slot.currentSprite && slot.currentSprite.setVisible(false);
+            slot.sprites = slot.sprites || {};
+            if (void 0 !== slot.sprites[spriteName]) slot.sprites[spriteName].setVisible(true); else {
+              var sprite = this._createSprite(slot, attachment);
+              slotNode.addChild(sprite);
+            }
+            slot.currentSprite = slot.sprites[spriteName];
+            slot.currentSpriteName = spriteName;
+          }
+          var bone = slot.bone;
+          if (0 === attachment.region.offsetX && 0 === attachment.region.offsetY) {
+            ax = attachment.x;
+            ay = attachment.y;
+          } else {
+            ax = .5 * (attachment.offset[0] + attachment.offset[4]);
+            ay = .5 * (attachment.offset[1] + attachment.offset[5]);
+          }
+          slotNode.setPosition(bone.worldX + ax * bone.a + ay * bone.b, bone.worldY + ax * bone.c + ay * bone.d);
+          slotNode.setScale(bone.getWorldScaleX(), bone.getWorldScaleY());
+          selSprite = slot.currentSprite;
+          selSprite._flippedX = bone.skeleton.flipX;
+          selSprite._flippedY = bone.skeleton.flipY;
+          if (selSprite._flippedY || selSprite._flippedX) {
+            slotNode.setRotation(bone.getWorldRotationX());
+            selSprite.setRotation(attachment.rotation);
+          } else {
+            slotNode.setRotation(-bone.getWorldRotationX());
+            selSprite.setRotation(-attachment.rotation);
+          }
+          selSprite._renderCmd._displayedOpacity = 0 | opacity * slot.color.a;
+          var r = 0 | color.r * slot.color.r, g = 0 | color.g * slot.color.g, b = 0 | color.b * slot.color.b;
+          selSprite.setColor(cc.color(r, g, b));
+          selSprite._renderCmd._updateColor();
+        } else if (!(attachment instanceof spine.MeshAttachment)) {
+          slotNode.setVisible(false);
+          continue;
+        }
+        slotNode.setVisible(true);
+      }
+    };
+  }), {
+    "../../cocos2d/core/CCDrawingPrimitives": 36
+  } ],
+  303: [ (function(require, module, exports) {
+    sp.SkeletonTexture = cc.Class({
+      name: "sp.SkeletonTexture",
+      extends: sp.spine.Texture,
+      _texture: null,
+      setRealTexture: function(tex) {
+        this._texture = tex;
+      },
+      getRealTexture: function() {
+        return this._texture;
+      },
+      setFilters: function(minFilter, magFilter) {
+        if (cc._renderType === cc.game.RENDER_TYPE_WEBGL) {
+          var gl = cc._renderContext;
+          this.bind();
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, minFilter);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, magFilter);
+        }
+      },
+      setWraps: function(uWrap, vWrap) {
+        if (cc._renderType === cc.game.RENDER_TYPE_WEBGL) {
+          var gl = cc._renderContext;
+          this.bind();
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, uWrap);
+          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, vWrap);
+        }
+      },
+      dispose: function() {},
+      bind: function() {
+        cc._renderType === cc.game.RENDER_TYPE_WEBGL && cc.gl.bindTexture2DN(0, this._texture);
+      }
+    });
+  }), {} ],
+  304: [ (function(require, module, exports) {
+    require("../../cocos2d/core/CCDrawingPrimitives");
+    var spine = sp.spine;
+    sp._SGSkeleton.WebGLRenderCmd = function(renderableObject) {
+      this._rootCtor(renderableObject);
+      this._needDraw = true;
+      this._matrix = new cc.math.Matrix4();
+      this._matrix.identity();
+      this._currTexture = null;
+      this._currBlendFunc = {};
+      this.vertexType = cc.renderer.VertexType.CUSTOM;
+      this.setShaderProgram(cc.shaderCache.programForKey(cc.macro.SHADER_SPRITE_POSITION_TEXTURECOLOR));
+    };
+    var proto = sp._SGSkeleton.WebGLRenderCmd.prototype = Object.create(_ccsg.Node.WebGLRenderCmd.prototype);
+    proto.constructor = sp._SGSkeleton.WebGLRenderCmd;
+    proto.uploadData = function(f32buffer, ui32buffer, vertexDataOffset) {
+      var node = this._node;
+      var color = this._displayedColor, locSkeleton = node._skeleton;
+      var attachment, slot, i, n;
+      var premultiAlpha = node._premultipliedAlpha;
+      locSkeleton.r = color.r / 255;
+      locSkeleton.g = color.g / 255;
+      locSkeleton.b = color.b / 255;
+      locSkeleton.a = this._displayedOpacity / 255;
+      if (premultiAlpha) {
+        locSkeleton.r *= locSkeleton.a;
+        locSkeleton.g *= locSkeleton.a;
+        locSkeleton.b *= locSkeleton.a;
+      }
+      var debugSlotsInfo = null;
+      this._node._debugSlots && (debugSlotsInfo = []);
+      for (i = 0, n = locSkeleton.drawOrder.length; i < n; i++) {
+        slot = locSkeleton.drawOrder[i];
+        if (!slot.attachment) continue;
+        attachment = slot.attachment;
+        var vertCount = 0;
+        if (attachment instanceof spine.RegionAttachment) vertCount = 6; else {
+          if (!(attachment instanceof spine.MeshAttachment)) continue;
+          vertCount = attachment.regionUVs.length / 2;
+        }
+        if (0 === vertCount) continue;
+        var regionTextureAtlas = node.getTextureAtlas(attachment);
+        this._currTexture = regionTextureAtlas.texture.getRealTexture();
+        var batchBroken = cc.renderer._updateBatchedInfo(this._currTexture, this._getBlendFunc(slot.data.blendMode, premultiAlpha), this._shaderProgram);
+        if (!batchBroken && vertexDataOffset + 6 * vertCount > f32buffer.length) {
+          cc.renderer._batchRendering();
+          batchBroken = true;
+        }
+        batchBroken && (vertexDataOffset = 0);
+        var slotDebugPoints = null;
+        if (attachment instanceof spine.RegionAttachment) slotDebugPoints = this._uploadRegionAttachmentData(attachment, slot, premultiAlpha, f32buffer, ui32buffer, vertexDataOffset); else {
+          if (!(attachment instanceof spine.MeshAttachment)) continue;
+          this._uploadMeshAttachmentData(attachment, slot, premultiAlpha, f32buffer, ui32buffer, vertexDataOffset);
+        }
+        this._node._debugSlots && (debugSlotsInfo[i] = slotDebugPoints);
+        attachment instanceof spine.RegionAttachment ? cc.renderer._increaseBatchingSize(vertCount, cc.renderer.VertexType.TRIANGLE) : cc.renderer._increaseBatchingSize(vertCount, cc.renderer.VertexType.CUSTOM, attachment.triangles);
+        vertexDataOffset += 6 * vertCount;
+      }
+      if (node._debugBones || node._debugSlots) {
+        cc.renderer._batchRendering();
+        var wt = this._worldTransform, mat = this._matrix.mat;
+        mat[0] = wt.a;
+        mat[4] = wt.c;
+        mat[12] = wt.tx;
+        mat[1] = wt.b;
+        mat[5] = wt.d;
+        mat[13] = wt.ty;
+        cc.math.glMatrixMode(cc.math.KM_GL_MODELVIEW);
+        cc.current_stack.stack.push(cc.current_stack.top);
+        cc.current_stack.top = this._matrix;
+        var drawingUtil = cc._drawingUtil;
+        if (node._debugSlots && debugSlotsInfo && debugSlotsInfo.length > 0) {
+          drawingUtil.setDrawColor(0, 0, 255, 255);
+          drawingUtil.setLineWidth(1);
+          for (i = 0, n = locSkeleton.slots.length; i < n; i++) {
+            var points = debugSlotsInfo[i];
+            points && drawingUtil.drawPoly(points, 4, true);
+          }
+        }
+        if (node._debugBones) {
+          var bone;
+          drawingUtil.setLineWidth(2);
+          drawingUtil.setDrawColor(255, 0, 0, 255);
+          for (i = 0, n = locSkeleton.bones.length; i < n; i++) {
+            bone = locSkeleton.bones[i];
+            var x = bone.data.length * bone.a + bone.worldX;
+            var y = bone.data.length * bone.c + bone.worldY;
+            drawingUtil.drawLine(cc.p(bone.worldX, bone.worldY), cc.p(x, y));
+          }
+          drawingUtil.setPointSize(4);
+          drawingUtil.setDrawColor(0, 0, 255, 255);
+          for (i = 0, n = locSkeleton.bones.length; i < n; i++) {
+            bone = locSkeleton.bones[i];
+            drawingUtil.drawPoint(cc.p(bone.worldX, bone.worldY));
+            0 == i && drawingUtil.setDrawColor(0, 255, 0, 255);
+          }
+        }
+        cc.math.glPopMatrix();
+      }
+      return 0;
+    };
+    proto._getBlendFunc = function(blendMode, premultiAlpha) {
+      var ret = this._currBlendFunc;
+      switch (blendMode) {
+       case spine.BlendMode.Normal:
+        ret.src = premultiAlpha ? cc.macro.ONE : cc.macro.SRC_ALPHA;
+        ret.dst = cc.macro.ONE_MINUS_SRC_ALPHA;
+        break;
+
+       case spine.BlendMode.Additive:
+        ret.src = premultiAlpha ? cc.macro.ONE : cc.macro.SRC_ALPHA;
+        ret.dst = cc.macro.ONE;
+        break;
+
+       case spine.BlendMode.Multiply:
+        ret.src = cc.macro.DST_COLOR;
+        ret.dst = cc.macro.ONE_MINUS_SRC_ALPHA;
+        break;
+
+       case spine.BlendMode.Screen:
+        ret.src = cc.macro.ONE;
+        ret.dst = cc.macro.ONE_MINUS_SRC_COLOR;
+        break;
+
+       default:
+        ret = this._node._blendFunc;
+      }
+      return ret;
+    };
+    proto._createChildFormSkeletonData = function() {};
+    proto._updateChild = function() {};
+    proto._uploadRegionAttachmentData = function(attachment, slot, premultipliedAlpha, f32buffer, ui32buffer, vertexDataOffset) {
+      var nodeColor = this._displayedColor;
+      var nodeR = nodeColor.r, nodeG = nodeColor.g, nodeB = nodeColor.b, nodeA = this._displayedOpacity;
+      var vertices = attachment.updateWorldVertices(slot, premultipliedAlpha);
+      var wt = this._worldTransform, wa = wt.a, wb = wt.b, wc = wt.c, wd = wt.d, wx = wt.tx, wy = wt.ty, z = this._node.vertexZ;
+      var offset = vertexDataOffset;
+      for (var i = 0; i < 6; i++) {
+        var srcIdx = i < 4 ? i % 3 : i - 2;
+        var vx = vertices[8 * srcIdx], vy = vertices[8 * srcIdx + 1];
+        var x = vx * wa + vy * wc + wx, y = vx * wb + vy * wd + wy;
+        var r = vertices[8 * srcIdx + 2] * nodeR, g = vertices[8 * srcIdx + 3] * nodeG, b = vertices[8 * srcIdx + 4] * nodeB, a = vertices[8 * srcIdx + 5] * nodeA;
+        var color = a << 24 | b << 16 | g << 8 | r;
+        f32buffer[offset] = x;
+        f32buffer[offset + 1] = y;
+        f32buffer[offset + 2] = z;
+        ui32buffer[offset + 3] = color;
+        f32buffer[offset + 4] = vertices[8 * srcIdx + 6];
+        f32buffer[offset + 5] = vertices[8 * srcIdx + 7];
+        offset += 6;
+      }
+      if (this._node._debugSlots) {
+        var VERTEX = spine.RegionAttachment;
+        return [ cc.p(vertices[VERTEX.X1], vertices[VERTEX.Y1]), cc.p(vertices[VERTEX.X2], vertices[VERTEX.Y2]), cc.p(vertices[VERTEX.X3], vertices[VERTEX.Y3]), cc.p(vertices[VERTEX.X4], vertices[VERTEX.Y4]) ];
+      }
+    };
+    proto._uploadMeshAttachmentData = function(attachment, slot, premultipliedAlpha, f32buffer, ui32buffer, vertexDataOffset) {
+      var wt = this._worldTransform, wa = wt.a, wb = wt.b, wc = wt.c, wd = wt.d, wx = wt.tx, wy = wt.ty, z = this._node.vertexZ;
+      var vertices = attachment.updateWorldVertices(slot, premultipliedAlpha);
+      var offset = vertexDataOffset;
+      var nodeColor = this._displayedColor;
+      var nodeR = nodeColor.r, nodeG = nodeColor.g, nodeB = nodeColor.b, nodeA = this._displayedOpacity;
+      for (var i = 0, n = vertices.length; i < n; i += 8) {
+        var vx = vertices[i], vy = vertices[i + 1];
+        var x = vx * wa + vy * wc + wx, y = vx * wb + vy * wd + wy;
+        var r = vertices[i + 2] * nodeR, g = vertices[i + 3] * nodeG, b = vertices[i + 4] * nodeB, a = vertices[i + 5] * nodeA;
+        var color = a << 24 | b << 16 | g << 8 | r;
+        f32buffer[offset] = x;
+        f32buffer[offset + 1] = y;
+        f32buffer[offset + 2] = z;
+        ui32buffer[offset + 3] = color;
+        f32buffer[offset + 4] = vertices[i + 6];
+        f32buffer[offset + 5] = vertices[i + 7];
+        offset += 6;
+      }
+    };
+  }), {
+    "../../cocos2d/core/CCDrawingPrimitives": 36
+  } ],
+  305: [ (function(require, module, exports) {
+    var DefaultSkinsEnum = cc.Enum({
+      default: -1
+    });
+    var DefaultAnimsEnum = cc.Enum({
+      "<None>": 0
+    });
+    function setEnumAttr(obj, propName, enumDef) {
+      cc.Class.attr(obj, propName, {
+        type: "Enum",
+        enumList: cc.Enum.getList(enumDef)
+      });
+    }
+    sp.Skeleton = cc.Class({
+      name: "sp.Skeleton",
+      extends: cc._RendererUnderSG,
+      editor: false,
+      properties: {
+        _startListener: {
+          default: null,
+          serializable: false
+        },
+        _endListener: {
+          default: null,
+          serializable: false
+        },
+        _completeListener: {
+          default: null,
+          serializable: false
+        },
+        _eventListener: {
+          default: null,
+          serializable: false
+        },
+        _disposeListener: {
+          default: null,
+          serializable: false
+        },
+        _interruptListener: {
+          default: null,
+          serializable: false
+        },
+        _paused: false,
+        paused: {
+          get: function() {
+            return this._paused;
+          },
+          set: function(value) {
+            this._paused = value;
+            if (!this._sgNode) return;
+            value ? this._sgNode.pause() : this._sgNode.resume();
+          },
+          visible: false
+        },
+        skeletonData: {
+          default: null,
+          type: sp.SkeletonData,
+          notify: function() {
+            this.defaultSkin = "";
+            this.defaultAnimation = "";
+            this._refresh();
+          },
+          tooltip: false
+        },
+        defaultSkin: {
+          default: "",
+          visible: false
+        },
+        defaultAnimation: {
+          default: "",
+          visible: false
+        },
+        animation: {
+          get: function() {
+            var entry = this.getCurrent(0);
+            return entry && entry.animation.name || "";
+          },
+          set: function(value) {
+            this.defaultAnimation = value;
+            if (value) this.setAnimation(0, value, this.loop); else {
+              this.clearTrack(0);
+              this.setToSetupPose();
+            }
+          },
+          visible: false
+        },
+        _defaultSkinIndex: {
+          get: function() {
+            if (this.skeletonData && this.defaultSkin) {
+              var skinsEnum = this.skeletonData.getSkinsEnum();
+              if (skinsEnum) {
+                var skinIndex = skinsEnum[this.defaultSkin];
+                if (void 0 !== skinIndex) return skinIndex;
+              }
+            }
+            return 0;
+          },
+          set: function(value) {
+            var skinsEnum;
+            this.skeletonData && (skinsEnum = this.skeletonData.getSkinsEnum());
+            if (!skinsEnum) return cc.errorID("", this.name);
+            var skinName = skinsEnum[value];
+            if (void 0 !== skinName) {
+              this.defaultSkin = skinName;
+              false;
+            } else cc.errorID(7501, this.name);
+          },
+          type: DefaultSkinsEnum,
+          visible: true,
+          displayName: "Default Skin",
+          tooltip: false
+        },
+        _animationIndex: {
+          get: function() {
+            var animationName = this.animation;
+            if (this.skeletonData && animationName) {
+              var animsEnum = this.skeletonData.getAnimsEnum();
+              if (animsEnum) {
+                var animIndex = animsEnum[animationName];
+                if (void 0 !== animIndex) return animIndex;
+              }
+            }
+            return 0;
+          },
+          set: function(value) {
+            if (0 === value) {
+              this.animation = "";
+              return;
+            }
+            var animsEnum;
+            this.skeletonData && (animsEnum = this.skeletonData.getAnimsEnum());
+            if (!animsEnum) return cc.errorID(7502, this.name);
+            var animName = animsEnum[value];
+            void 0 !== animName ? this.animation = animName : cc.errorID(7503, this.name);
+          },
+          type: DefaultAnimsEnum,
+          visible: true,
+          displayName: "Animation",
+          tooltip: false
+        },
+        loop: {
+          default: true,
+          tooltip: false
+        },
+        _premultipliedAlpha: true,
+        premultipliedAlpha: {
+          get: function() {
+            return this._premultipliedAlpha;
+          },
+          set: function(value) {
+            this._premultipliedAlpha = value;
+            this._sgNode && this._sgNode.setPremultipliedAlpha(value);
+          },
+          tooltip: false
+        },
+        timeScale: {
+          default: 1,
+          notify: function() {
+            this._sgNode && this._sgNode.setTimeScale(this.timeScale);
+          },
+          tooltip: false
+        },
+        debugSlots: {
+          default: false,
+          notify: function() {
+            this._sgNode && this._sgNode.setDebugSlotsEnabled(this.debugSlots);
+          },
+          editorOnly: true,
+          tooltip: false
+        },
+        debugBones: {
+          default: false,
+          notify: function() {
+            this._sgNode && this._sgNode.setDebugBonesEnabled(this.debugBones);
+          },
+          editorOnly: true,
+          tooltip: false
+        }
+      },
+      __preload: function() {
+        var Flags;
+        false;
+        this.node.setContentSize(0, 0);
+        this._refresh();
+      },
+      _createSgNode: function() {
+        if (this.skeletonData) {
+          var uuid;
+          var jsonFile;
+          var atlasFile;
+          false;
+          var data = this.skeletonData.getRuntimeData();
+          if (data) try {
+            return new sp._SGSkeletonAnimation(data, null, this.skeletonData.scale);
+          } catch (e) {
+            cc._throw(e);
+          }
+        }
+        return null;
+      },
+      _initSgNode: function() {
+        var sgNode = this._sgNode;
+        sgNode.setTimeScale(this.timeScale);
+        var self = this;
+        sgNode.onEnter = function() {
+          _ccsg.Node.prototype.onEnter.call(this);
+          self._paused && this.pause();
+        };
+        this._startListener && this.setStartListener(this._startListener);
+        this._endListener && this.setEndListener(this._endListener);
+        this._completeListener && this.setCompleteListener(this._completeListener);
+        this._eventListener && this.setEventListener(this._eventListener);
+        this._interruptListener && this.setInterruptListener(this._interruptListener);
+        this._disposeListener && this.setDisposeListener(this._disposeListener);
+        if (this.defaultSkin) try {
+          sgNode.setSkin(this.defaultSkin);
+        } catch (e) {
+          cc._throw(e);
+        }
+        sgNode.setPremultipliedAlpha(this._premultipliedAlpha);
+        this.animation = this.defaultAnimation;
+        false;
+      },
+      _getLocalBounds: false,
+      updateWorldTransform: function() {
+        this._sgNode && this._sgNode.updateWorldTransform();
+      },
+      setToSetupPose: function() {
+        this._sgNode && this._sgNode.setToSetupPose();
+      },
+      setBonesToSetupPose: function() {
+        this._sgNode && this._sgNode.setBonesToSetupPose();
+      },
+      setSlotsToSetupPose: function() {
+        this._sgNode && this._sgNode.setSlotsToSetupPose();
+      },
+      findBone: function(boneName) {
+        if (this._sgNode) return this._sgNode.findBone(boneName);
+        return null;
+      },
+      findSlot: function(slotName) {
+        if (this._sgNode) return this._sgNode.findSlot(slotName);
+        return null;
+      },
+      setSkin: function(skinName) {
+        if (this._sgNode) return this._sgNode.setSkin(skinName);
+        return null;
+      },
+      getAttachment: function(slotName, attachmentName) {
+        if (this._sgNode) return this._sgNode.getAttachment(slotName, attachmentName);
+        return null;
+      },
+      setAttachment: function(slotName, attachmentName) {
+        this._sgNode && this._sgNode.setAttachment(slotName, attachmentName);
+      },
+      setSkeletonData: function(skeletonData, ownsSkeletonData) {
+        this._sgNode && this._sgNode.setSkeletonData(skeletonData, ownsSkeletonData);
+      },
+      setAnimationStateData: function(stateData) {
+        if (this._sgNode) return this._sgNode.setAnimationStateData(stateData);
+      },
+      setMix: function(fromAnimation, toAnimation, duration) {
+        this._sgNode && this._sgNode.setMix(fromAnimation, toAnimation, duration);
+      },
+      setAnimationListener: function(target, callback) {
+        this._sgNode && this._sgNode.setAnimationListener(target, callback);
+      },
+      setAnimation: function(trackIndex, name, loop) {
+        if (this._sgNode) {
+          var res = this._sgNode.setAnimation(trackIndex, name, loop);
+          false;
+          return res;
+        }
+        return null;
+      },
+      _sample: function() {
+        this._sgNode && this._sgNode.update(0);
+      },
+      addAnimation: function(trackIndex, name, loop, delay) {
+        if (this._sgNode) return this._sgNode.addAnimation(trackIndex, name, loop, delay || 0);
+        return null;
+      },
+      findAnimation: function(name) {
+        if (this._sgNode) return this._sgNode.findAnimation(name);
+        return null;
+      },
+      getCurrent: function(trackIndex) {
+        if (this._sgNode) return this._sgNode.getCurrent(trackIndex);
+        return null;
+      },
+      clearTracks: function() {
+        this._sgNode && this._sgNode.clearTracks();
+      },
+      clearTrack: function(trackIndex) {
+        if (this._sgNode) {
+          this._sgNode.clearTrack(trackIndex);
+          false;
+        }
+      },
+      _updateAnimEnum: false,
+      _updateSkinEnum: false,
+      setStartListener: function(listener) {
+        this._startListener = listener;
+        this._sgNode && this._sgNode.setStartListener(listener);
+      },
+      setInterruptListener: function(listener) {
+        this._interruptListener = listener;
+        this._sgNode && this._sgNode.setInterruptListener(listener);
+      },
+      setEndListener: function(listener) {
+        this._endListener = listener;
+        this._sgNode && this._sgNode.setEndListener(listener);
+      },
+      setDisposeListener: function(listener) {
+        this._disposeListener = listener;
+        this._sgNode && this._sgNode.setDisposeListener(listener);
+      },
+      setCompleteListener: function(listener) {
+        this._completeListener = listener;
+        this._sgNode && this._sgNode.setCompleteListener(listener);
+      },
+      setEventListener: function(listener) {
+        this._eventListener = listener;
+        this._sgNode && this._sgNode.setEventListener(listener);
+      },
+      setTrackStartListener: function(entry, listener) {
+        this._sgNode && this._sgNode.setTrackStartListener(entry, listener);
+      },
+      setTrackInterruptListener: function(entry, listener) {
+        this._sgNode && this._sgNode.setTrackInterruptListener(entry, listener);
+      },
+      setTrackEndListener: function(entry, listener) {
+        this._sgNode && this._sgNode.setTrackEndListener(entry, listener);
+      },
+      setTrackDisposeListener: function(entry, listener) {
+        this._sgNode && this._sgNode.setTrackDisposeListener(entry, listener);
+      },
+      setTrackCompleteListener: function(entry, listener) {
+        this._sgNode && this._sgNode.setTrackCompleteListener(entry, listener);
+      },
+      setTrackEventListener: function(entry, listener) {
+        this._sgNode && this._sgNode.setTrackEventListener(entry, listener);
+      },
+      getState: function() {
+        if (this._sgNode) return this._sgNode.getState();
+      },
+      _refresh: function() {
+        var self = this;
+        if (self._sgNode) {
+          self.node._sizeProvider === self._sgNode && (self.node._sizeProvider = null);
+          self._removeSgNode();
+          self._sgNode = null;
+        }
+        var sgNode = self._sgNode = self._createSgNode();
+        if (sgNode) {
+          false;
+          self.enabledInHierarchy || sgNode.setVisible(false);
+          sgNode.setContentSize(0, 0);
+          self._initSgNode();
+          self._appendSgNode(sgNode);
+          self._registSizeProvider();
+        }
+        false;
+      }
+    });
+  }), {} ],
+  306: [ (function(require, module, exports) {
+    var TextureLoader = (true, cc.Class({
+      ctor: function() {
+        this.asset = arguments[0];
+      },
+      getTexture: function(line) {
+        var urls = this.asset.textures;
+        for (var i = 0; i < urls.length; i++) {
+          var url = urls[i];
+          if (url.endsWith(line)) {
+            var texture = cc.textureCache.addImage(url);
+            var tex = new sp.SkeletonTexture({
+              width: texture.getPixelWidth(),
+              height: texture.getPixelHeight()
+            });
+            tex.setRealTexture(texture);
+            return tex;
+          }
+        }
+        return null;
+      },
+      load: function(line) {
+        var texture = this.getTexture(line);
+        if (texture) return texture;
+        cc.errorID(7506, line);
+        return null;
+      },
+      unload: function(obj) {}
+    }));
+    var SkeletonData = cc.Class({
+      name: "sp.SkeletonData",
+      extends: cc.Asset,
+      ctor: function() {
+        this.reset();
+      },
+      properties: {
+        _skeletonJson: null,
+        skeletonJson: {
+          get: function() {
+            return this._skeletonJson;
+          },
+          set: function(value) {
+            this._skeletonJson = value;
+            this.reset();
+          }
+        },
+        _atlasText: "",
+        atlasText: {
+          get: function() {
+            return this._atlasText;
+          },
+          set: function(value) {
+            this._atlasText = value;
+            this.reset();
+          }
+        },
+        atlasUrl: {
+          default: "",
+          url: cc.RawAsset
+        },
+        textures: {
+          default: [],
+          url: [ cc.Texture2D ]
+        },
+        scale: 1
+      },
+      statics: {
+        preventDeferredLoadDependents: true
+      },
+      createNode: false,
+      reset: function() {
+        this._skeletonCache = null;
+        this._atlasCache = null;
+        false;
+      },
+      getRuntimeData: (true, function(quiet) {
+        if (this._skeletonCache) return this._skeletonCache;
+        if (!(this.textures && this.textures.length > 0)) {
+          quiet || cc.errorID(7507, this.name);
+          return null;
+        }
+        var atlas = this._getAtlas(quiet);
+        if (!atlas) return null;
+        var attachmentLoader = new sp.spine.AtlasAttachmentLoader(atlas);
+        var jsonReader = new sp.spine.SkeletonJson(attachmentLoader);
+        jsonReader.scale = this.scale;
+        var json = this.skeletonJson;
+        this._skeletonCache = jsonReader.readSkeletonData(json);
+        atlas.dispose(jsonReader);
+        return this._skeletonCache;
+      }),
+      getSkinsEnum: false,
+      getAnimsEnum: false,
+      _getAtlas: (true, function(quiet) {
+        if (this._atlasCache) return this._atlasCache;
+        if (!this.atlasText) {
+          quiet || cc.errorID(7508, this.name);
+          return null;
+        }
+        var loader = new TextureLoader(this);
+        return this._atlasCache = new sp.spine.TextureAtlas(this.atlasText, loader.load.bind(loader));
+      })
+    });
+    sp.SkeletonData = module.exports = SkeletonData;
+  }), {} ],
+  307: [ (function(require, module, exports) {
+    sp = {};
+    sp.VERTEX_INDEX = {
+      X1: 0,
+      Y1: 1,
+      X2: 2,
+      Y2: 3,
+      X3: 4,
+      Y3: 5,
+      X4: 6,
+      Y4: 7
+    };
+    sp.ATTACHMENT_TYPE = {
+      REGION: 0,
+      BOUNDING_BOX: 1,
+      MESH: 2,
+      SKINNED_MESH: 3
+    };
+    sp.AnimationEventType = cc.Enum({
+      START: 0,
+      INTERRUPT: 1,
+      END: 2,
+      DISPOSE: 3,
+      COMPLETE: 4,
+      EVENT: 5
+    });
+    true;
+    true;
+    sp.spine = require("./lib/spine");
+    require("./SGSkeletonTexture");
+    require("./SGSkeleton");
+    require("./SGSkeletonCanvasRenderCmd");
+    require("./SGSkeletonWebGLRenderCmd");
+    require("./SGSkeletonAnimation");
+    require("./SkeletonData");
+    require("./Skeleton");
+  }), {
+    "./SGSkeleton": 300,
+    "./SGSkeletonAnimation": 301,
+    "./SGSkeletonCanvasRenderCmd": 302,
+    "./SGSkeletonTexture": 303,
+    "./SGSkeletonWebGLRenderCmd": 304,
+    "./Skeleton": 305,
+    "./SkeletonData": 306,
+    "./lib/spine": 308
+  } ],
+  308: [ (function(require, module, exports) {
+    var __extends = this && this.__extends || function(d, b) {
+      for (var p in b) b.hasOwnProperty(p) && (d[p] = b[p]);
+      function __() {
+        this.constructor = d;
+      }
+      d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+    var spine;
+    (function(spine) {
+      var Animation = (function() {
+        function Animation(name, timelines, duration) {
+          if (null == name) throw new Error("name cannot be null.");
+          if (null == timelines) throw new Error("timelines cannot be null.");
+          this.name = name;
+          this.timelines = timelines;
+          this.duration = duration;
+        }
+        Animation.prototype.apply = function(skeleton, lastTime, time, loop, events, alpha, setupPose, mixingOut) {
+          if (null == skeleton) throw new Error("skeleton cannot be null.");
+          if (loop && 0 != this.duration) {
+            time %= this.duration;
+            lastTime > 0 && (lastTime %= this.duration);
+          }
+          var timelines = this.timelines;
+          for (var i = 0, n = timelines.length; i < n; i++) timelines[i].apply(skeleton, lastTime, time, events, alpha, setupPose, mixingOut);
+        };
+        Animation.binarySearch = function(values, target, step) {
+          void 0 === step && (step = 1);
+          var low = 0;
+          var high = values.length / step - 2;
+          if (0 == high) return step;
+          var current = high >>> 1;
+          while (true) {
+            values[(current + 1) * step] <= target ? low = current + 1 : high = current;
+            if (low == high) return (low + 1) * step;
+            current = low + high >>> 1;
+          }
+        };
+        Animation.linearSearch = function(values, target, step) {
+          for (var i = 0, last = values.length - step; i <= last; i += step) if (values[i] > target) return i;
+          return -1;
+        };
+        return Animation;
+      })();
+      spine.Animation = Animation;
+      (function(TimelineType) {
+        TimelineType[TimelineType["rotate"] = 0] = "rotate";
+        TimelineType[TimelineType["translate"] = 1] = "translate";
+        TimelineType[TimelineType["scale"] = 2] = "scale";
+        TimelineType[TimelineType["shear"] = 3] = "shear";
+        TimelineType[TimelineType["attachment"] = 4] = "attachment";
+        TimelineType[TimelineType["color"] = 5] = "color";
+        TimelineType[TimelineType["deform"] = 6] = "deform";
+        TimelineType[TimelineType["event"] = 7] = "event";
+        TimelineType[TimelineType["drawOrder"] = 8] = "drawOrder";
+        TimelineType[TimelineType["ikConstraint"] = 9] = "ikConstraint";
+        TimelineType[TimelineType["transformConstraint"] = 10] = "transformConstraint";
+        TimelineType[TimelineType["pathConstraintPosition"] = 11] = "pathConstraintPosition";
+        TimelineType[TimelineType["pathConstraintSpacing"] = 12] = "pathConstraintSpacing";
+        TimelineType[TimelineType["pathConstraintMix"] = 13] = "pathConstraintMix";
+      })(spine.TimelineType || (spine.TimelineType = {}));
+      var TimelineType = spine.TimelineType;
+      var CurveTimeline = (function() {
+        function CurveTimeline(frameCount) {
+          if (frameCount <= 0) throw new Error("frameCount must be > 0: " + frameCount);
+          this.curves = spine.Utils.newFloatArray((frameCount - 1) * CurveTimeline.BEZIER_SIZE);
+        }
+        CurveTimeline.prototype.getFrameCount = function() {
+          return this.curves.length / CurveTimeline.BEZIER_SIZE + 1;
+        };
+        CurveTimeline.prototype.setLinear = function(frameIndex) {
+          this.curves[frameIndex * CurveTimeline.BEZIER_SIZE] = CurveTimeline.LINEAR;
+        };
+        CurveTimeline.prototype.setStepped = function(frameIndex) {
+          this.curves[frameIndex * CurveTimeline.BEZIER_SIZE] = CurveTimeline.STEPPED;
+        };
+        CurveTimeline.prototype.getCurveType = function(frameIndex) {
+          var index = frameIndex * CurveTimeline.BEZIER_SIZE;
+          if (index == this.curves.length) return CurveTimeline.LINEAR;
+          var type = this.curves[index];
+          if (type == CurveTimeline.LINEAR) return CurveTimeline.LINEAR;
+          if (type == CurveTimeline.STEPPED) return CurveTimeline.STEPPED;
+          return CurveTimeline.BEZIER;
+        };
+        CurveTimeline.prototype.setCurve = function(frameIndex, cx1, cy1, cx2, cy2) {
+          var tmpx = .03 * (2 * -cx1 + cx2), tmpy = .03 * (2 * -cy1 + cy2);
+          var dddfx = .006 * (3 * (cx1 - cx2) + 1), dddfy = .006 * (3 * (cy1 - cy2) + 1);
+          var ddfx = 2 * tmpx + dddfx, ddfy = 2 * tmpy + dddfy;
+          var dfx = .3 * cx1 + tmpx + .16666667 * dddfx, dfy = .3 * cy1 + tmpy + .16666667 * dddfy;
+          var i = frameIndex * CurveTimeline.BEZIER_SIZE;
+          var curves = this.curves;
+          curves[i++] = CurveTimeline.BEZIER;
+          var x = dfx, y = dfy;
+          for (var n = i + CurveTimeline.BEZIER_SIZE - 1; i < n; i += 2) {
+            curves[i] = x;
+            curves[i + 1] = y;
+            dfx += ddfx;
+            dfy += ddfy;
+            ddfx += dddfx;
+            ddfy += dddfy;
+            x += dfx;
+            y += dfy;
+          }
+        };
+        CurveTimeline.prototype.getCurvePercent = function(frameIndex, percent) {
+          percent = spine.MathUtils.clamp(percent, 0, 1);
+          var curves = this.curves;
+          var i = frameIndex * CurveTimeline.BEZIER_SIZE;
+          var type = curves[i];
+          if (type == CurveTimeline.LINEAR) return percent;
+          if (type == CurveTimeline.STEPPED) return 0;
+          i++;
+          var x = 0;
+          for (var start = i, n = i + CurveTimeline.BEZIER_SIZE - 1; i < n; i += 2) {
+            x = curves[i];
+            if (x >= percent) {
+              var prevX = void 0, prevY = void 0;
+              if (i == start) {
+                prevX = 0;
+                prevY = 0;
+              } else {
+                prevX = curves[i - 2];
+                prevY = curves[i - 1];
+              }
+              return prevY + (curves[i + 1] - prevY) * (percent - prevX) / (x - prevX);
+            }
+          }
+          var y = curves[i - 1];
+          return y + (1 - y) * (percent - x) / (1 - x);
+        };
+        CurveTimeline.LINEAR = 0;
+        CurveTimeline.STEPPED = 1;
+        CurveTimeline.BEZIER = 2;
+        CurveTimeline.BEZIER_SIZE = 19;
+        return CurveTimeline;
+      })();
+      spine.CurveTimeline = CurveTimeline;
+      var RotateTimeline = (function(_super) {
+        __extends(RotateTimeline, _super);
+        function RotateTimeline(frameCount) {
+          _super.call(this, frameCount);
+          this.frames = spine.Utils.newFloatArray(frameCount << 1);
+        }
+        RotateTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.rotate << 24) + this.boneIndex;
+        };
+        RotateTimeline.prototype.setFrame = function(frameIndex, time, degrees) {
+          frameIndex <<= 1;
+          this.frames[frameIndex] = time;
+          this.frames[frameIndex + RotateTimeline.ROTATION] = degrees;
+        };
+        RotateTimeline.prototype.apply = function(skeleton, lastTime, time, events, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var bone = skeleton.bones[this.boneIndex];
+          if (time < frames[0]) {
+            setupPose && (bone.rotation = bone.data.rotation);
+            return;
+          }
+          if (time >= frames[frames.length - RotateTimeline.ENTRIES]) {
+            if (setupPose) bone.rotation = bone.data.rotation + frames[frames.length + RotateTimeline.PREV_ROTATION] * alpha; else {
+              var r_1 = bone.data.rotation + frames[frames.length + RotateTimeline.PREV_ROTATION] - bone.rotation;
+              r_1 -= 360 * (16384 - (16384.499999999996 - r_1 / 360 | 0));
+              bone.rotation += r_1 * alpha;
+            }
+            return;
+          }
+          var frame = Animation.binarySearch(frames, time, RotateTimeline.ENTRIES);
+          var prevRotation = frames[frame + RotateTimeline.PREV_ROTATION];
+          var frameTime = frames[frame];
+          var percent = this.getCurvePercent((frame >> 1) - 1, 1 - (time - frameTime) / (frames[frame + RotateTimeline.PREV_TIME] - frameTime));
+          var r = frames[frame + RotateTimeline.ROTATION] - prevRotation;
+          r -= 360 * (16384 - (16384.499999999996 - r / 360 | 0));
+          r = prevRotation + r * percent;
+          if (setupPose) {
+            r -= 360 * (16384 - (16384.499999999996 - r / 360 | 0));
+            bone.rotation = bone.data.rotation + r * alpha;
+          } else {
+            r = bone.data.rotation + r - bone.rotation;
+            r -= 360 * (16384 - (16384.499999999996 - r / 360 | 0));
+            bone.rotation += r * alpha;
+          }
+        };
+        RotateTimeline.ENTRIES = 2;
+        RotateTimeline.PREV_TIME = -2;
+        RotateTimeline.PREV_ROTATION = -1;
+        RotateTimeline.ROTATION = 1;
+        return RotateTimeline;
+      })(CurveTimeline);
+      spine.RotateTimeline = RotateTimeline;
+      var TranslateTimeline = (function(_super) {
+        __extends(TranslateTimeline, _super);
+        function TranslateTimeline(frameCount) {
+          _super.call(this, frameCount);
+          this.frames = spine.Utils.newFloatArray(frameCount * TranslateTimeline.ENTRIES);
+        }
+        TranslateTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.translate << 24) + this.boneIndex;
+        };
+        TranslateTimeline.prototype.setFrame = function(frameIndex, time, x, y) {
+          frameIndex *= TranslateTimeline.ENTRIES;
+          this.frames[frameIndex] = time;
+          this.frames[frameIndex + TranslateTimeline.X] = x;
+          this.frames[frameIndex + TranslateTimeline.Y] = y;
+        };
+        TranslateTimeline.prototype.apply = function(skeleton, lastTime, time, events, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var bone = skeleton.bones[this.boneIndex];
+          if (time < frames[0]) {
+            if (setupPose) {
+              bone.x = bone.data.x;
+              bone.y = bone.data.y;
+            }
+            return;
+          }
+          var x = 0, y = 0;
+          if (time >= frames[frames.length - TranslateTimeline.ENTRIES]) {
+            x = frames[frames.length + TranslateTimeline.PREV_X];
+            y = frames[frames.length + TranslateTimeline.PREV_Y];
+          } else {
+            var frame = Animation.binarySearch(frames, time, TranslateTimeline.ENTRIES);
+            x = frames[frame + TranslateTimeline.PREV_X];
+            y = frames[frame + TranslateTimeline.PREV_Y];
+            var frameTime = frames[frame];
+            var percent = this.getCurvePercent(frame / TranslateTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + TranslateTimeline.PREV_TIME] - frameTime));
+            x += (frames[frame + TranslateTimeline.X] - x) * percent;
+            y += (frames[frame + TranslateTimeline.Y] - y) * percent;
+          }
+          if (setupPose) {
+            bone.x = bone.data.x + x * alpha;
+            bone.y = bone.data.y + y * alpha;
+          } else {
+            bone.x += (bone.data.x + x - bone.x) * alpha;
+            bone.y += (bone.data.y + y - bone.y) * alpha;
+          }
+        };
+        TranslateTimeline.ENTRIES = 3;
+        TranslateTimeline.PREV_TIME = -3;
+        TranslateTimeline.PREV_X = -2;
+        TranslateTimeline.PREV_Y = -1;
+        TranslateTimeline.X = 1;
+        TranslateTimeline.Y = 2;
+        return TranslateTimeline;
+      })(CurveTimeline);
+      spine.TranslateTimeline = TranslateTimeline;
+      var ScaleTimeline = (function(_super) {
+        __extends(ScaleTimeline, _super);
+        function ScaleTimeline(frameCount) {
+          _super.call(this, frameCount);
+        }
+        ScaleTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.scale << 24) + this.boneIndex;
+        };
+        ScaleTimeline.prototype.apply = function(skeleton, lastTime, time, events, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var bone = skeleton.bones[this.boneIndex];
+          if (time < frames[0]) {
+            if (setupPose) {
+              bone.scaleX = bone.data.scaleX;
+              bone.scaleY = bone.data.scaleY;
+            }
+            return;
+          }
+          var x = 0, y = 0;
+          if (time >= frames[frames.length - ScaleTimeline.ENTRIES]) {
+            x = frames[frames.length + ScaleTimeline.PREV_X] * bone.data.scaleX;
+            y = frames[frames.length + ScaleTimeline.PREV_Y] * bone.data.scaleY;
+          } else {
+            var frame = Animation.binarySearch(frames, time, ScaleTimeline.ENTRIES);
+            x = frames[frame + ScaleTimeline.PREV_X];
+            y = frames[frame + ScaleTimeline.PREV_Y];
+            var frameTime = frames[frame];
+            var percent = this.getCurvePercent(frame / ScaleTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + ScaleTimeline.PREV_TIME] - frameTime));
+            x = (x + (frames[frame + ScaleTimeline.X] - x) * percent) * bone.data.scaleX;
+            y = (y + (frames[frame + ScaleTimeline.Y] - y) * percent) * bone.data.scaleY;
+          }
+          if (1 == alpha) {
+            bone.scaleX = x;
+            bone.scaleY = y;
+          } else {
+            var bx = 0, by = 0;
+            if (setupPose) {
+              bx = bone.data.scaleX;
+              by = bone.data.scaleY;
+            } else {
+              bx = bone.scaleX;
+              by = bone.scaleY;
+            }
+            if (mixingOut) {
+              x = Math.abs(x) * spine.MathUtils.signum(bx);
+              y = Math.abs(y) * spine.MathUtils.signum(by);
+            } else {
+              bx = Math.abs(bx) * spine.MathUtils.signum(x);
+              by = Math.abs(by) * spine.MathUtils.signum(y);
+            }
+            bone.scaleX = bx + (x - bx) * alpha;
+            bone.scaleY = by + (y - by) * alpha;
+          }
+        };
+        return ScaleTimeline;
+      })(TranslateTimeline);
+      spine.ScaleTimeline = ScaleTimeline;
+      var ShearTimeline = (function(_super) {
+        __extends(ShearTimeline, _super);
+        function ShearTimeline(frameCount) {
+          _super.call(this, frameCount);
+        }
+        ShearTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.shear << 24) + this.boneIndex;
+        };
+        ShearTimeline.prototype.apply = function(skeleton, lastTime, time, events, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var bone = skeleton.bones[this.boneIndex];
+          if (time < frames[0]) {
+            if (setupPose) {
+              bone.shearX = bone.data.shearX;
+              bone.shearY = bone.data.shearY;
+            }
+            return;
+          }
+          var x = 0, y = 0;
+          if (time >= frames[frames.length - ShearTimeline.ENTRIES]) {
+            x = frames[frames.length + ShearTimeline.PREV_X];
+            y = frames[frames.length + ShearTimeline.PREV_Y];
+          } else {
+            var frame = Animation.binarySearch(frames, time, ShearTimeline.ENTRIES);
+            x = frames[frame + ShearTimeline.PREV_X];
+            y = frames[frame + ShearTimeline.PREV_Y];
+            var frameTime = frames[frame];
+            var percent = this.getCurvePercent(frame / ShearTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + ShearTimeline.PREV_TIME] - frameTime));
+            x += (frames[frame + ShearTimeline.X] - x) * percent;
+            y += (frames[frame + ShearTimeline.Y] - y) * percent;
+          }
+          if (setupPose) {
+            bone.shearX = bone.data.shearX + x * alpha;
+            bone.shearY = bone.data.shearY + y * alpha;
+          } else {
+            bone.shearX += (bone.data.shearX + x - bone.shearX) * alpha;
+            bone.shearY += (bone.data.shearY + y - bone.shearY) * alpha;
+          }
+        };
+        return ShearTimeline;
+      })(TranslateTimeline);
+      spine.ShearTimeline = ShearTimeline;
+      var ColorTimeline = (function(_super) {
+        __extends(ColorTimeline, _super);
+        function ColorTimeline(frameCount) {
+          _super.call(this, frameCount);
+          this.frames = spine.Utils.newFloatArray(frameCount * ColorTimeline.ENTRIES);
+        }
+        ColorTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.color << 24) + this.slotIndex;
+        };
+        ColorTimeline.prototype.setFrame = function(frameIndex, time, r, g, b, a) {
+          frameIndex *= ColorTimeline.ENTRIES;
+          this.frames[frameIndex] = time;
+          this.frames[frameIndex + ColorTimeline.R] = r;
+          this.frames[frameIndex + ColorTimeline.G] = g;
+          this.frames[frameIndex + ColorTimeline.B] = b;
+          this.frames[frameIndex + ColorTimeline.A] = a;
+        };
+        ColorTimeline.prototype.apply = function(skeleton, lastTime, time, events, alpha, setupPose, mixingOut) {
+          var slot = skeleton.slots[this.slotIndex];
+          var frames = this.frames;
+          if (time < frames[0]) {
+            setupPose && slot.color.setFromColor(slot.data.color);
+            return;
+          }
+          var r = 0, g = 0, b = 0, a = 0;
+          if (time >= frames[frames.length - ColorTimeline.ENTRIES]) {
+            var i = frames.length;
+            r = frames[i + ColorTimeline.PREV_R];
+            g = frames[i + ColorTimeline.PREV_G];
+            b = frames[i + ColorTimeline.PREV_B];
+            a = frames[i + ColorTimeline.PREV_A];
+          } else {
+            var frame = Animation.binarySearch(frames, time, ColorTimeline.ENTRIES);
+            r = frames[frame + ColorTimeline.PREV_R];
+            g = frames[frame + ColorTimeline.PREV_G];
+            b = frames[frame + ColorTimeline.PREV_B];
+            a = frames[frame + ColorTimeline.PREV_A];
+            var frameTime = frames[frame];
+            var percent = this.getCurvePercent(frame / ColorTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + ColorTimeline.PREV_TIME] - frameTime));
+            r += (frames[frame + ColorTimeline.R] - r) * percent;
+            g += (frames[frame + ColorTimeline.G] - g) * percent;
+            b += (frames[frame + ColorTimeline.B] - b) * percent;
+            a += (frames[frame + ColorTimeline.A] - a) * percent;
+          }
+          if (1 == alpha) slot.color.set(r, g, b, a); else {
+            var color = slot.color;
+            setupPose && color.setFromColor(slot.data.color);
+            color.add((r - color.r) * alpha, (g - color.g) * alpha, (b - color.b) * alpha, (a - color.a) * alpha);
+          }
+        };
+        ColorTimeline.ENTRIES = 5;
+        ColorTimeline.PREV_TIME = -5;
+        ColorTimeline.PREV_R = -4;
+        ColorTimeline.PREV_G = -3;
+        ColorTimeline.PREV_B = -2;
+        ColorTimeline.PREV_A = -1;
+        ColorTimeline.R = 1;
+        ColorTimeline.G = 2;
+        ColorTimeline.B = 3;
+        ColorTimeline.A = 4;
+        return ColorTimeline;
+      })(CurveTimeline);
+      spine.ColorTimeline = ColorTimeline;
+      var AttachmentTimeline = (function() {
+        function AttachmentTimeline(frameCount) {
+          this.frames = spine.Utils.newFloatArray(frameCount);
+          this.attachmentNames = new Array(frameCount);
+        }
+        AttachmentTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.attachment << 24) + this.slotIndex;
+        };
+        AttachmentTimeline.prototype.getFrameCount = function() {
+          return this.frames.length;
+        };
+        AttachmentTimeline.prototype.setFrame = function(frameIndex, time, attachmentName) {
+          this.frames[frameIndex] = time;
+          this.attachmentNames[frameIndex] = attachmentName;
+        };
+        AttachmentTimeline.prototype.apply = function(skeleton, lastTime, time, events, alpha, setupPose, mixingOut) {
+          var slot = skeleton.slots[this.slotIndex];
+          if (mixingOut && setupPose) {
+            var attachmentName_1 = slot.data.attachmentName;
+            slot.setAttachment(null == attachmentName_1 ? null : skeleton.getAttachment(this.slotIndex, attachmentName_1));
+            return;
+          }
+          var frames = this.frames;
+          if (time < frames[0]) {
+            if (setupPose) {
+              var attachmentName_2 = slot.data.attachmentName;
+              slot.setAttachment(null == attachmentName_2 ? null : skeleton.getAttachment(this.slotIndex, attachmentName_2));
+            }
+            return;
+          }
+          var frameIndex = 0;
+          frameIndex = time >= frames[frames.length - 1] ? frames.length - 1 : Animation.binarySearch(frames, time, 1) - 1;
+          var attachmentName = this.attachmentNames[frameIndex];
+          skeleton.slots[this.slotIndex].setAttachment(null == attachmentName ? null : skeleton.getAttachment(this.slotIndex, attachmentName));
+        };
+        return AttachmentTimeline;
+      })();
+      spine.AttachmentTimeline = AttachmentTimeline;
+      var DeformTimeline = (function(_super) {
+        __extends(DeformTimeline, _super);
+        function DeformTimeline(frameCount) {
+          _super.call(this, frameCount);
+          this.frames = spine.Utils.newFloatArray(frameCount);
+          this.frameVertices = new Array(frameCount);
+        }
+        DeformTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.deform << 24) + this.slotIndex;
+        };
+        DeformTimeline.prototype.setFrame = function(frameIndex, time, vertices) {
+          this.frames[frameIndex] = time;
+          this.frameVertices[frameIndex] = vertices;
+        };
+        DeformTimeline.prototype.apply = function(skeleton, lastTime, time, firedEvents, alpha, setupPose, mixingOut) {
+          var slot = skeleton.slots[this.slotIndex];
+          var slotAttachment = slot.getAttachment();
+          if (!(slotAttachment instanceof spine.VertexAttachment) || !slotAttachment.applyDeform(this.attachment)) return;
+          var frames = this.frames;
+          var verticesArray = slot.attachmentVertices;
+          if (time < frames[0]) {
+            setupPose && spine.Utils.setArraySize(verticesArray, 0);
+            return;
+          }
+          var frameVertices = this.frameVertices;
+          var vertexCount = frameVertices[0].length;
+          verticesArray.length != vertexCount && (alpha = 1);
+          var vertices = spine.Utils.setArraySize(verticesArray, vertexCount);
+          if (time >= frames[frames.length - 1]) {
+            var lastVertices = frameVertices[frames.length - 1];
+            if (1 == alpha) spine.Utils.arrayCopy(lastVertices, 0, vertices, 0, vertexCount); else if (setupPose) {
+              var vertexAttachment = slotAttachment;
+              if (null == vertexAttachment.bones) {
+                var setupVertices = vertexAttachment.vertices;
+                for (var i = 0; i < vertexCount; i++) {
+                  var setup = setupVertices[i];
+                  vertices[i] = setup + (lastVertices[i] - setup) * alpha;
+                }
+              } else for (var i = 0; i < vertexCount; i++) vertices[i] = lastVertices[i] * alpha;
+            } else for (var i = 0; i < vertexCount; i++) vertices[i] += (lastVertices[i] - vertices[i]) * alpha;
+            return;
+          }
+          var frame = Animation.binarySearch(frames, time);
+          var prevVertices = frameVertices[frame - 1];
+          var nextVertices = frameVertices[frame];
+          var frameTime = frames[frame];
+          var percent = this.getCurvePercent(frame - 1, 1 - (time - frameTime) / (frames[frame - 1] - frameTime));
+          if (1 == alpha) for (var i = 0; i < vertexCount; i++) {
+            var prev = prevVertices[i];
+            vertices[i] = prev + (nextVertices[i] - prev) * percent;
+          } else if (setupPose) {
+            var vertexAttachment = slotAttachment;
+            if (null == vertexAttachment.bones) {
+              var setupVertices = vertexAttachment.vertices;
+              for (var i = 0; i < vertexCount; i++) {
+                var prev = prevVertices[i], setup = setupVertices[i];
+                vertices[i] = setup + (prev + (nextVertices[i] - prev) * percent - setup) * alpha;
+              }
+            } else for (var i = 0; i < vertexCount; i++) {
+              var prev = prevVertices[i];
+              vertices[i] = (prev + (nextVertices[i] - prev) * percent) * alpha;
+            }
+          } else for (var i = 0; i < vertexCount; i++) {
+            var prev = prevVertices[i];
+            vertices[i] += (prev + (nextVertices[i] - prev) * percent - vertices[i]) * alpha;
+          }
+        };
+        return DeformTimeline;
+      })(CurveTimeline);
+      spine.DeformTimeline = DeformTimeline;
+      var EventTimeline = (function() {
+        function EventTimeline(frameCount) {
+          this.frames = spine.Utils.newFloatArray(frameCount);
+          this.events = new Array(frameCount);
+        }
+        EventTimeline.prototype.getPropertyId = function() {
+          return TimelineType.event << 24;
+        };
+        EventTimeline.prototype.getFrameCount = function() {
+          return this.frames.length;
+        };
+        EventTimeline.prototype.setFrame = function(frameIndex, event) {
+          this.frames[frameIndex] = event.time;
+          this.events[frameIndex] = event;
+        };
+        EventTimeline.prototype.apply = function(skeleton, lastTime, time, firedEvents, alpha, setupPose, mixingOut) {
+          if (null == firedEvents) return;
+          var frames = this.frames;
+          var frameCount = this.frames.length;
+          if (lastTime > time) {
+            this.apply(skeleton, lastTime, Number.MAX_VALUE, firedEvents, alpha, setupPose, mixingOut);
+            lastTime = -1;
+          } else if (lastTime >= frames[frameCount - 1]) return;
+          if (time < frames[0]) return;
+          var frame = 0;
+          if (lastTime < frames[0]) frame = 0; else {
+            frame = Animation.binarySearch(frames, lastTime);
+            var frameTime = frames[frame];
+            while (frame > 0) {
+              if (frames[frame - 1] != frameTime) break;
+              frame--;
+            }
+          }
+          for (;frame < frameCount && time >= frames[frame]; frame++) firedEvents.push(this.events[frame]);
+        };
+        return EventTimeline;
+      })();
+      spine.EventTimeline = EventTimeline;
+      var DrawOrderTimeline = (function() {
+        function DrawOrderTimeline(frameCount) {
+          this.frames = spine.Utils.newFloatArray(frameCount);
+          this.drawOrders = new Array(frameCount);
+        }
+        DrawOrderTimeline.prototype.getPropertyId = function() {
+          return TimelineType.drawOrder << 24;
+        };
+        DrawOrderTimeline.prototype.getFrameCount = function() {
+          return this.frames.length;
+        };
+        DrawOrderTimeline.prototype.setFrame = function(frameIndex, time, drawOrder) {
+          this.frames[frameIndex] = time;
+          this.drawOrders[frameIndex] = drawOrder;
+        };
+        DrawOrderTimeline.prototype.apply = function(skeleton, lastTime, time, firedEvents, alpha, setupPose, mixingOut) {
+          var drawOrder = skeleton.drawOrder;
+          var slots = skeleton.slots;
+          if (mixingOut && setupPose) {
+            spine.Utils.arrayCopy(skeleton.slots, 0, skeleton.drawOrder, 0, skeleton.slots.length);
+            return;
+          }
+          var frames = this.frames;
+          if (time < frames[0]) {
+            setupPose && spine.Utils.arrayCopy(skeleton.slots, 0, skeleton.drawOrder, 0, skeleton.slots.length);
+            return;
+          }
+          var frame = 0;
+          frame = time >= frames[frames.length - 1] ? frames.length - 1 : Animation.binarySearch(frames, time) - 1;
+          var drawOrderToSetupIndex = this.drawOrders[frame];
+          if (null == drawOrderToSetupIndex) spine.Utils.arrayCopy(slots, 0, drawOrder, 0, slots.length); else for (var i = 0, n = drawOrderToSetupIndex.length; i < n; i++) drawOrder[i] = slots[drawOrderToSetupIndex[i]];
+        };
+        return DrawOrderTimeline;
+      })();
+      spine.DrawOrderTimeline = DrawOrderTimeline;
+      var IkConstraintTimeline = (function(_super) {
+        __extends(IkConstraintTimeline, _super);
+        function IkConstraintTimeline(frameCount) {
+          _super.call(this, frameCount);
+          this.frames = spine.Utils.newFloatArray(frameCount * IkConstraintTimeline.ENTRIES);
+        }
+        IkConstraintTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.ikConstraint << 24) + this.ikConstraintIndex;
+        };
+        IkConstraintTimeline.prototype.setFrame = function(frameIndex, time, mix, bendDirection) {
+          frameIndex *= IkConstraintTimeline.ENTRIES;
+          this.frames[frameIndex] = time;
+          this.frames[frameIndex + IkConstraintTimeline.MIX] = mix;
+          this.frames[frameIndex + IkConstraintTimeline.BEND_DIRECTION] = bendDirection;
+        };
+        IkConstraintTimeline.prototype.apply = function(skeleton, lastTime, time, firedEvents, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var constraint = skeleton.ikConstraints[this.ikConstraintIndex];
+          if (time < frames[0]) {
+            if (setupPose) {
+              constraint.mix = constraint.data.mix;
+              constraint.bendDirection = constraint.data.bendDirection;
+            }
+            return;
+          }
+          if (time >= frames[frames.length - IkConstraintTimeline.ENTRIES]) {
+            if (setupPose) {
+              constraint.mix = constraint.data.mix + (frames[frames.length + IkConstraintTimeline.PREV_MIX] - constraint.data.mix) * alpha;
+              constraint.bendDirection = mixingOut ? constraint.data.bendDirection : frames[frames.length + IkConstraintTimeline.PREV_BEND_DIRECTION];
+            } else {
+              constraint.mix += (frames[frames.length + IkConstraintTimeline.PREV_MIX] - constraint.mix) * alpha;
+              mixingOut || (constraint.bendDirection = frames[frames.length + IkConstraintTimeline.PREV_BEND_DIRECTION]);
+            }
+            return;
+          }
+          var frame = Animation.binarySearch(frames, time, IkConstraintTimeline.ENTRIES);
+          var mix = frames[frame + IkConstraintTimeline.PREV_MIX];
+          var frameTime = frames[frame];
+          var percent = this.getCurvePercent(frame / IkConstraintTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + IkConstraintTimeline.PREV_TIME] - frameTime));
+          if (setupPose) {
+            constraint.mix = constraint.data.mix + (mix + (frames[frame + IkConstraintTimeline.MIX] - mix) * percent - constraint.data.mix) * alpha;
+            constraint.bendDirection = mixingOut ? constraint.data.bendDirection : frames[frame + IkConstraintTimeline.PREV_BEND_DIRECTION];
+          } else {
+            constraint.mix += (mix + (frames[frame + IkConstraintTimeline.MIX] - mix) * percent - constraint.mix) * alpha;
+            mixingOut || (constraint.bendDirection = frames[frame + IkConstraintTimeline.PREV_BEND_DIRECTION]);
+          }
+        };
+        IkConstraintTimeline.ENTRIES = 3;
+        IkConstraintTimeline.PREV_TIME = -3;
+        IkConstraintTimeline.PREV_MIX = -2;
+        IkConstraintTimeline.PREV_BEND_DIRECTION = -1;
+        IkConstraintTimeline.MIX = 1;
+        IkConstraintTimeline.BEND_DIRECTION = 2;
+        return IkConstraintTimeline;
+      })(CurveTimeline);
+      spine.IkConstraintTimeline = IkConstraintTimeline;
+      var TransformConstraintTimeline = (function(_super) {
+        __extends(TransformConstraintTimeline, _super);
+        function TransformConstraintTimeline(frameCount) {
+          _super.call(this, frameCount);
+          this.frames = spine.Utils.newFloatArray(frameCount * TransformConstraintTimeline.ENTRIES);
+        }
+        TransformConstraintTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.transformConstraint << 24) + this.transformConstraintIndex;
+        };
+        TransformConstraintTimeline.prototype.setFrame = function(frameIndex, time, rotateMix, translateMix, scaleMix, shearMix) {
+          frameIndex *= TransformConstraintTimeline.ENTRIES;
+          this.frames[frameIndex] = time;
+          this.frames[frameIndex + TransformConstraintTimeline.ROTATE] = rotateMix;
+          this.frames[frameIndex + TransformConstraintTimeline.TRANSLATE] = translateMix;
+          this.frames[frameIndex + TransformConstraintTimeline.SCALE] = scaleMix;
+          this.frames[frameIndex + TransformConstraintTimeline.SHEAR] = shearMix;
+        };
+        TransformConstraintTimeline.prototype.apply = function(skeleton, lastTime, time, firedEvents, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var constraint = skeleton.transformConstraints[this.transformConstraintIndex];
+          if (time < frames[0]) {
+            if (setupPose) {
+              var data = constraint.data;
+              constraint.rotateMix = data.rotateMix;
+              constraint.translateMix = data.rotateMix;
+              constraint.scaleMix = data.scaleMix;
+              constraint.shearMix = data.shearMix;
+            }
+            return;
+          }
+          var rotate = 0, translate = 0, scale = 0, shear = 0;
+          if (time >= frames[frames.length - TransformConstraintTimeline.ENTRIES]) {
+            var i = frames.length;
+            rotate = frames[i + TransformConstraintTimeline.PREV_ROTATE];
+            translate = frames[i + TransformConstraintTimeline.PREV_TRANSLATE];
+            scale = frames[i + TransformConstraintTimeline.PREV_SCALE];
+            shear = frames[i + TransformConstraintTimeline.PREV_SHEAR];
+          } else {
+            var frame = Animation.binarySearch(frames, time, TransformConstraintTimeline.ENTRIES);
+            rotate = frames[frame + TransformConstraintTimeline.PREV_ROTATE];
+            translate = frames[frame + TransformConstraintTimeline.PREV_TRANSLATE];
+            scale = frames[frame + TransformConstraintTimeline.PREV_SCALE];
+            shear = frames[frame + TransformConstraintTimeline.PREV_SHEAR];
+            var frameTime = frames[frame];
+            var percent = this.getCurvePercent(frame / TransformConstraintTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + TransformConstraintTimeline.PREV_TIME] - frameTime));
+            rotate += (frames[frame + TransformConstraintTimeline.ROTATE] - rotate) * percent;
+            translate += (frames[frame + TransformConstraintTimeline.TRANSLATE] - translate) * percent;
+            scale += (frames[frame + TransformConstraintTimeline.SCALE] - scale) * percent;
+            shear += (frames[frame + TransformConstraintTimeline.SHEAR] - shear) * percent;
+          }
+          if (setupPose) {
+            var data = constraint.data;
+            constraint.rotateMix = data.rotateMix + (rotate - data.rotateMix) * alpha;
+            constraint.translateMix = data.translateMix + (translate - data.translateMix) * alpha;
+            constraint.scaleMix = data.scaleMix + (scale - data.scaleMix) * alpha;
+            constraint.shearMix = data.shearMix + (shear - data.shearMix) * alpha;
+          } else {
+            constraint.rotateMix += (rotate - constraint.rotateMix) * alpha;
+            constraint.translateMix += (translate - constraint.translateMix) * alpha;
+            constraint.scaleMix += (scale - constraint.scaleMix) * alpha;
+            constraint.shearMix += (shear - constraint.shearMix) * alpha;
+          }
+        };
+        TransformConstraintTimeline.ENTRIES = 5;
+        TransformConstraintTimeline.PREV_TIME = -5;
+        TransformConstraintTimeline.PREV_ROTATE = -4;
+        TransformConstraintTimeline.PREV_TRANSLATE = -3;
+        TransformConstraintTimeline.PREV_SCALE = -2;
+        TransformConstraintTimeline.PREV_SHEAR = -1;
+        TransformConstraintTimeline.ROTATE = 1;
+        TransformConstraintTimeline.TRANSLATE = 2;
+        TransformConstraintTimeline.SCALE = 3;
+        TransformConstraintTimeline.SHEAR = 4;
+        return TransformConstraintTimeline;
+      })(CurveTimeline);
+      spine.TransformConstraintTimeline = TransformConstraintTimeline;
+      var PathConstraintPositionTimeline = (function(_super) {
+        __extends(PathConstraintPositionTimeline, _super);
+        function PathConstraintPositionTimeline(frameCount) {
+          _super.call(this, frameCount);
+          this.frames = spine.Utils.newFloatArray(frameCount * PathConstraintPositionTimeline.ENTRIES);
+        }
+        PathConstraintPositionTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.pathConstraintPosition << 24) + this.pathConstraintIndex;
+        };
+        PathConstraintPositionTimeline.prototype.setFrame = function(frameIndex, time, value) {
+          frameIndex *= PathConstraintPositionTimeline.ENTRIES;
+          this.frames[frameIndex] = time;
+          this.frames[frameIndex + PathConstraintPositionTimeline.VALUE] = value;
+        };
+        PathConstraintPositionTimeline.prototype.apply = function(skeleton, lastTime, time, firedEvents, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var constraint = skeleton.pathConstraints[this.pathConstraintIndex];
+          if (time < frames[0]) {
+            setupPose && (constraint.position = constraint.data.position);
+            return;
+          }
+          var position = 0;
+          if (time >= frames[frames.length - PathConstraintPositionTimeline.ENTRIES]) position = frames[frames.length + PathConstraintPositionTimeline.PREV_VALUE]; else {
+            var frame = Animation.binarySearch(frames, time, PathConstraintPositionTimeline.ENTRIES);
+            position = frames[frame + PathConstraintPositionTimeline.PREV_VALUE];
+            var frameTime = frames[frame];
+            var percent = this.getCurvePercent(frame / PathConstraintPositionTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + PathConstraintPositionTimeline.PREV_TIME] - frameTime));
+            position += (frames[frame + PathConstraintPositionTimeline.VALUE] - position) * percent;
+          }
+          setupPose ? constraint.position = constraint.data.position + (position - constraint.data.position) * alpha : constraint.position += (position - constraint.position) * alpha;
+        };
+        PathConstraintPositionTimeline.ENTRIES = 2;
+        PathConstraintPositionTimeline.PREV_TIME = -2;
+        PathConstraintPositionTimeline.PREV_VALUE = -1;
+        PathConstraintPositionTimeline.VALUE = 1;
+        return PathConstraintPositionTimeline;
+      })(CurveTimeline);
+      spine.PathConstraintPositionTimeline = PathConstraintPositionTimeline;
+      var PathConstraintSpacingTimeline = (function(_super) {
+        __extends(PathConstraintSpacingTimeline, _super);
+        function PathConstraintSpacingTimeline(frameCount) {
+          _super.call(this, frameCount);
+        }
+        PathConstraintSpacingTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.pathConstraintSpacing << 24) + this.pathConstraintIndex;
+        };
+        PathConstraintSpacingTimeline.prototype.apply = function(skeleton, lastTime, time, firedEvents, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var constraint = skeleton.pathConstraints[this.pathConstraintIndex];
+          if (time < frames[0]) {
+            setupPose && (constraint.spacing = constraint.data.spacing);
+            return;
+          }
+          var spacing = 0;
+          if (time >= frames[frames.length - PathConstraintSpacingTimeline.ENTRIES]) spacing = frames[frames.length + PathConstraintSpacingTimeline.PREV_VALUE]; else {
+            var frame = Animation.binarySearch(frames, time, PathConstraintSpacingTimeline.ENTRIES);
+            spacing = frames[frame + PathConstraintSpacingTimeline.PREV_VALUE];
+            var frameTime = frames[frame];
+            var percent = this.getCurvePercent(frame / PathConstraintSpacingTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + PathConstraintSpacingTimeline.PREV_TIME] - frameTime));
+            spacing += (frames[frame + PathConstraintSpacingTimeline.VALUE] - spacing) * percent;
+          }
+          setupPose ? constraint.spacing = constraint.data.spacing + (spacing - constraint.data.spacing) * alpha : constraint.spacing += (spacing - constraint.spacing) * alpha;
+        };
+        return PathConstraintSpacingTimeline;
+      })(PathConstraintPositionTimeline);
+      spine.PathConstraintSpacingTimeline = PathConstraintSpacingTimeline;
+      var PathConstraintMixTimeline = (function(_super) {
+        __extends(PathConstraintMixTimeline, _super);
+        function PathConstraintMixTimeline(frameCount) {
+          _super.call(this, frameCount);
+          this.frames = spine.Utils.newFloatArray(frameCount * PathConstraintMixTimeline.ENTRIES);
+        }
+        PathConstraintMixTimeline.prototype.getPropertyId = function() {
+          return (TimelineType.pathConstraintMix << 24) + this.pathConstraintIndex;
+        };
+        PathConstraintMixTimeline.prototype.setFrame = function(frameIndex, time, rotateMix, translateMix) {
+          frameIndex *= PathConstraintMixTimeline.ENTRIES;
+          this.frames[frameIndex] = time;
+          this.frames[frameIndex + PathConstraintMixTimeline.ROTATE] = rotateMix;
+          this.frames[frameIndex + PathConstraintMixTimeline.TRANSLATE] = translateMix;
+        };
+        PathConstraintMixTimeline.prototype.apply = function(skeleton, lastTime, time, firedEvents, alpha, setupPose, mixingOut) {
+          var frames = this.frames;
+          var constraint = skeleton.pathConstraints[this.pathConstraintIndex];
+          if (time < frames[0]) {
+            if (setupPose) {
+              constraint.rotateMix = constraint.data.rotateMix;
+              constraint.translateMix = constraint.data.translateMix;
+            }
+            return;
+          }
+          var rotate = 0, translate = 0;
+          if (time >= frames[frames.length - PathConstraintMixTimeline.ENTRIES]) {
+            rotate = frames[frames.length + PathConstraintMixTimeline.PREV_ROTATE];
+            translate = frames[frames.length + PathConstraintMixTimeline.PREV_TRANSLATE];
+          } else {
+            var frame = Animation.binarySearch(frames, time, PathConstraintMixTimeline.ENTRIES);
+            rotate = frames[frame + PathConstraintMixTimeline.PREV_ROTATE];
+            translate = frames[frame + PathConstraintMixTimeline.PREV_TRANSLATE];
+            var frameTime = frames[frame];
+            var percent = this.getCurvePercent(frame / PathConstraintMixTimeline.ENTRIES - 1, 1 - (time - frameTime) / (frames[frame + PathConstraintMixTimeline.PREV_TIME] - frameTime));
+            rotate += (frames[frame + PathConstraintMixTimeline.ROTATE] - rotate) * percent;
+            translate += (frames[frame + PathConstraintMixTimeline.TRANSLATE] - translate) * percent;
+          }
+          if (setupPose) {
+            constraint.rotateMix = constraint.data.rotateMix + (rotate - constraint.data.rotateMix) * alpha;
+            constraint.translateMix = constraint.data.translateMix + (translate - constraint.data.translateMix) * alpha;
+          } else {
+            constraint.rotateMix += (rotate - constraint.rotateMix) * alpha;
+            constraint.translateMix += (translate - constraint.translateMix) * alpha;
+          }
+        };
+        PathConstraintMixTimeline.ENTRIES = 3;
+        PathConstraintMixTimeline.PREV_TIME = -3;
+        PathConstraintMixTimeline.PREV_ROTATE = -2;
+        PathConstraintMixTimeline.PREV_TRANSLATE = -1;
+        PathConstraintMixTimeline.ROTATE = 1;
+        PathConstraintMixTimeline.TRANSLATE = 2;
+        return PathConstraintMixTimeline;
+      })(CurveTimeline);
+      spine.PathConstraintMixTimeline = PathConstraintMixTimeline;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var AnimationState = (function() {
+        function AnimationState(data) {
+          this.tracks = new Array();
+          this.events = new Array();
+          this.listeners = new Array();
+          this.queue = new EventQueue(this);
+          this.propertyIDs = new spine.IntSet();
+          this.animationsChanged = false;
+          this.timeScale = 1;
+          this.trackEntryPool = new spine.Pool(function() {
+            return new TrackEntry();
+          });
+          this.data = data;
+        }
+        AnimationState.prototype.update = function(delta) {
+          delta *= this.timeScale;
+          var tracks = this.tracks;
+          for (var i = 0, n = tracks.length; i < n; i++) {
+            var current = tracks[i];
+            if (null == current) continue;
+            current.animationLast = current.nextAnimationLast;
+            current.trackLast = current.nextTrackLast;
+            var currentDelta = delta * current.timeScale;
+            if (current.delay > 0) {
+              current.delay -= currentDelta;
+              if (current.delay > 0) continue;
+              currentDelta = -current.delay;
+              current.delay = 0;
+            }
+            var next = current.next;
+            if (null != next) {
+              var nextTime = current.trackLast - next.delay;
+              if (nextTime >= 0) {
+                next.delay = 0;
+                next.trackTime = nextTime + delta * next.timeScale;
+                current.trackTime += currentDelta;
+                this.setCurrent(i, next, true);
+                while (null != next.mixingFrom) {
+                  next.mixTime += currentDelta;
+                  next = next.mixingFrom;
+                }
+                continue;
+              }
+            } else if (current.trackLast >= current.trackEnd && null == current.mixingFrom) {
+              tracks[i] = null;
+              this.queue.end(current);
+              this.disposeNext(current);
+              continue;
+            }
+            this.updateMixingFrom(current, delta);
+            current.trackTime += currentDelta;
+          }
+          this.queue.drain();
+        };
+        AnimationState.prototype.updateMixingFrom = function(entry, delta) {
+          var from = entry.mixingFrom;
+          if (null == from) return;
+          this.updateMixingFrom(from, delta);
+          if (entry.mixTime >= entry.mixDuration && null != from.mixingFrom && entry.mixTime > 0) {
+            entry.mixingFrom = null;
+            this.queue.end(from);
+            return;
+          }
+          from.animationLast = from.nextAnimationLast;
+          from.trackLast = from.nextTrackLast;
+          from.trackTime += delta * from.timeScale;
+          entry.mixTime += delta * from.timeScale;
+        };
+        AnimationState.prototype.apply = function(skeleton) {
+          if (null == skeleton) throw new Error("skeleton cannot be null.");
+          this.animationsChanged && this._animationsChanged();
+          var events = this.events;
+          var tracks = this.tracks;
+          for (var i = 0, n = tracks.length; i < n; i++) {
+            var current = tracks[i];
+            if (null == current || current.delay > 0) continue;
+            var mix = current.alpha;
+            null != current.mixingFrom ? mix *= this.applyMixingFrom(current, skeleton) : current.trackTime >= current.trackEnd && (mix = 0);
+            var animationLast = current.animationLast, animationTime = current.getAnimationTime();
+            var timelineCount = current.animation.timelines.length;
+            var timelines = current.animation.timelines;
+            if (1 == mix) for (var ii = 0; ii < timelineCount; ii++) timelines[ii].apply(skeleton, animationLast, animationTime, events, 1, true, false); else {
+              var firstFrame = 0 == current.timelinesRotation.length;
+              firstFrame && spine.Utils.setArraySize(current.timelinesRotation, timelineCount << 1, null);
+              var timelinesRotation = current.timelinesRotation;
+              var timelinesFirst = current.timelinesFirst;
+              for (var ii = 0; ii < timelineCount; ii++) {
+                var timeline = timelines[ii];
+                timeline instanceof spine.RotateTimeline ? this.applyRotateTimeline(timeline, skeleton, animationTime, mix, timelinesFirst[ii], timelinesRotation, ii << 1, firstFrame) : timeline.apply(skeleton, animationLast, animationTime, events, mix, timelinesFirst[ii], false);
+              }
+            }
+            this.queueEvents(current, animationTime);
+            events.length = 0;
+            current.nextAnimationLast = animationTime;
+            current.nextTrackLast = current.trackTime;
+          }
+          this.queue.drain();
+        };
+        AnimationState.prototype.applyMixingFrom = function(entry, skeleton) {
+          var from = entry.mixingFrom;
+          null != from.mixingFrom && this.applyMixingFrom(from, skeleton);
+          var mix = 0;
+          if (0 == entry.mixDuration) mix = 1; else {
+            mix = entry.mixTime / entry.mixDuration;
+            mix > 1 && (mix = 1);
+          }
+          var events = mix < from.eventThreshold ? this.events : null;
+          var attachments = mix < from.attachmentThreshold, drawOrder = mix < from.drawOrderThreshold;
+          var animationLast = from.animationLast, animationTime = from.getAnimationTime();
+          var timelineCount = from.animation.timelines.length;
+          var timelines = from.animation.timelines;
+          var timelinesFirst = from.timelinesFirst;
+          var alpha = from.alpha * entry.mixAlpha * (1 - mix);
+          var firstFrame = 0 == from.timelinesRotation.length;
+          firstFrame && spine.Utils.setArraySize(from.timelinesRotation, timelineCount << 1, null);
+          var timelinesRotation = from.timelinesRotation;
+          for (var i = 0; i < timelineCount; i++) {
+            var timeline = timelines[i];
+            var setupPose = timelinesFirst[i];
+            if (timeline instanceof spine.RotateTimeline) this.applyRotateTimeline(timeline, skeleton, animationTime, alpha, setupPose, timelinesRotation, i << 1, firstFrame); else {
+              if (!setupPose) {
+                if (!attachments && timeline instanceof spine.AttachmentTimeline) continue;
+                if (!drawOrder && timeline instanceof spine.DrawOrderTimeline) continue;
+              }
+              timeline.apply(skeleton, animationLast, animationTime, events, alpha, setupPose, true);
+            }
+          }
+          entry.mixDuration > 0 && this.queueEvents(from, animationTime);
+          this.events.length = 0;
+          from.nextAnimationLast = animationTime;
+          from.nextTrackLast = from.trackTime;
+          return mix;
+        };
+        AnimationState.prototype.applyRotateTimeline = function(timeline, skeleton, time, alpha, setupPose, timelinesRotation, i, firstFrame) {
+          firstFrame && (timelinesRotation[i] = 0);
+          if (1 == alpha) {
+            timeline.apply(skeleton, 0, time, null, 1, setupPose, false);
+            return;
+          }
+          var rotateTimeline = timeline;
+          var frames = rotateTimeline.frames;
+          var bone = skeleton.bones[rotateTimeline.boneIndex];
+          if (time < frames[0]) {
+            setupPose && (bone.rotation = bone.data.rotation);
+            return;
+          }
+          var r2 = 0;
+          if (time >= frames[frames.length - spine.RotateTimeline.ENTRIES]) r2 = bone.data.rotation + frames[frames.length + spine.RotateTimeline.PREV_ROTATION]; else {
+            var frame = spine.Animation.binarySearch(frames, time, spine.RotateTimeline.ENTRIES);
+            var prevRotation = frames[frame + spine.RotateTimeline.PREV_ROTATION];
+            var frameTime = frames[frame];
+            var percent = rotateTimeline.getCurvePercent((frame >> 1) - 1, 1 - (time - frameTime) / (frames[frame + spine.RotateTimeline.PREV_TIME] - frameTime));
+            r2 = frames[frame + spine.RotateTimeline.ROTATION] - prevRotation;
+            r2 -= 360 * (16384 - (16384.499999999996 - r2 / 360 | 0));
+            r2 = prevRotation + r2 * percent + bone.data.rotation;
+            r2 -= 360 * (16384 - (16384.499999999996 - r2 / 360 | 0));
+          }
+          var r1 = setupPose ? bone.data.rotation : bone.rotation;
+          var total = 0, diff = r2 - r1;
+          if (0 == diff) total = timelinesRotation[i]; else {
+            diff -= 360 * (16384 - (16384.499999999996 - diff / 360 | 0));
+            var lastTotal = 0, lastDiff = 0;
+            if (firstFrame) {
+              lastTotal = 0;
+              lastDiff = diff;
+            } else {
+              lastTotal = timelinesRotation[i];
+              lastDiff = timelinesRotation[i + 1];
+            }
+            var current = diff > 0, dir = lastTotal >= 0;
+            if (spine.MathUtils.signum(lastDiff) != spine.MathUtils.signum(diff) && Math.abs(lastDiff) <= 90) {
+              Math.abs(lastTotal) > 180 && (lastTotal += 360 * spine.MathUtils.signum(lastTotal));
+              dir = current;
+            }
+            total = diff + lastTotal - lastTotal % 360;
+            dir != current && (total += 360 * spine.MathUtils.signum(lastTotal));
+            timelinesRotation[i] = total;
+          }
+          timelinesRotation[i + 1] = diff;
+          r1 += total * alpha;
+          bone.rotation = r1 - 360 * (16384 - (16384.499999999996 - r1 / 360 | 0));
+        };
+        AnimationState.prototype.queueEvents = function(entry, animationTime) {
+          var animationStart = entry.animationStart, animationEnd = entry.animationEnd;
+          var duration = animationEnd - animationStart;
+          var trackLastWrapped = entry.trackLast % duration;
+          var events = this.events;
+          var i = 0, n = events.length;
+          for (;i < n; i++) {
+            var event_1 = events[i];
+            if (event_1.time < trackLastWrapped) break;
+            if (event_1.time > animationEnd) continue;
+            this.queue.event(entry, event_1);
+          }
+          (entry.loop ? trackLastWrapped > entry.trackTime % duration : animationTime >= animationEnd && entry.animationLast < animationEnd) && this.queue.complete(entry);
+          for (;i < n; i++) {
+            var event_2 = events[i];
+            if (event_2.time < animationStart) continue;
+            this.queue.event(entry, events[i]);
+          }
+        };
+        AnimationState.prototype.clearTracks = function() {
+          this.queue.drainDisabled = true;
+          for (var i = 0, n = this.tracks.length; i < n; i++) this.clearTrack(i);
+          this.tracks.length = 0;
+          this.queue.drainDisabled = false;
+          this.queue.drain();
+        };
+        AnimationState.prototype.clearTrack = function(trackIndex) {
+          if (trackIndex >= this.tracks.length) return;
+          var current = this.tracks[trackIndex];
+          if (null == current) return;
+          this.queue.end(current);
+          this.disposeNext(current);
+          var entry = current;
+          while (true) {
+            var from = entry.mixingFrom;
+            if (null == from) break;
+            this.queue.end(from);
+            entry.mixingFrom = null;
+            entry = from;
+          }
+          this.tracks[current.trackIndex] = null;
+          this.queue.drain();
+        };
+        AnimationState.prototype.setCurrent = function(index, current, interrupt) {
+          var from = this.expandToIndex(index);
+          this.tracks[index] = current;
+          if (null != from) {
+            interrupt && this.queue.interrupt(from);
+            current.mixingFrom = from;
+            current.mixTime = 0;
+            from.timelinesRotation.length = 0;
+            null != from.mixingFrom && from.mixDuration > 0 && (current.mixAlpha *= Math.min(from.mixTime / from.mixDuration, 1));
+          }
+          this.queue.start(current);
+        };
+        AnimationState.prototype.setAnimation = function(trackIndex, animationName, loop) {
+          var animation = this.data.skeletonData.findAnimation(animationName);
+          if (null == animation) throw new Error("Animation not found: " + animationName);
+          return this.setAnimationWith(trackIndex, animation, loop);
+        };
+        AnimationState.prototype.setAnimationWith = function(trackIndex, animation, loop) {
+          if (null == animation) throw new Error("animation cannot be null.");
+          var interrupt = true;
+          var current = this.expandToIndex(trackIndex);
+          if (null != current) if (-1 == current.nextTrackLast) {
+            this.tracks[trackIndex] = current.mixingFrom;
+            this.queue.interrupt(current);
+            this.queue.end(current);
+            this.disposeNext(current);
+            current = current.mixingFrom;
+            interrupt = false;
+          } else this.disposeNext(current);
+          var entry = this.trackEntry(trackIndex, animation, loop, current);
+          this.setCurrent(trackIndex, entry, interrupt);
+          this.queue.drain();
+          return entry;
+        };
+        AnimationState.prototype.addAnimation = function(trackIndex, animationName, loop, delay) {
+          var animation = this.data.skeletonData.findAnimation(animationName);
+          if (null == animation) throw new Error("Animation not found: " + animationName);
+          return this.addAnimationWith(trackIndex, animation, loop, delay);
+        };
+        AnimationState.prototype.addAnimationWith = function(trackIndex, animation, loop, delay) {
+          if (null == animation) throw new Error("animation cannot be null.");
+          var last = this.expandToIndex(trackIndex);
+          if (null != last) while (null != last.next) last = last.next;
+          var entry = this.trackEntry(trackIndex, animation, loop, last);
+          if (null == last) {
+            this.setCurrent(trackIndex, entry, true);
+            this.queue.drain();
+          } else {
+            last.next = entry;
+            if (delay <= 0) {
+              var duration = last.animationEnd - last.animationStart;
+              0 != duration ? delay += duration * (1 + (last.trackTime / duration | 0)) - this.data.getMix(last.animation, animation) : delay = 0;
+            }
+          }
+          entry.delay = delay;
+          return entry;
+        };
+        AnimationState.prototype.setEmptyAnimation = function(trackIndex, mixDuration) {
+          var entry = this.setAnimationWith(trackIndex, AnimationState.emptyAnimation, false);
+          entry.mixDuration = mixDuration;
+          entry.trackEnd = mixDuration;
+          return entry;
+        };
+        AnimationState.prototype.addEmptyAnimation = function(trackIndex, mixDuration, delay) {
+          delay <= 0 && (delay -= mixDuration);
+          var entry = this.addAnimationWith(trackIndex, AnimationState.emptyAnimation, false, delay);
+          entry.mixDuration = mixDuration;
+          entry.trackEnd = mixDuration;
+          return entry;
+        };
+        AnimationState.prototype.setEmptyAnimations = function(mixDuration) {
+          this.queue.drainDisabled = true;
+          for (var i = 0, n = this.tracks.length; i < n; i++) {
+            var current = this.tracks[i];
+            null != current && this.setEmptyAnimation(current.trackIndex, mixDuration);
+          }
+          this.queue.drainDisabled = false;
+          this.queue.drain();
+        };
+        AnimationState.prototype.expandToIndex = function(index) {
+          if (index < this.tracks.length) return this.tracks[index];
+          spine.Utils.ensureArrayCapacity(this.tracks, index - this.tracks.length + 1, null);
+          this.tracks.length = index + 1;
+          return null;
+        };
+        AnimationState.prototype.trackEntry = function(trackIndex, animation, loop, last) {
+          var entry = this.trackEntryPool.obtain();
+          entry.trackIndex = trackIndex;
+          entry.animation = animation;
+          entry.loop = loop;
+          entry.eventThreshold = 0;
+          entry.attachmentThreshold = 0;
+          entry.drawOrderThreshold = 0;
+          entry.animationStart = 0;
+          entry.animationEnd = animation.duration;
+          entry.animationLast = -1;
+          entry.nextAnimationLast = -1;
+          entry.delay = 0;
+          entry.trackTime = 0;
+          entry.trackLast = -1;
+          entry.nextTrackLast = -1;
+          entry.trackEnd = Number.MAX_VALUE;
+          entry.timeScale = 1;
+          entry.alpha = 1;
+          entry.mixAlpha = 1;
+          entry.mixTime = 0;
+          entry.mixDuration = null == last ? 0 : this.data.getMix(last.animation, animation);
+          return entry;
+        };
+        AnimationState.prototype.disposeNext = function(entry) {
+          var next = entry.next;
+          while (null != next) {
+            this.queue.dispose(next);
+            next = next.next;
+          }
+          entry.next = null;
+        };
+        AnimationState.prototype._animationsChanged = function() {
+          this.animationsChanged = false;
+          var propertyIDs = this.propertyIDs;
+          var i = 0, n = this.tracks.length;
+          propertyIDs.clear();
+          for (;i < n; i++) {
+            var entry = this.tracks[i];
+            if (null == entry) continue;
+            this.setTimelinesFirst(entry);
+            i++;
+            break;
+          }
+          for (;i < n; i++) {
+            var entry = this.tracks[i];
+            null != entry && this.checkTimelinesFirst(entry);
+          }
+        };
+        AnimationState.prototype.setTimelinesFirst = function(entry) {
+          if (null != entry.mixingFrom) {
+            this.setTimelinesFirst(entry.mixingFrom);
+            this.checkTimelinesUsage(entry, entry.timelinesFirst);
+            return;
+          }
+          var propertyIDs = this.propertyIDs;
+          var timelines = entry.animation.timelines;
+          var n = timelines.length;
+          var usage = spine.Utils.setArraySize(entry.timelinesFirst, n, false);
+          for (var i = 0; i < n; i++) {
+            propertyIDs.add(timelines[i].getPropertyId());
+            usage[i] = true;
+          }
+        };
+        AnimationState.prototype.checkTimelinesFirst = function(entry) {
+          null != entry.mixingFrom && this.checkTimelinesFirst(entry.mixingFrom);
+          this.checkTimelinesUsage(entry, entry.timelinesFirst);
+        };
+        AnimationState.prototype.checkTimelinesUsage = function(entry, usageArray) {
+          var propertyIDs = this.propertyIDs;
+          var timelines = entry.animation.timelines;
+          var n = timelines.length;
+          var usage = spine.Utils.setArraySize(usageArray, n);
+          for (var i = 0; i < n; i++) usage[i] = propertyIDs.add(timelines[i].getPropertyId());
+        };
+        AnimationState.prototype.getCurrent = function(trackIndex) {
+          if (trackIndex >= this.tracks.length) return null;
+          return this.tracks[trackIndex];
+        };
+        AnimationState.prototype.addListener = function(listener) {
+          if (null == listener) throw new Error("listener cannot be null.");
+          this.listeners.push(listener);
+        };
+        AnimationState.prototype.removeListener = function(listener) {
+          var index = this.listeners.indexOf(listener);
+          index >= 0 && this.listeners.splice(index, 1);
+        };
+        AnimationState.prototype.clearListeners = function() {
+          this.listeners.length = 0;
+        };
+        AnimationState.prototype.clearListenerNotifications = function() {
+          this.queue.clear();
+        };
+        AnimationState.emptyAnimation = new spine.Animation("<empty>", [], 0);
+        return AnimationState;
+      })();
+      spine.AnimationState = AnimationState;
+      var TrackEntry = (function() {
+        function TrackEntry() {
+          this.timelinesFirst = new Array();
+          this.timelinesRotation = new Array();
+        }
+        TrackEntry.prototype.reset = function() {
+          this.next = null;
+          this.mixingFrom = null;
+          this.animation = null;
+          this.listener = null;
+          this.timelinesFirst.length = 0;
+          this.timelinesRotation.length = 0;
+        };
+        TrackEntry.prototype.getAnimationTime = function() {
+          if (this.loop) {
+            var duration = this.animationEnd - this.animationStart;
+            if (0 == duration) return this.animationStart;
+            return this.trackTime % duration + this.animationStart;
+          }
+          return Math.min(this.trackTime + this.animationStart, this.animationEnd);
+        };
+        TrackEntry.prototype.setAnimationLast = function(animationLast) {
+          this.animationLast = animationLast;
+          this.nextAnimationLast = animationLast;
+        };
+        TrackEntry.prototype.isComplete = function() {
+          return this.trackTime >= this.animationEnd - this.animationStart;
+        };
+        TrackEntry.prototype.resetRotationDirections = function() {
+          this.timelinesRotation.length = 0;
+        };
+        return TrackEntry;
+      })();
+      spine.TrackEntry = TrackEntry;
+      var EventQueue = (function() {
+        function EventQueue(animState) {
+          this.objects = [];
+          this.drainDisabled = false;
+          this.animState = animState;
+        }
+        EventQueue.prototype.start = function(entry) {
+          this.objects.push(EventType.start);
+          this.objects.push(entry);
+          this.animState.animationsChanged = true;
+        };
+        EventQueue.prototype.interrupt = function(entry) {
+          this.objects.push(EventType.interrupt);
+          this.objects.push(entry);
+        };
+        EventQueue.prototype.end = function(entry) {
+          this.objects.push(EventType.end);
+          this.objects.push(entry);
+          this.animState.animationsChanged = true;
+        };
+        EventQueue.prototype.dispose = function(entry) {
+          this.objects.push(EventType.dispose);
+          this.objects.push(entry);
+        };
+        EventQueue.prototype.complete = function(entry) {
+          this.objects.push(EventType.complete);
+          this.objects.push(entry);
+        };
+        EventQueue.prototype.event = function(entry, event) {
+          this.objects.push(EventType.event);
+          this.objects.push(entry);
+          this.objects.push(event);
+        };
+        EventQueue.prototype.drain = function() {
+          if (this.drainDisabled) return;
+          this.drainDisabled = true;
+          var objects = this.objects;
+          var listeners = this.animState.listeners;
+          for (var i = 0; i < objects.length; i += 2) {
+            var type = objects[i];
+            var entry = objects[i + 1];
+            switch (type) {
+             case EventType.start:
+              null != entry.listener && entry.listener.start && entry.listener.start(entry);
+              for (var ii = 0; ii < listeners.length; ii++) listeners[ii].start && listeners[ii].start(entry);
+              break;
+
+             case EventType.interrupt:
+              null != entry.listener && entry.listener.interrupt && entry.listener.interrupt(entry);
+              for (var ii = 0; ii < listeners.length; ii++) listeners[ii].interrupt && listeners[ii].interrupt(entry);
+              break;
+
+             case EventType.end:
+              null != entry.listener && entry.listener.end && entry.listener.end(entry);
+              for (var ii = 0; ii < listeners.length; ii++) listeners[ii].end && listeners[ii].end(entry);
+
+             case EventType.dispose:
+              null != entry.listener && entry.listener.dispose && entry.listener.dispose(entry);
+              for (var ii = 0; ii < listeners.length; ii++) listeners[ii].dispose && listeners[ii].dispose(entry);
+              this.animState.trackEntryPool.free(entry);
+              break;
+
+             case EventType.complete:
+              null != entry.listener && entry.listener.complete && entry.listener.complete(entry);
+              for (var ii = 0; ii < listeners.length; ii++) listeners[ii].complete && listeners[ii].complete(entry);
+              break;
+
+             case EventType.event:
+              var event_3 = objects[2 + i++];
+              null != entry.listener && entry.listener.event && entry.listener.event(entry, event_3);
+              for (var ii = 0; ii < listeners.length; ii++) listeners[ii].event && listeners[ii].event(entry, event_3);
+            }
+          }
+          this.clear();
+          this.drainDisabled = false;
+        };
+        EventQueue.prototype.clear = function() {
+          this.objects.length = 0;
+        };
+        return EventQueue;
+      })();
+      spine.EventQueue = EventQueue;
+      (function(EventType) {
+        EventType[EventType["start"] = 0] = "start";
+        EventType[EventType["interrupt"] = 1] = "interrupt";
+        EventType[EventType["end"] = 2] = "end";
+        EventType[EventType["dispose"] = 3] = "dispose";
+        EventType[EventType["complete"] = 4] = "complete";
+        EventType[EventType["event"] = 5] = "event";
+      })(spine.EventType || (spine.EventType = {}));
+      var EventType = spine.EventType;
+      var AnimationStateAdapter2 = (function() {
+        function AnimationStateAdapter2() {}
+        AnimationStateAdapter2.prototype.start = function(entry) {};
+        AnimationStateAdapter2.prototype.interrupt = function(entry) {};
+        AnimationStateAdapter2.prototype.end = function(entry) {};
+        AnimationStateAdapter2.prototype.dispose = function(entry) {};
+        AnimationStateAdapter2.prototype.complete = function(entry) {};
+        AnimationStateAdapter2.prototype.event = function(entry, event) {};
+        return AnimationStateAdapter2;
+      })();
+      spine.AnimationStateAdapter2 = AnimationStateAdapter2;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var AnimationStateData = (function() {
+        function AnimationStateData(skeletonData) {
+          this.animationToMixTime = {};
+          this.defaultMix = 0;
+          if (null == skeletonData) throw new Error("skeletonData cannot be null.");
+          this.skeletonData = skeletonData;
+        }
+        AnimationStateData.prototype.setMix = function(fromName, toName, duration) {
+          var from = this.skeletonData.findAnimation(fromName);
+          if (null == from) throw new Error("Animation not found: " + fromName);
+          var to = this.skeletonData.findAnimation(toName);
+          if (null == to) throw new Error("Animation not found: " + toName);
+          this.setMixWith(from, to, duration);
+        };
+        AnimationStateData.prototype.setMixWith = function(from, to, duration) {
+          if (null == from) throw new Error("from cannot be null.");
+          if (null == to) throw new Error("to cannot be null.");
+          var key = from.name + to.name;
+          this.animationToMixTime[key] = duration;
+        };
+        AnimationStateData.prototype.getMix = function(from, to) {
+          var key = from.name + to.name;
+          var value = this.animationToMixTime[key];
+          return void 0 === value ? this.defaultMix : value;
+        };
+        return AnimationStateData;
+      })();
+      spine.AnimationStateData = AnimationStateData;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var AssetManager = (function() {
+        function AssetManager(textureLoader, pathPrefix) {
+          void 0 === pathPrefix && (pathPrefix = "");
+          this.assets = {};
+          this.errors = {};
+          this.toLoad = 0;
+          this.loaded = 0;
+          this.textureLoader = textureLoader;
+          this.pathPrefix = pathPrefix;
+        }
+        AssetManager.prototype.loadText = function(path, success, error) {
+          var _this = this;
+          void 0 === success && (success = null);
+          void 0 === error && (error = null);
+          path = this.pathPrefix + path;
+          this.toLoad++;
+          var request = new XMLHttpRequest();
+          request.onreadystatechange = function() {
+            if (request.readyState == XMLHttpRequest.DONE) {
+              if (request.status >= 200 && request.status < 300) {
+                _this.assets[path] = request.responseText;
+                success && success(path, request.responseText);
+              } else {
+                _this.errors[path] = "Couldn't load text " + path + ": status " + request.status + ", " + request.responseText;
+                error && error(path, "Couldn't load text " + path + ": status " + request.status + ", " + request.responseText);
+              }
+              _this.toLoad--;
+              _this.loaded++;
+            }
+          };
+          request.open("GET", path, true);
+          request.send();
+        };
+        AssetManager.prototype.loadTexture = function(path, success, error) {
+          var _this = this;
+          void 0 === success && (success = null);
+          void 0 === error && (error = null);
+          path = this.pathPrefix + path;
+          this.toLoad++;
+          var img = new Image();
+          img.crossOrigin = "anonymous";
+          img.src = path;
+          img.onload = function(ev) {
+            var texture = _this.textureLoader(img);
+            _this.assets[path] = texture;
+            _this.toLoad--;
+            _this.loaded++;
+            success && success(path, img);
+          };
+          img.onerror = function(ev) {
+            _this.errors[path] = "Couldn't load image " + path;
+            _this.toLoad--;
+            _this.loaded++;
+            error && error(path, "Couldn't load image " + path);
+          };
+        };
+        AssetManager.prototype.get = function(path) {
+          path = this.pathPrefix + path;
+          return this.assets[path];
+        };
+        AssetManager.prototype.remove = function(path) {
+          path = this.pathPrefix + path;
+          var asset = this.assets[path];
+          asset.dispose && asset.dispose();
+          this.assets[path] = null;
+        };
+        AssetManager.prototype.removeAll = function() {
+          for (var key in this.assets) {
+            var asset = this.assets[key];
+            asset.dispose && asset.dispose();
+          }
+          this.assets = {};
+        };
+        AssetManager.prototype.isLoadingComplete = function() {
+          return 0 == this.toLoad;
+        };
+        AssetManager.prototype.getToLoad = function() {
+          return this.toLoad;
+        };
+        AssetManager.prototype.getLoaded = function() {
+          return this.loaded;
+        };
+        AssetManager.prototype.dispose = function() {
+          this.removeAll();
+        };
+        AssetManager.prototype.hasErrors = function() {
+          return Object.keys(this.errors).length > 0;
+        };
+        AssetManager.prototype.getErrors = function() {
+          return this.errors;
+        };
+        return AssetManager;
+      })();
+      spine.AssetManager = AssetManager;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var AtlasAttachmentLoader = (function() {
+        function AtlasAttachmentLoader(atlas) {
+          this.atlas = atlas;
+        }
+        AtlasAttachmentLoader.prototype.newRegionAttachment = function(skin, name, path) {
+          var region = this.atlas.findRegion(path);
+          if (null == region) throw new Error("Region not found in atlas: " + path + " (region attachment: " + name + ")");
+          region.renderObject = region;
+          var attachment = new spine.RegionAttachment(name);
+          attachment.setRegion(region);
+          return attachment;
+        };
+        AtlasAttachmentLoader.prototype.newMeshAttachment = function(skin, name, path) {
+          var region = this.atlas.findRegion(path);
+          if (null == region) throw new Error("Region not found in atlas: " + path + " (mesh attachment: " + name + ")");
+          region.renderObject = region;
+          var attachment = new spine.MeshAttachment(name);
+          attachment.region = region;
+          return attachment;
+        };
+        AtlasAttachmentLoader.prototype.newBoundingBoxAttachment = function(skin, name) {
+          return new spine.BoundingBoxAttachment(name);
+        };
+        AtlasAttachmentLoader.prototype.newPathAttachment = function(skin, name) {
+          return new spine.PathAttachment(name);
+        };
+        return AtlasAttachmentLoader;
+      })();
+      spine.AtlasAttachmentLoader = AtlasAttachmentLoader;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var Attachment = (function() {
+        function Attachment(name) {
+          if (null == name) throw new Error("name cannot be null.");
+          this.name = name;
+        }
+        return Attachment;
+      })();
+      spine.Attachment = Attachment;
+      var VertexAttachment = (function(_super) {
+        __extends(VertexAttachment, _super);
+        function VertexAttachment(name) {
+          _super.call(this, name);
+          this.worldVerticesLength = 0;
+        }
+        VertexAttachment.prototype.computeWorldVertices = function(slot, worldVertices) {
+          this.computeWorldVerticesWith(slot, 0, this.worldVerticesLength, worldVertices, 0);
+        };
+        VertexAttachment.prototype.computeWorldVerticesWith = function(slot, start, count, worldVertices, offset) {
+          count += offset;
+          var skeleton = slot.bone.skeleton;
+          var deformArray = slot.attachmentVertices;
+          var vertices = this.vertices;
+          var bones = this.bones;
+          if (null == bones) {
+            deformArray.length > 0 && (vertices = deformArray);
+            var bone = slot.bone;
+            var x = bone.worldX;
+            var y = bone.worldY;
+            var a = bone.a, b = bone.b, c = bone.c, d = bone.d;
+            for (var v_1 = start, w = offset; w < count; v_1 += 2, w += 2) {
+              var vx = vertices[v_1], vy = vertices[v_1 + 1];
+              worldVertices[w] = vx * a + vy * b + x;
+              worldVertices[w + 1] = vx * c + vy * d + y;
+            }
+            return;
+          }
+          var v = 0, skip = 0;
+          for (var i = 0; i < start; i += 2) {
+            var n = bones[v];
+            v += n + 1;
+            skip += n;
+          }
+          var skeletonBones = skeleton.bones;
+          if (0 == deformArray.length) for (var w = offset, b = 3 * skip; w < count; w += 2) {
+            var wx = 0, wy = 0;
+            var n = bones[v++];
+            n += v;
+            for (;v < n; v++, b += 3) {
+              var bone = skeletonBones[bones[v]];
+              var vx = vertices[b], vy = vertices[b + 1], weight = vertices[b + 2];
+              wx += (vx * bone.a + vy * bone.b + bone.worldX) * weight;
+              wy += (vx * bone.c + vy * bone.d + bone.worldY) * weight;
+            }
+            worldVertices[w] = wx;
+            worldVertices[w + 1] = wy;
+          } else {
+            var deform = deformArray;
+            for (var w = offset, b = 3 * skip, f = skip << 1; w < count; w += 2) {
+              var wx = 0, wy = 0;
+              var n = bones[v++];
+              n += v;
+              for (;v < n; v++, b += 3, f += 2) {
+                var bone = skeletonBones[bones[v]];
+                var vx = vertices[b] + deform[f], vy = vertices[b + 1] + deform[f + 1], weight = vertices[b + 2];
+                wx += (vx * bone.a + vy * bone.b + bone.worldX) * weight;
+                wy += (vx * bone.c + vy * bone.d + bone.worldY) * weight;
+              }
+              worldVertices[w] = wx;
+              worldVertices[w + 1] = wy;
+            }
+          }
+        };
+        VertexAttachment.prototype.applyDeform = function(sourceAttachment) {
+          return this == sourceAttachment;
+        };
+        return VertexAttachment;
+      })(Attachment);
+      spine.VertexAttachment = VertexAttachment;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      (function(AttachmentType) {
+        AttachmentType[AttachmentType["Region"] = 0] = "Region";
+        AttachmentType[AttachmentType["BoundingBox"] = 1] = "BoundingBox";
+        AttachmentType[AttachmentType["Mesh"] = 2] = "Mesh";
+        AttachmentType[AttachmentType["LinkedMesh"] = 3] = "LinkedMesh";
+        AttachmentType[AttachmentType["Path"] = 4] = "Path";
+      })(spine.AttachmentType || (spine.AttachmentType = {}));
+      var AttachmentType = spine.AttachmentType;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var BoundingBoxAttachment = (function(_super) {
+        __extends(BoundingBoxAttachment, _super);
+        function BoundingBoxAttachment(name) {
+          _super.call(this, name);
+          this.color = new spine.Color(1, 1, 1, 1);
+        }
+        return BoundingBoxAttachment;
+      })(spine.VertexAttachment);
+      spine.BoundingBoxAttachment = BoundingBoxAttachment;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var MeshAttachment = (function(_super) {
+        __extends(MeshAttachment, _super);
+        function MeshAttachment(name) {
+          _super.call(this, name);
+          this.color = new spine.Color(1, 1, 1, 1);
+          this.inheritDeform = false;
+          this.tempColor = new spine.Color(0, 0, 0, 0);
+        }
+        MeshAttachment.prototype.updateUVs = function() {
+          var regionUVs = this.regionUVs;
+          var verticesLength = regionUVs.length;
+          var worldVerticesLength = 8 * (verticesLength >> 1);
+          null != this.worldVertices && this.worldVertices.length == worldVerticesLength || (this.worldVertices = spine.Utils.newFloatArray(worldVerticesLength));
+          var u = 0, v = 0, width = 0, height = 0;
+          if (null == this.region) {
+            u = v = 0;
+            width = height = 1;
+          } else {
+            u = this.region.u;
+            v = this.region.v;
+            width = this.region.u2 - u;
+            height = this.region.v2 - v;
+          }
+          if (this.region.rotate) for (var i = 0, w = 6; i < verticesLength; i += 2, w += 8) {
+            this.worldVertices[w] = u + regionUVs[i + 1] * width;
+            this.worldVertices[w + 1] = v + height - regionUVs[i] * height;
+          } else for (var i = 0, w = 6; i < verticesLength; i += 2, w += 8) {
+            this.worldVertices[w] = u + regionUVs[i] * width;
+            this.worldVertices[w + 1] = v + regionUVs[i + 1] * height;
+          }
+        };
+        MeshAttachment.prototype.updateWorldVertices = function(slot, premultipliedAlpha) {
+          var skeleton = slot.bone.skeleton;
+          var skeletonColor = skeleton.color, slotColor = slot.color, meshColor = this.color;
+          var alpha = skeletonColor.a * slotColor.a * meshColor.a;
+          var multiplier = premultipliedAlpha ? alpha : 1;
+          var color = this.tempColor;
+          color.set(skeletonColor.r * slotColor.r * meshColor.r * multiplier, skeletonColor.g * slotColor.g * meshColor.g * multiplier, skeletonColor.b * slotColor.b * meshColor.b * multiplier, alpha);
+          var deformArray = slot.attachmentVertices;
+          var vertices = this.vertices, worldVertices = this.worldVertices;
+          var bones = this.bones;
+          if (null == bones) {
+            var verticesLength = vertices.length;
+            deformArray.length > 0 && (vertices = deformArray);
+            var bone = slot.bone;
+            var x = bone.worldX;
+            var y = bone.worldY;
+            var a = bone.a, b = bone.b, c = bone.c, d = bone.d;
+            for (var v = 0, w = 0; v < verticesLength; v += 2, w += 8) {
+              var vx = vertices[v], vy = vertices[v + 1];
+              worldVertices[w] = vx * a + vy * b + x;
+              worldVertices[w + 1] = vx * c + vy * d + y;
+              worldVertices[w + 2] = color.r;
+              worldVertices[w + 3] = color.g;
+              worldVertices[w + 4] = color.b;
+              worldVertices[w + 5] = color.a;
+            }
+            return worldVertices;
+          }
+          var skeletonBones = skeleton.bones;
+          if (0 == deformArray.length) for (var w = 0, v = 0, b = 0, n = bones.length; v < n; w += 8) {
+            var wx = 0, wy = 0;
+            var nn = bones[v++] + v;
+            for (;v < nn; v++, b += 3) {
+              var bone = skeletonBones[bones[v]];
+              var vx = vertices[b], vy = vertices[b + 1], weight = vertices[b + 2];
+              wx += (vx * bone.a + vy * bone.b + bone.worldX) * weight;
+              wy += (vx * bone.c + vy * bone.d + bone.worldY) * weight;
+            }
+            worldVertices[w] = wx;
+            worldVertices[w + 1] = wy;
+            worldVertices[w + 2] = color.r;
+            worldVertices[w + 3] = color.g;
+            worldVertices[w + 4] = color.b;
+            worldVertices[w + 5] = color.a;
+          } else {
+            var deform = deformArray;
+            for (var w = 0, v = 0, b = 0, f = 0, n = bones.length; v < n; w += 8) {
+              var wx = 0, wy = 0;
+              var nn = bones[v++] + v;
+              for (;v < nn; v++, b += 3, f += 2) {
+                var bone = skeletonBones[bones[v]];
+                var vx = vertices[b] + deform[f], vy = vertices[b + 1] + deform[f + 1], weight = vertices[b + 2];
+                wx += (vx * bone.a + vy * bone.b + bone.worldX) * weight;
+                wy += (vx * bone.c + vy * bone.d + bone.worldY) * weight;
+              }
+              worldVertices[w] = wx;
+              worldVertices[w + 1] = wy;
+              worldVertices[w + 2] = color.r;
+              worldVertices[w + 3] = color.g;
+              worldVertices[w + 4] = color.b;
+              worldVertices[w + 5] = color.a;
+            }
+          }
+          return worldVertices;
+        };
+        MeshAttachment.prototype.applyDeform = function(sourceAttachment) {
+          return this == sourceAttachment || this.inheritDeform && this.parentMesh == sourceAttachment;
+        };
+        MeshAttachment.prototype.getParentMesh = function() {
+          return this.parentMesh;
+        };
+        MeshAttachment.prototype.setParentMesh = function(parentMesh) {
+          this.parentMesh = parentMesh;
+          if (null != parentMesh) {
+            this.bones = parentMesh.bones;
+            this.vertices = parentMesh.vertices;
+            this.regionUVs = parentMesh.regionUVs;
+            this.triangles = parentMesh.triangles;
+            this.hullLength = parentMesh.hullLength;
+          }
+        };
+        return MeshAttachment;
+      })(spine.VertexAttachment);
+      spine.MeshAttachment = MeshAttachment;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var PathAttachment = (function(_super) {
+        __extends(PathAttachment, _super);
+        function PathAttachment(name) {
+          _super.call(this, name);
+          this.closed = false;
+          this.constantSpeed = false;
+          this.color = new spine.Color(1, 1, 1, 1);
+        }
+        return PathAttachment;
+      })(spine.VertexAttachment);
+      spine.PathAttachment = PathAttachment;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var RegionAttachment = (function(_super) {
+        __extends(RegionAttachment, _super);
+        function RegionAttachment(name) {
+          _super.call(this, name);
+          this.x = 0;
+          this.y = 0;
+          this.scaleX = 1;
+          this.scaleY = 1;
+          this.rotation = 0;
+          this.width = 0;
+          this.height = 0;
+          this.color = new spine.Color(1, 1, 1, 1);
+          this.offset = spine.Utils.newFloatArray(8);
+          this.vertices = spine.Utils.newFloatArray(32);
+          this.tempColor = new spine.Color(1, 1, 1, 1);
+        }
+        RegionAttachment.prototype.setRegion = function(region) {
+          var vertices = this.vertices;
+          if (region.rotate) {
+            vertices[RegionAttachment.U2] = region.u;
+            vertices[RegionAttachment.V2] = region.v2;
+            vertices[RegionAttachment.U3] = region.u;
+            vertices[RegionAttachment.V3] = region.v;
+            vertices[RegionAttachment.U4] = region.u2;
+            vertices[RegionAttachment.V4] = region.v;
+            vertices[RegionAttachment.U1] = region.u2;
+            vertices[RegionAttachment.V1] = region.v2;
+          } else {
+            vertices[RegionAttachment.U1] = region.u;
+            vertices[RegionAttachment.V1] = region.v2;
+            vertices[RegionAttachment.U2] = region.u;
+            vertices[RegionAttachment.V2] = region.v;
+            vertices[RegionAttachment.U3] = region.u2;
+            vertices[RegionAttachment.V3] = region.v;
+            vertices[RegionAttachment.U4] = region.u2;
+            vertices[RegionAttachment.V4] = region.v2;
+          }
+          this.region = region;
+        };
+        RegionAttachment.prototype.updateOffset = function() {
+          var regionScaleX = this.width / this.region.originalWidth * this.scaleX;
+          var regionScaleY = this.height / this.region.originalHeight * this.scaleY;
+          var localX = -this.width / 2 * this.scaleX + this.region.offsetX * regionScaleX;
+          var localY = -this.height / 2 * this.scaleY + this.region.offsetY * regionScaleY;
+          var localX2 = localX + this.region.width * regionScaleX;
+          var localY2 = localY + this.region.height * regionScaleY;
+          var radians = this.rotation * Math.PI / 180;
+          var cos = Math.cos(radians);
+          var sin = Math.sin(radians);
+          var localXCos = localX * cos + this.x;
+          var localXSin = localX * sin;
+          var localYCos = localY * cos + this.y;
+          var localYSin = localY * sin;
+          var localX2Cos = localX2 * cos + this.x;
+          var localX2Sin = localX2 * sin;
+          var localY2Cos = localY2 * cos + this.y;
+          var localY2Sin = localY2 * sin;
+          var offset = this.offset;
+          offset[RegionAttachment.OX1] = localXCos - localYSin;
+          offset[RegionAttachment.OY1] = localYCos + localXSin;
+          offset[RegionAttachment.OX2] = localXCos - localY2Sin;
+          offset[RegionAttachment.OY2] = localY2Cos + localXSin;
+          offset[RegionAttachment.OX3] = localX2Cos - localY2Sin;
+          offset[RegionAttachment.OY3] = localY2Cos + localX2Sin;
+          offset[RegionAttachment.OX4] = localX2Cos - localYSin;
+          offset[RegionAttachment.OY4] = localYCos + localX2Sin;
+        };
+        RegionAttachment.prototype.updateWorldVertices = function(slot, premultipliedAlpha) {
+          var skeleton = slot.bone.skeleton;
+          var skeletonColor = skeleton.color;
+          var slotColor = slot.color;
+          var regionColor = this.color;
+          var alpha = skeletonColor.a * slotColor.a * regionColor.a;
+          var multiplier = premultipliedAlpha ? alpha : 1;
+          var color = this.tempColor;
+          color.set(skeletonColor.r * slotColor.r * regionColor.r * multiplier, skeletonColor.g * slotColor.g * regionColor.g * multiplier, skeletonColor.b * slotColor.b * regionColor.b * multiplier, alpha);
+          var vertices = this.vertices;
+          var offset = this.offset;
+          var bone = slot.bone;
+          var x = bone.worldX, y = bone.worldY;
+          var a = bone.a, b = bone.b, c = bone.c, d = bone.d;
+          var offsetX = 0, offsetY = 0;
+          offsetX = offset[RegionAttachment.OX1];
+          offsetY = offset[RegionAttachment.OY1];
+          vertices[RegionAttachment.X1] = offsetX * a + offsetY * b + x;
+          vertices[RegionAttachment.Y1] = offsetX * c + offsetY * d + y;
+          vertices[RegionAttachment.C1R] = color.r;
+          vertices[RegionAttachment.C1G] = color.g;
+          vertices[RegionAttachment.C1B] = color.b;
+          vertices[RegionAttachment.C1A] = color.a;
+          offsetX = offset[RegionAttachment.OX2];
+          offsetY = offset[RegionAttachment.OY2];
+          vertices[RegionAttachment.X2] = offsetX * a + offsetY * b + x;
+          vertices[RegionAttachment.Y2] = offsetX * c + offsetY * d + y;
+          vertices[RegionAttachment.C2R] = color.r;
+          vertices[RegionAttachment.C2G] = color.g;
+          vertices[RegionAttachment.C2B] = color.b;
+          vertices[RegionAttachment.C2A] = color.a;
+          offsetX = offset[RegionAttachment.OX3];
+          offsetY = offset[RegionAttachment.OY3];
+          vertices[RegionAttachment.X3] = offsetX * a + offsetY * b + x;
+          vertices[RegionAttachment.Y3] = offsetX * c + offsetY * d + y;
+          vertices[RegionAttachment.C3R] = color.r;
+          vertices[RegionAttachment.C3G] = color.g;
+          vertices[RegionAttachment.C3B] = color.b;
+          vertices[RegionAttachment.C3A] = color.a;
+          offsetX = offset[RegionAttachment.OX4];
+          offsetY = offset[RegionAttachment.OY4];
+          vertices[RegionAttachment.X4] = offsetX * a + offsetY * b + x;
+          vertices[RegionAttachment.Y4] = offsetX * c + offsetY * d + y;
+          vertices[RegionAttachment.C4R] = color.r;
+          vertices[RegionAttachment.C4G] = color.g;
+          vertices[RegionAttachment.C4B] = color.b;
+          vertices[RegionAttachment.C4A] = color.a;
+          return vertices;
+        };
+        RegionAttachment.OX1 = 0;
+        RegionAttachment.OY1 = 1;
+        RegionAttachment.OX2 = 2;
+        RegionAttachment.OY2 = 3;
+        RegionAttachment.OX3 = 4;
+        RegionAttachment.OY3 = 5;
+        RegionAttachment.OX4 = 6;
+        RegionAttachment.OY4 = 7;
+        RegionAttachment.X1 = 0;
+        RegionAttachment.Y1 = 1;
+        RegionAttachment.C1R = 2;
+        RegionAttachment.C1G = 3;
+        RegionAttachment.C1B = 4;
+        RegionAttachment.C1A = 5;
+        RegionAttachment.U1 = 6;
+        RegionAttachment.V1 = 7;
+        RegionAttachment.X2 = 8;
+        RegionAttachment.Y2 = 9;
+        RegionAttachment.C2R = 10;
+        RegionAttachment.C2G = 11;
+        RegionAttachment.C2B = 12;
+        RegionAttachment.C2A = 13;
+        RegionAttachment.U2 = 14;
+        RegionAttachment.V2 = 15;
+        RegionAttachment.X3 = 16;
+        RegionAttachment.Y3 = 17;
+        RegionAttachment.C3R = 18;
+        RegionAttachment.C3G = 19;
+        RegionAttachment.C3B = 20;
+        RegionAttachment.C3A = 21;
+        RegionAttachment.U3 = 22;
+        RegionAttachment.V3 = 23;
+        RegionAttachment.X4 = 24;
+        RegionAttachment.Y4 = 25;
+        RegionAttachment.C4R = 26;
+        RegionAttachment.C4G = 27;
+        RegionAttachment.C4B = 28;
+        RegionAttachment.C4A = 29;
+        RegionAttachment.U4 = 30;
+        RegionAttachment.V4 = 31;
+        return RegionAttachment;
+      })(spine.Attachment);
+      spine.RegionAttachment = RegionAttachment;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      (function(BlendMode) {
+        BlendMode[BlendMode["Normal"] = 0] = "Normal";
+        BlendMode[BlendMode["Additive"] = 1] = "Additive";
+        BlendMode[BlendMode["Multiply"] = 2] = "Multiply";
+        BlendMode[BlendMode["Screen"] = 3] = "Screen";
+      })(spine.BlendMode || (spine.BlendMode = {}));
+      var BlendMode = spine.BlendMode;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var Bone = (function() {
+        function Bone(data, skeleton, parent) {
+          this.children = new Array();
+          this.x = 0;
+          this.y = 0;
+          this.rotation = 0;
+          this.scaleX = 0;
+          this.scaleY = 0;
+          this.shearX = 0;
+          this.shearY = 0;
+          this.ax = 0;
+          this.ay = 0;
+          this.arotation = 0;
+          this.ascaleX = 0;
+          this.ascaleY = 0;
+          this.ashearX = 0;
+          this.ashearY = 0;
+          this.appliedValid = false;
+          this.a = 0;
+          this.b = 0;
+          this.worldX = 0;
+          this.c = 0;
+          this.d = 0;
+          this.worldY = 0;
+          this.sorted = false;
+          if (null == data) throw new Error("data cannot be null.");
+          if (null == skeleton) throw new Error("skeleton cannot be null.");
+          this.data = data;
+          this.skeleton = skeleton;
+          this.parent = parent;
+          this.setToSetupPose();
+        }
+        Bone.prototype.update = function() {
+          this.updateWorldTransformWith(this.x, this.y, this.rotation, this.scaleX, this.scaleY, this.shearX, this.shearY);
+        };
+        Bone.prototype.updateWorldTransform = function() {
+          this.updateWorldTransformWith(this.x, this.y, this.rotation, this.scaleX, this.scaleY, this.shearX, this.shearY);
+        };
+        Bone.prototype.updateWorldTransformWith = function(x, y, rotation, scaleX, scaleY, shearX, shearY) {
+          this.ax = x;
+          this.ay = y;
+          this.arotation = rotation;
+          this.ascaleX = scaleX;
+          this.ascaleY = scaleY;
+          this.ashearX = shearX;
+          this.ashearY = shearY;
+          this.appliedValid = true;
+          var parent = this.parent;
+          if (null == parent) {
+            var rotationY = rotation + 90 + shearY;
+            var la = spine.MathUtils.cosDeg(rotation + shearX) * scaleX;
+            var lb = spine.MathUtils.cosDeg(rotationY) * scaleY;
+            var lc = spine.MathUtils.sinDeg(rotation + shearX) * scaleX;
+            var ld = spine.MathUtils.sinDeg(rotationY) * scaleY;
+            var skeleton = this.skeleton;
+            if (skeleton.flipX) {
+              x = -x;
+              la = -la;
+              lb = -lb;
+            }
+            if (skeleton.flipY) {
+              y = -y;
+              lc = -lc;
+              ld = -ld;
+            }
+            this.a = la;
+            this.b = lb;
+            this.c = lc;
+            this.d = ld;
+            this.worldX = x + skeleton.x;
+            this.worldY = y + skeleton.y;
+            return;
+          }
+          var pa = parent.a, pb = parent.b, pc = parent.c, pd = parent.d;
+          this.worldX = pa * x + pb * y + parent.worldX;
+          this.worldY = pc * x + pd * y + parent.worldY;
+          switch (this.data.transformMode) {
+           case spine.TransformMode.Normal:
+            var rotationY = rotation + 90 + shearY;
+            var la = spine.MathUtils.cosDeg(rotation + shearX) * scaleX;
+            var lb = spine.MathUtils.cosDeg(rotationY) * scaleY;
+            var lc = spine.MathUtils.sinDeg(rotation + shearX) * scaleX;
+            var ld = spine.MathUtils.sinDeg(rotationY) * scaleY;
+            this.a = pa * la + pb * lc;
+            this.b = pa * lb + pb * ld;
+            this.c = pc * la + pd * lc;
+            this.d = pc * lb + pd * ld;
+            return;
+
+           case spine.TransformMode.OnlyTranslation:
+            var rotationY = rotation + 90 + shearY;
+            this.a = spine.MathUtils.cosDeg(rotation + shearX) * scaleX;
+            this.b = spine.MathUtils.cosDeg(rotationY) * scaleY;
+            this.c = spine.MathUtils.sinDeg(rotation + shearX) * scaleX;
+            this.d = spine.MathUtils.sinDeg(rotationY) * scaleY;
+            break;
+
+           case spine.TransformMode.NoRotationOrReflection:
+            var s = pa * pa + pc * pc;
+            var prx = 0;
+            if (s > 1e-4) {
+              s = Math.abs(pa * pd - pb * pc) / s;
+              pb = pc * s;
+              pd = pa * s;
+              prx = Math.atan2(pc, pa) * spine.MathUtils.radDeg;
+            } else {
+              pa = 0;
+              pc = 0;
+              prx = 90 - Math.atan2(pd, pb) * spine.MathUtils.radDeg;
+            }
+            var rx = rotation + shearX - prx;
+            var ry = rotation + shearY - prx + 90;
+            var la = spine.MathUtils.cosDeg(rx) * scaleX;
+            var lb = spine.MathUtils.cosDeg(ry) * scaleY;
+            var lc = spine.MathUtils.sinDeg(rx) * scaleX;
+            var ld = spine.MathUtils.sinDeg(ry) * scaleY;
+            this.a = pa * la - pb * lc;
+            this.b = pa * lb - pb * ld;
+            this.c = pc * la + pd * lc;
+            this.d = pc * lb + pd * ld;
+            break;
+
+           case spine.TransformMode.NoScale:
+           case spine.TransformMode.NoScaleOrReflection:
+            var cos = spine.MathUtils.cosDeg(rotation);
+            var sin = spine.MathUtils.sinDeg(rotation);
+            var za = pa * cos + pb * sin;
+            var zc = pc * cos + pd * sin;
+            var s = Math.sqrt(za * za + zc * zc);
+            s > 1e-5 && (s = 1 / s);
+            za *= s;
+            zc *= s;
+            s = Math.sqrt(za * za + zc * zc);
+            var r = Math.PI / 2 + Math.atan2(zc, za);
+            var zb = Math.cos(r) * s;
+            var zd = Math.sin(r) * s;
+            var la = spine.MathUtils.cosDeg(shearX) * scaleX;
+            var lb = spine.MathUtils.cosDeg(90 + shearY) * scaleY;
+            var lc = spine.MathUtils.sinDeg(shearX) * scaleX;
+            var ld = spine.MathUtils.sinDeg(90 + shearY) * scaleY;
+            this.a = za * la + zb * lc;
+            this.b = za * lb + zb * ld;
+            this.c = zc * la + zd * lc;
+            this.d = zc * lb + zd * ld;
+            if (this.data.transformMode != spine.TransformMode.NoScaleOrReflection ? pa * pd - pb * pc < 0 : this.skeleton.flipX != this.skeleton.flipY) {
+              this.b = -this.b;
+              this.d = -this.d;
+            }
+            return;
+          }
+          if (this.skeleton.flipX) {
+            this.a = -this.a;
+            this.b = -this.b;
+          }
+          if (this.skeleton.flipY) {
+            this.c = -this.c;
+            this.d = -this.d;
+          }
+        };
+        Bone.prototype.setToSetupPose = function() {
+          var data = this.data;
+          this.x = data.x;
+          this.y = data.y;
+          this.rotation = data.rotation;
+          this.scaleX = data.scaleX;
+          this.scaleY = data.scaleY;
+          this.shearX = data.shearX;
+          this.shearY = data.shearY;
+        };
+        Bone.prototype.getWorldRotationX = function() {
+          return Math.atan2(this.c, this.a) * spine.MathUtils.radDeg;
+        };
+        Bone.prototype.getWorldRotationY = function() {
+          return Math.atan2(this.d, this.b) * spine.MathUtils.radDeg;
+        };
+        Bone.prototype.getWorldScaleX = function() {
+          return Math.sqrt(this.a * this.a + this.c * this.c);
+        };
+        Bone.prototype.getWorldScaleY = function() {
+          return Math.sqrt(this.b * this.b + this.d * this.d);
+        };
+        Bone.prototype.worldToLocalRotationX = function() {
+          var parent = this.parent;
+          if (null == parent) return this.arotation;
+          var pa = parent.a, pb = parent.b, pc = parent.c, pd = parent.d, a = this.a, c = this.c;
+          return Math.atan2(pa * c - pc * a, pd * a - pb * c) * spine.MathUtils.radDeg;
+        };
+        Bone.prototype.worldToLocalRotationY = function() {
+          var parent = this.parent;
+          if (null == parent) return this.arotation;
+          var pa = parent.a, pb = parent.b, pc = parent.c, pd = parent.d, b = this.b, d = this.d;
+          return Math.atan2(pa * d - pc * b, pd * b - pb * d) * spine.MathUtils.radDeg;
+        };
+        Bone.prototype.rotateWorld = function(degrees) {
+          var a = this.a, b = this.b, c = this.c, d = this.d;
+          var cos = spine.MathUtils.cosDeg(degrees), sin = spine.MathUtils.sinDeg(degrees);
+          this.a = cos * a - sin * c;
+          this.b = cos * b - sin * d;
+          this.c = sin * a + cos * c;
+          this.d = sin * b + cos * d;
+          this.appliedValid = false;
+        };
+        Bone.prototype.updateAppliedTransform = function() {
+          this.appliedValid = true;
+          var parent = this.parent;
+          if (null == parent) {
+            this.ax = this.worldX;
+            this.ay = this.worldY;
+            this.arotation = Math.atan2(this.c, this.a) * spine.MathUtils.radDeg;
+            this.ascaleX = Math.sqrt(this.a * this.a + this.c * this.c);
+            this.ascaleY = Math.sqrt(this.b * this.b + this.d * this.d);
+            this.ashearX = 0;
+            this.ashearY = Math.atan2(this.a * this.b + this.c * this.d, this.a * this.d - this.b * this.c) * spine.MathUtils.radDeg;
+            return;
+          }
+          var pa = parent.a, pb = parent.b, pc = parent.c, pd = parent.d;
+          var pid = 1 / (pa * pd - pb * pc);
+          var dx = this.worldX - parent.worldX, dy = this.worldY - parent.worldY;
+          this.ax = dx * pd * pid - dy * pb * pid;
+          this.ay = dy * pa * pid - dx * pc * pid;
+          var ia = pid * pd;
+          var id = pid * pa;
+          var ib = pid * pb;
+          var ic = pid * pc;
+          var ra = ia * this.a - ib * this.c;
+          var rb = ia * this.b - ib * this.d;
+          var rc = id * this.c - ic * this.a;
+          var rd = id * this.d - ic * this.b;
+          this.ashearX = 0;
+          this.ascaleX = Math.sqrt(ra * ra + rc * rc);
+          if (this.ascaleX > 1e-4) {
+            var det = ra * rd - rb * rc;
+            this.ascaleY = det / this.ascaleX;
+            this.ashearY = Math.atan2(ra * rb + rc * rd, det) * spine.MathUtils.radDeg;
+            this.arotation = Math.atan2(rc, ra) * spine.MathUtils.radDeg;
+          } else {
+            this.ascaleX = 0;
+            this.ascaleY = Math.sqrt(rb * rb + rd * rd);
+            this.ashearY = 0;
+            this.arotation = 90 - Math.atan2(rd, rb) * spine.MathUtils.radDeg;
+          }
+        };
+        Bone.prototype.worldToLocal = function(world) {
+          var a = this.a, b = this.b, c = this.c, d = this.d;
+          var invDet = 1 / (a * d - b * c);
+          var x = world.x - this.worldX, y = world.y - this.worldY;
+          world.x = x * d * invDet - y * b * invDet;
+          world.y = y * a * invDet - x * c * invDet;
+          return world;
+        };
+        Bone.prototype.localToWorld = function(local) {
+          var x = local.x, y = local.y;
+          local.x = x * this.a + y * this.b + this.worldX;
+          local.y = x * this.c + y * this.d + this.worldY;
+          return local;
+        };
+        return Bone;
+      })();
+      spine.Bone = Bone;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var BoneData = (function() {
+        function BoneData(index, name, parent) {
+          this.x = 0;
+          this.y = 0;
+          this.rotation = 0;
+          this.scaleX = 1;
+          this.scaleY = 1;
+          this.shearX = 0;
+          this.shearY = 0;
+          this.transformMode = TransformMode.Normal;
+          if (index < 0) throw new Error("index must be >= 0.");
+          if (null == name) throw new Error("name cannot be null.");
+          this.index = index;
+          this.name = name;
+          this.parent = parent;
+        }
+        return BoneData;
+      })();
+      spine.BoneData = BoneData;
+      (function(TransformMode) {
+        TransformMode[TransformMode["Normal"] = 0] = "Normal";
+        TransformMode[TransformMode["OnlyTranslation"] = 1] = "OnlyTranslation";
+        TransformMode[TransformMode["NoRotationOrReflection"] = 2] = "NoRotationOrReflection";
+        TransformMode[TransformMode["NoScale"] = 3] = "NoScale";
+        TransformMode[TransformMode["NoScaleOrReflection"] = 4] = "NoScaleOrReflection";
+      })(spine.TransformMode || (spine.TransformMode = {}));
+      var TransformMode = spine.TransformMode;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var Event = (function() {
+        function Event(time, data) {
+          if (null == data) throw new Error("data cannot be null.");
+          this.time = time;
+          this.data = data;
+        }
+        return Event;
+      })();
+      spine.Event = Event;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var EventData = (function() {
+        function EventData(name) {
+          this.name = name;
+        }
+        return EventData;
+      })();
+      spine.EventData = EventData;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var IkConstraint = (function() {
+        function IkConstraint(data, skeleton) {
+          this.mix = 1;
+          this.bendDirection = 0;
+          if (null == data) throw new Error("data cannot be null.");
+          if (null == skeleton) throw new Error("skeleton cannot be null.");
+          this.data = data;
+          this.mix = data.mix;
+          this.bendDirection = data.bendDirection;
+          this.bones = new Array();
+          for (var i = 0; i < data.bones.length; i++) this.bones.push(skeleton.findBone(data.bones[i].name));
+          this.target = skeleton.findBone(data.target.name);
+        }
+        IkConstraint.prototype.getOrder = function() {
+          return this.data.order;
+        };
+        IkConstraint.prototype.apply = function() {
+          this.update();
+        };
+        IkConstraint.prototype.update = function() {
+          var target = this.target;
+          var bones = this.bones;
+          switch (bones.length) {
+           case 1:
+            this.apply1(bones[0], target.worldX, target.worldY, this.mix);
+            break;
+
+           case 2:
+            this.apply2(bones[0], bones[1], target.worldX, target.worldY, this.bendDirection, this.mix);
+          }
+        };
+        IkConstraint.prototype.apply1 = function(bone, targetX, targetY, alpha) {
+          bone.appliedValid || bone.updateAppliedTransform();
+          var p = bone.parent;
+          var id = 1 / (p.a * p.d - p.b * p.c);
+          var x = targetX - p.worldX, y = targetY - p.worldY;
+          var tx = (x * p.d - y * p.b) * id - bone.ax, ty = (y * p.a - x * p.c) * id - bone.ay;
+          var rotationIK = Math.atan2(ty, tx) * spine.MathUtils.radDeg - bone.ashearX - bone.arotation;
+          bone.ascaleX < 0 && (rotationIK += 180);
+          rotationIK > 180 ? rotationIK -= 360 : rotationIK < -180 && (rotationIK += 360);
+          bone.updateWorldTransformWith(bone.ax, bone.ay, bone.arotation + rotationIK * alpha, bone.ascaleX, bone.ascaleY, bone.ashearX, bone.ashearY);
+        };
+        IkConstraint.prototype.apply2 = function(parent, child, targetX, targetY, bendDir, alpha) {
+          if (0 == alpha) {
+            child.updateWorldTransform();
+            return;
+          }
+          parent.appliedValid || parent.updateAppliedTransform();
+          child.appliedValid || child.updateAppliedTransform();
+          var px = parent.ax, py = parent.ay, psx = parent.ascaleX, psy = parent.ascaleY, csx = child.ascaleX;
+          var os1 = 0, os2 = 0, s2 = 0;
+          if (psx < 0) {
+            psx = -psx;
+            os1 = 180;
+            s2 = -1;
+          } else {
+            os1 = 0;
+            s2 = 1;
+          }
+          if (psy < 0) {
+            psy = -psy;
+            s2 = -s2;
+          }
+          if (csx < 0) {
+            csx = -csx;
+            os2 = 180;
+          } else os2 = 0;
+          var cx = child.ax, cy = 0, cwx = 0, cwy = 0, a = parent.a, b = parent.b, c = parent.c, d = parent.d;
+          var u = Math.abs(psx - psy) <= 1e-4;
+          if (u) {
+            cy = child.ay;
+            cwx = a * cx + b * cy + parent.worldX;
+            cwy = c * cx + d * cy + parent.worldY;
+          } else {
+            cy = 0;
+            cwx = a * cx + parent.worldX;
+            cwy = c * cx + parent.worldY;
+          }
+          var pp = parent.parent;
+          a = pp.a;
+          b = pp.b;
+          c = pp.c;
+          d = pp.d;
+          var id = 1 / (a * d - b * c), x = targetX - pp.worldX, y = targetY - pp.worldY;
+          var tx = (x * d - y * b) * id - px, ty = (y * a - x * c) * id - py;
+          x = cwx - pp.worldX;
+          y = cwy - pp.worldY;
+          var dx = (x * d - y * b) * id - px, dy = (y * a - x * c) * id - py;
+          var l1 = Math.sqrt(dx * dx + dy * dy), l2 = child.data.length * csx, a1 = 0, a2 = 0;
+          outer: if (u) {
+            l2 *= psx;
+            var cos = (tx * tx + ty * ty - l1 * l1 - l2 * l2) / (2 * l1 * l2);
+            cos < -1 ? cos = -1 : cos > 1 && (cos = 1);
+            a2 = Math.acos(cos) * bendDir;
+            a = l1 + l2 * cos;
+            b = l2 * Math.sin(a2);
+            a1 = Math.atan2(ty * a - tx * b, tx * a + ty * b);
+          } else {
+            a = psx * l2;
+            b = psy * l2;
+            var aa = a * a, bb = b * b, dd = tx * tx + ty * ty, ta = Math.atan2(ty, tx);
+            c = bb * l1 * l1 + aa * dd - aa * bb;
+            var c1 = -2 * bb * l1, c2 = bb - aa;
+            d = c1 * c1 - 4 * c2 * c;
+            if (d >= 0) {
+              var q = Math.sqrt(d);
+              c1 < 0 && (q = -q);
+              q = -(c1 + q) / 2;
+              var r0 = q / c2, r1 = c / q;
+              var r = Math.abs(r0) < Math.abs(r1) ? r0 : r1;
+              if (r * r <= dd) {
+                y = Math.sqrt(dd - r * r) * bendDir;
+                a1 = ta - Math.atan2(y, r);
+                a2 = Math.atan2(y / psy, (r - l1) / psx);
+                break outer;
+              }
+            }
+            var minAngle = 0, minDist = Number.MAX_VALUE, minX = 0, minY = 0;
+            var maxAngle = 0, maxDist = 0, maxX = 0, maxY = 0;
+            x = l1 + a;
+            d = x * x;
+            if (d > maxDist) {
+              maxAngle = 0;
+              maxDist = d;
+              maxX = x;
+            }
+            x = l1 - a;
+            d = x * x;
+            if (d < minDist) {
+              minAngle = spine.MathUtils.PI;
+              minDist = d;
+              minX = x;
+            }
+            var angle = Math.acos(-a * l1 / (aa - bb));
+            x = a * Math.cos(angle) + l1;
+            y = b * Math.sin(angle);
+            d = x * x + y * y;
+            if (d < minDist) {
+              minAngle = angle;
+              minDist = d;
+              minX = x;
+              minY = y;
+            }
+            if (d > maxDist) {
+              maxAngle = angle;
+              maxDist = d;
+              maxX = x;
+              maxY = y;
+            }
+            if (dd <= (minDist + maxDist) / 2) {
+              a1 = ta - Math.atan2(minY * bendDir, minX);
+              a2 = minAngle * bendDir;
+            } else {
+              a1 = ta - Math.atan2(maxY * bendDir, maxX);
+              a2 = maxAngle * bendDir;
+            }
+          }
+          var os = Math.atan2(cy, cx) * s2;
+          var rotation = parent.arotation;
+          a1 = (a1 - os) * spine.MathUtils.radDeg + os1 - rotation;
+          a1 > 180 ? a1 -= 360 : a1 < -180 && (a1 += 360);
+          parent.updateWorldTransformWith(px, py, rotation + a1 * alpha, parent.ascaleX, parent.ascaleY, 0, 0);
+          rotation = child.arotation;
+          a2 = ((a2 + os) * spine.MathUtils.radDeg - child.ashearX) * s2 + os2 - rotation;
+          a2 > 180 ? a2 -= 360 : a2 < -180 && (a2 += 360);
+          child.updateWorldTransformWith(cx, cy, rotation + a2 * alpha, child.ascaleX, child.ascaleY, child.ashearX, child.ashearY);
+        };
+        return IkConstraint;
+      })();
+      spine.IkConstraint = IkConstraint;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var IkConstraintData = (function() {
+        function IkConstraintData(name) {
+          this.order = 0;
+          this.bones = new Array();
+          this.bendDirection = 1;
+          this.mix = 1;
+          this.name = name;
+        }
+        return IkConstraintData;
+      })();
+      spine.IkConstraintData = IkConstraintData;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var PathConstraint = (function() {
+        function PathConstraint(data, skeleton) {
+          this.position = 0;
+          this.spacing = 0;
+          this.rotateMix = 0;
+          this.translateMix = 0;
+          this.spaces = new Array();
+          this.positions = new Array();
+          this.world = new Array();
+          this.curves = new Array();
+          this.lengths = new Array();
+          this.segments = new Array();
+          if (null == data) throw new Error("data cannot be null.");
+          if (null == skeleton) throw new Error("skeleton cannot be null.");
+          this.data = data;
+          this.bones = new Array();
+          for (var i = 0, n = data.bones.length; i < n; i++) this.bones.push(skeleton.findBone(data.bones[i].name));
+          this.target = skeleton.findSlot(data.target.name);
+          this.position = data.position;
+          this.spacing = data.spacing;
+          this.rotateMix = data.rotateMix;
+          this.translateMix = data.translateMix;
+        }
+        PathConstraint.prototype.apply = function() {
+          this.update();
+        };
+        PathConstraint.prototype.update = function() {
+          var attachment = this.target.getAttachment();
+          if (!(attachment instanceof spine.PathAttachment)) return;
+          var rotateMix = this.rotateMix, translateMix = this.translateMix;
+          var translate = translateMix > 0, rotate = rotateMix > 0;
+          if (!translate && !rotate) return;
+          var data = this.data;
+          var spacingMode = data.spacingMode;
+          var lengthSpacing = spacingMode == spine.SpacingMode.Length;
+          var rotateMode = data.rotateMode;
+          var tangents = rotateMode == spine.RotateMode.Tangent, scale = rotateMode == spine.RotateMode.ChainScale;
+          var boneCount = this.bones.length, spacesCount = tangents ? boneCount : boneCount + 1;
+          var bones = this.bones;
+          var spaces = spine.Utils.setArraySize(this.spaces, spacesCount), lengths = null;
+          var spacing = this.spacing;
+          if (scale || lengthSpacing) {
+            scale && (lengths = spine.Utils.setArraySize(this.lengths, boneCount));
+            for (var i = 0, n = spacesCount - 1; i < n; ) {
+              var bone = bones[i];
+              var length_1 = bone.data.length, x = length_1 * bone.a, y = length_1 * bone.c;
+              length_1 = Math.sqrt(x * x + y * y);
+              scale && (lengths[i] = length_1);
+              spaces[++i] = lengthSpacing ? Math.max(0, length_1 + spacing) : spacing;
+            }
+          } else for (var i = 1; i < spacesCount; i++) spaces[i] = spacing;
+          var positions = this.computeWorldPositions(attachment, spacesCount, tangents, data.positionMode == spine.PositionMode.Percent, spacingMode == spine.SpacingMode.Percent);
+          var boneX = positions[0], boneY = positions[1], offsetRotation = data.offsetRotation;
+          var tip = false;
+          if (0 == offsetRotation) tip = rotateMode == spine.RotateMode.Chain; else {
+            tip = false;
+            var p = this.target.bone;
+            offsetRotation *= p.a * p.d - p.b * p.c > 0 ? spine.MathUtils.degRad : -spine.MathUtils.degRad;
+          }
+          for (var i = 0, p = 3; i < boneCount; i++, p += 3) {
+            var bone = bones[i];
+            bone.worldX += (boneX - bone.worldX) * translateMix;
+            bone.worldY += (boneY - bone.worldY) * translateMix;
+            var x = positions[p], y = positions[p + 1], dx = x - boneX, dy = y - boneY;
+            if (scale) {
+              var length_2 = lengths[i];
+              if (0 != length_2) {
+                var s = (Math.sqrt(dx * dx + dy * dy) / length_2 - 1) * rotateMix + 1;
+                bone.a *= s;
+                bone.c *= s;
+              }
+            }
+            boneX = x;
+            boneY = y;
+            if (rotate) {
+              var a = bone.a, b = bone.b, c = bone.c, d = bone.d, r = 0, cos = 0, sin = 0;
+              r = tangents ? positions[p - 1] : 0 == spaces[i + 1] ? positions[p + 2] : Math.atan2(dy, dx);
+              r -= Math.atan2(c, a);
+              if (tip) {
+                cos = Math.cos(r);
+                sin = Math.sin(r);
+                var length_3 = bone.data.length;
+                boneX += (length_3 * (cos * a - sin * c) - dx) * rotateMix;
+                boneY += (length_3 * (sin * a + cos * c) - dy) * rotateMix;
+              } else r += offsetRotation;
+              r > spine.MathUtils.PI ? r -= spine.MathUtils.PI2 : r < -spine.MathUtils.PI && (r += spine.MathUtils.PI2);
+              r *= rotateMix;
+              cos = Math.cos(r);
+              sin = Math.sin(r);
+              bone.a = cos * a - sin * c;
+              bone.b = cos * b - sin * d;
+              bone.c = sin * a + cos * c;
+              bone.d = sin * b + cos * d;
+            }
+            bone.appliedValid = false;
+          }
+        };
+        PathConstraint.prototype.computeWorldPositions = function(path, spacesCount, tangents, percentPosition, percentSpacing) {
+          var target = this.target;
+          var position = this.position;
+          var spaces = this.spaces, out = spine.Utils.setArraySize(this.positions, 3 * spacesCount + 2), world = null;
+          var closed = path.closed;
+          var verticesLength = path.worldVerticesLength, curveCount = verticesLength / 6, prevCurve = PathConstraint.NONE;
+          if (!path.constantSpeed) {
+            var lengths = path.lengths;
+            curveCount -= closed ? 1 : 2;
+            var pathLength_1 = lengths[curveCount];
+            percentPosition && (position *= pathLength_1);
+            if (percentSpacing) for (var i = 0; i < spacesCount; i++) spaces[i] *= pathLength_1;
+            world = spine.Utils.setArraySize(this.world, 8);
+            for (var i = 0, o = 0, curve = 0; i < spacesCount; i++, o += 3) {
+              var space = spaces[i];
+              position += space;
+              var p = position;
+              if (closed) {
+                p %= pathLength_1;
+                p < 0 && (p += pathLength_1);
+                curve = 0;
+              } else {
+                if (p < 0) {
+                  if (prevCurve != PathConstraint.BEFORE) {
+                    prevCurve = PathConstraint.BEFORE;
+                    path.computeWorldVerticesWith(target, 2, 4, world, 0);
+                  }
+                  this.addBeforePosition(p, world, 0, out, o);
+                  continue;
+                }
+                if (p > pathLength_1) {
+                  if (prevCurve != PathConstraint.AFTER) {
+                    prevCurve = PathConstraint.AFTER;
+                    path.computeWorldVerticesWith(target, verticesLength - 6, 4, world, 0);
+                  }
+                  this.addAfterPosition(p - pathLength_1, world, 0, out, o);
+                  continue;
+                }
+              }
+              for (;;curve++) {
+                var length_4 = lengths[curve];
+                if (p > length_4) continue;
+                if (0 == curve) p /= length_4; else {
+                  var prev = lengths[curve - 1];
+                  p = (p - prev) / (length_4 - prev);
+                }
+                break;
+              }
+              if (curve != prevCurve) {
+                prevCurve = curve;
+                if (closed && curve == curveCount) {
+                  path.computeWorldVerticesWith(target, verticesLength - 4, 4, world, 0);
+                  path.computeWorldVerticesWith(target, 0, 4, world, 4);
+                } else path.computeWorldVerticesWith(target, 6 * curve + 2, 8, world, 0);
+              }
+              this.addCurvePosition(p, world[0], world[1], world[2], world[3], world[4], world[5], world[6], world[7], out, o, tangents || i > 0 && 0 == space);
+            }
+            return out;
+          }
+          if (closed) {
+            verticesLength += 2;
+            world = spine.Utils.setArraySize(this.world, verticesLength);
+            path.computeWorldVerticesWith(target, 2, verticesLength - 4, world, 0);
+            path.computeWorldVerticesWith(target, 0, 2, world, verticesLength - 4);
+            world[verticesLength - 2] = world[0];
+            world[verticesLength - 1] = world[1];
+          } else {
+            curveCount--;
+            verticesLength -= 4;
+            world = spine.Utils.setArraySize(this.world, verticesLength);
+            path.computeWorldVerticesWith(target, 2, verticesLength, world, 0);
+          }
+          var curves = spine.Utils.setArraySize(this.curves, curveCount);
+          var pathLength = 0;
+          var x1 = world[0], y1 = world[1], cx1 = 0, cy1 = 0, cx2 = 0, cy2 = 0, x2 = 0, y2 = 0;
+          var tmpx = 0, tmpy = 0, dddfx = 0, dddfy = 0, ddfx = 0, ddfy = 0, dfx = 0, dfy = 0;
+          for (var i = 0, w = 2; i < curveCount; i++, w += 6) {
+            cx1 = world[w];
+            cy1 = world[w + 1];
+            cx2 = world[w + 2];
+            cy2 = world[w + 3];
+            x2 = world[w + 4];
+            y2 = world[w + 5];
+            tmpx = .1875 * (x1 - 2 * cx1 + cx2);
+            tmpy = .1875 * (y1 - 2 * cy1 + cy2);
+            dddfx = .09375 * (3 * (cx1 - cx2) - x1 + x2);
+            dddfy = .09375 * (3 * (cy1 - cy2) - y1 + y2);
+            ddfx = 2 * tmpx + dddfx;
+            ddfy = 2 * tmpy + dddfy;
+            dfx = .75 * (cx1 - x1) + tmpx + .16666667 * dddfx;
+            dfy = .75 * (cy1 - y1) + tmpy + .16666667 * dddfy;
+            pathLength += Math.sqrt(dfx * dfx + dfy * dfy);
+            dfx += ddfx;
+            dfy += ddfy;
+            ddfx += dddfx;
+            ddfy += dddfy;
+            pathLength += Math.sqrt(dfx * dfx + dfy * dfy);
+            dfx += ddfx;
+            dfy += ddfy;
+            pathLength += Math.sqrt(dfx * dfx + dfy * dfy);
+            dfx += ddfx + dddfx;
+            dfy += ddfy + dddfy;
+            pathLength += Math.sqrt(dfx * dfx + dfy * dfy);
+            curves[i] = pathLength;
+            x1 = x2;
+            y1 = y2;
+          }
+          percentPosition && (position *= pathLength);
+          if (percentSpacing) for (var i = 0; i < spacesCount; i++) spaces[i] *= pathLength;
+          var segments = this.segments;
+          var curveLength = 0;
+          for (var i = 0, o = 0, curve = 0, segment = 0; i < spacesCount; i++, o += 3) {
+            var space = spaces[i];
+            position += space;
+            var p = position;
+            if (closed) {
+              p %= pathLength;
+              p < 0 && (p += pathLength);
+              curve = 0;
+            } else {
+              if (p < 0) {
+                this.addBeforePosition(p, world, 0, out, o);
+                continue;
+              }
+              if (p > pathLength) {
+                this.addAfterPosition(p - pathLength, world, verticesLength - 4, out, o);
+                continue;
+              }
+            }
+            for (;;curve++) {
+              var length_5 = curves[curve];
+              if (p > length_5) continue;
+              if (0 == curve) p /= length_5; else {
+                var prev = curves[curve - 1];
+                p = (p - prev) / (length_5 - prev);
+              }
+              break;
+            }
+            if (curve != prevCurve) {
+              prevCurve = curve;
+              var ii = 6 * curve;
+              x1 = world[ii];
+              y1 = world[ii + 1];
+              cx1 = world[ii + 2];
+              cy1 = world[ii + 3];
+              cx2 = world[ii + 4];
+              cy2 = world[ii + 5];
+              x2 = world[ii + 6];
+              y2 = world[ii + 7];
+              tmpx = .03 * (x1 - 2 * cx1 + cx2);
+              tmpy = .03 * (y1 - 2 * cy1 + cy2);
+              dddfx = .006 * (3 * (cx1 - cx2) - x1 + x2);
+              dddfy = .006 * (3 * (cy1 - cy2) - y1 + y2);
+              ddfx = 2 * tmpx + dddfx;
+              ddfy = 2 * tmpy + dddfy;
+              dfx = .3 * (cx1 - x1) + tmpx + .16666667 * dddfx;
+              dfy = .3 * (cy1 - y1) + tmpy + .16666667 * dddfy;
+              curveLength = Math.sqrt(dfx * dfx + dfy * dfy);
+              segments[0] = curveLength;
+              for (ii = 1; ii < 8; ii++) {
+                dfx += ddfx;
+                dfy += ddfy;
+                ddfx += dddfx;
+                ddfy += dddfy;
+                curveLength += Math.sqrt(dfx * dfx + dfy * dfy);
+                segments[ii] = curveLength;
+              }
+              dfx += ddfx;
+              dfy += ddfy;
+              curveLength += Math.sqrt(dfx * dfx + dfy * dfy);
+              segments[8] = curveLength;
+              dfx += ddfx + dddfx;
+              dfy += ddfy + dddfy;
+              curveLength += Math.sqrt(dfx * dfx + dfy * dfy);
+              segments[9] = curveLength;
+              segment = 0;
+            }
+            p *= curveLength;
+            for (;;segment++) {
+              var length_6 = segments[segment];
+              if (p > length_6) continue;
+              if (0 == segment) p /= length_6; else {
+                var prev = segments[segment - 1];
+                p = segment + (p - prev) / (length_6 - prev);
+              }
+              break;
+            }
+            this.addCurvePosition(.1 * p, x1, y1, cx1, cy1, cx2, cy2, x2, y2, out, o, tangents || i > 0 && 0 == space);
+          }
+          return out;
+        };
+        PathConstraint.prototype.addBeforePosition = function(p, temp, i, out, o) {
+          var x1 = temp[i], y1 = temp[i + 1], dx = temp[i + 2] - x1, dy = temp[i + 3] - y1, r = Math.atan2(dy, dx);
+          out[o] = x1 + p * Math.cos(r);
+          out[o + 1] = y1 + p * Math.sin(r);
+          out[o + 2] = r;
+        };
+        PathConstraint.prototype.addAfterPosition = function(p, temp, i, out, o) {
+          var x1 = temp[i + 2], y1 = temp[i + 3], dx = x1 - temp[i], dy = y1 - temp[i + 1], r = Math.atan2(dy, dx);
+          out[o] = x1 + p * Math.cos(r);
+          out[o + 1] = y1 + p * Math.sin(r);
+          out[o + 2] = r;
+        };
+        PathConstraint.prototype.addCurvePosition = function(p, x1, y1, cx1, cy1, cx2, cy2, x2, y2, out, o, tangents) {
+          (0 == p || isNaN(p)) && (p = 1e-4);
+          var tt = p * p, ttt = tt * p, u = 1 - p, uu = u * u, uuu = uu * u;
+          var ut = u * p, ut3 = 3 * ut, uut3 = u * ut3, utt3 = ut3 * p;
+          var x = x1 * uuu + cx1 * uut3 + cx2 * utt3 + x2 * ttt, y = y1 * uuu + cy1 * uut3 + cy2 * utt3 + y2 * ttt;
+          out[o] = x;
+          out[o + 1] = y;
+          tangents && (out[o + 2] = Math.atan2(y - (y1 * uu + cy1 * ut * 2 + cy2 * tt), x - (x1 * uu + cx1 * ut * 2 + cx2 * tt)));
+        };
+        PathConstraint.prototype.getOrder = function() {
+          return this.data.order;
+        };
+        PathConstraint.NONE = -1;
+        PathConstraint.BEFORE = -2;
+        PathConstraint.AFTER = -3;
+        return PathConstraint;
+      })();
+      spine.PathConstraint = PathConstraint;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var PathConstraintData = (function() {
+        function PathConstraintData(name) {
+          this.order = 0;
+          this.bones = new Array();
+          this.name = name;
+        }
+        return PathConstraintData;
+      })();
+      spine.PathConstraintData = PathConstraintData;
+      (function(PositionMode) {
+        PositionMode[PositionMode["Fixed"] = 0] = "Fixed";
+        PositionMode[PositionMode["Percent"] = 1] = "Percent";
+      })(spine.PositionMode || (spine.PositionMode = {}));
+      var PositionMode = spine.PositionMode;
+      (function(SpacingMode) {
+        SpacingMode[SpacingMode["Length"] = 0] = "Length";
+        SpacingMode[SpacingMode["Fixed"] = 1] = "Fixed";
+        SpacingMode[SpacingMode["Percent"] = 2] = "Percent";
+      })(spine.SpacingMode || (spine.SpacingMode = {}));
+      var SpacingMode = spine.SpacingMode;
+      (function(RotateMode) {
+        RotateMode[RotateMode["Tangent"] = 0] = "Tangent";
+        RotateMode[RotateMode["Chain"] = 1] = "Chain";
+        RotateMode[RotateMode["ChainScale"] = 2] = "ChainScale";
+      })(spine.RotateMode || (spine.RotateMode = {}));
+      var RotateMode = spine.RotateMode;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var Assets = (function() {
+        function Assets(clientId) {
+          this.toLoad = new Array();
+          this.assets = {};
+          this.clientId = clientId;
+        }
+        Assets.prototype.loaded = function() {
+          var i = 0;
+          for (var v in this.assets) i++;
+          return i;
+        };
+        return Assets;
+      })();
+      var SharedAssetManager = (function() {
+        function SharedAssetManager(pathPrefix) {
+          void 0 === pathPrefix && (pathPrefix = "");
+          this.clientAssets = {};
+          this.queuedAssets = {};
+          this.rawAssets = {};
+          this.errors = {};
+          this.pathPrefix = pathPrefix;
+        }
+        SharedAssetManager.prototype.queueAsset = function(clientId, textureLoader, path) {
+          var clientAssets = this.clientAssets[clientId];
+          if (null === clientAssets || void 0 === clientAssets) {
+            clientAssets = new Assets(clientId);
+            this.clientAssets[clientId] = clientAssets;
+          }
+          null !== textureLoader && (clientAssets.textureLoader = textureLoader);
+          clientAssets.toLoad.push(path);
+          if (this.queuedAssets[path] === path) return false;
+          this.queuedAssets[path] = path;
+          return true;
+        };
+        SharedAssetManager.prototype.loadText = function(clientId, path) {
+          var _this = this;
+          path = this.pathPrefix + path;
+          if (!this.queueAsset(clientId, null, path)) return;
+          var request = new XMLHttpRequest();
+          request.onreadystatechange = function() {
+            request.readyState == XMLHttpRequest.DONE && (request.status >= 200 && request.status < 300 ? _this.rawAssets[path] = request.responseText : _this.errors[path] = "Couldn't load text " + path + ": status " + request.status + ", " + request.responseText);
+          };
+          request.open("GET", path, true);
+          request.send();
+        };
+        SharedAssetManager.prototype.loadJson = function(clientId, path) {
+          var _this = this;
+          path = this.pathPrefix + path;
+          if (!this.queueAsset(clientId, null, path)) return;
+          var request = new XMLHttpRequest();
+          request.onreadystatechange = function() {
+            request.readyState == XMLHttpRequest.DONE && (request.status >= 200 && request.status < 300 ? _this.rawAssets[path] = JSON.parse(request.responseText) : _this.errors[path] = "Couldn't load text " + path + ": status " + request.status + ", " + request.responseText);
+          };
+          request.open("GET", path, true);
+          request.send();
+        };
+        SharedAssetManager.prototype.loadTexture = function(clientId, textureLoader, path) {
+          var _this = this;
+          path = this.pathPrefix + path;
+          if (!this.queueAsset(clientId, textureLoader, path)) return;
+          var img = new Image();
+          img.src = path;
+          img.crossOrigin = "anonymous";
+          img.onload = function(ev) {
+            _this.rawAssets[path] = img;
+          };
+          img.onerror = function(ev) {
+            _this.errors[path] = "Couldn't load image " + path;
+          };
+        };
+        SharedAssetManager.prototype.get = function(clientId, path) {
+          path = this.pathPrefix + path;
+          var clientAssets = this.clientAssets[clientId];
+          if (null === clientAssets || void 0 === clientAssets) return true;
+          return clientAssets.assets[path];
+        };
+        SharedAssetManager.prototype.updateClientAssets = function(clientAssets) {
+          for (var i = 0; i < clientAssets.toLoad.length; i++) {
+            var path = clientAssets.toLoad[i];
+            var asset = clientAssets.assets[path];
+            if (null === asset || void 0 === asset) {
+              var rawAsset = this.rawAssets[path];
+              if (null === rawAsset || void 0 === rawAsset) continue;
+              rawAsset instanceof HTMLImageElement ? clientAssets.assets[path] = clientAssets.textureLoader(rawAsset) : clientAssets.assets[path] = rawAsset;
+            }
+          }
+        };
+        SharedAssetManager.prototype.isLoadingComplete = function(clientId) {
+          var clientAssets = this.clientAssets[clientId];
+          if (null === clientAssets || void 0 === clientAssets) return true;
+          this.updateClientAssets(clientAssets);
+          return clientAssets.toLoad.length == clientAssets.loaded();
+        };
+        SharedAssetManager.prototype.dispose = function() {};
+        SharedAssetManager.prototype.hasErrors = function() {
+          return Object.keys(this.errors).length > 0;
+        };
+        SharedAssetManager.prototype.getErrors = function() {
+          return this.errors;
+        };
+        return SharedAssetManager;
+      })();
+      spine.SharedAssetManager = SharedAssetManager;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var Skeleton = (function() {
+        function Skeleton(data) {
+          this._updateCache = new Array();
+          this.updateCacheReset = new Array();
+          this.time = 0;
+          this.flipX = false;
+          this.flipY = false;
+          this.x = 0;
+          this.y = 0;
+          if (null == data) throw new Error("data cannot be null.");
+          this.data = data;
+          this.bones = new Array();
+          for (var i = 0; i < data.bones.length; i++) {
+            var boneData = data.bones[i];
+            var bone = void 0;
+            if (null == boneData.parent) bone = new spine.Bone(boneData, this, null); else {
+              var parent_1 = this.bones[boneData.parent.index];
+              bone = new spine.Bone(boneData, this, parent_1);
+              parent_1.children.push(bone);
+            }
+            this.bones.push(bone);
+          }
+          this.slots = new Array();
+          this.drawOrder = new Array();
+          for (var i = 0; i < data.slots.length; i++) {
+            var slotData = data.slots[i];
+            var bone = this.bones[slotData.boneData.index];
+            var slot = new spine.Slot(slotData, bone);
+            this.slots.push(slot);
+            this.drawOrder.push(slot);
+          }
+          this.ikConstraints = new Array();
+          for (var i = 0; i < data.ikConstraints.length; i++) {
+            var ikConstraintData = data.ikConstraints[i];
+            this.ikConstraints.push(new spine.IkConstraint(ikConstraintData, this));
+          }
+          this.transformConstraints = new Array();
+          for (var i = 0; i < data.transformConstraints.length; i++) {
+            var transformConstraintData = data.transformConstraints[i];
+            this.transformConstraints.push(new spine.TransformConstraint(transformConstraintData, this));
+          }
+          this.pathConstraints = new Array();
+          for (var i = 0; i < data.pathConstraints.length; i++) {
+            var pathConstraintData = data.pathConstraints[i];
+            this.pathConstraints.push(new spine.PathConstraint(pathConstraintData, this));
+          }
+          this.color = new spine.Color(1, 1, 1, 1);
+          this.updateCache();
+        }
+        Skeleton.prototype.updateCache = function() {
+          var updateCache = this._updateCache;
+          updateCache.length = 0;
+          var bones = this.bones;
+          for (var i = 0, n = bones.length; i < n; i++) bones[i].sorted = false;
+          var ikConstraints = this.ikConstraints;
+          var transformConstraints = this.transformConstraints;
+          var pathConstraints = this.pathConstraints;
+          var ikCount = ikConstraints.length, transformCount = transformConstraints.length, pathCount = pathConstraints.length;
+          var constraintCount = ikCount + transformCount + pathCount;
+          outer: for (var i = 0; i < constraintCount; i++) {
+            for (var ii = 0; ii < ikCount; ii++) {
+              var constraint = ikConstraints[ii];
+              if (constraint.data.order == i) {
+                this.sortIkConstraint(constraint);
+                continue outer;
+              }
+            }
+            for (var ii = 0; ii < transformCount; ii++) {
+              var constraint = transformConstraints[ii];
+              if (constraint.data.order == i) {
+                this.sortTransformConstraint(constraint);
+                continue outer;
+              }
+            }
+            for (var ii = 0; ii < pathCount; ii++) {
+              var constraint = pathConstraints[ii];
+              if (constraint.data.order == i) {
+                this.sortPathConstraint(constraint);
+                continue outer;
+              }
+            }
+          }
+          for (var i = 0, n = bones.length; i < n; i++) this.sortBone(bones[i]);
+        };
+        Skeleton.prototype.sortIkConstraint = function(constraint) {
+          var target = constraint.target;
+          this.sortBone(target);
+          var constrained = constraint.bones;
+          var parent = constrained[0];
+          this.sortBone(parent);
+          if (constrained.length > 1) {
+            var child = constrained[constrained.length - 1];
+            this._updateCache.indexOf(child) > -1 || this.updateCacheReset.push(child);
+          }
+          this._updateCache.push(constraint);
+          this.sortReset(parent.children);
+          constrained[constrained.length - 1].sorted = true;
+        };
+        Skeleton.prototype.sortPathConstraint = function(constraint) {
+          var slot = constraint.target;
+          var slotIndex = slot.data.index;
+          var slotBone = slot.bone;
+          null != this.skin && this.sortPathConstraintAttachment(this.skin, slotIndex, slotBone);
+          null != this.data.defaultSkin && this.data.defaultSkin != this.skin && this.sortPathConstraintAttachment(this.data.defaultSkin, slotIndex, slotBone);
+          for (var ii = 0, nn = this.data.skins.length; ii < nn; ii++) this.sortPathConstraintAttachment(this.data.skins[ii], slotIndex, slotBone);
+          var attachment = slot.getAttachment();
+          attachment instanceof spine.PathAttachment && this.sortPathConstraintAttachmentWith(attachment, slotBone);
+          var constrained = constraint.bones;
+          var boneCount = constrained.length;
+          for (var ii = 0; ii < boneCount; ii++) this.sortBone(constrained[ii]);
+          this._updateCache.push(constraint);
+          for (var ii = 0; ii < boneCount; ii++) this.sortReset(constrained[ii].children);
+          for (var ii = 0; ii < boneCount; ii++) constrained[ii].sorted = true;
+        };
+        Skeleton.prototype.sortTransformConstraint = function(constraint) {
+          this.sortBone(constraint.target);
+          var constrained = constraint.bones;
+          var boneCount = constrained.length;
+          for (var ii = 0; ii < boneCount; ii++) this.sortBone(constrained[ii]);
+          this._updateCache.push(constraint);
+          for (var ii = 0; ii < boneCount; ii++) this.sortReset(constrained[ii].children);
+          for (var ii = 0; ii < boneCount; ii++) constrained[ii].sorted = true;
+        };
+        Skeleton.prototype.sortPathConstraintAttachment = function(skin, slotIndex, slotBone) {
+          var attachments = skin.attachments[slotIndex];
+          if (!attachments) return;
+          for (var key in attachments) this.sortPathConstraintAttachmentWith(attachments[key], slotBone);
+        };
+        Skeleton.prototype.sortPathConstraintAttachmentWith = function(attachment, slotBone) {
+          if (!(attachment instanceof spine.PathAttachment)) return;
+          var pathBones = attachment.bones;
+          if (null == pathBones) this.sortBone(slotBone); else {
+            var bones = this.bones;
+            var i = 0;
+            while (i < pathBones.length) {
+              var boneCount = pathBones[i++];
+              for (var n = i + boneCount; i < n; i++) {
+                var boneIndex = pathBones[i];
+                this.sortBone(bones[boneIndex]);
+              }
+            }
+          }
+        };
+        Skeleton.prototype.sortBone = function(bone) {
+          if (bone.sorted) return;
+          var parent = bone.parent;
+          null != parent && this.sortBone(parent);
+          bone.sorted = true;
+          this._updateCache.push(bone);
+        };
+        Skeleton.prototype.sortReset = function(bones) {
+          for (var i = 0, n = bones.length; i < n; i++) {
+            var bone = bones[i];
+            bone.sorted && this.sortReset(bone.children);
+            bone.sorted = false;
+          }
+        };
+        Skeleton.prototype.updateWorldTransform = function() {
+          var updateCacheReset = this.updateCacheReset;
+          for (var i = 0, n = updateCacheReset.length; i < n; i++) {
+            var bone = updateCacheReset[i];
+            bone.ax = bone.x;
+            bone.ay = bone.y;
+            bone.arotation = bone.rotation;
+            bone.ascaleX = bone.scaleX;
+            bone.ascaleY = bone.scaleY;
+            bone.ashearX = bone.shearX;
+            bone.ashearY = bone.shearY;
+            bone.appliedValid = true;
+          }
+          var updateCache = this._updateCache;
+          for (var i = 0, n = updateCache.length; i < n; i++) updateCache[i].update();
+        };
+        Skeleton.prototype.setToSetupPose = function() {
+          this.setBonesToSetupPose();
+          this.setSlotsToSetupPose();
+        };
+        Skeleton.prototype.setBonesToSetupPose = function() {
+          var bones = this.bones;
+          for (var i = 0, n = bones.length; i < n; i++) bones[i].setToSetupPose();
+          var ikConstraints = this.ikConstraints;
+          for (var i = 0, n = ikConstraints.length; i < n; i++) {
+            var constraint = ikConstraints[i];
+            constraint.bendDirection = constraint.data.bendDirection;
+            constraint.mix = constraint.data.mix;
+          }
+          var transformConstraints = this.transformConstraints;
+          for (var i = 0, n = transformConstraints.length; i < n; i++) {
+            var constraint = transformConstraints[i];
+            var data = constraint.data;
+            constraint.rotateMix = data.rotateMix;
+            constraint.translateMix = data.translateMix;
+            constraint.scaleMix = data.scaleMix;
+            constraint.shearMix = data.shearMix;
+          }
+          var pathConstraints = this.pathConstraints;
+          for (var i = 0, n = pathConstraints.length; i < n; i++) {
+            var constraint = pathConstraints[i];
+            var data = constraint.data;
+            constraint.position = data.position;
+            constraint.spacing = data.spacing;
+            constraint.rotateMix = data.rotateMix;
+            constraint.translateMix = data.translateMix;
+          }
+        };
+        Skeleton.prototype.setSlotsToSetupPose = function() {
+          var slots = this.slots;
+          spine.Utils.arrayCopy(slots, 0, this.drawOrder, 0, slots.length);
+          for (var i = 0, n = slots.length; i < n; i++) slots[i].setToSetupPose();
+        };
+        Skeleton.prototype.getRootBone = function() {
+          if (0 == this.bones.length) return null;
+          return this.bones[0];
+        };
+        Skeleton.prototype.findBone = function(boneName) {
+          if (null == boneName) throw new Error("boneName cannot be null.");
+          var bones = this.bones;
+          for (var i = 0, n = bones.length; i < n; i++) {
+            var bone = bones[i];
+            if (bone.data.name == boneName) return bone;
+          }
+          return null;
+        };
+        Skeleton.prototype.findBoneIndex = function(boneName) {
+          if (null == boneName) throw new Error("boneName cannot be null.");
+          var bones = this.bones;
+          for (var i = 0, n = bones.length; i < n; i++) if (bones[i].data.name == boneName) return i;
+          return -1;
+        };
+        Skeleton.prototype.findSlot = function(slotName) {
+          if (null == slotName) throw new Error("slotName cannot be null.");
+          var slots = this.slots;
+          for (var i = 0, n = slots.length; i < n; i++) {
+            var slot = slots[i];
+            if (slot.data.name == slotName) return slot;
+          }
+          return null;
+        };
+        Skeleton.prototype.findSlotIndex = function(slotName) {
+          if (null == slotName) throw new Error("slotName cannot be null.");
+          var slots = this.slots;
+          for (var i = 0, n = slots.length; i < n; i++) if (slots[i].data.name == slotName) return i;
+          return -1;
+        };
+        Skeleton.prototype.setSkinByName = function(skinName) {
+          var skin = this.data.findSkin(skinName);
+          if (null == skin) throw new Error("Skin not found: " + skinName);
+          this.setSkin(skin);
+        };
+        Skeleton.prototype.setSkin = function(newSkin) {
+          if (null != newSkin) if (null != this.skin) newSkin.attachAll(this, this.skin); else {
+            var slots = this.slots;
+            for (var i = 0, n = slots.length; i < n; i++) {
+              var slot = slots[i];
+              var name_1 = slot.data.attachmentName;
+              if (null != name_1) {
+                var attachment = newSkin.getAttachment(i, name_1);
+                null != attachment && slot.setAttachment(attachment);
+              }
+            }
+          }
+          this.skin = newSkin;
+        };
+        Skeleton.prototype.getAttachmentByName = function(slotName, attachmentName) {
+          return this.getAttachment(this.data.findSlotIndex(slotName), attachmentName);
+        };
+        Skeleton.prototype.getAttachment = function(slotIndex, attachmentName) {
+          if (null == attachmentName) throw new Error("attachmentName cannot be null.");
+          if (null != this.skin) {
+            var attachment = this.skin.getAttachment(slotIndex, attachmentName);
+            if (null != attachment) return attachment;
+          }
+          if (null != this.data.defaultSkin) return this.data.defaultSkin.getAttachment(slotIndex, attachmentName);
+          return null;
+        };
+        Skeleton.prototype.setAttachment = function(slotName, attachmentName) {
+          if (null == slotName) throw new Error("slotName cannot be null.");
+          var slots = this.slots;
+          for (var i = 0, n = slots.length; i < n; i++) {
+            var slot = slots[i];
+            if (slot.data.name == slotName) {
+              var attachment = null;
+              if (null != attachmentName) {
+                attachment = this.getAttachment(i, attachmentName);
+                if (null == attachment) throw new Error("Attachment not found: " + attachmentName + ", for slot: " + slotName);
+              }
+              slot.setAttachment(attachment);
+              return;
+            }
+          }
+          throw new Error("Slot not found: " + slotName);
+        };
+        Skeleton.prototype.findIkConstraint = function(constraintName) {
+          if (null == constraintName) throw new Error("constraintName cannot be null.");
+          var ikConstraints = this.ikConstraints;
+          for (var i = 0, n = ikConstraints.length; i < n; i++) {
+            var ikConstraint = ikConstraints[i];
+            if (ikConstraint.data.name == constraintName) return ikConstraint;
+          }
+          return null;
+        };
+        Skeleton.prototype.findTransformConstraint = function(constraintName) {
+          if (null == constraintName) throw new Error("constraintName cannot be null.");
+          var transformConstraints = this.transformConstraints;
+          for (var i = 0, n = transformConstraints.length; i < n; i++) {
+            var constraint = transformConstraints[i];
+            if (constraint.data.name == constraintName) return constraint;
+          }
+          return null;
+        };
+        Skeleton.prototype.findPathConstraint = function(constraintName) {
+          if (null == constraintName) throw new Error("constraintName cannot be null.");
+          var pathConstraints = this.pathConstraints;
+          for (var i = 0, n = pathConstraints.length; i < n; i++) {
+            var constraint = pathConstraints[i];
+            if (constraint.data.name == constraintName) return constraint;
+          }
+          return null;
+        };
+        Skeleton.prototype.getBounds = function(offset, size) {
+          if (null == offset) throw new Error("offset cannot be null.");
+          if (null == size) throw new Error("size cannot be null.");
+          var drawOrder = this.drawOrder;
+          var minX = Number.POSITIVE_INFINITY, minY = Number.POSITIVE_INFINITY, maxX = Number.NEGATIVE_INFINITY, maxY = Number.NEGATIVE_INFINITY;
+          for (var i = 0, n = drawOrder.length; i < n; i++) {
+            var slot = drawOrder[i];
+            var vertices = null;
+            var attachment = slot.getAttachment();
+            attachment instanceof spine.RegionAttachment ? vertices = attachment.updateWorldVertices(slot, false) : attachment instanceof spine.MeshAttachment && (vertices = attachment.updateWorldVertices(slot, true));
+            if (null != vertices) for (var ii = 0, nn = vertices.length; ii < nn; ii += 8) {
+              var x = vertices[ii], y = vertices[ii + 1];
+              minX = Math.min(minX, x);
+              minY = Math.min(minY, y);
+              maxX = Math.max(maxX, x);
+              maxY = Math.max(maxY, y);
+            }
+          }
+          offset.set(minX, minY);
+          size.set(maxX - minX, maxY - minY);
+        };
+        Skeleton.prototype.update = function(delta) {
+          this.time += delta;
+        };
+        return Skeleton;
+      })();
+      spine.Skeleton = Skeleton;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var SkeletonBounds = (function() {
+        function SkeletonBounds() {
+          this.minX = 0;
+          this.minY = 0;
+          this.maxX = 0;
+          this.maxY = 0;
+          this.boundingBoxes = new Array();
+          this.polygons = new Array();
+          this.polygonPool = new spine.Pool(function() {
+            return spine.Utils.newFloatArray(16);
+          });
+        }
+        SkeletonBounds.prototype.update = function(skeleton, updateAabb) {
+          if (null == skeleton) throw new Error("skeleton cannot be null.");
+          var boundingBoxes = this.boundingBoxes;
+          var polygons = this.polygons;
+          var polygonPool = this.polygonPool;
+          var slots = skeleton.slots;
+          var slotCount = slots.length;
+          boundingBoxes.length = 0;
+          polygonPool.freeAll(polygons);
+          polygons.length = 0;
+          for (var i = 0; i < slotCount; i++) {
+            var slot = slots[i];
+            var attachment = slot.getAttachment();
+            if (attachment instanceof spine.BoundingBoxAttachment) {
+              var boundingBox = attachment;
+              boundingBoxes.push(boundingBox);
+              var polygon = polygonPool.obtain();
+              polygon.length != boundingBox.worldVerticesLength && (polygon = spine.Utils.newFloatArray(boundingBox.worldVerticesLength));
+              polygons.push(polygon);
+              boundingBox.computeWorldVertices(slot, polygon);
+            }
+          }
+          if (updateAabb) this.aabbCompute(); else {
+            this.minX = Number.POSITIVE_INFINITY;
+            this.minY = Number.POSITIVE_INFINITY;
+            this.maxX = Number.NEGATIVE_INFINITY;
+            this.maxY = Number.NEGATIVE_INFINITY;
+          }
+        };
+        SkeletonBounds.prototype.aabbCompute = function() {
+          var minX = Number.POSITIVE_INFINITY, minY = Number.POSITIVE_INFINITY, maxX = Number.NEGATIVE_INFINITY, maxY = Number.NEGATIVE_INFINITY;
+          var polygons = this.polygons;
+          for (var i = 0, n = polygons.length; i < n; i++) {
+            var polygon = polygons[i];
+            var vertices = polygon;
+            for (var ii = 0, nn = polygon.length; ii < nn; ii += 2) {
+              var x = vertices[ii];
+              var y = vertices[ii + 1];
+              minX = Math.min(minX, x);
+              minY = Math.min(minY, y);
+              maxX = Math.max(maxX, x);
+              maxY = Math.max(maxY, y);
+            }
+          }
+          this.minX = minX;
+          this.minY = minY;
+          this.maxX = maxX;
+          this.maxY = maxY;
+        };
+        SkeletonBounds.prototype.aabbContainsPoint = function(x, y) {
+          return x >= this.minX && x <= this.maxX && y >= this.minY && y <= this.maxY;
+        };
+        SkeletonBounds.prototype.aabbIntersectsSegment = function(x1, y1, x2, y2) {
+          var minX = this.minX;
+          var minY = this.minY;
+          var maxX = this.maxX;
+          var maxY = this.maxY;
+          if (x1 <= minX && x2 <= minX || y1 <= minY && y2 <= minY || x1 >= maxX && x2 >= maxX || y1 >= maxY && y2 >= maxY) return false;
+          var m = (y2 - y1) / (x2 - x1);
+          var y = m * (minX - x1) + y1;
+          if (y > minY && y < maxY) return true;
+          y = m * (maxX - x1) + y1;
+          if (y > minY && y < maxY) return true;
+          var x = (minY - y1) / m + x1;
+          if (x > minX && x < maxX) return true;
+          x = (maxY - y1) / m + x1;
+          if (x > minX && x < maxX) return true;
+          return false;
+        };
+        SkeletonBounds.prototype.aabbIntersectsSkeleton = function(bounds) {
+          return this.minX < bounds.maxX && this.maxX > bounds.minX && this.minY < bounds.maxY && this.maxY > bounds.minY;
+        };
+        SkeletonBounds.prototype.containsPoint = function(x, y) {
+          var polygons = this.polygons;
+          for (var i = 0, n = polygons.length; i < n; i++) if (this.containsPointPolygon(polygons[i], x, y)) return this.boundingBoxes[i];
+          return null;
+        };
+        SkeletonBounds.prototype.containsPointPolygon = function(polygon, x, y) {
+          var vertices = polygon;
+          var nn = polygon.length;
+          var prevIndex = nn - 2;
+          var inside = false;
+          for (var ii = 0; ii < nn; ii += 2) {
+            var vertexY = vertices[ii + 1];
+            var prevY = vertices[prevIndex + 1];
+            if (vertexY < y && prevY >= y || prevY < y && vertexY >= y) {
+              var vertexX = vertices[ii];
+              vertexX + (y - vertexY) / (prevY - vertexY) * (vertices[prevIndex] - vertexX) < x && (inside = !inside);
+            }
+            prevIndex = ii;
+          }
+          return inside;
+        };
+        SkeletonBounds.prototype.intersectsSegment = function(x1, y1, x2, y2) {
+          var polygons = this.polygons;
+          for (var i = 0, n = polygons.length; i < n; i++) if (this.intersectsSegmentPolygon(polygons[i], x1, y1, x2, y2)) return this.boundingBoxes[i];
+          return null;
+        };
+        SkeletonBounds.prototype.intersectsSegmentPolygon = function(polygon, x1, y1, x2, y2) {
+          var vertices = polygon;
+          var nn = polygon.length;
+          var width12 = x1 - x2, height12 = y1 - y2;
+          var det1 = x1 * y2 - y1 * x2;
+          var x3 = vertices[nn - 2], y3 = vertices[nn - 1];
+          for (var ii = 0; ii < nn; ii += 2) {
+            var x4 = vertices[ii], y4 = vertices[ii + 1];
+            var det2 = x3 * y4 - y3 * x4;
+            var width34 = x3 - x4, height34 = y3 - y4;
+            var det3 = width12 * height34 - height12 * width34;
+            var x = (det1 * width34 - width12 * det2) / det3;
+            if ((x >= x3 && x <= x4 || x >= x4 && x <= x3) && (x >= x1 && x <= x2 || x >= x2 && x <= x1)) {
+              var y = (det1 * height34 - height12 * det2) / det3;
+              if ((y >= y3 && y <= y4 || y >= y4 && y <= y3) && (y >= y1 && y <= y2 || y >= y2 && y <= y1)) return true;
+            }
+            x3 = x4;
+            y3 = y4;
+          }
+          return false;
+        };
+        SkeletonBounds.prototype.getPolygon = function(boundingBox) {
+          if (null == boundingBox) throw new Error("boundingBox cannot be null.");
+          var index = this.boundingBoxes.indexOf(boundingBox);
+          return -1 == index ? null : this.polygons[index];
+        };
+        SkeletonBounds.prototype.getWidth = function() {
+          return this.maxX - this.minX;
+        };
+        SkeletonBounds.prototype.getHeight = function() {
+          return this.maxY - this.minY;
+        };
+        return SkeletonBounds;
+      })();
+      spine.SkeletonBounds = SkeletonBounds;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var SkeletonData = (function() {
+        function SkeletonData() {
+          this.bones = new Array();
+          this.slots = new Array();
+          this.skins = new Array();
+          this.events = new Array();
+          this.animations = new Array();
+          this.ikConstraints = new Array();
+          this.transformConstraints = new Array();
+          this.pathConstraints = new Array();
+          this.fps = 0;
+        }
+        SkeletonData.prototype.findBone = function(boneName) {
+          if (null == boneName) throw new Error("boneName cannot be null.");
+          var bones = this.bones;
+          for (var i = 0, n = bones.length; i < n; i++) {
+            var bone = bones[i];
+            if (bone.name == boneName) return bone;
+          }
+          return null;
+        };
+        SkeletonData.prototype.findBoneIndex = function(boneName) {
+          if (null == boneName) throw new Error("boneName cannot be null.");
+          var bones = this.bones;
+          for (var i = 0, n = bones.length; i < n; i++) if (bones[i].name == boneName) return i;
+          return -1;
+        };
+        SkeletonData.prototype.findSlot = function(slotName) {
+          if (null == slotName) throw new Error("slotName cannot be null.");
+          var slots = this.slots;
+          for (var i = 0, n = slots.length; i < n; i++) {
+            var slot = slots[i];
+            if (slot.name == slotName) return slot;
+          }
+          return null;
+        };
+        SkeletonData.prototype.findSlotIndex = function(slotName) {
+          if (null == slotName) throw new Error("slotName cannot be null.");
+          var slots = this.slots;
+          for (var i = 0, n = slots.length; i < n; i++) if (slots[i].name == slotName) return i;
+          return -1;
+        };
+        SkeletonData.prototype.findSkin = function(skinName) {
+          if (null == skinName) throw new Error("skinName cannot be null.");
+          var skins = this.skins;
+          for (var i = 0, n = skins.length; i < n; i++) {
+            var skin = skins[i];
+            if (skin.name == skinName) return skin;
+          }
+          return null;
+        };
+        SkeletonData.prototype.findEvent = function(eventDataName) {
+          if (null == eventDataName) throw new Error("eventDataName cannot be null.");
+          var events = this.events;
+          for (var i = 0, n = events.length; i < n; i++) {
+            var event_4 = events[i];
+            if (event_4.name == eventDataName) return event_4;
+          }
+          return null;
+        };
+        SkeletonData.prototype.findAnimation = function(animationName) {
+          if (null == animationName) throw new Error("animationName cannot be null.");
+          var animations = this.animations;
+          for (var i = 0, n = animations.length; i < n; i++) {
+            var animation = animations[i];
+            if (animation.name == animationName) return animation;
+          }
+          return null;
+        };
+        SkeletonData.prototype.findIkConstraint = function(constraintName) {
+          if (null == constraintName) throw new Error("constraintName cannot be null.");
+          var ikConstraints = this.ikConstraints;
+          for (var i = 0, n = ikConstraints.length; i < n; i++) {
+            var constraint = ikConstraints[i];
+            if (constraint.name == constraintName) return constraint;
+          }
+          return null;
+        };
+        SkeletonData.prototype.findTransformConstraint = function(constraintName) {
+          if (null == constraintName) throw new Error("constraintName cannot be null.");
+          var transformConstraints = this.transformConstraints;
+          for (var i = 0, n = transformConstraints.length; i < n; i++) {
+            var constraint = transformConstraints[i];
+            if (constraint.name == constraintName) return constraint;
+          }
+          return null;
+        };
+        SkeletonData.prototype.findPathConstraint = function(constraintName) {
+          if (null == constraintName) throw new Error("constraintName cannot be null.");
+          var pathConstraints = this.pathConstraints;
+          for (var i = 0, n = pathConstraints.length; i < n; i++) {
+            var constraint = pathConstraints[i];
+            if (constraint.name == constraintName) return constraint;
+          }
+          return null;
+        };
+        SkeletonData.prototype.findPathConstraintIndex = function(pathConstraintName) {
+          if (null == pathConstraintName) throw new Error("pathConstraintName cannot be null.");
+          var pathConstraints = this.pathConstraints;
+          for (var i = 0, n = pathConstraints.length; i < n; i++) if (pathConstraints[i].name == pathConstraintName) return i;
+          return -1;
+        };
+        return SkeletonData;
+      })();
+      spine.SkeletonData = SkeletonData;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var SkeletonJson = (function() {
+        function SkeletonJson(attachmentLoader) {
+          this.scale = 1;
+          this.linkedMeshes = new Array();
+          this.attachmentLoader = attachmentLoader;
+        }
+        SkeletonJson.prototype.readSkeletonData = function(json) {
+          var scale = this.scale;
+          var skeletonData = new spine.SkeletonData();
+          var root = "string" === typeof json ? JSON.parse(json) : json;
+          var skeletonMap = root.skeleton;
+          if (null != skeletonMap) {
+            skeletonData.hash = skeletonMap.hash;
+            skeletonData.version = skeletonMap.spine;
+            skeletonData.width = skeletonMap.width;
+            skeletonData.height = skeletonMap.height;
+            skeletonData.fps = skeletonMap.fps;
+            skeletonData.imagesPath = skeletonMap.images;
+          }
+          if (root.bones) for (var i = 0; i < root.bones.length; i++) {
+            var boneMap = root.bones[i];
+            var parent_2 = null;
+            var parentName = this.getValue(boneMap, "parent", null);
+            if (null != parentName) {
+              parent_2 = skeletonData.findBone(parentName);
+              if (null == parent_2) throw new Error("Parent bone not found: " + parentName);
+            }
+            var data = new spine.BoneData(skeletonData.bones.length, boneMap.name, parent_2);
+            data.length = this.getValue(boneMap, "length", 0) * scale;
+            data.x = this.getValue(boneMap, "x", 0) * scale;
+            data.y = this.getValue(boneMap, "y", 0) * scale;
+            data.rotation = this.getValue(boneMap, "rotation", 0);
+            data.scaleX = this.getValue(boneMap, "scaleX", 1);
+            data.scaleY = this.getValue(boneMap, "scaleY", 1);
+            data.shearX = this.getValue(boneMap, "shearX", 0);
+            data.shearY = this.getValue(boneMap, "shearY", 0);
+            data.transformMode = SkeletonJson.transformModeFromString(this.getValue(boneMap, "transform", "normal"));
+            skeletonData.bones.push(data);
+          }
+          if (root.slots) for (var i = 0; i < root.slots.length; i++) {
+            var slotMap = root.slots[i];
+            var slotName = slotMap.name;
+            var boneName = slotMap.bone;
+            var boneData = skeletonData.findBone(boneName);
+            if (null == boneData) throw new Error("Slot bone not found: " + boneName);
+            var data = new spine.SlotData(skeletonData.slots.length, slotName, boneData);
+            var color = this.getValue(slotMap, "color", null);
+            null != color && data.color.setFromString(color);
+            data.attachmentName = this.getValue(slotMap, "attachment", null);
+            data.blendMode = SkeletonJson.blendModeFromString(this.getValue(slotMap, "blend", "normal"));
+            skeletonData.slots.push(data);
+          }
+          if (root.ik) for (var i = 0; i < root.ik.length; i++) {
+            var constraintMap = root.ik[i];
+            var data = new spine.IkConstraintData(constraintMap.name);
+            data.order = this.getValue(constraintMap, "order", 0);
+            for (var j = 0; j < constraintMap.bones.length; j++) {
+              var boneName = constraintMap.bones[j];
+              var bone = skeletonData.findBone(boneName);
+              if (null == bone) throw new Error("IK bone not found: " + boneName);
+              data.bones.push(bone);
+            }
+            var targetName = constraintMap.target;
+            data.target = skeletonData.findBone(targetName);
+            if (null == data.target) throw new Error("IK target bone not found: " + targetName);
+            data.bendDirection = this.getValue(constraintMap, "bendPositive", true) ? 1 : -1;
+            data.mix = this.getValue(constraintMap, "mix", 1);
+            skeletonData.ikConstraints.push(data);
+          }
+          if (root.transform) for (var i = 0; i < root.transform.length; i++) {
+            var constraintMap = root.transform[i];
+            var data = new spine.TransformConstraintData(constraintMap.name);
+            data.order = this.getValue(constraintMap, "order", 0);
+            for (var j = 0; j < constraintMap.bones.length; j++) {
+              var boneName = constraintMap.bones[j];
+              var bone = skeletonData.findBone(boneName);
+              if (null == bone) throw new Error("Transform constraint bone not found: " + boneName);
+              data.bones.push(bone);
+            }
+            var targetName = constraintMap.target;
+            data.target = skeletonData.findBone(targetName);
+            if (null == data.target) throw new Error("Transform constraint target bone not found: " + targetName);
+            data.offsetRotation = this.getValue(constraintMap, "rotation", 0);
+            data.offsetX = this.getValue(constraintMap, "x", 0) * scale;
+            data.offsetY = this.getValue(constraintMap, "y", 0) * scale;
+            data.offsetScaleX = this.getValue(constraintMap, "scaleX", 0);
+            data.offsetScaleY = this.getValue(constraintMap, "scaleY", 0);
+            data.offsetShearY = this.getValue(constraintMap, "shearY", 0);
+            data.rotateMix = this.getValue(constraintMap, "rotateMix", 1);
+            data.translateMix = this.getValue(constraintMap, "translateMix", 1);
+            data.scaleMix = this.getValue(constraintMap, "scaleMix", 1);
+            data.shearMix = this.getValue(constraintMap, "shearMix", 1);
+            skeletonData.transformConstraints.push(data);
+          }
+          if (root.path) for (var i = 0; i < root.path.length; i++) {
+            var constraintMap = root.path[i];
+            var data = new spine.PathConstraintData(constraintMap.name);
+            data.order = this.getValue(constraintMap, "order", 0);
+            for (var j = 0; j < constraintMap.bones.length; j++) {
+              var boneName = constraintMap.bones[j];
+              var bone = skeletonData.findBone(boneName);
+              if (null == bone) throw new Error("Transform constraint bone not found: " + boneName);
+              data.bones.push(bone);
+            }
+            var targetName = constraintMap.target;
+            data.target = skeletonData.findSlot(targetName);
+            if (null == data.target) throw new Error("Path target slot not found: " + targetName);
+            data.positionMode = SkeletonJson.positionModeFromString(this.getValue(constraintMap, "positionMode", "percent"));
+            data.spacingMode = SkeletonJson.spacingModeFromString(this.getValue(constraintMap, "spacingMode", "length"));
+            data.rotateMode = SkeletonJson.rotateModeFromString(this.getValue(constraintMap, "rotateMode", "tangent"));
+            data.offsetRotation = this.getValue(constraintMap, "rotation", 0);
+            data.position = this.getValue(constraintMap, "position", 0);
+            data.positionMode == spine.PositionMode.Fixed && (data.position *= scale);
+            data.spacing = this.getValue(constraintMap, "spacing", 0);
+            data.spacingMode != spine.SpacingMode.Length && data.spacingMode != spine.SpacingMode.Fixed || (data.spacing *= scale);
+            data.rotateMix = this.getValue(constraintMap, "rotateMix", 1);
+            data.translateMix = this.getValue(constraintMap, "translateMix", 1);
+            skeletonData.pathConstraints.push(data);
+          }
+          if (root.skins) for (var skinName in root.skins) {
+            var skinMap = root.skins[skinName];
+            var skin = new spine.Skin(skinName);
+            for (var slotName in skinMap) {
+              var slotIndex = skeletonData.findSlotIndex(slotName);
+              if (-1 == slotIndex) throw new Error("Slot not found: " + slotName);
+              var slotMap = skinMap[slotName];
+              for (var entryName in slotMap) {
+                var attachment = this.readAttachment(slotMap[entryName], skin, slotIndex, entryName);
+                null != attachment && skin.addAttachment(slotIndex, entryName, attachment);
+              }
+            }
+            skeletonData.skins.push(skin);
+            "default" == skin.name && (skeletonData.defaultSkin = skin);
+          }
+          for (var i = 0, n = this.linkedMeshes.length; i < n; i++) {
+            var linkedMesh = this.linkedMeshes[i];
+            var skin = null == linkedMesh.skin ? skeletonData.defaultSkin : skeletonData.findSkin(linkedMesh.skin);
+            if (null == skin) throw new Error("Skin not found: " + linkedMesh.skin);
+            var parent_3 = skin.getAttachment(linkedMesh.slotIndex, linkedMesh.parent);
+            if (null == parent_3) throw new Error("Parent mesh not found: " + linkedMesh.parent);
+            linkedMesh.mesh.setParentMesh(parent_3);
+            linkedMesh.mesh.updateUVs();
+          }
+          this.linkedMeshes.length = 0;
+          if (root.events) for (var eventName in root.events) {
+            var eventMap = root.events[eventName];
+            var data = new spine.EventData(eventName);
+            data.intValue = this.getValue(eventMap, "int", 0);
+            data.floatValue = this.getValue(eventMap, "float", 0);
+            data.stringValue = this.getValue(eventMap, "string", "");
+            skeletonData.events.push(data);
+          }
+          if (root.animations) for (var animationName in root.animations) {
+            var animationMap = root.animations[animationName];
+            this.readAnimation(animationMap, animationName, skeletonData);
+          }
+          return skeletonData;
+        };
+        SkeletonJson.prototype.readAttachment = function(map, skin, slotIndex, name) {
+          var scale = this.scale;
+          name = this.getValue(map, "name", name);
+          var type = this.getValue(map, "type", "region");
+          switch (type) {
+           case "region":
+            var path = this.getValue(map, "path", name);
+            var region = this.attachmentLoader.newRegionAttachment(skin, name, path);
+            if (null == region) return null;
+            region.path = path;
+            region.x = this.getValue(map, "x", 0) * scale;
+            region.y = this.getValue(map, "y", 0) * scale;
+            region.scaleX = this.getValue(map, "scaleX", 1);
+            region.scaleY = this.getValue(map, "scaleY", 1);
+            region.rotation = this.getValue(map, "rotation", 0);
+            region.width = map.width * scale;
+            region.height = map.height * scale;
+            var color = this.getValue(map, "color", null);
+            null != color && region.color.setFromString(color);
+            region.updateOffset();
+            return region;
+
+           case "boundingbox":
+            var box = this.attachmentLoader.newBoundingBoxAttachment(skin, name);
+            if (null == box) return null;
+            this.readVertices(map, box, map.vertexCount << 1);
+            var color = this.getValue(map, "color", null);
+            null != color && box.color.setFromString(color);
+            return box;
+
+           case "mesh":
+           case "linkedmesh":
+            var path = this.getValue(map, "path", name);
+            var mesh = this.attachmentLoader.newMeshAttachment(skin, name, path);
+            if (null == mesh) return null;
+            mesh.path = path;
+            var color = this.getValue(map, "color", null);
+            null != color && mesh.color.setFromString(color);
+            var parent_4 = this.getValue(map, "parent", null);
+            if (null != parent_4) {
+              mesh.inheritDeform = this.getValue(map, "deform", true);
+              this.linkedMeshes.push(new LinkedMesh(mesh, this.getValue(map, "skin", null), slotIndex, parent_4));
+              return mesh;
+            }
+            var uvs = map.uvs;
+            this.readVertices(map, mesh, uvs.length);
+            mesh.triangles = map.triangles;
+            mesh.regionUVs = uvs;
+            mesh.updateUVs();
+            mesh.hullLength = 2 * this.getValue(map, "hull", 0);
+            return mesh;
+
+           case "path":
+            var path = this.attachmentLoader.newPathAttachment(skin, name);
+            if (null == path) return null;
+            path.closed = this.getValue(map, "closed", false);
+            path.constantSpeed = this.getValue(map, "constantSpeed", true);
+            var vertexCount = map.vertexCount;
+            this.readVertices(map, path, vertexCount << 1);
+            var lengths = spine.Utils.newArray(vertexCount / 3, 0);
+            for (var i = 0; i < map.lengths.length; i++) lengths[i++] = map.lengths[i] * scale;
+            path.lengths = lengths;
+            var color = this.getValue(map, "color", null);
+            null != color && path.color.setFromString(color);
+            return path;
+          }
+          return null;
+        };
+        SkeletonJson.prototype.readVertices = function(map, attachment, verticesLength) {
+          var scale = this.scale;
+          attachment.worldVerticesLength = verticesLength;
+          var vertices = map.vertices;
+          if (verticesLength == vertices.length) {
+            if (1 != scale) for (var i = 0, n = vertices.length; i < n; i++) vertices[i] *= scale;
+            attachment.vertices = spine.Utils.toFloatArray(vertices);
+            return;
+          }
+          var weights = new Array();
+          var bones = new Array();
+          for (var i = 0, n = vertices.length; i < n; ) {
+            var boneCount = vertices[i++];
+            bones.push(boneCount);
+            for (var nn = i + 4 * boneCount; i < nn; i += 4) {
+              bones.push(vertices[i]);
+              weights.push(vertices[i + 1] * scale);
+              weights.push(vertices[i + 2] * scale);
+              weights.push(vertices[i + 3]);
+            }
+          }
+          attachment.bones = bones;
+          attachment.vertices = spine.Utils.toFloatArray(weights);
+        };
+        SkeletonJson.prototype.readAnimation = function(map, name, skeletonData) {
+          var scale = this.scale;
+          var timelines = new Array();
+          var duration = 0;
+          if (map.slots) for (var slotName in map.slots) {
+            var slotMap = map.slots[slotName];
+            var slotIndex = skeletonData.findSlotIndex(slotName);
+            if (-1 == slotIndex) throw new Error("Slot not found: " + slotName);
+            for (var timelineName in slotMap) {
+              var timelineMap = slotMap[timelineName];
+              if ("color" == timelineName) {
+                var timeline = new spine.ColorTimeline(timelineMap.length);
+                timeline.slotIndex = slotIndex;
+                var frameIndex = 0;
+                for (var i = 0; i < timelineMap.length; i++) {
+                  var valueMap = timelineMap[i];
+                  var color = new spine.Color();
+                  color.setFromString(valueMap.color);
+                  timeline.setFrame(frameIndex, valueMap.time, color.r, color.g, color.b, color.a);
+                  this.readCurve(valueMap, timeline, frameIndex);
+                  frameIndex++;
+                }
+                timelines.push(timeline);
+                duration = Math.max(duration, timeline.frames[(timeline.getFrameCount() - 1) * spine.ColorTimeline.ENTRIES]);
+              } else {
+                if (!(timelineName = "attachment")) throw new Error("Invalid timeline type for a slot: " + timelineName + " (" + slotName + ")");
+                var timeline = new spine.AttachmentTimeline(timelineMap.length);
+                timeline.slotIndex = slotIndex;
+                var frameIndex = 0;
+                for (var i = 0; i < timelineMap.length; i++) {
+                  var valueMap = timelineMap[i];
+                  timeline.setFrame(frameIndex++, valueMap.time, valueMap.name);
+                }
+                timelines.push(timeline);
+                duration = Math.max(duration, timeline.frames[timeline.getFrameCount() - 1]);
+              }
+            }
+          }
+          if (map.bones) for (var boneName in map.bones) {
+            var boneMap = map.bones[boneName];
+            var boneIndex = skeletonData.findBoneIndex(boneName);
+            if (-1 == boneIndex) throw new Error("Bone not found: " + boneName);
+            for (var timelineName in boneMap) {
+              var timelineMap = boneMap[timelineName];
+              if ("rotate" === timelineName) {
+                var timeline = new spine.RotateTimeline(timelineMap.length);
+                timeline.boneIndex = boneIndex;
+                var frameIndex = 0;
+                for (var i = 0; i < timelineMap.length; i++) {
+                  var valueMap = timelineMap[i];
+                  timeline.setFrame(frameIndex, valueMap.time, valueMap.angle);
+                  this.readCurve(valueMap, timeline, frameIndex);
+                  frameIndex++;
+                }
+                timelines.push(timeline);
+                duration = Math.max(duration, timeline.frames[(timeline.getFrameCount() - 1) * spine.RotateTimeline.ENTRIES]);
+              } else {
+                if ("translate" !== timelineName && "scale" !== timelineName && "shear" !== timelineName) throw new Error("Invalid timeline type for a bone: " + timelineName + " (" + boneName + ")");
+                var timeline = null;
+                var timelineScale = 1;
+                if ("scale" === timelineName) timeline = new spine.ScaleTimeline(timelineMap.length); else if ("shear" === timelineName) timeline = new spine.ShearTimeline(timelineMap.length); else {
+                  timeline = new spine.TranslateTimeline(timelineMap.length);
+                  timelineScale = scale;
+                }
+                timeline.boneIndex = boneIndex;
+                var frameIndex = 0;
+                for (var i = 0; i < timelineMap.length; i++) {
+                  var valueMap = timelineMap[i];
+                  var x = this.getValue(valueMap, "x", 0), y = this.getValue(valueMap, "y", 0);
+                  timeline.setFrame(frameIndex, valueMap.time, x * timelineScale, y * timelineScale);
+                  this.readCurve(valueMap, timeline, frameIndex);
+                  frameIndex++;
+                }
+                timelines.push(timeline);
+                duration = Math.max(duration, timeline.frames[(timeline.getFrameCount() - 1) * spine.TranslateTimeline.ENTRIES]);
+              }
+            }
+          }
+          if (map.ik) for (var constraintName in map.ik) {
+            var constraintMap = map.ik[constraintName];
+            var constraint = skeletonData.findIkConstraint(constraintName);
+            var timeline = new spine.IkConstraintTimeline(constraintMap.length);
+            timeline.ikConstraintIndex = skeletonData.ikConstraints.indexOf(constraint);
+            var frameIndex = 0;
+            for (var i = 0; i < constraintMap.length; i++) {
+              var valueMap = constraintMap[i];
+              timeline.setFrame(frameIndex, valueMap.time, this.getValue(valueMap, "mix", 1), this.getValue(valueMap, "bendPositive", true) ? 1 : -1);
+              this.readCurve(valueMap, timeline, frameIndex);
+              frameIndex++;
+            }
+            timelines.push(timeline);
+            duration = Math.max(duration, timeline.frames[(timeline.getFrameCount() - 1) * spine.IkConstraintTimeline.ENTRIES]);
+          }
+          if (map.transform) for (var constraintName in map.transform) {
+            var constraintMap = map.transform[constraintName];
+            var constraint = skeletonData.findTransformConstraint(constraintName);
+            var timeline = new spine.TransformConstraintTimeline(constraintMap.length);
+            timeline.transformConstraintIndex = skeletonData.transformConstraints.indexOf(constraint);
+            var frameIndex = 0;
+            for (var i = 0; i < constraintMap.length; i++) {
+              var valueMap = constraintMap[i];
+              timeline.setFrame(frameIndex, valueMap.time, this.getValue(valueMap, "rotateMix", 1), this.getValue(valueMap, "translateMix", 1), this.getValue(valueMap, "scaleMix", 1), this.getValue(valueMap, "shearMix", 1));
+              this.readCurve(valueMap, timeline, frameIndex);
+              frameIndex++;
+            }
+            timelines.push(timeline);
+            duration = Math.max(duration, timeline.frames[(timeline.getFrameCount() - 1) * spine.TransformConstraintTimeline.ENTRIES]);
+          }
+          if (map.paths) for (var constraintName in map.paths) {
+            var constraintMap = map.paths[constraintName];
+            var index = skeletonData.findPathConstraintIndex(constraintName);
+            if (-1 == index) throw new Error("Path constraint not found: " + constraintName);
+            var data = skeletonData.pathConstraints[index];
+            for (var timelineName in constraintMap) {
+              var timelineMap = constraintMap[timelineName];
+              if ("position" === timelineName || "spacing" === timelineName) {
+                var timeline = null;
+                var timelineScale = 1;
+                if ("spacing" === timelineName) {
+                  timeline = new spine.PathConstraintSpacingTimeline(timelineMap.length);
+                  data.spacingMode != spine.SpacingMode.Length && data.spacingMode != spine.SpacingMode.Fixed || (timelineScale = scale);
+                } else {
+                  timeline = new spine.PathConstraintPositionTimeline(timelineMap.length);
+                  data.positionMode == spine.PositionMode.Fixed && (timelineScale = scale);
+                }
+                timeline.pathConstraintIndex = index;
+                var frameIndex = 0;
+                for (var i = 0; i < timelineMap.length; i++) {
+                  var valueMap = timelineMap[i];
+                  timeline.setFrame(frameIndex, valueMap.time, this.getValue(valueMap, timelineName, 0) * timelineScale);
+                  this.readCurve(valueMap, timeline, frameIndex);
+                  frameIndex++;
+                }
+                timelines.push(timeline);
+                duration = Math.max(duration, timeline.frames[(timeline.getFrameCount() - 1) * spine.PathConstraintPositionTimeline.ENTRIES]);
+              } else if ("mix" === timelineName) {
+                var timeline = new spine.PathConstraintMixTimeline(timelineMap.length);
+                timeline.pathConstraintIndex = index;
+                var frameIndex = 0;
+                for (var i = 0; i < timelineMap.length; i++) {
+                  var valueMap = timelineMap[i];
+                  timeline.setFrame(frameIndex, valueMap.time, this.getValue(valueMap, "rotateMix", 1), this.getValue(valueMap, "translateMix", 1));
+                  this.readCurve(valueMap, timeline, frameIndex);
+                  frameIndex++;
+                }
+                timelines.push(timeline);
+                duration = Math.max(duration, timeline.frames[(timeline.getFrameCount() - 1) * spine.PathConstraintMixTimeline.ENTRIES]);
+              }
+            }
+          }
+          if (map.deform) for (var deformName in map.deform) {
+            var deformMap = map.deform[deformName];
+            var skin = skeletonData.findSkin(deformName);
+            if (null == skin) throw new Error("Skin not found: " + deformName);
+            for (var slotName in deformMap) {
+              var slotMap = deformMap[slotName];
+              var slotIndex = skeletonData.findSlotIndex(slotName);
+              if (-1 == slotIndex) throw new Error("Slot not found: " + slotMap.name);
+              for (var timelineName in slotMap) {
+                var timelineMap = slotMap[timelineName];
+                var attachment = skin.getAttachment(slotIndex, timelineName);
+                if (null == attachment) throw new Error("Deform attachment not found: " + timelineMap.name);
+                var weighted = null != attachment.bones;
+                var vertices = attachment.vertices;
+                var deformLength = weighted ? vertices.length / 3 * 2 : vertices.length;
+                var timeline = new spine.DeformTimeline(timelineMap.length);
+                timeline.slotIndex = slotIndex;
+                timeline.attachment = attachment;
+                var frameIndex = 0;
+                for (var j = 0; j < timelineMap.length; j++) {
+                  var valueMap = timelineMap[j];
+                  var deform = void 0;
+                  var verticesValue = this.getValue(valueMap, "vertices", null);
+                  if (null == verticesValue) deform = weighted ? spine.Utils.newFloatArray(deformLength) : vertices; else {
+                    deform = spine.Utils.newFloatArray(deformLength);
+                    var start = this.getValue(valueMap, "offset", 0);
+                    spine.Utils.arrayCopy(verticesValue, 0, deform, start, verticesValue.length);
+                    if (1 != scale) for (var i = start, n = i + verticesValue.length; i < n; i++) deform[i] *= scale;
+                    if (!weighted) for (var i = 0; i < deformLength; i++) deform[i] += vertices[i];
+                  }
+                  timeline.setFrame(frameIndex, valueMap.time, deform);
+                  this.readCurve(valueMap, timeline, frameIndex);
+                  frameIndex++;
+                }
+                timelines.push(timeline);
+                duration = Math.max(duration, timeline.frames[timeline.getFrameCount() - 1]);
+              }
+            }
+          }
+          var drawOrderNode = map.drawOrder;
+          null == drawOrderNode && (drawOrderNode = map.draworder);
+          if (null != drawOrderNode) {
+            var timeline = new spine.DrawOrderTimeline(drawOrderNode.length);
+            var slotCount = skeletonData.slots.length;
+            var frameIndex = 0;
+            for (var j = 0; j < drawOrderNode.length; j++) {
+              var drawOrderMap = drawOrderNode[j];
+              var drawOrder = null;
+              var offsets = this.getValue(drawOrderMap, "offsets", null);
+              if (null != offsets) {
+                drawOrder = spine.Utils.newArray(slotCount, -1);
+                var unchanged = spine.Utils.newArray(slotCount - offsets.length, 0);
+                var originalIndex = 0, unchangedIndex = 0;
+                for (var i = 0; i < offsets.length; i++) {
+                  var offsetMap = offsets[i];
+                  var slotIndex = skeletonData.findSlotIndex(offsetMap.slot);
+                  if (-1 == slotIndex) throw new Error("Slot not found: " + offsetMap.slot);
+                  while (originalIndex != slotIndex) unchanged[unchangedIndex++] = originalIndex++;
+                  drawOrder[originalIndex + offsetMap.offset] = originalIndex++;
+                }
+                while (originalIndex < slotCount) unchanged[unchangedIndex++] = originalIndex++;
+                for (var i = slotCount - 1; i >= 0; i--) -1 == drawOrder[i] && (drawOrder[i] = unchanged[--unchangedIndex]);
+              }
+              timeline.setFrame(frameIndex++, drawOrderMap.time, drawOrder);
+            }
+            timelines.push(timeline);
+            duration = Math.max(duration, timeline.frames[timeline.getFrameCount() - 1]);
+          }
+          if (map.events) {
+            var timeline = new spine.EventTimeline(map.events.length);
+            var frameIndex = 0;
+            for (var i = 0; i < map.events.length; i++) {
+              var eventMap = map.events[i];
+              var eventData = skeletonData.findEvent(eventMap.name);
+              if (null == eventData) throw new Error("Event not found: " + eventMap.name);
+              var event_5 = new spine.Event(eventMap.time, eventData);
+              event_5.intValue = this.getValue(eventMap, "int", eventData.intValue);
+              event_5.floatValue = this.getValue(eventMap, "float", eventData.floatValue);
+              event_5.stringValue = this.getValue(eventMap, "string", eventData.stringValue);
+              timeline.setFrame(frameIndex++, event_5);
+            }
+            timelines.push(timeline);
+            duration = Math.max(duration, timeline.frames[timeline.getFrameCount() - 1]);
+          }
+          if (isNaN(duration)) throw new Error("Error while parsing animation, duration is NaN");
+          skeletonData.animations.push(new spine.Animation(name, timelines, duration));
+        };
+        SkeletonJson.prototype.readCurve = function(map, timeline, frameIndex) {
+          if (!map.curve) return;
+          if ("stepped" === map.curve) timeline.setStepped(frameIndex); else if ("[object Array]" === Object.prototype.toString.call(map.curve)) {
+            var curve = map.curve;
+            timeline.setCurve(frameIndex, curve[0], curve[1], curve[2], curve[3]);
+          }
+        };
+        SkeletonJson.prototype.getValue = function(map, prop, defaultValue) {
+          return void 0 !== map[prop] ? map[prop] : defaultValue;
+        };
+        SkeletonJson.blendModeFromString = function(str) {
+          str = str.toLowerCase();
+          if ("normal" == str) return spine.BlendMode.Normal;
+          if ("additive" == str) return spine.BlendMode.Additive;
+          if ("multiply" == str) return spine.BlendMode.Multiply;
+          if ("screen" == str) return spine.BlendMode.Screen;
+          throw new Error("Unknown blend mode: " + str);
+        };
+        SkeletonJson.positionModeFromString = function(str) {
+          str = str.toLowerCase();
+          if ("fixed" == str) return spine.PositionMode.Fixed;
+          if ("percent" == str) return spine.PositionMode.Percent;
+          throw new Error("Unknown position mode: " + str);
+        };
+        SkeletonJson.spacingModeFromString = function(str) {
+          str = str.toLowerCase();
+          if ("length" == str) return spine.SpacingMode.Length;
+          if ("fixed" == str) return spine.SpacingMode.Fixed;
+          if ("percent" == str) return spine.SpacingMode.Percent;
+          throw new Error("Unknown position mode: " + str);
+        };
+        SkeletonJson.rotateModeFromString = function(str) {
+          str = str.toLowerCase();
+          if ("tangent" == str) return spine.RotateMode.Tangent;
+          if ("chain" == str) return spine.RotateMode.Chain;
+          if ("chainscale" == str) return spine.RotateMode.ChainScale;
+          throw new Error("Unknown rotate mode: " + str);
+        };
+        SkeletonJson.transformModeFromString = function(str) {
+          str = str.toLowerCase();
+          if ("normal" == str) return spine.TransformMode.Normal;
+          if ("onlytranslation" == str) return spine.TransformMode.OnlyTranslation;
+          if ("norotationorreflection" == str) return spine.TransformMode.NoRotationOrReflection;
+          if ("noscale" == str) return spine.TransformMode.NoScale;
+          if ("noscaleorreflection" == str) return spine.TransformMode.NoScaleOrReflection;
+          throw new Error("Unknown transform mode: " + str);
+        };
+        return SkeletonJson;
+      })();
+      spine.SkeletonJson = SkeletonJson;
+      var LinkedMesh = (function() {
+        function LinkedMesh(mesh, skin, slotIndex, parent) {
+          this.mesh = mesh;
+          this.skin = skin;
+          this.slotIndex = slotIndex;
+          this.parent = parent;
+        }
+        return LinkedMesh;
+      })();
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var Skin = (function() {
+        function Skin(name) {
+          this.attachments = new Array();
+          if (null == name) throw new Error("name cannot be null.");
+          this.name = name;
+        }
+        Skin.prototype.addAttachment = function(slotIndex, name, attachment) {
+          if (null == attachment) throw new Error("attachment cannot be null.");
+          var attachments = this.attachments;
+          slotIndex >= attachments.length && (attachments.length = slotIndex + 1);
+          attachments[slotIndex] || (attachments[slotIndex] = {});
+          attachments[slotIndex][name] = attachment;
+        };
+        Skin.prototype.getAttachment = function(slotIndex, name) {
+          var dictionary = this.attachments[slotIndex];
+          return dictionary ? dictionary[name] : null;
+        };
+        Skin.prototype.attachAll = function(skeleton, oldSkin) {
+          var slotIndex = 0;
+          for (var i = 0; i < skeleton.slots.length; i++) {
+            var slot = skeleton.slots[i];
+            var slotAttachment = slot.getAttachment();
+            if (slotAttachment && slotIndex < oldSkin.attachments.length) {
+              var dictionary = oldSkin.attachments[slotIndex];
+              for (var key in dictionary) {
+                var skinAttachment = dictionary[key];
+                if (slotAttachment == skinAttachment) {
+                  var attachment = this.getAttachment(slotIndex, key);
+                  null != attachment && slot.setAttachment(attachment);
+                  break;
+                }
+              }
+            }
+            slotIndex++;
+          }
+        };
+        return Skin;
+      })();
+      spine.Skin = Skin;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var Slot = (function() {
+        function Slot(data, bone) {
+          this.attachmentVertices = new Array();
+          if (null == data) throw new Error("data cannot be null.");
+          if (null == bone) throw new Error("bone cannot be null.");
+          this.data = data;
+          this.bone = bone;
+          this.color = new spine.Color();
+          this.setToSetupPose();
+        }
+        Slot.prototype.getAttachment = function() {
+          return this.attachment;
+        };
+        Slot.prototype.setAttachment = function(attachment) {
+          if (this.attachment == attachment) return;
+          this.attachment = attachment;
+          this.attachmentTime = this.bone.skeleton.time;
+          this.attachmentVertices.length = 0;
+        };
+        Slot.prototype.setAttachmentTime = function(time) {
+          this.attachmentTime = this.bone.skeleton.time - time;
+        };
+        Slot.prototype.getAttachmentTime = function() {
+          return this.bone.skeleton.time - this.attachmentTime;
+        };
+        Slot.prototype.setToSetupPose = function() {
+          this.color.setFromColor(this.data.color);
+          if (null == this.data.attachmentName) this.attachment = null; else {
+            this.attachment = null;
+            this.setAttachment(this.bone.skeleton.getAttachment(this.data.index, this.data.attachmentName));
+          }
+        };
+        return Slot;
+      })();
+      spine.Slot = Slot;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var SlotData = (function() {
+        function SlotData(index, name, boneData) {
+          this.color = new spine.Color(1, 1, 1, 1);
+          if (index < 0) throw new Error("index must be >= 0.");
+          if (null == name) throw new Error("name cannot be null.");
+          if (null == boneData) throw new Error("boneData cannot be null.");
+          this.index = index;
+          this.name = name;
+          this.boneData = boneData;
+        }
+        return SlotData;
+      })();
+      spine.SlotData = SlotData;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var Texture = (function() {
+        function Texture(image) {
+          this._image = image;
+        }
+        Texture.prototype.getImage = function() {
+          return this._image;
+        };
+        Texture.filterFromString = function(text) {
+          switch (text.toLowerCase()) {
+           case "nearest":
+            return TextureFilter.Nearest;
+
+           case "linear":
+            return TextureFilter.Linear;
+
+           case "mipmap":
+            return TextureFilter.MipMap;
+
+           case "mipmapnearestnearest":
+            return TextureFilter.MipMapNearestNearest;
+
+           case "mipmaplinearnearest":
+            return TextureFilter.MipMapLinearNearest;
+
+           case "mipmapnearestlinear":
+            return TextureFilter.MipMapNearestLinear;
+
+           case "mipmaplinearlinear":
+            return TextureFilter.MipMapLinearLinear;
+
+           default:
+            throw new Error("Unknown texture filter " + text);
+          }
+        };
+        Texture.wrapFromString = function(text) {
+          switch (text.toLowerCase()) {
+           case "mirroredtepeat":
+            return TextureWrap.MirroredRepeat;
+
+           case "clamptoedge":
+            return TextureWrap.ClampToEdge;
+
+           case "repeat":
+            return TextureWrap.Repeat;
+
+           default:
+            throw new Error("Unknown texture wrap " + text);
+          }
+        };
+        return Texture;
+      })();
+      spine.Texture = Texture;
+      (function(TextureFilter) {
+        TextureFilter[TextureFilter["Nearest"] = 9728] = "Nearest";
+        TextureFilter[TextureFilter["Linear"] = 9729] = "Linear";
+        TextureFilter[TextureFilter["MipMap"] = 9987] = "MipMap";
+        TextureFilter[TextureFilter["MipMapNearestNearest"] = 9984] = "MipMapNearestNearest";
+        TextureFilter[TextureFilter["MipMapLinearNearest"] = 9985] = "MipMapLinearNearest";
+        TextureFilter[TextureFilter["MipMapNearestLinear"] = 9986] = "MipMapNearestLinear";
+        TextureFilter[TextureFilter["MipMapLinearLinear"] = 9987] = "MipMapLinearLinear";
+      })(spine.TextureFilter || (spine.TextureFilter = {}));
+      var TextureFilter = spine.TextureFilter;
+      (function(TextureWrap) {
+        TextureWrap[TextureWrap["MirroredRepeat"] = 33648] = "MirroredRepeat";
+        TextureWrap[TextureWrap["ClampToEdge"] = 33071] = "ClampToEdge";
+        TextureWrap[TextureWrap["Repeat"] = 10497] = "Repeat";
+      })(spine.TextureWrap || (spine.TextureWrap = {}));
+      var TextureWrap = spine.TextureWrap;
+      var TextureRegion = (function() {
+        function TextureRegion() {
+          this.u = 0;
+          this.v = 0;
+          this.u2 = 0;
+          this.v2 = 0;
+          this.width = 0;
+          this.height = 0;
+          this.rotate = false;
+          this.offsetX = 0;
+          this.offsetY = 0;
+          this.originalWidth = 0;
+          this.originalHeight = 0;
+        }
+        return TextureRegion;
+      })();
+      spine.TextureRegion = TextureRegion;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var TextureAtlas = (function() {
+        function TextureAtlas(atlasText, textureLoader) {
+          this.pages = new Array();
+          this.regions = new Array();
+          this.load(atlasText, textureLoader);
+        }
+        TextureAtlas.prototype.load = function(atlasText, textureLoader) {
+          if (null == textureLoader) throw new Error("textureLoader cannot be null.");
+          var reader = new TextureAtlasReader(atlasText);
+          var tuple = new Array(4);
+          var page = null;
+          while (true) {
+            var line = reader.readLine();
+            if (null == line) break;
+            line = line.trim();
+            if (0 == line.length) page = null; else if (page) {
+              var region = new TextureAtlasRegion();
+              region.name = line;
+              region.page = page;
+              region.rotate = "true" == reader.readValue();
+              reader.readTuple(tuple);
+              var x = parseInt(tuple[0]);
+              var y = parseInt(tuple[1]);
+              reader.readTuple(tuple);
+              var width = parseInt(tuple[0]);
+              var height = parseInt(tuple[1]);
+              region.u = x / page.width;
+              region.v = y / page.height;
+              if (region.rotate) {
+                region.u2 = (x + height) / page.width;
+                region.v2 = (y + width) / page.height;
+              } else {
+                region.u2 = (x + width) / page.width;
+                region.v2 = (y + height) / page.height;
+              }
+              region.x = x;
+              region.y = y;
+              region.width = Math.abs(width);
+              region.height = Math.abs(height);
+              4 == reader.readTuple(tuple) && 4 == reader.readTuple(tuple) && reader.readTuple(tuple);
+              region.originalWidth = parseInt(tuple[0]);
+              region.originalHeight = parseInt(tuple[1]);
+              reader.readTuple(tuple);
+              region.offsetX = parseInt(tuple[0]);
+              region.offsetY = parseInt(tuple[1]);
+              region.index = parseInt(reader.readValue());
+              region.texture = page.texture;
+              this.regions.push(region);
+            } else {
+              page = new TextureAtlasPage();
+              page.name = line;
+              if (2 == reader.readTuple(tuple)) {
+                page.width = parseInt(tuple[0]);
+                page.height = parseInt(tuple[1]);
+                reader.readTuple(tuple);
+              }
+              reader.readTuple(tuple);
+              page.minFilter = spine.Texture.filterFromString(tuple[0]);
+              page.magFilter = spine.Texture.filterFromString(tuple[1]);
+              var direction = reader.readValue();
+              page.uWrap = spine.TextureWrap.ClampToEdge;
+              page.vWrap = spine.TextureWrap.ClampToEdge;
+              "x" == direction ? page.uWrap = spine.TextureWrap.Repeat : "y" == direction ? page.vWrap = spine.TextureWrap.Repeat : "xy" == direction && (page.uWrap = page.vWrap = spine.TextureWrap.Repeat);
+              page.texture = textureLoader(line);
+              page.texture.setFilters(page.minFilter, page.magFilter);
+              page.texture.setWraps(page.uWrap, page.vWrap);
+              page.width = page.texture.getImage().width;
+              page.height = page.texture.getImage().height;
+              this.pages.push(page);
+            }
+          }
+        };
+        TextureAtlas.prototype.findRegion = function(name) {
+          for (var i = 0; i < this.regions.length; i++) if (this.regions[i].name == name) return this.regions[i];
+          return null;
+        };
+        TextureAtlas.prototype.dispose = function() {
+          for (var i = 0; i < this.pages.length; i++) this.pages[i].texture.dispose();
+        };
+        return TextureAtlas;
+      })();
+      spine.TextureAtlas = TextureAtlas;
+      var TextureAtlasReader = (function() {
+        function TextureAtlasReader(text) {
+          this.index = 0;
+          this.lines = text.split(/\r\n|\r|\n/);
+        }
+        TextureAtlasReader.prototype.readLine = function() {
+          if (this.index >= this.lines.length) return null;
+          return this.lines[this.index++];
+        };
+        TextureAtlasReader.prototype.readValue = function() {
+          var line = this.readLine();
+          var colon = line.indexOf(":");
+          if (-1 == colon) throw new Error("Invalid line: " + line);
+          return line.substring(colon + 1).trim();
+        };
+        TextureAtlasReader.prototype.readTuple = function(tuple) {
+          var line = this.readLine();
+          var colon = line.indexOf(":");
+          if (-1 == colon) throw new Error("Invalid line: " + line);
+          var i = 0, lastMatch = colon + 1;
+          for (;i < 3; i++) {
+            var comma = line.indexOf(",", lastMatch);
+            if (-1 == comma) break;
+            tuple[i] = line.substr(lastMatch, comma - lastMatch).trim();
+            lastMatch = comma + 1;
+          }
+          tuple[i] = line.substring(lastMatch).trim();
+          return i + 1;
+        };
+        return TextureAtlasReader;
+      })();
+      var TextureAtlasPage = (function() {
+        function TextureAtlasPage() {}
+        return TextureAtlasPage;
+      })();
+      spine.TextureAtlasPage = TextureAtlasPage;
+      var TextureAtlasRegion = (function(_super) {
+        __extends(TextureAtlasRegion, _super);
+        function TextureAtlasRegion() {
+          _super.apply(this, arguments);
+        }
+        return TextureAtlasRegion;
+      })(spine.TextureRegion);
+      spine.TextureAtlasRegion = TextureAtlasRegion;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var TransformConstraint = (function() {
+        function TransformConstraint(data, skeleton) {
+          this.rotateMix = 0;
+          this.translateMix = 0;
+          this.scaleMix = 0;
+          this.shearMix = 0;
+          this.temp = new spine.Vector2();
+          if (null == data) throw new Error("data cannot be null.");
+          if (null == skeleton) throw new Error("skeleton cannot be null.");
+          this.data = data;
+          this.rotateMix = data.rotateMix;
+          this.translateMix = data.translateMix;
+          this.scaleMix = data.scaleMix;
+          this.shearMix = data.shearMix;
+          this.bones = new Array();
+          for (var i = 0; i < data.bones.length; i++) this.bones.push(skeleton.findBone(data.bones[i].name));
+          this.target = skeleton.findBone(data.target.name);
+        }
+        TransformConstraint.prototype.apply = function() {
+          this.update();
+        };
+        TransformConstraint.prototype.update = function() {
+          var rotateMix = this.rotateMix, translateMix = this.translateMix, scaleMix = this.scaleMix, shearMix = this.shearMix;
+          var target = this.target;
+          var ta = target.a, tb = target.b, tc = target.c, td = target.d;
+          var degRadReflect = ta * td - tb * tc > 0 ? spine.MathUtils.degRad : -spine.MathUtils.degRad;
+          var offsetRotation = this.data.offsetRotation * degRadReflect;
+          var offsetShearY = this.data.offsetShearY * degRadReflect;
+          var bones = this.bones;
+          for (var i = 0, n = bones.length; i < n; i++) {
+            var bone = bones[i];
+            var modified = false;
+            if (0 != rotateMix) {
+              var a = bone.a, b = bone.b, c = bone.c, d = bone.d;
+              var r = Math.atan2(tc, ta) - Math.atan2(c, a) + offsetRotation;
+              r > spine.MathUtils.PI ? r -= spine.MathUtils.PI2 : r < -spine.MathUtils.PI && (r += spine.MathUtils.PI2);
+              r *= rotateMix;
+              var cos = Math.cos(r), sin = Math.sin(r);
+              bone.a = cos * a - sin * c;
+              bone.b = cos * b - sin * d;
+              bone.c = sin * a + cos * c;
+              bone.d = sin * b + cos * d;
+              modified = true;
+            }
+            if (0 != translateMix) {
+              var temp = this.temp;
+              target.localToWorld(temp.set(this.data.offsetX, this.data.offsetY));
+              bone.worldX += (temp.x - bone.worldX) * translateMix;
+              bone.worldY += (temp.y - bone.worldY) * translateMix;
+              modified = true;
+            }
+            if (scaleMix > 0) {
+              var s = Math.sqrt(bone.a * bone.a + bone.c * bone.c);
+              var ts = Math.sqrt(ta * ta + tc * tc);
+              s > 1e-5 && (s = (s + (ts - s + this.data.offsetScaleX) * scaleMix) / s);
+              bone.a *= s;
+              bone.c *= s;
+              s = Math.sqrt(bone.b * bone.b + bone.d * bone.d);
+              ts = Math.sqrt(tb * tb + td * td);
+              s > 1e-5 && (s = (s + (ts - s + this.data.offsetScaleY) * scaleMix) / s);
+              bone.b *= s;
+              bone.d *= s;
+              modified = true;
+            }
+            if (shearMix > 0) {
+              var b = bone.b, d = bone.d;
+              var by = Math.atan2(d, b);
+              var r = Math.atan2(td, tb) - Math.atan2(tc, ta) - (by - Math.atan2(bone.c, bone.a));
+              r > spine.MathUtils.PI ? r -= spine.MathUtils.PI2 : r < -spine.MathUtils.PI && (r += spine.MathUtils.PI2);
+              r = by + (r + offsetShearY) * shearMix;
+              var s = Math.sqrt(b * b + d * d);
+              bone.b = Math.cos(r) * s;
+              bone.d = Math.sin(r) * s;
+              modified = true;
+            }
+            modified && (bone.appliedValid = false);
+          }
+        };
+        TransformConstraint.prototype.getOrder = function() {
+          return this.data.order;
+        };
+        return TransformConstraint;
+      })();
+      spine.TransformConstraint = TransformConstraint;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var TransformConstraintData = (function() {
+        function TransformConstraintData(name) {
+          this.order = 0;
+          this.bones = new Array();
+          this.rotateMix = 0;
+          this.translateMix = 0;
+          this.scaleMix = 0;
+          this.shearMix = 0;
+          this.offsetRotation = 0;
+          this.offsetX = 0;
+          this.offsetY = 0;
+          this.offsetScaleX = 0;
+          this.offsetScaleY = 0;
+          this.offsetShearY = 0;
+          if (null == name) throw new Error("name cannot be null.");
+          this.name = name;
+        }
+        return TransformConstraintData;
+      })();
+      spine.TransformConstraintData = TransformConstraintData;
+    })(spine || (spine = {}));
+    var spine;
+    (function(spine) {
+      var IntSet = (function() {
+        function IntSet() {
+          this.array = new Array();
+        }
+        IntSet.prototype.add = function(value) {
+          var contains = this.contains(value);
+          this.array[0 | value] = 0 | value;
+          return !contains;
+        };
+        IntSet.prototype.contains = function(value) {
+          return void 0 != this.array[0 | value];
+        };
+        IntSet.prototype.remove = function(value) {
+          this.array[0 | value] = void 0;
+        };
+        IntSet.prototype.clear = function() {
+          this.array.length = 0;
+        };
+        return IntSet;
+      })();
+      spine.IntSet = IntSet;
+      var Color = (function() {
+        function Color(r, g, b, a) {
+          void 0 === r && (r = 0);
+          void 0 === g && (g = 0);
+          void 0 === b && (b = 0);
+          void 0 === a && (a = 0);
+          this.r = r;
+          this.g = g;
+          this.b = b;
+          this.a = a;
+        }
+        Color.prototype.set = function(r, g, b, a) {
+          this.r = r;
+          this.g = g;
+          this.b = b;
+          this.a = a;
+          this.clamp();
+          return this;
+        };
+        Color.prototype.setFromColor = function(c) {
+          this.r = c.r;
+          this.g = c.g;
+          this.b = c.b;
+          this.a = c.a;
+          return this;
+        };
+        Color.prototype.setFromString = function(hex) {
+          hex = "#" == hex.charAt(0) ? hex.substr(1) : hex;
+          this.r = parseInt(hex.substr(0, 2), 16) / 255;
+          this.g = parseInt(hex.substr(2, 2), 16) / 255;
+          this.b = parseInt(hex.substr(4, 2), 16) / 255;
+          this.a = (8 != hex.length ? 255 : parseInt(hex.substr(6, 2), 16)) / 255;
+          return this;
+        };
+        Color.prototype.add = function(r, g, b, a) {
+          this.r += r;
+          this.g += g;
+          this.b += b;
+          this.a += a;
+          this.clamp();
+          return this;
+        };
+        Color.prototype.clamp = function() {
+          this.r < 0 ? this.r = 0 : this.r > 1 && (this.r = 1);
+          this.g < 0 ? this.g = 0 : this.g > 1 && (this.g = 1);
+          this.b < 0 ? this.b = 0 : this.b > 1 && (this.b = 1);
+          this.a < 0 ? this.a = 0 : this.a > 1 && (this.a = 1);
+          return this;
+        };
+        Color.WHITE = new Color(1, 1, 1, 1);
+        Color.RED = new Color(1, 0, 0, 1);
+        Color.GREEN = new Color(0, 1, 0, 1);
+        Color.BLUE = new Color(0, 0, 1, 1);
+        Color.MAGENTA = new Color(1, 0, 1, 1);
+        return Color;
+      })();
+      spine.Color = Color;
+      var MathUtils = (function() {
+        function MathUtils() {}
+        MathUtils.clamp = function(value, min, max) {
+          if (value < min) return min;
+          if (value > max) return max;
+          return value;
+        };
+        MathUtils.cosDeg = function(degrees) {
+          return Math.cos(degrees * MathUtils.degRad);
+        };
+        MathUtils.sinDeg = function(degrees) {
+          return Math.sin(degrees * MathUtils.degRad);
+        };
+        MathUtils.signum = function(value) {
+          return value > 0 ? 1 : value < 0 ? -1 : 0;
+        };
+        MathUtils.toInt = function(x) {
+          return x > 0 ? Math.floor(x) : Math.ceil(x);
+        };
+        MathUtils.cbrt = function(x) {
+          var y = Math.pow(Math.abs(x), 1 / 3);
+          return x < 0 ? -y : y;
+        };
+        MathUtils.PI = 3.1415927;
+        MathUtils.PI2 = 2 * MathUtils.PI;
+        MathUtils.radiansToDegrees = 180 / MathUtils.PI;
+        MathUtils.radDeg = MathUtils.radiansToDegrees;
+        MathUtils.degreesToRadians = MathUtils.PI / 180;
+        MathUtils.degRad = MathUtils.degreesToRadians;
+        return MathUtils;
+      })();
+      spine.MathUtils = MathUtils;
+      var Utils = (function() {
+        function Utils() {}
+        Utils.arrayCopy = function(source, sourceStart, dest, destStart, numElements) {
+          for (var i = sourceStart, j = destStart; i < sourceStart + numElements; i++, j++) dest[j] = source[i];
+        };
+        Utils.setArraySize = function(array, size, value) {
+          void 0 === value && (value = 0);
+          var oldSize = array.length;
+          if (oldSize == size) return array;
+          array.length = size;
+          if (oldSize < size) for (var i = oldSize; i < size; i++) array[i] = value;
+          return array;
+        };
+        Utils.ensureArrayCapacity = function(array, size, value) {
+          void 0 === value && (value = 0);
+          if (array.length >= size) return array;
+          return Utils.setArraySize(array, size, value);
+        };
+        Utils.newArray = function(size, defaultValue) {
+          var array = new Array(size);
+          for (var i = 0; i < size; i++) array[i] = defaultValue;
+          return array;
+        };
+        Utils.newFloatArray = function(size) {
+          if (Utils.SUPPORTS_TYPED_ARRAYS) return new Float32Array(size);
+          var array = new Array(size);
+          for (var i = 0; i < array.length; i++) array[i] = 0;
+          return array;
+        };
+        Utils.toFloatArray = function(array) {
+          return Utils.SUPPORTS_TYPED_ARRAYS ? new Float32Array(array) : array;
+        };
+        Utils.SUPPORTS_TYPED_ARRAYS = "undefined" !== typeof Float32Array;
+        return Utils;
+      })();
+      spine.Utils = Utils;
+      var DebugUtils = (function() {
+        function DebugUtils() {}
+        DebugUtils.logBones = function(skeleton) {
+          for (var i = 0; i < skeleton.bones.length; i++) {
+            var bone = skeleton.bones[i];
+            console.log(bone.data.name + ", " + bone.a + ", " + bone.b + ", " + bone.c + ", " + bone.d + ", " + bone.worldX + ", " + bone.worldY);
+          }
+        };
+        return DebugUtils;
+      })();
+      spine.DebugUtils = DebugUtils;
+      var Pool = (function() {
+        function Pool(instantiator) {
+          this.items = new Array();
+          this.instantiator = instantiator;
+        }
+        Pool.prototype.obtain = function() {
+          return this.items.length > 0 ? this.items.pop() : this.instantiator();
+        };
+        Pool.prototype.free = function(item) {
+          item.reset && item.reset();
+          this.items.push(item);
+        };
+        Pool.prototype.freeAll = function(items) {
+          for (var i = 0; i < items.length; i++) {
+            items[i].reset && items[i].reset();
+            this.items[i] = items[i];
+          }
+        };
+        Pool.prototype.clear = function() {
+          this.items.length = 0;
+        };
+        return Pool;
+      })();
+      spine.Pool = Pool;
+      var Vector2 = (function() {
+        function Vector2(x, y) {
+          void 0 === x && (x = 0);
+          void 0 === y && (y = 0);
+          this.x = x;
+          this.y = y;
+        }
+        Vector2.prototype.set = function(x, y) {
+          this.x = x;
+          this.y = y;
+          return this;
+        };
+        Vector2.prototype.length = function() {
+          var x = this.x;
+          var y = this.y;
+          return Math.sqrt(x * x + y * y);
+        };
+        Vector2.prototype.normalize = function() {
+          var len = this.length();
+          if (0 != len) {
+            this.x /= len;
+            this.y /= len;
+          }
+          return this;
+        };
+        return Vector2;
+      })();
+      spine.Vector2 = Vector2;
+      var TimeKeeper = (function() {
+        function TimeKeeper() {
+          this.maxDelta = .064;
+          this.framesPerSecond = 0;
+          this.delta = 0;
+          this.totalTime = 0;
+          this.lastTime = Date.now() / 1e3;
+          this.frameCount = 0;
+          this.frameTime = 0;
+        }
+        TimeKeeper.prototype.update = function() {
+          var now = Date.now() / 1e3;
+          this.delta = now - this.lastTime;
+          this.frameTime += this.delta;
+          this.totalTime += this.delta;
+          this.delta > this.maxDelta && (this.delta = this.maxDelta);
+          this.lastTime = now;
+          this.frameCount++;
+          if (this.frameTime > 1) {
+            this.framesPerSecond = this.frameCount / this.frameTime;
+            this.frameTime = 0;
+            this.frameCount = 0;
+          }
+        };
+        return TimeKeeper;
+      })();
+      spine.TimeKeeper = TimeKeeper;
+    })(spine || (spine = {}));
+    module.exports = spine;
+  }), {} ],
+  309: [ (function(require, module, exports) {
     (function() {
       "use strict";
       Function.prototype._extend = function(parent) {
@@ -64026,7 +73866,3009 @@
       }
     })();
   }), {} ],
-  286: [ (function(require, module, exports) {
+  310: [ (function(require, module, exports) {
+    Object.create = Object.create || function(o) {
+      function F() {}
+      F.prototype = o;
+      return new F();
+    };
+    var assert = function(value, message) {
+      if (!value) throw new Error("Assertion failed: " + message);
+    };
+    var assertSoft = function(value, message) {
+      if (!value && console && console.warn) {
+        console.warn("ASSERTION FAILED: " + message);
+        console.trace && console.trace();
+      }
+    };
+    var mymin = function(a, b) {
+      return a < b ? a : b;
+    };
+    var mymax = function(a, b) {
+      return a > b ? a : b;
+    };
+    var min, max;
+    if ("object" === typeof window && window.navigator.userAgent.indexOf("Firefox") > -1) {
+      min = Math.min;
+      max = Math.max;
+    } else {
+      min = mymin;
+      max = mymax;
+    }
+    var hashPair = function(a, b) {
+      return a < b ? a + " " + b : b + " " + a;
+    };
+    var deleteObjFromList = function(arr, obj) {
+      for (var i = 0; i < arr.length; i++) if (arr[i] === obj) {
+        arr[i] = arr[arr.length - 1];
+        arr.length--;
+        return;
+      }
+    };
+    var closestPointOnSegment = function(p, a, b) {
+      var delta = vsub(a, b);
+      var t = clamp01(vdot(delta, vsub(p, b)) / vlengthsq(delta));
+      return vadd(b, vmult(delta, t));
+    };
+    var closestPointOnSegment2 = function(px, py, ax, ay, bx, by) {
+      var deltax = ax - bx;
+      var deltay = ay - by;
+      var t = clamp01(vdot2(deltax, deltay, px - bx, py - by) / vlengthsq2(deltax, deltay));
+      return new Vect(bx + deltax * t, by + deltay * t);
+    };
+    cp.momentForCircle = function(m, r1, r2, offset) {
+      return m * (.5 * (r1 * r1 + r2 * r2) + vlengthsq(offset));
+    };
+    cp.areaForCircle = function(r1, r2) {
+      return Math.PI * Math.abs(r1 * r1 - r2 * r2);
+    };
+    cp.momentForSegment = function(m, a, b) {
+      var offset = vmult(vadd(a, b), .5);
+      return m * (vdistsq(b, a) / 12 + vlengthsq(offset));
+    };
+    cp.areaForSegment = function(a, b, r) {
+      return r * (Math.PI * r + 2 * vdist(a, b));
+    };
+    cp.momentForPoly = function(m, verts, offset) {
+      var sum1 = 0;
+      var sum2 = 0;
+      var len = verts.length;
+      for (var i = 0; i < len; i += 2) {
+        var v1x = verts[i] + offset.x;
+        var v1y = verts[i + 1] + offset.y;
+        var v2x = verts[(i + 2) % len] + offset.x;
+        var v2y = verts[(i + 3) % len] + offset.y;
+        var a = vcross2(v2x, v2y, v1x, v1y);
+        var b = vdot2(v1x, v1y, v1x, v1y) + vdot2(v1x, v1y, v2x, v2y) + vdot2(v2x, v2y, v2x, v2y);
+        sum1 += a * b;
+        sum2 += a;
+      }
+      return m * sum1 / (6 * sum2);
+    };
+    cp.areaForPoly = function(verts) {
+      var area = 0;
+      for (var i = 0, len = verts.length; i < len; i += 2) area += vcross(new Vect(verts[i], verts[i + 1]), new Vect(verts[(i + 2) % len], verts[(i + 3) % len]));
+      return -area / 2;
+    };
+    cp.centroidForPoly = function(verts) {
+      var sum = 0;
+      var vsum = new Vect(0, 0);
+      for (var i = 0, len = verts.length; i < len; i += 2) {
+        var v1 = new Vect(verts[i], verts[i + 1]);
+        var v2 = new Vect(verts[(i + 2) % len], verts[(i + 3) % len]);
+        var cross = vcross(v1, v2);
+        sum += cross;
+        vsum = vadd(vsum, vmult(vadd(v1, v2), cross));
+      }
+      return vmult(vsum, 1 / (3 * sum));
+    };
+    cp.recenterPoly = function(verts) {
+      var centroid = cp.centroidForPoly(verts);
+      for (var i = 0; i < verts.length; i += 2) {
+        verts[i] -= centroid.x;
+        verts[i + 1] -= centroid.y;
+      }
+    };
+    cp.momentForBox = function(m, width, height) {
+      return m * (width * width + height * height) / 12;
+    };
+    cp.momentForBox2 = function(m, box) {
+      var width = box.r - box.l;
+      var height = box.t - box.b;
+      var offset = vmult([ box.l + box.r, box.b + box.t ], .5);
+      return cp.momentForBox(m, width, height) + m * vlengthsq(offset);
+    };
+    var loopIndexes = cp.loopIndexes = function(verts) {
+      var start = 0, end = 0;
+      var minx, miny, maxx, maxy;
+      minx = maxx = verts[0];
+      miny = maxy = verts[1];
+      var count = verts.length >> 1;
+      for (var i = 1; i < count; i++) {
+        var x = verts[2 * i];
+        var y = verts[2 * i + 1];
+        if (x < minx || x == minx && y < miny) {
+          minx = x;
+          miny = y;
+          start = i;
+        } else if (x > maxx || x == maxx && y > maxy) {
+          maxx = x;
+          maxy = y;
+          end = i;
+        }
+      }
+      return [ start, end ];
+    };
+    var SWAP = function(arr, idx1, idx2) {
+      var tmp = arr[2 * idx1];
+      arr[2 * idx1] = arr[2 * idx2];
+      arr[2 * idx2] = tmp;
+      tmp = arr[2 * idx1 + 1];
+      arr[2 * idx1 + 1] = arr[2 * idx2 + 1];
+      arr[2 * idx2 + 1] = tmp;
+    };
+    var QHullPartition = function(verts, offs, count, a, b, tol) {
+      if (0 === count) return 0;
+      var max = 0;
+      var pivot = offs;
+      var delta = vsub(b, a);
+      var valueTol = tol * vlength(delta);
+      var head = offs;
+      for (var tail = offs + count - 1; head <= tail; ) {
+        var v = new Vect(verts[2 * head], verts[2 * head + 1]);
+        var value = vcross(delta, vsub(v, a));
+        if (value > valueTol) {
+          if (value > max) {
+            max = value;
+            pivot = head;
+          }
+          head++;
+        } else {
+          SWAP(verts, head, tail);
+          tail--;
+        }
+      }
+      pivot != offs && SWAP(verts, offs, pivot);
+      return head - offs;
+    };
+    var QHullReduce = function(tol, verts, offs, count, a, pivot, b, resultPos) {
+      if (count < 0) return 0;
+      if (0 == count) {
+        verts[2 * resultPos] = pivot.x;
+        verts[2 * resultPos + 1] = pivot.y;
+        return 1;
+      }
+      var left_count = QHullPartition(verts, offs, count, a, pivot, tol);
+      var left = new Vect(verts[2 * offs], verts[2 * offs + 1]);
+      var index = QHullReduce(tol, verts, offs + 1, left_count - 1, a, left, pivot, resultPos);
+      var pivotPos = resultPos + index++;
+      verts[2 * pivotPos] = pivot.x;
+      verts[2 * pivotPos + 1] = pivot.y;
+      var right_count = QHullPartition(verts, offs + left_count, count - left_count, pivot, b, tol);
+      var right = new Vect(verts[2 * (offs + left_count)], verts[2 * (offs + left_count) + 1]);
+      return index + QHullReduce(tol, verts, offs + left_count + 1, right_count - 1, pivot, right, b, resultPos + index);
+    };
+    cp.convexHull = function(verts, result, tolerance) {
+      if (result) for (var i = 0; i < verts.length; i++) result[i] = verts[i]; else result = verts;
+      var indexes = loopIndexes(verts);
+      var start = indexes[0], end = indexes[1];
+      if (start == end) {
+        result.length = 2;
+        return result;
+      }
+      SWAP(result, 0, start);
+      SWAP(result, 1, 0 == end ? start : end);
+      var a = new Vect(result[0], result[1]);
+      var b = new Vect(result[2], result[3]);
+      var count = verts.length >> 1;
+      var resultCount = QHullReduce(tolerance, result, 2, count - 2, a, b, a, 1) + 1;
+      result.length = 2 * resultCount;
+      assertSoft(polyValidate(result), "Internal error: cpConvexHull() and cpPolyValidate() did not agree.Please report this error with as much info as you can.");
+      return result;
+    };
+    var clamp = function(f, minv, maxv) {
+      return min(max(f, minv), maxv);
+    };
+    var clamp01 = function(f) {
+      return max(0, min(f, 1));
+    };
+    var lerp = function(f1, f2, t) {
+      return f1 * (1 - t) + f2 * t;
+    };
+    var lerpconst = function(f1, f2, d) {
+      return f1 + clamp(f2 - f1, -d, d);
+    };
+    var Vect = cp.Vect = function(x, y) {
+      this.x = x;
+      this.y = y;
+    };
+    cp.v = function(x, y) {
+      return new Vect(x, y);
+    };
+    var vzero = cp.vzero = new Vect(0, 0);
+    var vdot = cp.v.dot = function(v1, v2) {
+      return v1.x * v2.x + v1.y * v2.y;
+    };
+    var vdot2 = function(x1, y1, x2, y2) {
+      return x1 * x2 + y1 * y2;
+    };
+    var vlength = cp.v.len = function(v) {
+      return Math.sqrt(vdot(v, v));
+    };
+    var vlength2 = cp.v.len2 = function(x, y) {
+      return Math.sqrt(x * x + y * y);
+    };
+    var veql = cp.v.eql = function(v1, v2) {
+      return v1.x === v2.x && v1.y === v2.y;
+    };
+    var vadd = cp.v.add = function(v1, v2) {
+      return new Vect(v1.x + v2.x, v1.y + v2.y);
+    };
+    Vect.prototype.add = function(v2) {
+      this.x += v2.x;
+      this.y += v2.y;
+      return this;
+    };
+    var vsub = cp.v.sub = function(v1, v2) {
+      return new Vect(v1.x - v2.x, v1.y - v2.y);
+    };
+    Vect.prototype.sub = function(v2) {
+      this.x -= v2.x;
+      this.y -= v2.y;
+      return this;
+    };
+    var vneg = cp.v.neg = function(v) {
+      return new Vect(-v.x, -v.y);
+    };
+    Vect.prototype.neg = function() {
+      this.x = -this.x;
+      this.y = -this.y;
+      return this;
+    };
+    var vmult = cp.v.mult = function(v, s) {
+      return new Vect(v.x * s, v.y * s);
+    };
+    Vect.prototype.mult = function(s) {
+      this.x *= s;
+      this.y *= s;
+      return this;
+    };
+    var vcross = cp.v.cross = function(v1, v2) {
+      return v1.x * v2.y - v1.y * v2.x;
+    };
+    var vcross2 = function(x1, y1, x2, y2) {
+      return x1 * y2 - y1 * x2;
+    };
+    var vperp = cp.v.perp = function(v) {
+      return new Vect(-v.y, v.x);
+    };
+    var vpvrperp = cp.v.pvrperp = function(v) {
+      return new Vect(v.y, -v.x);
+    };
+    var vproject = cp.v.project = function(v1, v2) {
+      return vmult(v2, vdot(v1, v2) / vlengthsq(v2));
+    };
+    Vect.prototype.project = function(v2) {
+      this.mult(vdot(this, v2) / vlengthsq(v2));
+      return this;
+    };
+    var vrotate = cp.v.rotate = function(v1, v2) {
+      return new Vect(v1.x * v2.x - v1.y * v2.y, v1.x * v2.y + v1.y * v2.x);
+    };
+    Vect.prototype.rotate = function(v2) {
+      this.x = this.x * v2.x - this.y * v2.y;
+      this.y = this.x * v2.y + this.y * v2.x;
+      return this;
+    };
+    var vunrotate = cp.v.unrotate = function(v1, v2) {
+      return new Vect(v1.x * v2.x + v1.y * v2.y, v1.y * v2.x - v1.x * v2.y);
+    };
+    var vlengthsq = cp.v.lengthsq = function(v) {
+      return vdot(v, v);
+    };
+    var vlengthsq2 = cp.v.lengthsq2 = function(x, y) {
+      return x * x + y * y;
+    };
+    var vlerp = cp.v.lerp = function(v1, v2, t) {
+      return vadd(vmult(v1, 1 - t), vmult(v2, t));
+    };
+    var vnormalize = cp.v.normalize = function(v) {
+      return vmult(v, 1 / vlength(v));
+    };
+    var vnormalize_safe = cp.v.normalize_safe = function(v) {
+      return 0 === v.x && 0 === v.y ? vzero : vnormalize(v);
+    };
+    var vclamp = cp.v.clamp = function(v, len) {
+      return vdot(v, v) > len * len ? vmult(vnormalize(v), len) : v;
+    };
+    var vlerpconst = cp.v.lerpconst = function(v1, v2, d) {
+      return vadd(v1, vclamp(vsub(v2, v1), d));
+    };
+    var vdist = cp.v.dist = function(v1, v2) {
+      return vlength(vsub(v1, v2));
+    };
+    var vdistsq = cp.v.distsq = function(v1, v2) {
+      return vlengthsq(vsub(v1, v2));
+    };
+    var vnear = cp.v.near = function(v1, v2, dist) {
+      return vdistsq(v1, v2) < dist * dist;
+    };
+    var vslerp = cp.v.slerp = function(v1, v2, t) {
+      var omega = Math.acos(vdot(v1, v2));
+      if (omega) {
+        var denom = 1 / Math.sin(omega);
+        return vadd(vmult(v1, Math.sin((1 - t) * omega) * denom), vmult(v2, Math.sin(t * omega) * denom));
+      }
+      return v1;
+    };
+    var vslerpconst = cp.v.slerpconst = function(v1, v2, a) {
+      var angle = Math.acos(vdot(v1, v2));
+      return vslerp(v1, v2, min(a, angle) / angle);
+    };
+    var vforangle = cp.v.forangle = function(a) {
+      return new Vect(Math.cos(a), Math.sin(a));
+    };
+    var vtoangle = cp.v.toangle = function(v) {
+      return Math.atan2(v.y, v.x);
+    };
+    var vstr = cp.v.str = function(v) {
+      return "(" + v.x.toFixed(3) + ", " + v.y.toFixed(3) + ")";
+    };
+    var numBB = 0;
+    var BB = cp.BB = function(l, b, r, t) {
+      this.l = l;
+      this.b = b;
+      this.r = r;
+      this.t = t;
+      numBB++;
+    };
+    cp.bb = function(l, b, r, t) {
+      return new BB(l, b, r, t);
+    };
+    var bbNewForCircle = function(p, r) {
+      return new BB(p.x - r, p.y - r, p.x + r, p.y + r);
+    };
+    var bbIntersects = function(a, b) {
+      return a.l <= b.r && b.l <= a.r && a.b <= b.t && b.b <= a.t;
+    };
+    var bbIntersects2 = function(bb, l, b, r, t) {
+      return bb.l <= r && l <= bb.r && bb.b <= t && b <= bb.t;
+    };
+    var bbContainsBB = function(bb, other) {
+      return bb.l <= other.l && bb.r >= other.r && bb.b <= other.b && bb.t >= other.t;
+    };
+    var bbContainsVect = function(bb, v) {
+      return bb.l <= v.x && bb.r >= v.x && bb.b <= v.y && bb.t >= v.y;
+    };
+    var bbContainsVect2 = function(l, b, r, t, v) {
+      return l <= v.x && r >= v.x && b <= v.y && t >= v.y;
+    };
+    var bbMerge = function(a, b) {
+      return new BB(min(a.l, b.l), min(a.b, b.b), max(a.r, b.r), max(a.t, b.t));
+    };
+    var bbExpand = function(bb, v) {
+      return new BB(min(bb.l, v.x), min(bb.b, v.y), max(bb.r, v.x), max(bb.t, v.y));
+    };
+    var bbArea = function(bb) {
+      return (bb.r - bb.l) * (bb.t - bb.b);
+    };
+    var bbMergedArea = function(a, b) {
+      return (max(a.r, b.r) - min(a.l, b.l)) * (max(a.t, b.t) - min(a.b, b.b));
+    };
+    var bbMergedArea2 = function(bb, l, b, r, t) {
+      return (max(bb.r, r) - min(bb.l, l)) * (max(bb.t, t) - min(bb.b, b));
+    };
+    var bbIntersectsSegment = function(bb, a, b) {
+      return Infinity != bbSegmentQuery(bb, a, b);
+    };
+    var bbClampVect = function(bb, v) {
+      var x = min(max(bb.l, v.x), bb.r);
+      var y = min(max(bb.b, v.y), bb.t);
+      return new Vect(x, y);
+    };
+    var bbWrapVect = function(bb, v) {
+      var ix = Math.abs(bb.r - bb.l);
+      var modx = (v.x - bb.l) % ix;
+      var x = modx > 0 ? modx : modx + ix;
+      var iy = Math.abs(bb.t - bb.b);
+      var mody = (v.y - bb.b) % iy;
+      var y = mody > 0 ? mody : mody + iy;
+      return new Vect(x + bb.l, y + bb.b);
+    };
+    var shapeIDCounter = 0;
+    var CP_NO_GROUP = cp.NO_GROUP = 0;
+    var CP_ALL_LAYERS = cp.ALL_LAYERS = -1;
+    cp.resetShapeIdCounter = function() {
+      shapeIDCounter = 0;
+    };
+    var Shape = cp.Shape = function(body) {
+      this.body = body;
+      this.bb_l = this.bb_b = this.bb_r = this.bb_t = 0;
+      this.hashid = shapeIDCounter++;
+      this.sensor = false;
+      this.e = 0;
+      this.u = 0;
+      this.surface_v = vzero;
+      this.collision_type = 0;
+      this.group = 0;
+      this.layers = CP_ALL_LAYERS;
+      this.space = null;
+      this.collisionCode = this.collisionCode;
+    };
+    Shape.prototype.setElasticity = function(e) {
+      this.e = e;
+    };
+    Shape.prototype.setFriction = function(u) {
+      this.body.activate();
+      this.u = u;
+    };
+    Shape.prototype.setLayers = function(layers) {
+      this.body.activate();
+      this.layers = layers;
+    };
+    Shape.prototype.setSensor = function(sensor) {
+      this.body.activate();
+      this.sensor = sensor;
+    };
+    Shape.prototype.setCollisionType = function(collision_type) {
+      this.body.activate();
+      this.collision_type = collision_type;
+    };
+    Shape.prototype.getBody = function() {
+      return this.body;
+    };
+    Shape.prototype.active = function() {
+      return this.body && -1 !== this.body.shapeList.indexOf(this);
+    };
+    Shape.prototype.setBody = function(body) {
+      assert(!this.active(), "You cannot change the body on an active shape. You must remove the shape from the space before changing the body.");
+      this.body = body;
+    };
+    Shape.prototype.cacheBB = function() {
+      return this.update(this.body.p, this.body.rot);
+    };
+    Shape.prototype.update = function(pos, rot) {
+      assert(!isNaN(rot.x), "Rotation is NaN");
+      assert(!isNaN(pos.x), "Position is NaN");
+      this.cacheData(pos, rot);
+    };
+    Shape.prototype.pointQuery = function(p) {
+      var info = this.nearestPointQuery(p);
+      if (info.d < 0) return info;
+    };
+    Shape.prototype.getBB = function() {
+      return new BB(this.bb_l, this.bb_b, this.bb_r, this.bb_t);
+    };
+    var PointQueryExtendedInfo = function(shape) {
+      this.shape = shape;
+      this.d = Infinity;
+      this.n = vzero;
+    };
+    var NearestPointQueryInfo = function(shape, p, d) {
+      this.shape = shape;
+      this.p = p;
+      this.d = d;
+    };
+    var SegmentQueryInfo = function(shape, t, n) {
+      this.shape = shape;
+      this.t = t;
+      this.n = n;
+    };
+    SegmentQueryInfo.prototype.hitPoint = function(start, end) {
+      return vlerp(start, end, this.t);
+    };
+    SegmentQueryInfo.prototype.hitDist = function(start, end) {
+      return vdist(start, end) * this.t;
+    };
+    var CircleShape = cp.CircleShape = function(body, radius, offset) {
+      this.c = this.tc = offset;
+      this.r = radius;
+      this.type = "circle";
+      Shape.call(this, body);
+    };
+    CircleShape.prototype = Object.create(Shape.prototype);
+    CircleShape.prototype.cacheData = function(p, rot) {
+      var c = this.tc = vrotate(this.c, rot).add(p);
+      var r = this.r;
+      this.bb_l = c.x - r;
+      this.bb_b = c.y - r;
+      this.bb_r = c.x + r;
+      this.bb_t = c.y + r;
+    };
+    CircleShape.prototype.nearestPointQuery = function(p) {
+      var deltax = p.x - this.tc.x;
+      var deltay = p.y - this.tc.y;
+      var d = vlength2(deltax, deltay);
+      var r = this.r;
+      var nearestp = new Vect(this.tc.x + deltax * r / d, this.tc.y + deltay * r / d);
+      return new NearestPointQueryInfo(this, nearestp, d - r);
+    };
+    var circleSegmentQuery = function(shape, center, r, a, b, info) {
+      a = vsub(a, center);
+      b = vsub(b, center);
+      var qa = vdot(a, a) - 2 * vdot(a, b) + vdot(b, b);
+      var qb = -2 * vdot(a, a) + 2 * vdot(a, b);
+      var qc = vdot(a, a) - r * r;
+      var det = qb * qb - 4 * qa * qc;
+      if (det >= 0) {
+        var t = (-qb - Math.sqrt(det)) / (2 * qa);
+        if (0 <= t && t <= 1) return new SegmentQueryInfo(shape, t, vnormalize(vlerp(a, b, t)));
+      }
+    };
+    CircleShape.prototype.segmentQuery = function(a, b) {
+      return circleSegmentQuery(this, this.tc, this.r, a, b);
+    };
+    var SegmentShape = cp.SegmentShape = function(body, a, b, r) {
+      this.a = a;
+      this.b = b;
+      this.n = vperp(vnormalize(vsub(b, a)));
+      this.ta = this.tb = this.tn = null;
+      this.r = r;
+      this.a_tangent = vzero;
+      this.b_tangent = vzero;
+      this.type = "segment";
+      Shape.call(this, body);
+    };
+    SegmentShape.prototype = Object.create(Shape.prototype);
+    SegmentShape.prototype.cacheData = function(p, rot) {
+      this.ta = vadd(p, vrotate(this.a, rot));
+      this.tb = vadd(p, vrotate(this.b, rot));
+      this.tn = vrotate(this.n, rot);
+      var l, r, b, t;
+      if (this.ta.x < this.tb.x) {
+        l = this.ta.x;
+        r = this.tb.x;
+      } else {
+        l = this.tb.x;
+        r = this.ta.x;
+      }
+      if (this.ta.y < this.tb.y) {
+        b = this.ta.y;
+        t = this.tb.y;
+      } else {
+        b = this.tb.y;
+        t = this.ta.y;
+      }
+      var rad = this.r;
+      this.bb_l = l - rad;
+      this.bb_b = b - rad;
+      this.bb_r = r + rad;
+      this.bb_t = t + rad;
+    };
+    SegmentShape.prototype.nearestPointQuery = function(p) {
+      var closest = closestPointOnSegment(p, this.ta, this.tb);
+      var deltax = p.x - closest.x;
+      var deltay = p.y - closest.y;
+      var d = vlength2(deltax, deltay);
+      var r = this.r;
+      var nearestp = d ? vadd(closest, vmult(new Vect(deltax, deltay), r / d)) : closest;
+      return new NearestPointQueryInfo(this, nearestp, d - r);
+    };
+    SegmentShape.prototype.segmentQuery = function(a, b) {
+      var n = this.tn;
+      var d = vdot(vsub(this.ta, a), n);
+      var r = this.r;
+      var flipped_n = d > 0 ? vneg(n) : n;
+      var n_offset = vsub(vmult(flipped_n, r), a);
+      var seg_a = vadd(this.ta, n_offset);
+      var seg_b = vadd(this.tb, n_offset);
+      var delta = vsub(b, a);
+      if (vcross(delta, seg_a) * vcross(delta, seg_b) <= 0) {
+        var d_offset = d + (d > 0 ? -r : r);
+        var ad = -d_offset;
+        var bd = vdot(delta, n) - d_offset;
+        if (ad * bd < 0) return new SegmentQueryInfo(this, ad / (ad - bd), flipped_n);
+      } else if (0 !== r) {
+        var info1 = circleSegmentQuery(this, this.ta, this.r, a, b);
+        var info2 = circleSegmentQuery(this, this.tb, this.r, a, b);
+        return info1 ? info2 && info2.t < info1.t ? info2 : info1 : info2;
+      }
+    };
+    SegmentShape.prototype.setNeighbors = function(prev, next) {
+      this.a_tangent = vsub(prev, this.a);
+      this.b_tangent = vsub(next, this.b);
+    };
+    SegmentShape.prototype.setEndpoints = function(a, b) {
+      this.a = a;
+      this.b = b;
+      this.n = vperp(vnormalize(vsub(b, a)));
+    };
+    var polyValidate = function(verts) {
+      var len = verts.length;
+      for (var i = 0; i < len; i += 2) {
+        var ax = verts[i];
+        var ay = verts[i + 1];
+        var bx = verts[(i + 2) % len];
+        var by = verts[(i + 3) % len];
+        var cx = verts[(i + 4) % len];
+        var cy = verts[(i + 5) % len];
+        if (vcross2(bx - ax, by - ay, cx - bx, cy - by) > 0) return false;
+      }
+      return true;
+    };
+    var PolyShape = cp.PolyShape = function(body, verts, offset) {
+      this.setVerts(verts, offset);
+      this.type = "poly";
+      Shape.call(this, body);
+    };
+    PolyShape.prototype = Object.create(Shape.prototype);
+    var SplittingPlane = function(n, d) {
+      this.n = n;
+      this.d = d;
+    };
+    SplittingPlane.prototype.compare = function(v) {
+      return vdot(this.n, v) - this.d;
+    };
+    PolyShape.prototype.setVerts = function(verts, offset) {
+      assert(verts.length >= 4, "Polygons require some verts");
+      assert("number" === typeof verts[0], "Polygon verticies should be specified in a flattened list (eg [x1,y1,x2,y2,x3,y3,...])");
+      assert(polyValidate(verts), "Polygon is concave or has a reversed winding. Consider using cpConvexHull()");
+      var len = verts.length;
+      var numVerts = len >> 1;
+      this.verts = new Array(len);
+      this.tVerts = new Array(len);
+      this.planes = new Array(numVerts);
+      this.tPlanes = new Array(numVerts);
+      for (var i = 0; i < len; i += 2) {
+        var ax = verts[i] + offset.x;
+        var ay = verts[i + 1] + offset.y;
+        var bx = verts[(i + 2) % len] + offset.x;
+        var by = verts[(i + 3) % len] + offset.y;
+        var n = vnormalize(vperp(new Vect(bx - ax, by - ay)));
+        this.verts[i] = ax;
+        this.verts[i + 1] = ay;
+        this.planes[i >> 1] = new SplittingPlane(n, vdot2(n.x, n.y, ax, ay));
+        this.tPlanes[i >> 1] = new SplittingPlane(new Vect(0, 0), 0);
+      }
+    };
+    var BoxShape = cp.BoxShape = function(body, width, height) {
+      var hw = width / 2;
+      var hh = height / 2;
+      return BoxShape2(body, new BB(-hw, -hh, hw, hh));
+    };
+    var BoxShape2 = cp.BoxShape2 = function(body, box) {
+      var verts = [ box.l, box.b, box.l, box.t, box.r, box.t, box.r, box.b ];
+      return new PolyShape(body, verts, vzero);
+    };
+    PolyShape.prototype.transformVerts = function(p, rot) {
+      var src = this.verts;
+      var dst = this.tVerts;
+      var l = Infinity, r = -Infinity;
+      var b = Infinity, t = -Infinity;
+      for (var i = 0; i < src.length; i += 2) {
+        var x = src[i];
+        var y = src[i + 1];
+        var vx = p.x + x * rot.x - y * rot.y;
+        var vy = p.y + x * rot.y + y * rot.x;
+        dst[i] = vx;
+        dst[i + 1] = vy;
+        l = min(l, vx);
+        r = max(r, vx);
+        b = min(b, vy);
+        t = max(t, vy);
+      }
+      this.bb_l = l;
+      this.bb_b = b;
+      this.bb_r = r;
+      this.bb_t = t;
+    };
+    PolyShape.prototype.transformAxes = function(p, rot) {
+      var src = this.planes;
+      var dst = this.tPlanes;
+      for (var i = 0; i < src.length; i++) {
+        var n = vrotate(src[i].n, rot);
+        dst[i].n = n;
+        dst[i].d = vdot(p, n) + src[i].d;
+      }
+    };
+    PolyShape.prototype.cacheData = function(p, rot) {
+      this.transformAxes(p, rot);
+      this.transformVerts(p, rot);
+    };
+    PolyShape.prototype.nearestPointQuery = function(p) {
+      var planes = this.tPlanes;
+      var verts = this.tVerts;
+      var v0x = verts[verts.length - 2];
+      var v0y = verts[verts.length - 1];
+      var minDist = Infinity;
+      var closestPoint = vzero;
+      var outside = false;
+      for (var i = 0; i < planes.length; i++) {
+        planes[i].compare(p) > 0 && (outside = true);
+        var v1x = verts[2 * i];
+        var v1y = verts[2 * i + 1];
+        var closest = closestPointOnSegment2(p.x, p.y, v0x, v0y, v1x, v1y);
+        var dist = vdist(p, closest);
+        if (dist < minDist) {
+          minDist = dist;
+          closestPoint = closest;
+        }
+        v0x = v1x;
+        v0y = v1y;
+      }
+      return new NearestPointQueryInfo(this, closestPoint, outside ? minDist : -minDist);
+    };
+    PolyShape.prototype.segmentQuery = function(a, b) {
+      var axes = this.tPlanes;
+      var verts = this.tVerts;
+      var numVerts = axes.length;
+      var len = 2 * numVerts;
+      for (var i = 0; i < numVerts; i++) {
+        var n = axes[i].n;
+        var an = vdot(a, n);
+        if (axes[i].d > an) continue;
+        var bn = vdot(b, n);
+        var t = (axes[i].d - an) / (bn - an);
+        if (t < 0 || 1 < t) continue;
+        var point = vlerp(a, b, t);
+        var dt = -vcross(n, point);
+        var dtMin = -vcross2(n.x, n.y, verts[2 * i], verts[2 * i + 1]);
+        var dtMax = -vcross2(n.x, n.y, verts[(2 * i + 2) % len], verts[(2 * i + 3) % len]);
+        if (dtMin <= dt && dt <= dtMax) return new SegmentQueryInfo(this, t, n);
+      }
+    };
+    PolyShape.prototype.valueOnAxis = function(n, d) {
+      var verts = this.tVerts;
+      var m = vdot2(n.x, n.y, verts[0], verts[1]);
+      for (var i = 2; i < verts.length; i += 2) m = min(m, vdot2(n.x, n.y, verts[i], verts[i + 1]));
+      return m - d;
+    };
+    PolyShape.prototype.containsVert = function(vx, vy) {
+      var planes = this.tPlanes;
+      for (var i = 0; i < planes.length; i++) {
+        var n = planes[i].n;
+        var dist = vdot2(n.x, n.y, vx, vy) - planes[i].d;
+        if (dist > 0) return false;
+      }
+      return true;
+    };
+    PolyShape.prototype.containsVertPartial = function(vx, vy, n) {
+      var planes = this.tPlanes;
+      for (var i = 0; i < planes.length; i++) {
+        var n2 = planes[i].n;
+        if (vdot(n2, n) < 0) continue;
+        var dist = vdot2(n2.x, n2.y, vx, vy) - planes[i].d;
+        if (dist > 0) return false;
+      }
+      return true;
+    };
+    PolyShape.prototype.getNumVerts = function() {
+      return this.verts.length / 2;
+    };
+    PolyShape.prototype.getVert = function(i) {
+      return new Vect(this.verts[2 * i], this.verts[2 * i + 1]);
+    };
+    var Body = cp.Body = function(m, i) {
+      this.p = new Vect(0, 0);
+      this.vx = this.vy = 0;
+      this.f = new Vect(0, 0);
+      this.w = 0;
+      this.t = 0;
+      this.v_limit = Infinity;
+      this.w_limit = Infinity;
+      this.v_biasx = this.v_biasy = 0;
+      this.w_bias = 0;
+      this.space = null;
+      this.shapeList = [];
+      this.arbiterList = null;
+      this.constraintList = null;
+      this.nodeRoot = null;
+      this.nodeNext = null;
+      this.nodeIdleTime = 0;
+      this.setMass(m);
+      this.setMoment(i);
+      this.rot = new Vect(0, 0);
+      this.setAngle(0);
+    };
+    var createStaticBody = function() {
+      var body = new Body(Infinity, Infinity);
+      body.nodeIdleTime = Infinity;
+      return body;
+    };
+    cp.StaticBody = createStaticBody;
+    if ("undefined" !== typeof DEBUG && DEBUG) {
+      var v_assert_nan = function(v, message) {
+        assert(v.x == v.x && v.y == v.y, message);
+      };
+      var v_assert_infinite = function(v, message) {
+        assert(Infinity !== Math.abs(v.x) && Infinity !== Math.abs(v.y), message);
+      };
+      var v_assert_sane = function(v, message) {
+        v_assert_nan(v, message);
+        v_assert_infinite(v, message);
+      };
+      Body.prototype.sanityCheck = function() {
+        assert(this.m === this.m && this.m_inv === this.m_inv, "Body's mass is invalid.");
+        assert(this.i === this.i && this.i_inv === this.i_inv, "Body's moment is invalid.");
+        v_assert_sane(this.p, "Body's position is invalid.");
+        v_assert_sane(this.f, "Body's force is invalid.");
+        assert(this.vx === this.vx && Infinity !== Math.abs(this.vx), "Body's velocity is invalid.");
+        assert(this.vy === this.vy && Infinity !== Math.abs(this.vy), "Body's velocity is invalid.");
+        assert(this.a === this.a && Infinity !== Math.abs(this.a), "Body's angle is invalid.");
+        assert(this.w === this.w && Infinity !== Math.abs(this.w), "Body's angular velocity is invalid.");
+        assert(this.t === this.t && Infinity !== Math.abs(this.t), "Body's torque is invalid.");
+        v_assert_sane(this.rot, "Body's rotation vector is invalid.");
+        assert(this.v_limit === this.v_limit, "Body's velocity limit is invalid.");
+        assert(this.w_limit === this.w_limit, "Body's angular velocity limit is invalid.");
+      };
+    } else Body.prototype.sanityCheck = function() {};
+    Body.prototype.getPos = function() {
+      return this.p;
+    };
+    Body.prototype.getVel = function() {
+      return new Vect(this.vx, this.vy);
+    };
+    Body.prototype.getAngVel = function() {
+      return this.w;
+    };
+    Body.prototype.isSleeping = function() {
+      return null !== this.nodeRoot;
+    };
+    Body.prototype.isStatic = function() {
+      return Infinity === this.nodeIdleTime;
+    };
+    Body.prototype.isRogue = function() {
+      return null === this.space;
+    };
+    Body.prototype.setMass = function(mass) {
+      assert(mass > 0, "Mass must be positive and non-zero.");
+      this.activate();
+      this.m = mass;
+      this.m_inv = 1 / mass;
+    };
+    Body.prototype.setMoment = function(moment) {
+      assert(moment > 0, "Moment of Inertia must be positive and non-zero.");
+      this.activate();
+      this.i = moment;
+      this.i_inv = 1 / moment;
+    };
+    Body.prototype.addShape = function(shape) {
+      this.shapeList.push(shape);
+    };
+    Body.prototype.removeShape = function(shape) {
+      deleteObjFromList(this.shapeList, shape);
+    };
+    var filterConstraints = function(node, body, filter) {
+      if (node === filter) return node.next(body);
+      node.a === body ? node.next_a = filterConstraints(node.next_a, body, filter) : node.next_b = filterConstraints(node.next_b, body, filter);
+      return node;
+    };
+    Body.prototype.removeConstraint = function(constraint) {
+      this.constraintList = filterConstraints(this.constraintList, this, constraint);
+    };
+    Body.prototype.setPos = function(pos) {
+      this.activate();
+      this.sanityCheck();
+      pos === vzero && (pos = cp.v(0, 0));
+      this.p = pos;
+    };
+    Body.prototype.setVel = function(velocity) {
+      this.activate();
+      this.vx = velocity.x;
+      this.vy = velocity.y;
+    };
+    Body.prototype.setAngVel = function(w) {
+      this.activate();
+      this.w = w;
+    };
+    Body.prototype.setAngleInternal = function(angle) {
+      assert(!isNaN(angle), "Internal Error: Attempting to set body's angle to NaN");
+      this.a = angle;
+      this.rot.x = Math.cos(angle);
+      this.rot.y = Math.sin(angle);
+    };
+    Body.prototype.setAngle = function(angle) {
+      this.activate();
+      this.sanityCheck();
+      this.setAngleInternal(angle);
+    };
+    Body.prototype.velocity_func = function(gravity, damping, dt) {
+      var vx = this.vx * damping + (gravity.x + this.f.x * this.m_inv) * dt;
+      var vy = this.vy * damping + (gravity.y + this.f.y * this.m_inv) * dt;
+      var v_limit = this.v_limit;
+      var lensq = vx * vx + vy * vy;
+      var scale = lensq > v_limit * v_limit ? v_limit / Math.sqrt(lensq) : 1;
+      this.vx = vx * scale;
+      this.vy = vy * scale;
+      var w_limit = this.w_limit;
+      this.w = clamp(this.w * damping + this.t * this.i_inv * dt, -w_limit, w_limit);
+      this.sanityCheck();
+    };
+    Body.prototype.position_func = function(dt) {
+      this.p.x += (this.vx + this.v_biasx) * dt;
+      this.p.y += (this.vy + this.v_biasy) * dt;
+      this.setAngleInternal(this.a + (this.w + this.w_bias) * dt);
+      this.v_biasx = this.v_biasy = 0;
+      this.w_bias = 0;
+      this.sanityCheck();
+    };
+    Body.prototype.resetForces = function() {
+      this.activate();
+      this.f = new Vect(0, 0);
+      this.t = 0;
+    };
+    Body.prototype.applyForce = function(force, r) {
+      this.activate();
+      this.f = vadd(this.f, force);
+      this.t += vcross(r, force);
+    };
+    Body.prototype.applyImpulse = function(j, r) {
+      this.activate();
+      apply_impulse(this, j.x, j.y, r);
+    };
+    Body.prototype.getVelAtPoint = function(r) {
+      return vadd(new Vect(this.vx, this.vy), vmult(vperp(r), this.w));
+    };
+    Body.prototype.getVelAtWorldPoint = function(point) {
+      return this.getVelAtPoint(vsub(point, this.p));
+    };
+    Body.prototype.getVelAtLocalPoint = function(point) {
+      return this.getVelAtPoint(vrotate(point, this.rot));
+    };
+    Body.prototype.eachShape = function(func) {
+      for (var i = 0, len = this.shapeList.length; i < len; i++) func(this.shapeList[i]);
+    };
+    Body.prototype.eachConstraint = function(func) {
+      var constraint = this.constraintList;
+      while (constraint) {
+        var next = constraint.next(this);
+        func(constraint);
+        constraint = next;
+      }
+    };
+    Body.prototype.eachArbiter = function(func) {
+      var arb = this.arbiterList;
+      while (arb) {
+        var next = arb.next(this);
+        arb.swappedColl = this === arb.body_b;
+        func(arb);
+        arb = next;
+      }
+    };
+    Body.prototype.local2World = function(v) {
+      return vadd(this.p, vrotate(v, this.rot));
+    };
+    Body.prototype.world2Local = function(v) {
+      return vunrotate(vsub(v, this.p), this.rot);
+    };
+    Body.prototype.kineticEnergy = function() {
+      var vsq = this.vx * this.vx + this.vy * this.vy;
+      var wsq = this.w * this.w;
+      return (vsq ? vsq * this.m : 0) + (wsq ? wsq * this.i : 0);
+    };
+    var SpatialIndex = cp.SpatialIndex = function(staticIndex) {
+      this.staticIndex = staticIndex;
+      if (staticIndex) {
+        if (staticIndex.dynamicIndex) throw new Error("This static index is already associated with a dynamic index.");
+        staticIndex.dynamicIndex = this;
+      }
+    };
+    SpatialIndex.prototype.collideStatic = function(staticIndex, func) {
+      if (staticIndex.count > 0) {
+        var query = staticIndex.query;
+        this.each((function(obj) {
+          query(obj, new BB(obj.bb_l, obj.bb_b, obj.bb_r, obj.bb_t), func);
+        }));
+      }
+    };
+    var BBTree = cp.BBTree = function(staticIndex) {
+      SpatialIndex.call(this, staticIndex);
+      this.velocityFunc = null;
+      this.leaves = {};
+      this.count = 0;
+      this.root = null;
+      this.pooledNodes = null;
+      this.pooledPairs = null;
+      this.stamp = 0;
+    };
+    BBTree.prototype = Object.create(SpatialIndex.prototype);
+    var numNodes = 0;
+    var Node = function(tree, a, b) {
+      this.obj = null;
+      this.bb_l = min(a.bb_l, b.bb_l);
+      this.bb_b = min(a.bb_b, b.bb_b);
+      this.bb_r = max(a.bb_r, b.bb_r);
+      this.bb_t = max(a.bb_t, b.bb_t);
+      this.parent = null;
+      this.setA(a);
+      this.setB(b);
+    };
+    BBTree.prototype.makeNode = function(a, b) {
+      var node = this.pooledNodes;
+      if (node) {
+        this.pooledNodes = node.parent;
+        node.constructor(this, a, b);
+        return node;
+      }
+      numNodes++;
+      return new Node(this, a, b);
+    };
+    var numLeaves = 0;
+    var Leaf = function(tree, obj) {
+      this.obj = obj;
+      tree.getBB(obj, this);
+      this.parent = null;
+      this.stamp = 1;
+      this.pairs = null;
+      numLeaves++;
+    };
+    BBTree.prototype.getBB = function(obj, dest) {
+      var velocityFunc = this.velocityFunc;
+      if (velocityFunc) {
+        var coef = .1;
+        var x = (obj.bb_r - obj.bb_l) * coef;
+        var y = (obj.bb_t - obj.bb_b) * coef;
+        var v = vmult(velocityFunc(obj), .1);
+        dest.bb_l = obj.bb_l + min(-x, v.x);
+        dest.bb_b = obj.bb_b + min(-y, v.y);
+        dest.bb_r = obj.bb_r + max(x, v.x);
+        dest.bb_t = obj.bb_t + max(y, v.y);
+      } else {
+        dest.bb_l = obj.bb_l;
+        dest.bb_b = obj.bb_b;
+        dest.bb_r = obj.bb_r;
+        dest.bb_t = obj.bb_t;
+      }
+    };
+    BBTree.prototype.getStamp = function() {
+      var dynamic = this.dynamicIndex;
+      return dynamic && dynamic.stamp ? dynamic.stamp : this.stamp;
+    };
+    BBTree.prototype.incrementStamp = function() {
+      this.dynamicIndex && this.dynamicIndex.stamp ? this.dynamicIndex.stamp++ : this.stamp++;
+    };
+    var numPairs = 0;
+    var Pair = function(leafA, nextA, leafB, nextB) {
+      this.prevA = null;
+      this.leafA = leafA;
+      this.nextA = nextA;
+      this.prevB = null;
+      this.leafB = leafB;
+      this.nextB = nextB;
+    };
+    BBTree.prototype.makePair = function(leafA, nextA, leafB, nextB) {
+      var pair = this.pooledPairs;
+      if (pair) {
+        this.pooledPairs = pair.prevA;
+        pair.prevA = null;
+        pair.leafA = leafA;
+        pair.nextA = nextA;
+        pair.prevB = null;
+        pair.leafB = leafB;
+        pair.nextB = nextB;
+        return pair;
+      }
+      numPairs++;
+      return new Pair(leafA, nextA, leafB, nextB);
+    };
+    Pair.prototype.recycle = function(tree) {
+      this.prevA = tree.pooledPairs;
+      tree.pooledPairs = this;
+    };
+    var unlinkThread = function(prev, leaf, next) {
+      next && (next.leafA === leaf ? next.prevA = prev : next.prevB = prev);
+      prev ? prev.leafA === leaf ? prev.nextA = next : prev.nextB = next : leaf.pairs = next;
+    };
+    Leaf.prototype.clearPairs = function(tree) {
+      var pair = this.pairs, next;
+      this.pairs = null;
+      while (pair) {
+        if (pair.leafA === this) {
+          next = pair.nextA;
+          unlinkThread(pair.prevB, pair.leafB, pair.nextB);
+        } else {
+          next = pair.nextB;
+          unlinkThread(pair.prevA, pair.leafA, pair.nextA);
+        }
+        pair.recycle(tree);
+        pair = next;
+      }
+    };
+    var pairInsert = function(a, b, tree) {
+      var nextA = a.pairs, nextB = b.pairs;
+      var pair = tree.makePair(a, nextA, b, nextB);
+      a.pairs = b.pairs = pair;
+      nextA && (nextA.leafA === a ? nextA.prevA = pair : nextA.prevB = pair);
+      nextB && (nextB.leafA === b ? nextB.prevA = pair : nextB.prevB = pair);
+    };
+    Node.prototype.recycle = function(tree) {
+      this.parent = tree.pooledNodes;
+      tree.pooledNodes = this;
+    };
+    Leaf.prototype.recycle = function(tree) {};
+    Node.prototype.setA = function(value) {
+      this.A = value;
+      value.parent = this;
+    };
+    Node.prototype.setB = function(value) {
+      this.B = value;
+      value.parent = this;
+    };
+    Leaf.prototype.isLeaf = true;
+    Node.prototype.isLeaf = false;
+    Node.prototype.otherChild = function(child) {
+      return this.A == child ? this.B : this.A;
+    };
+    Node.prototype.replaceChild = function(child, value, tree) {
+      assertSoft(child == this.A || child == this.B, "Node is not a child of parent.");
+      if (this.A == child) {
+        this.A.recycle(tree);
+        this.setA(value);
+      } else {
+        this.B.recycle(tree);
+        this.setB(value);
+      }
+      for (var node = this; node; node = node.parent) {
+        var a = node.A;
+        var b = node.B;
+        node.bb_l = min(a.bb_l, b.bb_l);
+        node.bb_b = min(a.bb_b, b.bb_b);
+        node.bb_r = max(a.bb_r, b.bb_r);
+        node.bb_t = max(a.bb_t, b.bb_t);
+      }
+    };
+    Node.prototype.bbArea = Leaf.prototype.bbArea = function() {
+      return (this.bb_r - this.bb_l) * (this.bb_t - this.bb_b);
+    };
+    var bbTreeMergedArea = function(a, b) {
+      return (max(a.bb_r, b.bb_r) - min(a.bb_l, b.bb_l)) * (max(a.bb_t, b.bb_t) - min(a.bb_b, b.bb_b));
+    };
+    var bbProximity = function(a, b) {
+      return Math.abs(a.bb_l + a.bb_r - b.bb_l - b.bb_r) + Math.abs(a.bb_b + a.bb_t - b.bb_b - b.bb_t);
+    };
+    var subtreeInsert = function(subtree, leaf, tree) {
+      if (null == subtree) return leaf;
+      if (subtree.isLeaf) return tree.makeNode(leaf, subtree);
+      var cost_a = subtree.B.bbArea() + bbTreeMergedArea(subtree.A, leaf);
+      var cost_b = subtree.A.bbArea() + bbTreeMergedArea(subtree.B, leaf);
+      if (cost_a === cost_b) {
+        cost_a = bbProximity(subtree.A, leaf);
+        cost_b = bbProximity(subtree.B, leaf);
+      }
+      cost_b < cost_a ? subtree.setB(subtreeInsert(subtree.B, leaf, tree)) : subtree.setA(subtreeInsert(subtree.A, leaf, tree));
+      subtree.bb_l = min(subtree.bb_l, leaf.bb_l);
+      subtree.bb_b = min(subtree.bb_b, leaf.bb_b);
+      subtree.bb_r = max(subtree.bb_r, leaf.bb_r);
+      subtree.bb_t = max(subtree.bb_t, leaf.bb_t);
+      return subtree;
+    };
+    Node.prototype.intersectsBB = Leaf.prototype.intersectsBB = function(bb) {
+      return this.bb_l <= bb.r && bb.l <= this.bb_r && this.bb_b <= bb.t && bb.b <= this.bb_t;
+    };
+    var subtreeQuery = function(subtree, bb, func) {
+      if (subtree.intersectsBB(bb)) if (subtree.isLeaf) func(subtree.obj); else {
+        subtreeQuery(subtree.A, bb, func);
+        subtreeQuery(subtree.B, bb, func);
+      }
+    };
+    var nodeSegmentQuery = function(node, a, b) {
+      var idx = 1 / (b.x - a.x);
+      var tx1 = node.bb_l == a.x ? -Infinity : (node.bb_l - a.x) * idx;
+      var tx2 = node.bb_r == a.x ? Infinity : (node.bb_r - a.x) * idx;
+      var txmin = min(tx1, tx2);
+      var txmax = max(tx1, tx2);
+      var idy = 1 / (b.y - a.y);
+      var ty1 = node.bb_b == a.y ? -Infinity : (node.bb_b - a.y) * idy;
+      var ty2 = node.bb_t == a.y ? Infinity : (node.bb_t - a.y) * idy;
+      var tymin = min(ty1, ty2);
+      var tymax = max(ty1, ty2);
+      if (tymin <= txmax && txmin <= tymax) {
+        var min_ = max(txmin, tymin);
+        var max_ = min(txmax, tymax);
+        if (0 <= max_ && min_ <= 1) return max(min_, 0);
+      }
+      return Infinity;
+    };
+    var subtreeSegmentQuery = function(subtree, a, b, t_exit, func) {
+      if (subtree.isLeaf) return func(subtree.obj);
+      var t_a = nodeSegmentQuery(subtree.A, a, b);
+      var t_b = nodeSegmentQuery(subtree.B, a, b);
+      if (t_a < t_b) {
+        t_a < t_exit && (t_exit = min(t_exit, subtreeSegmentQuery(subtree.A, a, b, t_exit, func)));
+        t_b < t_exit && (t_exit = min(t_exit, subtreeSegmentQuery(subtree.B, a, b, t_exit, func)));
+      } else {
+        t_b < t_exit && (t_exit = min(t_exit, subtreeSegmentQuery(subtree.B, a, b, t_exit, func)));
+        t_a < t_exit && (t_exit = min(t_exit, subtreeSegmentQuery(subtree.A, a, b, t_exit, func)));
+      }
+      return t_exit;
+    };
+    BBTree.prototype.subtreeRecycle = function(node) {
+      if (node.isLeaf) {
+        this.subtreeRecycle(node.A);
+        this.subtreeRecycle(node.B);
+        node.recycle(this);
+      }
+    };
+    var subtreeRemove = function(subtree, leaf, tree) {
+      if (leaf == subtree) return null;
+      var parent = leaf.parent;
+      if (parent == subtree) {
+        var other = subtree.otherChild(leaf);
+        other.parent = subtree.parent;
+        subtree.recycle(tree);
+        return other;
+      }
+      parent.parent.replaceChild(parent, parent.otherChild(leaf), tree);
+      return subtree;
+    };
+    var bbTreeIntersectsNode = function(a, b) {
+      return a.bb_l <= b.bb_r && b.bb_l <= a.bb_r && a.bb_b <= b.bb_t && b.bb_b <= a.bb_t;
+    };
+    Leaf.prototype.markLeafQuery = function(leaf, left, tree, func) {
+      if (bbTreeIntersectsNode(leaf, this)) if (left) pairInsert(leaf, this, tree); else {
+        this.stamp < leaf.stamp && pairInsert(this, leaf, tree);
+        func && func(leaf.obj, this.obj);
+      }
+    };
+    Node.prototype.markLeafQuery = function(leaf, left, tree, func) {
+      if (bbTreeIntersectsNode(leaf, this)) {
+        this.A.markLeafQuery(leaf, left, tree, func);
+        this.B.markLeafQuery(leaf, left, tree, func);
+      }
+    };
+    Leaf.prototype.markSubtree = function(tree, staticRoot, func) {
+      if (this.stamp == tree.getStamp()) {
+        staticRoot && staticRoot.markLeafQuery(this, false, tree, func);
+        for (var node = this; node.parent; node = node.parent) node == node.parent.A ? node.parent.B.markLeafQuery(this, true, tree, func) : node.parent.A.markLeafQuery(this, false, tree, func);
+      } else {
+        var pair = this.pairs;
+        while (pair) if (this === pair.leafB) {
+          func && func(pair.leafA.obj, this.obj);
+          pair = pair.nextB;
+        } else pair = pair.nextA;
+      }
+    };
+    Node.prototype.markSubtree = function(tree, staticRoot, func) {
+      this.A.markSubtree(tree, staticRoot, func);
+      this.B.markSubtree(tree, staticRoot, func);
+    };
+    Leaf.prototype.containsObj = function(obj) {
+      return this.bb_l <= obj.bb_l && this.bb_r >= obj.bb_r && this.bb_b <= obj.bb_b && this.bb_t >= obj.bb_t;
+    };
+    Leaf.prototype.update = function(tree) {
+      var root = tree.root;
+      var obj = this.obj;
+      if (!this.containsObj(obj)) {
+        tree.getBB(this.obj, this);
+        root = subtreeRemove(root, this, tree);
+        tree.root = subtreeInsert(root, this, tree);
+        this.clearPairs(tree);
+        this.stamp = tree.getStamp();
+        return true;
+      }
+      return false;
+    };
+    Leaf.prototype.addPairs = function(tree) {
+      var dynamicIndex = tree.dynamicIndex;
+      if (dynamicIndex) {
+        var dynamicRoot = dynamicIndex.root;
+        dynamicRoot && dynamicRoot.markLeafQuery(this, true, dynamicIndex, null);
+      } else {
+        var staticRoot = tree.staticIndex.root;
+        this.markSubtree(tree, staticRoot, null);
+      }
+    };
+    BBTree.prototype.insert = function(obj, hashid) {
+      var leaf = new Leaf(this, obj);
+      this.leaves[hashid] = leaf;
+      this.root = subtreeInsert(this.root, leaf, this);
+      this.count++;
+      leaf.stamp = this.getStamp();
+      leaf.addPairs(this);
+      this.incrementStamp();
+    };
+    BBTree.prototype.remove = function(obj, hashid) {
+      var leaf = this.leaves[hashid];
+      delete this.leaves[hashid];
+      this.root = subtreeRemove(this.root, leaf, this);
+      this.count--;
+      leaf.clearPairs(this);
+      leaf.recycle(this);
+    };
+    BBTree.prototype.contains = function(obj, hashid) {
+      return null != this.leaves[hashid];
+    };
+    var voidQueryFunc = function(obj1, obj2) {};
+    BBTree.prototype.reindexQuery = function(func) {
+      if (!this.root) return;
+      var hashid, leaves = this.leaves;
+      for (hashid in leaves) leaves[hashid].update(this);
+      var staticIndex = this.staticIndex;
+      var staticRoot = staticIndex && staticIndex.root;
+      this.root.markSubtree(this, staticRoot, func);
+      staticIndex && !staticRoot && this.collideStatic(this, staticIndex, func);
+      this.incrementStamp();
+    };
+    BBTree.prototype.reindex = function() {
+      this.reindexQuery(voidQueryFunc);
+    };
+    BBTree.prototype.reindexObject = function(obj, hashid) {
+      var leaf = this.leaves[hashid];
+      if (leaf) {
+        leaf.update(this) && leaf.addPairs(this);
+        this.incrementStamp();
+      }
+    };
+    BBTree.prototype.pointQuery = function(point, func) {
+      this.query(new BB(point.x, point.y, point.x, point.y), func);
+    };
+    BBTree.prototype.segmentQuery = function(a, b, t_exit, func) {
+      this.root && subtreeSegmentQuery(this.root, a, b, t_exit, func);
+    };
+    BBTree.prototype.query = function(bb, func) {
+      this.root && subtreeQuery(this.root, bb, func);
+    };
+    BBTree.prototype.count = function() {
+      return this.count;
+    };
+    BBTree.prototype.each = function(func) {
+      var hashid;
+      for (hashid in this.leaves) func(this.leaves[hashid].obj);
+    };
+    var bbTreeMergedArea2 = function(node, l, b, r, t) {
+      return (max(node.bb_r, r) - min(node.bb_l, l)) * (max(node.bb_t, t) - min(node.bb_b, b));
+    };
+    var partitionNodes = function(tree, nodes, offset, count) {
+      if (1 == count) return nodes[offset];
+      if (2 == count) return tree.makeNode(nodes[offset], nodes[offset + 1]);
+      var node = nodes[offset];
+      var bb_l = node.bb_l, bb_b = node.bb_b, bb_r = node.bb_r, bb_t = node.bb_t;
+      var end = offset + count;
+      for (var i = offset + 1; i < end; i++) {
+        node = nodes[i];
+        bb_l = min(bb_l, node.bb_l);
+        bb_b = min(bb_b, node.bb_b);
+        bb_r = max(bb_r, node.bb_r);
+        bb_t = max(bb_t, node.bb_t);
+      }
+      var splitWidth = bb_r - bb_l > bb_t - bb_b;
+      var bounds = new Array(2 * count);
+      if (splitWidth) for (var i = offset; i < end; i++) {
+        bounds[2 * i + 0] = nodes[i].bb_l;
+        bounds[2 * i + 1] = nodes[i].bb_r;
+      } else for (var i = offset; i < end; i++) {
+        bounds[2 * i + 0] = nodes[i].bb_b;
+        bounds[2 * i + 1] = nodes[i].bb_t;
+      }
+      bounds.sort((function(a, b) {
+        return a - b;
+      }));
+      var split = .5 * (bounds[count - 1] + bounds[count]);
+      var a_l = bb_l, a_b = bb_b, a_r = bb_r, a_t = bb_t;
+      var b_l = bb_l, b_b = bb_b, b_r = bb_r, b_t = bb_t;
+      splitWidth ? a_r = b_l = split : a_t = b_b = split;
+      var right = end;
+      for (var left = offset; left < right; ) {
+        var node = nodes[left];
+        if (bbTreeMergedArea2(node, b_l, b_b, b_r, b_t) < bbTreeMergedArea2(node, a_l, a_b, a_r, a_t)) {
+          right--;
+          nodes[left] = nodes[right];
+          nodes[right] = node;
+        } else left++;
+      }
+      if (right == count) {
+        var node = null;
+        for (var i = offset; i < end; i++) node = subtreeInsert(node, nodes[i], tree);
+        return node;
+      }
+      return NodeNew(tree, partitionNodes(tree, nodes, offset, right - offset), partitionNodes(tree, nodes, right, end - right));
+    };
+    BBTree.prototype.optimize = function() {
+      var nodes = new Array(this.count);
+      var i = 0;
+      for (var hashid in this.leaves) nodes[i++] = this.nodes[hashid];
+      tree.subtreeRecycle(root);
+      this.root = partitionNodes(tree, nodes, nodes.length);
+    };
+    var nodeRender = function(node, depth) {
+      if (!node.isLeaf && depth <= 10) {
+        nodeRender(node.A, depth + 1);
+        nodeRender(node.B, depth + 1);
+      }
+      var str = "";
+      for (var i = 0; i < depth; i++) str += " ";
+      console.log(str + node.bb_b + " " + node.bb_t);
+    };
+    BBTree.prototype.log = function() {
+      this.root && nodeRender(this.root, 0);
+    };
+    var CollisionHandler = cp.CollisionHandler = function() {
+      this.a = this.b = 0;
+    };
+    CollisionHandler.prototype.begin = function(arb, space) {
+      return true;
+    };
+    CollisionHandler.prototype.preSolve = function(arb, space) {
+      return true;
+    };
+    CollisionHandler.prototype.postSolve = function(arb, space) {};
+    CollisionHandler.prototype.separate = function(arb, space) {};
+    var CP_MAX_CONTACTS_PER_ARBITER = 4;
+    var Arbiter = function(a, b) {
+      this.e = 0;
+      this.u = 0;
+      this.surface_vr = vzero;
+      this.a = a;
+      this.body_a = a.body;
+      this.b = b;
+      this.body_b = b.body;
+      this.thread_a_next = this.thread_a_prev = null;
+      this.thread_b_next = this.thread_b_prev = null;
+      this.contacts = null;
+      this.stamp = 0;
+      this.handler = null;
+      this.swappedColl = false;
+      this.state = "first coll";
+    };
+    Arbiter.prototype.getShapes = function() {
+      return this.swappedColl ? [ this.b, this.a ] : [ this.a, this.b ];
+    };
+    Arbiter.prototype.totalImpulse = function() {
+      var contacts = this.contacts;
+      var sum = new Vect(0, 0);
+      for (var i = 0, count = contacts.length; i < count; i++) {
+        var con = contacts[i];
+        sum.add(vmult(con.n, con.jnAcc));
+      }
+      return this.swappedColl ? sum : sum.neg();
+    };
+    Arbiter.prototype.totalImpulseWithFriction = function() {
+      var contacts = this.contacts;
+      var sum = new Vect(0, 0);
+      for (var i = 0, count = contacts.length; i < count; i++) {
+        var con = contacts[i];
+        sum.add(new Vect(con.jnAcc, con.jtAcc).rotate(con.n));
+      }
+      return this.swappedColl ? sum : sum.neg();
+    };
+    Arbiter.prototype.totalKE = function() {
+      var eCoef = (1 - this.e) / (1 + this.e);
+      var sum = 0;
+      var contacts = this.contacts;
+      for (var i = 0, count = contacts.length; i < count; i++) {
+        var con = contacts[i];
+        var jnAcc = con.jnAcc;
+        var jtAcc = con.jtAcc;
+        sum += eCoef * jnAcc * jnAcc / con.nMass + jtAcc * jtAcc / con.tMass;
+      }
+      return sum;
+    };
+    Arbiter.prototype.ignore = function() {
+      this.state = "ignore";
+    };
+    Arbiter.prototype.getA = function() {
+      return this.swappedColl ? this.b : this.a;
+    };
+    Arbiter.prototype.getB = function() {
+      return this.swappedColl ? this.a : this.b;
+    };
+    Arbiter.prototype.isFirstContact = function() {
+      return "first coll" === this.state;
+    };
+    var ContactPoint = function(point, normal, dist) {
+      this.point = point;
+      this.normal = normal;
+      this.dist = dist;
+    };
+    Arbiter.prototype.getContactPointSet = function() {
+      var set = new Array(this.contacts.length);
+      var i;
+      for (i = 0; i < set.length; i++) set[i] = new ContactPoint(this.contacts[i].p, this.contacts[i].n, this.contacts[i].dist);
+      return set;
+    };
+    Arbiter.prototype.getNormal = function(i) {
+      var n = this.contacts[i].n;
+      return this.swappedColl ? vneg(n) : n;
+    };
+    Arbiter.prototype.getPoint = function(i) {
+      return this.contacts[i].p;
+    };
+    Arbiter.prototype.getDepth = function(i) {
+      return this.contacts[i].dist;
+    };
+    var unthreadHelper = function(arb, body, prev, next) {
+      prev ? prev.body_a === body ? prev.thread_a_next = next : prev.thread_b_next = next : body.arbiterList = next;
+      next && (next.body_a === body ? next.thread_a_prev = prev : next.thread_b_prev = prev);
+    };
+    Arbiter.prototype.unthread = function() {
+      unthreadHelper(this, this.body_a, this.thread_a_prev, this.thread_a_next);
+      unthreadHelper(this, this.body_b, this.thread_b_prev, this.thread_b_next);
+      this.thread_a_prev = this.thread_a_next = null;
+      this.thread_b_prev = this.thread_b_next = null;
+    };
+    Arbiter.prototype.update = function(contacts, handler, a, b) {
+      if (this.contacts) for (var i = 0; i < this.contacts.length; i++) {
+        var old = this.contacts[i];
+        for (var j = 0; j < contacts.length; j++) {
+          var new_contact = contacts[j];
+          if (new_contact.hash === old.hash) {
+            new_contact.jnAcc = old.jnAcc;
+            new_contact.jtAcc = old.jtAcc;
+          }
+        }
+      }
+      this.contacts = contacts;
+      this.handler = handler;
+      this.swappedColl = a.collision_type !== handler.a;
+      this.e = a.e * b.e;
+      this.u = a.u * b.u;
+      this.surface_vr = vsub(a.surface_v, b.surface_v);
+      this.a = a;
+      this.body_a = a.body;
+      this.b = b;
+      this.body_b = b.body;
+      "cached" == this.state && (this.state = "first coll");
+    };
+    Arbiter.prototype.preStep = function(dt, slop, bias) {
+      var a = this.body_a;
+      var b = this.body_b;
+      for (var i = 0; i < this.contacts.length; i++) {
+        var con = this.contacts[i];
+        con.r1 = vsub(con.p, a.p);
+        con.r2 = vsub(con.p, b.p);
+        con.nMass = 1 / k_scalar(a, b, con.r1, con.r2, con.n);
+        con.tMass = 1 / k_scalar(a, b, con.r1, con.r2, vperp(con.n));
+        con.bias = -bias * min(0, con.dist + slop) / dt;
+        con.jBias = 0;
+        con.bounce = normal_relative_velocity(a, b, con.r1, con.r2, con.n) * this.e;
+      }
+    };
+    Arbiter.prototype.applyCachedImpulse = function(dt_coef) {
+      if (this.isFirstContact()) return;
+      var a = this.body_a;
+      var b = this.body_b;
+      for (var i = 0; i < this.contacts.length; i++) {
+        var con = this.contacts[i];
+        var nx = con.n.x;
+        var ny = con.n.y;
+        var jx = nx * con.jnAcc - ny * con.jtAcc;
+        var jy = nx * con.jtAcc + ny * con.jnAcc;
+        apply_impulses(a, b, con.r1, con.r2, jx * dt_coef, jy * dt_coef);
+      }
+    };
+    var numApplyImpulse = 0;
+    var numApplyContact = 0;
+    Arbiter.prototype.applyImpulse = function() {
+      numApplyImpulse++;
+      var a = this.body_a;
+      var b = this.body_b;
+      var surface_vr = this.surface_vr;
+      var friction = this.u;
+      for (var i = 0; i < this.contacts.length; i++) {
+        numApplyContact++;
+        var con = this.contacts[i];
+        var nMass = con.nMass;
+        var n = con.n;
+        var r1 = con.r1;
+        var r2 = con.r2;
+        var vrx = b.vx - r2.y * b.w - (a.vx - r1.y * a.w);
+        var vry = b.vy + r2.x * b.w - (a.vy + r1.x * a.w);
+        var vbn = n.x * (b.v_biasx - r2.y * b.w_bias - a.v_biasx + r1.y * a.w_bias) + n.y * (r2.x * b.w_bias + b.v_biasy - r1.x * a.w_bias - a.v_biasy);
+        var vrn = vdot2(vrx, vry, n.x, n.y);
+        var vrt = vdot2(vrx + surface_vr.x, vry + surface_vr.y, -n.y, n.x);
+        var jbn = (con.bias - vbn) * nMass;
+        var jbnOld = con.jBias;
+        con.jBias = max(jbnOld + jbn, 0);
+        var jn = -(con.bounce + vrn) * nMass;
+        var jnOld = con.jnAcc;
+        con.jnAcc = max(jnOld + jn, 0);
+        var jtMax = friction * con.jnAcc;
+        var jt = -vrt * con.tMass;
+        var jtOld = con.jtAcc;
+        con.jtAcc = clamp(jtOld + jt, -jtMax, jtMax);
+        var bias_x = n.x * (con.jBias - jbnOld);
+        var bias_y = n.y * (con.jBias - jbnOld);
+        apply_bias_impulse(a, -bias_x, -bias_y, r1);
+        apply_bias_impulse(b, bias_x, bias_y, r2);
+        var rot_x = con.jnAcc - jnOld;
+        var rot_y = con.jtAcc - jtOld;
+        apply_impulses(a, b, r1, r2, n.x * rot_x - n.y * rot_y, n.x * rot_y + n.y * rot_x);
+      }
+    };
+    Arbiter.prototype.callSeparate = function(space) {
+      var handler = space.lookupHandler(this.a.collision_type, this.b.collision_type);
+      handler.separate(this, space);
+    };
+    Arbiter.prototype.next = function(body) {
+      return this.body_a == body ? this.thread_a_next : this.thread_b_next;
+    };
+    var numContacts = 0;
+    var Contact = function(p, n, dist, hash) {
+      this.p = p;
+      this.n = n;
+      this.dist = dist;
+      this.r1 = this.r2 = vzero;
+      this.nMass = this.tMass = this.bounce = this.bias = 0;
+      this.jnAcc = this.jtAcc = this.jBias = 0;
+      this.hash = hash;
+      numContacts++;
+    };
+    var NONE = [];
+    var circle2circleQuery = function(p1, p2, r1, r2) {
+      var mindist = r1 + r2;
+      var delta = vsub(p2, p1);
+      var distsq = vlengthsq(delta);
+      if (distsq >= mindist * mindist) return;
+      var dist = Math.sqrt(distsq);
+      return new Contact(vadd(p1, vmult(delta, .5 + (r1 - .5 * mindist) / (dist || Infinity))), dist ? vmult(delta, 1 / dist) : new Vect(1, 0), dist - mindist, 0);
+    };
+    var circle2circle = function(circ1, circ2) {
+      var contact = circle2circleQuery(circ1.tc, circ2.tc, circ1.r, circ2.r);
+      return contact ? [ contact ] : NONE;
+    };
+    var circle2segment = function(circleShape, segmentShape) {
+      var seg_a = segmentShape.ta;
+      var seg_b = segmentShape.tb;
+      var center = circleShape.tc;
+      var seg_delta = vsub(seg_b, seg_a);
+      var closest_t = clamp01(vdot(seg_delta, vsub(center, seg_a)) / vlengthsq(seg_delta));
+      var closest = vadd(seg_a, vmult(seg_delta, closest_t));
+      var contact = circle2circleQuery(center, closest, circleShape.r, segmentShape.r);
+      if (contact) {
+        var n = contact.n;
+        return 0 === closest_t && vdot(n, segmentShape.a_tangent) < 0 || 1 === closest_t && vdot(n, segmentShape.b_tangent) < 0 ? NONE : [ contact ];
+      }
+      return NONE;
+    };
+    var last_MSA_min = 0;
+    var findMSA = function(poly, planes) {
+      var min_index = 0;
+      var min = poly.valueOnAxis(planes[0].n, planes[0].d);
+      if (min > 0) return -1;
+      for (var i = 1; i < planes.length; i++) {
+        var dist = poly.valueOnAxis(planes[i].n, planes[i].d);
+        if (dist > 0) return -1;
+        if (dist > min) {
+          min = dist;
+          min_index = i;
+        }
+      }
+      last_MSA_min = min;
+      return min_index;
+    };
+    var findVertsFallback = function(poly1, poly2, n, dist) {
+      var arr = [];
+      var verts1 = poly1.tVerts;
+      for (var i = 0; i < verts1.length; i += 2) {
+        var vx = verts1[i];
+        var vy = verts1[i + 1];
+        poly2.containsVertPartial(vx, vy, vneg(n)) && arr.push(new Contact(new Vect(vx, vy), n, dist, hashPair(poly1.hashid, i)));
+      }
+      var verts2 = poly2.tVerts;
+      for (var i = 0; i < verts2.length; i += 2) {
+        var vx = verts2[i];
+        var vy = verts2[i + 1];
+        poly1.containsVertPartial(vx, vy, n) && arr.push(new Contact(new Vect(vx, vy), n, dist, hashPair(poly2.hashid, i)));
+      }
+      return arr;
+    };
+    var findVerts = function(poly1, poly2, n, dist) {
+      var arr = [];
+      var verts1 = poly1.tVerts;
+      for (var i = 0; i < verts1.length; i += 2) {
+        var vx = verts1[i];
+        var vy = verts1[i + 1];
+        poly2.containsVert(vx, vy) && arr.push(new Contact(new Vect(vx, vy), n, dist, hashPair(poly1.hashid, i >> 1)));
+      }
+      var verts2 = poly2.tVerts;
+      for (var i = 0; i < verts2.length; i += 2) {
+        var vx = verts2[i];
+        var vy = verts2[i + 1];
+        poly1.containsVert(vx, vy) && arr.push(new Contact(new Vect(vx, vy), n, dist, hashPair(poly2.hashid, i >> 1)));
+      }
+      return arr.length ? arr : findVertsFallback(poly1, poly2, n, dist);
+    };
+    var poly2poly = function(poly1, poly2) {
+      var mini1 = findMSA(poly2, poly1.tPlanes);
+      if (-1 == mini1) return NONE;
+      var min1 = last_MSA_min;
+      var mini2 = findMSA(poly1, poly2.tPlanes);
+      if (-1 == mini2) return NONE;
+      var min2 = last_MSA_min;
+      return min1 > min2 ? findVerts(poly1, poly2, poly1.tPlanes[mini1].n, min1) : findVerts(poly1, poly2, vneg(poly2.tPlanes[mini2].n), min2);
+    };
+    var segValueOnAxis = function(seg, n, d) {
+      var a = vdot(n, seg.ta) - seg.r;
+      var b = vdot(n, seg.tb) - seg.r;
+      return min(a, b) - d;
+    };
+    var findPointsBehindSeg = function(arr, seg, poly, pDist, coef) {
+      var dta = vcross(seg.tn, seg.ta);
+      var dtb = vcross(seg.tn, seg.tb);
+      var n = vmult(seg.tn, coef);
+      var verts = poly.tVerts;
+      for (var i = 0; i < verts.length; i += 2) {
+        var vx = verts[i];
+        var vy = verts[i + 1];
+        if (vdot2(vx, vy, n.x, n.y) < vdot(seg.tn, seg.ta) * coef + seg.r) {
+          var dt = vcross2(seg.tn.x, seg.tn.y, vx, vy);
+          dta >= dt && dt >= dtb && arr.push(new Contact(new Vect(vx, vy), n, pDist, hashPair(poly.hashid, i)));
+        }
+      }
+    };
+    var seg2poly = function(seg, poly) {
+      var arr = [];
+      var planes = poly.tPlanes;
+      var numVerts = planes.length;
+      var segD = vdot(seg.tn, seg.ta);
+      var minNorm = poly.valueOnAxis(seg.tn, segD) - seg.r;
+      var minNeg = poly.valueOnAxis(vneg(seg.tn), -segD) - seg.r;
+      if (minNeg > 0 || minNorm > 0) return NONE;
+      var mini = 0;
+      var poly_min = segValueOnAxis(seg, planes[0].n, planes[0].d);
+      if (poly_min > 0) return NONE;
+      for (var i = 0; i < numVerts; i++) {
+        var dist = segValueOnAxis(seg, planes[i].n, planes[i].d);
+        if (dist > 0) return NONE;
+        if (dist > poly_min) {
+          poly_min = dist;
+          mini = i;
+        }
+      }
+      var poly_n = vneg(planes[mini].n);
+      var va = vadd(seg.ta, vmult(poly_n, seg.r));
+      var vb = vadd(seg.tb, vmult(poly_n, seg.r));
+      poly.containsVert(va.x, va.y) && arr.push(new Contact(va, poly_n, poly_min, hashPair(seg.hashid, 0)));
+      poly.containsVert(vb.x, vb.y) && arr.push(new Contact(vb, poly_n, poly_min, hashPair(seg.hashid, 1)));
+      (minNorm >= poly_min || minNeg >= poly_min) && (minNorm > minNeg ? findPointsBehindSeg(arr, seg, poly, minNorm, 1) : findPointsBehindSeg(arr, seg, poly, minNeg, -1));
+      if (0 === arr.length) {
+        var mini2 = 2 * mini;
+        var verts = poly.tVerts;
+        var poly_a = new Vect(verts[mini2], verts[mini2 + 1]);
+        var con;
+        if (con = circle2circleQuery(seg.ta, poly_a, seg.r, 0, arr)) return [ con ];
+        if (con = circle2circleQuery(seg.tb, poly_a, seg.r, 0, arr)) return [ con ];
+        var len = 2 * numVerts;
+        var poly_b = new Vect(verts[(mini2 + 2) % len], verts[(mini2 + 3) % len]);
+        if (con = circle2circleQuery(seg.ta, poly_b, seg.r, 0, arr)) return [ con ];
+        if (con = circle2circleQuery(seg.tb, poly_b, seg.r, 0, arr)) return [ con ];
+      }
+      return arr;
+    };
+    var circle2poly = function(circ, poly) {
+      var planes = poly.tPlanes;
+      var mini = 0;
+      var min = vdot(planes[0].n, circ.tc) - planes[0].d - circ.r;
+      for (var i = 0; i < planes.length; i++) {
+        var dist = vdot(planes[i].n, circ.tc) - planes[i].d - circ.r;
+        if (dist > 0) return NONE;
+        if (dist > min) {
+          min = dist;
+          mini = i;
+        }
+      }
+      var n = planes[mini].n;
+      var verts = poly.tVerts;
+      var len = verts.length;
+      var mini2 = mini << 1;
+      var ax = verts[mini2];
+      var ay = verts[mini2 + 1];
+      var bx = verts[(mini2 + 2) % len];
+      var by = verts[(mini2 + 3) % len];
+      var dta = vcross2(n.x, n.y, ax, ay);
+      var dtb = vcross2(n.x, n.y, bx, by);
+      var dt = vcross(n, circ.tc);
+      if (dt < dtb) {
+        var con = circle2circleQuery(circ.tc, new Vect(bx, by), circ.r, 0, con);
+        return con ? [ con ] : NONE;
+      }
+      if (dt < dta) return [ new Contact(vsub(circ.tc, vmult(n, circ.r + min / 2)), vneg(n), min, 0) ];
+      var con = circle2circleQuery(circ.tc, new Vect(ax, ay), circ.r, 0, con);
+      return con ? [ con ] : NONE;
+    };
+    CircleShape.prototype.collisionCode = 0;
+    SegmentShape.prototype.collisionCode = 1;
+    PolyShape.prototype.collisionCode = 2;
+    CircleShape.prototype.collisionTable = [ circle2circle, circle2segment, circle2poly ];
+    SegmentShape.prototype.collisionTable = [ null, function(segA, segB) {
+      return NONE;
+    }, seg2poly ];
+    PolyShape.prototype.collisionTable = [ null, null, poly2poly ];
+    var collideShapes = cp.collideShapes = function(a, b) {
+      assert(a.collisionCode <= b.collisionCode, "Collided shapes must be sorted by type");
+      return a.collisionTable[b.collisionCode](a, b);
+    };
+    var defaultCollisionHandler = new CollisionHandler();
+    var Space = cp.Space = function() {
+      this.stamp = 0;
+      this.curr_dt = 0;
+      this.bodies = [];
+      this.rousedBodies = [];
+      this.sleepingComponents = [];
+      this.staticShapes = new BBTree(null);
+      this.activeShapes = new BBTree(this.staticShapes);
+      this.arbiters = [];
+      this.contactBuffersHead = null;
+      this.cachedArbiters = {};
+      this.constraints = [];
+      this.locked = 0;
+      this.collisionHandlers = {};
+      this.defaultHandler = defaultCollisionHandler;
+      this.postStepCallbacks = [];
+      this.iterations = 10;
+      this.gravity = vzero;
+      this.damping = 1;
+      this.idleSpeedThreshold = 0;
+      this.sleepTimeThreshold = Infinity;
+      this.collisionSlop = .1;
+      this.collisionBias = Math.pow(.9, 60);
+      this.collisionPersistence = 3;
+      this.enableContactGraph = false;
+      this.staticBody = new Body(Infinity, Infinity);
+      this.staticBody.nodeIdleTime = Infinity;
+      this.collideShapes = this.makeCollideShapes();
+    };
+    Space.prototype.getCurrentTimeStep = function() {
+      return this.curr_dt;
+    };
+    Space.prototype.setIterations = function(iter) {
+      this.iterations = iter;
+    };
+    Space.prototype.isLocked = function() {
+      return this.locked;
+    };
+    var assertSpaceUnlocked = function(space) {
+      assert(!space.locked, "This addition/removal cannot be done safely during a call to cpSpaceStep()  or during a query. Put these calls into a post-step callback.");
+    };
+    Space.prototype.addCollisionHandler = function(a, b, begin, preSolve, postSolve, separate) {
+      assertSpaceUnlocked(this);
+      this.removeCollisionHandler(a, b);
+      var handler = new CollisionHandler();
+      handler.a = a;
+      handler.b = b;
+      begin && (handler.begin = begin);
+      preSolve && (handler.preSolve = preSolve);
+      postSolve && (handler.postSolve = postSolve);
+      separate && (handler.separate = separate);
+      this.collisionHandlers[hashPair(a, b)] = handler;
+    };
+    Space.prototype.removeCollisionHandler = function(a, b) {
+      assertSpaceUnlocked(this);
+      delete this.collisionHandlers[hashPair(a, b)];
+    };
+    Space.prototype.setDefaultCollisionHandler = function(begin, preSolve, postSolve, separate) {
+      assertSpaceUnlocked(this);
+      var handler = new CollisionHandler();
+      begin && (handler.begin = begin);
+      preSolve && (handler.preSolve = preSolve);
+      postSolve && (handler.postSolve = postSolve);
+      separate && (handler.separate = separate);
+      this.defaultHandler = handler;
+    };
+    Space.prototype.lookupHandler = function(a, b) {
+      return this.collisionHandlers[hashPair(a, b)] || this.defaultHandler;
+    };
+    Space.prototype.addShape = function(shape) {
+      var body = shape.body;
+      if (body.isStatic()) return this.addStaticShape(shape);
+      assert(!shape.space, "This shape is already added to a space and cannot be added to another.");
+      assertSpaceUnlocked(this);
+      body.activate();
+      body.addShape(shape);
+      shape.update(body.p, body.rot);
+      this.activeShapes.insert(shape, shape.hashid);
+      shape.space = this;
+      return shape;
+    };
+    Space.prototype.addStaticShape = function(shape) {
+      assert(!shape.space, "This shape is already added to a space and cannot be added to another.");
+      assertSpaceUnlocked(this);
+      var body = shape.body;
+      body.addShape(shape);
+      shape.update(body.p, body.rot);
+      this.staticShapes.insert(shape, shape.hashid);
+      shape.space = this;
+      return shape;
+    };
+    Space.prototype.addBody = function(body) {
+      assert(!body.isStatic(), "Static bodies cannot be added to a space as they are not meant to be simulated.");
+      assert(!body.space, "This body is already added to a space and cannot be added to another.");
+      assertSpaceUnlocked(this);
+      this.bodies.push(body);
+      body.space = this;
+      return body;
+    };
+    Space.prototype.addConstraint = function(constraint) {
+      assert(!constraint.space, "This shape is already added to a space and cannot be added to another.");
+      assertSpaceUnlocked(this);
+      var a = constraint.a, b = constraint.b;
+      a.activate();
+      b.activate();
+      this.constraints.push(constraint);
+      constraint.next_a = a.constraintList;
+      a.constraintList = constraint;
+      constraint.next_b = b.constraintList;
+      b.constraintList = constraint;
+      constraint.space = this;
+      return constraint;
+    };
+    Space.prototype.filterArbiters = function(body, filter) {
+      for (var hash in this.cachedArbiters) {
+        var arb = this.cachedArbiters[hash];
+        if (body === arb.body_a && (filter === arb.a || null === filter) || body === arb.body_b && (filter === arb.b || null === filter)) {
+          filter && "cached" !== arb.state && arb.callSeparate(this);
+          arb.unthread();
+          deleteObjFromList(this.arbiters, arb);
+          delete this.cachedArbiters[hash];
+        }
+      }
+    };
+    Space.prototype.removeShape = function(shape) {
+      var body = shape.body;
+      if (body.isStatic()) this.removeStaticShape(shape); else {
+        assert(this.containsShape(shape), "Cannot remove a shape that was not added to the space. (Removed twice maybe?)");
+        assertSpaceUnlocked(this);
+        body.activate();
+        body.removeShape(shape);
+        this.filterArbiters(body, shape);
+        this.activeShapes.remove(shape, shape.hashid);
+        shape.space = null;
+      }
+    };
+    Space.prototype.removeStaticShape = function(shape) {
+      assert(this.containsShape(shape), "Cannot remove a static or sleeping shape that was not added to the space. (Removed twice maybe?)");
+      assertSpaceUnlocked(this);
+      var body = shape.body;
+      body.isStatic() && body.activateStatic(shape);
+      body.removeShape(shape);
+      this.filterArbiters(body, shape);
+      this.staticShapes.remove(shape, shape.hashid);
+      shape.space = null;
+    };
+    Space.prototype.removeBody = function(body) {
+      assert(this.containsBody(body), "Cannot remove a body that was not added to the space. (Removed twice maybe?)");
+      assertSpaceUnlocked(this);
+      body.activate();
+      deleteObjFromList(this.bodies, body);
+      body.space = null;
+    };
+    Space.prototype.removeConstraint = function(constraint) {
+      assert(this.containsConstraint(constraint), "Cannot remove a constraint that was not added to the space. (Removed twice maybe?)");
+      assertSpaceUnlocked(this);
+      constraint.a.activate();
+      constraint.b.activate();
+      deleteObjFromList(this.constraints, constraint);
+      constraint.a.removeConstraint(constraint);
+      constraint.b.removeConstraint(constraint);
+      constraint.space = null;
+    };
+    Space.prototype.containsShape = function(shape) {
+      return shape.space === this;
+    };
+    Space.prototype.containsBody = function(body) {
+      return body.space == this;
+    };
+    Space.prototype.containsConstraint = function(constraint) {
+      return constraint.space == this;
+    };
+    Space.prototype.uncacheArbiter = function(arb) {
+      delete this.cachedArbiters[hashPair(arb.a.hashid, arb.b.hashid)];
+      deleteObjFromList(this.arbiters, arb);
+    };
+    Space.prototype.eachBody = function(func) {
+      this.lock();
+      var bodies = this.bodies;
+      for (var i = 0; i < bodies.length; i++) func(bodies[i]);
+      var components = this.sleepingComponents;
+      for (var i = 0; i < components.length; i++) {
+        var root = components[i];
+        var body = root;
+        while (body) {
+          var next = body.nodeNext;
+          func(body);
+          body = next;
+        }
+      }
+      this.unlock(true);
+    };
+    Space.prototype.eachShape = function(func) {
+      this.lock();
+      this.activeShapes.each(func);
+      this.staticShapes.each(func);
+      this.unlock(true);
+    };
+    Space.prototype.eachConstraint = function(func) {
+      this.lock();
+      var constraints = this.constraints;
+      for (var i = 0; i < constraints.length; i++) func(constraints[i]);
+      this.unlock(true);
+    };
+    Space.prototype.reindexStatic = function() {
+      assert(!this.locked, "You cannot manually reindex objects while the space is locked. Wait until the current query or step is complete.");
+      this.staticShapes.each((function(shape) {
+        var body = shape.body;
+        shape.update(body.p, body.rot);
+      }));
+      this.staticShapes.reindex();
+    };
+    Space.prototype.reindexShape = function(shape) {
+      assert(!this.locked, "You cannot manually reindex objects while the space is locked. Wait until the current query or step is complete.");
+      var body = shape.body;
+      shape.update(body.p, body.rot);
+      this.activeShapes.reindexObject(shape, shape.hashid);
+      this.staticShapes.reindexObject(shape, shape.hashid);
+    };
+    Space.prototype.reindexShapesForBody = function(body) {
+      for (var shape = body.shapeList; shape; shape = shape.next) this.reindexShape(shape);
+    };
+    Space.prototype.useSpatialHash = function(dim, count) {
+      throw new Error("Spatial Hash not implemented.");
+      var staticShapes;
+      var activeShapes;
+    };
+    Space.prototype.activateBody = function(body) {
+      assert(!body.isRogue(), "Internal error: Attempting to activate a rogue body.");
+      if (this.locked) -1 === this.rousedBodies.indexOf(body) && this.rousedBodies.push(body); else {
+        this.bodies.push(body);
+        for (var i = 0; i < body.shapeList.length; i++) {
+          var shape = body.shapeList[i];
+          this.staticShapes.remove(shape, shape.hashid);
+          this.activeShapes.insert(shape, shape.hashid);
+        }
+        for (var arb = body.arbiterList; arb; arb = arb.next(body)) {
+          var bodyA = arb.body_a;
+          if (body === bodyA || bodyA.isStatic()) {
+            var a = arb.a, b = arb.b;
+            this.cachedArbiters[hashPair(a.hashid, b.hashid)] = arb;
+            arb.stamp = this.stamp;
+            arb.handler = this.lookupHandler(a.collision_type, b.collision_type);
+            this.arbiters.push(arb);
+          }
+        }
+        for (var constraint = body.constraintList; constraint; constraint = constraint.nodeNext) {
+          var bodyA = constraint.a;
+          (body === bodyA || bodyA.isStatic()) && this.constraints.push(constraint);
+        }
+      }
+    };
+    Space.prototype.deactivateBody = function(body) {
+      assert(!body.isRogue(), "Internal error: Attempting to deactivate a rogue body.");
+      deleteObjFromList(this.bodies, body);
+      for (var i = 0; i < body.shapeList.length; i++) {
+        var shape = body.shapeList[i];
+        this.activeShapes.remove(shape, shape.hashid);
+        this.staticShapes.insert(shape, shape.hashid);
+      }
+      for (var arb = body.arbiterList; arb; arb = arb.next(body)) {
+        var bodyA = arb.body_a;
+        (body === bodyA || bodyA.isStatic()) && this.uncacheArbiter(arb);
+      }
+      for (var constraint = body.constraintList; constraint; constraint = constraint.nodeNext) {
+        var bodyA = constraint.a;
+        (body === bodyA || bodyA.isStatic()) && deleteObjFromList(this.constraints, constraint);
+      }
+    };
+    var componentRoot = function(body) {
+      return body ? body.nodeRoot : null;
+    };
+    var componentActivate = function(root) {
+      if (!root || !root.isSleeping(root)) return;
+      assert(!root.isRogue(), "Internal Error: componentActivate() called on a rogue body.");
+      var space = root.space;
+      var body = root;
+      while (body) {
+        var next = body.nodeNext;
+        body.nodeIdleTime = 0;
+        body.nodeRoot = null;
+        body.nodeNext = null;
+        space.activateBody(body);
+        body = next;
+      }
+      deleteObjFromList(space.sleepingComponents, root);
+    };
+    Body.prototype.activate = function() {
+      if (!this.isRogue()) {
+        this.nodeIdleTime = 0;
+        componentActivate(componentRoot(this));
+      }
+    };
+    Body.prototype.activateStatic = function(filter) {
+      assert(this.isStatic(), "Body.activateStatic() called on a non-static body.");
+      for (var arb = this.arbiterList; arb; arb = arb.next(this)) filter && filter != arb.a && filter != arb.b || (arb.body_a == this ? arb.body_b : arb.body_a).activate();
+    };
+    Body.prototype.pushArbiter = function(arb) {
+      assertSoft(null === (arb.body_a === this ? arb.thread_a_next : arb.thread_b_next), "Internal Error: Dangling contact graph pointers detected. (A)");
+      assertSoft(null === (arb.body_a === this ? arb.thread_a_prev : arb.thread_b_prev), "Internal Error: Dangling contact graph pointers detected. (B)");
+      var next = this.arbiterList;
+      assertSoft(null === next || null === (next.body_a === this ? next.thread_a_prev : next.thread_b_prev), "Internal Error: Dangling contact graph pointers detected. (C)");
+      arb.body_a === this ? arb.thread_a_next = next : arb.thread_b_next = next;
+      next && (next.body_a === this ? next.thread_a_prev = arb : next.thread_b_prev = arb);
+      this.arbiterList = arb;
+    };
+    var componentAdd = function(root, body) {
+      body.nodeRoot = root;
+      if (body !== root) {
+        body.nodeNext = root.nodeNext;
+        root.nodeNext = body;
+      }
+    };
+    var floodFillComponent = function(root, body) {
+      if (!body.isRogue()) {
+        var other_root = componentRoot(body);
+        if (null == other_root) {
+          componentAdd(root, body);
+          for (var arb = body.arbiterList; arb; arb = arb.next(body)) floodFillComponent(root, body == arb.body_a ? arb.body_b : arb.body_a);
+          for (var constraint = body.constraintList; constraint; constraint = constraint.next(body)) floodFillComponent(root, body == constraint.a ? constraint.b : constraint.a);
+        } else assertSoft(other_root === root, "Internal Error: Inconsistency detected in the contact graph.");
+      }
+    };
+    var componentActive = function(root, threshold) {
+      for (var body = root; body; body = body.nodeNext) if (body.nodeIdleTime < threshold) return true;
+      return false;
+    };
+    Space.prototype.processComponents = function(dt) {
+      var sleep = Infinity !== this.sleepTimeThreshold;
+      var bodies = this.bodies;
+      for (var i = 0; i < bodies.length; i++) {
+        var body = bodies[i];
+        assertSoft(null === body.nodeNext, "Internal Error: Dangling next pointer detected in contact graph.");
+        assertSoft(null === body.nodeRoot, "Internal Error: Dangling root pointer detected in contact graph.");
+      }
+      if (sleep) {
+        var dv = this.idleSpeedThreshold;
+        var dvsq = dv ? dv * dv : vlengthsq(this.gravity) * dt * dt;
+        for (var i = 0; i < bodies.length; i++) {
+          var body = bodies[i];
+          var keThreshold = dvsq ? body.m * dvsq : 0;
+          body.nodeIdleTime = body.kineticEnergy() > keThreshold ? 0 : body.nodeIdleTime + dt;
+        }
+      }
+      var arbiters = this.arbiters;
+      for (var i = 0, count = arbiters.length; i < count; i++) {
+        var arb = arbiters[i];
+        var a = arb.body_a, b = arb.body_b;
+        if (sleep) {
+          (b.isRogue() && !b.isStatic() || a.isSleeping()) && a.activate();
+          (a.isRogue() && !a.isStatic() || b.isSleeping()) && b.activate();
+        }
+        a.pushArbiter(arb);
+        b.pushArbiter(arb);
+      }
+      if (sleep) {
+        var constraints = this.constraints;
+        for (var i = 0; i < constraints.length; i++) {
+          var constraint = constraints[i];
+          var a = constraint.a, b = constraint.b;
+          b.isRogue() && !b.isStatic() && a.activate();
+          a.isRogue() && !a.isStatic() && b.activate();
+        }
+        for (var i = 0; i < bodies.length; ) {
+          var body = bodies[i];
+          if (null === componentRoot(body)) {
+            floodFillComponent(body, body);
+            if (!componentActive(body, this.sleepTimeThreshold)) {
+              this.sleepingComponents.push(body);
+              for (var other = body; other; other = other.nodeNext) this.deactivateBody(other);
+              continue;
+            }
+          }
+          i++;
+          body.nodeRoot = null;
+          body.nodeNext = null;
+        }
+      }
+    };
+    Body.prototype.sleep = function() {
+      this.sleepWithGroup(null);
+    };
+    Body.prototype.sleepWithGroup = function(group) {
+      assert(!this.isStatic() && !this.isRogue(), "Rogue and static bodies cannot be put to sleep.");
+      var space = this.space;
+      assert(space, "Cannot put a rogue body to sleep.");
+      assert(!space.locked, "Bodies cannot be put to sleep during a query or a call to cpSpaceStep(). Put these calls into a post-step callback.");
+      assert(null === group || group.isSleeping(), "Cannot use a non-sleeping body as a group identifier.");
+      if (this.isSleeping()) {
+        assert(componentRoot(this) === componentRoot(group), "The body is already sleeping and it's group cannot be reassigned.");
+        return;
+      }
+      for (var i = 0; i < this.shapeList.length; i++) this.shapeList[i].update(this.p, this.rot);
+      space.deactivateBody(this);
+      if (group) {
+        var root = componentRoot(group);
+        this.nodeRoot = root;
+        this.nodeNext = root.nodeNext;
+        this.nodeIdleTime = 0;
+        root.nodeNext = this;
+      } else {
+        this.nodeRoot = this;
+        this.nodeNext = null;
+        this.nodeIdleTime = 0;
+        space.sleepingComponents.push(this);
+      }
+      deleteObjFromList(space.bodies, this);
+    };
+    Space.prototype.activateShapesTouchingShape = function(shape) {
+      Infinity !== this.sleepTimeThreshold && this.shapeQuery(shape, (function(shape, points) {
+        shape.body.activate();
+      }));
+    };
+    Space.prototype.pointQuery = function(point, layers, group, func) {
+      var helper = function(shape) {
+        !(shape.group && group === shape.group) && layers & shape.layers && shape.pointQuery(point) && func(shape);
+      };
+      var bb = new BB(point.x, point.y, point.x, point.y);
+      this.lock();
+      this.activeShapes.query(bb, helper);
+      this.staticShapes.query(bb, helper);
+      this.unlock(true);
+    };
+    Space.prototype.pointQueryFirst = function(point, layers, group) {
+      var outShape = null;
+      this.pointQuery(point, layers, group, (function(shape) {
+        shape.sensor || (outShape = shape);
+      }));
+      return outShape;
+    };
+    Space.prototype.nearestPointQuery = function(point, maxDistance, layers, group, func) {
+      var helper = function(shape) {
+        if (!(shape.group && group === shape.group) && layers & shape.layers) {
+          var info = shape.nearestPointQuery(point);
+          info.d < maxDistance && func(shape, info.d, info.p);
+        }
+      };
+      var bb = bbNewForCircle(point, maxDistance);
+      this.lock();
+      this.activeShapes.query(bb, helper);
+      this.staticShapes.query(bb, helper);
+      this.unlock(true);
+    };
+    Space.prototype.nearestPointQueryNearest = function(point, maxDistance, layers, group) {
+      var out;
+      var helper = function(shape) {
+        if (!(shape.group && group === shape.group) && layers & shape.layers && !shape.sensor) {
+          var info = shape.nearestPointQuery(point);
+          info.d < maxDistance && (!out || info.d < out.d) && (out = info);
+        }
+      };
+      var bb = bbNewForCircle(point, maxDistance);
+      this.activeShapes.query(bb, helper);
+      this.staticShapes.query(bb, helper);
+      return out;
+    };
+    Space.prototype.segmentQuery = function(start, end, layers, group, func) {
+      var helper = function(shape) {
+        var info;
+        !(shape.group && group === shape.group) && layers & shape.layers && (info = shape.segmentQuery(start, end)) && func(shape, info.t, info.n);
+        return 1;
+      };
+      this.lock();
+      this.staticShapes.segmentQuery(start, end, 1, helper);
+      this.activeShapes.segmentQuery(start, end, 1, helper);
+      this.unlock(true);
+    };
+    Space.prototype.segmentQueryFirst = function(start, end, layers, group) {
+      var out = null;
+      var helper = function(shape) {
+        var info;
+        !(shape.group && group === shape.group) && layers & shape.layers && !shape.sensor && (info = shape.segmentQuery(start, end)) && (null === out || info.t < out.t) && (out = info);
+        return out ? out.t : 1;
+      };
+      this.staticShapes.segmentQuery(start, end, 1, helper);
+      this.activeShapes.segmentQuery(start, end, out ? out.t : 1, helper);
+      return out;
+    };
+    Space.prototype.bbQuery = function(bb, layers, group, func) {
+      var helper = function(shape) {
+        !(shape.group && group === shape.group) && layers & shape.layers && bbIntersects2(bb, shape.bb_l, shape.bb_b, shape.bb_r, shape.bb_t) && func(shape);
+      };
+      this.lock();
+      this.activeShapes.query(bb, helper);
+      this.staticShapes.query(bb, helper);
+      this.unlock(true);
+    };
+    Space.prototype.shapeQuery = function(shape, func) {
+      var body = shape.body;
+      body && shape.update(body.p, body.rot);
+      var bb = new BB(shape.bb_l, shape.bb_b, shape.bb_r, shape.bb_t);
+      var anyCollision = false;
+      var helper = function(b) {
+        var a = shape;
+        if (a.group && a.group === b.group || !(a.layers & b.layers) || a === b) return;
+        var contacts;
+        if (a.collisionCode <= b.collisionCode) contacts = collideShapes(a, b); else {
+          contacts = collideShapes(b, a);
+          for (var i = 0; i < contacts.length; i++) contacts[i].n = vneg(contacts[i].n);
+        }
+        if (contacts.length) {
+          anyCollision = !(a.sensor || b.sensor);
+          if (func) {
+            var set = new Array(contacts.length);
+            for (var i = 0; i < contacts.length; i++) set[i] = new ContactPoint(contacts[i].p, contacts[i].n, contacts[i].dist);
+            func(b, set);
+          }
+        }
+      };
+      this.lock();
+      this.activeShapes.query(bb, helper);
+      this.staticShapes.query(bb, helper);
+      this.unlock(true);
+      return anyCollision;
+    };
+    Space.prototype.addPostStepCallback = function(func) {
+      assertSoft(this.locked, "Adding a post-step callback when the space is not locked is unnecessary. Post-step callbacks will not called until the end of the next call to cpSpaceStep() or the next query.");
+      this.postStepCallbacks.push(func);
+    };
+    Space.prototype.runPostStepCallbacks = function() {
+      for (var i = 0; i < this.postStepCallbacks.length; i++) this.postStepCallbacks[i]();
+      this.postStepCallbacks = [];
+    };
+    Space.prototype.lock = function() {
+      this.locked++;
+    };
+    Space.prototype.unlock = function(runPostStep) {
+      this.locked--;
+      assert(this.locked >= 0, "Internal Error: Space lock underflow.");
+      if (0 === this.locked && runPostStep) {
+        var waking = this.rousedBodies;
+        for (var i = 0; i < waking.length; i++) this.activateBody(waking[i]);
+        waking.length = 0;
+        this.runPostStepCallbacks();
+      }
+    };
+    Space.prototype.makeCollideShapes = function() {
+      var space_ = this;
+      return function(a, b) {
+        var space = space_;
+        if (!(a.bb_l <= b.bb_r && b.bb_l <= a.bb_r && a.bb_b <= b.bb_t && b.bb_b <= a.bb_t) || a.body === b.body || a.group && a.group === b.group || !(a.layers & b.layers)) return;
+        var handler = space.lookupHandler(a.collision_type, b.collision_type);
+        var sensor = a.sensor || b.sensor;
+        if (sensor && handler === defaultCollisionHandler) return;
+        if (a.collisionCode > b.collisionCode) {
+          var temp = a;
+          a = b;
+          b = temp;
+        }
+        var contacts = collideShapes(a, b);
+        if (0 === contacts.length) return;
+        var arbHash = hashPair(a.hashid, b.hashid);
+        var arb = space.cachedArbiters[arbHash];
+        arb || (arb = space.cachedArbiters[arbHash] = new Arbiter(a, b));
+        arb.update(contacts, handler, a, b);
+        "first coll" != arb.state || handler.begin(arb, space) || arb.ignore();
+        if ("ignore" !== arb.state && handler.preSolve(arb, space) && !sensor) space.arbiters.push(arb); else {
+          arb.contacts = null;
+          "ignore" !== arb.state && (arb.state = "normal");
+        }
+        arb.stamp = space.stamp;
+      };
+    };
+    Space.prototype.arbiterSetFilter = function(arb) {
+      var ticks = this.stamp - arb.stamp;
+      var a = arb.body_a, b = arb.body_b;
+      if ((a.isStatic() || a.isSleeping()) && (b.isStatic() || b.isSleeping())) return true;
+      if (ticks >= 1 && "cached" != arb.state) {
+        arb.callSeparate(this);
+        arb.state = "cached";
+      }
+      if (ticks >= this.collisionPersistence) {
+        arb.contacts = null;
+        return false;
+      }
+      return true;
+    };
+    var updateFunc = function(shape) {
+      var body = shape.body;
+      shape.update(body.p, body.rot);
+    };
+    Space.prototype.step = function(dt) {
+      if (0 === dt) return;
+      assert(0 === vzero.x && 0 === vzero.y, "vzero is invalid");
+      this.stamp++;
+      var prev_dt = this.curr_dt;
+      this.curr_dt = dt;
+      var i;
+      var j;
+      var hash;
+      var bodies = this.bodies;
+      var constraints = this.constraints;
+      var arbiters = this.arbiters;
+      for (i = 0; i < arbiters.length; i++) {
+        var arb = arbiters[i];
+        arb.state = "normal";
+        arb.body_a.isSleeping() || arb.body_b.isSleeping() || arb.unthread();
+      }
+      arbiters.length = 0;
+      this.lock();
+      for (i = 0; i < bodies.length; i++) bodies[i].position_func(dt);
+      this.activeShapes.each(updateFunc);
+      this.activeShapes.reindexQuery(this.collideShapes);
+      this.unlock(false);
+      this.processComponents(dt);
+      this.lock();
+      for (hash in this.cachedArbiters) this.arbiterSetFilter(this.cachedArbiters[hash]) || delete this.cachedArbiters[hash];
+      var slop = this.collisionSlop;
+      var biasCoef = 1 - Math.pow(this.collisionBias, dt);
+      for (i = 0; i < arbiters.length; i++) arbiters[i].preStep(dt, slop, biasCoef);
+      for (i = 0; i < constraints.length; i++) {
+        var constraint = constraints[i];
+        constraint.preSolve(this);
+        constraint.preStep(dt);
+      }
+      var damping = Math.pow(this.damping, dt);
+      var gravity = this.gravity;
+      for (i = 0; i < bodies.length; i++) bodies[i].velocity_func(gravity, damping, dt);
+      var dt_coef = 0 === prev_dt ? 0 : dt / prev_dt;
+      for (i = 0; i < arbiters.length; i++) arbiters[i].applyCachedImpulse(dt_coef);
+      for (i = 0; i < constraints.length; i++) constraints[i].applyCachedImpulse(dt_coef);
+      for (i = 0; i < this.iterations; i++) {
+        for (j = 0; j < arbiters.length; j++) arbiters[j].applyImpulse();
+        for (j = 0; j < constraints.length; j++) constraints[j].applyImpulse();
+      }
+      for (i = 0; i < constraints.length; i++) constraints[i].postSolve(this);
+      for (i = 0; i < arbiters.length; i++) arbiters[i].handler.postSolve(arbiters[i], this);
+      this.unlock(true);
+    };
+    var relative_velocity = function(a, b, r1, r2) {
+      var v1_sumx = a.vx + -r1.y * a.w;
+      var v1_sumy = a.vy + r1.x * a.w;
+      var v2_sumx = b.vx + -r2.y * b.w;
+      var v2_sumy = b.vy + r2.x * b.w;
+      return new Vect(v2_sumx - v1_sumx, v2_sumy - v1_sumy);
+    };
+    var normal_relative_velocity = function(a, b, r1, r2, n) {
+      var v1_sumx = a.vx + -r1.y * a.w;
+      var v1_sumy = a.vy + r1.x * a.w;
+      var v2_sumx = b.vx + -r2.y * b.w;
+      var v2_sumy = b.vy + r2.x * b.w;
+      return vdot2(v2_sumx - v1_sumx, v2_sumy - v1_sumy, n.x, n.y);
+    };
+    var apply_impulse = function(body, jx, jy, r) {
+      body.vx += jx * body.m_inv;
+      body.vy += jy * body.m_inv;
+      body.w += body.i_inv * (r.x * jy - r.y * jx);
+    };
+    var apply_impulses = function(a, b, r1, r2, jx, jy) {
+      apply_impulse(a, -jx, -jy, r1);
+      apply_impulse(b, jx, jy, r2);
+    };
+    var apply_bias_impulse = function(body, jx, jy, r) {
+      body.v_biasx += jx * body.m_inv;
+      body.v_biasy += jy * body.m_inv;
+      body.w_bias += body.i_inv * vcross2(r.x, r.y, jx, jy);
+    };
+    var k_scalar_body = function(body, r, n) {
+      var rcn = vcross(r, n);
+      return body.m_inv + body.i_inv * rcn * rcn;
+    };
+    var k_scalar = function(a, b, r1, r2, n) {
+      var value = k_scalar_body(a, r1, n) + k_scalar_body(b, r2, n);
+      assertSoft(0 !== value, "Unsolvable collision or constraint.");
+      return value;
+    };
+    var k_tensor = function(a, b, r1, r2, k1, k2) {
+      var k11, k12, k21, k22;
+      var m_sum = a.m_inv + b.m_inv;
+      k11 = m_sum;
+      k12 = 0;
+      k21 = 0;
+      k22 = m_sum;
+      var a_i_inv = a.i_inv;
+      var r1xsq = r1.x * r1.x * a_i_inv;
+      var r1ysq = r1.y * r1.y * a_i_inv;
+      var r1nxy = -r1.x * r1.y * a_i_inv;
+      k11 += r1ysq;
+      k12 += r1nxy;
+      k21 += r1nxy;
+      k22 += r1xsq;
+      var b_i_inv = b.i_inv;
+      var r2xsq = r2.x * r2.x * b_i_inv;
+      var r2ysq = r2.y * r2.y * b_i_inv;
+      var r2nxy = -r2.x * r2.y * b_i_inv;
+      k11 += r2ysq;
+      k12 += r2nxy;
+      k21 += r2nxy;
+      k22 += r2xsq;
+      var determinant = k11 * k22 - k12 * k21;
+      assertSoft(0 !== determinant, "Unsolvable constraint.");
+      var det_inv = 1 / determinant;
+      k1.x = k22 * det_inv;
+      k1.y = -k12 * det_inv;
+      k2.x = -k21 * det_inv;
+      k2.y = k11 * det_inv;
+    };
+    var mult_k = function(vr, k1, k2) {
+      return new Vect(vdot(vr, k1), vdot(vr, k2));
+    };
+    var bias_coef = function(errorBias, dt) {
+      return 1 - Math.pow(errorBias, dt);
+    };
+    var Constraint = cp.Constraint = function(a, b) {
+      this.a = a;
+      this.b = b;
+      this.space = null;
+      this.next_a = null;
+      this.next_b = null;
+      this.maxForce = Infinity;
+      this.errorBias = Math.pow(.9, 60);
+      this.maxBias = Infinity;
+    };
+    Constraint.prototype.activateBodies = function() {
+      this.a && this.a.activate();
+      this.b && this.b.activate();
+    };
+    Constraint.prototype.preStep = function(dt) {};
+    Constraint.prototype.applyCachedImpulse = function(dt_coef) {};
+    Constraint.prototype.applyImpulse = function() {};
+    Constraint.prototype.getImpulse = function() {
+      return 0;
+    };
+    Constraint.prototype.preSolve = function(space) {};
+    Constraint.prototype.postSolve = function(space) {};
+    Constraint.prototype.next = function(body) {
+      return this.a === body ? this.next_a : this.next_b;
+    };
+    var PinJoint = cp.PinJoint = function(a, b, anchr1, anchr2) {
+      Constraint.call(this, a, b);
+      this.anchr1 = anchr1;
+      this.anchr2 = anchr2;
+      var p1 = a ? vadd(a.p, vrotate(anchr1, a.rot)) : anchr1;
+      var p2 = b ? vadd(b.p, vrotate(anchr2, b.rot)) : anchr2;
+      this.dist = vlength(vsub(p2, p1));
+      assertSoft(this.dist > 0, "You created a 0 length pin joint. A pivot joint will be much more stable.");
+      this.r1 = this.r2 = null;
+      this.n = null;
+      this.nMass = 0;
+      this.jnAcc = this.jnMax = 0;
+      this.bias = 0;
+    };
+    PinJoint.prototype = Object.create(Constraint.prototype);
+    PinJoint.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      this.r1 = vrotate(this.anchr1, a.rot);
+      this.r2 = vrotate(this.anchr2, b.rot);
+      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
+      var dist = vlength(delta);
+      this.n = vmult(delta, 1 / (dist || Infinity));
+      this.nMass = 1 / k_scalar(a, b, this.r1, this.r2, this.n);
+      var maxBias = this.maxBias;
+      this.bias = clamp(-bias_coef(this.errorBias, dt) * (dist - this.dist) / dt, -maxBias, maxBias);
+      this.jnMax = this.maxForce * dt;
+    };
+    PinJoint.prototype.applyCachedImpulse = function(dt_coef) {
+      var j = vmult(this.n, this.jnAcc * dt_coef);
+      apply_impulses(this.a, this.b, this.r1, this.r2, j.x, j.y);
+    };
+    PinJoint.prototype.applyImpulse = function() {
+      var a = this.a;
+      var b = this.b;
+      var n = this.n;
+      var vrn = normal_relative_velocity(a, b, this.r1, this.r2, n);
+      var jn = (this.bias - vrn) * this.nMass;
+      var jnOld = this.jnAcc;
+      this.jnAcc = clamp(jnOld + jn, -this.jnMax, this.jnMax);
+      jn = this.jnAcc - jnOld;
+      apply_impulses(a, b, this.r1, this.r2, n.x * jn, n.y * jn);
+    };
+    PinJoint.prototype.getImpulse = function() {
+      return Math.abs(this.jnAcc);
+    };
+    var SlideJoint = cp.SlideJoint = function(a, b, anchr1, anchr2, min, max) {
+      Constraint.call(this, a, b);
+      this.anchr1 = anchr1;
+      this.anchr2 = anchr2;
+      this.min = min;
+      this.max = max;
+      this.r1 = this.r2 = this.n = null;
+      this.nMass = 0;
+      this.jnAcc = this.jnMax = 0;
+      this.bias = 0;
+    };
+    SlideJoint.prototype = Object.create(Constraint.prototype);
+    SlideJoint.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      this.r1 = vrotate(this.anchr1, a.rot);
+      this.r2 = vrotate(this.anchr2, b.rot);
+      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
+      var dist = vlength(delta);
+      var pdist = 0;
+      if (dist > this.max) {
+        pdist = dist - this.max;
+        this.n = vnormalize_safe(delta);
+      } else if (dist < this.min) {
+        pdist = this.min - dist;
+        this.n = vneg(vnormalize_safe(delta));
+      } else {
+        this.n = vzero;
+        this.jnAcc = 0;
+      }
+      this.nMass = 1 / k_scalar(a, b, this.r1, this.r2, this.n);
+      var maxBias = this.maxBias;
+      this.bias = clamp(-bias_coef(this.errorBias, dt) * pdist / dt, -maxBias, maxBias);
+      this.jnMax = this.maxForce * dt;
+    };
+    SlideJoint.prototype.applyCachedImpulse = function(dt_coef) {
+      var jn = this.jnAcc * dt_coef;
+      apply_impulses(this.a, this.b, this.r1, this.r2, this.n.x * jn, this.n.y * jn);
+    };
+    SlideJoint.prototype.applyImpulse = function() {
+      if (0 === this.n.x && 0 === this.n.y) return;
+      var a = this.a;
+      var b = this.b;
+      var n = this.n;
+      var r1 = this.r1;
+      var r2 = this.r2;
+      var vr = relative_velocity(a, b, r1, r2);
+      var vrn = vdot(vr, n);
+      var jn = (this.bias - vrn) * this.nMass;
+      var jnOld = this.jnAcc;
+      this.jnAcc = clamp(jnOld + jn, -this.jnMax, 0);
+      jn = this.jnAcc - jnOld;
+      apply_impulses(a, b, this.r1, this.r2, n.x * jn, n.y * jn);
+    };
+    SlideJoint.prototype.getImpulse = function() {
+      return Math.abs(this.jnAcc);
+    };
+    var PivotJoint = cp.PivotJoint = function(a, b, anchr1, anchr2) {
+      Constraint.call(this, a, b);
+      if ("undefined" === typeof anchr2) {
+        var pivot = anchr1;
+        anchr1 = a ? a.world2Local(pivot) : pivot;
+        anchr2 = b ? b.world2Local(pivot) : pivot;
+      }
+      this.anchr1 = anchr1;
+      this.anchr2 = anchr2;
+      this.r1 = this.r2 = vzero;
+      this.k1 = new Vect(0, 0);
+      this.k2 = new Vect(0, 0);
+      this.jAcc = vzero;
+      this.jMaxLen = 0;
+      this.bias = vzero;
+    };
+    PivotJoint.prototype = Object.create(Constraint.prototype);
+    PivotJoint.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      this.r1 = vrotate(this.anchr1, a.rot);
+      this.r2 = vrotate(this.anchr2, b.rot);
+      k_tensor(a, b, this.r1, this.r2, this.k1, this.k2);
+      this.jMaxLen = this.maxForce * dt;
+      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
+      this.bias = vclamp(vmult(delta, -bias_coef(this.errorBias, dt) / dt), this.maxBias);
+    };
+    PivotJoint.prototype.applyCachedImpulse = function(dt_coef) {
+      apply_impulses(this.a, this.b, this.r1, this.r2, this.jAcc.x * dt_coef, this.jAcc.y * dt_coef);
+    };
+    PivotJoint.prototype.applyImpulse = function() {
+      var a = this.a;
+      var b = this.b;
+      var r1 = this.r1;
+      var r2 = this.r2;
+      var vr = relative_velocity(a, b, r1, r2);
+      var j = mult_k(vsub(this.bias, vr), this.k1, this.k2);
+      var jOld = this.jAcc;
+      this.jAcc = vclamp(vadd(this.jAcc, j), this.jMaxLen);
+      apply_impulses(a, b, this.r1, this.r2, this.jAcc.x - jOld.x, this.jAcc.y - jOld.y);
+    };
+    PivotJoint.prototype.getImpulse = function() {
+      return vlength(this.jAcc);
+    };
+    var GrooveJoint = cp.GrooveJoint = function(a, b, groove_a, groove_b, anchr2) {
+      Constraint.call(this, a, b);
+      this.grv_a = groove_a;
+      this.grv_b = groove_b;
+      this.grv_n = vperp(vnormalize(vsub(groove_b, groove_a)));
+      this.anchr2 = anchr2;
+      this.grv_tn = null;
+      this.clamp = 0;
+      this.r1 = this.r2 = null;
+      this.k1 = new Vect(0, 0);
+      this.k2 = new Vect(0, 0);
+      this.jAcc = vzero;
+      this.jMaxLen = 0;
+      this.bias = null;
+    };
+    GrooveJoint.prototype = Object.create(Constraint.prototype);
+    GrooveJoint.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      var ta = a.local2World(this.grv_a);
+      var tb = a.local2World(this.grv_b);
+      var n = vrotate(this.grv_n, a.rot);
+      var d = vdot(ta, n);
+      this.grv_tn = n;
+      this.r2 = vrotate(this.anchr2, b.rot);
+      var td = vcross(vadd(b.p, this.r2), n);
+      if (td <= vcross(ta, n)) {
+        this.clamp = 1;
+        this.r1 = vsub(ta, a.p);
+      } else if (td >= vcross(tb, n)) {
+        this.clamp = -1;
+        this.r1 = vsub(tb, a.p);
+      } else {
+        this.clamp = 0;
+        this.r1 = vsub(vadd(vmult(vperp(n), -td), vmult(n, d)), a.p);
+      }
+      k_tensor(a, b, this.r1, this.r2, this.k1, this.k2);
+      this.jMaxLen = this.maxForce * dt;
+      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
+      this.bias = vclamp(vmult(delta, -bias_coef(this.errorBias, dt) / dt), this.maxBias);
+    };
+    GrooveJoint.prototype.applyCachedImpulse = function(dt_coef) {
+      apply_impulses(this.a, this.b, this.r1, this.r2, this.jAcc.x * dt_coef, this.jAcc.y * dt_coef);
+    };
+    GrooveJoint.prototype.grooveConstrain = function(j) {
+      var n = this.grv_tn;
+      var jClamp = this.clamp * vcross(j, n) > 0 ? j : vproject(j, n);
+      return vclamp(jClamp, this.jMaxLen);
+    };
+    GrooveJoint.prototype.applyImpulse = function() {
+      var a = this.a;
+      var b = this.b;
+      var r1 = this.r1;
+      var r2 = this.r2;
+      var vr = relative_velocity(a, b, r1, r2);
+      var j = mult_k(vsub(this.bias, vr), this.k1, this.k2);
+      var jOld = this.jAcc;
+      this.jAcc = this.grooveConstrain(vadd(jOld, j));
+      apply_impulses(a, b, this.r1, this.r2, this.jAcc.x - jOld.x, this.jAcc.y - jOld.y);
+    };
+    GrooveJoint.prototype.getImpulse = function() {
+      return vlength(this.jAcc);
+    };
+    GrooveJoint.prototype.setGrooveA = function(value) {
+      this.grv_a = value;
+      this.grv_n = vperp(vnormalize(vsub(this.grv_b, value)));
+      this.activateBodies();
+    };
+    GrooveJoint.prototype.setGrooveB = function(value) {
+      this.grv_b = value;
+      this.grv_n = vperp(vnormalize(vsub(value, this.grv_a)));
+      this.activateBodies();
+    };
+    var defaultSpringForce = function(spring, dist) {
+      return (spring.restLength - dist) * spring.stiffness;
+    };
+    var DampedSpring = cp.DampedSpring = function(a, b, anchr1, anchr2, restLength, stiffness, damping) {
+      Constraint.call(this, a, b);
+      this.anchr1 = anchr1;
+      this.anchr2 = anchr2;
+      this.restLength = restLength;
+      this.stiffness = stiffness;
+      this.damping = damping;
+      this.springForceFunc = defaultSpringForce;
+      this.target_vrn = this.v_coef = 0;
+      this.r1 = this.r2 = null;
+      this.nMass = 0;
+      this.n = null;
+    };
+    DampedSpring.prototype = Object.create(Constraint.prototype);
+    DampedSpring.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      this.r1 = vrotate(this.anchr1, a.rot);
+      this.r2 = vrotate(this.anchr2, b.rot);
+      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
+      var dist = vlength(delta);
+      this.n = vmult(delta, 1 / (dist || Infinity));
+      var k = k_scalar(a, b, this.r1, this.r2, this.n);
+      assertSoft(0 !== k, "Unsolvable this.");
+      this.nMass = 1 / k;
+      this.target_vrn = 0;
+      this.v_coef = 1 - Math.exp(-this.damping * dt * k);
+      var f_spring = this.springForceFunc(this, dist);
+      apply_impulses(a, b, this.r1, this.r2, this.n.x * f_spring * dt, this.n.y * f_spring * dt);
+    };
+    DampedSpring.prototype.applyCachedImpulse = function(dt_coef) {};
+    DampedSpring.prototype.applyImpulse = function() {
+      var a = this.a;
+      var b = this.b;
+      var n = this.n;
+      var r1 = this.r1;
+      var r2 = this.r2;
+      var vrn = normal_relative_velocity(a, b, r1, r2, n);
+      var v_damp = (this.target_vrn - vrn) * this.v_coef;
+      this.target_vrn = vrn + v_damp;
+      v_damp *= this.nMass;
+      apply_impulses(a, b, this.r1, this.r2, this.n.x * v_damp, this.n.y * v_damp);
+    };
+    DampedSpring.prototype.getImpulse = function() {
+      return 0;
+    };
+    var defaultSpringTorque = function(spring, relativeAngle) {
+      return (relativeAngle - spring.restAngle) * spring.stiffness;
+    };
+    var DampedRotarySpring = cp.DampedRotarySpring = function(a, b, restAngle, stiffness, damping) {
+      Constraint.call(this, a, b);
+      this.restAngle = restAngle;
+      this.stiffness = stiffness;
+      this.damping = damping;
+      this.springTorqueFunc = defaultSpringTorque;
+      this.target_wrn = 0;
+      this.w_coef = 0;
+      this.iSum = 0;
+    };
+    DampedRotarySpring.prototype = Object.create(Constraint.prototype);
+    DampedRotarySpring.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      var moment = a.i_inv + b.i_inv;
+      assertSoft(0 !== moment, "Unsolvable spring.");
+      this.iSum = 1 / moment;
+      this.w_coef = 1 - Math.exp(-this.damping * dt * moment);
+      this.target_wrn = 0;
+      var j_spring = this.springTorqueFunc(this, a.a - b.a) * dt;
+      a.w -= j_spring * a.i_inv;
+      b.w += j_spring * b.i_inv;
+    };
+    DampedRotarySpring.prototype.applyImpulse = function() {
+      var a = this.a;
+      var b = this.b;
+      var wrn = a.w - b.w;
+      var w_damp = (this.target_wrn - wrn) * this.w_coef;
+      this.target_wrn = wrn + w_damp;
+      var j_damp = w_damp * this.iSum;
+      a.w += j_damp * a.i_inv;
+      b.w -= j_damp * b.i_inv;
+    };
+    var RotaryLimitJoint = cp.RotaryLimitJoint = function(a, b, min, max) {
+      Constraint.call(this, a, b);
+      this.min = min;
+      this.max = max;
+      this.jAcc = 0;
+      this.iSum = this.bias = this.jMax = 0;
+    };
+    RotaryLimitJoint.prototype = Object.create(Constraint.prototype);
+    RotaryLimitJoint.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      var dist = b.a - a.a;
+      var pdist = 0;
+      dist > this.max ? pdist = this.max - dist : dist < this.min && (pdist = this.min - dist);
+      this.iSum = 1 / (1 / a.i + 1 / b.i);
+      var maxBias = this.maxBias;
+      this.bias = clamp(-bias_coef(this.errorBias, dt) * pdist / dt, -maxBias, maxBias);
+      this.jMax = this.maxForce * dt;
+      this.bias || (this.jAcc = 0);
+    };
+    RotaryLimitJoint.prototype.applyCachedImpulse = function(dt_coef) {
+      var a = this.a;
+      var b = this.b;
+      var j = this.jAcc * dt_coef;
+      a.w -= j * a.i_inv;
+      b.w += j * b.i_inv;
+    };
+    RotaryLimitJoint.prototype.applyImpulse = function() {
+      if (!this.bias) return;
+      var a = this.a;
+      var b = this.b;
+      var wr = b.w - a.w;
+      var j = -(this.bias + wr) * this.iSum;
+      var jOld = this.jAcc;
+      this.bias < 0 ? this.jAcc = clamp(jOld + j, 0, this.jMax) : this.jAcc = clamp(jOld + j, -this.jMax, 0);
+      j = this.jAcc - jOld;
+      a.w -= j * a.i_inv;
+      b.w += j * b.i_inv;
+    };
+    RotaryLimitJoint.prototype.getImpulse = function() {
+      return Math.abs(joint.jAcc);
+    };
+    var RatchetJoint = cp.RatchetJoint = function(a, b, phase, ratchet) {
+      Constraint.call(this, a, b);
+      this.angle = 0;
+      this.phase = phase;
+      this.ratchet = ratchet;
+      this.angle = (b ? b.a : 0) - (a ? a.a : 0);
+      this.iSum = this.bias = this.jAcc = this.jMax = 0;
+    };
+    RatchetJoint.prototype = Object.create(Constraint.prototype);
+    RatchetJoint.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      var angle = this.angle;
+      var phase = this.phase;
+      var ratchet = this.ratchet;
+      var delta = b.a - a.a;
+      var diff = angle - delta;
+      var pdist = 0;
+      diff * ratchet > 0 ? pdist = diff : this.angle = Math.floor((delta - phase) / ratchet) * ratchet + phase;
+      this.iSum = 1 / (a.i_inv + b.i_inv);
+      var maxBias = this.maxBias;
+      this.bias = clamp(-bias_coef(this.errorBias, dt) * pdist / dt, -maxBias, maxBias);
+      this.jMax = this.maxForce * dt;
+      this.bias || (this.jAcc = 0);
+    };
+    RatchetJoint.prototype.applyCachedImpulse = function(dt_coef) {
+      var a = this.a;
+      var b = this.b;
+      var j = this.jAcc * dt_coef;
+      a.w -= j * a.i_inv;
+      b.w += j * b.i_inv;
+    };
+    RatchetJoint.prototype.applyImpulse = function() {
+      if (!this.bias) return;
+      var a = this.a;
+      var b = this.b;
+      var wr = b.w - a.w;
+      var ratchet = this.ratchet;
+      var j = -(this.bias + wr) * this.iSum;
+      var jOld = this.jAcc;
+      this.jAcc = clamp((jOld + j) * ratchet, 0, this.jMax * Math.abs(ratchet)) / ratchet;
+      j = this.jAcc - jOld;
+      a.w -= j * a.i_inv;
+      b.w += j * b.i_inv;
+    };
+    RatchetJoint.prototype.getImpulse = function(joint) {
+      return Math.abs(joint.jAcc);
+    };
+    var GearJoint = cp.GearJoint = function(a, b, phase, ratio) {
+      Constraint.call(this, a, b);
+      this.phase = phase;
+      this.ratio = ratio;
+      this.ratio_inv = 1 / ratio;
+      this.jAcc = 0;
+      this.iSum = this.bias = this.jMax = 0;
+    };
+    GearJoint.prototype = Object.create(Constraint.prototype);
+    GearJoint.prototype.preStep = function(dt) {
+      var a = this.a;
+      var b = this.b;
+      this.iSum = 1 / (a.i_inv * this.ratio_inv + this.ratio * b.i_inv);
+      var maxBias = this.maxBias;
+      this.bias = clamp(-bias_coef(this.errorBias, dt) * (b.a * this.ratio - a.a - this.phase) / dt, -maxBias, maxBias);
+      this.jMax = this.maxForce * dt;
+    };
+    GearJoint.prototype.applyCachedImpulse = function(dt_coef) {
+      var a = this.a;
+      var b = this.b;
+      var j = this.jAcc * dt_coef;
+      a.w -= j * a.i_inv * this.ratio_inv;
+      b.w += j * b.i_inv;
+    };
+    GearJoint.prototype.applyImpulse = function() {
+      var a = this.a;
+      var b = this.b;
+      var wr = b.w * this.ratio - a.w;
+      var j = (this.bias - wr) * this.iSum;
+      var jOld = this.jAcc;
+      this.jAcc = clamp(jOld + j, -this.jMax, this.jMax);
+      j = this.jAcc - jOld;
+      a.w -= j * a.i_inv * this.ratio_inv;
+      b.w += j * b.i_inv;
+    };
+    GearJoint.prototype.getImpulse = function() {
+      return Math.abs(this.jAcc);
+    };
+    GearJoint.prototype.setRatio = function(value) {
+      this.ratio = value;
+      this.ratio_inv = 1 / value;
+      this.activateBodies();
+    };
+    var SimpleMotor = cp.SimpleMotor = function(a, b, rate) {
+      Constraint.call(this, a, b);
+      this.rate = rate;
+      this.jAcc = 0;
+      this.iSum = this.jMax = 0;
+    };
+    SimpleMotor.prototype = Object.create(Constraint.prototype);
+    SimpleMotor.prototype.preStep = function(dt) {
+      this.iSum = 1 / (this.a.i_inv + this.b.i_inv);
+      this.jMax = this.maxForce * dt;
+    };
+    SimpleMotor.prototype.applyCachedImpulse = function(dt_coef) {
+      var a = this.a;
+      var b = this.b;
+      var j = this.jAcc * dt_coef;
+      a.w -= j * a.i_inv;
+      b.w += j * b.i_inv;
+    };
+    SimpleMotor.prototype.applyImpulse = function() {
+      var a = this.a;
+      var b = this.b;
+      var wr = b.w - a.w + this.rate;
+      var j = -wr * this.iSum;
+      var jOld = this.jAcc;
+      this.jAcc = clamp(jOld + j, -this.jMax, this.jMax);
+      j = this.jAcc - jOld;
+      a.w -= j * a.i_inv;
+      b.w += j * b.i_inv;
+    };
+    SimpleMotor.prototype.getImpulse = function() {
+      return Math.abs(this.jAcc);
+    };
+  }), {} ],
+  311: [ (function(require, module, exports) {
     module.exports = (function() {
       "use strict";
       function t() {
@@ -64541,7 +77383,7 @@
       return M;
     })();
   }), {} ],
-  287: [ (function(require, module, exports) {
+  312: [ (function(require, module, exports) {
     var _global = "undefined" === typeof window ? global : window;
     function defineMacro(name, defaultValue) {
       "undefined" === typeof _global[name] && (_global[name] = defaultValue);
@@ -64582,26 +77424,26 @@
     false;
     module.exports = cc;
   }), {
-    "./CCBoot": 2,
-    "./CCDebugger": 3,
-    "./DebugInfos": 4,
-    "./cocos2d": 238,
-    "./cocos2d/core/predefine": 198,
-    "./cocos2d/kazmath": 242,
-    "./cocos2d/shaders": 269,
-    "./extends": 273,
+    "./CCBoot": 1,
+    "./CCDebugger": 2,
+    "./DebugInfos": 3,
+    "./cocos2d": 242,
+    "./cocos2d/core/predefine": 201,
+    "./cocos2d/kazmath": 246,
+    "./cocos2d/shaders": 273,
+    "./extends": 288,
     "./package.json": void 0,
-    "./polyfill/array": 288,
-    "./polyfill/misc": 289,
-    "./polyfill/string": 290,
-    "./polyfill/typescript": 291
+    "./polyfill/array": 313,
+    "./polyfill/misc": 314,
+    "./polyfill/string": 315,
+    "./polyfill/typescript": 316
   } ],
-  288: [ (function(require, module, exports) {
+  313: [ (function(require, module, exports) {
     Array.isArray || (Array.isArray = function(arg) {
       return "[object Array]" === Object.prototype.toString.call(arg);
     });
   }), {} ],
-  289: [ (function(require, module, exports) {
+  314: [ (function(require, module, exports) {
     Math.sign || (Math.sign = function(x) {
       x = +x;
       if (0 === x || isNaN(x)) return x;
@@ -64623,7 +77465,7 @@
       };
     }
   }), {} ],
-  290: [ (function(require, module, exports) {
+  315: [ (function(require, module, exports) {
     String.prototype.startsWith || (String.prototype.startsWith = function(searchString, position) {
       position = position || 0;
       return this.lastIndexOf(searchString, position) === position;
@@ -64635,7 +77477,7 @@
       return -1 !== lastIndex && lastIndex === position;
     });
   }), {} ],
-  291: [ (function(require, module, exports) {
+  316: [ (function(require, module, exports) {
     var extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function(d, b) {
@@ -64885,5 +77727,5 @@
       return m ? m.call(o) : "function" === typeof __values ? __values(o) : o[Symbol.iterator]();
     };
   }), {} ]
-}, {}, [ 287 ]);
+}, {}, [ 312 ]);
 //# sourceMappingURL=cocos2d-js.js.map

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_run1",
+    "texture": "4ddWd8I65POYsRmStqaJJj",
+    "rect": [
+      6,
+      6,
+      242,
+      193
+    ],
+    "offset": [
+      0.5,
+      -0.5
+    ],
+    "originalSize": [
+      253,
+      204
+    ]
+  }
+}

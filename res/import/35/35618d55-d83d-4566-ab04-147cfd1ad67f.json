@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_s_bee_tex",
+    "texture": "5bL49LEEFFAYY/z9YIESc+",
+    "rect": [
+      1,
+      1,
+      123,
+      56
+    ],
+    "offset": [
+      -1.5,
+      3
+    ],
+    "originalSize": [
+      128,
+      64
+    ]
+  }
+}

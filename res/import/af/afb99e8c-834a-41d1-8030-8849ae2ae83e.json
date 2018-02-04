@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "card_bag",
+    "texture": "4a5AzMYiZAbrirecsegENA",
+    "rect": [
+      0,
+      0,
+      222,
+      221
+    ],
+    "offset": [
+      -0.5,
+      1
+    ],
+    "originalSize": [
+      223,
+      223
+    ]
+  }
+}
