@@ -128,9 +128,6 @@
                         if (div) {
                             div.style.backgroundImage = '';
                         }
-                        var body=document.getElementById("main");
-                        body.style.background = 'none';
-                        console.log(body.style.position);
                     }
                     cc.loader.onProgress = null;
                     console.log('Success to load scene: ' + launchScene);
