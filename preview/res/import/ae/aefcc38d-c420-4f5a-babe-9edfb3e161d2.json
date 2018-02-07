@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_s_snails_tex",
+    "texture": "ebN/McecdLH4UPpRCpWRXs",
+    "rect": [
+      1,
+      4,
+      44,
+      108
+    ],
+    "offset": [
+      -9,
+      6
+    ],
+    "originalSize": [
+      64,
+      128
+    ]
+  }
+}

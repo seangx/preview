@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "summer_tex",
+  "_atlasJson": "{\"imagePath\":\"summer_tex.png\",\"SubTexture\":[{\"x\":274,\"y\":186,\"width\":89,\"name\":\"shadow\",\"height\":22},{\"x\":262,\"y\":1,\"width\":77,\"name\":\"hand-left\",\"height\":87},{\"x\":1,\"y\":1,\"width\":175,\"name\":\"body\",\"height\":233},{\"y\":186,\"frameX\":0,\"frameHeight\":54,\"height\":51,\"frameY\":0,\"frameWidth\":94,\"width\":94,\"name\":\"moutch\",\"x\":178},{\"x\":178,\"y\":1,\"width\":82,\"name\":\"hand-right\",\"height\":94},{\"x\":178,\"y\":97,\"width\":87,\"name\":\"eye-1\",\"height\":87},{\"x\":1,\"y\":236,\"width\":10,\"name\":\"eye-2\",\"height\":10}],\"width\":512,\"name\":\"summer\",\"height\":256}",
+  "texture": {
+    "__uuid__": "b96apxa5FJAbdNDWvSRr7g"
+  }
+}

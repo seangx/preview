@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "spring_tex",
+    "texture": "4ek4nnYhVBP4H94y0siZdK",
+    "rect": [
+      1,
+      1,
+      253,
+      421
+    ],
+    "offset": [
+      -0.5,
+      44.5
+    ],
+    "originalSize": [
+      256,
+      512
+    ]
+  }
+}

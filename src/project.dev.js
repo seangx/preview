@@ -1037,7 +1037,7 @@ require = function e(t, n, r) {
         var oldAccY = this.accY;
         var oldJumpSpeed = this.jumpSpeed;
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
-          0 === opt.currentLevel ? self.jumpSpeed = oldJumpSpeed : self.jumpSpeed = self.jumpSpeed + 50;
+          0 === opt.currentLevel ? self.jumpSpeed = oldJumpSpeed : self.jumpSpeed = 1100;
         });
         this.node.on("jump", this.jump.bind(this));
         this.initPosY = this.node.position.y;

@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "monsters_s_flower_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"x\":1,\"y\":43,\"width\":25,\"name\":\"leaves1\",\"height\":19},{\"frameWidth\":24,\"y\":43,\"frameHeight\":19,\"height\":16,\"frameX\":-2,\"width\":21,\"name\":\"leaves2\",\"frameY\":-1,\"x\":53},{\"x\":39,\"y\":26,\"width\":12,\"name\":\"body\",\"height\":28},{\"x\":39,\"y\":1,\"width\":23,\"name\":\"mouth\",\"height\":23},{\"x\":1,\"y\":1,\"width\":36,\"name\":\"head\",\"height\":40}],\"width\":128,\"name\":\"monsters_s_flower\",\"imagePath\":\"monsters_s_flower_tex.png\",\"height\":64}",
+  "texture": {
+    "__uuid__": "49VxabJvBNTpgjNaqWvTH6"
+  }
+}

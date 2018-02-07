@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "role4_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"x\":114,\"y\":353,\"width\":89,\"name\":\"shadow\",\"height\":22},{\"x\":206,\"y\":1,\"width\":47,\"name\":\"hand-right\",\"height\":82},{\"x\":163,\"y\":170,\"width\":29,\"name\":\"leg-right\",\"height\":69},{\"x\":163,\"y\":241,\"width\":29,\"name\":\"leg-left\",\"height\":69},{\"x\":1,\"y\":321,\"width\":111,\"name\":\"body\",\"height\":174},{\"frameX\":0,\"y\":170,\"frameY\":0,\"height\":149,\"frameWidth\":160,\"frameHeight\":150,\"width\":160,\"name\":\"head\",\"x\":1},{\"frameX\":0,\"y\":321,\"frameY\":0,\"height\":30,\"frameWidth\":75,\"frameHeight\":31,\"width\":75,\"name\":\"eye\",\"x\":114},{\"x\":206,\"y\":85,\"width\":36,\"name\":\"hand-left\",\"height\":85},{\"frameX\":0,\"y\":312,\"frameY\":-4,\"height\":16,\"frameWidth\":28,\"frameHeight\":22,\"width\":28,\"name\":\"zui\",\"x\":191},{\"frameX\":0,\"y\":497,\"frameY\":0,\"height\":3,\"frameWidth\":71,\"frameHeight\":4,\"width\":71,\"name\":\"mei\",\"x\":1},{\"x\":1,\"y\":1,\"width\":203,\"name\":\"daji\",\"height\":167}],\"width\":256,\"name\":\"role4\",\"imagePath\":\"role4_tex.png\",\"height\":512}",
+  "texture": {
+    "__uuid__": "f0gLbFPPVJdqsIfwUMD89o"
+  }
+}

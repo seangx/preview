@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "winter_tex",
+  "_atlasJson": "{\"imagePath\":\"winter_tex.png\",\"SubTexture\":[{\"x\":194,\"y\":223,\"width\":89,\"name\":\"shadow\",\"height\":22},{\"y\":159,\"frameX\":-4,\"frameHeight\":63,\"height\":62,\"frameY\":-1,\"frameWidth\":48,\"width\":39,\"name\":\"jiao-left\",\"x\":194},{\"y\":159,\"frameX\":-8,\"frameHeight\":58,\"height\":52,\"frameY\":-6,\"frameWidth\":54,\"width\":46,\"name\":\"hand-left\",\"x\":235},{\"x\":1,\"y\":1,\"width\":191,\"name\":\"body\",\"height\":237},{\"x\":236,\"y\":94,\"width\":44,\"name\":\"eye-right1\",\"height\":44},{\"y\":94,\"frameX\":-2,\"frameHeight\":69,\"height\":63,\"frameY\":-3,\"frameWidth\":47,\"width\":40,\"name\":\"jiao\",\"x\":194},{\"y\":94,\"frameX\":-2,\"frameHeight\":31,\"height\":26,\"frameY\":-3,\"frameWidth\":41,\"width\":39,\"name\":\"zui\",\"x\":328},{\"x\":194,\"y\":1,\"width\":65,\"name\":\"hand-right\",\"height\":91},{\"x\":282,\"y\":94,\"width\":44,\"name\":\"eye-left1\",\"height\":44}],\"width\":512,\"name\":\"winter\",\"height\":256}",
+  "texture": {
+    "__uuid__": "e9k+RSKAtBiYqVAWWVsThF"
+  }
+}

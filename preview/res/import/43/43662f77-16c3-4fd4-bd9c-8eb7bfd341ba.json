@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "winter_tex",
+    "texture": "e9k+RSKAtBiYqVAWWVsThF",
+    "rect": [
+      7,
+      5,
+      360,
+      240
+    ],
+    "offset": [
+      -69,
+      3
+    ],
+    "originalSize": [
+      512,
+      256
+    ]
+  }
+}

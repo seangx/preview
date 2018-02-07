@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "monsters_s_bee_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"frameWidth\":22,\"y\":1,\"frameHeight\":23,\"height\":17,\"frameX\":-2,\"width\":18,\"name\":\"hand_right\",\"frameY\":-5,\"x\":106},{\"frameWidth\":23,\"y\":39,\"frameHeight\":23,\"height\":18,\"frameX\":0,\"width\":20,\"name\":\"hand_left\",\"frameY\":-3,\"x\":1},{\"x\":75,\"y\":1,\"width\":29,\"name\":\"body2\",\"height\":37},{\"frameWidth\":19,\"y\":20,\"frameHeight\":23,\"height\":20,\"frameX\":-3,\"width\":15,\"name\":\"body\",\"frameY\":-3,\"x\":106},{\"frameWidth\":25,\"y\":40,\"frameHeight\":19,\"height\":12,\"frameX\":-4,\"width\":17,\"name\":\"head\",\"frameY\":-4,\"x\":23},{\"frameWidth\":18,\"y\":40,\"frameHeight\":18,\"height\":14,\"frameX\":-2,\"width\":14,\"name\":\"eye_left\",\"frameY\":-2,\"x\":42},{\"x\":1,\"y\":1,\"width\":36,\"name\":\"wing_left\",\"height\":36},{\"x\":39,\"y\":1,\"width\":34,\"name\":\"wing_right\",\"height\":37},{\"frameWidth\":17,\"y\":40,\"frameHeight\":16,\"height\":14,\"frameX\":-2,\"width\":14,\"name\":\"eye_right\",\"frameY\":-1,\"x\":58}],\"width\":128,\"name\":\"monsters_s_bee\",\"imagePath\":\"monsters_s_bee_tex.png\",\"height\":64}",
+  "texture": {
+    "__uuid__": "5bL49LEEFFAYY/z9YIESc+"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_s_frog_tex",
+    "texture": "easLAoHQJOt6aZOiO8QT7h",
+    "rect": [
+      1,
+      1,
+      111,
+      69
+    ],
+    "offset": [
+      -7.5,
+      28.5
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}
