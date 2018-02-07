@@ -468,23 +468,14 @@ require = function e(t, n, r) {
           type: cc.Node
         },
         bgSpeed: 0,
-        playerNode: cc.Node
+        playerNode: cc.Node,
+        speedScaleRate: 0
       },
-      onLoad: function onLoad() {
-        var _this = this;
-        this.oldBgSpeed = this.bgSpeed;
-        _global2.default.account.gameCtl.onQuick(function() {
-          console.log("加速跑");
-          _this.bgSpeed += defines.addSpeed;
-        });
-        _global2.default.account.gameCtl.onQuickEnd(function() {
-          _this.bgSpeed = _this.oldBgSpeed;
-        });
-      },
+      onLoad: function onLoad() {},
       update: function update(dt) {
         if (_global2.default.account.gameCtl.isRunning()) {
           var com = this.playerNode.getComponent("player");
-          var speed = com.speeds[com.speedLevel];
+          var speed = com.getNowSpeed() * this.speedScaleRate;
           for (var i = 0; i < this.bgList.length; i++) this.bgList[i].x -= speed * dt * defines.timeScale;
           for (var _i = 0; _i < this.bgList.length; _i++) if (this.bgList[_i].position.x < -this.bgList[_i].width) {
             var index = _i + 1;
@@ -726,23 +717,33 @@ require = function e(t, n, r) {
         this.setState(EnemyState.run);
         this.node.on("fly", function() {
           console.log("飞走");
-          var action1 = cc.bezierTo(1, [ cc.p(78, 9), cc.p(86, 302), cc.p(418, 319) ]);
-          _this.node.runAction(cc.sequence(action1, cc.callFunc(function() {
+          var action1 = cc.bezierTo(.5, [ cc.p(78, 9), cc.p(86, 302), cc.p(418, 319) ]);
+          var rotation = cc.rotateTo(.5, 1440);
+          var scal1 = cc.scaleTo(.5, .2, .2);
+          var finished = cc.callFunc(function() {
+            console.log("enemy dead");
             _this.node.dead = true;
-          })));
-          var raaction = cc.rotateTo(1, 1440);
-          _this.node.runAction(raaction);
-          _this.setState(EnemyState.tipsEnd);
-          var scal1 = cc.scaleTo(1, .2, .2);
-          _this.node.runAction(scal1);
+          });
+          _this.node.runAction(cc.sequence(cc.spawn([ action1, rotation, scal1 ]), finished));
+          _this.node.getComponent(cc.BoxCollider).enabled = false;
           _this.node.isFly = true;
         });
+      },
+      onEnable: function onEnable() {
+        this.node.getComponent(cc.BoxCollider).enabled = true;
+        this.state = EnemyState.run;
+        this.node.scale = 1;
       },
       update: function update() {
         if (this.state === EnemyState.run && !_global2.default.account.gameCtl.isQuick()) {
           var dis = cc.pDistance(this.node.position, _global2.default.account.playerData.playerNode.position);
-          var speedX = this.node.getComponent("stub").speedX;
-          dis / speedX < 2.4 && this.setState(EnemyState.tipsBegan);
+          var player = _global2.default.account.playerData.playerNode.getComponent("player");
+          var speedX = player.speeds[player.speedLevel];
+          var animationScale = speedX / player.speeds[0];
+          if (dis / (speedX / animationScale) < 1.8) {
+            player.node.emit("attack");
+            this.setState(EnemyState.tipsEnd);
+          }
         }
       },
       setState: function setState(state) {
@@ -961,14 +962,19 @@ require = function e(t, n, r) {
         }
       },
       onLoad: function onLoad() {
+        var _this = this;
         cc.director.getCollisionManager().enabled = true;
         console.log("enter animate");
         this.playerNode.emit("walk");
-        var action = cc.moveTo(1, cc.p(this.playerNode.position.x + 400, this.playerNode.position.y));
-        this.playerNode.runAction(cc.sequence(action, cc.callFunc(function() {
-          console.log("开始游戏");
-          _global2.default.account.gameCtl.run();
-        })));
+        var resList = [];
+        for (var i in defines.config) resList.push(defines.config[i]);
+        _global2.default.resourcesManager.loadList(resList, function() {
+          var action = cc.moveTo(1, cc.p(_this.playerNode.position.x + 400, _this.playerNode.position.y));
+          _this.playerNode.runAction(cc.sequence(action, cc.callFunc(function() {
+            console.log("开始游戏");
+            _global2.default.account.gameCtl.run();
+          })));
+        });
       },
       start: function start() {},
       update: function update(dt) {
@@ -988,6 +994,10 @@ require = function e(t, n, r) {
     });
     var _account = require("./data/account");
     var _account2 = _interopRequireDefault(_account);
+    var _resourcesManager = require("./utility/resources-manager");
+    var _resourcesManager2 = _interopRequireDefault(_resourcesManager);
+    var _poolManager = require("./utility/pool-manager");
+    var _poolManager2 = _interopRequireDefault(_poolManager);
     function _interopRequireDefault(obj) {
       return obj && obj.__esModule ? obj : {
         default: obj
@@ -995,11 +1005,15 @@ require = function e(t, n, r) {
     }
     var global = {};
     global.account = (0, _account2.default)();
+    global.resourcesManager = (0, _resourcesManager2.default)();
+    global.poolManager = (0, _poolManager2.default)();
     exports.default = global;
     module.exports = exports["default"];
     cc._RF.pop();
   }, {
-    "./data/account": "account"
+    "./data/account": "account",
+    "./utility/pool-manager": "pool-manager",
+    "./utility/resources-manager": "resources-manager"
   } ],
   jump: [ function(require, module, exports) {
     "use strict";
@@ -1020,18 +1034,24 @@ require = function e(t, n, r) {
       },
       onLoad: function onLoad() {
         var self = this;
+        var oldAccY = this.accY;
+        var oldJumpSpeed = this.jumpSpeed;
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
-          0 === opt.currentLevel ? self.jumpSpeed = 1300 : self.jumpSpeed = 1600;
+          0 === opt.currentLevel ? self.jumpSpeed = oldJumpSpeed : self.jumpSpeed = self.jumpSpeed + 50;
         });
         this.node.on("jump", this.jump.bind(this));
         this.initPosY = this.node.position.y;
         this.timeSubSpeed = 0;
       },
       jump: function jump() {
+        console.log("on jump");
         void 0 === this.speedY && (this.speedY = this.jumpSpeed);
       },
       playJumpSound: function playJumpSound(sound) {
-        void 0 === this.speedY && cc.audioEngine.play(sound, false, 1);
+        if (!this.playedSound) {
+          this.playedSound = true;
+          cc.audioEngine.play(sound, false, 1);
+        }
       },
       update: function update(dt) {
         if (void 0 !== this.speedY) {
@@ -1043,6 +1063,7 @@ require = function e(t, n, r) {
           this.speedY = void 0;
           console.log("落地");
           this.node.emit("jump-end");
+          this.playedSound = false;
         }
       }
     });
@@ -1071,6 +1092,46 @@ require = function e(t, n, r) {
     });
     cc._RF.pop();
   }, {} ],
+  move: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "beb019rdopO/65wlL4RKBK+", "move");
+    "use strict";
+    var _global = require("../../global");
+    var _global2 = _interopRequireDefault(_global);
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {
+        default: obj
+      };
+    }
+    cc.Class({
+      extends: cc.Component,
+      properties: {},
+      onLoad: function onLoad() {
+        var _this = this;
+        this.node.on("init", function(event) {
+          var detail = event.detail;
+          _this.playerNode = detail.playerNode;
+          _this.node.x = detail.x;
+          _this.node.y = detail.y;
+          _this.distance = detail.distance;
+          _this.node.zIndex = 0;
+          _this.node.dead = false;
+          _this.node.scale = 1;
+        });
+      },
+      update: function update(dt) {
+        if (!_global2.default.account.gameCtl.isRunning()) return;
+        if (this.playerNode) {
+          this.speed = this.playerNode.getComponent("player").getNowSpeed();
+          this.node.x -= this.speed * defines.timeScale * dt;
+        }
+        this.node.x + .5 * this.node.width < -.5 * cc.winSize.width - 200 && (this.node.dead = true);
+      }
+    });
+    cc._RF.pop();
+  }, {
+    "../../global": "global"
+  } ],
   pauseLayer: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "e38d5hWP6VOy6jvMdAyumJI", "pauseLayer");
@@ -1091,6 +1152,7 @@ require = function e(t, n, r) {
          case "resume":
           _global2.default.account.gameCtl.resume();
           this.node.destroy();
+          cc.audioEngine.resumeAll();
         }
       }
     });
@@ -1155,12 +1217,16 @@ require = function e(t, n, r) {
         jumpAudio: cc.AudioClip,
         attackAudio: cc.AudioClip,
         eatAudio: cc.AudioClip,
+        beAttacked: cc.AudioClip,
+        backgroundMusic: cc.AudioClip,
         speeds: [ cc.Float ],
         speedLevel: 0,
         uiSpeed: cc.ProgressBar
       },
       onLoad: function onLoad() {
         var _this = this;
+        cc.audioEngine.play(this.backgroundMusic, true, 1);
+        this.node.on("jump", this.onJump.bind(this));
         _global2.default.account.gameCtl.onTipsBegan(function() {
           console.log("游戏暂停");
         });
@@ -1184,30 +1250,53 @@ require = function e(t, n, r) {
         _global2.default.account.playerData.playerNode = this.node;
       },
       start: function start() {},
+      getNowSpeed: function getNowSpeed() {
+        return this.speeds[this.speedLevel];
+      },
       onJump: function onJump(event) {
-        console.log("on jump");
+        console.log("on jump audio");
         var com = this.node.getComponent("jump");
         com.playJumpSound(this.jumpAudio);
       },
       onCollisionEnter: function onCollisionEnter(other, self) {
-        if ("success" === this.tipsResult && other.getComponent("enemy")) {
+        var _this2 = this;
+        if (other.getComponent("enemy")) {
           cc.audioEngine.play(this.attackAudio, false, 1);
           other.node.emit("fly");
-          this.node.emit("walk");
-          _global2.default.account.gameCtl.attackEnd();
+          setTimeout(function() {
+            _this2.node.emit("walk");
+          }, 1);
           this.speedLevel++;
           this.speedLevel = Math.min(this.speedLevel, this.speeds.length - 1);
+          self.node.emit("time-scale", this.speeds[this.speedLevel] / this.speeds[0]);
           _global2.default.account.gameCtl.event.fire("speed-changed", {
             currentLevel: this.speedLevel,
             maxLevel: this.speeds.length - 1,
             speedValue: this.speeds[this.speedLevel]
           });
         }
+        if (other.getComponent("stub-tag")) {
+          console.log("blink");
+          this.speedLevel--;
+          this.speedLevel = Math.max(this.speedLevel, 0);
+          this.changeSpeed();
+          cc.audioEngine.play(this.beAttacked, false, 1);
+          var animate = this.body.getComponent(cc.Animation);
+          animate.play("be-attacked");
+        }
         if (other.getComponent("coin")) {
           cc.audioEngine.play(this.eatAudio, false, 1);
           other.node.emit("fly");
           _global2.default.account.playerData.goldCount++;
         }
+      },
+      changeSpeed: function changeSpeed() {
+        this.node.emit("time-scale", this.speeds[this.speedLevel] / this.speeds[0]);
+        _global2.default.account.gameCtl.event.fire("speed-changed", {
+          currentLevel: this.speedLevel,
+          maxLevel: this.speeds.length - 1,
+          speedValue: this.speeds[this.speedLevel]
+        });
       },
       onCollisionStay: function onCollisionStay(other, self) {},
       onCollisionExit: function onCollisionExit(other, self) {}
@@ -1216,6 +1305,80 @@ require = function e(t, n, r) {
   }, {
     "./../global": "global"
   } ],
+  "pool-manager": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "fc79bJsEulMzJmmovwARlL5", "pool-manager");
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var PoolManager = function PoolManager() {
+      var that = {};
+      var PoolResources = {};
+      var PrefabResources = {};
+      that.createPool = function(type, prefab, count) {
+        if (!PoolResources.hasOwnProperty(type)) {
+          PoolResources[type] = new cc.NodePool();
+          PrefabResources[type] = prefab;
+          var c = 5;
+          count && (c = count);
+          for (var i = 0; i < c; i++) {
+            var node = cc.instantiate(prefab);
+            PoolResources[type].put(node);
+          }
+        }
+      };
+      that.getNode = function(type) {
+        var node = null;
+        if (PoolResources.hasOwnProperty(type)) {
+          if (PoolResources[type].size() > 0) node = PoolResources[type].get(); else {
+            node = cc.instantiate(PrefabResources[type]);
+            PoolResources[type].put(node);
+          }
+          return node;
+        }
+        return null;
+      };
+      that.putNode = function(type, node) {
+        PoolResources.hasOwnProperty(type) && PoolResources[type].put(node);
+      };
+      return that;
+    };
+    exports.default = PoolManager;
+    module.exports = exports["default"];
+    cc._RF.pop();
+  }, {} ],
+  "resources-manager": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "e6b76+5sa1COIL89xTdsJxz", "resources-manager");
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var ResourcesManager = function ResourcesManager() {
+      var that = {};
+      that.resources = {};
+      var load = function load(resPath, cb) {
+        cc.loader.loadRes(resPath, function(err, res) {
+          err && console.log("err =" + JSON.stringify(err));
+          cb && cb(resPath, res);
+        });
+      };
+      that.loadList = function(resList, cb) {
+        var loadIndex = 0;
+        var loadCb = function loadCb(resPath, res) {
+          that.resources[resPath] = res;
+          loadIndex++;
+          loadIndex === resList.length && cb && cb();
+        };
+        for (var i = 0; i < resList.length; i++) load(resList[i], loadCb);
+      };
+      return that;
+    };
+    exports.default = ResourcesManager;
+    module.exports = exports["default"];
+    cc._RF.pop();
+  }, {} ],
   "stub-controller": [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "2810dnFOCtJC7nz/gCPht7h", "stub-controller");
@@ -1258,157 +1421,78 @@ require = function e(t, n, r) {
       },
       onLoad: function onLoad() {
         var _this = this;
-        this.player = this.playerNode.getComponent("player");
-        this.stubList = [];
-        this.addStubIndex = 0;
-        this.prizeList = [];
-        this.enemyList = [];
-        this.coinList = [];
-        this.addStub();
-        this.addCoinFlag = 0;
-        this.addCoinFlagDurection = 4;
-        this.addCoinDurection = 0;
-        _global2.default.account.gameCtl.onPause(function() {
-          for (var i = 0; i < _this.stubList.length; i++) {
-            var node = _this.stubList[i];
-            node.emit("time-scale", 0);
-          }
-          for (var _i = 0; _i < _this.coinList.length; _i++) {
-            var coin = _this.coinList[_i];
-            coin.emit("pause");
-          }
-        });
-        _global2.default.account.gameCtl.onResume(function() {
-          for (var i = 0; i < _this.stubList.length; i++) {
-            var node = _this.stubList[i];
-            console.log("on resume = " + defines.timeScale);
-            node.emit("time-scale", defines.timeScale);
-          }
-          for (var _i2 = 0; _i2 < _this.coinList.length; _i2++) {
-            var coin = _this.coinList[_i2];
-            coin.emit("resume");
-          }
-        });
-        _global2.default.account.gameCtl.onQuick(function() {
-          for (var i = 0; i < _this.stubList.length; i++) {
-            var node = _this.stubList[i];
-            node.emit("quick");
-          }
-          for (var _i3 = 0; _i3 < _this.coinList.length; _i3++) {
-            var coin = _this.coinList[_i3];
-            coin.emit("quick");
-          }
-        });
-        _global2.default.account.gameCtl.onQuickEnd(function() {
-          for (var i = 0; i < _this.stubList.length; i++) {
-            var node = _this.stubList[i];
-            node.emit("quick-end");
-          }
-          for (var _i4 = 0; _i4 < _this.coinList.length; _i4++) {
-            var coin = _this.coinList[_i4];
-            coin.emit("quick-end");
-          }
-        });
-        _global2.default.account.gameCtl.onTimeScale(function() {
-          for (var i = 0; i < _this.stubList.length; i++) {
-            var node = _this.stubList[i];
-            node.emit("time-scale", defines.timeScale);
-          }
-        });
+        this.levelNodeIndex = 0;
+        this.levelNodeList = [];
         this.initPool();
+        _global2.default.account.gameCtl.onRun(function() {
+          var config = _global2.default.resourcesManager.resources[defines.config.gameConfig].config1;
+          _this.levelConfig = config;
+          console.log("game config = " + JSON.stringify(_this.levelConfig));
+        });
       },
       initPool: function initPool() {
-        this.coinPool = new cc.NodePool();
-        var initCount = 6;
-        for (var i = 0; i < initCount; i++) {
-          var coin = cc.instantiate(this.prizePrefab);
-          this.coinPool.put(coin);
+        _global2.default.poolManager.createPool(defines.poolNodeType.coin, this.prizePrefab, 6);
+        _global2.default.poolManager.createPool(defines.poolNodeType.stub, this.stubPrefab, 6);
+        _global2.default.poolManager.createPool(defines.poolNodeType.enemy, this.enemyPrefabList[0], 6);
+      },
+      addLevelNode: function addLevelNode() {
+        if (this.levelNodeIndex >= this.levelConfig.length) {
+          this.levelNodeIndex = 0;
+          return;
         }
+        var config = this.levelConfig[this.levelNodeIndex];
+        console.log("config = " + JSON.stringify(config));
+        var type = config.type;
+        var node = _global2.default.poolManager.getNode(type);
+        node.type = type;
+        node.parent = this.gameNode;
+        node.emit("init", {
+          playerNode: this.playerNode,
+          x: .5 * cc.winSize.width + .5 * node.width,
+          y: config.y,
+          distance: config.distance
+        });
+        this.levelNodeList.push(node);
+        this.levelNodeIndex++;
       },
       update: function update(dt) {
-        for (var i = 0; i < this.stubList.length; i++) {
-          var enemy = this.stubList[i];
-          if (true === enemy.dead) {
-            this.stubList.splice(i, 1);
-            enemy.destroy();
+        if (this.levelConfig) if (0 === this.levelNodeList.length) this.addLevelNode(); else {
+          var maxX = -2e4;
+          var maxNode = void 0;
+          for (var i = 0; i < this.levelNodeList.length; i++) {
+            var node = this.levelNodeList[i];
+            if (node.x > maxX) {
+              maxX = node.x;
+              maxNode = node;
+            }
+          }
+          var distance = maxNode.getComponent("move").distance;
+          .5 * cc.winSize.width - (.5 * maxNode.width + maxX) > distance && this.addLevelNode();
+        }
+        for (var _i = 0; _i < this.levelNodeList.length; _i++) {
+          var _node = this.levelNodeList[_i];
+          if (true === _node.dead) {
+            this.levelNodeList.splice(_i, 1);
+            _global2.default.poolManager.putNode(_node.type, _node);
           }
         }
-        for (var _i5 = 0; _i5 < this.coinList.length; _i5++) {
-          var coin = this.coinList[_i5];
-          if (coin.x < -.5 * cc.winSize.width) {
-            this.coinPool.put(coin);
-            this.coinList.splice(_i5, 1);
-          }
-        }
-        if (0 !== this.stubList.length && this.stubList[this.stubList.length - 1].position.x < .2 * cc.winSize.width) if (3 === this.addStubIndex) {
-          this.addStubIndex = 0;
-          this.addEnemy();
-        } else this.addStub();
-        this.addCoinFlagDurection -= dt;
-        if (this.addCoinFlagDurection <= 0 && 0 === this.addCoinFlag) {
-          this.addCoinFlagDurection = 4;
-          this.addCoinFlag = Math.floor(3 * Math.random() + 2);
-        }
-        if (this.addCoinFlag > 0) if (0 === this.coinList.length) this.addCoin(); else {
-          var maxX = -1e4;
-          for (var _i6 = 0; _i6 < this.coinList.length; _i6++) this.coinList[_i6].x > maxX && (maxX = this.coinList[_i6].x);
-          this.initPrizePosNodeList[0].x - maxX > 300 && this.addCoin();
-        }
-      },
-      addCoin: function addCoin() {
-        this.addCoinFlag--;
-        var node = this.initPrizePosNodeList[Math.floor(Math.random() * this.initPrizePosNodeList.length)];
-        var coin = null;
-        if (this.coinPool.size() > 0) {
-          console.log("取出一个对象来");
-          coin = this.coinPool.get();
-        } else {
-          console.log("对象池不够用了");
-          coin = cc.instantiate(this.prizePrefab);
-        }
-        coin.zIndex = 0;
-        coin.parent = this.gameNode;
-        coin.position = node.position;
-        coin.scale = 1;
-        coin.getComponent("stub") && coin.getComponent("stub").initWithData({
-          speed: this.player.speeds[this.player.speedLevel],
-          isQuick: _global2.default.account.gameCtl.isQuick(),
-          manager: this
-        });
-        coin.dead = false;
-        this.coinList.push(coin);
-      },
-      addStub: function addStub() {
-        var stub = this.createStub(this.initPosNode, this.stubPrefab);
-        this.stubList.push(stub);
-        this.addStubIndex++;
-      },
-      addPrize: function addPrize() {
-        var stub = this.createStub(this.initPrizePosNodeList[Math.floor(Math.random() * this.initPrizePosNodeList.length)], this.prizePrefab);
-        stub.zIndex = 2;
-        this.prizeList.push(stub);
-      },
-      addEnemy: function addEnemy() {
-        var enemy = this.createStub(this.initPosNode, this.enemyPrefabList[0]);
-        enemy.emit("init-manager", this);
-        this.stubList.push(enemy);
-      },
-      createStub: function createStub(initPos, prefab) {
-        var stub = cc.instantiate(prefab);
-        stub.zIndex = 0;
-        stub.parent = this.gameNode;
-        stub.position = initPos.position;
-        stub.getComponent("stub") && stub.getComponent("stub").initWithData({
-          speed: this.player.speeds[this.player.speedLevel],
-          isQuick: _global2.default.account.gameCtl.isQuick()
-        });
-        return stub;
       }
     });
     cc._RF.pop();
   }, {
     "../global": "global"
   } ],
+  "stub-tag": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "51b7dxuR9NEFLO8XP7DD1NP", "stub-tag");
+    "use strict";
+    cc.Class({
+      extends: cc.Component,
+      properties: {},
+      start: function start() {}
+    });
+    cc._RF.pop();
+  }, {} ],
   stub: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "23141ICrbhAh46D7my/c5US", "stub");
@@ -1449,17 +1533,11 @@ require = function e(t, n, r) {
           _this.fly = true;
           console.log("飞走了");
         });
-        _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
-          console.log("player speed changed:", opt.speedValue);
-          self.speedX = opt.speedValue;
-        });
+        _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {});
       },
       update: function update(dt) {
         _global2.default.account.gameCtl.isRunning() && this.speedX && false === this.fly && (this.node.position = cc.p(this.node.position.x - this.speedX * dt * defines.timeScale, this.node.position.y));
-        this.node.position.x + .5 * this.node.width < -.5 * cc.winSize.width ? this.node.dead = true : this.node.dead = false;
-      },
-      onDestroy: function onDestroy() {
-        console.log("销毁障碍物");
+        this.node.position.x + .5 * this.node.width < -.5 * cc.winSize.width && (this.node.dead = true);
       }
     });
     cc._RF.pop();
@@ -1579,7 +1657,8 @@ require = function e(t, n, r) {
         runButtonIcon: {
           default: null,
           type: cc.Node
-        }
+        },
+        particle: cc.Node
       },
       onLoad: function onLoad() {
         var _this = this;
@@ -1644,12 +1723,14 @@ require = function e(t, n, r) {
           var node = cc.instantiate(this.pauseLayer);
           node.parent = this.node;
           _global2.default.account.gameCtl.pause();
+          cc.audioEngine.pauseAll();
         }
       },
       update: function update(dt) {
         if (_global2.default.account.gameCtl.isRunning()) {
           this.currentTime += dt;
           this.runProgress.getComponent("mask-progress").setProgress((this.totalTime - this.currentTime) / this.totalTime);
+          this.particle.x = this.runProgress.x + this.runProgress.width;
           this.coinCountLabel.string = _global2.default.account.playerData.goldCount + "";
         }
       }
@@ -1658,5 +1739,5 @@ require = function e(t, n, r) {
   }, {
     "./../global": "global"
   } ]
-}, {}, [ "account", "game-ctl", "player-data", "bg-controller", "DragonBonesCtrl", "dargon-bone-ctl", "distance-node", "jump", "mask-progress", "stub", "tips-ctl", "game", "player", "coin", "enemy", "pauseLayer", "stub-controller", "ui-controller", "global", "event-listener" ]);
+}, {}, [ "account", "game-ctl", "player-data", "bg-controller", "DragonBonesCtrl", "dargon-bone-ctl", "distance-node", "jump", "mask-progress", "move", "stub", "tips-ctl", "game", "player", "coin", "enemy", "pauseLayer", "stub-tag", "stub-controller", "ui-controller", "global", "event-listener", "pool-manager", "resources-manager" ]);
 //# sourceMappingURL=project.dev.js.map

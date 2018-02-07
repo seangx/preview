@@ -14,6 +14,10 @@ window._CCSettings = {
                 "resources/animates/coin.anim",
                 "cc.AnimationClip"
             ],
+            "a9bhGc3EBLzKRTnRWvy7X7": [
+                "resources/config/game-config.json",
+                "cc.RawAsset"
+            ],
             "977b+CqBJAa4IHS+iruUCh": [
                 "resources/font/enligsh-chinese",
                 "cc.SpriteFrame",
@@ -173,6 +177,15 @@ window._CCSettings = {
             ],
             "722jmEsXNOWqPzUtvJBJha": [
                 "resources/game/bg/树5.png",
+                "cc.Texture2D"
+            ],
+            "3cSM9OyglAo5yTcbnWgjZy": [
+                "resources/game/obstacle",
+                "cc.SpriteFrame",
+                1
+            ],
+            "b1WpSSm2tMx4Svi3xfPRLQ": [
+                "resources/game/obstacle.png",
                 "cc.Texture2D"
             ],
             "74nkR5PO1IEIA1tx694cQu": [
@@ -379,12 +392,29 @@ window._CCSettings = {
                 "resources/game/role/winter_tex.png",
                 "cc.Texture2D"
             ],
+            "a8s8GmZdNA8ougp009pVAM": [
+                "resources/pp/particle_texture.plist",
+                "cc.ParticleAsset"
+            ],
+            "0foLmoin1IEKttrQ6z0gBP": [
+                "resources/pp/roll",
+                "cc.SpriteFrame",
+                1
+            ],
+            "bcE6n/+8dD5agePeqGSPi5": [
+                "resources/pp/roll.png",
+                "cc.Texture2D"
+            ],
             "0eCmw5HBtM2ob/wDsf6UVR": [
                 "resources/sound/attack.mp3",
                 "cc.AudioClip"
             ],
             "dfdblk2/FLNJoccqvV4gU1": [
                 "resources/sound/background.mp3",
+                "cc.AudioClip"
+            ],
+            "6a1x1HC0FGU5yVYsYqkm8s": [
+                "resources/sound/be-attacked.mp3",
                 "cc.AudioClip"
             ],
             "8fDu2TnHxFFLXCK7Pbglbc": [
@@ -696,16 +726,14 @@ window._CCSettings = {
         }
     ],
     "packedAssets": {
-        "06be3851d": [
-            "3fJddpBY5H+bAmvk8jQTJQ",
-            "977b+CqBJAa4IHS+iruUCh"
-        ],
-        "07b7dc815": [
+        "037b1b60f": [
+            "05761X6YpHe4zcndAIdRRs",
             "0cXJp4WRtE4r8t1ouIvddX",
             "21qczJHY9HWIdV/KyC57WB",
             "29FYIk+N1GYaeWH/q1NxQO",
             "2bXsWvC21C6L9Ffmx19uc6",
             "3a2nQLzl9Jc5wzXd6ZoSg5",
+            "3cSM9OyglAo5yTcbnWgjZy",
             "3eIPRKoX5IVIczczYK8/pt",
             "3fFK//mABA3YTzP+rgfd9a",
             "47/38LOdpDn55+oOIPZllw",
@@ -752,6 +780,10 @@ window._CCSettings = {
             "f0BIwQ8D5Ml7nTNQbh1YlS",
             "f0txYfLLBIwI0cSzK+RoSJ",
             "f1hO0bFGlN3K2jLXx7YXBy"
+        ],
+        "06be3851d": [
+            "3fJddpBY5H+bAmvk8jQTJQ",
+            "977b+CqBJAa4IHS+iruUCh"
         ]
     },
     "orientation": "landscape",
