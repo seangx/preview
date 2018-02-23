@@ -713,7 +713,8 @@ window._CCSettings = {
     },
     "jsList": [
         "assets/scripts/defines.js",
-        "assets/scripts/utility/jquery-1.12.3.min.js"
+        "assets/scripts/utility/jquery-1.12.3.min.js",
+        "assets/scripts/utility/utils.js"
     ],
     "launchScene": "db://assets/scene/test.fire",
     "scenes": [
