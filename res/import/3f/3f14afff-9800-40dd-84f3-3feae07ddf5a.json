@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "树1",
+    "texture": "96P7KvApZHRoELllia+T8Q",
+    "rect": [
+      6,
+      0,
+      674,
+      730
+    ],
+    "offset": [
+      2,
+      0
+    ],
+    "originalSize": [
+      682,
+      730
+    ]
+  }
+}

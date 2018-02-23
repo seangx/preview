@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "after_scene_3",
+    "texture": "aaWuYFOeJPC6eb3v1SRTy1",
+    "rect": [
+      0,
+      0,
+      640,
+      377
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      640,
+      377
+    ]
+  }
+}

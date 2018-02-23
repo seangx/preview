@@ -1,8 +1,0 @@
-{
-  "__type__": "dragonBones.DragonBonesAtlasAsset",
-  "_name": "autumn_tex",
-  "_atlasJson": "{\"imagePath\":\"autumn_tex.png\",\"SubTexture\":[{\"x\":332,\"y\":1,\"width\":89,\"name\":\"shadow\",\"height\":22},{\"x\":173,\"y\":1,\"width\":72,\"name\":\"hand-left\",\"height\":95},{\"x\":332,\"y\":84,\"width\":52,\"name\":\"hand-right\",\"height\":61},{\"x\":1,\"y\":1,\"width\":170,\"name\":\"body\",\"height\":241},{\"y\":98,\"frameX\":0,\"frameHeight\":46,\"height\":45,\"frameY\":-1,\"frameWidth\":128,\"width\":127,\"name\":\"zui2\",\"x\":173},{\"x\":247,\"y\":1,\"width\":83,\"name\":\"eye-2\",\"height\":49},{\"x\":247,\"y\":84,\"width\":10,\"name\":\"eye-1\",\"height\":10},{\"y\":52,\"frameX\":0,\"frameHeight\":30,\"height\":30,\"frameY\":0,\"frameWidth\":129,\"width\":129,\"name\":\"zui\",\"x\":247}],\"width\":512,\"name\":\"autumn\",\"height\":256}",
-  "texture": {
-    "__uuid__": "a9GOqbwu1HXbflsoTNG4BE"
-  }
-}

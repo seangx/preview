@@ -1,8 +1,0 @@
-{
-  "__type__": "dragonBones.DragonBonesAtlasAsset",
-  "_name": "monsters_s_snails_tex",
-  "_atlasJson": "{\"SubTexture\":[{\"x\":1,\"y\":1,\"width\":52,\"name\":\"snbody\",\"height\":71},{\"frameWidth\":20,\"y\":74,\"frameHeight\":23,\"height\":18,\"frameX\":0,\"width\":19,\"name\":\"eye_left\",\"frameY\":-3,\"x\":1},{\"frameWidth\":21,\"y\":94,\"frameHeight\":22,\"height\":18,\"frameX\":-2,\"width\":18,\"name\":\"eye_right\",\"frameY\":-3,\"x\":1}],\"width\":64,\"name\":\"monsters_s_snails\",\"imagePath\":\"monsters_s_snails_tex.png\",\"height\":128}",
-  "texture": {
-    "__uuid__": "ebN/McecdLH4UPpRCpWRXs"
-  }
-}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bt_run2",
+    "texture": "6aJrpB3bdA1Z0JSfZcIF15",
+    "rect": [
+      0,
+      0,
+      152,
+      152
+    ],
+    "offset": [
+      -0.5,
+      0.5
+    ],
+    "originalSize": [
+      153,
+      153
+    ]
+  }
+}

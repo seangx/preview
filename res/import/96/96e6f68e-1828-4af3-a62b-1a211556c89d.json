@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "middle_scene_3",
+    "texture": "48TOUFtzpKY6rjT76TEqPD",
+    "rect": [
+      0,
+      0,
+      640,
+      720
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      640,
+      720
+    ]
+  }
+}

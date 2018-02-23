@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "before_scene_3",
+    "texture": "66oZBNqgBCwIIKFWKCXwqP",
+    "rect": [
+      0,
+      1,
+      640,
+      199
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      640,
+      200
+    ]
+  }
+}
