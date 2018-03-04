@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_s_dragonfly_tex",
+    "texture": "15Lx20LwpH44BbVfP+ZbMt",
+    "rect": [
+      1,
+      5,
+      122,
+      97
+    ],
+    "offset": [
+      -2,
+      10.5
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

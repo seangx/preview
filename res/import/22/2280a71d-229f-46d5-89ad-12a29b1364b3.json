@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_s_crab_tex",
+    "texture": "83rq+PKyFM0LJqrwNhvyhh",
+    "rect": [
+      1,
+      1,
+      114,
+      123
+    ],
+    "offset": [
+      -6,
+      1.5
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

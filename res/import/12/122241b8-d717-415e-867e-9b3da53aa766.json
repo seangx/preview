@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_w_fire_tex",
+    "texture": "7f7FHPbkFN6LTP78eZXDzl",
+    "rect": [
+      1,
+      1,
+      110,
+      227
+    ],
+    "offset": [
+      -8,
+      13.5
+    ],
+    "originalSize": [
+      128,
+      256
+    ]
+  }
+}

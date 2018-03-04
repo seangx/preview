@@ -1,8 +1,0 @@
-{
-  "__type__": "dragonBones.DragonBonesAtlasAsset",
-  "_name": "monsters_s_frog_tex",
-  "_atlasJson": "{\"SubTexture\":[{\"frameWidth\":24,\"y\":43,\"frameHeight\":12,\"height\":12,\"frameX\":0,\"width\":24,\"name\":\"hand_left\",\"frameY\":-1,\"x\":70},{\"frameWidth\":32,\"y\":1,\"frameHeight\":25,\"height\":19,\"frameX\":-5,\"width\":21,\"name\":\"mouth\",\"frameY\":-3,\"x\":70},{\"x\":1,\"y\":59,\"width\":98,\"name\":\"tongue\",\"height\":12},{\"x\":1,\"y\":1,\"width\":67,\"name\":\"body\",\"height\":56},{\"frameWidth\":20,\"y\":22,\"frameHeight\":9,\"height\":8,\"frameX\":-1,\"width\":19,\"name\":\"hand_right\",\"frameY\":-1,\"x\":91},{\"frameWidth\":31,\"y\":1,\"frameHeight\":23,\"height\":19,\"frameX\":-7,\"width\":19,\"name\":\"eye_left\",\"frameY\":-2,\"x\":93},{\"frameWidth\":26,\"y\":22,\"frameHeight\":23,\"height\":19,\"frameX\":-3,\"width\":19,\"name\":\"eye_right\",\"frameY\":-2,\"x\":70}],\"width\":128,\"name\":\"monsters_s_frog\",\"imagePath\":\"monsters_s_frog_tex.png\",\"height\":128}",
-  "texture": {
-    "__uuid__": "easLAoHQJOt6aZOiO8QT7h"
-  }
-}

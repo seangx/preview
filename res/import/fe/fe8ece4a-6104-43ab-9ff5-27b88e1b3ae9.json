@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_a_bird_tex",
+    "texture": "a02XpRmbBB+5Pfv9IfXg32",
+    "rect": [
+      1,
+      1,
+      122,
+      113
+    ],
+    "offset": [
+      -2,
+      6.5
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

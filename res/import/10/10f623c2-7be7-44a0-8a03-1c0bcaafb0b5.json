@@ -5,16 +5,16 @@
     "texture": "easLAoHQJOt6aZOiO8QT7h",
     "rect": [
       1,
-      1,
-      111,
-      69
+      3,
+      126,
+      124
     ],
     "offset": [
-      -7.5,
-      28.5
+      -64,
+      -1
     ],
     "originalSize": [
-      128,
+      256,
       128
     ]
   }

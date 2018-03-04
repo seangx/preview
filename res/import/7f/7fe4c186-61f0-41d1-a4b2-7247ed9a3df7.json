@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "game_ui",
+    "texture": "b4L+41JKJO7KyN8E2w98Zv",
+    "rect": [
+      0,
+      0,
+      1270,
+      1023
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1270,
+      1023
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_s_spring_tex",
+    "texture": "4av9TemMFKtJL6MuEGx57h",
+    "rect": [
+      1,
+      1,
+      233,
+      226
+    ],
+    "offset": [
+      -10.5,
+      14
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

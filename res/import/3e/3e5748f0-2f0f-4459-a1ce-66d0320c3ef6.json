@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "rabbit_tex",
+    "texture": "dbtSIR6wJHAa9BSutl7zr4",
+    "rect": [
+      1,
+      1,
+      493,
+      298
+    ],
+    "offset": [
+      -8.5,
+      106
+    ],
+    "originalSize": [
+      512,
+      512
+    ]
+  }
+}

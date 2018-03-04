@@ -25,7 +25,8 @@
   for (var i = 0; i < entry.length; i++) newRequire(entry[i]);
   return newRequire;
 })({
-  1: [ (function(require, module, exports) {
+  1: [ (function(require, module, exports) {}), {} ],
+  2: [ (function(require, module, exports) {
     cc._LogInfos = cc._LogInfos || {};
     var engineVersion;
     engineVersion = "1.8.1";
@@ -87,10 +88,10 @@
       _engineInitCalled = true;
     };
   }), {
-    "./cocos2d/core/platform/CCSys": 184,
-    "./cocos2d/core/utils": 224
+    "./cocos2d/core/platform/CCSys": 185,
+    "./cocos2d/core/utils": 225
   } ],
-  2: [ (function(require, module, exports) {
+  3: [ (function(require, module, exports) {
     var logList;
     var Enum = require("./cocos2d/core/platform/CCEnum");
     cc.DebugMode = Enum({
@@ -216,9 +217,9 @@
       };
     }
   }), {
-    "./cocos2d/core/platform/CCEnum": 177
+    "./cocos2d/core/platform/CCEnum": 178
   } ],
-  3: [ (function(require, module, exports) {
+  4: [ (function(require, module, exports) {
     true;
     var logs = {
       "1000": "cc.ActionManager.addAction(): action must be non-null",
@@ -745,7 +746,7 @@
     };
     cc._LogInfos = logs;
   }), {} ],
-  4: [ (function(require, module, exports) {
+  5: [ (function(require, module, exports) {
     cc.Action = cc._Class.extend({
       ctor: function() {
         this.originalTarget = null;
@@ -952,7 +953,7 @@
       return new cc.Follow(followedNode, rect);
     };
   }), {} ],
-  5: [ (function(require, module, exports) {
+  6: [ (function(require, module, exports) {
     cc.cardinalSplineAt = function(p0, p1, p2, p3, tension, t) {
       var t2 = t * t;
       var t3 = t2 * t;
@@ -1146,7 +1147,7 @@
       return new cc.CatmullRomBy(dt, points);
     };
   }), {} ],
-  6: [ (function(require, module, exports) {
+  7: [ (function(require, module, exports) {
     cc.ActionEase = cc.ActionInterval.extend({
       _inner: null,
       ctor: function(action) {
@@ -2247,7 +2248,7 @@
       return cc._easeCubicActionInOut;
     };
   }), {} ],
-  7: [ (function(require, module, exports) {
+  8: [ (function(require, module, exports) {
     cc.ActionInstant = cc.FiniteTimeAction.extend({
       isDone: function() {
         return true;
@@ -2463,7 +2464,7 @@
       return new cc.CallFunc(selector, selectorTarget, data);
     };
   }), {} ],
-  8: [ (function(require, module, exports) {
+  9: [ (function(require, module, exports) {
     cc.ActionInterval = cc.FiniteTimeAction.extend({
       _elapsed: 0,
       _firstTick: false,
@@ -3906,7 +3907,7 @@
       return new cc.TargetedAction(target, action);
     };
   }), {} ],
-  9: [ (function(require, module, exports) {
+  10: [ (function(require, module, exports) {
     var HashElement = function() {
       this.actions = [];
       this.target = null;
@@ -4091,7 +4092,7 @@
     });
     false;
   }), {} ],
-  10: [ (function(require, module, exports) {
+  11: [ (function(require, module, exports) {
     require("./CCActionManager");
     require("./CCAction");
     require("./CCActionInterval");
@@ -4099,14 +4100,14 @@
     require("./CCActionEase");
     require("./CCActionCatmullRom");
   }), {
-    "./CCAction": 4,
-    "./CCActionCatmullRom": 5,
-    "./CCActionEase": 6,
-    "./CCActionInstant": 7,
-    "./CCActionInterval": 8,
-    "./CCActionManager": 9
+    "./CCAction": 5,
+    "./CCActionCatmullRom": 6,
+    "./CCActionEase": 7,
+    "./CCActionInstant": 8,
+    "./CCActionInterval": 9,
+    "./CCActionManager": 10
   } ],
-  11: [ (function(require, module, exports) {
+  12: [ (function(require, module, exports) {
     var JS = cc.js;
     var Playable = require("./playable");
     var DynamicAnimCurve = require("./animation-curves").DynamicAnimCurve;
@@ -4362,13 +4363,13 @@
     false;
     module.exports = AnimationAnimator;
   }), {
-    "../core/utils/binary-search": 221,
-    "./animation-curves": 13,
-    "./motion-path-helper": 19,
-    "./playable": 20,
-    "./types": 21
+    "../core/utils/binary-search": 222,
+    "./animation-curves": 14,
+    "./motion-path-helper": 20,
+    "./playable": 21,
+    "./types": 22
   } ],
-  12: [ (function(require, module, exports) {
+  13: [ (function(require, module, exports) {
     var AnimationClip = cc.Class({
       name: "cc.AnimationClip",
       extends: cc.Asset,
@@ -4428,7 +4429,7 @@
     });
     cc.AnimationClip = module.exports = AnimationClip;
   }), {} ],
-  13: [ (function(require, module, exports) {
+  14: [ (function(require, module, exports) {
     var bezierByTime = require("./bezier").bezierByTime;
     var binarySearch = require("../core/utils/binary-search").binarySearchEpsilon;
     var WrapModeMask = require("./types").WrapModeMask;
@@ -4627,11 +4628,11 @@
       quickFindIndex: quickFindIndex
     };
   }), {
-    "../core/utils/binary-search": 221,
-    "./bezier": 16,
-    "./types": 21
+    "../core/utils/binary-search": 222,
+    "./bezier": 17,
+    "./types": 22
   } ],
-  14: [ (function(require, module, exports) {
+  15: [ (function(require, module, exports) {
     var JS = cc.js;
     var AnimationManager = cc.Class({
       ctor: function() {
@@ -4672,7 +4673,7 @@
     });
     cc.AnimationManager = module.exports = AnimationManager;
   }), {} ],
-  15: [ (function(require, module, exports) {
+  16: [ (function(require, module, exports) {
     var JS = cc.js;
     var Playable = require("./playable");
     var Types = require("./types");
@@ -4877,10 +4878,10 @@
     }));
     cc.AnimationState = module.exports = AnimationState;
   }), {
-    "./playable": 20,
-    "./types": 21
+    "./playable": 21,
+    "./types": 22
   } ],
-  16: [ (function(require, module, exports) {
+  17: [ (function(require, module, exports) {
     function bezier(C1, C2, C3, C4, t) {
       var t1 = 1 - t;
       return C1 * t1 * t1 * t1 + 3 * C2 * t1 * t1 * t + 3 * C3 * t1 * t * t + C4 * t * t * t;
@@ -4932,7 +4933,7 @@
       bezierByTime: bezierByTime
     };
   }), {} ],
-  17: [ (function(require, module, exports) {
+  18: [ (function(require, module, exports) {
     var Easing = {
       constant: function() {
         return 0;
@@ -5094,7 +5095,7 @@
     Easing.bounceOutIn = _makeOutIn(Easing.bounceIn, Easing.bounceOut);
     cc.Easing = module.exports = Easing;
   }), {} ],
-  18: [ (function(require, module, exports) {
+  19: [ (function(require, module, exports) {
     require("./bezier");
     require("./easing");
     require("./types");
@@ -5105,17 +5106,17 @@
     require("./animation-state");
     require("./animation-animator");
   }), {
-    "./animation-animator": 11,
-    "./animation-clip": 12,
-    "./animation-curves": 13,
-    "./animation-manager": 14,
-    "./animation-state": 15,
-    "./bezier": 16,
-    "./easing": 17,
-    "./motion-path-helper": 19,
-    "./types": 21
+    "./animation-animator": 12,
+    "./animation-clip": 13,
+    "./animation-curves": 14,
+    "./animation-manager": 15,
+    "./animation-state": 16,
+    "./bezier": 17,
+    "./easing": 18,
+    "./motion-path-helper": 20,
+    "./types": 22
   } ],
-  19: [ (function(require, module, exports) {
+  20: [ (function(require, module, exports) {
     var DynamicAnimCurve = require("./animation-curves").DynamicAnimCurve;
     var computeRatioByType = require("./animation-curves").computeRatioByType;
     var bezier = require("./bezier").bezier;
@@ -5330,11 +5331,11 @@
       Bezier: Bezier
     };
   }), {
-    "../core/utils/binary-search": 221,
-    "./animation-curves": 13,
-    "./bezier": 16
+    "../core/utils/binary-search": 222,
+    "./animation-curves": 14,
+    "./bezier": 17
   } ],
-  20: [ (function(require, module, exports) {
+  21: [ (function(require, module, exports) {
     var JS = cc.js;
     function Playable() {
       this._isPlaying = false;
@@ -5389,7 +5390,7 @@
     };
     module.exports = Playable;
   }), {} ],
-  21: [ (function(require, module, exports) {
+  22: [ (function(require, module, exports) {
     var JS = cc.js;
     var WrapModeMask = {
       Loop: 2,
@@ -5433,7 +5434,7 @@
       WrappedInfo: WrappedInfo
     };
   }), {} ],
-  22: [ (function(require, module, exports) {
+  23: [ (function(require, module, exports) {
     var EventTarget = require("../core/event/event-target");
     var sys = require("../core/platform/CCSys");
     var touchBinded = false;
@@ -5712,10 +5713,10 @@
     })(WebAudioElement.prototype);
     module.exports = cc.Audio = Audio;
   }), {
-    "../core/event/event-target": 113,
-    "../core/platform/CCSys": 184
+    "../core/event/event-target": 114,
+    "../core/platform/CCSys": 185
   } ],
-  23: [ (function(require, module, exports) {
+  24: [ (function(require, module, exports) {
     var Audio = require("./CCAudio");
     var instanceId = 0;
     var id2audio = {};
@@ -5930,10 +5931,10 @@
     Module.removed(audioEngine);
     Module.deprecated(audioEngine);
   }), {
-    "./CCAudio": 22,
-    "./deprecated": 24
+    "./CCAudio": 23,
+    "./deprecated": 25
   } ],
-  24: [ (function(require, module, exports) {
+  25: [ (function(require, module, exports) {
     var js = cc.js;
     exports.removed = function(audioEngine) {
       function willPlayMusicError() {
@@ -6085,7 +6086,7 @@
       }));
     };
   }), {} ],
-  25: [ (function(require, module, exports) {
+  26: [ (function(require, module, exports) {
     cc.ClippingNode = _ccsg.Node.extend({
       inverted: false,
       _alphaThreshold: 0,
@@ -6159,7 +6160,7 @@
     cc.defineGetterSetter(_p, "stencil", _p.getStencil, _p.setStencil);
     cc.defineGetterSetter(_p, "alphaThreshold", _p.getAlphaThreshold, _p.setAlphaThreshold);
   }), {} ],
-  26: [ (function(require, module, exports) {
+  27: [ (function(require, module, exports) {
     require("../shape-nodes/CCDrawNode");
     cc.ClippingNode.CanvasRenderCmd = function(renderable) {
       this._rootCtor(renderable);
@@ -6212,9 +6213,9 @@
       this._dirtyFlag = 0;
     };
   }), {
-    "../shape-nodes/CCDrawNode": 274
+    "../shape-nodes/CCDrawNode": 275
   } ],
-  27: [ (function(require, module, exports) {
+  28: [ (function(require, module, exports) {
     require("../core/CCDrawingPrimitives");
     function setProgram(node, program) {
       node.shaderProgram = program;
@@ -6367,9 +6368,9 @@
       cc.ClippingNode.WebGLRenderCmd._layer--;
     };
   }), {
-    "../core/CCDrawingPrimitives": 36
+    "../core/CCDrawingPrimitives": 37
   } ],
-  28: [ (function(require, module, exports) {
+  29: [ (function(require, module, exports) {
     cc.Codec = {
       name: "Jacob__Codec"
     };
@@ -6405,10 +6406,10 @@
       return ar;
     };
   }), {
-    "./base64": 29,
-    "./gzip": 30
+    "./base64": 30,
+    "./gzip": 31
   } ],
-  29: [ (function(require, module, exports) {
+  30: [ (function(require, module, exports) {
     var Misc = require("../core/utils/misc");
     var strValue = Misc.BASE64_VALUES;
     var Base64 = {
@@ -6442,9 +6443,9 @@
     };
     module.exports = Base64;
   }), {
-    "../core/utils/misc": 225
+    "../core/utils/misc": 226
   } ],
-  30: [ (function(require, module, exports) {
+  31: [ (function(require, module, exports) {
     var GZip = function Jacob__GZip(data) {
       this.data = data;
       this.debug = false;
@@ -6838,7 +6839,7 @@
     };
     module.exports = GZip;
   }), {} ],
-  31: [ (function(require, module, exports) {
+  32: [ (function(require, module, exports) {
     (function() {
       "use strict";
       function i(a) {
@@ -7827,7 +7828,7 @@
     _p.Inflate.prototype.decompress = _p.Inflate.prototype["decompress"];
     module.exports = _p;
   }), {} ],
-  32: [ (function(require, module, exports) {
+  33: [ (function(require, module, exports) {
     cc.configuration = {
       ERROR: 0,
       STRING: 1,
@@ -7939,7 +7940,7 @@
       }
     };
   }), {} ],
-  33: [ (function(require, module, exports) {
+  34: [ (function(require, module, exports) {
     var EventTarget = require("./event/event-target");
     var Class = require("./platform/_CCClass");
     var AutoReleaseUtils = require("./load-pipeline/auto-release-utils");
@@ -8505,14 +8506,14 @@
     cc.Director.PROJECTION_CUSTOM = 3;
     cc.Director.PROJECTION_DEFAULT = cc.Director.PROJECTION_2D;
   }), {
-    "./component-scheduler": 70,
-    "./event/event-listeners": 112,
-    "./event/event-target": 113,
-    "./load-pipeline/auto-release-utils": 134,
-    "./node-activator": 147,
-    "./platform/_CCClass": 187
+    "./component-scheduler": 71,
+    "./event/event-listeners": 113,
+    "./event/event-target": 114,
+    "./load-pipeline/auto-release-utils": 135,
+    "./node-activator": 148,
+    "./platform/_CCClass": 188
   } ],
-  34: [ (function(require, module, exports) {
+  35: [ (function(require, module, exports) {
     require("./CCDirector");
     require("./CCGame");
     cc.game.once(cc.game.EVENT_RENDERER_INITED, (function() {
@@ -8545,10 +8546,10 @@
       }
     }));
   }), {
-    "./CCDirector": 33,
-    "./CCGame": 39
+    "./CCDirector": 34,
+    "./CCGame": 40
   } ],
-  35: [ (function(require, module, exports) {
+  36: [ (function(require, module, exports) {
     require("./CCDirector");
     require("./CCGame");
     require("../kazmath");
@@ -8666,22 +8667,22 @@
       };
     }));
   }), {
-    "../kazmath": 246,
-    "./CCDirector": 33,
-    "./CCGame": 39
+    "../kazmath": 247,
+    "./CCDirector": 34,
+    "./CCGame": 40
   } ],
-  36: [ (function(require, module, exports) {
+  37: [ (function(require, module, exports) {
     var game = require("./CCGame");
     cc._drawingUtil = null;
     game.once(game.EVENT_RENDERER_INITED, (function() {
       cc._renderType === game.RENDER_TYPE_WEBGL ? cc._drawingUtil = new (require("./CCDrawingPrimitivesWebGL"))(cc._renderContext) : cc._drawingUtil = new (require("./CCDrawingPrimitivesCanvas"))(cc._renderContext);
     }));
   }), {
-    "./CCDrawingPrimitivesCanvas": 37,
-    "./CCDrawingPrimitivesWebGL": 38,
-    "./CCGame": 39
+    "./CCDrawingPrimitivesCanvas": 38,
+    "./CCDrawingPrimitivesWebGL": 39,
+    "./CCGame": 40
   } ],
-  37: [ (function(require, module, exports) {
+  38: [ (function(require, module, exports) {
     var DrawingPrimitiveCanvas = cc._Class.extend({
       _cacheArray: [],
       ctor: function(renderContext) {
@@ -8884,7 +8885,7 @@
     });
     module.exports = DrawingPrimitiveCanvas;
   }), {} ],
-  38: [ (function(require, module, exports) {
+  39: [ (function(require, module, exports) {
     var macro = cc.macro;
     var DrawingPrimitiveWebGL = cc._Class.extend({
       _initialized: false,
@@ -9131,7 +9132,7 @@
     });
     module.exports = DrawingPrimitiveWebGL;
   }), {} ],
-  39: [ (function(require, module, exports) {
+  40: [ (function(require, module, exports) {
     var EventTarget = require("./event/event-target");
     var View;
     true;
@@ -9475,12 +9476,12 @@
     cc.js.addon(game, EventTarget.prototype);
     cc.game = module.exports = game;
   }), {
-    "../audio/CCAudioEngine": 23,
-    "./event/event-target": 113,
-    "./platform/CCInputManager": 179,
-    "./platform/CCView": 185
+    "../audio/CCAudioEngine": 24,
+    "./event/event-target": 114,
+    "./platform/CCInputManager": 180,
+    "./platform/CCView": 186
   } ],
-  40: [ (function(require, module, exports) {
+  41: [ (function(require, module, exports) {
     "use strict";
     var PrefabHelper = require("./utils/prefab-helper");
     var SgHelper = require("./utils/scene-graph-helper");
@@ -10495,13 +10496,13 @@
     Node.EventType = EventType;
     cc.Node = module.exports = Node;
   }), {
-    "./event/event": 114,
-    "./utils/base-node": 220,
-    "./utils/misc": 225,
-    "./utils/prefab-helper": 227,
-    "./utils/scene-graph-helper": 228
+    "./event/event": 115,
+    "./utils/base-node": 221,
+    "./utils/misc": 226,
+    "./utils/prefab-helper": 228,
+    "./utils/scene-graph-helper": 229
   } ],
-  41: [ (function(require, module, exports) {
+  42: [ (function(require, module, exports) {
     var NIL = function() {};
     cc.Scene = cc.Class({
       name: "cc.Scene",
@@ -10540,9 +10541,9 @@
     });
     module.exports = cc.Scene;
   }), {
-    "./CCNode": 40
+    "./CCNode": 41
   } ],
-  42: [ (function(require, module, exports) {
+  43: [ (function(require, module, exports) {
     var MAX_POOL_SIZE = 20;
     var ListEntry = function(prev, next, callback, target, priority, paused, markedForDeletion) {
       this.prev = prev;
@@ -11050,7 +11051,7 @@
     cc.Scheduler.PRIORITY_SYSTEM = 1 << 31;
     cc.Scheduler.PRIORITY_NON_SYSTEM = cc.Scheduler.PRIORITY_SYSTEM + 1;
   }), {} ],
-  43: [ (function(require, module, exports) {
+  44: [ (function(require, module, exports) {
     var RawAsset = require("./CCRawAsset");
     cc.Asset = cc.Class({
       name: "cc.Asset",
@@ -11100,9 +11101,9 @@
     });
     module.exports = cc.Asset;
   }), {
-    "./CCRawAsset": 49
+    "./CCRawAsset": 50
   } ],
-  44: [ (function(require, module, exports) {
+  45: [ (function(require, module, exports) {
     var AudioClip = cc.Class({
       name: "cc.AudioClip",
       extends: cc.RawAsset
@@ -11110,7 +11111,7 @@
     cc.AudioClip = AudioClip;
     module.exports = AudioClip;
   }), {} ],
-  45: [ (function(require, module, exports) {
+  46: [ (function(require, module, exports) {
     var BitmapFont = cc.Class({
       name: "cc.BitmapFont",
       extends: cc.Font,
@@ -11131,7 +11132,7 @@
     cc.BitmapFont = BitmapFont;
     module.exports = BitmapFont;
   }), {} ],
-  46: [ (function(require, module, exports) {
+  47: [ (function(require, module, exports) {
     var Font = cc.Class({
       name: "cc.Font",
       extends: cc.Asset
@@ -11139,7 +11140,7 @@
     cc.Font = Font;
     module.exports = Font;
   }), {} ],
-  47: [ (function(require, module, exports) {
+  48: [ (function(require, module, exports) {
     var LabelAtlas = cc.Class({
       name: "cc.LabelAtlas",
       extends: cc.BitmapFont
@@ -11147,7 +11148,7 @@
     cc.LabelAtlas = LabelAtlas;
     module.exports = LabelAtlas;
   }), {} ],
-  48: [ (function(require, module, exports) {
+  49: [ (function(require, module, exports) {
     var Prefab = cc.Class({
       name: "cc.Prefab",
       extends: cc.Asset,
@@ -11181,9 +11182,9 @@
     cc.Prefab = module.exports = Prefab;
     cc.js.obsolete(cc, "cc._Prefab", "Prefab");
   }), {
-    "../platform/instantiate-jit": 194
+    "../platform/instantiate-jit": 195
   } ],
-  49: [ (function(require, module, exports) {
+  50: [ (function(require, module, exports) {
     var CCObject = require("../platform/CCObject");
     cc.RawAsset = cc.Class({
       name: "cc.RawAsset",
@@ -11205,9 +11206,9 @@
     });
     module.exports = cc.RawAsset;
   }), {
-    "../platform/CCObject": 181
+    "../platform/CCObject": 182
   } ],
-  50: [ (function(require, module, exports) {
+  51: [ (function(require, module, exports) {
     var Scene = cc.Class({
       name: "cc.SceneAsset",
       extends: cc.Asset,
@@ -11219,7 +11220,7 @@
     cc.SceneAsset = Scene;
     module.exports = Scene;
   }), {} ],
-  51: [ (function(require, module, exports) {
+  52: [ (function(require, module, exports) {
     var Script = cc.Class({
       name: "cc.Script",
       extends: cc.Asset
@@ -11241,7 +11242,7 @@
     });
     cc._TypeScript = TypeScript;
   }), {} ],
-  52: [ (function(require, module, exports) {
+  53: [ (function(require, module, exports) {
     var SpriteAtlas = cc.Class({
       name: "cc.SpriteAtlas",
       extends: cc.Asset,
@@ -11271,7 +11272,7 @@
     cc.SpriteAtlas = SpriteAtlas;
     module.exports = SpriteAtlas;
   }), {} ],
-  53: [ (function(require, module, exports) {
+  54: [ (function(require, module, exports) {
     var TTFFont = cc.Class({
       name: "cc.TTFFont",
       extends: cc.Font
@@ -11279,7 +11280,7 @@
     cc.TTFFont = TTFFont;
     module.exports = TTFFont;
   }), {} ],
-  54: [ (function(require, module, exports) {
+  55: [ (function(require, module, exports) {
     require("./CCRawAsset");
     require("./CCAsset");
     require("./CCFont");
@@ -11294,21 +11295,21 @@
     require("./CCBitmapFont");
     require("./CCLabelAtlas");
   }), {
-    "../sprites/CCSpriteFrame": 214,
-    "../textures/CCTexture2D": 215,
-    "./CCAsset": 43,
-    "./CCAudioClip": 44,
-    "./CCBitmapFont": 45,
-    "./CCFont": 46,
-    "./CCLabelAtlas": 47,
-    "./CCPrefab": 48,
-    "./CCRawAsset": 49,
-    "./CCSceneAsset": 50,
-    "./CCScripts": 51,
-    "./CCSpriteAtlas": 52,
-    "./CCTTFFont": 53
+    "../sprites/CCSpriteFrame": 215,
+    "../textures/CCTexture2D": 216,
+    "./CCAsset": 44,
+    "./CCAudioClip": 45,
+    "./CCBitmapFont": 46,
+    "./CCFont": 47,
+    "./CCLabelAtlas": 48,
+    "./CCPrefab": 49,
+    "./CCRawAsset": 50,
+    "./CCSceneAsset": 51,
+    "./CCScripts": 52,
+    "./CCSpriteAtlas": 53,
+    "./CCTTFFont": 54
   } ],
-  55: [ (function(require, module, exports) {
+  56: [ (function(require, module, exports) {
     var Misc = require("../utils/misc");
     var ActionManagerExist = !!cc.ActionManager;
     var emptyFunc = function() {};
@@ -12177,9 +12178,9 @@
     };
     Misc.propertyDefine(_ccsg.Node, SameNameGetSets, DiffNameGetSets);
   }), {
-    "../utils/misc": 225
+    "../utils/misc": 226
   } ],
-  56: [ (function(require, module, exports) {
+  57: [ (function(require, module, exports) {
     cc.CustomRenderCmd = function(target, func) {
       this._needDraw = true;
       this._target = target;
@@ -12584,7 +12585,7 @@
     _ccsg.Node.RenderCmd.prototype.originUpdateStatus = _ccsg.Node.RenderCmd.prototype.updateStatus;
     _ccsg.Node.RenderCmd.prototype._originSyncStatus = _ccsg.Node.RenderCmd.prototype._syncStatus;
   }), {} ],
-  57: [ (function(require, module, exports) {
+  58: [ (function(require, module, exports) {
     _ccsg.Node.CanvasRenderCmd = function(renderable) {
       this._ctor(renderable);
       this._currentRegion = new cc.Region();
@@ -12632,7 +12633,7 @@
       return blendFunc ? blendFunc.src === cc.macro.SRC_ALPHA && blendFunc.dst === cc.macro.ONE || blendFunc.src === cc.macro.ONE && blendFunc.dst === cc.macro.ONE ? "lighter" : blendFunc.src === cc.macro.ZERO && blendFunc.dst === cc.macro.SRC_ALPHA ? "destination-in" : blendFunc.src === cc.macro.ZERO && blendFunc.dst === cc.macro.ONE_MINUS_SRC_ALPHA ? "destination-out" : "source-over" : "source-over";
     };
   }), {} ],
-  58: [ (function(require, module, exports) {
+  59: [ (function(require, module, exports) {
     _ccsg.Node.WebGLRenderCmd = function(renderable) {
       this._ctor(renderable);
       this._shaderProgram = null;
@@ -12648,7 +12649,7 @@
       return this._shaderProgram;
     };
   }), {} ],
-  59: [ (function(require, module, exports) {
+  60: [ (function(require, module, exports) {
     var TOP = 1;
     var MID = 2;
     var BOT = 4;
@@ -12866,7 +12867,7 @@
     };
     false;
   }), {} ],
-  60: [ (function(require, module, exports) {
+  61: [ (function(require, module, exports) {
     var cullingDirtyFlag;
     true;
     cullingDirtyFlag = _ccsg.Node._dirtyFlags.cullingDirty;
@@ -13071,9 +13072,9 @@
     });
     module.exports = cc.Camera = Camera;
   }), {
-    "./CCSGCameraNode": 61
+    "./CCSGCameraNode": 62
   } ],
-  61: [ (function(require, module, exports) {
+  62: [ (function(require, module, exports) {
     var tempMat = new cc.math.Matrix4();
     var CameraNode = _ccsg.Node.extend({
       ctor: function() {
@@ -13123,7 +13124,7 @@
     });
     module.exports = _ccsg.CameraNode = CameraNode;
   }), {} ],
-  62: [ (function(require, module, exports) {
+  63: [ (function(require, module, exports) {
     cc.Collider.Box = cc.Class({
       properties: {
         _offset: cc.v2(0, 0),
@@ -13160,7 +13161,7 @@
     });
     cc.BoxCollider = module.exports = BoxCollider;
   }), {} ],
-  63: [ (function(require, module, exports) {
+  64: [ (function(require, module, exports) {
     cc.Collider.Circle = cc.Class({
       properties: {
         _offset: cc.v2(0, 0),
@@ -13194,7 +13195,7 @@
     });
     cc.CircleCollider = module.exports = CircleCollider;
   }), {} ],
-  64: [ (function(require, module, exports) {
+  65: [ (function(require, module, exports) {
     var Collider = cc.Class({
       name: "cc.Collider",
       extends: cc.Component,
@@ -13220,7 +13221,7 @@
     });
     cc.Collider = module.exports = Collider;
   }), {} ],
-  65: [ (function(require, module, exports) {
+  66: [ (function(require, module, exports) {
     var Contact = require("./CCContact");
     var CollisionType = Contact.CollisionType;
     var tempRect = cc.rect();
@@ -13482,9 +13483,9 @@
     }));
     cc.CollisionManager = module.exports = CollisionManager;
   }), {
-    "./CCContact": 66
+    "./CCContact": 67
   } ],
-  66: [ (function(require, module, exports) {
+  67: [ (function(require, module, exports) {
     var Intersection = require("./CCIntersection");
     var CollisionType = cc.Enum({
       None: 0,
@@ -13530,9 +13531,9 @@
     Contact.CollisionType = CollisionType;
     module.exports = Contact;
   }), {
-    "./CCIntersection": 67
+    "./CCIntersection": 68
   } ],
-  67: [ (function(require, module, exports) {
+  68: [ (function(require, module, exports) {
     var Intersection = {};
     function lineLine(a1, a2, b1, b2) {
       var ua_t = (b2.x - b1.x) * (a1.y - b1.y) - (b2.y - b1.y) * (a1.x - b1.x);
@@ -13652,7 +13653,7 @@
     Intersection.pointLineDistance = pointLineDistance;
     cc.Intersection = module.exports = Intersection;
   }), {} ],
-  68: [ (function(require, module, exports) {
+  69: [ (function(require, module, exports) {
     cc.Collider.Polygon = cc.Class({
       properties: {
         threshold: {
@@ -13688,20 +13689,20 @@
     });
     cc.PolygonCollider = module.exports = PolygonCollider;
   }), {} ],
-  69: [ (function(require, module, exports) {
+  70: [ (function(require, module, exports) {
     require("./CCCollisionManager");
     require("./CCCollider");
     require("./CCBoxCollider");
     require("./CCCircleCollider");
     require("./CCPolygonCollider");
   }), {
-    "./CCBoxCollider": 62,
-    "./CCCircleCollider": 63,
-    "./CCCollider": 64,
-    "./CCCollisionManager": 65,
-    "./CCPolygonCollider": 68
+    "./CCBoxCollider": 63,
+    "./CCCircleCollider": 64,
+    "./CCCollider": 65,
+    "./CCCollisionManager": 66,
+    "./CCPolygonCollider": 69
   } ],
-  70: [ (function(require, module, exports) {
+  71: [ (function(require, module, exports) {
     require("./platform/CCClass");
     var Flags = require("./platform/CCObject").Flags;
     var JsArray = require("./platform/js").array;
@@ -13934,12 +13935,12 @@
     });
     module.exports = ComponentScheduler;
   }), {
-    "./platform/CCClass": 175,
-    "./platform/CCObject": 181,
-    "./platform/js": 196,
-    "./utils/misc": 225
+    "./platform/CCClass": 176,
+    "./platform/CCObject": 182,
+    "./platform/js": 197,
+    "./utils/misc": 226
   } ],
-  71: [ (function(require, module, exports) {
+  72: [ (function(require, module, exports) {
     var AnimationAnimator = require("../../animation/animation-animator");
     var AnimationClip = require("../../animation/animation-clip");
     function equalClips(clip1, clip2) {
@@ -14174,11 +14175,11 @@
     });
     cc.Animation = module.exports = Animation;
   }), {
-    "../../animation/animation-animator": 11,
-    "../../animation/animation-clip": 12,
-    "./CCComponent": 76
+    "../../animation/animation-animator": 12,
+    "../../animation/animation-clip": 13,
+    "./CCComponent": 77
   } ],
-  72: [ (function(require, module, exports) {
+  73: [ (function(require, module, exports) {
     var AudioSource = cc.Class({
       name: "cc.AudioSource",
       extends: require("./CCComponent"),
@@ -14358,9 +14359,9 @@
     });
     cc.AudioSource = module.exports = AudioSource;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  73: [ (function(require, module, exports) {
+  74: [ (function(require, module, exports) {
     var BlockEvents = [ "touchstart", "touchmove", "touchend", "mousedown", "mousemove", "mouseup", "mouseenter", "mouseleave", "mousewheel" ];
     function stopPropagation(event) {
       event.stopPropagation();
@@ -14382,9 +14383,9 @@
     });
     cc.BlockInputEvents = module.exports = BlockInputEvents;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  74: [ (function(require, module, exports) {
+  75: [ (function(require, module, exports) {
     var Transition = cc.Enum({
       NONE: 0,
       COLOR: 1,
@@ -14689,9 +14690,9 @@
     });
     cc.Button = module.exports = Button;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  75: [ (function(require, module, exports) {
+  76: [ (function(require, module, exports) {
     var designResolutionWrapper = {
       getContentSize: function() {
         return cc.visibleRect;
@@ -14808,9 +14809,9 @@
     });
     cc.Canvas = module.exports = Canvas;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  76: [ (function(require, module, exports) {
+  77: [ (function(require, module, exports) {
     var CCObject = require("../platform/CCObject");
     var JS = require("../platform/js");
     var idGenerater = new (require("../platform/id-generater"))("Comp");
@@ -14977,11 +14978,11 @@
     Component.prototype.__scriptUuid = "";
     cc.Component = module.exports = Component;
   }), {
-    "../platform/CCObject": 181,
-    "../platform/id-generater": 192,
-    "../platform/js": 196
+    "../platform/CCObject": 182,
+    "../platform/id-generater": 193,
+    "../platform/js": 197
   } ],
-  77: [ (function(require, module, exports) {
+  78: [ (function(require, module, exports) {
     cc.Component.EventHandler = cc.Class({
       name: "cc.ClickEvent",
       properties: {
@@ -15029,7 +15030,7 @@
       }
     });
   }), {} ],
-  78: [ (function(require, module, exports) {
+  79: [ (function(require, module, exports) {
     require("../editbox/CCSGEditBox");
     var KeyboardReturnType = _ccsg.EditBox.KeyboardReturnType;
     var InputMode = _ccsg.EditBox.InputMode;
@@ -15274,9 +15275,9 @@
     false;
     cc.EditBox = module.exports = EditBox;
   }), {
-    "../editbox/CCSGEditBox": 105
+    "../editbox/CCSGEditBox": 106
   } ],
-  79: [ (function(require, module, exports) {
+  80: [ (function(require, module, exports) {
     require("../label/CCSGLabel");
     require("../label/CCSGLabelCanvasRenderCmd");
     require("../label/CCSGLabelWebGLRenderCmd");
@@ -15540,11 +15541,11 @@
     });
     cc.Label = module.exports = Label;
   }), {
-    "../label/CCSGLabel": 126,
-    "../label/CCSGLabelCanvasRenderCmd": 127,
-    "../label/CCSGLabelWebGLRenderCmd": 128
+    "../label/CCSGLabel": 127,
+    "../label/CCSGLabelCanvasRenderCmd": 128,
+    "../label/CCSGLabelWebGLRenderCmd": 129
   } ],
-  80: [ (function(require, module, exports) {
+  81: [ (function(require, module, exports) {
     var LabelOutline = cc.Class({
       name: "cc.LabelOutline",
       extends: require("./CCComponent"),
@@ -15597,9 +15598,9 @@
     });
     cc.LabelOutline = module.exports = LabelOutline;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  81: [ (function(require, module, exports) {
+  82: [ (function(require, module, exports) {
     var Type = cc.Enum({
       NONE: 0,
       HORIZONTAL: 1,
@@ -16118,9 +16119,9 @@
     });
     cc.Layout = module.exports = Layout;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  82: [ (function(require, module, exports) {
+  83: [ (function(require, module, exports) {
     require("../../clipping-nodes/CCClippingNode");
     require("../../clipping-nodes/CCClippingNodeCanvasRenderCmd");
     require("../../clipping-nodes/CCClippingNodeWebGLRenderCmd");
@@ -16300,12 +16301,12 @@
     false;
     cc.Mask = module.exports = Mask;
   }), {
-    "../../clipping-nodes/CCClippingNode": 25,
-    "../../clipping-nodes/CCClippingNodeCanvasRenderCmd": 26,
-    "../../clipping-nodes/CCClippingNodeWebGLRenderCmd": 27,
-    "../../shape-nodes/CCDrawNode": 274
+    "../../clipping-nodes/CCClippingNode": 26,
+    "../../clipping-nodes/CCClippingNodeCanvasRenderCmd": 27,
+    "../../clipping-nodes/CCClippingNodeWebGLRenderCmd": 28,
+    "../../shape-nodes/CCDrawNode": 275
   } ],
-  83: [ (function(require, module, exports) {
+  84: [ (function(require, module, exports) {
     var SizeMode = cc.Enum({
       Unified: 0,
       Free: 1
@@ -16608,7 +16609,7 @@
     });
     cc.PageView = module.exports = PageView;
   }), {} ],
-  84: [ (function(require, module, exports) {
+  85: [ (function(require, module, exports) {
     var Direction = cc.Enum({
       HORIZONTAL: 0,
       VERTICAL: 1
@@ -16702,9 +16703,9 @@
     });
     cc.PageViewIndicator = module.exports = PageViewIndicator;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  85: [ (function(require, module, exports) {
+  86: [ (function(require, module, exports) {
     var Mode = cc.Enum({
       HORIZONTAL: 0,
       VERTICAL: 1,
@@ -16835,9 +16836,9 @@
     });
     cc.ProgressBar = module.exports = ProgressBar;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  86: [ (function(require, module, exports) {
+  87: [ (function(require, module, exports) {
     var RendererInSG = cc.Class({
       extends: require("./CCSGComponent"),
       name: "cc._RendererInSG",
@@ -16894,9 +16895,9 @@
     });
     cc._RendererInSG = module.exports = RendererInSG;
   }), {
-    "./CCSGComponent": 89
+    "./CCSGComponent": 90
   } ],
-  87: [ (function(require, module, exports) {
+  88: [ (function(require, module, exports) {
     var RendererUnderSG = cc.Class({
       extends: require("./CCSGComponent"),
       name: "cc._RendererUnderSG",
@@ -16936,9 +16937,9 @@
     });
     cc._RendererUnderSG = module.exports = RendererUnderSG;
   }), {
-    "./CCSGComponent": 89
+    "./CCSGComponent": 90
   } ],
-  88: [ (function(require, module, exports) {
+  89: [ (function(require, module, exports) {
     require("../label/CCHtmlTextParser");
     require("../label/CCTextUtils");
     var HorizontalAlign = cc.TextAlignment;
@@ -17416,10 +17417,10 @@
     });
     cc.RichText = module.exports = RichText;
   }), {
-    "../label/CCHtmlTextParser": 125,
-    "../label/CCTextUtils": 129
+    "../label/CCHtmlTextParser": 126,
+    "../label/CCTextUtils": 130
   } ],
-  89: [ (function(require, module, exports) {
+  90: [ (function(require, module, exports) {
     var SceneGraphHelper = require("../utils/scene-graph-helper");
     var SGComponent = cc.Class({
       extends: require("./CCComponent"),
@@ -17443,10 +17444,10 @@
     });
     cc._SGComponent = module.exports = SGComponent;
   }), {
-    "../utils/scene-graph-helper": 228,
-    "./CCComponent": 76
+    "../utils/scene-graph-helper": 229,
+    "./CCComponent": 77
   } ],
-  90: [ (function(require, module, exports) {
+  91: [ (function(require, module, exports) {
     var GETTINGSHORTERFACTOR = 20;
     var Direction = cc.Enum({
       HORIZONTAL: 0,
@@ -17636,9 +17637,9 @@
     });
     cc.Scrollbar = module.exports = Scrollbar;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  91: [ (function(require, module, exports) {
+  92: [ (function(require, module, exports) {
     var NUMBER_OF_GATHERED_TOUCHES_FOR_MOVE_SPEED = 5;
     var OUT_OF_BOUNDARY_BREAKING_FACTOR = .05;
     var EPSILON = 1e-4;
@@ -18424,9 +18425,9 @@
     });
     cc.ScrollView = module.exports = ScrollView;
   }), {
-    "./CCViewGroup": 100
+    "./CCViewGroup": 101
   } ],
-  92: [ (function(require, module, exports) {
+  93: [ (function(require, module, exports) {
     var Direction = cc.Enum({
       Horizontal: 0,
       Vertical: 1
@@ -18549,9 +18550,9 @@
     });
     cc.Slider = module.exports = Slider;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  93: [ (function(require, module, exports) {
+  94: [ (function(require, module, exports) {
     var Base = require("./CCRendererUnderSG");
     var SpriteType = cc.Scale9Sprite.RenderingType;
     var FillType = cc.Scale9Sprite.FillType;
@@ -18813,10 +18814,10 @@
     misc.propertyDefine(Sprite, SameNameGetSets, DiffNameGetSets);
     cc.Sprite = module.exports = Sprite;
   }), {
-    "../utils/misc": 225,
-    "./CCRendererUnderSG": 87
+    "../utils/misc": 226,
+    "./CCRendererUnderSG": 88
   } ],
-  94: [ (function(require, module, exports) {
+  95: [ (function(require, module, exports) {
     var SpriteDistortion = cc.Class({
       name: "cc.SpriteDistortion",
       extends: require("./CCComponent"),
@@ -18864,9 +18865,9 @@
     });
     cc.SpriteDistortion = module.exports = SpriteDistortion;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  95: [ (function(require, module, exports) {
+  96: [ (function(require, module, exports) {
     var ComponentType = cc.Enum({
       NONE: 0,
       CHECKBOX: 1,
@@ -18926,9 +18927,9 @@
     });
     cc.StudioComponent = module.exports = StudioComponent;
   }), {
-    "../utils/prefab-helper": 227
+    "../utils/prefab-helper": 228
   } ],
-  96: [ (function(require, module, exports) {
+  97: [ (function(require, module, exports) {
     var Toggle = cc.Class({
       name: "cc.Toggle",
       extends: require("./CCButton"),
@@ -19022,11 +19023,11 @@
       return null;
     }));
   }), {
-    "../platform/js": 196,
-    "./CCButton": 74,
-    "./CCToggleGroup": 98
+    "../platform/js": 197,
+    "./CCButton": 75,
+    "./CCToggleGroup": 99
   } ],
-  97: [ (function(require, module, exports) {
+  98: [ (function(require, module, exports) {
     var ToggleContainer = cc.Class({
       name: "cc.ToggleContainer",
       extends: cc.Component,
@@ -19074,9 +19075,9 @@
     }));
     cc.ToggleContainer = module.exports = ToggleContainer;
   }), {
-    "../platform/js": 196
+    "../platform/js": 197
   } ],
-  98: [ (function(require, module, exports) {
+  99: [ (function(require, module, exports) {
     var ToggleGroup = cc.Class({
       name: "cc.ToggleGroup",
       extends: cc.Component,
@@ -19138,9 +19139,9 @@
     }));
     cc.ToggleGroup = module.exports = ToggleGroup;
   }), {
-    "../platform/js": 196
+    "../platform/js": 197
   } ],
-  99: [ (function(require, module, exports) {
+  100: [ (function(require, module, exports) {
     require("../videoplayer/CCSGVideoPlayer");
     var EventType = _ccsg.VideoPlayer.EventType;
     var ResourceType = cc.Enum({
@@ -19311,18 +19312,18 @@
     });
     cc.VideoPlayer = module.exports = VideoPlayer;
   }), {
-    "../videoplayer/CCSGVideoPlayer": 239
+    "../videoplayer/CCSGVideoPlayer": 240
   } ],
-  100: [ (function(require, module, exports) {
+  101: [ (function(require, module, exports) {
     var ViewGroup = cc.Class({
       name: "cc.ViewGroup",
       extends: require("./CCComponent")
     });
     cc.ViewGroup = module.exports = ViewGroup;
   }), {
-    "./CCComponent": 76
+    "./CCComponent": 77
   } ],
-  101: [ (function(require, module, exports) {
+  102: [ (function(require, module, exports) {
     require("../webview/CCSGWebView");
     var EventType = _ccsg.WebView.EventType;
     function emptyCallback() {}
@@ -19408,9 +19409,9 @@
     });
     cc.WebView = module.exports = WebView;
   }), {
-    "../webview/CCSGWebView": 240
+    "../webview/CCSGWebView": 241
   } ],
-  102: [ (function(require, module, exports) {
+  103: [ (function(require, module, exports) {
     var WidgetManager = require("../base-ui/CCWidgetManager");
     var AlignFlags = WidgetManager._AlignFlags;
     var TOP = AlignFlags.TOP;
@@ -19684,10 +19685,10 @@
     });
     cc.Widget = module.exports = Widget;
   }), {
-    "../base-ui/CCWidgetManager": 59,
-    "./CCComponent": 76
+    "../base-ui/CCWidgetManager": 60,
+    "./CCComponent": 77
   } ],
-  103: [ (function(require, module, exports) {
+  104: [ (function(require, module, exports) {
     require("./CCComponent");
     require("./CCRendererInSG");
     require("./CCRendererUnderSG");
@@ -19695,38 +19696,38 @@
     require("./missing-script");
     module.exports = [ require("./CCSprite"), require("./CCWidget"), require("./CCCanvas"), require("./CCAudioSource"), require("./CCAnimation"), require("./CCButton"), require("./CCLabel"), require("./CCProgressBar"), require("./CCMask"), require("./CCScrollBar"), require("./CCScrollView"), require("./CCPageViewIndicator"), require("./CCPageView"), require("./CCSlider"), require("./CCLayout"), require("./CCEditBox"), require("./CCVideoPlayer"), require("./CCWebView"), require("./CCSpriteDistortion"), require("./CCLabelOutline"), require("./CCRichText"), require("./CCToggleContainer"), require("./CCToggleGroup"), require("./CCToggle"), require("./CCBlockInputEvents") ];
   }), {
-    "./CCAnimation": 71,
-    "./CCAudioSource": 72,
-    "./CCBlockInputEvents": 73,
-    "./CCButton": 74,
-    "./CCCanvas": 75,
-    "./CCComponent": 76,
-    "./CCComponentEventHandler": 77,
-    "./CCEditBox": 78,
-    "./CCLabel": 79,
-    "./CCLabelOutline": 80,
-    "./CCLayout": 81,
-    "./CCMask": 82,
-    "./CCPageView": 83,
-    "./CCPageViewIndicator": 84,
-    "./CCProgressBar": 85,
-    "./CCRendererInSG": 86,
-    "./CCRendererUnderSG": 87,
-    "./CCRichText": 88,
-    "./CCScrollBar": 90,
-    "./CCScrollView": 91,
-    "./CCSlider": 92,
-    "./CCSprite": 93,
-    "./CCSpriteDistortion": 94,
-    "./CCToggle": 96,
-    "./CCToggleContainer": 97,
-    "./CCToggleGroup": 98,
-    "./CCVideoPlayer": 99,
-    "./CCWebView": 101,
-    "./CCWidget": 102,
-    "./missing-script": 104
+    "./CCAnimation": 72,
+    "./CCAudioSource": 73,
+    "./CCBlockInputEvents": 74,
+    "./CCButton": 75,
+    "./CCCanvas": 76,
+    "./CCComponent": 77,
+    "./CCComponentEventHandler": 78,
+    "./CCEditBox": 79,
+    "./CCLabel": 80,
+    "./CCLabelOutline": 81,
+    "./CCLayout": 82,
+    "./CCMask": 83,
+    "./CCPageView": 84,
+    "./CCPageViewIndicator": 85,
+    "./CCProgressBar": 86,
+    "./CCRendererInSG": 87,
+    "./CCRendererUnderSG": 88,
+    "./CCRichText": 89,
+    "./CCScrollBar": 91,
+    "./CCScrollView": 92,
+    "./CCSlider": 93,
+    "./CCSprite": 94,
+    "./CCSpriteDistortion": 95,
+    "./CCToggle": 97,
+    "./CCToggleContainer": 98,
+    "./CCToggleGroup": 99,
+    "./CCVideoPlayer": 100,
+    "./CCWebView": 102,
+    "./CCWidget": 103,
+    "./missing-script": 105
   } ],
-  104: [ (function(require, module, exports) {
+  105: [ (function(require, module, exports) {
     var JS = cc.js;
     var BUILTIN_CLASSID_RE = require("../utils/misc").BUILTIN_CLASSID_RE;
     var MissingClass = cc.Class({
@@ -19777,9 +19778,9 @@
     });
     cc._MissingScript = module.exports = MissingScript;
   }), {
-    "../utils/misc": 225
+    "../utils/misc": 226
   } ],
-  105: [ (function(require, module, exports) {
+  106: [ (function(require, module, exports) {
     var SCROLLY = 40;
     var LEFT_PADDING = 2;
     var DELAY_TIME = 400;
@@ -20576,10 +20577,10 @@
       };
     })(_ccsg.EditBox._polyfill);
   }), {
-    "../platform/CCSys": 184,
-    "../platform/utils": 200
+    "../platform/CCSys": 185,
+    "../platform/utils": 201
   } ],
-  106: [ (function(require, module, exports) {
+  107: [ (function(require, module, exports) {
     var JS = cc.js;
     require("../event/event");
     var EventMouse = function(eventType, bubbles) {
@@ -20744,9 +20745,9 @@
     cc.Event.EventKeyboard = EventKeyboard;
     module.exports = cc.Event;
   }), {
-    "../event/event": 114
+    "../event/event": 115
   } ],
-  107: [ (function(require, module, exports) {
+  108: [ (function(require, module, exports) {
     cc.EventListener = cc._Class.extend({
       ctor: function(type, listenerID, callback) {
         this._onEvent = callback;
@@ -20987,7 +20988,7 @@
     });
     cc._EventListenerKeyboard.LISTENER_ID = "__cc_keyboard";
   }), {} ],
-  108: [ (function(require, module, exports) {
+  109: [ (function(require, module, exports) {
     var _EventListenerVector = cc._Class.extend({
       ctor: function() {
         this._fixedListeners = [];
@@ -21607,7 +21608,7 @@
       }
     };
   }), {} ],
-  109: [ (function(require, module, exports) {
+  110: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     var EventType = cc.Enum({
       KEY_DOWN: "keydown",
@@ -21673,9 +21674,9 @@
     true;
     cc.systemEvent = new cc.SystemEvent();
   }), {
-    "../event/event-target": 113
+    "../event/event-target": 114
   } ],
-  110: [ (function(require, module, exports) {
+  111: [ (function(require, module, exports) {
     cc.Touch = cc._Class.extend({
       ctor: function(x, y, id) {
         this._lastModified = 0;
@@ -21753,20 +21754,20 @@
       }
     });
   }), {} ],
-  111: [ (function(require, module, exports) {
+  112: [ (function(require, module, exports) {
     require("./CCTouch");
     require("./CCEventListener");
     require("./CCEventManager");
     require("./CCEvent");
     require("./CCSystemEvent");
   }), {
-    "./CCEvent": 106,
-    "./CCEventListener": 107,
-    "./CCEventManager": 108,
-    "./CCSystemEvent": 109,
-    "./CCTouch": 110
+    "./CCEvent": 107,
+    "./CCEventListener": 108,
+    "./CCEventManager": 109,
+    "./CCSystemEvent": 110,
+    "./CCTouch": 111
   } ],
-  112: [ (function(require, module, exports) {
+  113: [ (function(require, module, exports) {
     var JS = cc.js;
     var CallbacksHandler = require("../platform/callbacks-invoker").CallbacksHandler;
     function EventListeners() {
@@ -21798,9 +21799,9 @@
     module.exports = EventListeners;
     false;
   }), {
-    "../platform/callbacks-invoker": 189
+    "../platform/callbacks-invoker": 190
   } ],
-  113: [ (function(require, module, exports) {
+  114: [ (function(require, module, exports) {
     var EventListeners = require("./event-listeners");
     require("./event");
     var JS = cc.js;
@@ -21978,10 +21979,10 @@
     EventTarget.prototype._EventTargetTargetOff = EventTarget.prototype.targetOff;
     cc.EventTarget = module.exports = EventTarget;
   }), {
-    "./event": 114,
-    "./event-listeners": 112
+    "./event": 115,
+    "./event-listeners": 113
   } ],
-  114: [ (function(require, module, exports) {
+  115: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     cc.Event = function(type, bubbles) {
       this.type = type;
@@ -22057,18 +22058,18 @@
     cc.Event.EventCustom = EventCustom;
     module.exports = cc.Event;
   }), {
-    "../platform/js": 196
+    "../platform/js": 197
   } ],
-  115: [ (function(require, module, exports) {
+  116: [ (function(require, module, exports) {
     require("./event");
     require("./event-listeners");
     require("./event-target");
   }), {
-    "./event": 114,
-    "./event-listeners": 112,
-    "./event-target": 113
+    "./event": 115,
+    "./event-listeners": 113,
+    "./event-target": 114
   } ],
-  116: [ (function(require, module, exports) {
+  117: [ (function(require, module, exports) {
     "use strict";
     module.exports = earcut;
     function earcut(data, holeIndices, dim) {
@@ -22460,7 +22461,7 @@
       return result;
     };
   }), {} ],
-  117: [ (function(require, module, exports) {
+  118: [ (function(require, module, exports) {
     var Js = cc.js;
     var LineCap = require("./types").LineCap;
     var LineJoin = require("./types").LineJoin;
@@ -22592,10 +22593,10 @@
     };
     module.exports = CanvasRenderCmd;
   }), {
-    "./helper": 121,
-    "./types": 123
+    "./helper": 122,
+    "./types": 124
   } ],
-  118: [ (function(require, module, exports) {
+  119: [ (function(require, module, exports) {
     var CanvasRenderCmd = require("./graphics-canvas-cmd");
     var WebGLRenderCmd = require("./graphics-webgl-cmd");
     var LineCap = require("./types").LineCap;
@@ -22707,11 +22708,11 @@
     };
     module.exports = GraphicsNode;
   }), {
-    "./graphics-canvas-cmd": 117,
-    "./graphics-webgl-cmd": 119,
-    "./types": 123
+    "./graphics-canvas-cmd": 118,
+    "./graphics-webgl-cmd": 120,
+    "./types": 124
   } ],
-  119: [ (function(require, module, exports) {
+  120: [ (function(require, module, exports) {
     var LineCap = require("./types").LineCap;
     var LineJoin = require("./types").LineJoin;
     var Earcut = require("./earcut");
@@ -23416,11 +23417,11 @@
     };
     module.exports = WebGLRenderCmd;
   }), {
-    "./earcut": 116,
-    "./helper": 121,
-    "./types": 123
+    "./earcut": 117,
+    "./helper": 122,
+    "./types": 124
   } ],
-  120: [ (function(require, module, exports) {
+  121: [ (function(require, module, exports) {
     var LineCap = require("./types").LineCap;
     var LineJoin = require("./types").LineJoin;
     var Graphics = cc.Class({
@@ -23551,9 +23552,9 @@
     });
     cc.Graphics = module.exports = Graphics;
   }), {
-    "./types": 123
+    "./types": 124
   } ],
-  121: [ (function(require, module, exports) {
+  122: [ (function(require, module, exports) {
     var PI = Math.PI;
     var min = Math.min;
     var max = Math.max;
@@ -23620,7 +23621,7 @@
       roundRect: roundRect
     };
   }), {} ],
-  122: [ (function(require, module, exports) {
+  123: [ (function(require, module, exports) {
     "use strict";
     var GraphicsNode;
     true;
@@ -23631,11 +23632,11 @@
     }
     require("./graphics");
   }), {
-    "../utils/misc": 225,
-    "./graphics": 120,
-    "./graphics-node": 118
+    "../utils/misc": 226,
+    "./graphics": 121,
+    "./graphics-node": 119
   } ],
-  123: [ (function(require, module, exports) {
+  124: [ (function(require, module, exports) {
     "use strict";
     var LineCap = cc.Enum({
       BUTT: 0,
@@ -23652,7 +23653,7 @@
       LineJoin: LineJoin
     };
   }), {} ],
-  124: [ (function(require, module, exports) {
+  125: [ (function(require, module, exports) {
     require("./platform");
     require("./assets");
     true;
@@ -23666,19 +23667,19 @@
     require("./camera/CCCamera");
     require("./base-ui/CCWidgetManager");
   }), {
-    "./CCNode": 40,
-    "./CCScene": 41,
-    "./assets": 54,
-    "./base-ui/CCWidgetManager": 59,
-    "./camera/CCCamera": 60,
-    "./collider": 69,
-    "./collider/CCIntersection": 67,
-    "./components": 103,
-    "./graphics": 122,
-    "./physics": 158,
-    "./platform": 193
+    "./CCNode": 41,
+    "./CCScene": 42,
+    "./assets": 55,
+    "./base-ui/CCWidgetManager": 60,
+    "./camera/CCCamera": 61,
+    "./collider": 70,
+    "./collider/CCIntersection": 68,
+    "./components": 104,
+    "./graphics": 123,
+    "./physics": 159,
+    "./platform": 194
   } ],
-  125: [ (function(require, module, exports) {
+  126: [ (function(require, module, exports) {
     var eventRegx = /^(click)(\s)*=/;
     var imageAttrReg = /(\s)*src(\s)*=|(\s)*height(\s)*=|(\s)*width(\s)*=|(\s)*click(\s)*=/;
     cc.HtmlTextParser = function() {
@@ -23908,7 +23909,7 @@
     };
     cc.htmlTextParser = new cc.HtmlTextParser();
   }), {} ],
-  126: [ (function(require, module, exports) {
+  127: [ (function(require, module, exports) {
     require("./CCTextUtils");
     var EventTarget = require("../event/event-target");
     var JS = require("../platform/js");
@@ -24812,11 +24813,11 @@
       set: _ccsg.Node.prototype._setHeight
     });
   }), {
-    "../event/event-target": 113,
-    "../platform/js": 196,
-    "./CCTextUtils": 129
+    "../event/event-target": 114,
+    "../platform/js": 197,
+    "./CCTextUtils": 130
   } ],
-  127: [ (function(require, module, exports) {
+  128: [ (function(require, module, exports) {
     (function() {
       _ccsg.Label.TTFLabelBaker = function() {};
       var proto = _ccsg.Label.TTFLabelBaker.prototype = Object.create(Object.prototype);
@@ -25164,7 +25165,7 @@
       };
     })();
   }), {} ],
-  128: [ (function(require, module, exports) {
+  129: [ (function(require, module, exports) {
     _ccsg.Label.WebGLRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = true;
@@ -25250,7 +25251,7 @@
       return len;
     };
   }), {} ],
-  129: [ (function(require, module, exports) {
+  130: [ (function(require, module, exports) {
     var CustomFontDescriptor = function() {
       this._status = "unloaded";
       this._observers = [];
@@ -25452,7 +25453,7 @@
     cc.TextUtils = module.exports = TextUtils;
     cc.CustomFontLoader = module.exports = CustomFontLoader;
   }), {} ],
-  130: [ (function(require, module, exports) {
+  131: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var Pipeline = require("./pipeline");
     var LoadingItems = require("./loading-items");
@@ -25801,18 +25802,18 @@
     false;
     module.exports = cc.loader;
   }), {
-    "../platform/js": 196,
-    "../platform/utils": 200,
-    "./asset-loader": 131,
-    "./asset-table": 132,
-    "./auto-release-utils": 134,
-    "./downloader": 135,
-    "./loader": 138,
-    "./loading-items": 139,
-    "./pipeline": 142,
-    "./released-asset-checker": 143
+    "../platform/js": 197,
+    "../platform/utils": 201,
+    "./asset-loader": 132,
+    "./asset-table": 133,
+    "./auto-release-utils": 135,
+    "./downloader": 136,
+    "./loader": 139,
+    "./loading-items": 140,
+    "./pipeline": 143,
+    "./released-asset-checker": 144
   } ],
-  131: [ (function(require, module, exports) {
+  132: [ (function(require, module, exports) {
     var Path = require("../utils/CCPath");
     var Pipeline = require("./pipeline");
     var LoadingItems = require("./loading-items");
@@ -25862,11 +25863,11 @@
     };
     Pipeline.AssetLoader = module.exports = AssetLoader;
   }), {
-    "../utils/CCPath": 218,
-    "./loading-items": 139,
-    "./pipeline": 142
+    "../utils/CCPath": 219,
+    "./loading-items": 140,
+    "./pipeline": 143
   } ],
-  132: [ (function(require, module, exports) {
+  133: [ (function(require, module, exports) {
     var pushToMap = require("../utils/misc").pushToMap;
     function Entry(uuid, type) {
       this.uuid = uuid;
@@ -25947,9 +25948,9 @@
     };
     module.exports = AssetTable;
   }), {
-    "../utils/misc": 225
+    "../utils/misc": 226
   } ],
-  133: [ (function(require, module, exports) {
+  134: [ (function(require, module, exports) {
     var Path = require("../utils/CCPath");
     var sys = require("../platform/CCSys");
     var Pipeline = require("./pipeline");
@@ -26014,12 +26015,12 @@
     }
     module.exports = downloadAudio;
   }), {
-    "../../audio/CCAudioEngine": 23,
-    "../platform/CCSys": 184,
-    "../utils/CCPath": 218,
-    "./pipeline": 142
+    "../../audio/CCAudioEngine": 24,
+    "../platform/CCSys": 185,
+    "../utils/CCPath": 219,
+    "./pipeline": 143
   } ],
-  134: [ (function(require, module, exports) {
+  135: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     function parseDepends(key, parsed) {
       var item = cc.loader.getItem(key);
@@ -26084,9 +26085,9 @@
       }
     };
   }), {
-    "../platform/js": 196
+    "../platform/js": 197
   } ],
-  135: [ (function(require, module, exports) {
+  136: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var sys = require("../platform/CCSys");
     var Path = require("../utils/CCPath");
@@ -26286,17 +26287,17 @@
     };
     Pipeline.Downloader = module.exports = Downloader;
   }), {
-    "../platform/CCSys": 184,
-    "../platform/js": 196,
-    "../utils/CCPath": 218,
-    "../utils/misc": 225,
-    "./audio-downloader": 133,
-    "./pack-downloader": 141,
-    "./pipeline": 142,
-    "./text-downloader": 144,
-    "./utils": 145
+    "../platform/CCSys": 185,
+    "../platform/js": 197,
+    "../utils/CCPath": 219,
+    "../utils/misc": 226,
+    "./audio-downloader": 134,
+    "./pack-downloader": 142,
+    "./pipeline": 143,
+    "./text-downloader": 145,
+    "./utils": 146
   } ],
-  136: [ (function(require, module, exports) {
+  137: [ (function(require, module, exports) {
     require("./downloader");
     require("./loader");
     require("./json-unpacker");
@@ -26304,14 +26305,14 @@
     require("./pipeline");
     require("./CCLoader");
   }), {
-    "./CCLoader": 130,
-    "./downloader": 135,
-    "./json-unpacker": 137,
-    "./loader": 138,
-    "./loading-items": 139,
-    "./pipeline": 142
+    "./CCLoader": 131,
+    "./downloader": 136,
+    "./json-unpacker": 138,
+    "./loader": 139,
+    "./loading-items": 140,
+    "./pipeline": 143
   } ],
-  137: [ (function(require, module, exports) {
+  138: [ (function(require, module, exports) {
     function JsonUnpacker() {
       this.jsons = {};
       this.state = -1;
@@ -26331,7 +26332,7 @@
     false;
     module.exports = JsonUnpacker;
   }), {} ],
-  138: [ (function(require, module, exports) {
+  139: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var sys = require("../platform/CCSys");
     var Pipeline = require("./pipeline");
@@ -26401,14 +26402,14 @@
     };
     Pipeline.Loader = module.exports = Loader;
   }), {
-    "../platform/CCSys": 184,
-    "../platform/js": 196,
-    "../textures/CCTexture2D": 215,
-    "../utils/misc": 225,
-    "./pipeline": 142,
-    "./uuid-loader": 146
+    "../platform/CCSys": 185,
+    "../platform/js": 197,
+    "../textures/CCTexture2D": 216,
+    "../utils/misc": 226,
+    "./pipeline": 143,
+    "./uuid-loader": 147
   } ],
-  139: [ (function(require, module, exports) {
+  140: [ (function(require, module, exports) {
     var CallbacksInvoker = require("../platform/callbacks-invoker");
     var Path = require("../utils/CCPath");
     var JS = require("../platform/js");
@@ -26692,11 +26693,11 @@
     };
     cc.LoadingItems = module.exports = LoadingItems;
   }), {
-    "../platform/callbacks-invoker": 189,
-    "../platform/js": 196,
-    "../utils/CCPath": 218
+    "../platform/callbacks-invoker": 190,
+    "../platform/js": 197,
+    "../utils/CCPath": 219
   } ],
-  140: [ (function(require, module, exports) {
+  141: [ (function(require, module, exports) {
     var Pipeline = require("./pipeline");
     var ID = "MD5Pipe";
     var ExtnameRegex = /(\.[^.\n\\/]*)$/;
@@ -26734,9 +26735,9 @@
     };
     Pipeline.MD5Pipe = module.exports = MD5Pipe;
   }), {
-    "./pipeline": 142
+    "./pipeline": 143
   } ],
-  141: [ (function(require, module, exports) {
+  142: [ (function(require, module, exports) {
     var JsonUnpacker = require("./json-unpacker");
     var pushToMap = require("../utils/misc").pushToMap;
     var uuidToPack = {};
@@ -26825,10 +26826,10 @@
     };
     false;
   }), {
-    "../utils/misc": 225,
-    "./json-unpacker": 137
+    "../utils/misc": 226,
+    "./json-unpacker": 138
   } ],
-  142: [ (function(require, module, exports) {
+  143: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var LoadingItems = require("./loading-items");
     var ItemState = LoadingItems.ItemState;
@@ -26965,10 +26966,10 @@
     };
     cc.Pipeline = module.exports = Pipeline;
   }), {
-    "../platform/js": 196,
-    "./loading-items": 139
+    "../platform/js": 197,
+    "./loading-items": 140
   } ],
-  143: [ (function(require, module, exports) {
+  144: [ (function(require, module, exports) {
     true;
     var JS;
     var tmpInfo;
@@ -27022,9 +27023,9 @@
       module.exports = ReleasedAssetChecker;
     })();
   }), {
-    "../platform/js": 196
+    "../platform/js": 197
   } ],
-  144: [ (function(require, module, exports) {
+  145: [ (function(require, module, exports) {
     var sys = require("../platform/CCSys");
     false;
     var urlAppendTimestamp = require("./utils").urlAppendTimestamp;
@@ -27059,10 +27060,10 @@
       xhr.send(null);
     };
   }), {
-    "../platform/CCSys": 184,
-    "./utils": 145
+    "../platform/CCSys": 185,
+    "./utils": 146
   } ],
-  145: [ (function(require, module, exports) {
+  146: [ (function(require, module, exports) {
     var _noCacheRex = /\?/;
     module.exports = {
       urlAppendTimestamp: function(url) {
@@ -27071,7 +27072,7 @@
       }
     };
   }), {} ],
-  146: [ (function(require, module, exports) {
+  147: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     require("../platform/deserialize");
     var LoadingItems = require("./loading-items");
@@ -27226,11 +27227,11 @@
     module.exports = loadUuid;
     loadUuid.isSceneObj = isSceneObj;
   }), {
-    "../platform/deserialize": 191,
-    "../platform/js": 196,
-    "./loading-items": 139
+    "../platform/deserialize": 192,
+    "../platform/js": 197,
+    "./loading-items": 140
   } ],
-  147: [ (function(require, module, exports) {
+  148: [ (function(require, module, exports) {
     var CompScheduler = require("./component-scheduler");
     var Flags = require("./platform/CCObject").Flags;
     var JS = require("./platform/js");
@@ -27399,12 +27400,12 @@
     });
     module.exports = NodeActivator;
   }), {
-    "./component-scheduler": 70,
-    "./platform/CCObject": 181,
-    "./platform/js": 196,
-    "./utils/misc": 225
+    "./component-scheduler": 71,
+    "./platform/CCObject": 182,
+    "./platform/js": 197,
+    "./utils/misc": 226
   } ],
-  148: [ (function(require, module, exports) {
+  149: [ (function(require, module, exports) {
     var PTM_RATIO = require("./CCPhysicsTypes").PTM_RATIO;
     var ContactType = require("./CCPhysicsTypes").ContactType;
     var pools = [];
@@ -27623,9 +27624,9 @@
     PhysicsContact.ContactType = ContactType;
     cc.PhysicsContact = module.exports = PhysicsContact;
   }), {
-    "./CCPhysicsTypes": 150
+    "./CCPhysicsTypes": 151
   } ],
-  149: [ (function(require, module, exports) {
+  150: [ (function(require, module, exports) {
     var ContactType = require("./CCPhysicsTypes").ContactType;
     var BodyType = require("./CCPhysicsTypes").BodyType;
     var RayCastType = require("./CCPhysicsTypes").RayCastType;
@@ -27908,9 +27909,9 @@
     }));
     cc.PhysicsManager = module.exports = PhysicsManager;
   }), {
-    "./CCPhysicsTypes": 150
+    "./CCPhysicsTypes": 151
   } ],
-  150: [ (function(require, module, exports) {
+  151: [ (function(require, module, exports) {
     var ContactType = {
       BEGIN_CONTACT: "begin-contact",
       END_CONTACT: "end-contact",
@@ -27940,7 +27941,7 @@
       PHYSICS_ANGLE_TO_ANGLE: -180 / Math.PI
     };
   }), {} ],
-  151: [ (function(require, module, exports) {
+  152: [ (function(require, module, exports) {
     function At(i, vertices) {
       var s = vertices.length;
       return vertices[i < 0 ? s - -i % s : i % s];
@@ -28124,7 +28125,7 @@
       IsCounterClockWise: IsCounterClockWise
     };
   }), {} ],
-  152: [ (function(require, module, exports) {
+  153: [ (function(require, module, exports) {
     var PTM_RATIO = require("./CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("./CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var PHYSICS_ANGLE_TO_ANGLE = require("./CCPhysicsTypes").PHYSICS_ANGLE_TO_ANGLE;
@@ -28518,10 +28519,10 @@
     });
     cc.RigidBody = module.exports = RigidBody;
   }), {
-    "./CCPhysicsTypes": 150,
-    "./utils": 173
+    "./CCPhysicsTypes": 151,
+    "./utils": 174
   } ],
-  153: [ (function(require, module, exports) {
+  154: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PhysicsBoxCollider = cc.Class({
       name: "cc.PhysicsBoxCollider",
@@ -28545,9 +28546,9 @@
     });
     cc.PhysicsBoxCollider = module.exports = PhysicsBoxCollider;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  154: [ (function(require, module, exports) {
+  155: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PhysicsChainCollider = cc.Class({
       name: "cc.PhysicsChainCollider",
@@ -28587,9 +28588,9 @@
     });
     cc.PhysicsChainCollider = module.exports = PhysicsChainCollider;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  155: [ (function(require, module, exports) {
+  156: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PhysicsCircleCollider = cc.Class({
       name: "cc.PhysicsCircleCollider",
@@ -28612,9 +28613,9 @@
     });
     cc.PhysicsCircleCollider = module.exports = PhysicsCircleCollider;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  156: [ (function(require, module, exports) {
+  157: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var getWorldScale = require("../utils").getWorldScale;
     var PhysicsCollider = cc.Class({
@@ -28784,10 +28785,10 @@
     });
     cc.PhysicsCollider = module.exports = PhysicsCollider;
   }), {
-    "../CCPhysicsTypes": 150,
-    "../utils": 173
+    "../CCPhysicsTypes": 151,
+    "../utils": 174
   } ],
-  157: [ (function(require, module, exports) {
+  158: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PolygonSeparator = require("../CCPolygonSeparator");
     var PhysicsPolygonCollider = cc.Class({
@@ -28834,10 +28835,10 @@
     });
     cc.PhysicsPolygonCollider = module.exports = PhysicsPolygonCollider;
   }), {
-    "../CCPhysicsTypes": 150,
-    "../CCPolygonSeparator": 151
+    "../CCPhysicsTypes": 151,
+    "../CCPolygonSeparator": 152
   } ],
-  158: [ (function(require, module, exports) {
+  159: [ (function(require, module, exports) {
     true;
     window.b2 = require("../../../external/box2d/box2d");
     require("./CCPhysicsManager");
@@ -28864,31 +28865,31 @@
     require("./platform/CCPhysicsAABBQueryCallback");
     require("./platform/CCPhysicsRayCastCallback");
   }), {
-    "../../../external/box2d/box2d": 309,
-    "./CCPhysicsContact": 148,
-    "./CCPhysicsManager": 149,
-    "./CCRigidBody": 152,
-    "./collider/CCPhysicsBoxCollider": 153,
-    "./collider/CCPhysicsChainCollider": 154,
-    "./collider/CCPhysicsCircleCollider": 155,
-    "./collider/CCPhysicsCollider": 156,
-    "./collider/CCPhysicsPolygonCollider": 157,
-    "./joint/CCDistanceJoint": 159,
-    "./joint/CCJoint": 160,
-    "./joint/CCMotorJoint": 161,
-    "./joint/CCMouseJoint": 162,
-    "./joint/CCPrismaticJoint": 163,
-    "./joint/CCRevoluteJoint": 164,
-    "./joint/CCRopeJoint": 165,
-    "./joint/CCWeldJoint": 166,
-    "./joint/CCWheelJoint": 167,
-    "./platform/CCPhysicsAABBQueryCallback": 168,
-    "./platform/CCPhysicsContactListner": 169,
-    "./platform/CCPhysicsDebugDraw": 170,
-    "./platform/CCPhysicsRayCastCallback": 171,
-    "./platform/CCPhysicsUtils": 172
+    "../../../external/box2d/box2d": 310,
+    "./CCPhysicsContact": 149,
+    "./CCPhysicsManager": 150,
+    "./CCRigidBody": 153,
+    "./collider/CCPhysicsBoxCollider": 154,
+    "./collider/CCPhysicsChainCollider": 155,
+    "./collider/CCPhysicsCircleCollider": 156,
+    "./collider/CCPhysicsCollider": 157,
+    "./collider/CCPhysicsPolygonCollider": 158,
+    "./joint/CCDistanceJoint": 160,
+    "./joint/CCJoint": 161,
+    "./joint/CCMotorJoint": 162,
+    "./joint/CCMouseJoint": 163,
+    "./joint/CCPrismaticJoint": 164,
+    "./joint/CCRevoluteJoint": 165,
+    "./joint/CCRopeJoint": 166,
+    "./joint/CCWeldJoint": 167,
+    "./joint/CCWheelJoint": 168,
+    "./platform/CCPhysicsAABBQueryCallback": 169,
+    "./platform/CCPhysicsContactListner": 170,
+    "./platform/CCPhysicsDebugDraw": 171,
+    "./platform/CCPhysicsRayCastCallback": 172,
+    "./platform/CCPhysicsUtils": 173
   } ],
-  159: [ (function(require, module, exports) {
+  160: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var DistanceJoint = cc.Class({
       name: "cc.DistanceJoint",
@@ -28941,9 +28942,9 @@
     });
     cc.DistanceJoint = module.exports = DistanceJoint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  160: [ (function(require, module, exports) {
+  161: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var Joint = cc.Class({
       name: "cc.Joint",
@@ -29042,9 +29043,9 @@
     });
     cc.Joint = module.exports = Joint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  161: [ (function(require, module, exports) {
+  162: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var MotorJoint = cc.Class({
@@ -29132,9 +29133,9 @@
     });
     cc.MotorJoint = module.exports = MotorJoint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  162: [ (function(require, module, exports) {
+  163: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var tempB2Vec2 = new b2.Vec2();
     var MouseJoint = cc.Class({
@@ -29265,9 +29266,9 @@
     });
     cc.MouseJoint = module.exports = MouseJoint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  163: [ (function(require, module, exports) {
+  164: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var PrismaticJoint = cc.Class({
@@ -29339,9 +29340,9 @@
     });
     cc.PrismaticJoint = module.exports = PrismaticJoint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  164: [ (function(require, module, exports) {
+  165: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var PHYSICS_ANGLE_TO_ANGLE = require("../CCPhysicsTypes").PHYSICS_ANGLE_TO_ANGLE;
@@ -29427,9 +29428,9 @@
     });
     cc.RevoluteJoint = module.exports = RevoluteJoint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  165: [ (function(require, module, exports) {
+  166: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var RopeJoint = cc.Class({
       name: "cc.RopeJoint",
@@ -29458,9 +29459,9 @@
     });
     cc.RopeJoint = module.exports = RopeJoint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  166: [ (function(require, module, exports) {
+  167: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var WeldJoint = cc.Class({
@@ -29507,9 +29508,9 @@
     });
     cc.WeldJoint = module.exports = WeldJoint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  167: [ (function(require, module, exports) {
+  168: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var ANGLE_TO_PHYSICS_ANGLE = require("../CCPhysicsTypes").ANGLE_TO_PHYSICS_ANGLE;
     var WheelJoint = cc.Class({
@@ -29592,9 +29593,9 @@
     });
     cc.WheelJoint = module.exports = WheelJoint;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  168: [ (function(require, module, exports) {
+  169: [ (function(require, module, exports) {
     function PhysicsAABBQueryCallback() {
       this._point = new b2.Vec2();
       this._isPoint = false;
@@ -29626,7 +29627,7 @@
     };
     cc.PhysicsAABBQueryCallback = module.exports = PhysicsAABBQueryCallback;
   }), {} ],
-  169: [ (function(require, module, exports) {
+  170: [ (function(require, module, exports) {
     function PhysicsContactListener() {
       this._contactFixtures = [];
     }
@@ -29673,7 +29674,7 @@
     };
     cc.PhysicsContactListener = module.exports = PhysicsContactListener;
   }), {} ],
-  170: [ (function(require, module, exports) {
+  171: [ (function(require, module, exports) {
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var PhysicsDebugDraw = cc.Class({
       name: "cc.PhysicsDebugDraw",
@@ -29744,9 +29745,9 @@
     });
     cc.PhysicsDebugDraw = module.exports = PhysicsDebugDraw;
   }), {
-    "../CCPhysicsTypes": 150
+    "../CCPhysicsTypes": 151
   } ],
-  171: [ (function(require, module, exports) {
+  172: [ (function(require, module, exports) {
     function PhysicsRayCastCallback() {
       this._type = 0;
       this._fixtures = [];
@@ -29791,7 +29792,7 @@
     };
     cc.PhysicsRayCastCallback = module.exports = PhysicsRayCastCallback;
   }), {} ],
-  172: [ (function(require, module, exports) {
+  173: [ (function(require, module, exports) {
     var PHYSICS_ANGLE_TO_ANGLE = require("../CCPhysicsTypes").PHYSICS_ANGLE_TO_ANGLE;
     var PTM_RATIO = require("../CCPhysicsTypes").PTM_RATIO;
     var convertToNodeRotation = require("../utils").convertToNodeRotation;
@@ -29824,10 +29825,10 @@
     };
     cc.PhysicsUtils = module.exports = PhysicsUtils;
   }), {
-    "../CCPhysicsTypes": 150,
-    "../utils": 173
+    "../CCPhysicsTypes": 151,
+    "../utils": 174
   } ],
-  173: [ (function(require, module, exports) {
+  174: [ (function(require, module, exports) {
     function getWorldRotation(node) {
       var rot = node.rotationX;
       var parent = node.parent;
@@ -29863,7 +29864,7 @@
       convertToNodeRotation: convertToNodeRotation
     };
   }), {} ],
-  174: [ (function(require, module, exports) {
+  175: [ (function(require, module, exports) {
     var Asset = require("../assets/CCAsset");
     var callInNextTick = require("./utils").callInNextTick;
     var Loader = require("../load-pipeline/CCLoader");
@@ -30024,15 +30025,15 @@
     AssetLibrary._uuidToAsset = {};
     module.exports = cc.AssetLibrary = AssetLibrary;
   }), {
-    "../assets/CCAsset": 43,
-    "../load-pipeline/CCLoader": 130,
-    "../load-pipeline/auto-release-utils": 134,
-    "../load-pipeline/md5-pipe": 140,
-    "../load-pipeline/pack-downloader": 141,
-    "../utils/decode-uuid": 222,
-    "./utils": 200
+    "../assets/CCAsset": 44,
+    "../load-pipeline/CCLoader": 131,
+    "../load-pipeline/auto-release-utils": 135,
+    "../load-pipeline/md5-pipe": 141,
+    "../load-pipeline/pack-downloader": 142,
+    "../utils/decode-uuid": 223,
+    "./utils": 201
   } ],
-  175: [ (function(require, module, exports) {
+  176: [ (function(require, module, exports) {
     var JS = require("./js");
     var Enum = require("./CCEnum");
     var Utils = require("./utils");
@@ -30557,14 +30558,14 @@
     };
     false;
   }), {
-    "./CCEnum": 177,
-    "./attribute": 188,
-    "./js": 196,
-    "./preprocess-class": 197,
-    "./requiring-frame": 198,
-    "./utils": 200
+    "./CCEnum": 178,
+    "./attribute": 189,
+    "./js": 197,
+    "./preprocess-class": 198,
+    "./requiring-frame": 199,
+    "./utils": 201
   } ],
-  176: [ (function(require, module, exports) {
+  177: [ (function(require, module, exports) {
     require("./CCClass");
     var Preprocess = require("./preprocess-class");
     var JS = require("./js");
@@ -30737,12 +30738,12 @@
       mixins: mixins
     };
   }), {
-    "./CCClass": 175,
-    "./js": 196,
-    "./preprocess-class": 197,
-    "./utils": 200
+    "./CCClass": 176,
+    "./js": 197,
+    "./preprocess-class": 198,
+    "./utils": 201
   } ],
-  177: [ (function(require, module, exports) {
+  178: [ (function(require, module, exports) {
     var JS = require("./js");
     function Enum(obj) {
       if ("__enums__" in obj) return obj;
@@ -30789,9 +30790,9 @@
     false;
     module.exports = cc.Enum = Enum;
   }), {
-    "./js": 196
+    "./js": 197
   } ],
-  178: [ (function(require, module, exports) {
+  179: [ (function(require, module, exports) {
     cc.ClassManager || require("./_CCClass");
     var inputManager = require("./CCInputManager");
     inputManager.__instanceId = cc.ClassManager.getNewInstanceId();
@@ -30869,10 +30870,10 @@
       }
     };
   }), {
-    "./CCInputManager": 179,
-    "./_CCClass": 187
+    "./CCInputManager": 180,
+    "./_CCClass": 188
   } ],
-  179: [ (function(require, module, exports) {
+  180: [ (function(require, module, exports) {
     var macro = require("./CCMacro");
     var sys = require("./CCSys");
     var TOUCH_TIMEOUT = macro.TOUCH_TIMEOUT;
@@ -31250,10 +31251,10 @@
     cc.inputManager = inputManager;
     module.exports = inputManager;
   }), {
-    "./CCMacro": 180,
-    "./CCSys": 184
+    "./CCMacro": 181,
+    "./CCSys": 185
   } ],
-  180: [ (function(require, module, exports) {
+  181: [ (function(require, module, exports) {
     require("./_CCClass");
     cc.KEY = {
       none: 0,
@@ -31541,9 +31542,9 @@
     };
     module.exports = cc.macro;
   }), {
-    "./_CCClass": 187
+    "./_CCClass": 188
   } ],
-  181: [ (function(require, module, exports) {
+  182: [ (function(require, module, exports) {
     var JS = require("./js");
     var CCClass = require("./CCClass");
     var Destroyed = 1;
@@ -31704,10 +31705,10 @@
     false, false;
     cc.Object = module.exports = CCObject;
   }), {
-    "./CCClass": 175,
-    "./js": 196
+    "./CCClass": 176,
+    "./js": 197
   } ],
-  182: [ (function(require, module, exports) {
+  183: [ (function(require, module, exports) {
     cc.SAXParser = cc._Class.extend({
       ctor: function() {
         if (window.DOMParser) {
@@ -31778,7 +31779,7 @@
     cc.saxParser = new cc.SAXParser();
     cc.plistParser = new cc.PlistParser();
   }), {} ],
-  183: [ (function(require, module, exports) {
+  184: [ (function(require, module, exports) {
     cc.screen = {
       _supportsFullScreen: false,
       _preOnFullScreenChange: null,
@@ -31829,7 +31830,7 @@
     };
     cc.screen.init();
   }), {} ],
-  184: [ (function(require, module, exports) {
+  185: [ (function(require, module, exports) {
     if (cc.sys) return;
     cc.sys = {};
     var sys = cc.sys;
@@ -32144,7 +32145,7 @@
     };
     module.exports = sys;
   }), {} ],
-  185: [ (function(require, module, exports) {
+  186: [ (function(require, module, exports) {
     var __BrowserGetter = {
       init: function() {
         cc.sys.platform !== cc.sys.WECHAT_GAME && (this.html = document.getElementsByTagName("html")[0]);
@@ -32830,7 +32831,7 @@
     cc.ResolutionPolicy.UNKNOWN = 5;
     module.exports = View;
   }), {} ],
-  186: [ (function(require, module, exports) {
+  187: [ (function(require, module, exports) {
     cc.visibleRect = {
       topLeft: cc.p(0, 0),
       topRight: cc.p(0, 0),
@@ -32868,7 +32869,7 @@
       }
     };
   }), {} ],
-  187: [ (function(require, module, exports) {
+  188: [ (function(require, module, exports) {
     var ClassManager = cc.ClassManager = {
       instanceId: 0 | 998 * Math.random(),
       getNewInstanceId: function() {
@@ -32973,7 +32974,7 @@
     };
     cc._Class = module.exports = Class;
   }), {} ],
-  188: [ (function(require, module, exports) {
+  189: [ (function(require, module, exports) {
     var JS = require("./js");
     var isPlainEmptyObj = require("./utils").isPlainEmptyObj_DEV;
     var DELIMETER = "$_$";
@@ -33061,11 +33062,11 @@
       ScriptUuid: {}
     };
   }), {
-    "./CCClass": 175,
-    "./js": 196,
-    "./utils": 200
+    "./CCClass": 176,
+    "./js": 197,
+    "./utils": 201
   } ],
-  189: [ (function(require, module, exports) {
+  190: [ (function(require, module, exports) {
     var JS = require("./js");
     var fastRemoveAt = JS.array.fastRemoveAt;
     function CallbackList() {
@@ -33189,9 +33190,9 @@
     CallbacksInvoker.CallbacksHandler = CallbacksHandler;
     module.exports = CallbacksInvoker;
   }), {
-    "./js": 196
+    "./js": 197
   } ],
-  190: [ (function(require, module, exports) {
+  191: [ (function(require, module, exports) {
     function deepFlatten(strList, array) {
       for (var i = 0; i < array.length; i++) {
         var item = array[i];
@@ -33208,7 +33209,7 @@
       flattenCodeArray: flattenCodeArray
     };
   }), {} ],
-  191: [ (function(require, module, exports) {
+  192: [ (function(require, module, exports) {
     var JS = require("./js");
     var CCObject = require("./CCObject");
     var Attr = require("./attribute");
@@ -33534,13 +33535,13 @@
       cc.warnID(5302, id);
     };
   }), {
-    "../utils/misc": 225,
-    "./CCClass": 175,
-    "./CCObject": 181,
-    "./attribute": 188,
-    "./js": 196
+    "../utils/misc": 226,
+    "./CCClass": 176,
+    "./CCObject": 182,
+    "./attribute": 189,
+    "./js": 197
   } ],
-  192: [ (function(require, module, exports) {
+  193: [ (function(require, module, exports) {
     var NonUuidMark = ".";
     function IdGenerater(category) {
       this.id = 0 | 998 * Math.random();
@@ -33552,7 +33553,7 @@
     IdGenerater.global = new IdGenerater("global");
     module.exports = IdGenerater;
   }), {} ],
-  193: [ (function(require, module, exports) {
+  194: [ (function(require, module, exports) {
     require("./js");
     require("./CCClass");
     require("./CCClassDecorator");
@@ -33571,23 +33572,23 @@
     true;
     require("./CCVisibleRect");
   }), {
-    "./CCAssetLibrary": 174,
-    "./CCClass": 175,
-    "./CCClassDecorator": 176,
-    "./CCEnum": 177,
-    "./CCMacro": 180,
-    "./CCObject": 181,
-    "./CCSys": 184,
-    "./CCVisibleRect": 186,
-    "./callbacks-invoker": 189,
-    "./deserialize": 191,
-    "./instantiate": 195,
-    "./instantiate-jit": 194,
-    "./js": 196,
-    "./requiring-frame": 198,
-    "./url": 199
+    "./CCAssetLibrary": 175,
+    "./CCClass": 176,
+    "./CCClassDecorator": 177,
+    "./CCEnum": 178,
+    "./CCMacro": 181,
+    "./CCObject": 182,
+    "./CCSys": 185,
+    "./CCVisibleRect": 187,
+    "./callbacks-invoker": 190,
+    "./deserialize": 192,
+    "./instantiate": 196,
+    "./instantiate-jit": 195,
+    "./js": 197,
+    "./requiring-frame": 199,
+    "./url": 200
   } ],
-  194: [ (function(require, module, exports) {
+  195: [ (function(require, module, exports) {
     var CCObject = require("./CCObject");
     var Destroyed = CCObject.Flags.Destroyed;
     var PersistentMask = CCObject.Flags.PersistentMask;
@@ -33861,13 +33862,13 @@
     };
     false;
   }), {
-    "./CCClass": 175,
-    "./CCObject": 181,
-    "./attribute": 188,
-    "./compiler": 190,
-    "./js": 196
+    "./CCClass": 176,
+    "./CCObject": 182,
+    "./attribute": 189,
+    "./compiler": 191,
+    "./js": 197
   } ],
-  195: [ (function(require, module, exports) {
+  196: [ (function(require, module, exports) {
     var CCObject = require("./CCObject");
     var Destroyed = CCObject.Flags.Destroyed;
     var PersistentMask = CCObject.Flags.PersistentMask;
@@ -33989,11 +33990,11 @@
     cc.instantiate = instantiate;
     module.exports = instantiate;
   }), {
-    "./CCObject": 181,
-    "./attribute": 188,
-    "./utils": 200
+    "./CCObject": 182,
+    "./attribute": 189,
+    "./utils": 201
   } ],
-  196: [ (function(require, module, exports) {
+  197: [ (function(require, module, exports) {
     var tempCIDGenerater = new (require("./id-generater"))("TmpCId.");
     function _getPropertyDescriptor(obj, name) {
       while (obj) {
@@ -34349,10 +34350,10 @@
     cc.js = js;
     module.exports = js;
   }), {
-    "../utils/mutable-forward-iterator": 226,
-    "./id-generater": 192
+    "../utils/mutable-forward-iterator": 227,
+    "./id-generater": 193
   } ],
-  197: [ (function(require, module, exports) {
+  198: [ (function(require, module, exports) {
     var SerializableAttrs = {
       url: {
         canUsedInGet: true
@@ -34479,9 +34480,9 @@
       return true;
     };
   }), {
-    "./CCClass": 175
+    "./CCClass": 176
   } ],
-  198: [ (function(require, module, exports) {
+  199: [ (function(require, module, exports) {
     var requiringFrames = [];
     cc._RF = {
       push: function(module, uuid, script) {
@@ -34512,7 +34513,7 @@
     };
     false;
   }), {} ],
-  199: [ (function(require, module, exports) {
+  200: [ (function(require, module, exports) {
     var _mounts = {};
     cc.url = {
       _rawAssets: "",
@@ -34543,7 +34544,7 @@
     };
     module.exports = cc.url;
   }), {} ],
-  200: [ (function(require, module, exports) {
+  201: [ (function(require, module, exports) {
     module.exports = {
       contains: function(refNode, otherNode) {
         if ("function" == typeof refNode.contains) return refNode.contains(otherNode);
@@ -34569,7 +34570,7 @@
     false;
     false;
   }), {} ],
-  201: [ (function(require, module, exports) {
+  202: [ (function(require, module, exports) {
     require("./platform/js");
     require("./value-types");
     require("./utils");
@@ -34591,27 +34592,27 @@
     require("./event-manager");
     require("./renderer");
   }), {
-    "./CCDirector": 33,
-    "./CCDirectorCanvas": 34,
-    "./CCDirectorWebGL": 35,
-    "./CCScheduler": 42,
-    "./event": 115,
-    "./event-manager": 111,
-    "./load-pipeline": 136,
-    "./platform/CCInputExtension": 178,
-    "./platform/CCInputManager": 179,
-    "./platform/CCMacro": 180,
-    "./platform/CCSAXParser": 182,
-    "./platform/CCScreen": 183,
-    "./platform/CCSys": 184,
-    "./platform/CCView": 185,
-    "./platform/js": 196,
-    "./renderer": 205,
-    "./textures": 217,
-    "./utils": 224,
-    "./value-types": 238
+    "./CCDirector": 34,
+    "./CCDirectorCanvas": 35,
+    "./CCDirectorWebGL": 36,
+    "./CCScheduler": 43,
+    "./event": 116,
+    "./event-manager": 112,
+    "./load-pipeline": 137,
+    "./platform/CCInputExtension": 179,
+    "./platform/CCInputManager": 180,
+    "./platform/CCMacro": 181,
+    "./platform/CCSAXParser": 183,
+    "./platform/CCScreen": 184,
+    "./platform/CCSys": 185,
+    "./platform/CCView": 186,
+    "./platform/js": 197,
+    "./renderer": 206,
+    "./textures": 218,
+    "./utils": 225,
+    "./value-types": 239
   } ],
-  202: [ (function(require, module, exports) {
+  203: [ (function(require, module, exports) {
     var Region = function() {
       this._minX = 0;
       this._minY = 0;
@@ -34839,7 +34840,7 @@
     cc.Region = Region;
     cc.DirtyRegion = DirtyRegion;
   }), {} ],
-  203: [ (function(require, module, exports) {
+  204: [ (function(require, module, exports) {
     cc.rendererCanvas = {
       childrenOrderDirty: true,
       assignedZ: 0,
@@ -35140,7 +35141,7 @@
       };
     })();
   }), {} ],
-  204: [ (function(require, module, exports) {
+  205: [ (function(require, module, exports) {
     var _batchedInfo = {
       texture: null,
       blendSrc: null,
@@ -35465,16 +35466,16 @@
       }
     };
   }), {} ],
-  205: [ (function(require, module, exports) {
+  206: [ (function(require, module, exports) {
     require("./RendererCanvas");
     require("./RendererWebGL");
     require("./DirtyRegion");
   }), {
-    "./DirtyRegion": 202,
-    "./RendererCanvas": 203,
-    "./RendererWebGL": 204
+    "./DirtyRegion": 203,
+    "./RendererCanvas": 204,
+    "./RendererWebGL": 205
   } ],
-  206: [ (function(require, module, exports) {
+  207: [ (function(require, module, exports) {
     _ccsg.Scene = _ccsg.Node.extend({
       _className: "Scene",
       ctor: function() {
@@ -35485,7 +35486,7 @@
       }
     });
   }), {} ],
-  207: [ (function(require, module, exports) {
+  208: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     var Misc = require("../utils/misc");
     _ccsg.Sprite = _ccsg.Node.extend({
@@ -35801,10 +35802,10 @@
     };
     Misc.propertyDefine(_ccsg.Sprite, SameNameGetSets, DiffNameGetSets);
   }), {
-    "../event/event-target": 113,
-    "../utils/misc": 225
+    "../event/event-target": 114,
+    "../utils/misc": 226
   } ],
-  208: [ (function(require, module, exports) {
+  209: [ (function(require, module, exports) {
     _ccsg.Sprite.CanvasRenderCmd = function(renderable) {
       this._rootCtor(renderable);
       this._needDraw = true;
@@ -35982,7 +35983,7 @@
       return nCanvas;
     };
   }), {} ],
-  209: [ (function(require, module, exports) {
+  210: [ (function(require, module, exports) {
     var macro = cc.macro;
     _ccsg.Sprite.WebGLRenderCmd = function(renderable) {
       this._rootCtor(renderable);
@@ -36205,7 +36206,7 @@
       return len;
     };
   }), {} ],
-  210: [ (function(require, module, exports) {
+  211: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     function sortIndex(a, b) {
       return a - b;
@@ -37260,9 +37261,9 @@
       RADIAL: 2
     });
   }), {
-    "../event/event-target": 113
+    "../event/event-target": 114
   } ],
-  211: [ (function(require, module, exports) {
+  212: [ (function(require, module, exports) {
     cc.Scale9Sprite.CanvasRenderCmd = function(renderable) {
       this._rootCtor(renderable);
       this._node.loaded() ? this._needDraw = true : this._needDraw = false;
@@ -37383,7 +37384,7 @@
       }
     };
   }), {} ],
-  212: [ (function(require, module, exports) {
+  213: [ (function(require, module, exports) {
     var ccgl = cc.gl;
     cc.Scale9Sprite.WebGLRenderCmd = function(renderable) {
       this._rootCtor(renderable);
@@ -37537,7 +37538,7 @@
       fShader: "precision lowp float;\nvarying vec4 v_fragmentColor;\nvarying vec2 v_texCoord;\nuniform vec2 u_offset;\nuniform vec2 u_offset_tiling;\nconst float PI = 3.14159265359;\nvoid main()\n{\nfloat halfPI = 0.5 * PI;\nfloat maxFactor = sin(halfPI);\nvec2 uv = v_texCoord;\nvec2 xy = 2.0 * uv.xy - 1.0;\nfloat d = length(xy);\nif (d < (2.0-maxFactor)) {\nd = length(xy * maxFactor);\nfloat z = sqrt(1.0 - d * d);\nfloat r = atan(d, z) / PI;\nfloat phi = atan(xy.y, xy.x);\nuv.x = r * cos(phi) + 0.5;\nuv.y = r * sin(phi) + 0.5;\n} else {\ndiscard;\n}\nuv = uv * u_offset_tiling + u_offset;\nuv = fract(uv);\ngl_FragColor = v_fragmentColor * texture2D(CC_Texture0, uv);\n}"
     };
   }), {} ],
-  213: [ (function(require, module, exports) {
+  214: [ (function(require, module, exports) {
     cc.SpriteBatchNode = _ccsg.Node.extend({
       _blendFunc: null,
       _texture: null,
@@ -37628,7 +37629,7 @@
     cc.defineGetterSetter(_p, "texture", _p.getTexture, _p.setTexture);
     cc.defineGetterSetter(_p, "shaderProgram", _p.getShaderProgram, _p.setShaderProgram);
   }), {} ],
-  214: [ (function(require, module, exports) {
+  215: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     cc.SpriteFrame = cc.Class({
       name: "cc.SpriteFrame",
@@ -37801,10 +37802,10 @@
     proto.copy = proto.clone;
     proto.initWithTexture = proto.setTexture;
   }), {
-    "../assets/CCAsset": 43,
-    "../event/event-target": 113
+    "../assets/CCAsset": 44,
+    "../event/event-target": 114
   } ],
-  215: [ (function(require, module, exports) {
+  216: [ (function(require, module, exports) {
     var EventTarget = require("../event/event-target");
     var sys = require("../platform/CCSys");
     var JS = require("../platform/js");
@@ -38268,16 +38269,16 @@
     }));
     cc.Texture2D = module.exports = Texture2D;
   }), {
-    "../CCGame": 39,
-    "../assets/CCRawAsset": 49,
-    "../event/event-target": 113,
-    "../platform/CCClass": 175,
-    "../platform/CCSys": 184,
-    "../platform/_CCClass": 187,
-    "../platform/js": 196,
-    "../utils/misc": 225
+    "../CCGame": 40,
+    "../assets/CCRawAsset": 50,
+    "../event/event-target": 114,
+    "../platform/CCClass": 176,
+    "../platform/CCSys": 185,
+    "../platform/_CCClass": 188,
+    "../platform/js": 197,
+    "../utils/misc": 226
   } ],
-  216: [ (function(require, module, exports) {
+  217: [ (function(require, module, exports) {
     var game = require("../CCGame");
     var Texture2D = require("./CCTexture2D");
     var textureCache = {
@@ -38454,17 +38455,17 @@
     }));
     cc.textureCache = module.exports = textureCache;
   }), {
-    "../CCGame": 39,
-    "./CCTexture2D": 215
+    "../CCGame": 40,
+    "./CCTexture2D": 216
   } ],
-  217: [ (function(require, module, exports) {
+  218: [ (function(require, module, exports) {
     require("./CCTexture2D");
     require("./CCTextureCache");
   }), {
-    "./CCTexture2D": 215,
-    "./CCTextureCache": 216
+    "./CCTexture2D": 216,
+    "./CCTextureCache": 217
   } ],
-  218: [ (function(require, module, exports) {
+  219: [ (function(require, module, exports) {
     require("../platform/CCSys");
     var EXTNAME_RE = /(\.[^\.\/\?\\]*)(\?.*)?$/;
     var NORMALIZE_RE = /[^\.\/]+\/\.\.\//;
@@ -38539,9 +38540,9 @@
     };
     module.exports = cc.path;
   }), {
-    "../platform/CCSys": 184
+    "../platform/CCSys": 185
   } ],
-  219: [ (function(require, module, exports) {
+  220: [ (function(require, module, exports) {
     var PStats = require("../../../external/pstats/pstats");
     var macro = require("../platform/CCMacro");
     var _fps = document.createElement("div");
@@ -38626,9 +38627,9 @@
     };
   }), {
     "../../../external/pstats/pstats": 311,
-    "../platform/CCMacro": 180
+    "../platform/CCMacro": 181
   } ],
-  220: [ (function(require, module, exports) {
+  221: [ (function(require, module, exports) {
     var Flags = require("../platform/CCObject").Flags;
     var Misc = require("./misc");
     var IdGenerater = require("../platform/id-generater");
@@ -39067,11 +39068,11 @@
     false;
     cc._BaseNode = module.exports = BaseNode;
   }), {
-    "../platform/CCObject": 181,
-    "../platform/id-generater": 192,
-    "./misc": 225
+    "../platform/CCObject": 182,
+    "../platform/id-generater": 193,
+    "./misc": 226
   } ],
-  221: [ (function(require, module, exports) {
+  222: [ (function(require, module, exports) {
     var EPSILON = 1e-6;
     function binarySearchEpsilon(array, value) {
       for (var l = 0, h = array.length - 1, m = h >>> 1; l <= h; m = l + h >>> 1) {
@@ -39087,7 +39088,7 @@
       binarySearchEpsilon: binarySearchEpsilon
     };
   }), {} ],
-  222: [ (function(require, module, exports) {
+  223: [ (function(require, module, exports) {
     var Base64Values = require("./misc").BASE64_VALUES;
     var HexChars = "0123456789abcdef".split("");
     var _t = [ "", "", "", "" ];
@@ -39110,9 +39111,9 @@
     };
     false;
   }), {
-    "./misc": 225
+    "./misc": 226
   } ],
-  223: [ (function(require, module, exports) {
+  224: [ (function(require, module, exports) {
     cc.find = module.exports = function(path, referenceNode) {
       if (null == path) {
         cc.errorID(5600);
@@ -39146,19 +39147,19 @@
       return match;
     };
   }), {} ],
-  224: [ (function(require, module, exports) {
+  225: [ (function(require, module, exports) {
     require("./CCPath");
     true, true;
     require("./CCProfiler");
     require("./find");
     require("./mutable-forward-iterator");
   }), {
-    "./CCPath": 218,
-    "./CCProfiler": 219,
-    "./find": 223,
-    "./mutable-forward-iterator": 226
+    "./CCPath": 219,
+    "./CCProfiler": 220,
+    "./find": 224,
+    "./mutable-forward-iterator": 227
   } ],
-  225: [ (function(require, module, exports) {
+  226: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     var sys = require("../platform/CCSys");
     var misc = exports;
@@ -39222,10 +39223,10 @@
       } else exists.push(value); else map[key] = pushFront ? [ value, exists ] : [ exists, value ]; else map[key] = value;
     };
   }), {
-    "../platform/CCSys": 184,
-    "../platform/js": 196
+    "../platform/CCSys": 185,
+    "../platform/js": 197
   } ],
-  226: [ (function(require, module, exports) {
+  227: [ (function(require, module, exports) {
     function MutableForwardIterator(array) {
       this.i = 0;
       this.array = array;
@@ -39254,7 +39255,7 @@
     };
     module.exports = MutableForwardIterator;
   }), {} ],
-  227: [ (function(require, module, exports) {
+  228: [ (function(require, module, exports) {
     cc._PrefabInfo = cc.Class({
       name: "cc.PrefabInfo",
       properties: {
@@ -39309,7 +39310,7 @@
       }
     };
   }), {} ],
-  228: [ (function(require, module, exports) {
+  229: [ (function(require, module, exports) {
     var SceneGraphUtils = {
       removeSgNode: function() {
         var sgNode = this._sgNode;
@@ -39326,7 +39327,7 @@
     false;
     module.exports = SceneGraphUtils;
   }), {} ],
-  229: [ (function(require, module, exports) {
+  230: [ (function(require, module, exports) {
     cc.AffineTransform = function(a, b, c, d, tx, ty) {
       this.a = a;
       this.b = b;
@@ -39553,7 +39554,7 @@
       out.ty = determinant * (b * t.tx - a * t.ty);
     };
   }), {} ],
-  230: [ (function(require, module, exports) {
+  231: [ (function(require, module, exports) {
     var ValueType = require("./CCValueType");
     var JS = require("../platform/js");
     var Color = (function() {
@@ -39796,11 +39797,11 @@
     };
     module.exports = cc.Color;
   }), {
-    "../platform/CCClass": 175,
-    "../platform/js": 196,
-    "./CCValueType": 236
+    "../platform/CCClass": 176,
+    "../platform/js": 197,
+    "./CCValueType": 237
   } ],
-  231: [ (function(require, module, exports) {
+  232: [ (function(require, module, exports) {
     var POINT_EPSILON = parseFloat("1.192092896e-07F");
     cc.pNeg = function(point) {
       return cc.p(-point.x, -point.y);
@@ -39966,7 +39967,7 @@
       cc.pMultIn(v, 1 / Math.sqrt(v.x * v.x + v.y * v.y));
     };
   }), {} ],
-  232: [ (function(require, module, exports) {
+  233: [ (function(require, module, exports) {
     var ValueType = require("./CCValueType");
     var JS = require("../platform/js");
     function Rect(x, y, w, h) {
@@ -40129,11 +40130,11 @@
     };
     module.exports = cc.Rect;
   }), {
-    "../platform/CCClass": 175,
-    "../platform/js": 196,
-    "./CCValueType": 236
+    "../platform/CCClass": 176,
+    "../platform/js": 197,
+    "./CCValueType": 237
   } ],
-  233: [ (function(require, module, exports) {
+  234: [ (function(require, module, exports) {
     var ValueType = require("./CCValueType");
     var JS = require("../platform/js");
     function Size(width, height) {
@@ -40178,11 +40179,11 @@
     };
     cc.Size = module.exports = Size;
   }), {
-    "../platform/CCClass": 175,
-    "../platform/js": 196,
-    "./CCValueType": 236
+    "../platform/CCClass": 176,
+    "../platform/js": 197,
+    "./CCValueType": 237
   } ],
-  234: [ (function(require, module, exports) {
+  235: [ (function(require, module, exports) {
     cc.Acceleration = function(x, y, z, timestamp) {
       this.x = x || 0;
       this.y = y || 0;
@@ -40238,7 +40239,7 @@
       BOTTOM: 2
     });
   }), {} ],
-  235: [ (function(require, module, exports) {
+  236: [ (function(require, module, exports) {
     cc.WebGLColor = function(r, g, b, a, arrayBuffer, offset) {
       this._arrayBuffer = arrayBuffer || new ArrayBuffer(cc.WebGLColor.BYTES_PER_ELEMENT);
       this._offset = offset || 0;
@@ -40687,7 +40688,7 @@
     cc.js.getset(_p, "b", _p._getB, _p._setB);
     cc.js.getset(_p, "c", _p._getC, _p._setC);
   }), {} ],
-  236: [ (function(require, module, exports) {
+  237: [ (function(require, module, exports) {
     var JS = require("../platform/js");
     function ValueType() {}
     JS.setClassName("cc.ValueType", ValueType);
@@ -40699,9 +40700,9 @@
     cc.ValueType = ValueType;
     module.exports = ValueType;
   }), {
-    "../platform/js": 196
+    "../platform/js": 197
   } ],
-  237: [ (function(require, module, exports) {
+  238: [ (function(require, module, exports) {
     var ValueType = require("./CCValueType");
     var JS = require("../platform/js");
     var CCClass = require("../platform/CCClass");
@@ -40889,11 +40890,11 @@
     };
     module.exports = cc.Vec2;
   }), {
-    "../platform/CCClass": 175,
-    "../platform/js": 196,
-    "./CCValueType": 236
+    "../platform/CCClass": 176,
+    "../platform/js": 197,
+    "./CCValueType": 237
   } ],
-  238: [ (function(require, module, exports) {
+  239: [ (function(require, module, exports) {
     require("./CCValueType");
     require("./CCVec2");
     require("./CCPointExtension");
@@ -40904,17 +40905,17 @@
     require("./CCAffineTransform");
     require("./CCTypesWebGL");
   }), {
-    "./CCAffineTransform": 229,
-    "./CCColor": 230,
-    "./CCPointExtension": 231,
-    "./CCRect": 232,
-    "./CCSize": 233,
-    "./CCTypes": 234,
-    "./CCTypesWebGL": 235,
-    "./CCValueType": 236,
-    "./CCVec2": 237
+    "./CCAffineTransform": 230,
+    "./CCColor": 231,
+    "./CCPointExtension": 232,
+    "./CCRect": 233,
+    "./CCSize": 234,
+    "./CCTypes": 235,
+    "./CCTypesWebGL": 236,
+    "./CCValueType": 237,
+    "./CCVec2": 238
   } ],
-  239: [ (function(require, module, exports) {
+  240: [ (function(require, module, exports) {
     var Utils = require("../platform/utils");
     var sys = require("../platform/CCSys");
     _ccsg.VideoPlayer = _ccsg.Node.extend({
@@ -41270,10 +41271,10 @@
       };
     })(_ccsg.VideoPlayer._polyfill);
   }), {
-    "../platform/CCSys": 184,
-    "../platform/utils": 200
+    "../platform/CCSys": 185,
+    "../platform/utils": 201
   } ],
-  240: [ (function(require, module, exports) {
+  241: [ (function(require, module, exports) {
     var Utils = require("../platform/utils");
     _ccsg.WebView = _ccsg.Node.extend({
       ctor: function() {
@@ -41520,9 +41521,9 @@
       };
     })(_ccsg.WebView._polyfill);
   }), {
-    "../platform/utils": 200
+    "../platform/utils": 201
   } ],
-  241: [ (function(require, module, exports) {
+  242: [ (function(require, module, exports) {
     var js = cc.js;
     var deprecateEnum;
     var markAsRemoved;
@@ -41531,7 +41532,7 @@
     var ERR;
     false;
   }), {} ],
-  242: [ (function(require, module, exports) {
+  243: [ (function(require, module, exports) {
     require("./core/CCGame");
     require("./actions");
     require("./core/base-nodes/CCSGNode");
@@ -41551,26 +41552,26 @@
     require("./render-texture/CCRenderTextureCanvasRenderCmd");
     require("./render-texture/CCRenderTextureWebGLRenderCmd");
   }), {
-    "./actions": 10,
-    "./core/CCConfiguration": 32,
-    "./core/CCGame": 39,
-    "./core/base-nodes/CCSGNode": 55,
-    "./core/base-nodes/CCSGNodeBaseRenderCmd": 56,
-    "./core/base-nodes/CCSGNodeCanvasRenderCmd": 57,
-    "./core/base-nodes/CCSGNodeWebGLRenderCmd": 58,
-    "./core/scenes/CCSGScene": 206,
-    "./core/sprites/CCSGSprite": 207,
-    "./core/sprites/CCSGSpriteCanvasRenderCmd": 208,
-    "./core/sprites/CCSGSpriteWebGLRenderCmd": 209,
-    "./core/sprites/CCScale9Sprite": 210,
-    "./core/sprites/CCScale9SpriteCanvasRenderCmd": 211,
-    "./core/sprites/CCScale9SpriteWebGLRenderCmd": 212,
-    "./core/sprites/CCSpriteBatchNode": 213,
-    "./render-texture/CCRenderTexture": 266,
-    "./render-texture/CCRenderTextureCanvasRenderCmd": 267,
-    "./render-texture/CCRenderTextureWebGLRenderCmd": 268
+    "./actions": 11,
+    "./core/CCConfiguration": 33,
+    "./core/CCGame": 40,
+    "./core/base-nodes/CCSGNode": 56,
+    "./core/base-nodes/CCSGNodeBaseRenderCmd": 57,
+    "./core/base-nodes/CCSGNodeCanvasRenderCmd": 58,
+    "./core/base-nodes/CCSGNodeWebGLRenderCmd": 59,
+    "./core/scenes/CCSGScene": 207,
+    "./core/sprites/CCSGSprite": 208,
+    "./core/sprites/CCSGSpriteCanvasRenderCmd": 209,
+    "./core/sprites/CCSGSpriteWebGLRenderCmd": 210,
+    "./core/sprites/CCScale9Sprite": 211,
+    "./core/sprites/CCScale9SpriteCanvasRenderCmd": 212,
+    "./core/sprites/CCScale9SpriteWebGLRenderCmd": 213,
+    "./core/sprites/CCSpriteBatchNode": 214,
+    "./render-texture/CCRenderTexture": 267,
+    "./render-texture/CCRenderTextureCanvasRenderCmd": 268,
+    "./render-texture/CCRenderTextureWebGLRenderCmd": 269
   } ],
-  243: [ (function(require, module, exports) {
+  244: [ (function(require, module, exports) {
     cc.math.AABB = function(min, max) {
       this.min = min || new cc.math.Vec3();
       this.max = max || new cc.math.Vec3();
@@ -41591,7 +41592,7 @@
       return pOut;
     };
   }), {} ],
-  244: [ (function(require, module, exports) {
+  245: [ (function(require, module, exports) {
     cc.math.Matrix4Stack = function(top, stack) {
       this.top = top;
       this.stack = stack || [];
@@ -41631,7 +41632,7 @@
       this._matrixPool.push(matrix);
     };
   }), {} ],
-  245: [ (function(require, module, exports) {
+  246: [ (function(require, module, exports) {
     var math = cc.math;
     math.KM_GL_MODELVIEW = 5888;
     math.KM_GL_PROJECTION = 5889;
@@ -41747,7 +41748,7 @@
       }
     };
   }), {} ],
-  246: [ (function(require, module, exports) {
+  247: [ (function(require, module, exports) {
     require("./utility");
     require("./vec2");
     require("./vec3");
@@ -41761,20 +41762,20 @@
     require("./gl/mat4stack");
     require("./gl/matrix");
   }), {
-    "./aabb": 243,
-    "./gl/mat4stack": 244,
-    "./gl/matrix": 245,
-    "./mat3": 247,
-    "./mat4": 248,
-    "./plane": 249,
-    "./quaternion": 250,
-    "./ray2": 251,
-    "./utility": 252,
-    "./vec2": 253,
-    "./vec3": 254,
-    "./vec4": 255
+    "./aabb": 244,
+    "./gl/mat4stack": 245,
+    "./gl/matrix": 246,
+    "./mat3": 248,
+    "./mat4": 249,
+    "./plane": 250,
+    "./quaternion": 251,
+    "./ray2": 252,
+    "./utility": 253,
+    "./vec2": 254,
+    "./vec3": 255,
+    "./vec4": 256
   } ],
-  247: [ (function(require, module, exports) {
+  248: [ (function(require, module, exports) {
     true;
     window.Uint16Array = window.Uint16Array || window.Array;
     window.Float32Array = window.Float32Array || window.Array;
@@ -41994,7 +41995,7 @@
       return cc.math.Quaternion.rotationMatrix(this).toAxisAndAngle();
     };
   }), {} ],
-  248: [ (function(require, module, exports) {
+  249: [ (function(require, module, exports) {
     cc.math.Matrix4 = function(mat4) {
       mat4 && mat4.mat ? this.mat = new Float32Array(mat4.mat) : this.mat = new Float32Array(16);
     };
@@ -42602,7 +42603,7 @@
       return temp.toAxisAndAngle();
     };
   }), {} ],
-  249: [ (function(require, module, exports) {
+  250: [ (function(require, module, exports) {
     cc.math.Plane = function(a, b, c, d) {
       if (a && void 0 === b) {
         this.a = a.a;
@@ -42666,7 +42667,7 @@
       return cc.math.Plane.POINT_ON_PLANE;
     };
   }), {} ],
-  250: [ (function(require, module, exports) {
+  251: [ (function(require, module, exports) {
     cc.math.Quaternion = function(x, y, z, w) {
       if (x && void 0 === y) {
         this.x = x.x;
@@ -42904,7 +42905,7 @@
       return retVec;
     };
   }), {} ],
-  251: [ (function(require, module, exports) {
+  252: [ (function(require, module, exports) {
     cc.math.Ray2 = function(start, dir) {
       this.start = start || new cc.math.Vec2();
       this.dir = dir || new cc.math.Vec2();
@@ -42984,7 +42985,7 @@
       return intersected;
     };
   }), {} ],
-  252: [ (function(require, module, exports) {
+  253: [ (function(require, module, exports) {
     cc.math = cc.math || {};
     cc.math.EPSILON = 1 / 64;
     cc.math.square = function(s) {
@@ -42994,7 +42995,7 @@
       return lhs + cc.math.EPSILON > rhs && lhs - cc.math.EPSILON < rhs;
     };
   }), {} ],
-  253: [ (function(require, module, exports) {
+  254: [ (function(require, module, exports) {
     cc.math.Vec2 = function(x, y) {
       if (void 0 === y) {
         this.x = x.x;
@@ -43064,7 +43065,7 @@
       return this.x < vec.x + cc.math.EPSILON && this.x > vec.x - cc.math.EPSILON && this.y < vec.y + cc.math.EPSILON && this.y > vec.y - cc.math.EPSILON;
     };
   }), {} ],
-  254: [ (function(require, module, exports) {
+  255: [ (function(require, module, exports) {
     cc.math.Vec3 = cc.math.Vec3 = function(x, y, z) {
       if (x && void 0 === y) {
         this.x = x.x;
@@ -43193,7 +43194,7 @@
       return tyArr;
     };
   }), {} ],
-  255: [ (function(require, module, exports) {
+  256: [ (function(require, module, exports) {
     cc.math.Vec4 = function(x, y, z, w) {
       if (x && void 0 === y) {
         this.x = x.x;
@@ -43300,7 +43301,7 @@
       return tyArr;
     };
   }), {} ],
-  256: [ (function(require, module, exports) {
+  257: [ (function(require, module, exports) {
     require("./CCSGMotionStreak");
     require("./CCSGMotionStreakWebGLRenderCmd");
     var MotionStreak = cc.Class({
@@ -43436,10 +43437,10 @@
     });
     cc.MotionStreak = module.exports = MotionStreak;
   }), {
-    "./CCSGMotionStreak": 257,
-    "./CCSGMotionStreakWebGLRenderCmd": 258
+    "./CCSGMotionStreak": 258,
+    "./CCSGMotionStreakWebGLRenderCmd": 259
   } ],
-  257: [ (function(require, module, exports) {
+  258: [ (function(require, module, exports) {
     function vertexLineToPolygon(points, stroke, vertices, offset, nuPoints) {
       nuPoints += offset;
       if (nuPoints <= 1) return;
@@ -43783,7 +43784,7 @@
       set: motionStreakPro.setPositionY
     });
   }), {} ],
-  258: [ (function(require, module, exports) {
+  259: [ (function(require, module, exports) {
     _ccsg.MotionStreak.WebGLRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = true;
@@ -43827,7 +43828,7 @@
       }
     };
   }), {} ],
-  259: [ (function(require, module, exports) {
+  260: [ (function(require, module, exports) {
     var Zlib = require("../compression/zlib.min");
     var PNGReader = cc._Class.extend({
       ctor: function(data) {
@@ -44111,16 +44112,16 @@
     });
     module.exports = PNGReader;
   }), {
-    "../compression/zlib.min": 31
+    "../compression/zlib.min": 32
   } ],
-  260: [ (function(require, module, exports) {
+  261: [ (function(require, module, exports) {
     var ParticleAsset = cc.Class({
       name: "cc.ParticleAsset",
       extends: cc.RawAsset
     });
     cc.ParticleAsset = module.exports = ParticleAsset;
   }), {} ],
-  261: [ (function(require, module, exports) {
+  262: [ (function(require, module, exports) {
     require("./CCParticleAsset");
     require("./CCSGParticleSystem");
     require("./CCSGParticleSystemCanvasRenderCmd");
@@ -44456,12 +44457,12 @@
     });
     cc.ParticleSystem = module.exports = ParticleSystem;
   }), {
-    "./CCParticleAsset": 260,
-    "./CCSGParticleSystem": 262,
-    "./CCSGParticleSystemCanvasRenderCmd": 263,
-    "./CCSGParticleSystemWebGLRenderCmd": 264
+    "./CCParticleAsset": 261,
+    "./CCSGParticleSystem": 263,
+    "./CCSGParticleSystemCanvasRenderCmd": 264,
+    "./CCSGParticleSystemWebGLRenderCmd": 265
   } ],
-  262: [ (function(require, module, exports) {
+  263: [ (function(require, module, exports) {
     var PNGReader = require("./CCPNGReader");
     var tiffReader = require("./CCTIFFReader");
     require("../compression/ZipUtils");
@@ -45391,11 +45392,11 @@
       GROUPED: 2
     });
   }), {
-    "../compression/ZipUtils": 28,
-    "./CCPNGReader": 259,
-    "./CCTIFFReader": 265
+    "../compression/ZipUtils": 29,
+    "./CCPNGReader": 260,
+    "./CCTIFFReader": 266
   } ],
-  263: [ (function(require, module, exports) {
+  264: [ (function(require, module, exports) {
     _ccsg.ParticleSystem.CanvasRenderCmd = function(renderable) {
       this._rootCtor(renderable);
       this._needDraw = true;
@@ -45518,7 +45519,7 @@
       }
     };
   }), {} ],
-  264: [ (function(require, module, exports) {
+  265: [ (function(require, module, exports) {
     _ccsg.ParticleSystem.WebGLRenderCmd = function(renderable) {
       this._rootCtor(renderable);
       this._needDraw = true;
@@ -45750,7 +45751,7 @@
       selParticle.isChangeColor = true;
     };
   }), {} ],
-  265: [ (function(require, module, exports) {
+  266: [ (function(require, module, exports) {
     var tiffReader = {
       _littleEndian: false,
       _tiffData: null,
@@ -46159,7 +46160,7 @@
     };
     module.exports = tiffReader;
   }), {} ],
-  266: [ (function(require, module, exports) {
+  267: [ (function(require, module, exports) {
     cc.RenderTexture = _ccsg.Node.extend({
       sprite: null,
       clearFlags: 0,
@@ -46296,7 +46297,7 @@
       return new cc.RenderTexture(width, height, format, depthStencilFormat);
     };
   }), {} ],
-  267: [ (function(require, module, exports) {
+  268: [ (function(require, module, exports) {
     cc.RenderTexture.CanvasRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = false;
@@ -46355,7 +46356,7 @@
       cc.log("clearDepth isn't supported on Cocos2d-Html5");
     };
   }), {} ],
-  268: [ (function(require, module, exports) {
+  269: [ (function(require, module, exports) {
     var misc = require("../core/utils/misc");
     cc.RenderTexture.WebGLRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
@@ -46561,9 +46562,9 @@
       node.end();
     };
   }), {
-    "../core/utils/misc": 225
+    "../core/utils/misc": 226
   } ],
-  269: [ (function(require, module, exports) {
+  270: [ (function(require, module, exports) {
     var macro = cc.macro;
     var math = cc.math;
     cc.GLProgram = cc._Class.extend({
@@ -46951,7 +46952,7 @@
       return cc.GLProgram._highpSupported;
     };
   }), {} ],
-  270: [ (function(require, module, exports) {
+  271: [ (function(require, module, exports) {
     var _currentProjectionMatrix = -1;
     var macro = cc.macro;
     var ENABLE_GL_STATE_CACHE = macro.ENABLE_GL_STATE_CACHE;
@@ -47046,7 +47047,7 @@
       ENABLE_GL_STATE_CACHE;
     };
   }), {} ],
-  271: [ (function(require, module, exports) {
+  272: [ (function(require, module, exports) {
     var shaders = cc.PresetShaders;
     var macro = cc.macro;
     cc.shaderCache = {
@@ -47180,7 +47181,7 @@
       }
     };
   }), {} ],
-  272: [ (function(require, module, exports) {
+  273: [ (function(require, module, exports) {
     cc.PresetShaders = {
       POSITION_UCOLOR_FRAG: "precision lowp float;\nvarying vec4 v_fragmentColor;\nvoid main()\n{\ngl_FragColor = v_fragmentColor;\n}",
       POSITION_UCOLOR_VERT: "attribute vec4 a_position;\nuniform vec4 u_color;\nuniform float u_pointSize;\nvarying lowp vec4 v_fragmentColor;\nvoid main(void)\n{\ngl_Position = (CC_PMatrix * CC_MVMatrix) * a_position;\ngl_PointSize = u_pointSize;\nv_fragmentColor = u_color;\n}",
@@ -47202,18 +47203,18 @@
       EX_SWITCHMASK_FRAG: "precision lowp float;\nvarying vec4 v_fragmentColor;\nvarying vec2 v_texCoord;\nuniform sampler2D u_texture;\nuniform sampler2D u_mask;\nvoid main()\n{\nvec4 texColorc=texture2D(u_texture, v_texCoord);\nvec4 maskColor=texture2D(u_mask, v_texCoord);\nvec4 finalColor=vec4(texColor.r, texColor.g, texColor.b, maskColor.a*texColor.a);\ngl_FragColor=v_fragmentColor*finalColor;\n}"
     };
   }), {} ],
-  273: [ (function(require, module, exports) {
+  274: [ (function(require, module, exports) {
     require("./CCShaders");
     require("./CCShaderCache");
     require("./CCGLProgram");
     require("./CCGLStateCache");
   }), {
-    "./CCGLProgram": 269,
-    "./CCGLStateCache": 270,
-    "./CCShaderCache": 271,
-    "./CCShaders": 272
+    "./CCGLProgram": 270,
+    "./CCGLStateCache": 271,
+    "./CCShaderCache": 272,
+    "./CCShaders": 273
   } ],
-  274: [ (function(require, module, exports) {
+  275: [ (function(require, module, exports) {
     var __t = function(v) {
       return {
         u: v.x,
@@ -47931,10 +47932,10 @@
       }
     }));
   }), {
-    "./CCDrawNodeCanvasRenderCmd": 275,
-    "./CCDrawNodeWebGLRenderCmd": 276
+    "./CCDrawNodeCanvasRenderCmd": 276,
+    "./CCDrawNodeWebGLRenderCmd": 277
   } ],
-  275: [ (function(require, module, exports) {
+  276: [ (function(require, module, exports) {
     cc.DrawNode.CanvasRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = true;
@@ -48010,7 +48011,7 @@
       locIsStroke && ctx.stroke();
     };
   }), {} ],
-  276: [ (function(require, module, exports) {
+  277: [ (function(require, module, exports) {
     cc.DrawNode.WebGLRenderCmd = function(renderableObject) {
       this._rootCtor(renderableObject);
       this._needDraw = true;
@@ -48036,7 +48037,7 @@
       }
     };
   }), {} ],
-  277: [ (function(require, module, exports) {
+  278: [ (function(require, module, exports) {
     _ccsg.TMXLayer = _ccsg.Node.extend({
       tiles: null,
       tileset: null,
@@ -48524,7 +48525,7 @@
       }
     });
   }), {} ],
-  278: [ (function(require, module, exports) {
+  279: [ (function(require, module, exports) {
     require("../shape-nodes/CCDrawNode");
     _ccsg.TMXObject = cc.Class({
       properties: {
@@ -48811,9 +48812,9 @@
       }
     });
   }), {
-    "../shape-nodes/CCDrawNode": 274
+    "../shape-nodes/CCDrawNode": 275
   } ],
-  279: [ (function(require, module, exports) {
+  280: [ (function(require, module, exports) {
     _ccsg.TMXObjectGroup = _ccsg.Node.extend({
       properties: null,
       groupName: "",
@@ -48896,7 +48897,7 @@
       }
     });
   }), {} ],
-  280: [ (function(require, module, exports) {
+  281: [ (function(require, module, exports) {
     require("./CCSGTMXObject");
     require("./CCTMXXMLParser");
     _ccsg.TMXTiledMap = _ccsg.Node.extend({
@@ -49088,10 +49089,10 @@
     _p.tileHeight;
     cc.defineGetterSetter(_p, "tileHeight", _p._getTileHeight, _p._setTileHeight);
   }), {
-    "./CCSGTMXObject": 278,
-    "./CCTMXXMLParser": 283
+    "./CCSGTMXObject": 279,
+    "./CCTMXXMLParser": 284
   } ],
-  281: [ (function(require, module, exports) {
+  282: [ (function(require, module, exports) {
     var Orientation = null;
     var TileFlag = null;
     var FLIPPED_MASK = null;
@@ -49222,7 +49223,7 @@
       }
     };
   }), {} ],
-  282: [ (function(require, module, exports) {
+  283: [ (function(require, module, exports) {
     var Orientation = null;
     var TileFlag = null;
     var FLIPPED_MASK = null;
@@ -49425,7 +49426,7 @@
       return (offset - vertexDataOffset) / 6;
     };
   }), {} ],
-  283: [ (function(require, module, exports) {
+  284: [ (function(require, module, exports) {
     require("../compression/ZipUtils");
     var Zlib = require("../compression/zlib.min");
     function uint8ArrayToUint32Array(uint8Arr) {
@@ -49949,10 +49950,10 @@
     cc.TMXLayerInfo.ATTRIB_GZIP = 4;
     cc.TMXLayerInfo.ATTRIB_ZLIB = 8;
   }), {
-    "../compression/ZipUtils": 28,
-    "../compression/zlib.min": 31
+    "../compression/ZipUtils": 29,
+    "../compression/zlib.min": 32
   } ],
-  284: [ (function(require, module, exports) {
+  285: [ (function(require, module, exports) {
     require("./CCSGTMXLayer");
     require("./CCTMXLayerCanvasRenderCmd");
     require("./CCTMXLayerWebGLRenderCmd");
@@ -50106,11 +50107,11 @@
     });
     cc.TiledLayer = module.exports = TiledLayer;
   }), {
-    "./CCSGTMXLayer": 277,
-    "./CCTMXLayerCanvasRenderCmd": 281,
-    "./CCTMXLayerWebGLRenderCmd": 282
+    "./CCSGTMXLayer": 278,
+    "./CCTMXLayerCanvasRenderCmd": 282,
+    "./CCTMXLayerWebGLRenderCmd": 283
   } ],
-  285: [ (function(require, module, exports) {
+  286: [ (function(require, module, exports) {
     require("./CCTiledMapAsset");
     require("./CCTiledLayer");
     require("./CCTiledObjectGroup");
@@ -50516,12 +50517,12 @@
       return [];
     }), false);
   }), {
-    "./CCSGTMXTiledMap": 280,
-    "./CCTiledLayer": 284,
-    "./CCTiledMapAsset": 286,
-    "./CCTiledObjectGroup": 287
+    "./CCSGTMXTiledMap": 281,
+    "./CCTiledLayer": 285,
+    "./CCTiledMapAsset": 287,
+    "./CCTiledObjectGroup": 288
   } ],
-  286: [ (function(require, module, exports) {
+  287: [ (function(require, module, exports) {
     var TiledMapAsset = cc.Class({
       name: "cc.TiledMapAsset",
       extends: cc.Asset,
@@ -50549,7 +50550,7 @@
     cc.TiledMapAsset = TiledMapAsset;
     module.exports = TiledMapAsset;
   }), {} ],
-  287: [ (function(require, module, exports) {
+  288: [ (function(require, module, exports) {
     require("./CCSGTMXObjectGroup");
     var TiledObjectGroup = cc.Class({
       name: "cc.TiledObjectGroup",
@@ -50619,9 +50620,9 @@
     });
     cc.TiledObjectGroup = module.exports = TiledObjectGroup;
   }), {
-    "./CCSGTMXObjectGroup": 279
+    "./CCSGTMXObjectGroup": 280
   } ],
-  288: [ (function(require, module, exports) {
+  289: [ (function(require, module, exports) {
     require("./cocos2d/core");
     require("./cocos2d/animation");
     false;
@@ -50639,23 +50640,23 @@
     true;
     require("./cocos2d/deprecated");
   }), {
-    "./cocos2d/actions": 10,
-    "./cocos2d/animation": 18,
-    "./cocos2d/core": 124,
-    "./cocos2d/core/components/CCStudioComponent": 95,
-    "./cocos2d/deprecated": 241,
-    "./cocos2d/motion-streak/CCMotionStreak": 256,
-    "./cocos2d/particle/CCParticleAsset": 260,
-    "./cocos2d/particle/CCParticleSystem": 261,
-    "./cocos2d/tilemap/CCTiledMap": 285,
-    "./cocos2d/tilemap/CCTiledMapAsset": 286,
-    "./extensions/ccpool/CCNodePool": 289,
-    "./extensions/ccpool/CCPool": 290,
-    "./extensions/dragonbones": 298,
-    "./extensions/spine": 307,
-    "./external/chipmunk/chipmunk": 310
+    "./cocos2d/actions": 11,
+    "./cocos2d/animation": 19,
+    "./cocos2d/core": 125,
+    "./cocos2d/core/components/CCStudioComponent": 96,
+    "./cocos2d/deprecated": 242,
+    "./cocos2d/motion-streak/CCMotionStreak": 257,
+    "./cocos2d/particle/CCParticleAsset": 261,
+    "./cocos2d/particle/CCParticleSystem": 262,
+    "./cocos2d/tilemap/CCTiledMap": 286,
+    "./cocos2d/tilemap/CCTiledMapAsset": 287,
+    "./extensions/ccpool/CCNodePool": 290,
+    "./extensions/ccpool/CCPool": 291,
+    "./extensions/dragonbones": 299,
+    "./extensions/spine": 308,
+    "./external/chipmunk/chipmunk": 1
   } ],
-  289: [ (function(require, module, exports) {
+  290: [ (function(require, module, exports) {
     cc.NodePool = function(poolHandlerComp) {
       this.poolHandlerComp = poolHandlerComp;
       this._pool = [];
@@ -50690,7 +50691,7 @@
     };
     module.exports = cc.NodePool;
   }), {} ],
-  290: [ (function(require, module, exports) {
+  291: [ (function(require, module, exports) {
     var _args = [];
     cc.pool = {
       _pool: {},
@@ -50747,7 +50748,7 @@
       }
     };
   }), {} ],
-  291: [ (function(require, module, exports) {
+  292: [ (function(require, module, exports) {
     var DefaultArmaturesEnum = cc.Enum({
       default: -1
     });
@@ -51006,7 +51007,7 @@
       }
     });
   }), {} ],
-  292: [ (function(require, module, exports) {
+  293: [ (function(require, module, exports) {
     var EventTarget = require("../../cocos2d/core/event/event-target");
     require("../../cocos2d/shape-nodes/CCDrawNode");
     dragonBones.CCArmatureDisplay = cc.Class({
@@ -51075,10 +51076,10 @@
       }
     });
   }), {
-    "../../cocos2d/core/event/event-target": 113,
-    "../../cocos2d/shape-nodes/CCDrawNode": 274
+    "../../cocos2d/core/event/event-target": 114,
+    "../../cocos2d/shape-nodes/CCDrawNode": 275
   } ],
-  293: [ (function(require, module, exports) {
+  294: [ (function(require, module, exports) {
     var BaseObject = dragonBones.BaseObject;
     dragonBones.CCFactory = cc.Class({
       name: "dragonBones.CCFactory",
@@ -51177,7 +51178,7 @@
       return dragonBones.CCFactory._factory;
     };
   }), {} ],
-  294: [ (function(require, module, exports) {
+  295: [ (function(require, module, exports) {
     dragonBones.CCSlot = cc.Class({
       name: "dragonBones.CCSlot",
       extends: dragonBones.Slot,
@@ -51424,7 +51425,7 @@
       }
     });
   }), {} ],
-  295: [ (function(require, module, exports) {
+  296: [ (function(require, module, exports) {
     dragonBones.CCTextureAtlasData = cc.Class({
       name: "dragonBones.CCTextureAtlasData",
       extends: dragonBones.TextureAtlasData,
@@ -51460,7 +51461,7 @@
       }
     });
   }), {} ],
-  296: [ (function(require, module, exports) {
+  297: [ (function(require, module, exports) {
     var DragonBonesAsset = cc.Class({
       name: "dragonBones.DragonBonesAsset",
       extends: cc.Asset,
@@ -51489,7 +51490,7 @@
     });
     dragonBones.DragonBonesAsset = module.exports = DragonBonesAsset;
   }), {} ],
-  297: [ (function(require, module, exports) {
+  298: [ (function(require, module, exports) {
     var DragonBonesAtlasAsset = cc.Class({
       name: "dragonBones.DragonBonesAtlasAsset",
       extends: cc.Asset,
@@ -51515,7 +51516,7 @@
     });
     dragonBones.DragonBonesAtlasAsset = module.exports = DragonBonesAtlasAsset;
   }), {} ],
-  298: [ (function(require, module, exports) {
+  299: [ (function(require, module, exports) {
     dragonBones = require("./lib/dragonBones");
     dragonBones.DisplayType = {
       Image: 0,
@@ -51566,16 +51567,16 @@
     require("./DragonBonesAtlasAsset");
     require("./ArmatureDisplay");
   }), {
-    "./ArmatureDisplay": 291,
-    "./CCArmatureDisplay": 292,
-    "./CCFactory": 293,
-    "./CCSlot": 294,
-    "./CCTextureData": 295,
-    "./DragonBonesAsset": 296,
-    "./DragonBonesAtlasAsset": 297,
-    "./lib/dragonBones": 299
+    "./ArmatureDisplay": 292,
+    "./CCArmatureDisplay": 293,
+    "./CCFactory": 294,
+    "./CCSlot": 295,
+    "./CCTextureData": 296,
+    "./DragonBonesAsset": 297,
+    "./DragonBonesAtlasAsset": 298,
+    "./lib/dragonBones": 300
   } ],
-  299: [ (function(require, module, exports) {
+  300: [ (function(require, module, exports) {
     var __extends = this && this.__extends || function(d, b) {
       for (var p in b) b.hasOwnProperty(p) && (d[p] = b[p]);
       function __() {
@@ -57233,7 +57234,7 @@
     })(dragonBones || (dragonBones = {}));
     module.exports = dragonBones;
   }), {} ],
-  300: [ (function(require, module, exports) {
+  301: [ (function(require, module, exports) {
     var spine = sp.spine;
     sp._SGSkeleton = _ccsg.Node.extend({
       _skeleton: null,
@@ -57385,7 +57386,7 @@
       }
     });
   }), {} ],
-  301: [ (function(require, module, exports) {
+  302: [ (function(require, module, exports) {
     var spine = sp.spine;
     var animEventType = sp.AnimationEventType;
     sp._atlasLoader = {
@@ -57549,7 +57550,7 @@
       }
     });
   }), {} ],
-  302: [ (function(require, module, exports) {
+  303: [ (function(require, module, exports) {
     require("../../cocos2d/core/CCDrawingPrimitives");
     var spine = sp.spine;
     sp._SGSkeleton.CanvasRenderCmd = function(renderableObject) {
@@ -57722,9 +57723,9 @@
       }
     };
   }), {
-    "../../cocos2d/core/CCDrawingPrimitives": 36
+    "../../cocos2d/core/CCDrawingPrimitives": 37
   } ],
-  303: [ (function(require, module, exports) {
+  304: [ (function(require, module, exports) {
     sp.SkeletonTexture = cc.Class({
       name: "sp.SkeletonTexture",
       extends: sp.spine.Texture,
@@ -57757,7 +57758,7 @@
       }
     });
   }), {} ],
-  304: [ (function(require, module, exports) {
+  305: [ (function(require, module, exports) {
     require("../../cocos2d/core/CCDrawingPrimitives");
     var spine = sp.spine;
     sp._SGSkeleton.WebGLRenderCmd = function(renderableObject) {
@@ -57934,9 +57935,9 @@
       }
     };
   }), {
-    "../../cocos2d/core/CCDrawingPrimitives": 36
+    "../../cocos2d/core/CCDrawingPrimitives": 37
   } ],
-  305: [ (function(require, module, exports) {
+  306: [ (function(require, module, exports) {
     var DefaultSkinsEnum = cc.Enum({
       default: -1
     });
@@ -58302,7 +58303,7 @@
       }
     });
   }), {} ],
-  306: [ (function(require, module, exports) {
+  307: [ (function(require, module, exports) {
     var TextureLoader = (true, cc.Class({
       ctor: function() {
         this.asset = arguments[0];
@@ -58407,7 +58408,7 @@
     });
     sp.SkeletonData = module.exports = SkeletonData;
   }), {} ],
-  307: [ (function(require, module, exports) {
+  308: [ (function(require, module, exports) {
     sp = {};
     sp.VERTEX_INDEX = {
       X1: 0,
@@ -58444,16 +58445,16 @@
     require("./SkeletonData");
     require("./Skeleton");
   }), {
-    "./SGSkeleton": 300,
-    "./SGSkeletonAnimation": 301,
-    "./SGSkeletonCanvasRenderCmd": 302,
-    "./SGSkeletonTexture": 303,
-    "./SGSkeletonWebGLRenderCmd": 304,
-    "./Skeleton": 305,
-    "./SkeletonData": 306,
-    "./lib/spine": 308
+    "./SGSkeleton": 301,
+    "./SGSkeletonAnimation": 302,
+    "./SGSkeletonCanvasRenderCmd": 303,
+    "./SGSkeletonTexture": 304,
+    "./SGSkeletonWebGLRenderCmd": 305,
+    "./Skeleton": 306,
+    "./SkeletonData": 307,
+    "./lib/spine": 309
   } ],
-  308: [ (function(require, module, exports) {
+  309: [ (function(require, module, exports) {
     var __extends = this && this.__extends || function(d, b) {
       for (var p in b) b.hasOwnProperty(p) && (d[p] = b[p]);
       function __() {
@@ -63184,7 +63185,7 @@
     })(spine || (spine = {}));
     module.exports = spine;
   }), {} ],
-  309: [ (function(require, module, exports) {
+  310: [ (function(require, module, exports) {
     (function() {
       "use strict";
       Function.prototype._extend = function(parent) {
@@ -73866,3008 +73867,6 @@
       }
     })();
   }), {} ],
-  310: [ (function(require, module, exports) {
-    Object.create = Object.create || function(o) {
-      function F() {}
-      F.prototype = o;
-      return new F();
-    };
-    var assert = function(value, message) {
-      if (!value) throw new Error("Assertion failed: " + message);
-    };
-    var assertSoft = function(value, message) {
-      if (!value && console && console.warn) {
-        console.warn("ASSERTION FAILED: " + message);
-        console.trace && console.trace();
-      }
-    };
-    var mymin = function(a, b) {
-      return a < b ? a : b;
-    };
-    var mymax = function(a, b) {
-      return a > b ? a : b;
-    };
-    var min, max;
-    if ("object" === typeof window && window.navigator.userAgent.indexOf("Firefox") > -1) {
-      min = Math.min;
-      max = Math.max;
-    } else {
-      min = mymin;
-      max = mymax;
-    }
-    var hashPair = function(a, b) {
-      return a < b ? a + " " + b : b + " " + a;
-    };
-    var deleteObjFromList = function(arr, obj) {
-      for (var i = 0; i < arr.length; i++) if (arr[i] === obj) {
-        arr[i] = arr[arr.length - 1];
-        arr.length--;
-        return;
-      }
-    };
-    var closestPointOnSegment = function(p, a, b) {
-      var delta = vsub(a, b);
-      var t = clamp01(vdot(delta, vsub(p, b)) / vlengthsq(delta));
-      return vadd(b, vmult(delta, t));
-    };
-    var closestPointOnSegment2 = function(px, py, ax, ay, bx, by) {
-      var deltax = ax - bx;
-      var deltay = ay - by;
-      var t = clamp01(vdot2(deltax, deltay, px - bx, py - by) / vlengthsq2(deltax, deltay));
-      return new Vect(bx + deltax * t, by + deltay * t);
-    };
-    cp.momentForCircle = function(m, r1, r2, offset) {
-      return m * (.5 * (r1 * r1 + r2 * r2) + vlengthsq(offset));
-    };
-    cp.areaForCircle = function(r1, r2) {
-      return Math.PI * Math.abs(r1 * r1 - r2 * r2);
-    };
-    cp.momentForSegment = function(m, a, b) {
-      var offset = vmult(vadd(a, b), .5);
-      return m * (vdistsq(b, a) / 12 + vlengthsq(offset));
-    };
-    cp.areaForSegment = function(a, b, r) {
-      return r * (Math.PI * r + 2 * vdist(a, b));
-    };
-    cp.momentForPoly = function(m, verts, offset) {
-      var sum1 = 0;
-      var sum2 = 0;
-      var len = verts.length;
-      for (var i = 0; i < len; i += 2) {
-        var v1x = verts[i] + offset.x;
-        var v1y = verts[i + 1] + offset.y;
-        var v2x = verts[(i + 2) % len] + offset.x;
-        var v2y = verts[(i + 3) % len] + offset.y;
-        var a = vcross2(v2x, v2y, v1x, v1y);
-        var b = vdot2(v1x, v1y, v1x, v1y) + vdot2(v1x, v1y, v2x, v2y) + vdot2(v2x, v2y, v2x, v2y);
-        sum1 += a * b;
-        sum2 += a;
-      }
-      return m * sum1 / (6 * sum2);
-    };
-    cp.areaForPoly = function(verts) {
-      var area = 0;
-      for (var i = 0, len = verts.length; i < len; i += 2) area += vcross(new Vect(verts[i], verts[i + 1]), new Vect(verts[(i + 2) % len], verts[(i + 3) % len]));
-      return -area / 2;
-    };
-    cp.centroidForPoly = function(verts) {
-      var sum = 0;
-      var vsum = new Vect(0, 0);
-      for (var i = 0, len = verts.length; i < len; i += 2) {
-        var v1 = new Vect(verts[i], verts[i + 1]);
-        var v2 = new Vect(verts[(i + 2) % len], verts[(i + 3) % len]);
-        var cross = vcross(v1, v2);
-        sum += cross;
-        vsum = vadd(vsum, vmult(vadd(v1, v2), cross));
-      }
-      return vmult(vsum, 1 / (3 * sum));
-    };
-    cp.recenterPoly = function(verts) {
-      var centroid = cp.centroidForPoly(verts);
-      for (var i = 0; i < verts.length; i += 2) {
-        verts[i] -= centroid.x;
-        verts[i + 1] -= centroid.y;
-      }
-    };
-    cp.momentForBox = function(m, width, height) {
-      return m * (width * width + height * height) / 12;
-    };
-    cp.momentForBox2 = function(m, box) {
-      var width = box.r - box.l;
-      var height = box.t - box.b;
-      var offset = vmult([ box.l + box.r, box.b + box.t ], .5);
-      return cp.momentForBox(m, width, height) + m * vlengthsq(offset);
-    };
-    var loopIndexes = cp.loopIndexes = function(verts) {
-      var start = 0, end = 0;
-      var minx, miny, maxx, maxy;
-      minx = maxx = verts[0];
-      miny = maxy = verts[1];
-      var count = verts.length >> 1;
-      for (var i = 1; i < count; i++) {
-        var x = verts[2 * i];
-        var y = verts[2 * i + 1];
-        if (x < minx || x == minx && y < miny) {
-          minx = x;
-          miny = y;
-          start = i;
-        } else if (x > maxx || x == maxx && y > maxy) {
-          maxx = x;
-          maxy = y;
-          end = i;
-        }
-      }
-      return [ start, end ];
-    };
-    var SWAP = function(arr, idx1, idx2) {
-      var tmp = arr[2 * idx1];
-      arr[2 * idx1] = arr[2 * idx2];
-      arr[2 * idx2] = tmp;
-      tmp = arr[2 * idx1 + 1];
-      arr[2 * idx1 + 1] = arr[2 * idx2 + 1];
-      arr[2 * idx2 + 1] = tmp;
-    };
-    var QHullPartition = function(verts, offs, count, a, b, tol) {
-      if (0 === count) return 0;
-      var max = 0;
-      var pivot = offs;
-      var delta = vsub(b, a);
-      var valueTol = tol * vlength(delta);
-      var head = offs;
-      for (var tail = offs + count - 1; head <= tail; ) {
-        var v = new Vect(verts[2 * head], verts[2 * head + 1]);
-        var value = vcross(delta, vsub(v, a));
-        if (value > valueTol) {
-          if (value > max) {
-            max = value;
-            pivot = head;
-          }
-          head++;
-        } else {
-          SWAP(verts, head, tail);
-          tail--;
-        }
-      }
-      pivot != offs && SWAP(verts, offs, pivot);
-      return head - offs;
-    };
-    var QHullReduce = function(tol, verts, offs, count, a, pivot, b, resultPos) {
-      if (count < 0) return 0;
-      if (0 == count) {
-        verts[2 * resultPos] = pivot.x;
-        verts[2 * resultPos + 1] = pivot.y;
-        return 1;
-      }
-      var left_count = QHullPartition(verts, offs, count, a, pivot, tol);
-      var left = new Vect(verts[2 * offs], verts[2 * offs + 1]);
-      var index = QHullReduce(tol, verts, offs + 1, left_count - 1, a, left, pivot, resultPos);
-      var pivotPos = resultPos + index++;
-      verts[2 * pivotPos] = pivot.x;
-      verts[2 * pivotPos + 1] = pivot.y;
-      var right_count = QHullPartition(verts, offs + left_count, count - left_count, pivot, b, tol);
-      var right = new Vect(verts[2 * (offs + left_count)], verts[2 * (offs + left_count) + 1]);
-      return index + QHullReduce(tol, verts, offs + left_count + 1, right_count - 1, pivot, right, b, resultPos + index);
-    };
-    cp.convexHull = function(verts, result, tolerance) {
-      if (result) for (var i = 0; i < verts.length; i++) result[i] = verts[i]; else result = verts;
-      var indexes = loopIndexes(verts);
-      var start = indexes[0], end = indexes[1];
-      if (start == end) {
-        result.length = 2;
-        return result;
-      }
-      SWAP(result, 0, start);
-      SWAP(result, 1, 0 == end ? start : end);
-      var a = new Vect(result[0], result[1]);
-      var b = new Vect(result[2], result[3]);
-      var count = verts.length >> 1;
-      var resultCount = QHullReduce(tolerance, result, 2, count - 2, a, b, a, 1) + 1;
-      result.length = 2 * resultCount;
-      assertSoft(polyValidate(result), "Internal error: cpConvexHull() and cpPolyValidate() did not agree.Please report this error with as much info as you can.");
-      return result;
-    };
-    var clamp = function(f, minv, maxv) {
-      return min(max(f, minv), maxv);
-    };
-    var clamp01 = function(f) {
-      return max(0, min(f, 1));
-    };
-    var lerp = function(f1, f2, t) {
-      return f1 * (1 - t) + f2 * t;
-    };
-    var lerpconst = function(f1, f2, d) {
-      return f1 + clamp(f2 - f1, -d, d);
-    };
-    var Vect = cp.Vect = function(x, y) {
-      this.x = x;
-      this.y = y;
-    };
-    cp.v = function(x, y) {
-      return new Vect(x, y);
-    };
-    var vzero = cp.vzero = new Vect(0, 0);
-    var vdot = cp.v.dot = function(v1, v2) {
-      return v1.x * v2.x + v1.y * v2.y;
-    };
-    var vdot2 = function(x1, y1, x2, y2) {
-      return x1 * x2 + y1 * y2;
-    };
-    var vlength = cp.v.len = function(v) {
-      return Math.sqrt(vdot(v, v));
-    };
-    var vlength2 = cp.v.len2 = function(x, y) {
-      return Math.sqrt(x * x + y * y);
-    };
-    var veql = cp.v.eql = function(v1, v2) {
-      return v1.x === v2.x && v1.y === v2.y;
-    };
-    var vadd = cp.v.add = function(v1, v2) {
-      return new Vect(v1.x + v2.x, v1.y + v2.y);
-    };
-    Vect.prototype.add = function(v2) {
-      this.x += v2.x;
-      this.y += v2.y;
-      return this;
-    };
-    var vsub = cp.v.sub = function(v1, v2) {
-      return new Vect(v1.x - v2.x, v1.y - v2.y);
-    };
-    Vect.prototype.sub = function(v2) {
-      this.x -= v2.x;
-      this.y -= v2.y;
-      return this;
-    };
-    var vneg = cp.v.neg = function(v) {
-      return new Vect(-v.x, -v.y);
-    };
-    Vect.prototype.neg = function() {
-      this.x = -this.x;
-      this.y = -this.y;
-      return this;
-    };
-    var vmult = cp.v.mult = function(v, s) {
-      return new Vect(v.x * s, v.y * s);
-    };
-    Vect.prototype.mult = function(s) {
-      this.x *= s;
-      this.y *= s;
-      return this;
-    };
-    var vcross = cp.v.cross = function(v1, v2) {
-      return v1.x * v2.y - v1.y * v2.x;
-    };
-    var vcross2 = function(x1, y1, x2, y2) {
-      return x1 * y2 - y1 * x2;
-    };
-    var vperp = cp.v.perp = function(v) {
-      return new Vect(-v.y, v.x);
-    };
-    var vpvrperp = cp.v.pvrperp = function(v) {
-      return new Vect(v.y, -v.x);
-    };
-    var vproject = cp.v.project = function(v1, v2) {
-      return vmult(v2, vdot(v1, v2) / vlengthsq(v2));
-    };
-    Vect.prototype.project = function(v2) {
-      this.mult(vdot(this, v2) / vlengthsq(v2));
-      return this;
-    };
-    var vrotate = cp.v.rotate = function(v1, v2) {
-      return new Vect(v1.x * v2.x - v1.y * v2.y, v1.x * v2.y + v1.y * v2.x);
-    };
-    Vect.prototype.rotate = function(v2) {
-      this.x = this.x * v2.x - this.y * v2.y;
-      this.y = this.x * v2.y + this.y * v2.x;
-      return this;
-    };
-    var vunrotate = cp.v.unrotate = function(v1, v2) {
-      return new Vect(v1.x * v2.x + v1.y * v2.y, v1.y * v2.x - v1.x * v2.y);
-    };
-    var vlengthsq = cp.v.lengthsq = function(v) {
-      return vdot(v, v);
-    };
-    var vlengthsq2 = cp.v.lengthsq2 = function(x, y) {
-      return x * x + y * y;
-    };
-    var vlerp = cp.v.lerp = function(v1, v2, t) {
-      return vadd(vmult(v1, 1 - t), vmult(v2, t));
-    };
-    var vnormalize = cp.v.normalize = function(v) {
-      return vmult(v, 1 / vlength(v));
-    };
-    var vnormalize_safe = cp.v.normalize_safe = function(v) {
-      return 0 === v.x && 0 === v.y ? vzero : vnormalize(v);
-    };
-    var vclamp = cp.v.clamp = function(v, len) {
-      return vdot(v, v) > len * len ? vmult(vnormalize(v), len) : v;
-    };
-    var vlerpconst = cp.v.lerpconst = function(v1, v2, d) {
-      return vadd(v1, vclamp(vsub(v2, v1), d));
-    };
-    var vdist = cp.v.dist = function(v1, v2) {
-      return vlength(vsub(v1, v2));
-    };
-    var vdistsq = cp.v.distsq = function(v1, v2) {
-      return vlengthsq(vsub(v1, v2));
-    };
-    var vnear = cp.v.near = function(v1, v2, dist) {
-      return vdistsq(v1, v2) < dist * dist;
-    };
-    var vslerp = cp.v.slerp = function(v1, v2, t) {
-      var omega = Math.acos(vdot(v1, v2));
-      if (omega) {
-        var denom = 1 / Math.sin(omega);
-        return vadd(vmult(v1, Math.sin((1 - t) * omega) * denom), vmult(v2, Math.sin(t * omega) * denom));
-      }
-      return v1;
-    };
-    var vslerpconst = cp.v.slerpconst = function(v1, v2, a) {
-      var angle = Math.acos(vdot(v1, v2));
-      return vslerp(v1, v2, min(a, angle) / angle);
-    };
-    var vforangle = cp.v.forangle = function(a) {
-      return new Vect(Math.cos(a), Math.sin(a));
-    };
-    var vtoangle = cp.v.toangle = function(v) {
-      return Math.atan2(v.y, v.x);
-    };
-    var vstr = cp.v.str = function(v) {
-      return "(" + v.x.toFixed(3) + ", " + v.y.toFixed(3) + ")";
-    };
-    var numBB = 0;
-    var BB = cp.BB = function(l, b, r, t) {
-      this.l = l;
-      this.b = b;
-      this.r = r;
-      this.t = t;
-      numBB++;
-    };
-    cp.bb = function(l, b, r, t) {
-      return new BB(l, b, r, t);
-    };
-    var bbNewForCircle = function(p, r) {
-      return new BB(p.x - r, p.y - r, p.x + r, p.y + r);
-    };
-    var bbIntersects = function(a, b) {
-      return a.l <= b.r && b.l <= a.r && a.b <= b.t && b.b <= a.t;
-    };
-    var bbIntersects2 = function(bb, l, b, r, t) {
-      return bb.l <= r && l <= bb.r && bb.b <= t && b <= bb.t;
-    };
-    var bbContainsBB = function(bb, other) {
-      return bb.l <= other.l && bb.r >= other.r && bb.b <= other.b && bb.t >= other.t;
-    };
-    var bbContainsVect = function(bb, v) {
-      return bb.l <= v.x && bb.r >= v.x && bb.b <= v.y && bb.t >= v.y;
-    };
-    var bbContainsVect2 = function(l, b, r, t, v) {
-      return l <= v.x && r >= v.x && b <= v.y && t >= v.y;
-    };
-    var bbMerge = function(a, b) {
-      return new BB(min(a.l, b.l), min(a.b, b.b), max(a.r, b.r), max(a.t, b.t));
-    };
-    var bbExpand = function(bb, v) {
-      return new BB(min(bb.l, v.x), min(bb.b, v.y), max(bb.r, v.x), max(bb.t, v.y));
-    };
-    var bbArea = function(bb) {
-      return (bb.r - bb.l) * (bb.t - bb.b);
-    };
-    var bbMergedArea = function(a, b) {
-      return (max(a.r, b.r) - min(a.l, b.l)) * (max(a.t, b.t) - min(a.b, b.b));
-    };
-    var bbMergedArea2 = function(bb, l, b, r, t) {
-      return (max(bb.r, r) - min(bb.l, l)) * (max(bb.t, t) - min(bb.b, b));
-    };
-    var bbIntersectsSegment = function(bb, a, b) {
-      return Infinity != bbSegmentQuery(bb, a, b);
-    };
-    var bbClampVect = function(bb, v) {
-      var x = min(max(bb.l, v.x), bb.r);
-      var y = min(max(bb.b, v.y), bb.t);
-      return new Vect(x, y);
-    };
-    var bbWrapVect = function(bb, v) {
-      var ix = Math.abs(bb.r - bb.l);
-      var modx = (v.x - bb.l) % ix;
-      var x = modx > 0 ? modx : modx + ix;
-      var iy = Math.abs(bb.t - bb.b);
-      var mody = (v.y - bb.b) % iy;
-      var y = mody > 0 ? mody : mody + iy;
-      return new Vect(x + bb.l, y + bb.b);
-    };
-    var shapeIDCounter = 0;
-    var CP_NO_GROUP = cp.NO_GROUP = 0;
-    var CP_ALL_LAYERS = cp.ALL_LAYERS = -1;
-    cp.resetShapeIdCounter = function() {
-      shapeIDCounter = 0;
-    };
-    var Shape = cp.Shape = function(body) {
-      this.body = body;
-      this.bb_l = this.bb_b = this.bb_r = this.bb_t = 0;
-      this.hashid = shapeIDCounter++;
-      this.sensor = false;
-      this.e = 0;
-      this.u = 0;
-      this.surface_v = vzero;
-      this.collision_type = 0;
-      this.group = 0;
-      this.layers = CP_ALL_LAYERS;
-      this.space = null;
-      this.collisionCode = this.collisionCode;
-    };
-    Shape.prototype.setElasticity = function(e) {
-      this.e = e;
-    };
-    Shape.prototype.setFriction = function(u) {
-      this.body.activate();
-      this.u = u;
-    };
-    Shape.prototype.setLayers = function(layers) {
-      this.body.activate();
-      this.layers = layers;
-    };
-    Shape.prototype.setSensor = function(sensor) {
-      this.body.activate();
-      this.sensor = sensor;
-    };
-    Shape.prototype.setCollisionType = function(collision_type) {
-      this.body.activate();
-      this.collision_type = collision_type;
-    };
-    Shape.prototype.getBody = function() {
-      return this.body;
-    };
-    Shape.prototype.active = function() {
-      return this.body && -1 !== this.body.shapeList.indexOf(this);
-    };
-    Shape.prototype.setBody = function(body) {
-      assert(!this.active(), "You cannot change the body on an active shape. You must remove the shape from the space before changing the body.");
-      this.body = body;
-    };
-    Shape.prototype.cacheBB = function() {
-      return this.update(this.body.p, this.body.rot);
-    };
-    Shape.prototype.update = function(pos, rot) {
-      assert(!isNaN(rot.x), "Rotation is NaN");
-      assert(!isNaN(pos.x), "Position is NaN");
-      this.cacheData(pos, rot);
-    };
-    Shape.prototype.pointQuery = function(p) {
-      var info = this.nearestPointQuery(p);
-      if (info.d < 0) return info;
-    };
-    Shape.prototype.getBB = function() {
-      return new BB(this.bb_l, this.bb_b, this.bb_r, this.bb_t);
-    };
-    var PointQueryExtendedInfo = function(shape) {
-      this.shape = shape;
-      this.d = Infinity;
-      this.n = vzero;
-    };
-    var NearestPointQueryInfo = function(shape, p, d) {
-      this.shape = shape;
-      this.p = p;
-      this.d = d;
-    };
-    var SegmentQueryInfo = function(shape, t, n) {
-      this.shape = shape;
-      this.t = t;
-      this.n = n;
-    };
-    SegmentQueryInfo.prototype.hitPoint = function(start, end) {
-      return vlerp(start, end, this.t);
-    };
-    SegmentQueryInfo.prototype.hitDist = function(start, end) {
-      return vdist(start, end) * this.t;
-    };
-    var CircleShape = cp.CircleShape = function(body, radius, offset) {
-      this.c = this.tc = offset;
-      this.r = radius;
-      this.type = "circle";
-      Shape.call(this, body);
-    };
-    CircleShape.prototype = Object.create(Shape.prototype);
-    CircleShape.prototype.cacheData = function(p, rot) {
-      var c = this.tc = vrotate(this.c, rot).add(p);
-      var r = this.r;
-      this.bb_l = c.x - r;
-      this.bb_b = c.y - r;
-      this.bb_r = c.x + r;
-      this.bb_t = c.y + r;
-    };
-    CircleShape.prototype.nearestPointQuery = function(p) {
-      var deltax = p.x - this.tc.x;
-      var deltay = p.y - this.tc.y;
-      var d = vlength2(deltax, deltay);
-      var r = this.r;
-      var nearestp = new Vect(this.tc.x + deltax * r / d, this.tc.y + deltay * r / d);
-      return new NearestPointQueryInfo(this, nearestp, d - r);
-    };
-    var circleSegmentQuery = function(shape, center, r, a, b, info) {
-      a = vsub(a, center);
-      b = vsub(b, center);
-      var qa = vdot(a, a) - 2 * vdot(a, b) + vdot(b, b);
-      var qb = -2 * vdot(a, a) + 2 * vdot(a, b);
-      var qc = vdot(a, a) - r * r;
-      var det = qb * qb - 4 * qa * qc;
-      if (det >= 0) {
-        var t = (-qb - Math.sqrt(det)) / (2 * qa);
-        if (0 <= t && t <= 1) return new SegmentQueryInfo(shape, t, vnormalize(vlerp(a, b, t)));
-      }
-    };
-    CircleShape.prototype.segmentQuery = function(a, b) {
-      return circleSegmentQuery(this, this.tc, this.r, a, b);
-    };
-    var SegmentShape = cp.SegmentShape = function(body, a, b, r) {
-      this.a = a;
-      this.b = b;
-      this.n = vperp(vnormalize(vsub(b, a)));
-      this.ta = this.tb = this.tn = null;
-      this.r = r;
-      this.a_tangent = vzero;
-      this.b_tangent = vzero;
-      this.type = "segment";
-      Shape.call(this, body);
-    };
-    SegmentShape.prototype = Object.create(Shape.prototype);
-    SegmentShape.prototype.cacheData = function(p, rot) {
-      this.ta = vadd(p, vrotate(this.a, rot));
-      this.tb = vadd(p, vrotate(this.b, rot));
-      this.tn = vrotate(this.n, rot);
-      var l, r, b, t;
-      if (this.ta.x < this.tb.x) {
-        l = this.ta.x;
-        r = this.tb.x;
-      } else {
-        l = this.tb.x;
-        r = this.ta.x;
-      }
-      if (this.ta.y < this.tb.y) {
-        b = this.ta.y;
-        t = this.tb.y;
-      } else {
-        b = this.tb.y;
-        t = this.ta.y;
-      }
-      var rad = this.r;
-      this.bb_l = l - rad;
-      this.bb_b = b - rad;
-      this.bb_r = r + rad;
-      this.bb_t = t + rad;
-    };
-    SegmentShape.prototype.nearestPointQuery = function(p) {
-      var closest = closestPointOnSegment(p, this.ta, this.tb);
-      var deltax = p.x - closest.x;
-      var deltay = p.y - closest.y;
-      var d = vlength2(deltax, deltay);
-      var r = this.r;
-      var nearestp = d ? vadd(closest, vmult(new Vect(deltax, deltay), r / d)) : closest;
-      return new NearestPointQueryInfo(this, nearestp, d - r);
-    };
-    SegmentShape.prototype.segmentQuery = function(a, b) {
-      var n = this.tn;
-      var d = vdot(vsub(this.ta, a), n);
-      var r = this.r;
-      var flipped_n = d > 0 ? vneg(n) : n;
-      var n_offset = vsub(vmult(flipped_n, r), a);
-      var seg_a = vadd(this.ta, n_offset);
-      var seg_b = vadd(this.tb, n_offset);
-      var delta = vsub(b, a);
-      if (vcross(delta, seg_a) * vcross(delta, seg_b) <= 0) {
-        var d_offset = d + (d > 0 ? -r : r);
-        var ad = -d_offset;
-        var bd = vdot(delta, n) - d_offset;
-        if (ad * bd < 0) return new SegmentQueryInfo(this, ad / (ad - bd), flipped_n);
-      } else if (0 !== r) {
-        var info1 = circleSegmentQuery(this, this.ta, this.r, a, b);
-        var info2 = circleSegmentQuery(this, this.tb, this.r, a, b);
-        return info1 ? info2 && info2.t < info1.t ? info2 : info1 : info2;
-      }
-    };
-    SegmentShape.prototype.setNeighbors = function(prev, next) {
-      this.a_tangent = vsub(prev, this.a);
-      this.b_tangent = vsub(next, this.b);
-    };
-    SegmentShape.prototype.setEndpoints = function(a, b) {
-      this.a = a;
-      this.b = b;
-      this.n = vperp(vnormalize(vsub(b, a)));
-    };
-    var polyValidate = function(verts) {
-      var len = verts.length;
-      for (var i = 0; i < len; i += 2) {
-        var ax = verts[i];
-        var ay = verts[i + 1];
-        var bx = verts[(i + 2) % len];
-        var by = verts[(i + 3) % len];
-        var cx = verts[(i + 4) % len];
-        var cy = verts[(i + 5) % len];
-        if (vcross2(bx - ax, by - ay, cx - bx, cy - by) > 0) return false;
-      }
-      return true;
-    };
-    var PolyShape = cp.PolyShape = function(body, verts, offset) {
-      this.setVerts(verts, offset);
-      this.type = "poly";
-      Shape.call(this, body);
-    };
-    PolyShape.prototype = Object.create(Shape.prototype);
-    var SplittingPlane = function(n, d) {
-      this.n = n;
-      this.d = d;
-    };
-    SplittingPlane.prototype.compare = function(v) {
-      return vdot(this.n, v) - this.d;
-    };
-    PolyShape.prototype.setVerts = function(verts, offset) {
-      assert(verts.length >= 4, "Polygons require some verts");
-      assert("number" === typeof verts[0], "Polygon verticies should be specified in a flattened list (eg [x1,y1,x2,y2,x3,y3,...])");
-      assert(polyValidate(verts), "Polygon is concave or has a reversed winding. Consider using cpConvexHull()");
-      var len = verts.length;
-      var numVerts = len >> 1;
-      this.verts = new Array(len);
-      this.tVerts = new Array(len);
-      this.planes = new Array(numVerts);
-      this.tPlanes = new Array(numVerts);
-      for (var i = 0; i < len; i += 2) {
-        var ax = verts[i] + offset.x;
-        var ay = verts[i + 1] + offset.y;
-        var bx = verts[(i + 2) % len] + offset.x;
-        var by = verts[(i + 3) % len] + offset.y;
-        var n = vnormalize(vperp(new Vect(bx - ax, by - ay)));
-        this.verts[i] = ax;
-        this.verts[i + 1] = ay;
-        this.planes[i >> 1] = new SplittingPlane(n, vdot2(n.x, n.y, ax, ay));
-        this.tPlanes[i >> 1] = new SplittingPlane(new Vect(0, 0), 0);
-      }
-    };
-    var BoxShape = cp.BoxShape = function(body, width, height) {
-      var hw = width / 2;
-      var hh = height / 2;
-      return BoxShape2(body, new BB(-hw, -hh, hw, hh));
-    };
-    var BoxShape2 = cp.BoxShape2 = function(body, box) {
-      var verts = [ box.l, box.b, box.l, box.t, box.r, box.t, box.r, box.b ];
-      return new PolyShape(body, verts, vzero);
-    };
-    PolyShape.prototype.transformVerts = function(p, rot) {
-      var src = this.verts;
-      var dst = this.tVerts;
-      var l = Infinity, r = -Infinity;
-      var b = Infinity, t = -Infinity;
-      for (var i = 0; i < src.length; i += 2) {
-        var x = src[i];
-        var y = src[i + 1];
-        var vx = p.x + x * rot.x - y * rot.y;
-        var vy = p.y + x * rot.y + y * rot.x;
-        dst[i] = vx;
-        dst[i + 1] = vy;
-        l = min(l, vx);
-        r = max(r, vx);
-        b = min(b, vy);
-        t = max(t, vy);
-      }
-      this.bb_l = l;
-      this.bb_b = b;
-      this.bb_r = r;
-      this.bb_t = t;
-    };
-    PolyShape.prototype.transformAxes = function(p, rot) {
-      var src = this.planes;
-      var dst = this.tPlanes;
-      for (var i = 0; i < src.length; i++) {
-        var n = vrotate(src[i].n, rot);
-        dst[i].n = n;
-        dst[i].d = vdot(p, n) + src[i].d;
-      }
-    };
-    PolyShape.prototype.cacheData = function(p, rot) {
-      this.transformAxes(p, rot);
-      this.transformVerts(p, rot);
-    };
-    PolyShape.prototype.nearestPointQuery = function(p) {
-      var planes = this.tPlanes;
-      var verts = this.tVerts;
-      var v0x = verts[verts.length - 2];
-      var v0y = verts[verts.length - 1];
-      var minDist = Infinity;
-      var closestPoint = vzero;
-      var outside = false;
-      for (var i = 0; i < planes.length; i++) {
-        planes[i].compare(p) > 0 && (outside = true);
-        var v1x = verts[2 * i];
-        var v1y = verts[2 * i + 1];
-        var closest = closestPointOnSegment2(p.x, p.y, v0x, v0y, v1x, v1y);
-        var dist = vdist(p, closest);
-        if (dist < minDist) {
-          minDist = dist;
-          closestPoint = closest;
-        }
-        v0x = v1x;
-        v0y = v1y;
-      }
-      return new NearestPointQueryInfo(this, closestPoint, outside ? minDist : -minDist);
-    };
-    PolyShape.prototype.segmentQuery = function(a, b) {
-      var axes = this.tPlanes;
-      var verts = this.tVerts;
-      var numVerts = axes.length;
-      var len = 2 * numVerts;
-      for (var i = 0; i < numVerts; i++) {
-        var n = axes[i].n;
-        var an = vdot(a, n);
-        if (axes[i].d > an) continue;
-        var bn = vdot(b, n);
-        var t = (axes[i].d - an) / (bn - an);
-        if (t < 0 || 1 < t) continue;
-        var point = vlerp(a, b, t);
-        var dt = -vcross(n, point);
-        var dtMin = -vcross2(n.x, n.y, verts[2 * i], verts[2 * i + 1]);
-        var dtMax = -vcross2(n.x, n.y, verts[(2 * i + 2) % len], verts[(2 * i + 3) % len]);
-        if (dtMin <= dt && dt <= dtMax) return new SegmentQueryInfo(this, t, n);
-      }
-    };
-    PolyShape.prototype.valueOnAxis = function(n, d) {
-      var verts = this.tVerts;
-      var m = vdot2(n.x, n.y, verts[0], verts[1]);
-      for (var i = 2; i < verts.length; i += 2) m = min(m, vdot2(n.x, n.y, verts[i], verts[i + 1]));
-      return m - d;
-    };
-    PolyShape.prototype.containsVert = function(vx, vy) {
-      var planes = this.tPlanes;
-      for (var i = 0; i < planes.length; i++) {
-        var n = planes[i].n;
-        var dist = vdot2(n.x, n.y, vx, vy) - planes[i].d;
-        if (dist > 0) return false;
-      }
-      return true;
-    };
-    PolyShape.prototype.containsVertPartial = function(vx, vy, n) {
-      var planes = this.tPlanes;
-      for (var i = 0; i < planes.length; i++) {
-        var n2 = planes[i].n;
-        if (vdot(n2, n) < 0) continue;
-        var dist = vdot2(n2.x, n2.y, vx, vy) - planes[i].d;
-        if (dist > 0) return false;
-      }
-      return true;
-    };
-    PolyShape.prototype.getNumVerts = function() {
-      return this.verts.length / 2;
-    };
-    PolyShape.prototype.getVert = function(i) {
-      return new Vect(this.verts[2 * i], this.verts[2 * i + 1]);
-    };
-    var Body = cp.Body = function(m, i) {
-      this.p = new Vect(0, 0);
-      this.vx = this.vy = 0;
-      this.f = new Vect(0, 0);
-      this.w = 0;
-      this.t = 0;
-      this.v_limit = Infinity;
-      this.w_limit = Infinity;
-      this.v_biasx = this.v_biasy = 0;
-      this.w_bias = 0;
-      this.space = null;
-      this.shapeList = [];
-      this.arbiterList = null;
-      this.constraintList = null;
-      this.nodeRoot = null;
-      this.nodeNext = null;
-      this.nodeIdleTime = 0;
-      this.setMass(m);
-      this.setMoment(i);
-      this.rot = new Vect(0, 0);
-      this.setAngle(0);
-    };
-    var createStaticBody = function() {
-      var body = new Body(Infinity, Infinity);
-      body.nodeIdleTime = Infinity;
-      return body;
-    };
-    cp.StaticBody = createStaticBody;
-    if ("undefined" !== typeof DEBUG && DEBUG) {
-      var v_assert_nan = function(v, message) {
-        assert(v.x == v.x && v.y == v.y, message);
-      };
-      var v_assert_infinite = function(v, message) {
-        assert(Infinity !== Math.abs(v.x) && Infinity !== Math.abs(v.y), message);
-      };
-      var v_assert_sane = function(v, message) {
-        v_assert_nan(v, message);
-        v_assert_infinite(v, message);
-      };
-      Body.prototype.sanityCheck = function() {
-        assert(this.m === this.m && this.m_inv === this.m_inv, "Body's mass is invalid.");
-        assert(this.i === this.i && this.i_inv === this.i_inv, "Body's moment is invalid.");
-        v_assert_sane(this.p, "Body's position is invalid.");
-        v_assert_sane(this.f, "Body's force is invalid.");
-        assert(this.vx === this.vx && Infinity !== Math.abs(this.vx), "Body's velocity is invalid.");
-        assert(this.vy === this.vy && Infinity !== Math.abs(this.vy), "Body's velocity is invalid.");
-        assert(this.a === this.a && Infinity !== Math.abs(this.a), "Body's angle is invalid.");
-        assert(this.w === this.w && Infinity !== Math.abs(this.w), "Body's angular velocity is invalid.");
-        assert(this.t === this.t && Infinity !== Math.abs(this.t), "Body's torque is invalid.");
-        v_assert_sane(this.rot, "Body's rotation vector is invalid.");
-        assert(this.v_limit === this.v_limit, "Body's velocity limit is invalid.");
-        assert(this.w_limit === this.w_limit, "Body's angular velocity limit is invalid.");
-      };
-    } else Body.prototype.sanityCheck = function() {};
-    Body.prototype.getPos = function() {
-      return this.p;
-    };
-    Body.prototype.getVel = function() {
-      return new Vect(this.vx, this.vy);
-    };
-    Body.prototype.getAngVel = function() {
-      return this.w;
-    };
-    Body.prototype.isSleeping = function() {
-      return null !== this.nodeRoot;
-    };
-    Body.prototype.isStatic = function() {
-      return Infinity === this.nodeIdleTime;
-    };
-    Body.prototype.isRogue = function() {
-      return null === this.space;
-    };
-    Body.prototype.setMass = function(mass) {
-      assert(mass > 0, "Mass must be positive and non-zero.");
-      this.activate();
-      this.m = mass;
-      this.m_inv = 1 / mass;
-    };
-    Body.prototype.setMoment = function(moment) {
-      assert(moment > 0, "Moment of Inertia must be positive and non-zero.");
-      this.activate();
-      this.i = moment;
-      this.i_inv = 1 / moment;
-    };
-    Body.prototype.addShape = function(shape) {
-      this.shapeList.push(shape);
-    };
-    Body.prototype.removeShape = function(shape) {
-      deleteObjFromList(this.shapeList, shape);
-    };
-    var filterConstraints = function(node, body, filter) {
-      if (node === filter) return node.next(body);
-      node.a === body ? node.next_a = filterConstraints(node.next_a, body, filter) : node.next_b = filterConstraints(node.next_b, body, filter);
-      return node;
-    };
-    Body.prototype.removeConstraint = function(constraint) {
-      this.constraintList = filterConstraints(this.constraintList, this, constraint);
-    };
-    Body.prototype.setPos = function(pos) {
-      this.activate();
-      this.sanityCheck();
-      pos === vzero && (pos = cp.v(0, 0));
-      this.p = pos;
-    };
-    Body.prototype.setVel = function(velocity) {
-      this.activate();
-      this.vx = velocity.x;
-      this.vy = velocity.y;
-    };
-    Body.prototype.setAngVel = function(w) {
-      this.activate();
-      this.w = w;
-    };
-    Body.prototype.setAngleInternal = function(angle) {
-      assert(!isNaN(angle), "Internal Error: Attempting to set body's angle to NaN");
-      this.a = angle;
-      this.rot.x = Math.cos(angle);
-      this.rot.y = Math.sin(angle);
-    };
-    Body.prototype.setAngle = function(angle) {
-      this.activate();
-      this.sanityCheck();
-      this.setAngleInternal(angle);
-    };
-    Body.prototype.velocity_func = function(gravity, damping, dt) {
-      var vx = this.vx * damping + (gravity.x + this.f.x * this.m_inv) * dt;
-      var vy = this.vy * damping + (gravity.y + this.f.y * this.m_inv) * dt;
-      var v_limit = this.v_limit;
-      var lensq = vx * vx + vy * vy;
-      var scale = lensq > v_limit * v_limit ? v_limit / Math.sqrt(lensq) : 1;
-      this.vx = vx * scale;
-      this.vy = vy * scale;
-      var w_limit = this.w_limit;
-      this.w = clamp(this.w * damping + this.t * this.i_inv * dt, -w_limit, w_limit);
-      this.sanityCheck();
-    };
-    Body.prototype.position_func = function(dt) {
-      this.p.x += (this.vx + this.v_biasx) * dt;
-      this.p.y += (this.vy + this.v_biasy) * dt;
-      this.setAngleInternal(this.a + (this.w + this.w_bias) * dt);
-      this.v_biasx = this.v_biasy = 0;
-      this.w_bias = 0;
-      this.sanityCheck();
-    };
-    Body.prototype.resetForces = function() {
-      this.activate();
-      this.f = new Vect(0, 0);
-      this.t = 0;
-    };
-    Body.prototype.applyForce = function(force, r) {
-      this.activate();
-      this.f = vadd(this.f, force);
-      this.t += vcross(r, force);
-    };
-    Body.prototype.applyImpulse = function(j, r) {
-      this.activate();
-      apply_impulse(this, j.x, j.y, r);
-    };
-    Body.prototype.getVelAtPoint = function(r) {
-      return vadd(new Vect(this.vx, this.vy), vmult(vperp(r), this.w));
-    };
-    Body.prototype.getVelAtWorldPoint = function(point) {
-      return this.getVelAtPoint(vsub(point, this.p));
-    };
-    Body.prototype.getVelAtLocalPoint = function(point) {
-      return this.getVelAtPoint(vrotate(point, this.rot));
-    };
-    Body.prototype.eachShape = function(func) {
-      for (var i = 0, len = this.shapeList.length; i < len; i++) func(this.shapeList[i]);
-    };
-    Body.prototype.eachConstraint = function(func) {
-      var constraint = this.constraintList;
-      while (constraint) {
-        var next = constraint.next(this);
-        func(constraint);
-        constraint = next;
-      }
-    };
-    Body.prototype.eachArbiter = function(func) {
-      var arb = this.arbiterList;
-      while (arb) {
-        var next = arb.next(this);
-        arb.swappedColl = this === arb.body_b;
-        func(arb);
-        arb = next;
-      }
-    };
-    Body.prototype.local2World = function(v) {
-      return vadd(this.p, vrotate(v, this.rot));
-    };
-    Body.prototype.world2Local = function(v) {
-      return vunrotate(vsub(v, this.p), this.rot);
-    };
-    Body.prototype.kineticEnergy = function() {
-      var vsq = this.vx * this.vx + this.vy * this.vy;
-      var wsq = this.w * this.w;
-      return (vsq ? vsq * this.m : 0) + (wsq ? wsq * this.i : 0);
-    };
-    var SpatialIndex = cp.SpatialIndex = function(staticIndex) {
-      this.staticIndex = staticIndex;
-      if (staticIndex) {
-        if (staticIndex.dynamicIndex) throw new Error("This static index is already associated with a dynamic index.");
-        staticIndex.dynamicIndex = this;
-      }
-    };
-    SpatialIndex.prototype.collideStatic = function(staticIndex, func) {
-      if (staticIndex.count > 0) {
-        var query = staticIndex.query;
-        this.each((function(obj) {
-          query(obj, new BB(obj.bb_l, obj.bb_b, obj.bb_r, obj.bb_t), func);
-        }));
-      }
-    };
-    var BBTree = cp.BBTree = function(staticIndex) {
-      SpatialIndex.call(this, staticIndex);
-      this.velocityFunc = null;
-      this.leaves = {};
-      this.count = 0;
-      this.root = null;
-      this.pooledNodes = null;
-      this.pooledPairs = null;
-      this.stamp = 0;
-    };
-    BBTree.prototype = Object.create(SpatialIndex.prototype);
-    var numNodes = 0;
-    var Node = function(tree, a, b) {
-      this.obj = null;
-      this.bb_l = min(a.bb_l, b.bb_l);
-      this.bb_b = min(a.bb_b, b.bb_b);
-      this.bb_r = max(a.bb_r, b.bb_r);
-      this.bb_t = max(a.bb_t, b.bb_t);
-      this.parent = null;
-      this.setA(a);
-      this.setB(b);
-    };
-    BBTree.prototype.makeNode = function(a, b) {
-      var node = this.pooledNodes;
-      if (node) {
-        this.pooledNodes = node.parent;
-        node.constructor(this, a, b);
-        return node;
-      }
-      numNodes++;
-      return new Node(this, a, b);
-    };
-    var numLeaves = 0;
-    var Leaf = function(tree, obj) {
-      this.obj = obj;
-      tree.getBB(obj, this);
-      this.parent = null;
-      this.stamp = 1;
-      this.pairs = null;
-      numLeaves++;
-    };
-    BBTree.prototype.getBB = function(obj, dest) {
-      var velocityFunc = this.velocityFunc;
-      if (velocityFunc) {
-        var coef = .1;
-        var x = (obj.bb_r - obj.bb_l) * coef;
-        var y = (obj.bb_t - obj.bb_b) * coef;
-        var v = vmult(velocityFunc(obj), .1);
-        dest.bb_l = obj.bb_l + min(-x, v.x);
-        dest.bb_b = obj.bb_b + min(-y, v.y);
-        dest.bb_r = obj.bb_r + max(x, v.x);
-        dest.bb_t = obj.bb_t + max(y, v.y);
-      } else {
-        dest.bb_l = obj.bb_l;
-        dest.bb_b = obj.bb_b;
-        dest.bb_r = obj.bb_r;
-        dest.bb_t = obj.bb_t;
-      }
-    };
-    BBTree.prototype.getStamp = function() {
-      var dynamic = this.dynamicIndex;
-      return dynamic && dynamic.stamp ? dynamic.stamp : this.stamp;
-    };
-    BBTree.prototype.incrementStamp = function() {
-      this.dynamicIndex && this.dynamicIndex.stamp ? this.dynamicIndex.stamp++ : this.stamp++;
-    };
-    var numPairs = 0;
-    var Pair = function(leafA, nextA, leafB, nextB) {
-      this.prevA = null;
-      this.leafA = leafA;
-      this.nextA = nextA;
-      this.prevB = null;
-      this.leafB = leafB;
-      this.nextB = nextB;
-    };
-    BBTree.prototype.makePair = function(leafA, nextA, leafB, nextB) {
-      var pair = this.pooledPairs;
-      if (pair) {
-        this.pooledPairs = pair.prevA;
-        pair.prevA = null;
-        pair.leafA = leafA;
-        pair.nextA = nextA;
-        pair.prevB = null;
-        pair.leafB = leafB;
-        pair.nextB = nextB;
-        return pair;
-      }
-      numPairs++;
-      return new Pair(leafA, nextA, leafB, nextB);
-    };
-    Pair.prototype.recycle = function(tree) {
-      this.prevA = tree.pooledPairs;
-      tree.pooledPairs = this;
-    };
-    var unlinkThread = function(prev, leaf, next) {
-      next && (next.leafA === leaf ? next.prevA = prev : next.prevB = prev);
-      prev ? prev.leafA === leaf ? prev.nextA = next : prev.nextB = next : leaf.pairs = next;
-    };
-    Leaf.prototype.clearPairs = function(tree) {
-      var pair = this.pairs, next;
-      this.pairs = null;
-      while (pair) {
-        if (pair.leafA === this) {
-          next = pair.nextA;
-          unlinkThread(pair.prevB, pair.leafB, pair.nextB);
-        } else {
-          next = pair.nextB;
-          unlinkThread(pair.prevA, pair.leafA, pair.nextA);
-        }
-        pair.recycle(tree);
-        pair = next;
-      }
-    };
-    var pairInsert = function(a, b, tree) {
-      var nextA = a.pairs, nextB = b.pairs;
-      var pair = tree.makePair(a, nextA, b, nextB);
-      a.pairs = b.pairs = pair;
-      nextA && (nextA.leafA === a ? nextA.prevA = pair : nextA.prevB = pair);
-      nextB && (nextB.leafA === b ? nextB.prevA = pair : nextB.prevB = pair);
-    };
-    Node.prototype.recycle = function(tree) {
-      this.parent = tree.pooledNodes;
-      tree.pooledNodes = this;
-    };
-    Leaf.prototype.recycle = function(tree) {};
-    Node.prototype.setA = function(value) {
-      this.A = value;
-      value.parent = this;
-    };
-    Node.prototype.setB = function(value) {
-      this.B = value;
-      value.parent = this;
-    };
-    Leaf.prototype.isLeaf = true;
-    Node.prototype.isLeaf = false;
-    Node.prototype.otherChild = function(child) {
-      return this.A == child ? this.B : this.A;
-    };
-    Node.prototype.replaceChild = function(child, value, tree) {
-      assertSoft(child == this.A || child == this.B, "Node is not a child of parent.");
-      if (this.A == child) {
-        this.A.recycle(tree);
-        this.setA(value);
-      } else {
-        this.B.recycle(tree);
-        this.setB(value);
-      }
-      for (var node = this; node; node = node.parent) {
-        var a = node.A;
-        var b = node.B;
-        node.bb_l = min(a.bb_l, b.bb_l);
-        node.bb_b = min(a.bb_b, b.bb_b);
-        node.bb_r = max(a.bb_r, b.bb_r);
-        node.bb_t = max(a.bb_t, b.bb_t);
-      }
-    };
-    Node.prototype.bbArea = Leaf.prototype.bbArea = function() {
-      return (this.bb_r - this.bb_l) * (this.bb_t - this.bb_b);
-    };
-    var bbTreeMergedArea = function(a, b) {
-      return (max(a.bb_r, b.bb_r) - min(a.bb_l, b.bb_l)) * (max(a.bb_t, b.bb_t) - min(a.bb_b, b.bb_b));
-    };
-    var bbProximity = function(a, b) {
-      return Math.abs(a.bb_l + a.bb_r - b.bb_l - b.bb_r) + Math.abs(a.bb_b + a.bb_t - b.bb_b - b.bb_t);
-    };
-    var subtreeInsert = function(subtree, leaf, tree) {
-      if (null == subtree) return leaf;
-      if (subtree.isLeaf) return tree.makeNode(leaf, subtree);
-      var cost_a = subtree.B.bbArea() + bbTreeMergedArea(subtree.A, leaf);
-      var cost_b = subtree.A.bbArea() + bbTreeMergedArea(subtree.B, leaf);
-      if (cost_a === cost_b) {
-        cost_a = bbProximity(subtree.A, leaf);
-        cost_b = bbProximity(subtree.B, leaf);
-      }
-      cost_b < cost_a ? subtree.setB(subtreeInsert(subtree.B, leaf, tree)) : subtree.setA(subtreeInsert(subtree.A, leaf, tree));
-      subtree.bb_l = min(subtree.bb_l, leaf.bb_l);
-      subtree.bb_b = min(subtree.bb_b, leaf.bb_b);
-      subtree.bb_r = max(subtree.bb_r, leaf.bb_r);
-      subtree.bb_t = max(subtree.bb_t, leaf.bb_t);
-      return subtree;
-    };
-    Node.prototype.intersectsBB = Leaf.prototype.intersectsBB = function(bb) {
-      return this.bb_l <= bb.r && bb.l <= this.bb_r && this.bb_b <= bb.t && bb.b <= this.bb_t;
-    };
-    var subtreeQuery = function(subtree, bb, func) {
-      if (subtree.intersectsBB(bb)) if (subtree.isLeaf) func(subtree.obj); else {
-        subtreeQuery(subtree.A, bb, func);
-        subtreeQuery(subtree.B, bb, func);
-      }
-    };
-    var nodeSegmentQuery = function(node, a, b) {
-      var idx = 1 / (b.x - a.x);
-      var tx1 = node.bb_l == a.x ? -Infinity : (node.bb_l - a.x) * idx;
-      var tx2 = node.bb_r == a.x ? Infinity : (node.bb_r - a.x) * idx;
-      var txmin = min(tx1, tx2);
-      var txmax = max(tx1, tx2);
-      var idy = 1 / (b.y - a.y);
-      var ty1 = node.bb_b == a.y ? -Infinity : (node.bb_b - a.y) * idy;
-      var ty2 = node.bb_t == a.y ? Infinity : (node.bb_t - a.y) * idy;
-      var tymin = min(ty1, ty2);
-      var tymax = max(ty1, ty2);
-      if (tymin <= txmax && txmin <= tymax) {
-        var min_ = max(txmin, tymin);
-        var max_ = min(txmax, tymax);
-        if (0 <= max_ && min_ <= 1) return max(min_, 0);
-      }
-      return Infinity;
-    };
-    var subtreeSegmentQuery = function(subtree, a, b, t_exit, func) {
-      if (subtree.isLeaf) return func(subtree.obj);
-      var t_a = nodeSegmentQuery(subtree.A, a, b);
-      var t_b = nodeSegmentQuery(subtree.B, a, b);
-      if (t_a < t_b) {
-        t_a < t_exit && (t_exit = min(t_exit, subtreeSegmentQuery(subtree.A, a, b, t_exit, func)));
-        t_b < t_exit && (t_exit = min(t_exit, subtreeSegmentQuery(subtree.B, a, b, t_exit, func)));
-      } else {
-        t_b < t_exit && (t_exit = min(t_exit, subtreeSegmentQuery(subtree.B, a, b, t_exit, func)));
-        t_a < t_exit && (t_exit = min(t_exit, subtreeSegmentQuery(subtree.A, a, b, t_exit, func)));
-      }
-      return t_exit;
-    };
-    BBTree.prototype.subtreeRecycle = function(node) {
-      if (node.isLeaf) {
-        this.subtreeRecycle(node.A);
-        this.subtreeRecycle(node.B);
-        node.recycle(this);
-      }
-    };
-    var subtreeRemove = function(subtree, leaf, tree) {
-      if (leaf == subtree) return null;
-      var parent = leaf.parent;
-      if (parent == subtree) {
-        var other = subtree.otherChild(leaf);
-        other.parent = subtree.parent;
-        subtree.recycle(tree);
-        return other;
-      }
-      parent.parent.replaceChild(parent, parent.otherChild(leaf), tree);
-      return subtree;
-    };
-    var bbTreeIntersectsNode = function(a, b) {
-      return a.bb_l <= b.bb_r && b.bb_l <= a.bb_r && a.bb_b <= b.bb_t && b.bb_b <= a.bb_t;
-    };
-    Leaf.prototype.markLeafQuery = function(leaf, left, tree, func) {
-      if (bbTreeIntersectsNode(leaf, this)) if (left) pairInsert(leaf, this, tree); else {
-        this.stamp < leaf.stamp && pairInsert(this, leaf, tree);
-        func && func(leaf.obj, this.obj);
-      }
-    };
-    Node.prototype.markLeafQuery = function(leaf, left, tree, func) {
-      if (bbTreeIntersectsNode(leaf, this)) {
-        this.A.markLeafQuery(leaf, left, tree, func);
-        this.B.markLeafQuery(leaf, left, tree, func);
-      }
-    };
-    Leaf.prototype.markSubtree = function(tree, staticRoot, func) {
-      if (this.stamp == tree.getStamp()) {
-        staticRoot && staticRoot.markLeafQuery(this, false, tree, func);
-        for (var node = this; node.parent; node = node.parent) node == node.parent.A ? node.parent.B.markLeafQuery(this, true, tree, func) : node.parent.A.markLeafQuery(this, false, tree, func);
-      } else {
-        var pair = this.pairs;
-        while (pair) if (this === pair.leafB) {
-          func && func(pair.leafA.obj, this.obj);
-          pair = pair.nextB;
-        } else pair = pair.nextA;
-      }
-    };
-    Node.prototype.markSubtree = function(tree, staticRoot, func) {
-      this.A.markSubtree(tree, staticRoot, func);
-      this.B.markSubtree(tree, staticRoot, func);
-    };
-    Leaf.prototype.containsObj = function(obj) {
-      return this.bb_l <= obj.bb_l && this.bb_r >= obj.bb_r && this.bb_b <= obj.bb_b && this.bb_t >= obj.bb_t;
-    };
-    Leaf.prototype.update = function(tree) {
-      var root = tree.root;
-      var obj = this.obj;
-      if (!this.containsObj(obj)) {
-        tree.getBB(this.obj, this);
-        root = subtreeRemove(root, this, tree);
-        tree.root = subtreeInsert(root, this, tree);
-        this.clearPairs(tree);
-        this.stamp = tree.getStamp();
-        return true;
-      }
-      return false;
-    };
-    Leaf.prototype.addPairs = function(tree) {
-      var dynamicIndex = tree.dynamicIndex;
-      if (dynamicIndex) {
-        var dynamicRoot = dynamicIndex.root;
-        dynamicRoot && dynamicRoot.markLeafQuery(this, true, dynamicIndex, null);
-      } else {
-        var staticRoot = tree.staticIndex.root;
-        this.markSubtree(tree, staticRoot, null);
-      }
-    };
-    BBTree.prototype.insert = function(obj, hashid) {
-      var leaf = new Leaf(this, obj);
-      this.leaves[hashid] = leaf;
-      this.root = subtreeInsert(this.root, leaf, this);
-      this.count++;
-      leaf.stamp = this.getStamp();
-      leaf.addPairs(this);
-      this.incrementStamp();
-    };
-    BBTree.prototype.remove = function(obj, hashid) {
-      var leaf = this.leaves[hashid];
-      delete this.leaves[hashid];
-      this.root = subtreeRemove(this.root, leaf, this);
-      this.count--;
-      leaf.clearPairs(this);
-      leaf.recycle(this);
-    };
-    BBTree.prototype.contains = function(obj, hashid) {
-      return null != this.leaves[hashid];
-    };
-    var voidQueryFunc = function(obj1, obj2) {};
-    BBTree.prototype.reindexQuery = function(func) {
-      if (!this.root) return;
-      var hashid, leaves = this.leaves;
-      for (hashid in leaves) leaves[hashid].update(this);
-      var staticIndex = this.staticIndex;
-      var staticRoot = staticIndex && staticIndex.root;
-      this.root.markSubtree(this, staticRoot, func);
-      staticIndex && !staticRoot && this.collideStatic(this, staticIndex, func);
-      this.incrementStamp();
-    };
-    BBTree.prototype.reindex = function() {
-      this.reindexQuery(voidQueryFunc);
-    };
-    BBTree.prototype.reindexObject = function(obj, hashid) {
-      var leaf = this.leaves[hashid];
-      if (leaf) {
-        leaf.update(this) && leaf.addPairs(this);
-        this.incrementStamp();
-      }
-    };
-    BBTree.prototype.pointQuery = function(point, func) {
-      this.query(new BB(point.x, point.y, point.x, point.y), func);
-    };
-    BBTree.prototype.segmentQuery = function(a, b, t_exit, func) {
-      this.root && subtreeSegmentQuery(this.root, a, b, t_exit, func);
-    };
-    BBTree.prototype.query = function(bb, func) {
-      this.root && subtreeQuery(this.root, bb, func);
-    };
-    BBTree.prototype.count = function() {
-      return this.count;
-    };
-    BBTree.prototype.each = function(func) {
-      var hashid;
-      for (hashid in this.leaves) func(this.leaves[hashid].obj);
-    };
-    var bbTreeMergedArea2 = function(node, l, b, r, t) {
-      return (max(node.bb_r, r) - min(node.bb_l, l)) * (max(node.bb_t, t) - min(node.bb_b, b));
-    };
-    var partitionNodes = function(tree, nodes, offset, count) {
-      if (1 == count) return nodes[offset];
-      if (2 == count) return tree.makeNode(nodes[offset], nodes[offset + 1]);
-      var node = nodes[offset];
-      var bb_l = node.bb_l, bb_b = node.bb_b, bb_r = node.bb_r, bb_t = node.bb_t;
-      var end = offset + count;
-      for (var i = offset + 1; i < end; i++) {
-        node = nodes[i];
-        bb_l = min(bb_l, node.bb_l);
-        bb_b = min(bb_b, node.bb_b);
-        bb_r = max(bb_r, node.bb_r);
-        bb_t = max(bb_t, node.bb_t);
-      }
-      var splitWidth = bb_r - bb_l > bb_t - bb_b;
-      var bounds = new Array(2 * count);
-      if (splitWidth) for (var i = offset; i < end; i++) {
-        bounds[2 * i + 0] = nodes[i].bb_l;
-        bounds[2 * i + 1] = nodes[i].bb_r;
-      } else for (var i = offset; i < end; i++) {
-        bounds[2 * i + 0] = nodes[i].bb_b;
-        bounds[2 * i + 1] = nodes[i].bb_t;
-      }
-      bounds.sort((function(a, b) {
-        return a - b;
-      }));
-      var split = .5 * (bounds[count - 1] + bounds[count]);
-      var a_l = bb_l, a_b = bb_b, a_r = bb_r, a_t = bb_t;
-      var b_l = bb_l, b_b = bb_b, b_r = bb_r, b_t = bb_t;
-      splitWidth ? a_r = b_l = split : a_t = b_b = split;
-      var right = end;
-      for (var left = offset; left < right; ) {
-        var node = nodes[left];
-        if (bbTreeMergedArea2(node, b_l, b_b, b_r, b_t) < bbTreeMergedArea2(node, a_l, a_b, a_r, a_t)) {
-          right--;
-          nodes[left] = nodes[right];
-          nodes[right] = node;
-        } else left++;
-      }
-      if (right == count) {
-        var node = null;
-        for (var i = offset; i < end; i++) node = subtreeInsert(node, nodes[i], tree);
-        return node;
-      }
-      return NodeNew(tree, partitionNodes(tree, nodes, offset, right - offset), partitionNodes(tree, nodes, right, end - right));
-    };
-    BBTree.prototype.optimize = function() {
-      var nodes = new Array(this.count);
-      var i = 0;
-      for (var hashid in this.leaves) nodes[i++] = this.nodes[hashid];
-      tree.subtreeRecycle(root);
-      this.root = partitionNodes(tree, nodes, nodes.length);
-    };
-    var nodeRender = function(node, depth) {
-      if (!node.isLeaf && depth <= 10) {
-        nodeRender(node.A, depth + 1);
-        nodeRender(node.B, depth + 1);
-      }
-      var str = "";
-      for (var i = 0; i < depth; i++) str += " ";
-      console.log(str + node.bb_b + " " + node.bb_t);
-    };
-    BBTree.prototype.log = function() {
-      this.root && nodeRender(this.root, 0);
-    };
-    var CollisionHandler = cp.CollisionHandler = function() {
-      this.a = this.b = 0;
-    };
-    CollisionHandler.prototype.begin = function(arb, space) {
-      return true;
-    };
-    CollisionHandler.prototype.preSolve = function(arb, space) {
-      return true;
-    };
-    CollisionHandler.prototype.postSolve = function(arb, space) {};
-    CollisionHandler.prototype.separate = function(arb, space) {};
-    var CP_MAX_CONTACTS_PER_ARBITER = 4;
-    var Arbiter = function(a, b) {
-      this.e = 0;
-      this.u = 0;
-      this.surface_vr = vzero;
-      this.a = a;
-      this.body_a = a.body;
-      this.b = b;
-      this.body_b = b.body;
-      this.thread_a_next = this.thread_a_prev = null;
-      this.thread_b_next = this.thread_b_prev = null;
-      this.contacts = null;
-      this.stamp = 0;
-      this.handler = null;
-      this.swappedColl = false;
-      this.state = "first coll";
-    };
-    Arbiter.prototype.getShapes = function() {
-      return this.swappedColl ? [ this.b, this.a ] : [ this.a, this.b ];
-    };
-    Arbiter.prototype.totalImpulse = function() {
-      var contacts = this.contacts;
-      var sum = new Vect(0, 0);
-      for (var i = 0, count = contacts.length; i < count; i++) {
-        var con = contacts[i];
-        sum.add(vmult(con.n, con.jnAcc));
-      }
-      return this.swappedColl ? sum : sum.neg();
-    };
-    Arbiter.prototype.totalImpulseWithFriction = function() {
-      var contacts = this.contacts;
-      var sum = new Vect(0, 0);
-      for (var i = 0, count = contacts.length; i < count; i++) {
-        var con = contacts[i];
-        sum.add(new Vect(con.jnAcc, con.jtAcc).rotate(con.n));
-      }
-      return this.swappedColl ? sum : sum.neg();
-    };
-    Arbiter.prototype.totalKE = function() {
-      var eCoef = (1 - this.e) / (1 + this.e);
-      var sum = 0;
-      var contacts = this.contacts;
-      for (var i = 0, count = contacts.length; i < count; i++) {
-        var con = contacts[i];
-        var jnAcc = con.jnAcc;
-        var jtAcc = con.jtAcc;
-        sum += eCoef * jnAcc * jnAcc / con.nMass + jtAcc * jtAcc / con.tMass;
-      }
-      return sum;
-    };
-    Arbiter.prototype.ignore = function() {
-      this.state = "ignore";
-    };
-    Arbiter.prototype.getA = function() {
-      return this.swappedColl ? this.b : this.a;
-    };
-    Arbiter.prototype.getB = function() {
-      return this.swappedColl ? this.a : this.b;
-    };
-    Arbiter.prototype.isFirstContact = function() {
-      return "first coll" === this.state;
-    };
-    var ContactPoint = function(point, normal, dist) {
-      this.point = point;
-      this.normal = normal;
-      this.dist = dist;
-    };
-    Arbiter.prototype.getContactPointSet = function() {
-      var set = new Array(this.contacts.length);
-      var i;
-      for (i = 0; i < set.length; i++) set[i] = new ContactPoint(this.contacts[i].p, this.contacts[i].n, this.contacts[i].dist);
-      return set;
-    };
-    Arbiter.prototype.getNormal = function(i) {
-      var n = this.contacts[i].n;
-      return this.swappedColl ? vneg(n) : n;
-    };
-    Arbiter.prototype.getPoint = function(i) {
-      return this.contacts[i].p;
-    };
-    Arbiter.prototype.getDepth = function(i) {
-      return this.contacts[i].dist;
-    };
-    var unthreadHelper = function(arb, body, prev, next) {
-      prev ? prev.body_a === body ? prev.thread_a_next = next : prev.thread_b_next = next : body.arbiterList = next;
-      next && (next.body_a === body ? next.thread_a_prev = prev : next.thread_b_prev = prev);
-    };
-    Arbiter.prototype.unthread = function() {
-      unthreadHelper(this, this.body_a, this.thread_a_prev, this.thread_a_next);
-      unthreadHelper(this, this.body_b, this.thread_b_prev, this.thread_b_next);
-      this.thread_a_prev = this.thread_a_next = null;
-      this.thread_b_prev = this.thread_b_next = null;
-    };
-    Arbiter.prototype.update = function(contacts, handler, a, b) {
-      if (this.contacts) for (var i = 0; i < this.contacts.length; i++) {
-        var old = this.contacts[i];
-        for (var j = 0; j < contacts.length; j++) {
-          var new_contact = contacts[j];
-          if (new_contact.hash === old.hash) {
-            new_contact.jnAcc = old.jnAcc;
-            new_contact.jtAcc = old.jtAcc;
-          }
-        }
-      }
-      this.contacts = contacts;
-      this.handler = handler;
-      this.swappedColl = a.collision_type !== handler.a;
-      this.e = a.e * b.e;
-      this.u = a.u * b.u;
-      this.surface_vr = vsub(a.surface_v, b.surface_v);
-      this.a = a;
-      this.body_a = a.body;
-      this.b = b;
-      this.body_b = b.body;
-      "cached" == this.state && (this.state = "first coll");
-    };
-    Arbiter.prototype.preStep = function(dt, slop, bias) {
-      var a = this.body_a;
-      var b = this.body_b;
-      for (var i = 0; i < this.contacts.length; i++) {
-        var con = this.contacts[i];
-        con.r1 = vsub(con.p, a.p);
-        con.r2 = vsub(con.p, b.p);
-        con.nMass = 1 / k_scalar(a, b, con.r1, con.r2, con.n);
-        con.tMass = 1 / k_scalar(a, b, con.r1, con.r2, vperp(con.n));
-        con.bias = -bias * min(0, con.dist + slop) / dt;
-        con.jBias = 0;
-        con.bounce = normal_relative_velocity(a, b, con.r1, con.r2, con.n) * this.e;
-      }
-    };
-    Arbiter.prototype.applyCachedImpulse = function(dt_coef) {
-      if (this.isFirstContact()) return;
-      var a = this.body_a;
-      var b = this.body_b;
-      for (var i = 0; i < this.contacts.length; i++) {
-        var con = this.contacts[i];
-        var nx = con.n.x;
-        var ny = con.n.y;
-        var jx = nx * con.jnAcc - ny * con.jtAcc;
-        var jy = nx * con.jtAcc + ny * con.jnAcc;
-        apply_impulses(a, b, con.r1, con.r2, jx * dt_coef, jy * dt_coef);
-      }
-    };
-    var numApplyImpulse = 0;
-    var numApplyContact = 0;
-    Arbiter.prototype.applyImpulse = function() {
-      numApplyImpulse++;
-      var a = this.body_a;
-      var b = this.body_b;
-      var surface_vr = this.surface_vr;
-      var friction = this.u;
-      for (var i = 0; i < this.contacts.length; i++) {
-        numApplyContact++;
-        var con = this.contacts[i];
-        var nMass = con.nMass;
-        var n = con.n;
-        var r1 = con.r1;
-        var r2 = con.r2;
-        var vrx = b.vx - r2.y * b.w - (a.vx - r1.y * a.w);
-        var vry = b.vy + r2.x * b.w - (a.vy + r1.x * a.w);
-        var vbn = n.x * (b.v_biasx - r2.y * b.w_bias - a.v_biasx + r1.y * a.w_bias) + n.y * (r2.x * b.w_bias + b.v_biasy - r1.x * a.w_bias - a.v_biasy);
-        var vrn = vdot2(vrx, vry, n.x, n.y);
-        var vrt = vdot2(vrx + surface_vr.x, vry + surface_vr.y, -n.y, n.x);
-        var jbn = (con.bias - vbn) * nMass;
-        var jbnOld = con.jBias;
-        con.jBias = max(jbnOld + jbn, 0);
-        var jn = -(con.bounce + vrn) * nMass;
-        var jnOld = con.jnAcc;
-        con.jnAcc = max(jnOld + jn, 0);
-        var jtMax = friction * con.jnAcc;
-        var jt = -vrt * con.tMass;
-        var jtOld = con.jtAcc;
-        con.jtAcc = clamp(jtOld + jt, -jtMax, jtMax);
-        var bias_x = n.x * (con.jBias - jbnOld);
-        var bias_y = n.y * (con.jBias - jbnOld);
-        apply_bias_impulse(a, -bias_x, -bias_y, r1);
-        apply_bias_impulse(b, bias_x, bias_y, r2);
-        var rot_x = con.jnAcc - jnOld;
-        var rot_y = con.jtAcc - jtOld;
-        apply_impulses(a, b, r1, r2, n.x * rot_x - n.y * rot_y, n.x * rot_y + n.y * rot_x);
-      }
-    };
-    Arbiter.prototype.callSeparate = function(space) {
-      var handler = space.lookupHandler(this.a.collision_type, this.b.collision_type);
-      handler.separate(this, space);
-    };
-    Arbiter.prototype.next = function(body) {
-      return this.body_a == body ? this.thread_a_next : this.thread_b_next;
-    };
-    var numContacts = 0;
-    var Contact = function(p, n, dist, hash) {
-      this.p = p;
-      this.n = n;
-      this.dist = dist;
-      this.r1 = this.r2 = vzero;
-      this.nMass = this.tMass = this.bounce = this.bias = 0;
-      this.jnAcc = this.jtAcc = this.jBias = 0;
-      this.hash = hash;
-      numContacts++;
-    };
-    var NONE = [];
-    var circle2circleQuery = function(p1, p2, r1, r2) {
-      var mindist = r1 + r2;
-      var delta = vsub(p2, p1);
-      var distsq = vlengthsq(delta);
-      if (distsq >= mindist * mindist) return;
-      var dist = Math.sqrt(distsq);
-      return new Contact(vadd(p1, vmult(delta, .5 + (r1 - .5 * mindist) / (dist || Infinity))), dist ? vmult(delta, 1 / dist) : new Vect(1, 0), dist - mindist, 0);
-    };
-    var circle2circle = function(circ1, circ2) {
-      var contact = circle2circleQuery(circ1.tc, circ2.tc, circ1.r, circ2.r);
-      return contact ? [ contact ] : NONE;
-    };
-    var circle2segment = function(circleShape, segmentShape) {
-      var seg_a = segmentShape.ta;
-      var seg_b = segmentShape.tb;
-      var center = circleShape.tc;
-      var seg_delta = vsub(seg_b, seg_a);
-      var closest_t = clamp01(vdot(seg_delta, vsub(center, seg_a)) / vlengthsq(seg_delta));
-      var closest = vadd(seg_a, vmult(seg_delta, closest_t));
-      var contact = circle2circleQuery(center, closest, circleShape.r, segmentShape.r);
-      if (contact) {
-        var n = contact.n;
-        return 0 === closest_t && vdot(n, segmentShape.a_tangent) < 0 || 1 === closest_t && vdot(n, segmentShape.b_tangent) < 0 ? NONE : [ contact ];
-      }
-      return NONE;
-    };
-    var last_MSA_min = 0;
-    var findMSA = function(poly, planes) {
-      var min_index = 0;
-      var min = poly.valueOnAxis(planes[0].n, planes[0].d);
-      if (min > 0) return -1;
-      for (var i = 1; i < planes.length; i++) {
-        var dist = poly.valueOnAxis(planes[i].n, planes[i].d);
-        if (dist > 0) return -1;
-        if (dist > min) {
-          min = dist;
-          min_index = i;
-        }
-      }
-      last_MSA_min = min;
-      return min_index;
-    };
-    var findVertsFallback = function(poly1, poly2, n, dist) {
-      var arr = [];
-      var verts1 = poly1.tVerts;
-      for (var i = 0; i < verts1.length; i += 2) {
-        var vx = verts1[i];
-        var vy = verts1[i + 1];
-        poly2.containsVertPartial(vx, vy, vneg(n)) && arr.push(new Contact(new Vect(vx, vy), n, dist, hashPair(poly1.hashid, i)));
-      }
-      var verts2 = poly2.tVerts;
-      for (var i = 0; i < verts2.length; i += 2) {
-        var vx = verts2[i];
-        var vy = verts2[i + 1];
-        poly1.containsVertPartial(vx, vy, n) && arr.push(new Contact(new Vect(vx, vy), n, dist, hashPair(poly2.hashid, i)));
-      }
-      return arr;
-    };
-    var findVerts = function(poly1, poly2, n, dist) {
-      var arr = [];
-      var verts1 = poly1.tVerts;
-      for (var i = 0; i < verts1.length; i += 2) {
-        var vx = verts1[i];
-        var vy = verts1[i + 1];
-        poly2.containsVert(vx, vy) && arr.push(new Contact(new Vect(vx, vy), n, dist, hashPair(poly1.hashid, i >> 1)));
-      }
-      var verts2 = poly2.tVerts;
-      for (var i = 0; i < verts2.length; i += 2) {
-        var vx = verts2[i];
-        var vy = verts2[i + 1];
-        poly1.containsVert(vx, vy) && arr.push(new Contact(new Vect(vx, vy), n, dist, hashPair(poly2.hashid, i >> 1)));
-      }
-      return arr.length ? arr : findVertsFallback(poly1, poly2, n, dist);
-    };
-    var poly2poly = function(poly1, poly2) {
-      var mini1 = findMSA(poly2, poly1.tPlanes);
-      if (-1 == mini1) return NONE;
-      var min1 = last_MSA_min;
-      var mini2 = findMSA(poly1, poly2.tPlanes);
-      if (-1 == mini2) return NONE;
-      var min2 = last_MSA_min;
-      return min1 > min2 ? findVerts(poly1, poly2, poly1.tPlanes[mini1].n, min1) : findVerts(poly1, poly2, vneg(poly2.tPlanes[mini2].n), min2);
-    };
-    var segValueOnAxis = function(seg, n, d) {
-      var a = vdot(n, seg.ta) - seg.r;
-      var b = vdot(n, seg.tb) - seg.r;
-      return min(a, b) - d;
-    };
-    var findPointsBehindSeg = function(arr, seg, poly, pDist, coef) {
-      var dta = vcross(seg.tn, seg.ta);
-      var dtb = vcross(seg.tn, seg.tb);
-      var n = vmult(seg.tn, coef);
-      var verts = poly.tVerts;
-      for (var i = 0; i < verts.length; i += 2) {
-        var vx = verts[i];
-        var vy = verts[i + 1];
-        if (vdot2(vx, vy, n.x, n.y) < vdot(seg.tn, seg.ta) * coef + seg.r) {
-          var dt = vcross2(seg.tn.x, seg.tn.y, vx, vy);
-          dta >= dt && dt >= dtb && arr.push(new Contact(new Vect(vx, vy), n, pDist, hashPair(poly.hashid, i)));
-        }
-      }
-    };
-    var seg2poly = function(seg, poly) {
-      var arr = [];
-      var planes = poly.tPlanes;
-      var numVerts = planes.length;
-      var segD = vdot(seg.tn, seg.ta);
-      var minNorm = poly.valueOnAxis(seg.tn, segD) - seg.r;
-      var minNeg = poly.valueOnAxis(vneg(seg.tn), -segD) - seg.r;
-      if (minNeg > 0 || minNorm > 0) return NONE;
-      var mini = 0;
-      var poly_min = segValueOnAxis(seg, planes[0].n, planes[0].d);
-      if (poly_min > 0) return NONE;
-      for (var i = 0; i < numVerts; i++) {
-        var dist = segValueOnAxis(seg, planes[i].n, planes[i].d);
-        if (dist > 0) return NONE;
-        if (dist > poly_min) {
-          poly_min = dist;
-          mini = i;
-        }
-      }
-      var poly_n = vneg(planes[mini].n);
-      var va = vadd(seg.ta, vmult(poly_n, seg.r));
-      var vb = vadd(seg.tb, vmult(poly_n, seg.r));
-      poly.containsVert(va.x, va.y) && arr.push(new Contact(va, poly_n, poly_min, hashPair(seg.hashid, 0)));
-      poly.containsVert(vb.x, vb.y) && arr.push(new Contact(vb, poly_n, poly_min, hashPair(seg.hashid, 1)));
-      (minNorm >= poly_min || minNeg >= poly_min) && (minNorm > minNeg ? findPointsBehindSeg(arr, seg, poly, minNorm, 1) : findPointsBehindSeg(arr, seg, poly, minNeg, -1));
-      if (0 === arr.length) {
-        var mini2 = 2 * mini;
-        var verts = poly.tVerts;
-        var poly_a = new Vect(verts[mini2], verts[mini2 + 1]);
-        var con;
-        if (con = circle2circleQuery(seg.ta, poly_a, seg.r, 0, arr)) return [ con ];
-        if (con = circle2circleQuery(seg.tb, poly_a, seg.r, 0, arr)) return [ con ];
-        var len = 2 * numVerts;
-        var poly_b = new Vect(verts[(mini2 + 2) % len], verts[(mini2 + 3) % len]);
-        if (con = circle2circleQuery(seg.ta, poly_b, seg.r, 0, arr)) return [ con ];
-        if (con = circle2circleQuery(seg.tb, poly_b, seg.r, 0, arr)) return [ con ];
-      }
-      return arr;
-    };
-    var circle2poly = function(circ, poly) {
-      var planes = poly.tPlanes;
-      var mini = 0;
-      var min = vdot(planes[0].n, circ.tc) - planes[0].d - circ.r;
-      for (var i = 0; i < planes.length; i++) {
-        var dist = vdot(planes[i].n, circ.tc) - planes[i].d - circ.r;
-        if (dist > 0) return NONE;
-        if (dist > min) {
-          min = dist;
-          mini = i;
-        }
-      }
-      var n = planes[mini].n;
-      var verts = poly.tVerts;
-      var len = verts.length;
-      var mini2 = mini << 1;
-      var ax = verts[mini2];
-      var ay = verts[mini2 + 1];
-      var bx = verts[(mini2 + 2) % len];
-      var by = verts[(mini2 + 3) % len];
-      var dta = vcross2(n.x, n.y, ax, ay);
-      var dtb = vcross2(n.x, n.y, bx, by);
-      var dt = vcross(n, circ.tc);
-      if (dt < dtb) {
-        var con = circle2circleQuery(circ.tc, new Vect(bx, by), circ.r, 0, con);
-        return con ? [ con ] : NONE;
-      }
-      if (dt < dta) return [ new Contact(vsub(circ.tc, vmult(n, circ.r + min / 2)), vneg(n), min, 0) ];
-      var con = circle2circleQuery(circ.tc, new Vect(ax, ay), circ.r, 0, con);
-      return con ? [ con ] : NONE;
-    };
-    CircleShape.prototype.collisionCode = 0;
-    SegmentShape.prototype.collisionCode = 1;
-    PolyShape.prototype.collisionCode = 2;
-    CircleShape.prototype.collisionTable = [ circle2circle, circle2segment, circle2poly ];
-    SegmentShape.prototype.collisionTable = [ null, function(segA, segB) {
-      return NONE;
-    }, seg2poly ];
-    PolyShape.prototype.collisionTable = [ null, null, poly2poly ];
-    var collideShapes = cp.collideShapes = function(a, b) {
-      assert(a.collisionCode <= b.collisionCode, "Collided shapes must be sorted by type");
-      return a.collisionTable[b.collisionCode](a, b);
-    };
-    var defaultCollisionHandler = new CollisionHandler();
-    var Space = cp.Space = function() {
-      this.stamp = 0;
-      this.curr_dt = 0;
-      this.bodies = [];
-      this.rousedBodies = [];
-      this.sleepingComponents = [];
-      this.staticShapes = new BBTree(null);
-      this.activeShapes = new BBTree(this.staticShapes);
-      this.arbiters = [];
-      this.contactBuffersHead = null;
-      this.cachedArbiters = {};
-      this.constraints = [];
-      this.locked = 0;
-      this.collisionHandlers = {};
-      this.defaultHandler = defaultCollisionHandler;
-      this.postStepCallbacks = [];
-      this.iterations = 10;
-      this.gravity = vzero;
-      this.damping = 1;
-      this.idleSpeedThreshold = 0;
-      this.sleepTimeThreshold = Infinity;
-      this.collisionSlop = .1;
-      this.collisionBias = Math.pow(.9, 60);
-      this.collisionPersistence = 3;
-      this.enableContactGraph = false;
-      this.staticBody = new Body(Infinity, Infinity);
-      this.staticBody.nodeIdleTime = Infinity;
-      this.collideShapes = this.makeCollideShapes();
-    };
-    Space.prototype.getCurrentTimeStep = function() {
-      return this.curr_dt;
-    };
-    Space.prototype.setIterations = function(iter) {
-      this.iterations = iter;
-    };
-    Space.prototype.isLocked = function() {
-      return this.locked;
-    };
-    var assertSpaceUnlocked = function(space) {
-      assert(!space.locked, "This addition/removal cannot be done safely during a call to cpSpaceStep()  or during a query. Put these calls into a post-step callback.");
-    };
-    Space.prototype.addCollisionHandler = function(a, b, begin, preSolve, postSolve, separate) {
-      assertSpaceUnlocked(this);
-      this.removeCollisionHandler(a, b);
-      var handler = new CollisionHandler();
-      handler.a = a;
-      handler.b = b;
-      begin && (handler.begin = begin);
-      preSolve && (handler.preSolve = preSolve);
-      postSolve && (handler.postSolve = postSolve);
-      separate && (handler.separate = separate);
-      this.collisionHandlers[hashPair(a, b)] = handler;
-    };
-    Space.prototype.removeCollisionHandler = function(a, b) {
-      assertSpaceUnlocked(this);
-      delete this.collisionHandlers[hashPair(a, b)];
-    };
-    Space.prototype.setDefaultCollisionHandler = function(begin, preSolve, postSolve, separate) {
-      assertSpaceUnlocked(this);
-      var handler = new CollisionHandler();
-      begin && (handler.begin = begin);
-      preSolve && (handler.preSolve = preSolve);
-      postSolve && (handler.postSolve = postSolve);
-      separate && (handler.separate = separate);
-      this.defaultHandler = handler;
-    };
-    Space.prototype.lookupHandler = function(a, b) {
-      return this.collisionHandlers[hashPair(a, b)] || this.defaultHandler;
-    };
-    Space.prototype.addShape = function(shape) {
-      var body = shape.body;
-      if (body.isStatic()) return this.addStaticShape(shape);
-      assert(!shape.space, "This shape is already added to a space and cannot be added to another.");
-      assertSpaceUnlocked(this);
-      body.activate();
-      body.addShape(shape);
-      shape.update(body.p, body.rot);
-      this.activeShapes.insert(shape, shape.hashid);
-      shape.space = this;
-      return shape;
-    };
-    Space.prototype.addStaticShape = function(shape) {
-      assert(!shape.space, "This shape is already added to a space and cannot be added to another.");
-      assertSpaceUnlocked(this);
-      var body = shape.body;
-      body.addShape(shape);
-      shape.update(body.p, body.rot);
-      this.staticShapes.insert(shape, shape.hashid);
-      shape.space = this;
-      return shape;
-    };
-    Space.prototype.addBody = function(body) {
-      assert(!body.isStatic(), "Static bodies cannot be added to a space as they are not meant to be simulated.");
-      assert(!body.space, "This body is already added to a space and cannot be added to another.");
-      assertSpaceUnlocked(this);
-      this.bodies.push(body);
-      body.space = this;
-      return body;
-    };
-    Space.prototype.addConstraint = function(constraint) {
-      assert(!constraint.space, "This shape is already added to a space and cannot be added to another.");
-      assertSpaceUnlocked(this);
-      var a = constraint.a, b = constraint.b;
-      a.activate();
-      b.activate();
-      this.constraints.push(constraint);
-      constraint.next_a = a.constraintList;
-      a.constraintList = constraint;
-      constraint.next_b = b.constraintList;
-      b.constraintList = constraint;
-      constraint.space = this;
-      return constraint;
-    };
-    Space.prototype.filterArbiters = function(body, filter) {
-      for (var hash in this.cachedArbiters) {
-        var arb = this.cachedArbiters[hash];
-        if (body === arb.body_a && (filter === arb.a || null === filter) || body === arb.body_b && (filter === arb.b || null === filter)) {
-          filter && "cached" !== arb.state && arb.callSeparate(this);
-          arb.unthread();
-          deleteObjFromList(this.arbiters, arb);
-          delete this.cachedArbiters[hash];
-        }
-      }
-    };
-    Space.prototype.removeShape = function(shape) {
-      var body = shape.body;
-      if (body.isStatic()) this.removeStaticShape(shape); else {
-        assert(this.containsShape(shape), "Cannot remove a shape that was not added to the space. (Removed twice maybe?)");
-        assertSpaceUnlocked(this);
-        body.activate();
-        body.removeShape(shape);
-        this.filterArbiters(body, shape);
-        this.activeShapes.remove(shape, shape.hashid);
-        shape.space = null;
-      }
-    };
-    Space.prototype.removeStaticShape = function(shape) {
-      assert(this.containsShape(shape), "Cannot remove a static or sleeping shape that was not added to the space. (Removed twice maybe?)");
-      assertSpaceUnlocked(this);
-      var body = shape.body;
-      body.isStatic() && body.activateStatic(shape);
-      body.removeShape(shape);
-      this.filterArbiters(body, shape);
-      this.staticShapes.remove(shape, shape.hashid);
-      shape.space = null;
-    };
-    Space.prototype.removeBody = function(body) {
-      assert(this.containsBody(body), "Cannot remove a body that was not added to the space. (Removed twice maybe?)");
-      assertSpaceUnlocked(this);
-      body.activate();
-      deleteObjFromList(this.bodies, body);
-      body.space = null;
-    };
-    Space.prototype.removeConstraint = function(constraint) {
-      assert(this.containsConstraint(constraint), "Cannot remove a constraint that was not added to the space. (Removed twice maybe?)");
-      assertSpaceUnlocked(this);
-      constraint.a.activate();
-      constraint.b.activate();
-      deleteObjFromList(this.constraints, constraint);
-      constraint.a.removeConstraint(constraint);
-      constraint.b.removeConstraint(constraint);
-      constraint.space = null;
-    };
-    Space.prototype.containsShape = function(shape) {
-      return shape.space === this;
-    };
-    Space.prototype.containsBody = function(body) {
-      return body.space == this;
-    };
-    Space.prototype.containsConstraint = function(constraint) {
-      return constraint.space == this;
-    };
-    Space.prototype.uncacheArbiter = function(arb) {
-      delete this.cachedArbiters[hashPair(arb.a.hashid, arb.b.hashid)];
-      deleteObjFromList(this.arbiters, arb);
-    };
-    Space.prototype.eachBody = function(func) {
-      this.lock();
-      var bodies = this.bodies;
-      for (var i = 0; i < bodies.length; i++) func(bodies[i]);
-      var components = this.sleepingComponents;
-      for (var i = 0; i < components.length; i++) {
-        var root = components[i];
-        var body = root;
-        while (body) {
-          var next = body.nodeNext;
-          func(body);
-          body = next;
-        }
-      }
-      this.unlock(true);
-    };
-    Space.prototype.eachShape = function(func) {
-      this.lock();
-      this.activeShapes.each(func);
-      this.staticShapes.each(func);
-      this.unlock(true);
-    };
-    Space.prototype.eachConstraint = function(func) {
-      this.lock();
-      var constraints = this.constraints;
-      for (var i = 0; i < constraints.length; i++) func(constraints[i]);
-      this.unlock(true);
-    };
-    Space.prototype.reindexStatic = function() {
-      assert(!this.locked, "You cannot manually reindex objects while the space is locked. Wait until the current query or step is complete.");
-      this.staticShapes.each((function(shape) {
-        var body = shape.body;
-        shape.update(body.p, body.rot);
-      }));
-      this.staticShapes.reindex();
-    };
-    Space.prototype.reindexShape = function(shape) {
-      assert(!this.locked, "You cannot manually reindex objects while the space is locked. Wait until the current query or step is complete.");
-      var body = shape.body;
-      shape.update(body.p, body.rot);
-      this.activeShapes.reindexObject(shape, shape.hashid);
-      this.staticShapes.reindexObject(shape, shape.hashid);
-    };
-    Space.prototype.reindexShapesForBody = function(body) {
-      for (var shape = body.shapeList; shape; shape = shape.next) this.reindexShape(shape);
-    };
-    Space.prototype.useSpatialHash = function(dim, count) {
-      throw new Error("Spatial Hash not implemented.");
-      var staticShapes;
-      var activeShapes;
-    };
-    Space.prototype.activateBody = function(body) {
-      assert(!body.isRogue(), "Internal error: Attempting to activate a rogue body.");
-      if (this.locked) -1 === this.rousedBodies.indexOf(body) && this.rousedBodies.push(body); else {
-        this.bodies.push(body);
-        for (var i = 0; i < body.shapeList.length; i++) {
-          var shape = body.shapeList[i];
-          this.staticShapes.remove(shape, shape.hashid);
-          this.activeShapes.insert(shape, shape.hashid);
-        }
-        for (var arb = body.arbiterList; arb; arb = arb.next(body)) {
-          var bodyA = arb.body_a;
-          if (body === bodyA || bodyA.isStatic()) {
-            var a = arb.a, b = arb.b;
-            this.cachedArbiters[hashPair(a.hashid, b.hashid)] = arb;
-            arb.stamp = this.stamp;
-            arb.handler = this.lookupHandler(a.collision_type, b.collision_type);
-            this.arbiters.push(arb);
-          }
-        }
-        for (var constraint = body.constraintList; constraint; constraint = constraint.nodeNext) {
-          var bodyA = constraint.a;
-          (body === bodyA || bodyA.isStatic()) && this.constraints.push(constraint);
-        }
-      }
-    };
-    Space.prototype.deactivateBody = function(body) {
-      assert(!body.isRogue(), "Internal error: Attempting to deactivate a rogue body.");
-      deleteObjFromList(this.bodies, body);
-      for (var i = 0; i < body.shapeList.length; i++) {
-        var shape = body.shapeList[i];
-        this.activeShapes.remove(shape, shape.hashid);
-        this.staticShapes.insert(shape, shape.hashid);
-      }
-      for (var arb = body.arbiterList; arb; arb = arb.next(body)) {
-        var bodyA = arb.body_a;
-        (body === bodyA || bodyA.isStatic()) && this.uncacheArbiter(arb);
-      }
-      for (var constraint = body.constraintList; constraint; constraint = constraint.nodeNext) {
-        var bodyA = constraint.a;
-        (body === bodyA || bodyA.isStatic()) && deleteObjFromList(this.constraints, constraint);
-      }
-    };
-    var componentRoot = function(body) {
-      return body ? body.nodeRoot : null;
-    };
-    var componentActivate = function(root) {
-      if (!root || !root.isSleeping(root)) return;
-      assert(!root.isRogue(), "Internal Error: componentActivate() called on a rogue body.");
-      var space = root.space;
-      var body = root;
-      while (body) {
-        var next = body.nodeNext;
-        body.nodeIdleTime = 0;
-        body.nodeRoot = null;
-        body.nodeNext = null;
-        space.activateBody(body);
-        body = next;
-      }
-      deleteObjFromList(space.sleepingComponents, root);
-    };
-    Body.prototype.activate = function() {
-      if (!this.isRogue()) {
-        this.nodeIdleTime = 0;
-        componentActivate(componentRoot(this));
-      }
-    };
-    Body.prototype.activateStatic = function(filter) {
-      assert(this.isStatic(), "Body.activateStatic() called on a non-static body.");
-      for (var arb = this.arbiterList; arb; arb = arb.next(this)) filter && filter != arb.a && filter != arb.b || (arb.body_a == this ? arb.body_b : arb.body_a).activate();
-    };
-    Body.prototype.pushArbiter = function(arb) {
-      assertSoft(null === (arb.body_a === this ? arb.thread_a_next : arb.thread_b_next), "Internal Error: Dangling contact graph pointers detected. (A)");
-      assertSoft(null === (arb.body_a === this ? arb.thread_a_prev : arb.thread_b_prev), "Internal Error: Dangling contact graph pointers detected. (B)");
-      var next = this.arbiterList;
-      assertSoft(null === next || null === (next.body_a === this ? next.thread_a_prev : next.thread_b_prev), "Internal Error: Dangling contact graph pointers detected. (C)");
-      arb.body_a === this ? arb.thread_a_next = next : arb.thread_b_next = next;
-      next && (next.body_a === this ? next.thread_a_prev = arb : next.thread_b_prev = arb);
-      this.arbiterList = arb;
-    };
-    var componentAdd = function(root, body) {
-      body.nodeRoot = root;
-      if (body !== root) {
-        body.nodeNext = root.nodeNext;
-        root.nodeNext = body;
-      }
-    };
-    var floodFillComponent = function(root, body) {
-      if (!body.isRogue()) {
-        var other_root = componentRoot(body);
-        if (null == other_root) {
-          componentAdd(root, body);
-          for (var arb = body.arbiterList; arb; arb = arb.next(body)) floodFillComponent(root, body == arb.body_a ? arb.body_b : arb.body_a);
-          for (var constraint = body.constraintList; constraint; constraint = constraint.next(body)) floodFillComponent(root, body == constraint.a ? constraint.b : constraint.a);
-        } else assertSoft(other_root === root, "Internal Error: Inconsistency detected in the contact graph.");
-      }
-    };
-    var componentActive = function(root, threshold) {
-      for (var body = root; body; body = body.nodeNext) if (body.nodeIdleTime < threshold) return true;
-      return false;
-    };
-    Space.prototype.processComponents = function(dt) {
-      var sleep = Infinity !== this.sleepTimeThreshold;
-      var bodies = this.bodies;
-      for (var i = 0; i < bodies.length; i++) {
-        var body = bodies[i];
-        assertSoft(null === body.nodeNext, "Internal Error: Dangling next pointer detected in contact graph.");
-        assertSoft(null === body.nodeRoot, "Internal Error: Dangling root pointer detected in contact graph.");
-      }
-      if (sleep) {
-        var dv = this.idleSpeedThreshold;
-        var dvsq = dv ? dv * dv : vlengthsq(this.gravity) * dt * dt;
-        for (var i = 0; i < bodies.length; i++) {
-          var body = bodies[i];
-          var keThreshold = dvsq ? body.m * dvsq : 0;
-          body.nodeIdleTime = body.kineticEnergy() > keThreshold ? 0 : body.nodeIdleTime + dt;
-        }
-      }
-      var arbiters = this.arbiters;
-      for (var i = 0, count = arbiters.length; i < count; i++) {
-        var arb = arbiters[i];
-        var a = arb.body_a, b = arb.body_b;
-        if (sleep) {
-          (b.isRogue() && !b.isStatic() || a.isSleeping()) && a.activate();
-          (a.isRogue() && !a.isStatic() || b.isSleeping()) && b.activate();
-        }
-        a.pushArbiter(arb);
-        b.pushArbiter(arb);
-      }
-      if (sleep) {
-        var constraints = this.constraints;
-        for (var i = 0; i < constraints.length; i++) {
-          var constraint = constraints[i];
-          var a = constraint.a, b = constraint.b;
-          b.isRogue() && !b.isStatic() && a.activate();
-          a.isRogue() && !a.isStatic() && b.activate();
-        }
-        for (var i = 0; i < bodies.length; ) {
-          var body = bodies[i];
-          if (null === componentRoot(body)) {
-            floodFillComponent(body, body);
-            if (!componentActive(body, this.sleepTimeThreshold)) {
-              this.sleepingComponents.push(body);
-              for (var other = body; other; other = other.nodeNext) this.deactivateBody(other);
-              continue;
-            }
-          }
-          i++;
-          body.nodeRoot = null;
-          body.nodeNext = null;
-        }
-      }
-    };
-    Body.prototype.sleep = function() {
-      this.sleepWithGroup(null);
-    };
-    Body.prototype.sleepWithGroup = function(group) {
-      assert(!this.isStatic() && !this.isRogue(), "Rogue and static bodies cannot be put to sleep.");
-      var space = this.space;
-      assert(space, "Cannot put a rogue body to sleep.");
-      assert(!space.locked, "Bodies cannot be put to sleep during a query or a call to cpSpaceStep(). Put these calls into a post-step callback.");
-      assert(null === group || group.isSleeping(), "Cannot use a non-sleeping body as a group identifier.");
-      if (this.isSleeping()) {
-        assert(componentRoot(this) === componentRoot(group), "The body is already sleeping and it's group cannot be reassigned.");
-        return;
-      }
-      for (var i = 0; i < this.shapeList.length; i++) this.shapeList[i].update(this.p, this.rot);
-      space.deactivateBody(this);
-      if (group) {
-        var root = componentRoot(group);
-        this.nodeRoot = root;
-        this.nodeNext = root.nodeNext;
-        this.nodeIdleTime = 0;
-        root.nodeNext = this;
-      } else {
-        this.nodeRoot = this;
-        this.nodeNext = null;
-        this.nodeIdleTime = 0;
-        space.sleepingComponents.push(this);
-      }
-      deleteObjFromList(space.bodies, this);
-    };
-    Space.prototype.activateShapesTouchingShape = function(shape) {
-      Infinity !== this.sleepTimeThreshold && this.shapeQuery(shape, (function(shape, points) {
-        shape.body.activate();
-      }));
-    };
-    Space.prototype.pointQuery = function(point, layers, group, func) {
-      var helper = function(shape) {
-        !(shape.group && group === shape.group) && layers & shape.layers && shape.pointQuery(point) && func(shape);
-      };
-      var bb = new BB(point.x, point.y, point.x, point.y);
-      this.lock();
-      this.activeShapes.query(bb, helper);
-      this.staticShapes.query(bb, helper);
-      this.unlock(true);
-    };
-    Space.prototype.pointQueryFirst = function(point, layers, group) {
-      var outShape = null;
-      this.pointQuery(point, layers, group, (function(shape) {
-        shape.sensor || (outShape = shape);
-      }));
-      return outShape;
-    };
-    Space.prototype.nearestPointQuery = function(point, maxDistance, layers, group, func) {
-      var helper = function(shape) {
-        if (!(shape.group && group === shape.group) && layers & shape.layers) {
-          var info = shape.nearestPointQuery(point);
-          info.d < maxDistance && func(shape, info.d, info.p);
-        }
-      };
-      var bb = bbNewForCircle(point, maxDistance);
-      this.lock();
-      this.activeShapes.query(bb, helper);
-      this.staticShapes.query(bb, helper);
-      this.unlock(true);
-    };
-    Space.prototype.nearestPointQueryNearest = function(point, maxDistance, layers, group) {
-      var out;
-      var helper = function(shape) {
-        if (!(shape.group && group === shape.group) && layers & shape.layers && !shape.sensor) {
-          var info = shape.nearestPointQuery(point);
-          info.d < maxDistance && (!out || info.d < out.d) && (out = info);
-        }
-      };
-      var bb = bbNewForCircle(point, maxDistance);
-      this.activeShapes.query(bb, helper);
-      this.staticShapes.query(bb, helper);
-      return out;
-    };
-    Space.prototype.segmentQuery = function(start, end, layers, group, func) {
-      var helper = function(shape) {
-        var info;
-        !(shape.group && group === shape.group) && layers & shape.layers && (info = shape.segmentQuery(start, end)) && func(shape, info.t, info.n);
-        return 1;
-      };
-      this.lock();
-      this.staticShapes.segmentQuery(start, end, 1, helper);
-      this.activeShapes.segmentQuery(start, end, 1, helper);
-      this.unlock(true);
-    };
-    Space.prototype.segmentQueryFirst = function(start, end, layers, group) {
-      var out = null;
-      var helper = function(shape) {
-        var info;
-        !(shape.group && group === shape.group) && layers & shape.layers && !shape.sensor && (info = shape.segmentQuery(start, end)) && (null === out || info.t < out.t) && (out = info);
-        return out ? out.t : 1;
-      };
-      this.staticShapes.segmentQuery(start, end, 1, helper);
-      this.activeShapes.segmentQuery(start, end, out ? out.t : 1, helper);
-      return out;
-    };
-    Space.prototype.bbQuery = function(bb, layers, group, func) {
-      var helper = function(shape) {
-        !(shape.group && group === shape.group) && layers & shape.layers && bbIntersects2(bb, shape.bb_l, shape.bb_b, shape.bb_r, shape.bb_t) && func(shape);
-      };
-      this.lock();
-      this.activeShapes.query(bb, helper);
-      this.staticShapes.query(bb, helper);
-      this.unlock(true);
-    };
-    Space.prototype.shapeQuery = function(shape, func) {
-      var body = shape.body;
-      body && shape.update(body.p, body.rot);
-      var bb = new BB(shape.bb_l, shape.bb_b, shape.bb_r, shape.bb_t);
-      var anyCollision = false;
-      var helper = function(b) {
-        var a = shape;
-        if (a.group && a.group === b.group || !(a.layers & b.layers) || a === b) return;
-        var contacts;
-        if (a.collisionCode <= b.collisionCode) contacts = collideShapes(a, b); else {
-          contacts = collideShapes(b, a);
-          for (var i = 0; i < contacts.length; i++) contacts[i].n = vneg(contacts[i].n);
-        }
-        if (contacts.length) {
-          anyCollision = !(a.sensor || b.sensor);
-          if (func) {
-            var set = new Array(contacts.length);
-            for (var i = 0; i < contacts.length; i++) set[i] = new ContactPoint(contacts[i].p, contacts[i].n, contacts[i].dist);
-            func(b, set);
-          }
-        }
-      };
-      this.lock();
-      this.activeShapes.query(bb, helper);
-      this.staticShapes.query(bb, helper);
-      this.unlock(true);
-      return anyCollision;
-    };
-    Space.prototype.addPostStepCallback = function(func) {
-      assertSoft(this.locked, "Adding a post-step callback when the space is not locked is unnecessary. Post-step callbacks will not called until the end of the next call to cpSpaceStep() or the next query.");
-      this.postStepCallbacks.push(func);
-    };
-    Space.prototype.runPostStepCallbacks = function() {
-      for (var i = 0; i < this.postStepCallbacks.length; i++) this.postStepCallbacks[i]();
-      this.postStepCallbacks = [];
-    };
-    Space.prototype.lock = function() {
-      this.locked++;
-    };
-    Space.prototype.unlock = function(runPostStep) {
-      this.locked--;
-      assert(this.locked >= 0, "Internal Error: Space lock underflow.");
-      if (0 === this.locked && runPostStep) {
-        var waking = this.rousedBodies;
-        for (var i = 0; i < waking.length; i++) this.activateBody(waking[i]);
-        waking.length = 0;
-        this.runPostStepCallbacks();
-      }
-    };
-    Space.prototype.makeCollideShapes = function() {
-      var space_ = this;
-      return function(a, b) {
-        var space = space_;
-        if (!(a.bb_l <= b.bb_r && b.bb_l <= a.bb_r && a.bb_b <= b.bb_t && b.bb_b <= a.bb_t) || a.body === b.body || a.group && a.group === b.group || !(a.layers & b.layers)) return;
-        var handler = space.lookupHandler(a.collision_type, b.collision_type);
-        var sensor = a.sensor || b.sensor;
-        if (sensor && handler === defaultCollisionHandler) return;
-        if (a.collisionCode > b.collisionCode) {
-          var temp = a;
-          a = b;
-          b = temp;
-        }
-        var contacts = collideShapes(a, b);
-        if (0 === contacts.length) return;
-        var arbHash = hashPair(a.hashid, b.hashid);
-        var arb = space.cachedArbiters[arbHash];
-        arb || (arb = space.cachedArbiters[arbHash] = new Arbiter(a, b));
-        arb.update(contacts, handler, a, b);
-        "first coll" != arb.state || handler.begin(arb, space) || arb.ignore();
-        if ("ignore" !== arb.state && handler.preSolve(arb, space) && !sensor) space.arbiters.push(arb); else {
-          arb.contacts = null;
-          "ignore" !== arb.state && (arb.state = "normal");
-        }
-        arb.stamp = space.stamp;
-      };
-    };
-    Space.prototype.arbiterSetFilter = function(arb) {
-      var ticks = this.stamp - arb.stamp;
-      var a = arb.body_a, b = arb.body_b;
-      if ((a.isStatic() || a.isSleeping()) && (b.isStatic() || b.isSleeping())) return true;
-      if (ticks >= 1 && "cached" != arb.state) {
-        arb.callSeparate(this);
-        arb.state = "cached";
-      }
-      if (ticks >= this.collisionPersistence) {
-        arb.contacts = null;
-        return false;
-      }
-      return true;
-    };
-    var updateFunc = function(shape) {
-      var body = shape.body;
-      shape.update(body.p, body.rot);
-    };
-    Space.prototype.step = function(dt) {
-      if (0 === dt) return;
-      assert(0 === vzero.x && 0 === vzero.y, "vzero is invalid");
-      this.stamp++;
-      var prev_dt = this.curr_dt;
-      this.curr_dt = dt;
-      var i;
-      var j;
-      var hash;
-      var bodies = this.bodies;
-      var constraints = this.constraints;
-      var arbiters = this.arbiters;
-      for (i = 0; i < arbiters.length; i++) {
-        var arb = arbiters[i];
-        arb.state = "normal";
-        arb.body_a.isSleeping() || arb.body_b.isSleeping() || arb.unthread();
-      }
-      arbiters.length = 0;
-      this.lock();
-      for (i = 0; i < bodies.length; i++) bodies[i].position_func(dt);
-      this.activeShapes.each(updateFunc);
-      this.activeShapes.reindexQuery(this.collideShapes);
-      this.unlock(false);
-      this.processComponents(dt);
-      this.lock();
-      for (hash in this.cachedArbiters) this.arbiterSetFilter(this.cachedArbiters[hash]) || delete this.cachedArbiters[hash];
-      var slop = this.collisionSlop;
-      var biasCoef = 1 - Math.pow(this.collisionBias, dt);
-      for (i = 0; i < arbiters.length; i++) arbiters[i].preStep(dt, slop, biasCoef);
-      for (i = 0; i < constraints.length; i++) {
-        var constraint = constraints[i];
-        constraint.preSolve(this);
-        constraint.preStep(dt);
-      }
-      var damping = Math.pow(this.damping, dt);
-      var gravity = this.gravity;
-      for (i = 0; i < bodies.length; i++) bodies[i].velocity_func(gravity, damping, dt);
-      var dt_coef = 0 === prev_dt ? 0 : dt / prev_dt;
-      for (i = 0; i < arbiters.length; i++) arbiters[i].applyCachedImpulse(dt_coef);
-      for (i = 0; i < constraints.length; i++) constraints[i].applyCachedImpulse(dt_coef);
-      for (i = 0; i < this.iterations; i++) {
-        for (j = 0; j < arbiters.length; j++) arbiters[j].applyImpulse();
-        for (j = 0; j < constraints.length; j++) constraints[j].applyImpulse();
-      }
-      for (i = 0; i < constraints.length; i++) constraints[i].postSolve(this);
-      for (i = 0; i < arbiters.length; i++) arbiters[i].handler.postSolve(arbiters[i], this);
-      this.unlock(true);
-    };
-    var relative_velocity = function(a, b, r1, r2) {
-      var v1_sumx = a.vx + -r1.y * a.w;
-      var v1_sumy = a.vy + r1.x * a.w;
-      var v2_sumx = b.vx + -r2.y * b.w;
-      var v2_sumy = b.vy + r2.x * b.w;
-      return new Vect(v2_sumx - v1_sumx, v2_sumy - v1_sumy);
-    };
-    var normal_relative_velocity = function(a, b, r1, r2, n) {
-      var v1_sumx = a.vx + -r1.y * a.w;
-      var v1_sumy = a.vy + r1.x * a.w;
-      var v2_sumx = b.vx + -r2.y * b.w;
-      var v2_sumy = b.vy + r2.x * b.w;
-      return vdot2(v2_sumx - v1_sumx, v2_sumy - v1_sumy, n.x, n.y);
-    };
-    var apply_impulse = function(body, jx, jy, r) {
-      body.vx += jx * body.m_inv;
-      body.vy += jy * body.m_inv;
-      body.w += body.i_inv * (r.x * jy - r.y * jx);
-    };
-    var apply_impulses = function(a, b, r1, r2, jx, jy) {
-      apply_impulse(a, -jx, -jy, r1);
-      apply_impulse(b, jx, jy, r2);
-    };
-    var apply_bias_impulse = function(body, jx, jy, r) {
-      body.v_biasx += jx * body.m_inv;
-      body.v_biasy += jy * body.m_inv;
-      body.w_bias += body.i_inv * vcross2(r.x, r.y, jx, jy);
-    };
-    var k_scalar_body = function(body, r, n) {
-      var rcn = vcross(r, n);
-      return body.m_inv + body.i_inv * rcn * rcn;
-    };
-    var k_scalar = function(a, b, r1, r2, n) {
-      var value = k_scalar_body(a, r1, n) + k_scalar_body(b, r2, n);
-      assertSoft(0 !== value, "Unsolvable collision or constraint.");
-      return value;
-    };
-    var k_tensor = function(a, b, r1, r2, k1, k2) {
-      var k11, k12, k21, k22;
-      var m_sum = a.m_inv + b.m_inv;
-      k11 = m_sum;
-      k12 = 0;
-      k21 = 0;
-      k22 = m_sum;
-      var a_i_inv = a.i_inv;
-      var r1xsq = r1.x * r1.x * a_i_inv;
-      var r1ysq = r1.y * r1.y * a_i_inv;
-      var r1nxy = -r1.x * r1.y * a_i_inv;
-      k11 += r1ysq;
-      k12 += r1nxy;
-      k21 += r1nxy;
-      k22 += r1xsq;
-      var b_i_inv = b.i_inv;
-      var r2xsq = r2.x * r2.x * b_i_inv;
-      var r2ysq = r2.y * r2.y * b_i_inv;
-      var r2nxy = -r2.x * r2.y * b_i_inv;
-      k11 += r2ysq;
-      k12 += r2nxy;
-      k21 += r2nxy;
-      k22 += r2xsq;
-      var determinant = k11 * k22 - k12 * k21;
-      assertSoft(0 !== determinant, "Unsolvable constraint.");
-      var det_inv = 1 / determinant;
-      k1.x = k22 * det_inv;
-      k1.y = -k12 * det_inv;
-      k2.x = -k21 * det_inv;
-      k2.y = k11 * det_inv;
-    };
-    var mult_k = function(vr, k1, k2) {
-      return new Vect(vdot(vr, k1), vdot(vr, k2));
-    };
-    var bias_coef = function(errorBias, dt) {
-      return 1 - Math.pow(errorBias, dt);
-    };
-    var Constraint = cp.Constraint = function(a, b) {
-      this.a = a;
-      this.b = b;
-      this.space = null;
-      this.next_a = null;
-      this.next_b = null;
-      this.maxForce = Infinity;
-      this.errorBias = Math.pow(.9, 60);
-      this.maxBias = Infinity;
-    };
-    Constraint.prototype.activateBodies = function() {
-      this.a && this.a.activate();
-      this.b && this.b.activate();
-    };
-    Constraint.prototype.preStep = function(dt) {};
-    Constraint.prototype.applyCachedImpulse = function(dt_coef) {};
-    Constraint.prototype.applyImpulse = function() {};
-    Constraint.prototype.getImpulse = function() {
-      return 0;
-    };
-    Constraint.prototype.preSolve = function(space) {};
-    Constraint.prototype.postSolve = function(space) {};
-    Constraint.prototype.next = function(body) {
-      return this.a === body ? this.next_a : this.next_b;
-    };
-    var PinJoint = cp.PinJoint = function(a, b, anchr1, anchr2) {
-      Constraint.call(this, a, b);
-      this.anchr1 = anchr1;
-      this.anchr2 = anchr2;
-      var p1 = a ? vadd(a.p, vrotate(anchr1, a.rot)) : anchr1;
-      var p2 = b ? vadd(b.p, vrotate(anchr2, b.rot)) : anchr2;
-      this.dist = vlength(vsub(p2, p1));
-      assertSoft(this.dist > 0, "You created a 0 length pin joint. A pivot joint will be much more stable.");
-      this.r1 = this.r2 = null;
-      this.n = null;
-      this.nMass = 0;
-      this.jnAcc = this.jnMax = 0;
-      this.bias = 0;
-    };
-    PinJoint.prototype = Object.create(Constraint.prototype);
-    PinJoint.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      this.r1 = vrotate(this.anchr1, a.rot);
-      this.r2 = vrotate(this.anchr2, b.rot);
-      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
-      var dist = vlength(delta);
-      this.n = vmult(delta, 1 / (dist || Infinity));
-      this.nMass = 1 / k_scalar(a, b, this.r1, this.r2, this.n);
-      var maxBias = this.maxBias;
-      this.bias = clamp(-bias_coef(this.errorBias, dt) * (dist - this.dist) / dt, -maxBias, maxBias);
-      this.jnMax = this.maxForce * dt;
-    };
-    PinJoint.prototype.applyCachedImpulse = function(dt_coef) {
-      var j = vmult(this.n, this.jnAcc * dt_coef);
-      apply_impulses(this.a, this.b, this.r1, this.r2, j.x, j.y);
-    };
-    PinJoint.prototype.applyImpulse = function() {
-      var a = this.a;
-      var b = this.b;
-      var n = this.n;
-      var vrn = normal_relative_velocity(a, b, this.r1, this.r2, n);
-      var jn = (this.bias - vrn) * this.nMass;
-      var jnOld = this.jnAcc;
-      this.jnAcc = clamp(jnOld + jn, -this.jnMax, this.jnMax);
-      jn = this.jnAcc - jnOld;
-      apply_impulses(a, b, this.r1, this.r2, n.x * jn, n.y * jn);
-    };
-    PinJoint.prototype.getImpulse = function() {
-      return Math.abs(this.jnAcc);
-    };
-    var SlideJoint = cp.SlideJoint = function(a, b, anchr1, anchr2, min, max) {
-      Constraint.call(this, a, b);
-      this.anchr1 = anchr1;
-      this.anchr2 = anchr2;
-      this.min = min;
-      this.max = max;
-      this.r1 = this.r2 = this.n = null;
-      this.nMass = 0;
-      this.jnAcc = this.jnMax = 0;
-      this.bias = 0;
-    };
-    SlideJoint.prototype = Object.create(Constraint.prototype);
-    SlideJoint.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      this.r1 = vrotate(this.anchr1, a.rot);
-      this.r2 = vrotate(this.anchr2, b.rot);
-      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
-      var dist = vlength(delta);
-      var pdist = 0;
-      if (dist > this.max) {
-        pdist = dist - this.max;
-        this.n = vnormalize_safe(delta);
-      } else if (dist < this.min) {
-        pdist = this.min - dist;
-        this.n = vneg(vnormalize_safe(delta));
-      } else {
-        this.n = vzero;
-        this.jnAcc = 0;
-      }
-      this.nMass = 1 / k_scalar(a, b, this.r1, this.r2, this.n);
-      var maxBias = this.maxBias;
-      this.bias = clamp(-bias_coef(this.errorBias, dt) * pdist / dt, -maxBias, maxBias);
-      this.jnMax = this.maxForce * dt;
-    };
-    SlideJoint.prototype.applyCachedImpulse = function(dt_coef) {
-      var jn = this.jnAcc * dt_coef;
-      apply_impulses(this.a, this.b, this.r1, this.r2, this.n.x * jn, this.n.y * jn);
-    };
-    SlideJoint.prototype.applyImpulse = function() {
-      if (0 === this.n.x && 0 === this.n.y) return;
-      var a = this.a;
-      var b = this.b;
-      var n = this.n;
-      var r1 = this.r1;
-      var r2 = this.r2;
-      var vr = relative_velocity(a, b, r1, r2);
-      var vrn = vdot(vr, n);
-      var jn = (this.bias - vrn) * this.nMass;
-      var jnOld = this.jnAcc;
-      this.jnAcc = clamp(jnOld + jn, -this.jnMax, 0);
-      jn = this.jnAcc - jnOld;
-      apply_impulses(a, b, this.r1, this.r2, n.x * jn, n.y * jn);
-    };
-    SlideJoint.prototype.getImpulse = function() {
-      return Math.abs(this.jnAcc);
-    };
-    var PivotJoint = cp.PivotJoint = function(a, b, anchr1, anchr2) {
-      Constraint.call(this, a, b);
-      if ("undefined" === typeof anchr2) {
-        var pivot = anchr1;
-        anchr1 = a ? a.world2Local(pivot) : pivot;
-        anchr2 = b ? b.world2Local(pivot) : pivot;
-      }
-      this.anchr1 = anchr1;
-      this.anchr2 = anchr2;
-      this.r1 = this.r2 = vzero;
-      this.k1 = new Vect(0, 0);
-      this.k2 = new Vect(0, 0);
-      this.jAcc = vzero;
-      this.jMaxLen = 0;
-      this.bias = vzero;
-    };
-    PivotJoint.prototype = Object.create(Constraint.prototype);
-    PivotJoint.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      this.r1 = vrotate(this.anchr1, a.rot);
-      this.r2 = vrotate(this.anchr2, b.rot);
-      k_tensor(a, b, this.r1, this.r2, this.k1, this.k2);
-      this.jMaxLen = this.maxForce * dt;
-      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
-      this.bias = vclamp(vmult(delta, -bias_coef(this.errorBias, dt) / dt), this.maxBias);
-    };
-    PivotJoint.prototype.applyCachedImpulse = function(dt_coef) {
-      apply_impulses(this.a, this.b, this.r1, this.r2, this.jAcc.x * dt_coef, this.jAcc.y * dt_coef);
-    };
-    PivotJoint.prototype.applyImpulse = function() {
-      var a = this.a;
-      var b = this.b;
-      var r1 = this.r1;
-      var r2 = this.r2;
-      var vr = relative_velocity(a, b, r1, r2);
-      var j = mult_k(vsub(this.bias, vr), this.k1, this.k2);
-      var jOld = this.jAcc;
-      this.jAcc = vclamp(vadd(this.jAcc, j), this.jMaxLen);
-      apply_impulses(a, b, this.r1, this.r2, this.jAcc.x - jOld.x, this.jAcc.y - jOld.y);
-    };
-    PivotJoint.prototype.getImpulse = function() {
-      return vlength(this.jAcc);
-    };
-    var GrooveJoint = cp.GrooveJoint = function(a, b, groove_a, groove_b, anchr2) {
-      Constraint.call(this, a, b);
-      this.grv_a = groove_a;
-      this.grv_b = groove_b;
-      this.grv_n = vperp(vnormalize(vsub(groove_b, groove_a)));
-      this.anchr2 = anchr2;
-      this.grv_tn = null;
-      this.clamp = 0;
-      this.r1 = this.r2 = null;
-      this.k1 = new Vect(0, 0);
-      this.k2 = new Vect(0, 0);
-      this.jAcc = vzero;
-      this.jMaxLen = 0;
-      this.bias = null;
-    };
-    GrooveJoint.prototype = Object.create(Constraint.prototype);
-    GrooveJoint.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      var ta = a.local2World(this.grv_a);
-      var tb = a.local2World(this.grv_b);
-      var n = vrotate(this.grv_n, a.rot);
-      var d = vdot(ta, n);
-      this.grv_tn = n;
-      this.r2 = vrotate(this.anchr2, b.rot);
-      var td = vcross(vadd(b.p, this.r2), n);
-      if (td <= vcross(ta, n)) {
-        this.clamp = 1;
-        this.r1 = vsub(ta, a.p);
-      } else if (td >= vcross(tb, n)) {
-        this.clamp = -1;
-        this.r1 = vsub(tb, a.p);
-      } else {
-        this.clamp = 0;
-        this.r1 = vsub(vadd(vmult(vperp(n), -td), vmult(n, d)), a.p);
-      }
-      k_tensor(a, b, this.r1, this.r2, this.k1, this.k2);
-      this.jMaxLen = this.maxForce * dt;
-      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
-      this.bias = vclamp(vmult(delta, -bias_coef(this.errorBias, dt) / dt), this.maxBias);
-    };
-    GrooveJoint.prototype.applyCachedImpulse = function(dt_coef) {
-      apply_impulses(this.a, this.b, this.r1, this.r2, this.jAcc.x * dt_coef, this.jAcc.y * dt_coef);
-    };
-    GrooveJoint.prototype.grooveConstrain = function(j) {
-      var n = this.grv_tn;
-      var jClamp = this.clamp * vcross(j, n) > 0 ? j : vproject(j, n);
-      return vclamp(jClamp, this.jMaxLen);
-    };
-    GrooveJoint.prototype.applyImpulse = function() {
-      var a = this.a;
-      var b = this.b;
-      var r1 = this.r1;
-      var r2 = this.r2;
-      var vr = relative_velocity(a, b, r1, r2);
-      var j = mult_k(vsub(this.bias, vr), this.k1, this.k2);
-      var jOld = this.jAcc;
-      this.jAcc = this.grooveConstrain(vadd(jOld, j));
-      apply_impulses(a, b, this.r1, this.r2, this.jAcc.x - jOld.x, this.jAcc.y - jOld.y);
-    };
-    GrooveJoint.prototype.getImpulse = function() {
-      return vlength(this.jAcc);
-    };
-    GrooveJoint.prototype.setGrooveA = function(value) {
-      this.grv_a = value;
-      this.grv_n = vperp(vnormalize(vsub(this.grv_b, value)));
-      this.activateBodies();
-    };
-    GrooveJoint.prototype.setGrooveB = function(value) {
-      this.grv_b = value;
-      this.grv_n = vperp(vnormalize(vsub(value, this.grv_a)));
-      this.activateBodies();
-    };
-    var defaultSpringForce = function(spring, dist) {
-      return (spring.restLength - dist) * spring.stiffness;
-    };
-    var DampedSpring = cp.DampedSpring = function(a, b, anchr1, anchr2, restLength, stiffness, damping) {
-      Constraint.call(this, a, b);
-      this.anchr1 = anchr1;
-      this.anchr2 = anchr2;
-      this.restLength = restLength;
-      this.stiffness = stiffness;
-      this.damping = damping;
-      this.springForceFunc = defaultSpringForce;
-      this.target_vrn = this.v_coef = 0;
-      this.r1 = this.r2 = null;
-      this.nMass = 0;
-      this.n = null;
-    };
-    DampedSpring.prototype = Object.create(Constraint.prototype);
-    DampedSpring.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      this.r1 = vrotate(this.anchr1, a.rot);
-      this.r2 = vrotate(this.anchr2, b.rot);
-      var delta = vsub(vadd(b.p, this.r2), vadd(a.p, this.r1));
-      var dist = vlength(delta);
-      this.n = vmult(delta, 1 / (dist || Infinity));
-      var k = k_scalar(a, b, this.r1, this.r2, this.n);
-      assertSoft(0 !== k, "Unsolvable this.");
-      this.nMass = 1 / k;
-      this.target_vrn = 0;
-      this.v_coef = 1 - Math.exp(-this.damping * dt * k);
-      var f_spring = this.springForceFunc(this, dist);
-      apply_impulses(a, b, this.r1, this.r2, this.n.x * f_spring * dt, this.n.y * f_spring * dt);
-    };
-    DampedSpring.prototype.applyCachedImpulse = function(dt_coef) {};
-    DampedSpring.prototype.applyImpulse = function() {
-      var a = this.a;
-      var b = this.b;
-      var n = this.n;
-      var r1 = this.r1;
-      var r2 = this.r2;
-      var vrn = normal_relative_velocity(a, b, r1, r2, n);
-      var v_damp = (this.target_vrn - vrn) * this.v_coef;
-      this.target_vrn = vrn + v_damp;
-      v_damp *= this.nMass;
-      apply_impulses(a, b, this.r1, this.r2, this.n.x * v_damp, this.n.y * v_damp);
-    };
-    DampedSpring.prototype.getImpulse = function() {
-      return 0;
-    };
-    var defaultSpringTorque = function(spring, relativeAngle) {
-      return (relativeAngle - spring.restAngle) * spring.stiffness;
-    };
-    var DampedRotarySpring = cp.DampedRotarySpring = function(a, b, restAngle, stiffness, damping) {
-      Constraint.call(this, a, b);
-      this.restAngle = restAngle;
-      this.stiffness = stiffness;
-      this.damping = damping;
-      this.springTorqueFunc = defaultSpringTorque;
-      this.target_wrn = 0;
-      this.w_coef = 0;
-      this.iSum = 0;
-    };
-    DampedRotarySpring.prototype = Object.create(Constraint.prototype);
-    DampedRotarySpring.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      var moment = a.i_inv + b.i_inv;
-      assertSoft(0 !== moment, "Unsolvable spring.");
-      this.iSum = 1 / moment;
-      this.w_coef = 1 - Math.exp(-this.damping * dt * moment);
-      this.target_wrn = 0;
-      var j_spring = this.springTorqueFunc(this, a.a - b.a) * dt;
-      a.w -= j_spring * a.i_inv;
-      b.w += j_spring * b.i_inv;
-    };
-    DampedRotarySpring.prototype.applyImpulse = function() {
-      var a = this.a;
-      var b = this.b;
-      var wrn = a.w - b.w;
-      var w_damp = (this.target_wrn - wrn) * this.w_coef;
-      this.target_wrn = wrn + w_damp;
-      var j_damp = w_damp * this.iSum;
-      a.w += j_damp * a.i_inv;
-      b.w -= j_damp * b.i_inv;
-    };
-    var RotaryLimitJoint = cp.RotaryLimitJoint = function(a, b, min, max) {
-      Constraint.call(this, a, b);
-      this.min = min;
-      this.max = max;
-      this.jAcc = 0;
-      this.iSum = this.bias = this.jMax = 0;
-    };
-    RotaryLimitJoint.prototype = Object.create(Constraint.prototype);
-    RotaryLimitJoint.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      var dist = b.a - a.a;
-      var pdist = 0;
-      dist > this.max ? pdist = this.max - dist : dist < this.min && (pdist = this.min - dist);
-      this.iSum = 1 / (1 / a.i + 1 / b.i);
-      var maxBias = this.maxBias;
-      this.bias = clamp(-bias_coef(this.errorBias, dt) * pdist / dt, -maxBias, maxBias);
-      this.jMax = this.maxForce * dt;
-      this.bias || (this.jAcc = 0);
-    };
-    RotaryLimitJoint.prototype.applyCachedImpulse = function(dt_coef) {
-      var a = this.a;
-      var b = this.b;
-      var j = this.jAcc * dt_coef;
-      a.w -= j * a.i_inv;
-      b.w += j * b.i_inv;
-    };
-    RotaryLimitJoint.prototype.applyImpulse = function() {
-      if (!this.bias) return;
-      var a = this.a;
-      var b = this.b;
-      var wr = b.w - a.w;
-      var j = -(this.bias + wr) * this.iSum;
-      var jOld = this.jAcc;
-      this.bias < 0 ? this.jAcc = clamp(jOld + j, 0, this.jMax) : this.jAcc = clamp(jOld + j, -this.jMax, 0);
-      j = this.jAcc - jOld;
-      a.w -= j * a.i_inv;
-      b.w += j * b.i_inv;
-    };
-    RotaryLimitJoint.prototype.getImpulse = function() {
-      return Math.abs(joint.jAcc);
-    };
-    var RatchetJoint = cp.RatchetJoint = function(a, b, phase, ratchet) {
-      Constraint.call(this, a, b);
-      this.angle = 0;
-      this.phase = phase;
-      this.ratchet = ratchet;
-      this.angle = (b ? b.a : 0) - (a ? a.a : 0);
-      this.iSum = this.bias = this.jAcc = this.jMax = 0;
-    };
-    RatchetJoint.prototype = Object.create(Constraint.prototype);
-    RatchetJoint.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      var angle = this.angle;
-      var phase = this.phase;
-      var ratchet = this.ratchet;
-      var delta = b.a - a.a;
-      var diff = angle - delta;
-      var pdist = 0;
-      diff * ratchet > 0 ? pdist = diff : this.angle = Math.floor((delta - phase) / ratchet) * ratchet + phase;
-      this.iSum = 1 / (a.i_inv + b.i_inv);
-      var maxBias = this.maxBias;
-      this.bias = clamp(-bias_coef(this.errorBias, dt) * pdist / dt, -maxBias, maxBias);
-      this.jMax = this.maxForce * dt;
-      this.bias || (this.jAcc = 0);
-    };
-    RatchetJoint.prototype.applyCachedImpulse = function(dt_coef) {
-      var a = this.a;
-      var b = this.b;
-      var j = this.jAcc * dt_coef;
-      a.w -= j * a.i_inv;
-      b.w += j * b.i_inv;
-    };
-    RatchetJoint.prototype.applyImpulse = function() {
-      if (!this.bias) return;
-      var a = this.a;
-      var b = this.b;
-      var wr = b.w - a.w;
-      var ratchet = this.ratchet;
-      var j = -(this.bias + wr) * this.iSum;
-      var jOld = this.jAcc;
-      this.jAcc = clamp((jOld + j) * ratchet, 0, this.jMax * Math.abs(ratchet)) / ratchet;
-      j = this.jAcc - jOld;
-      a.w -= j * a.i_inv;
-      b.w += j * b.i_inv;
-    };
-    RatchetJoint.prototype.getImpulse = function(joint) {
-      return Math.abs(joint.jAcc);
-    };
-    var GearJoint = cp.GearJoint = function(a, b, phase, ratio) {
-      Constraint.call(this, a, b);
-      this.phase = phase;
-      this.ratio = ratio;
-      this.ratio_inv = 1 / ratio;
-      this.jAcc = 0;
-      this.iSum = this.bias = this.jMax = 0;
-    };
-    GearJoint.prototype = Object.create(Constraint.prototype);
-    GearJoint.prototype.preStep = function(dt) {
-      var a = this.a;
-      var b = this.b;
-      this.iSum = 1 / (a.i_inv * this.ratio_inv + this.ratio * b.i_inv);
-      var maxBias = this.maxBias;
-      this.bias = clamp(-bias_coef(this.errorBias, dt) * (b.a * this.ratio - a.a - this.phase) / dt, -maxBias, maxBias);
-      this.jMax = this.maxForce * dt;
-    };
-    GearJoint.prototype.applyCachedImpulse = function(dt_coef) {
-      var a = this.a;
-      var b = this.b;
-      var j = this.jAcc * dt_coef;
-      a.w -= j * a.i_inv * this.ratio_inv;
-      b.w += j * b.i_inv;
-    };
-    GearJoint.prototype.applyImpulse = function() {
-      var a = this.a;
-      var b = this.b;
-      var wr = b.w * this.ratio - a.w;
-      var j = (this.bias - wr) * this.iSum;
-      var jOld = this.jAcc;
-      this.jAcc = clamp(jOld + j, -this.jMax, this.jMax);
-      j = this.jAcc - jOld;
-      a.w -= j * a.i_inv * this.ratio_inv;
-      b.w += j * b.i_inv;
-    };
-    GearJoint.prototype.getImpulse = function() {
-      return Math.abs(this.jAcc);
-    };
-    GearJoint.prototype.setRatio = function(value) {
-      this.ratio = value;
-      this.ratio_inv = 1 / value;
-      this.activateBodies();
-    };
-    var SimpleMotor = cp.SimpleMotor = function(a, b, rate) {
-      Constraint.call(this, a, b);
-      this.rate = rate;
-      this.jAcc = 0;
-      this.iSum = this.jMax = 0;
-    };
-    SimpleMotor.prototype = Object.create(Constraint.prototype);
-    SimpleMotor.prototype.preStep = function(dt) {
-      this.iSum = 1 / (this.a.i_inv + this.b.i_inv);
-      this.jMax = this.maxForce * dt;
-    };
-    SimpleMotor.prototype.applyCachedImpulse = function(dt_coef) {
-      var a = this.a;
-      var b = this.b;
-      var j = this.jAcc * dt_coef;
-      a.w -= j * a.i_inv;
-      b.w += j * b.i_inv;
-    };
-    SimpleMotor.prototype.applyImpulse = function() {
-      var a = this.a;
-      var b = this.b;
-      var wr = b.w - a.w + this.rate;
-      var j = -wr * this.iSum;
-      var jOld = this.jAcc;
-      this.jAcc = clamp(jOld + j, -this.jMax, this.jMax);
-      j = this.jAcc - jOld;
-      a.w -= j * a.i_inv;
-      b.w += j * b.i_inv;
-    };
-    SimpleMotor.prototype.getImpulse = function() {
-      return Math.abs(this.jAcc);
-    };
-  }), {} ],
   311: [ (function(require, module, exports) {
     module.exports = (function() {
       "use strict";
@@ -77424,14 +74423,14 @@
     false;
     module.exports = cc;
   }), {
-    "./CCBoot": 1,
-    "./CCDebugger": 2,
-    "./DebugInfos": 3,
-    "./cocos2d": 242,
-    "./cocos2d/core/predefine": 201,
-    "./cocos2d/kazmath": 246,
-    "./cocos2d/shaders": 273,
-    "./extends": 288,
+    "./CCBoot": 2,
+    "./CCDebugger": 3,
+    "./DebugInfos": 4,
+    "./cocos2d": 243,
+    "./cocos2d/core/predefine": 202,
+    "./cocos2d/kazmath": 247,
+    "./cocos2d/shaders": 274,
+    "./extends": 289,
     "./package.json": void 0,
     "./polyfill/array": 313,
     "./polyfill/misc": 314,

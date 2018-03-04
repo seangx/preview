@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "monsters_a_egg_tex",
+    "texture": "4aBafXHm1ELIB3xI0kOnO8",
+    "rect": [
+      1,
+      1,
+      61,
+      95
+    ],
+    "offset": [
+      -0.5,
+      15.5
+    ],
+    "originalSize": [
+      64,
+      128
+    ]
+  }
+}

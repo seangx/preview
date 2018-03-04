@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "winter-2",
+    "texture": "5cGGVfyylAjJ83IoLmJi8l",
+    "rect": [
+      0,
+      2,
+      770,
+      1340
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      770,
+      1344
+    ]
+  }
+}
