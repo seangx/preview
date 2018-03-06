@@ -142,7 +142,6 @@
           "durationAddEnemy": 15,
           "durationAddWordEnemy": 15,
           "durationAddSuperTerrain": 1.5,
-          "intervalAddWordEnemy": 4,
           "initPosNodeTerrain": {
             "__id__": 12
           },

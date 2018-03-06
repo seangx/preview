@@ -708,7 +708,7 @@ require = function e(t, n, r) {
         var _this = this;
         this.state = EnemyState.invalid;
         this.setState(EnemyState.run);
-        var animationName = "idle" + parseInt(10 * Math.random()) % 3;
+        var animationName = "idle_" + parseInt(10 * Math.random()) % 3;
         this.body.getComponent(dragonBones.ArmatureDisplay).playAnimation(animationName, -1);
         this.node.on("fly", function() {
           console.log("飞走");
