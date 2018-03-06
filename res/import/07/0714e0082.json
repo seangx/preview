@@ -2286,7 +2286,10 @@
             430,
             460,
             490
-          ]
+          ],
+          "rootNode": {
+            "__id__": 2
+          }
         },
         {
           "__type__": "cc.BoxCollider",
@@ -3001,14 +3004,15 @@
           "node": {
             "__id__": 35
           },
-          "_custom": true,
+          "_file": {
+            "__uuid__": "0aBQS+wqZLMKb9btg9daWm"
+          },
           "_texture": {
-            "__uuid__": "bcE6n/+8dD5agePeqGSPi5"
+            "__uuid__": "ecQluxsSRHn6CpYyFT389o"
           },
           "_srcBlendFactor": 769,
           "_autoRemoveOnFinish": true,
           "_totalParticles": 10,
-          "_emissionRate": 30,
           "_life": 2,
           "_lifeVar": 1,
           "_startColor": {
@@ -3047,6 +3051,10 @@
           "_posVar": {
             "__type__": "cc.Vec2",
             "x": 10
+          },
+          "_gravity": {
+            "__type__": "cc.Vec2",
+            "x": 80
           },
           "_speed": 20,
           "_speedVar": 0,

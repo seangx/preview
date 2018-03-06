@@ -1091,7 +1091,7 @@ require = function e(t, n, r) {
         var oldAccY = this.accY;
         var oldJumpSpeed = this.jumpSpeed;
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
-          0 === opt.currentLevel ? self.jumpSpeed = oldJumpSpeed : self.jumpSpeed = self.jumpSpeed + 100;
+          0 === opt.currentLevel ? self.jumpSpeed = oldJumpSpeed : self.jumpSpeed = self.jumpSpeed + 50;
         });
         _global2.default.account.gameCtl.event.on("jump", this.jump.bind(this));
         this.initPosY = this.node.position.y;
@@ -1245,7 +1245,8 @@ require = function e(t, n, r) {
         speedLevel: 0,
         distanceCurrentScene: 0,
         superPowerDuration: 10,
-        superSpeed: 700
+        superSpeed: 700,
+        rootNode: cc.Node
       },
       onLoad: function onLoad() {
         var _this = this;
@@ -1342,7 +1343,7 @@ require = function e(t, n, r) {
         }
         if (_global2.default.account.gameCtl.state() === GameState.endScene) {
           this.node.x += speed * dt;
-          if (this.node.x > 500) {
+          if (this.node.x > 600) {
             this.node.active = false;
             this.exitSuperMode();
             _global2.default.account.gameCtl.nextScene();
@@ -1351,7 +1352,10 @@ require = function e(t, n, r) {
         var distance = speed * dt / 150;
         _global2.default.account.playerData.distance += distance;
         this.distanceCurrentScene += distance;
-        this.distanceCurrentScene > 100 && _global2.default.account.gameCtl.setState(GameState.endScene);
+        if (this.distanceCurrentScene > 100 && _global2.default.account.gameCtl.state() !== GameState.endScene) {
+          this.rootNode.runAction(cc.fadeOut(7));
+          _global2.default.account.gameCtl.setState(GameState.endScene);
+        }
       },
       onDisable: function onDisable() {
         this.carAudiosID && cc.audioEngine.stop(this.carAudiosID);
@@ -1605,7 +1609,7 @@ require = function e(t, n, r) {
       },
       update: function update(dt) {
         if (!_global2.default.account.gameCtl.isRunning() || _global2.default.account.gameCtl.state() === GameState.tipsBegan) return;
-        if (_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance >= _global2.default.account.playerData.sceneDistance - 30) return;
+        if (_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance >= _global2.default.account.playerData.sceneDistance - 30 || _global2.default.account.gameCtl.state() === GameState.endScene) return;
         this.passedTimeForWordEnemy += dt;
         if (this.passedTimeForWordEnemy >= this.durationAddWordEnemy && _global2.default.account.gameCtl.state() !== GameState.quick) {
           this.addWordEnemy();

@@ -1,21 +1,21 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "autumn",
-    "texture": "60vOuxcw5C24oS5L6VtHIS",
+    "name": "winter-0",
+    "texture": "11uclMPllDK7DVLlrl3JRU",
     "rect": [
       0,
       0,
-      1924,
-      1704
+      1540,
+      1836
     ],
     "offset": [
-      -3,
+      0,
       0
     ],
     "originalSize": [
-      1930,
-      1704
+      1540,
+      1836
     ]
   }
 }

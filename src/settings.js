@@ -874,52 +874,52 @@ window._CCSettings = {
                 "resources/game/scenes/summer.png",
                 "cc.Texture2D"
             ],
-            "60W9B0lhRLUp/CmXq5fW0G": [
+            "23TQpkBzVLHrTcR5jfDMMs": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "c1FcwwH/JC5oJCL9n/9xqj": [
+            "90Dn02uw9EA4EhDkatf7ON": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "a3aX4K1QZI9YxOm4GMq06v": [
+            "59avoCDvdF+75H+wfmpeNm": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "eb61crN7pLDrG/KDoK5v2y": [
+            "d59H4sZFdPlrWIygpQBGIH": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "8eTOSpeb1Jz5khz5yJQOWo": [
+            "1aM6zj01dPIoZxLuZ/QYND": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "80gIXnn59Gvq36jj7uccAX": [
+            "f2hrBSQPVANa8y+p7gGcpQ": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "fbs06o30JHlbYTudbOzF4f": [
+            "97EczbGylHSI99Drrg9bZP": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "a1etoZa5ZA3ZyViUJwjSVl": [
+            "a5oqBr2x9C5bHBKvt9Tn8i": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "46O05EN9BFSKca6QEpXyDg": [
+            "7eOfcLnvtPbZNbJnB1anW0": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
             ],
-            "02Y5YSmyxHc7sAN5Ln0c5c": [
+            "28ct8OVTVISoq+mwR5EeOk": [
                 "resources/game/scenes/winter-0",
                 "cc.SpriteFrame",
                 1
@@ -932,27 +932,27 @@ window._CCSettings = {
                 "resources/game/scenes/winter-0.png",
                 "cc.Texture2D"
             ],
-            "f6qenFL/tEo7O/na3e+ex9": [
+            "7dkUcS4zRBbLTzr46urG6c": [
                 "resources/game/scenes/winter-1",
                 "cc.SpriteFrame",
                 1
             ],
-            "837OuCCIBMFKAQEDIXyj00": [
+            "a15LOyrEdDN7tilhiFa6wQ": [
                 "resources/game/scenes/winter-1",
                 "cc.SpriteFrame",
                 1
             ],
-            "ebUPhXbGNNmKosObuCSNpt": [
+            "620w8puHNMopicWFg8qGIH": [
                 "resources/game/scenes/winter-1",
                 "cc.SpriteFrame",
                 1
             ],
-            "efbKRMHw9MCrh6f6cjcfHx": [
+            "f0kjAj7WtMIKuSMYmPFXTU": [
                 "resources/game/scenes/winter-1",
                 "cc.SpriteFrame",
                 1
             ],
-            "46hwANsQtHz7ddKaAbMhJO": [
+            "6dq/t0IXNKNak9ki0Bl1VL": [
                 "resources/game/scenes/winter-1",
                 "cc.SpriteFrame",
                 1
@@ -965,17 +965,17 @@ window._CCSettings = {
                 "resources/game/scenes/winter-1.png",
                 "cc.Texture2D"
             ],
-            "adNAxfUJhP9YscrwVaxJeF": [
+            "4577VGxtNIY47wKx57Ndc2": [
                 "resources/game/scenes/winter-2",
                 "cc.SpriteFrame",
                 1
             ],
-            "5dImunD5JJDYO2IR+jCuqs": [
+            "d0iI1MNVRDiaJuLrJ1bqmS": [
                 "resources/game/scenes/winter-2",
                 "cc.SpriteFrame",
                 1
             ],
-            "91WewoV6xKPqd97wbAofDW": [
+            "36rRuR8HRFErTHL+78VMbl": [
                 "resources/game/scenes/winter-2",
                 "cc.SpriteFrame",
                 1
@@ -1014,6 +1014,10 @@ window._CCSettings = {
                 "resources/pp/star",
                 "cc.SpriteFrame",
                 1
+            ],
+            "0aBQS+wqZLMKb9btg9daWm": [
+                "resources/pp/star.plist",
+                "cc.ParticleAsset"
             ],
             "ecQluxsSRHn6CpYyFT389o": [
                 "resources/pp/star.png",
@@ -1332,6 +1336,120 @@ window._CCSettings = {
             "b4L+41JKJO7KyN8E2w98Zv": [
                 "resources/ui/game_ui.png",
                 "cc.Texture2D"
+            ],
+            "4drUdq0cZA/b03AgmoTml6": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "b8yWhMWTJF5op/XvGynU49": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "54W8wIJ5RBI5xegSgSngFa": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "d0T7bYBa9NuaAkzCjh0tj6": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "76eHbKVYpHBKYrCFhlpLkz": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "494YGeEGJF/5qENB1iRntC": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "f3/xsBPmFB7r8yaGr8/wCk": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "2eL+WAFR1HCrhwp0YJ1gYc": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "e8wgUXHl1NFodWcQeO4olE": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "efxi1QGqRAfJQENtV7oc8U": [
+                "resources/ui/winter-0",
+                "cc.SpriteFrame",
+                1
+            ],
+            "98e2i8KutP5aVokEqkYrSh": [
+                "resources/ui/winter-0.plist",
+                "cc.SpriteAtlas"
+            ],
+            "11uclMPllDK7DVLlrl3JRU": [
+                "resources/ui/winter-0.png",
+                "cc.Texture2D"
+            ],
+            "815e78WWdGybMHc68J3BI4": [
+                "resources/ui/winter-1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "a2ZuS3MYRKkqY/i0cta7y0": [
+                "resources/ui/winter-1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "d52od9jY5HaZHBy3e0DkBZ": [
+                "resources/ui/winter-1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "a0gnGHzfBA2rW1/ZeFCdm/": [
+                "resources/ui/winter-1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "b92PI5AQVOEphjWSJm8hnq": [
+                "resources/ui/winter-1",
+                "cc.SpriteFrame",
+                1
+            ],
+            "3645Jb5XdLgIepCCMjspkX": [
+                "resources/ui/winter-1.plist",
+                "cc.SpriteAtlas"
+            ],
+            "2f18tRr8VKJqq7j1gNKVsv": [
+                "resources/ui/winter-1.png",
+                "cc.Texture2D"
+            ],
+            "90ka93FDdGWJVUtczkQToi": [
+                "resources/ui/winter-2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "56XpRYcU5NQrK8xFaY85LJ": [
+                "resources/ui/winter-2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "cfuCEzphJDfLZtZt8OyJny": [
+                "resources/ui/winter-2",
+                "cc.SpriteFrame",
+                1
+            ],
+            "3eTWiEk0tJdpVt0uKY5VvF": [
+                "resources/ui/winter-2.plist",
+                "cc.SpriteAtlas"
+            ],
+            "7eO5JNdAZAqqDF2/9a7StX": [
+                "resources/ui/winter-2.png",
+                "cc.Texture2D"
             ]
         },
         "internal": {
@@ -1377,6 +1495,25 @@ window._CCSettings = {
         }
     ],
     "packedAssets": {
+        "011f44a52": [
+            "56MDV/1WxJopX7Avx8C8lo",
+            "620w8puHNMopicWFg8qGIH",
+            "7dkUcS4zRBbLTzr46urG6c",
+            "a15LOyrEdDN7tilhiFa6wQ",
+            "f0kjAj7WtMIKuSMYmPFXTU"
+        ],
+        "01463ef7d": [
+            "2eL+WAFR1HCrhwp0YJ1gYc",
+            "494YGeEGJF/5qENB1iRntC",
+            "4drUdq0cZA/b03AgmoTml6",
+            "54W8wIJ5RBI5xegSgSngFa",
+            "76eHbKVYpHBKYrCFhlpLkz",
+            "98e2i8KutP5aVokEqkYrSh",
+            "b8yWhMWTJF5op/XvGynU49",
+            "d0T7bYBa9NuaAkzCjh0tj6",
+            "e8wgUXHl1NFodWcQeO4olE",
+            "f3/xsBPmFB7r8yaGr8/wCk"
+        ],
         "030428302": [
             "3dU0PawE9GYLakpIRQODem",
             "51RUuUm2RNKps/Khn5ocyB",
@@ -1388,6 +1525,13 @@ window._CCSettings = {
             "ca20UIJJBHhYBLMUD34mT5",
             "f2WD9Jy55Bw6Qd4vNQu+PD",
             "f6Fq/CGYpEt5PXToswrLlo"
+        ],
+        "033fdaa86": [
+            "3645Jb5XdLgIepCCMjspkX",
+            "815e78WWdGybMHc68J3BI4",
+            "a0gnGHzfBA2rW1/ZeFCdm/",
+            "a2ZuS3MYRKkqY/i0cta7y0",
+            "d52od9jY5HaZHBy3e0DkBZ"
         ],
         "04b85c1f5": [
             "07abJ11gpPsqHbXfP5FaV2",
@@ -1425,11 +1569,6 @@ window._CCSettings = {
             "f375b7ZDdHDryhSpdE1UXy",
             "f4AQiZoVdEgKef83/5tLW3",
             "f9dFPgs89JpJtaaQNr1rdm"
-        ],
-        "05dc9484": [
-            "5dImunD5JJDYO2IR+jCuqs",
-            "8fokmKyeBLGpsM5h7ectSl",
-            "adNAxfUJhP9YscrwVaxJeF"
         ],
         "06be3851d": [
             "3fJddpBY5H+bAmvk8jQTJQ",
@@ -1469,18 +1608,6 @@ window._CCSettings = {
             "e8lNP9GQRCGKlb5K9lU0sQ",
             "eb/MiJ3mpGg6FhnYeLgw5o",
             "f1hO0bFGlN3K2jLXx7YXBy"
-        ],
-        "070d42e6b": [
-            "46O05EN9BFSKca6QEpXyDg",
-            "4b01qlNe5Kholf0OIlPfuE",
-            "60W9B0lhRLUp/CmXq5fW0G",
-            "80gIXnn59Gvq36jj7uccAX",
-            "8eTOSpeb1Jz5khz5yJQOWo",
-            "a1etoZa5ZA3ZyViUJwjSVl",
-            "a3aX4K1QZI9YxOm4GMq06v",
-            "c1FcwwH/JC5oJCL9n/9xqj",
-            "eb61crN7pLDrG/KDoK5v2y",
-            "fbs06o30JHlbYTudbOzF4f"
         ],
         "0714e0082": [
             "0fa1S/yedL+YTIica7IoKL",
@@ -1577,6 +1704,11 @@ window._CCSettings = {
             "faN0/6XMNNTbZCFWjKgWLj",
             "fe6f2WMixPbJJDaJXg6vAU"
         ],
+        "0874dabc4": [
+            "3eTWiEk0tJdpVt0uKY5VvF",
+            "56XpRYcU5NQrK8xFaY85LJ",
+            "90ka93FDdGWJVUtczkQToi"
+        ],
         "091074617": [
             "247mU3lE5EVox1J8XxjKyY",
             "37Lt89tOlMw4lqhFu9AwVs",
@@ -1589,17 +1721,58 @@ window._CCSettings = {
             "f3lrCXQ3NL563m6xqAqCgw",
             "f9l6rBCoJLIa8rxeCghKO/"
         ],
-        "0abc796c0": [
-            "56MDV/1WxJopX7Avx8C8lo",
-            "837OuCCIBMFKAQEDIXyj00",
-            "ebUPhXbGNNmKosObuCSNpt",
-            "efbKRMHw9MCrh6f6cjcfHx",
-            "f6qenFL/tEo7O/na3e+ex9"
+        "0956be76f": [
+            "4577VGxtNIY47wKx57Ndc2",
+            "8fokmKyeBLGpsM5h7ectSl",
+            "d0iI1MNVRDiaJuLrJ1bqmS"
+        ],
+        "09d1fad06": [
+            "16uRgGVKhKDqjUdeGiCNlz",
+            "1aM6zj01dPIoZxLuZ/QYND",
+            "1agm2+xiFMhLpi21VDJgyG",
+            "23TQpkBzVLHrTcR5jfDMMs",
+            "2aZWCKKhNK5Ztg/PIffKHX",
+            "2c62ZHyPlPVqk1UPVFmoDD",
+            "36E4UTo7pDw4Uw7KRRItUd",
+            "45t7xiB59Ex4rizEii1a86",
+            "4577VGxtNIY47wKx57Ndc2",
+            "59avoCDvdF+75H+wfmpeNm",
+            "610fj0s8dNyrX1ZN6298/+",
+            "620w8puHNMopicWFg8qGIH",
+            "70pQQFbkBCJbuBjIYH4V3c",
+            "72LwxSTZ5KJb/Pzdz3BnBx",
+            "7dkUcS4zRBbLTzr46urG6c",
+            "7eOfcLnvtPbZNbJnB1anW0",
+            "90Dn02uw9EA4EhDkatf7ON",
+            "97EczbGylHSI99Drrg9bZP",
+            "a15LOyrEdDN7tilhiFa6wQ",
+            "a5oqBr2x9C5bHBKvt9Tn8i",
+            "basRtdlStC0bvcuWh+Dz6R",
+            "c4QqJOI01CI6AM2UiNb1Gz",
+            "c8itZYxz1FrLh7qmiGCr0g",
+            "d0iI1MNVRDiaJuLrJ1bqmS",
+            "d59H4sZFdPlrWIygpQBGIH",
+            "f0kjAj7WtMIKuSMYmPFXTU",
+            "f2hrBSQPVANa8y+p7gGcpQ",
+            "f6Rg4YQaRGh5fZIPevW321",
+            "fbTRmdGxNGJo/asdG10EIx"
         ],
         "0c33bcb66": [
             "18ZKXC6qtGUZ3r50dPaxTh",
             "86gbAK1qdJzaeJfEnENVYG",
             "b0S3lEOvdGqK0Hz3M5OXfI"
+        ],
+        "0d1fb3d98": [
+            "1aM6zj01dPIoZxLuZ/QYND",
+            "23TQpkBzVLHrTcR5jfDMMs",
+            "4b01qlNe5Kholf0OIlPfuE",
+            "59avoCDvdF+75H+wfmpeNm",
+            "7eOfcLnvtPbZNbJnB1anW0",
+            "90Dn02uw9EA4EhDkatf7ON",
+            "97EczbGylHSI99Drrg9bZP",
+            "a5oqBr2x9C5bHBKvt9Tn8i",
+            "d59H4sZFdPlrWIygpQBGIH",
+            "f2hrBSQPVANa8y+p7gGcpQ"
         ],
         "0f243a0ca": [
             "0cXJp4WRtE4r8t1ouIvddX",
@@ -1612,22 +1785,6 @@ window._CCSettings = {
             "cdm1MI8DpIKKaSmcMCJ+eE",
             "e7UZ7RqFZKeaxwDOqAqFn5",
             "ebu9zfQxhPwpuVsejyxz/r"
-        ],
-        "0fa1ab995": [
-            "16uRgGVKhKDqjUdeGiCNlz",
-            "1agm2+xiFMhLpi21VDJgyG",
-            "2aZWCKKhNK5Ztg/PIffKHX",
-            "2c62ZHyPlPVqk1UPVFmoDD",
-            "36E4UTo7pDw4Uw7KRRItUd",
-            "45t7xiB59Ex4rizEii1a86",
-            "610fj0s8dNyrX1ZN6298/+",
-            "70pQQFbkBCJbuBjIYH4V3c",
-            "72LwxSTZ5KJb/Pzdz3BnBx",
-            "basRtdlStC0bvcuWh+Dz6R",
-            "c4QqJOI01CI6AM2UiNb1Gz",
-            "c8itZYxz1FrLh7qmiGCr0g",
-            "f6Rg4YQaRGh5fZIPevW321",
-            "fbTRmdGxNGJo/asdG10EIx"
         ]
     },
     "orientation": "landscape",

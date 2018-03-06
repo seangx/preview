@@ -4,24 +4,66 @@
     "_name": "winter-1.plist",
     "_spriteFrames": {
       "after_scene_5": {
-        "__uuid__": "f6qenFL/tEo7O/na3e+ex9"
+        "__uuid__": "815e78WWdGybMHc68J3BI4"
       },
       "middle_scene_1": {
-        "__uuid__": "837OuCCIBMFKAQEDIXyj00"
+        "__uuid__": "a2ZuS3MYRKkqY/i0cta7y0"
       },
       "middle_scene_3": {
-        "__uuid__": "ebUPhXbGNNmKosObuCSNpt"
+        "__uuid__": "d52od9jY5HaZHBy3e0DkBZ"
       },
       "middle_scene_5": {
-        "__uuid__": "efbKRMHw9MCrh6f6cjcfHx"
+        "__uuid__": "a0gnGHzfBA2rW1/ZeFCdm/"
       }
     }
   },
   {
     "__type__": "cc.SpriteFrame",
     "content": {
+      "name": "after_scene_5",
+      "texture": "2f18tRr8VKJqq7j1gNKVsv",
+      "rect": [
+        1,
+        1,
+        768,
+        720
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        768,
+        720
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "middle_scene_5",
+      "texture": "2f18tRr8VKJqq7j1gNKVsv",
+      "rect": [
+        771,
+        1,
+        768,
+        718
+      ],
+      "offset": [
+        0,
+        1
+      ],
+      "originalSize": [
+        768,
+        720
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
       "name": "middle_scene_1",
-      "texture": "cddjPhLaVOnKN0lKGIhUTe",
+      "texture": "2f18tRr8VKJqq7j1gNKVsv",
       "rect": [
         1,
         723,
@@ -42,7 +84,7 @@
     "__type__": "cc.SpriteFrame",
     "content": {
       "name": "middle_scene_3",
-      "texture": "cddjPhLaVOnKN0lKGIhUTe",
+      "texture": "2f18tRr8VKJqq7j1gNKVsv",
       "rect": [
         771,
         721,
@@ -52,48 +94,6 @@
       "offset": [
         0,
         2
-      ],
-      "originalSize": [
-        768,
-        720
-      ]
-    }
-  },
-  {
-    "__type__": "cc.SpriteFrame",
-    "content": {
-      "name": "middle_scene_5",
-      "texture": "cddjPhLaVOnKN0lKGIhUTe",
-      "rect": [
-        771,
-        1,
-        768,
-        718
-      ],
-      "offset": [
-        0,
-        1
-      ],
-      "originalSize": [
-        768,
-        720
-      ]
-    }
-  },
-  {
-    "__type__": "cc.SpriteFrame",
-    "content": {
-      "name": "after_scene_5",
-      "texture": "cddjPhLaVOnKN0lKGIhUTe",
-      "rect": [
-        1,
-        1,
-        768,
-        720
-      ],
-      "offset": [
-        0,
-        0
       ],
       "originalSize": [
         768,

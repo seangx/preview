@@ -1,0 +1,224 @@
+[
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "before_scene_4",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        1,
+        1593,
+        768,
+        124
+      ],
+      "offset": [
+        0,
+        -11
+      ],
+      "originalSize": [
+        768,
+        146
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "before_scene_2",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        771,
+        1591,
+        768,
+        126
+      ],
+      "offset": [
+        0,
+        -10
+      ],
+      "originalSize": [
+        768,
+        146
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "after_scene_1",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        1,
+        1,
+        768,
+        720
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        768,
+        720
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "after_scene_3",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        1,
+        723,
+        768,
+        720
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        768,
+        720
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "before_scene_1",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        771,
+        1445,
+        768,
+        144
+      ],
+      "offset": [
+        0,
+        -1
+      ],
+      "originalSize": [
+        768,
+        146
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteAtlas",
+    "_name": "winter-0.plist",
+    "_spriteFrames": {
+      "after_scene_1": {
+        "__uuid__": "4drUdq0cZA/b03AgmoTml6"
+      },
+      "after_scene_2": {
+        "__uuid__": "b8yWhMWTJF5op/XvGynU49"
+      },
+      "after_scene_3": {
+        "__uuid__": "54W8wIJ5RBI5xegSgSngFa"
+      },
+      "after_scene_4": {
+        "__uuid__": "d0T7bYBa9NuaAkzCjh0tj6"
+      },
+      "before_scene_1": {
+        "__uuid__": "76eHbKVYpHBKYrCFhlpLkz"
+      },
+      "before_scene_2": {
+        "__uuid__": "494YGeEGJF/5qENB1iRntC"
+      },
+      "before_scene_3": {
+        "__uuid__": "f3/xsBPmFB7r8yaGr8/wCk"
+      },
+      "before_scene_4": {
+        "__uuid__": "2eL+WAFR1HCrhwp0YJ1gYc"
+      },
+      "before_scene_5": {
+        "__uuid__": "e8wgUXHl1NFodWcQeO4olE"
+      }
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "after_scene_2",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        771,
+        1,
+        768,
+        720
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        768,
+        720
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "after_scene_4",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        771,
+        723,
+        768,
+        720
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        768,
+        720
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "before_scene_5",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        1,
+        1719,
+        768,
+        116
+      ],
+      "offset": [
+        0,
+        -15
+      ],
+      "originalSize": [
+        768,
+        146
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "before_scene_3",
+      "texture": "11uclMPllDK7DVLlrl3JRU",
+      "rect": [
+        1,
+        1445,
+        768,
+        146
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        768,
+        146
+      ]
+    }
+  }
+]

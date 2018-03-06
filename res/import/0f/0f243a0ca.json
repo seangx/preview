@@ -541,7 +541,10 @@
             430,
             460,
             490
-          ]
+          ],
+          "rootNode": {
+            "__id__": 2
+          }
         },
         {
           "__type__": "cc.BoxCollider",
@@ -904,7 +907,6 @@
           "node": {
             "__id__": 22
           },
-          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -979,7 +981,6 @@
           "node": {
             "__id__": 25
           },
-          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -1096,7 +1097,6 @@
           "node": {
             "__id__": 29
           },
-          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -1256,7 +1256,9 @@
           "node": {
             "__id__": 35
           },
-          "_custom": true,
+          "_file": {
+            "__uuid__": "0aBQS+wqZLMKb9btg9daWm"
+          },
           "_texture": {
             "__uuid__": "ecQluxsSRHn6CpYyFT389o"
           },
@@ -1347,7 +1349,6 @@
           "node": {
             "__id__": 36
           },
-          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -1364,7 +1365,7 @@
       "_position": {
         "__type__": "cc.Vec2",
         "x": 481,
-        "y": -190
+        "y": -150
       }
     },
     {
@@ -1390,14 +1391,14 @@
           "node": {
             "__id__": 37
           },
-          "_enabled": false,
           "_target": {
             "__id__": 2
           },
-          "_alignFlags": 36,
+          "_alignFlags": 12,
           "_left": 54.5,
           "_right": 972.5,
-          "_bottom": 108
+          "_bottom": 108,
+          "_originalWidth": 253
         }
       ],
       "_contentSize": {
@@ -1408,7 +1409,7 @@
       "_position": {
         "__type__": "cc.Vec2",
         "x": -459,
-        "y": -190
+        "y": -150
       }
     },
     {
@@ -1690,7 +1691,6 @@
           "node": {
             "__id__": 47
           },
-          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -2137,13 +2137,12 @@
           "node": {
             "__id__": 67
           },
-          "_enabled": false,
           "_target": {
             "__id__": 2
           },
           "_alignFlags": 33,
-          "_right": 93,
-          "_top": 132
+          "_right": 46,
+          "_top": 94
         }
       ],
       "_contentSize": {
@@ -2153,8 +2152,8 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 548,
-        "y": 208
+        "x": 534,
+        "y": 211
       }
     }
   ],
