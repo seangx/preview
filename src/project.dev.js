@@ -1144,7 +1144,6 @@ require = function e(t, n, r) {
             return;
           }
           console.log("load scene[" + name + "]success");
-          _currentScene = scene;
         });
       }
     });
@@ -1344,18 +1343,15 @@ require = function e(t, n, r) {
         if (_global2.default.account.gameCtl.state() === GameState.endScene) {
           this.node.x += speed * dt;
           if (this.node.x > 600) {
-            this.node.active = false;
             this.exitSuperMode();
+            this.rootNode.runAction(cc.fadeOut(3));
             _global2.default.account.gameCtl.nextScene();
           }
         }
         var distance = speed * dt / 150;
         _global2.default.account.playerData.distance += distance;
         this.distanceCurrentScene += distance;
-        if (this.distanceCurrentScene > 100 && _global2.default.account.gameCtl.state() !== GameState.endScene) {
-          this.rootNode.runAction(cc.fadeOut(7));
-          _global2.default.account.gameCtl.setState(GameState.endScene);
-        }
+        this.distanceCurrentScene > _global2.default.account.playerData.sceneDistance && _global2.default.account.gameCtl.state() !== GameState.endScene && _global2.default.account.gameCtl.setState(GameState.endScene);
       },
       onDisable: function onDisable() {
         this.carAudiosID && cc.audioEngine.stop(this.carAudiosID);
@@ -1609,7 +1605,7 @@ require = function e(t, n, r) {
       },
       update: function update(dt) {
         if (!_global2.default.account.gameCtl.isRunning() || _global2.default.account.gameCtl.state() === GameState.tipsBegan) return;
-        if (_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance >= _global2.default.account.playerData.sceneDistance - 30 || _global2.default.account.gameCtl.state() === GameState.endScene) return;
+        if (_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance >= _global2.default.account.playerData.sceneDistance - 20 || _global2.default.account.gameCtl.state() === GameState.endScene) return;
         this.passedTimeForWordEnemy += dt;
         if (this.passedTimeForWordEnemy >= this.durationAddWordEnemy && _global2.default.account.gameCtl.state() !== GameState.quick) {
           this.addWordEnemy();
@@ -1840,7 +1836,7 @@ require = function e(t, n, r) {
         if (_global2.default.account.gameCtl.isRunning()) {
           _global2.default.account.playerData.passedTime += dt;
           this.progressTime.progress = (this.totalTime - _global2.default.account.playerData.passedTime) / this.totalTime;
-          this.particle.x = this.progressTime.node.x + this.processTimeSprite.width;
+          this.particle && (this.particle.x = this.progressTime.node.x + this.processTimeSprite.width);
           this.labelCoinCount.string = _global2.default.account.playerData.goldCount + "";
           this.labelDistance.string = parseInt(_global2.default.account.playerData.distance);
         }
