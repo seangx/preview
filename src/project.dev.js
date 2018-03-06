@@ -1001,6 +1001,7 @@ require = function e(t, n, r) {
       },
       onLoad: function onLoad() {},
       start: function start() {
+        var _this = this;
         var self = this;
         console.log("on game loaded");
         var size = cc.view.getFrameSize();
@@ -1015,22 +1016,12 @@ require = function e(t, n, r) {
         var resList = [];
         for (var i in defines.config) resList.push(defines.config[i]);
         _global2.default.resourcesManager.loadList(resList, function() {
+          _this.animation.play("player_in");
           _global2.default.account.gameCtl.run();
           self.playerNode.emit("walk");
         });
       },
-      onAnimationFinished: function onAnimationFinished(event) {
-        var state = event.detail;
-        var type = event.type;
-        if ("player_in" === state.name) {
-          var self = this;
-          self.playerNode.emit("idle");
-          setTimeout(function() {
-            _global2.default.account.gameCtl.run();
-            self.playerNode.emit("walk");
-          }, 1500);
-        }
-      },
+      onAnimationFinished: function onAnimationFinished(event) {},
       update: function update(dt) {
         _global2.default.account.gameCtl.update(dt);
       }
@@ -1194,7 +1185,7 @@ require = function e(t, n, r) {
       that.titleList = [];
       that.goldCount = 0;
       that.distance = 0;
-      that.sceneDistance = 100;
+      that.sceneDistance = 300;
       that.speedLevel = 0;
       that.speed = 400;
       that.passedTime = 0;
@@ -1252,7 +1243,6 @@ require = function e(t, n, r) {
         this.passedTimeSuper = 0;
         this.speedLevel = _global2.default.account.playerData.speedLevel;
         this.speed = _global2.default.account.playerData.speed;
-        cc.audioEngine.play(this.backgroundMusic, true, 1);
         _global2.default.account.gameCtl.onTipsBegan(function() {
           console.log("游戏暂停");
         });
@@ -1343,15 +1333,20 @@ require = function e(t, n, r) {
         if (_global2.default.account.gameCtl.state() === GameState.endScene) {
           this.node.x += speed * dt;
           if (this.node.x > 600) {
+            this.node.active = false;
+            this.rootNode.active = false;
             this.exitSuperMode();
-            this.rootNode.runAction(cc.fadeOut(3));
             _global2.default.account.gameCtl.nextScene();
           }
+          return;
         }
         var distance = speed * dt / 150;
         _global2.default.account.playerData.distance += distance;
         this.distanceCurrentScene += distance;
-        this.distanceCurrentScene > _global2.default.account.playerData.sceneDistance && _global2.default.account.gameCtl.state() !== GameState.endScene && _global2.default.account.gameCtl.setState(GameState.endScene);
+        if (this.distanceCurrentScene > _global2.default.account.playerData.sceneDistance && _global2.default.account.gameCtl.state() !== GameState.endScene) {
+          this.rootNode.getComponent(cc.Animation).play("player_out");
+          _global2.default.account.gameCtl.setState(GameState.endScene);
+        }
       },
       onDisable: function onDisable() {
         this.carAudiosID && cc.audioEngine.stop(this.carAudiosID);
@@ -1571,6 +1566,7 @@ require = function e(t, n, r) {
         durationAddEnemy: 20,
         durationAddWordEnemy: 60,
         durationAddSuperTerrain: 3,
+        intervalAddWordEnemy: 3,
         initPosNodeTerrain: cc.Node,
         initPosNodeActiveEnemy: cc.Node
       },
@@ -1579,6 +1575,7 @@ require = function e(t, n, r) {
         this.passedTimeForEnemy = 0;
         this.passedTimeForWordEnemy = 0;
         this.passedTimeForSuper = 0;
+        this.totalTerrains = 0;
         this.sceneIndex = _global2.default.account.gameCtl.getSceneIndex();
         this.terrains = [];
         var prefabs = this.terrainPrefabs[this.sceneIndex];
@@ -1606,12 +1603,6 @@ require = function e(t, n, r) {
       update: function update(dt) {
         if (!_global2.default.account.gameCtl.isRunning() || _global2.default.account.gameCtl.state() === GameState.tipsBegan) return;
         if (_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance >= _global2.default.account.playerData.sceneDistance - 20 || _global2.default.account.gameCtl.state() === GameState.endScene) return;
-        this.passedTimeForWordEnemy += dt;
-        if (this.passedTimeForWordEnemy >= this.durationAddWordEnemy && _global2.default.account.gameCtl.state() !== GameState.quick) {
-          this.addWordEnemy();
-          this.passedTimeForWordEnemy = 0;
-          this.passedTimeForTerrain = 0;
-        }
         if (_global2.default.account.gameCtl.state() === GameState.quick) {
           this.passedTimeForSuper -= dt;
           if (this.passedTimeForSuper <= 0) {
@@ -1624,10 +1615,9 @@ require = function e(t, n, r) {
         }
         this.passedTimeForTerrain += dt;
         if (parseInt(_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance) % this.distanceAddTerrain === 0 && this.passedTimeForTerrain >= 1) {
-          console.log("enter add terrain:", this.passedTimeForTerrain, this.node._id);
-          this.passedTimeForWordEnemy >= this.durationAddWordEnemy - 3 && (this.passedTimeForWordEnemy = this.durationAddWordEnemy - 3);
           this.passedTimeForTerrain = 0;
-          this.addTerrain();
+          this.totalTerrains % this.intervalAddWordEnemy === 0 && this.totalTerrains > 0 ? this.addWordEnemy() : this.addTerrain();
+          this.totalTerrains++;
         }
         this.passedTimeForEnemy += dt;
         if (this.passedTimeForEnemy >= this.durationAddEnemy) {
@@ -1762,14 +1752,13 @@ require = function e(t, n, r) {
         },
         particle: cc.Node
       },
-      start: function start() {
-        this.labelCoinCount.string = _global2.default.account.playerData.goldCount;
-        this.progressSpeed.progress = _global2.default.account.playerData.speedLevel / 4;
-        this.progressTime.progress = (this.totalTime - _global2.default.account.playerData.passedTime) / this.totalTime;
-      },
+      start: function start() {},
       onLoad: function onLoad() {
         var _this = this;
         var self = this;
+        this.labelCoinCount.string = _global2.default.account.playerData.goldCount;
+        this.progressSpeed.progress = _global2.default.account.playerData.speedLevel / 4;
+        this.progressTime.progress = (this.totalTime - _global2.default.account.playerData.passedTime) / this.totalTime;
         this.progressSuperPower.progress = _global2.default.account.playerData.power / 4;
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
           self.progressSpeed.progress = opt.currentLevel / opt.maxLevel;
@@ -1836,7 +1825,7 @@ require = function e(t, n, r) {
         if (_global2.default.account.gameCtl.isRunning()) {
           _global2.default.account.playerData.passedTime += dt;
           this.progressTime.progress = (this.totalTime - _global2.default.account.playerData.passedTime) / this.totalTime;
-          this.particle && (this.particle.x = this.progressTime.node.x + this.processTimeSprite.width);
+          this.particle.x = this.progressTime.node.x + this.processTimeSprite.width;
           this.labelCoinCount.string = _global2.default.account.playerData.goldCount + "";
           this.labelDistance.string = parseInt(_global2.default.account.playerData.distance);
         }

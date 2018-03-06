@@ -1665,6 +1665,27 @@
   {
     "__type__": "cc.SpriteFrame",
     "content": {
+      "name": "default_sprite_splash",
+      "texture": "02delMVqdBD70a/HSD99FK",
+      "rect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2,
+        2
+      ]
+    }
+  },
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
       "name": "before_scene_4",
       "texture": "ad+Z3QM65IWb3mNiwABsNh",
       "rect": [
@@ -2796,6 +2817,9 @@
         },
         {
           "__id__": 27
+        },
+        {
+          "__id__": 74
         }
       ],
       "_components": [
@@ -2894,6 +2918,7 @@
           "durationAddEnemy": 15,
           "durationAddWordEnemy": 15,
           "durationAddSuperTerrain": 1.5,
+          "intervalAddWordEnemy": 4,
           "initPosNodeTerrain": {
             "__id__": 16
           },
@@ -2912,6 +2937,9 @@
             },
             {
               "__uuid__": "45zi9/SWZCaplky4kXwKN0"
+            },
+            {
+              "__uuid__": "17HHuuLBZO0pO1Egau5cKM"
             }
           ]
         }
@@ -5130,6 +5158,45 @@
         "__type__": "cc.Vec2",
         "x": 548,
         "y": 208
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Sprite(Splash)",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 74
+          },
+          "_spriteFrame": {
+            "__uuid__": "a2MjXRFdtLlYQ5ouAFv/+R"
+          },
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 74
+          },
+          "_enabled": false,
+          "_target": {
+            "__id__": 2
+          },
+          "_alignFlags": 18
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 2
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 1600,
+        "height": 1000
       }
     }
   ]

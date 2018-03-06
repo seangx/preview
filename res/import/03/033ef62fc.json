@@ -42,6 +42,9 @@
         },
         {
           "__id__": 21
+        },
+        {
+          "__id__": 68
         }
       ],
       "_components": [
@@ -136,10 +139,10 @@
           "superModeTerrain": {
             "__uuid__": "1cBE9EQApIuILCiIa1Rx+w"
           },
-          "distanceAddTerrain": 15,
           "durationAddEnemy": 15,
           "durationAddWordEnemy": 15,
           "durationAddSuperTerrain": 1.5,
+          "intervalAddWordEnemy": 4,
           "initPosNodeTerrain": {
             "__id__": 12
           },
@@ -158,6 +161,9 @@
             },
             {
               "__uuid__": "45zi9/SWZCaplky4kXwKN0"
+            },
+            {
+              "__uuid__": "17HHuuLBZO0pO1Egau5cKM"
             }
           ]
         }
@@ -907,6 +913,7 @@
           "node": {
             "__id__": 22
           },
+          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -981,6 +988,7 @@
           "node": {
             "__id__": 25
           },
+          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -1097,6 +1105,7 @@
           "node": {
             "__id__": 29
           },
+          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -1349,6 +1358,7 @@
           "node": {
             "__id__": 36
           },
+          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -1391,6 +1401,7 @@
           "node": {
             "__id__": 37
           },
+          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -1691,6 +1702,7 @@
           "node": {
             "__id__": 47
           },
+          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -2137,6 +2149,7 @@
           "node": {
             "__id__": 67
           },
+          "_enabled": false,
           "_target": {
             "__id__": 2
           },
@@ -2154,6 +2167,45 @@
         "__type__": "cc.Vec2",
         "x": 534,
         "y": 211
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "New Sprite(Splash)",
+      "_parent": {
+        "__id__": 2
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 68
+          },
+          "_spriteFrame": {
+            "__uuid__": "a2MjXRFdtLlYQ5ouAFv/+R"
+          },
+          "_sizeMode": 0
+        },
+        {
+          "__type__": "cc.Widget",
+          "node": {
+            "__id__": 68
+          },
+          "_enabled": false,
+          "_target": {
+            "__id__": 2
+          },
+          "_alignFlags": 18
+        }
+      ],
+      "_color": {
+        "__type__": "cc.Color",
+        "r": 2
+      },
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 1600,
+        "height": 1000
       }
     }
   ],
@@ -2867,6 +2919,27 @@
       }
     }
   ],
+  {
+    "__type__": "cc.SpriteFrame",
+    "content": {
+      "name": "default_sprite_splash",
+      "texture": "02delMVqdBD70a/HSD99FK",
+      "rect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2,
+        2
+      ]
+    }
+  },
   {
     "__type__": "dragonBones.DragonBonesAsset",
     "_name": "monsters_s_snails_ske",
