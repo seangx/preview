@@ -1,8 +1,0 @@
-{
-  "__type__": "dragonBones.DragonBonesAtlasAsset",
-  "_name": "rabbit_tex",
-  "_atlasJson": "{\"imagePath\":\"rabbit_tex.png\",\"SubTexture\":[{\"frameY\":-15,\"y\":1,\"frameWidth\":182,\"height\":147,\"frameHeight\":162,\"width\":166,\"name\":\"rabbit_1\",\"frameX\":-6,\"x\":165},{\"frameY\":-14,\"y\":1,\"frameWidth\":182,\"height\":148,\"frameHeight\":162,\"width\":161,\"name\":\"rabbit_2\",\"frameX\":-14,\"x\":333},{\"frameY\":-27,\"y\":151,\"frameWidth\":182,\"height\":135,\"frameHeight\":162,\"width\":163,\"name\":\"rabbit_5\",\"frameX\":-3,\"x\":324},{\"frameY\":0,\"y\":1,\"frameWidth\":182,\"height\":162,\"frameHeight\":162,\"width\":162,\"name\":\"rabbit_4\",\"frameX\":-8,\"x\":1},{\"frameY\":-13,\"y\":150,\"frameWidth\":182,\"height\":149,\"frameHeight\":162,\"width\":157,\"name\":\"rabbit_3\",\"frameX\":-20,\"x\":165}],\"width\":512,\"name\":\"rabbit\",\"height\":512}",
-  "texture": {
-    "__uuid__": "dbtSIR6wJHAa9BSutl7zr4"
-  }
-}

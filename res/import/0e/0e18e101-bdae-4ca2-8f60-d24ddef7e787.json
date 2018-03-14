@@ -1,8 +1,0 @@
-{
-  "__type__": "dragonBones.DragonBonesAtlasAsset",
-  "_name": "goldBox_tex",
-  "_atlasJson": "{\"SubTexture\":[{\"frameWidth\":110,\"y\":174,\"frameHeight\":27,\"height\":27,\"frameX\":-1,\"width\":109,\"name\":\"shadow\",\"frameY\":0,\"x\":102},{\"x\":137,\"y\":1,\"width\":116,\"name\":\"box2\",\"height\":85},{\"x\":1,\"y\":192,\"width\":21,\"name\":\"star\",\"height\":22},{\"frameWidth\":166,\"y\":1,\"frameHeight\":166,\"height\":134,\"frameX\":-16,\"width\":134,\"name\":\"light\",\"frameY\":-16,\"x\":1},{\"frameWidth\":37,\"y\":137,\"frameHeight\":37,\"height\":29,\"frameX\":-5,\"width\":25,\"name\":\"huan\",\"frameY\":-2,\"x\":102},{\"frameWidth\":111,\"y\":137,\"frameHeight\":57,\"height\":53,\"frameX\":-4,\"width\":99,\"name\":\"light2\",\"frameY\":0,\"x\":1},{\"frameWidth\":118,\"y\":88,\"frameHeight\":93,\"height\":84,\"frameX\":-6,\"width\":106,\"name\":\"box1\",\"frameY\":-6,\"x\":137},{\"frameWidth\":30,\"y\":174,\"frameHeight\":35,\"height\":28,\"frameX\":-8,\"width\":21,\"name\":\"suoxin\",\"frameY\":-3,\"x\":213}],\"width\":256,\"name\":\"goldBox\",\"imagePath\":\"goldBox_tex.png\",\"height\":256}",
-  "texture": {
-    "__uuid__": "e1/06xuOtFlr/voigNmKQT"
-  }
-}

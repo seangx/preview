@@ -1,8 +1,0 @@
-{
-  "__type__": "dragonBones.DragonBonesAtlasAsset",
-  "_name": "monsters_w_bird_tex",
-  "_atlasJson": "{\"SubTexture\":[{\"frameWidth\":19,\"y\":113,\"frameHeight\":11,\"height\":10,\"frameX\":0,\"width\":18,\"name\":\"leg\",\"frameY\":0,\"x\":56},{\"frameWidth\":45,\"y\":68,\"frameHeight\":53,\"height\":43,\"frameX\":0,\"width\":38,\"name\":\"wei\",\"frameY\":-8,\"x\":56},{\"x\":1,\"y\":1,\"width\":95,\"name\":\"body\",\"height\":65},{\"x\":1,\"y\":68,\"width\":53,\"name\":\"chi\",\"height\":52},{\"frameWidth\":22,\"y\":68,\"frameHeight\":22,\"height\":22,\"frameX\":0,\"width\":22,\"name\":\"eye1\",\"frameY\":0,\"x\":96}],\"width\":128,\"name\":\"monsters_w_bird\",\"imagePath\":\"monsters_w_bird_tex.png\",\"height\":128}",
-  "texture": {
-    "__uuid__": "5fPoxdpexIyKLlezOU5TPG"
-  }
-}
