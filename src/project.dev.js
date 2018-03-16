@@ -455,6 +455,17 @@ require = function e(t, n, r) {
     "use strict";
     cc._RF.pop();
   }, {} ],
+  "auto-collection": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "9e1dabFuVRKZqT5E6ks/MLv", "auto-collection");
+    "use strict";
+    cc.Class({
+      extends: cc.Component,
+      properties: {},
+      start: function start() {}
+    });
+    cc._RF.pop();
+  }, {} ],
   coin: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "69738LqiS5OLKbwtryk3n4y", "coin");
@@ -471,18 +482,13 @@ require = function e(t, n, r) {
       properties: {},
       onLoad: function onLoad() {
         var _this = this;
+        var self = this;
         this.initPos = this.node.position;
-        this.node.dead = false;
         this.p = this.node.convertToNodeSpace(cc.p(-212, 200));
         this.actionFlyToPlayer = cc.moveTo(1.5, this.p);
         this.node.on("fly", function() {
           if (_this.flying) return;
-          _this.dead = true;
-          var action = cc.bezierTo(.3, [ _this.node.position, cc.p(_this.node.x, _this.node.y + 200), cc.p(-530, 350) ]);
-          _this.node.runAction(cc.sequence(action, cc.callFunc(function() {
-            cc.log("动作结束");
-          })));
-          _this.node.runAction(cc.scaleTo(.5, 0));
+          _this.node.runAction(cc.sequence(cc.spawn(cc.moveBy(.4, cc.p(1e3, 480 - _this.node.y)), cc.scaleTo(.4, 0)), cc.callFunc(function() {})));
         });
         this.node.on("pause", function() {
           _this.node.getComponent(cc.Animation).pause();
@@ -490,19 +496,23 @@ require = function e(t, n, r) {
         this.node.on("resume", function() {
           _this.node.getComponent(cc.Animation).resume();
         });
+        this.node.on("near-player", function() {
+          self.isCanFly = true;
+        });
       },
       onEnable: function onEnable() {
         cc.log("on enable");
         this.node.position = this.initPos;
         this.node.scale = 1;
         this.flying = false;
+        this.isCanFly = false;
       },
       onDestroy: function onDestroy() {
         cc.log("销毁硬笔");
       },
       update: function update(dt) {
-        if (this.dead || this.flying) return;
-        if (_global2.default.account.gameCtl.state() === GameState.quick) {
+        if (this.flying) return;
+        if (_global2.default.account.gameCtl.state() === GameState.quick && this.isCanFly) {
           this.flying = true;
           this.node.runAction(this.actionFlyToPlayer);
         }
@@ -1027,6 +1037,7 @@ require = function e(t, n, r) {
       onLoad: function onLoad() {},
       start: function start() {
         var self = this;
+        cc.view.enableAntiAlias(false);
         cc.log("on game loaded");
         var size = cc.view.getFrameSize();
         cc.log(size.height, size.width);
@@ -1096,15 +1107,15 @@ require = function e(t, n, r) {
         jumpSpeed: 0
       },
       onLoad: function onLoad() {
+        var _this = this;
         var self = this;
-        var oldAccY = this.accY;
-        var oldJumpSpeed = this.jumpSpeed;
-        _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
-          0 === opt.currentLevel ? self.jumpSpeed = oldJumpSpeed : self.jumpSpeed = self.jumpSpeed;
-        });
+        this.timeScale = defines.timeScale;
         _global2.default.account.gameCtl.event.on("jump", this.jump.bind(this));
         this.initPosY = this.node.position.y;
-        this.timeSubSpeed = 0;
+        this.node.on("time-scale", function(event) {
+          cc.log("animation time scale:", event.detail);
+          _this.timeScale = event.detail;
+        });
       },
       jump: function jump() {
         cc.log("on jump");
@@ -1118,8 +1129,8 @@ require = function e(t, n, r) {
       },
       update: function update(dt) {
         if (void 0 !== this.speedY) {
-          this.node.position = cc.p(this.node.position.x, this.node.position.y + this.speedY * dt * defines.timeScale);
-          this.speedY += this.accY * dt * defines.timeScale;
+          this.node.position = cc.p(this.node.position.x, this.node.position.y + this.speedY * dt * this.timeScale);
+          this.speedY += this.accY * dt * this.timeScale;
         }
         if (this.node.position.y <= this.initPosY && void 0 !== this.speedY) {
           this.node.position = cc.p(this.node.position.x, this.initPosY);
@@ -1420,7 +1431,7 @@ require = function e(t, n, r) {
         });
         _global2.default.account.gameCtl.onTipsEnd(function(data) {
           cc.log("on tip end，", data);
-          if (_global2.default.account.playerData.power >= 4) {
+          if (_global2.default.account.playerData.power >= 1) {
             _this.enterSuperMode();
             return;
           }
@@ -1452,12 +1463,12 @@ require = function e(t, n, r) {
           cc.audioEngine.play(this.attackAudio, false, 1);
           if (_global2.default.account.gameCtl.state() !== GameState.quick) {
             other.node.emit("fly");
-            this.node.emit("walk");
             this.speedLevel++;
             this.speedLevel = Math.min(this.speedLevel, this.speeds.length - 1);
             this.changeSpeed(this.speeds[this.speedLevel]);
             _global2.default.account.gameCtl.attackEnd();
           } else other.node.emit("fly");
+          this.node.emit("walk");
           return;
         }
         if (other.getComponent("stub-tag") && _global2.default.account.gameCtl.state() !== GameState.quick) {
@@ -1651,8 +1662,8 @@ require = function e(t, n, r) {
       onLoad: function onLoad() {
         var self = this;
         "middle" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed + self.speedOffset);
-        "forward" === self.bgType && (self.bgSpeed = 1.1 * _global2.default.account.playerData.speed + self.speedOffset);
-        "after" === self.bgType && (self.bgSpeed = .8 * _global2.default.account.playerData.speed + self.speedOffset);
+        "forward" === self.bgType && (self.bgSpeed = 1.3 * _global2.default.account.playerData.speed + self.speedOffset);
+        "after" === self.bgType && (self.bgSpeed = .7 * _global2.default.account.playerData.speed + self.speedOffset);
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
           if ("middle" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
@@ -1660,11 +1671,11 @@ require = function e(t, n, r) {
           }
           if ("forward" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = 1.1 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = 1.3 * opt.speedValue + self.speedOffset;
           }
           if ("after" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = .8 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = .7 * opt.speedValue + self.speedOffset;
           }
           opt.speedValue <= 0 && (self.bgSpeed = 0);
         });
@@ -1705,8 +1716,8 @@ require = function e(t, n, r) {
       onLoad: function onLoad() {
         var self = this;
         "middle" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed + self.speedOffset);
-        "forward" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed + 80 + self.speedOffset);
-        "after" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed - 200 + self.speedOffset);
+        "forward" === self.bgType && (self.bgSpeed = 1.3 * _global2.default.account.playerData.speed + self.speedOffset);
+        "after" === self.bgType && (self.bgSpeed = .7 * _global2.default.account.playerData.speed + self.speedOffset);
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
           if ("middle" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
@@ -1714,11 +1725,11 @@ require = function e(t, n, r) {
           }
           if ("forward" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = 1.1 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = 1.3 * opt.speedValue + self.speedOffset;
           }
           if ("after" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = .8 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = .7 * opt.speedValue + self.speedOffset;
           }
           opt.speedValue <= 0 && (self.bgSpeed = 0);
         });
@@ -1759,7 +1770,7 @@ require = function e(t, n, r) {
         distanceAddStub: 10,
         intervalAddWordEnemy: 3,
         intervalAddFlyEnemy: 8,
-        durationAddSuperTerrain: 1,
+        durationAddSuperTerrain: .3,
         initPosNodeTerrain: cc.Node,
         initPosNodeActiveEnemy: cc.Node
       },
@@ -1800,8 +1811,8 @@ require = function e(t, n, r) {
             terrain.getComponent("super-terrain").init(this.poolManager);
             terrain.position = this.initPosNodeTerrain.position;
             terrain.parent = this.initPosNodeTerrain.parent;
-            return;
           }
+          return;
         }
         if (parseInt(_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance) % this.distanceAddStub !== 0) return;
         if (!this.lastTerrain) {
@@ -1809,7 +1820,7 @@ require = function e(t, n, r) {
           this.addTerrain();
           return;
         }
-        if (_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance >= _global2.default.account.playerData.sceneDistance - 20 || _global2.default.account.gameCtl.state() === GameState.endScene) return;
+        if (_global2.default.account.playerData.distance % _global2.default.account.playerData.sceneDistance >= _global2.default.account.playerData.sceneDistance - 10 || _global2.default.account.gameCtl.state() === GameState.endScene) return;
         if (this.initPosNodeTerrain.x - this.lastTerrain.x - this.lastTerrain.width < 800) return;
         this.totalTerrains % this.intervalAddWordEnemy === 0 && this.totalTerrains > 0 ? this.addWordEnemy() : this.totalTerrains % this.intervalAddFlyEnemy === 0 && this.totalTerrains > 0 ? this.addActiveEnemy() : this.addTerrain();
         this.totalTerrains++;
@@ -1906,20 +1917,46 @@ require = function e(t, n, r) {
     "use strict";
     cc._RF.push(module, "62948ziAqdAtJy6X0JIkCvz", "super-terrain");
     "use strict";
+    var _global = require("./../../global");
+    var _global2 = _interopRequireDefault(_global);
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : {
+        default: obj
+      };
+    }
     var FoeType = require("types").FoeTypes;
     var TerrainTypes = require("types").TerrainTypes;
     cc.Class({
       extends: cc.Component,
       properties: {},
+      onLoad: function onLoad() {
+        this.animation = this.node.getComponent(cc.Animation);
+        this.animation.on("finished", this.onAnimationFinished.bind(this));
+      },
       init: function init(poolManager) {
         this.poolManager = poolManager;
       },
+      onEnable: function onEnable() {
+        this.isFlying = false;
+      },
+      onAnimationFinished: function onAnimationFinished() {
+        this.poolManager.returnSuperTerrain(this.node);
+      },
       update: function update(dt) {
         this.node.x < -2e3 && this.poolManager.returnSuperTerrain(this.node);
+        this.isFlying && (this.node.x += _global2.default.account.playerData.speed * dt);
+        if (this.node.parent) {
+          var player = this.node.parent.getChildByName("player");
+          if (Math.abs(this.node.x - player.x) <= 700 && _global2.default.account.gameCtl.isQuick() && !this.isFlying) {
+            this.node.getComponent(cc.Animation).play("super_coin_fly");
+            this.isFlying = true;
+          }
+        }
       }
     });
     cc._RF.pop();
   }, {
+    "./../../global": "global",
     types: "types"
   } ],
   terrain: [ function(require, module, exports) {
@@ -1941,6 +1978,10 @@ require = function e(t, n, r) {
       },
       update: function update(dt) {
         this.node.x < -2e3 && this.poolManager.returnTerrain(this.terrainType, this.node);
+        if (this.node.parent) {
+          var player = this.node.parent.getChildByName("player");
+          if (Math.abs(this.node.x - player.x) <= 450) for (var i in this.node.children) this.node.children[i].emit("near-player");
+        }
       }
     });
     cc._RF.pop();
@@ -2234,4 +2275,4 @@ require = function e(t, n, r) {
   }, {
     "../global": "global"
   } ]
-}, {}, [ "account", "game-ctl", "player-data", "DragonBonesCtrl", "dargon-bone-ctl", "distance-node", "foe", "jump", "scroll-once", "scroll", "stub", "super-terrain", "terrain", "game", "player", "coin", "enemy", "pauseLayer", "stub-tag", "stub-controller", "ui-controller", "ui_question_layer", "global", "main", "my-pool", "node-pool", "types", "audio", "event-listener", "pool-manager", "resources-manager" ]);
+}, {}, [ "account", "game-ctl", "player-data", "DragonBonesCtrl", "auto-collection", "dargon-bone-ctl", "distance-node", "foe", "jump", "scroll-once", "scroll", "stub", "super-terrain", "terrain", "game", "player", "coin", "enemy", "pauseLayer", "stub-tag", "stub-controller", "ui-controller", "ui_question_layer", "global", "main", "my-pool", "node-pool", "types", "audio", "event-listener", "pool-manager", "resources-manager" ]);

@@ -3272,6 +3272,7 @@
             0.7,
             0.8
           ],
+          "durationAddSuperTerrain": 1,
           "initPosNodeTerrain": {
             "__id__": 16
           },
@@ -3975,7 +3976,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -212,
+        "x": -300,
         "y": -61
       }
     },
