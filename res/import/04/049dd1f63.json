@@ -3231,7 +3231,7 @@
           "__id__": 27
         },
         {
-          "__id__": 71
+          "__id__": 69
         }
       ],
       "_components": [
@@ -3272,7 +3272,6 @@
             0.7,
             0.8
           ],
-          "durationAddSuperTerrain": 1,
           "initPosNodeTerrain": {
             "__id__": 16
           },
@@ -3375,6 +3374,15 @@
             "prefab": {
               "__uuid__": "1cBE9EQApIuILCiIa1Rx+w"
             }
+          }
+        },
+        {
+          "__type__": "cc.AudioSource",
+          "node": {
+            "__id__": 2
+          },
+          "_clip": {
+            "__uuid__": "dfOB80po5II6SnjimMi9T5"
           }
         }
       ],
@@ -4288,10 +4296,10 @@
           "__id__": 40
         },
         {
-          "__id__": 50
+          "__id__": 48
         },
         {
-          "__id__": 70
+          "__id__": 68
         }
       ],
       "_components": [
@@ -4310,8 +4318,8 @@
           "btnJump": {
             "__id__": 39
           },
-          "progressSpeed": {
-            "__id__": 49
+          "nodeSpeedIcon": {
+            "__id__": 47
           },
           "labelCoinCount": {
             "__id__": 30
@@ -4392,8 +4400,8 @@
       ],
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 56,
-        "height": 57
+        "width": 47,
+        "height": 47
       },
       "_position": {
         "__type__": "cc.Vec2",
@@ -4598,8 +4606,8 @@
       ],
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 75,
-        "height": 86
+        "width": 72,
+        "height": 85
       },
       "_position": {
         "__type__": "cc.Vec2",
@@ -4810,7 +4818,7 @@
       "_contentSize": {
         "__type__": "cc.Size",
         "width": 194,
-        "height": 188
+        "height": 182
       }
     },
     {
@@ -4833,8 +4841,8 @@
       },
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 184,
-        "height": 177
+        "width": 185,
+        "height": 172
       },
       "_position": {
         "__type__": "cc.Vec2",
@@ -4919,7 +4927,7 @@
     },
     {
       "__type__": "cc.Node",
-      "_name": "New ProgressBar",
+      "_name": "bg_speed",
       "_parent": {
         "__id__": 45
       },
@@ -4935,66 +4943,49 @@
             "__id__": 46
           },
           "_spriteFrame": {
-            "__uuid__": "88y2rNgRpL7rei8NMxeTvR"
-          },
-          "_sizeMode": 0
-        },
-        {
-          "__id__": 49
+            "__uuid__": "abLtzhzPtOGJrk7XAyV7yj"
+          }
         }
       ],
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 139,
+        "width": 137,
         "height": 138
       }
     },
     {
       "__type__": "cc.Node",
-      "_name": "bar",
+      "_name": "icon_arrow",
       "_parent": {
         "__id__": 46
       },
       "_components": [
         {
-          "__id__": 48
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 47
+          },
+          "_spriteFrame": {
+            "__uuid__": "1cwlwwB8FP1q6m3l/bhAvL"
+          }
         }
       ],
       "_anchorPoint": {
         "__type__": "cc.Vec2",
-        "y": 0.5
+        "x": 0.5,
+        "y": 0.16
       },
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 139,
-        "height": 138
+        "width": 25,
+        "height": 75
       },
+      "_rotationX": -150,
+      "_rotationY": -150,
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -70
+        "x": -1
       }
-    },
-    {
-      "__type__": "cc.Sprite",
-      "node": {
-        "__id__": 47
-      },
-      "_spriteFrame": {
-        "__uuid__": "9fLLytDhxF0JkPzp/S4wWp"
-      },
-      "_type": 3,
-      "_sizeMode": 0
-    },
-    {
-      "__type__": "cc.ProgressBar",
-      "node": {
-        "__id__": 46
-      },
-      "_N$barSprite": {
-        "__id__": 48
-      },
-      "_N$mode": 2,
-      "_N$progress": 0
     },
     {
       "__type__": "cc.Node",
@@ -5004,52 +4995,52 @@
       },
       "_children": [
         {
+          "__id__": 49
+        },
+        {
           "__id__": 51
         },
         {
-          "__id__": 53
+          "__id__": 56
         },
         {
           "__id__": 58
         },
         {
-          "__id__": 60
-        },
-        {
-          "__id__": 63
+          "__id__": 61
         }
       ],
       "_components": [
         {
           "__type__": "d915eFyCSdCor4UBzNBwfsh",
           "node": {
-            "__id__": 50
+            "__id__": 48
           },
           "timeCutDownLabel": {
-            "__id__": 57
-          },
-          "resultLabel": {
-            "__id__": 59
-          },
-          "labelTip": {
             "__id__": 55
           },
+          "resultLabel": {
+            "__id__": 57
+          },
+          "labelTip": {
+            "__id__": 53
+          },
           "labelWord": {
-            "__id__": 52
+            "__id__": 50
           },
           "spAnswerList": [
+            {
+              "__id__": 63
+            },
             {
               "__id__": 65
             },
             {
               "__id__": 67
-            },
-            {
-              "__id__": 69
             }
           ],
           "spReadImage": {
-            "__id__": 62
+            "__id__": 60
           },
           "auCardIn": {
             "__uuid__": "ddFvYzwz5A9LwRuCup1Dg0"
@@ -5058,16 +5049,16 @@
             "__uuid__": "d0DUP67kVNepn/uej3g4ST"
           },
           "nodeChoose": {
-            "__id__": 63
+            "__id__": 61
           },
           "nodeRead": {
-            "__id__": 60
+            "__id__": 58
           }
         },
         {
           "__type__": "cc.Widget",
           "node": {
-            "__id__": 50
+            "__id__": 48
           },
           "_enabled": false,
           "_target": {
@@ -5078,7 +5069,7 @@
         {
           "__type__": "cc.Animation",
           "node": {
-            "__id__": 50
+            "__id__": 48
           },
           "_clips": [
             {
@@ -5101,11 +5092,11 @@
       "__type__": "cc.Node",
       "_name": "label_word",
       "_parent": {
-        "__id__": 50
+        "__id__": 48
       },
       "_components": [
         {
-          "__id__": 52
+          "__id__": 50
         }
       ],
       "_contentSize": {
@@ -5121,7 +5112,7 @@
     {
       "__type__": "cc.Label",
       "node": {
-        "__id__": 51
+        "__id__": 49
       },
       "_useOriginalSize": false,
       "_lineHeight": 0,
@@ -5133,14 +5124,14 @@
       "__type__": "cc.Node",
       "_name": "tip",
       "_parent": {
-        "__id__": 50
+        "__id__": 48
       },
       "_children": [
         {
-          "__id__": 54
+          "__id__": 52
         },
         {
-          "__id__": 56
+          "__id__": 54
         }
       ],
       "_position": {
@@ -5153,11 +5144,11 @@
       "__type__": "cc.Node",
       "_name": "tips",
       "_parent": {
-        "__id__": 53
+        "__id__": 51
       },
       "_components": [
         {
-          "__id__": 55
+          "__id__": 53
         }
       ],
       "_contentSize": {
@@ -5174,7 +5165,7 @@
     {
       "__type__": "cc.Label",
       "node": {
-        "__id__": 54
+        "__id__": 52
       },
       "_useOriginalSize": false,
       "_actualFontSize": 50,
@@ -5188,11 +5179,11 @@
       "__type__": "cc.Node",
       "_name": "timeCutDownLabel",
       "_parent": {
-        "__id__": 53
+        "__id__": 51
       },
       "_components": [
         {
-          "__id__": 57
+          "__id__": 55
         }
       ],
       "_contentSize": {
@@ -5209,7 +5200,7 @@
     {
       "__type__": "cc.Label",
       "node": {
-        "__id__": 56
+        "__id__": 54
       },
       "_useOriginalSize": false,
       "_actualFontSize": 60,
@@ -5223,11 +5214,11 @@
       "__type__": "cc.Node",
       "_name": "resultlabel",
       "_parent": {
-        "__id__": 50
+        "__id__": 48
       },
       "_components": [
         {
-          "__id__": 59
+          "__id__": 57
         }
       ],
       "_contentSize": {
@@ -5243,7 +5234,7 @@
     {
       "__type__": "cc.Label",
       "node": {
-        "__id__": 58
+        "__id__": 56
       },
       "_useOriginalSize": false,
       "_N$string": "",
@@ -5254,11 +5245,11 @@
       "__type__": "cc.Node",
       "_name": "question_read",
       "_parent": {
-        "__id__": 50
+        "__id__": 48
       },
       "_children": [
         {
-          "__id__": 61
+          "__id__": 59
         }
       ],
       "_active": false
@@ -5267,11 +5258,11 @@
       "__type__": "cc.Node",
       "_name": "sp_image",
       "_parent": {
-        "__id__": 60
+        "__id__": 58
       },
       "_components": [
         {
-          "__id__": 62
+          "__id__": 60
         }
       ],
       "_contentSize": {
@@ -5287,7 +5278,7 @@
     {
       "__type__": "cc.Sprite",
       "node": {
-        "__id__": 61
+        "__id__": 59
       },
       "_spriteFrame": {
         "__uuid__": "a8xD9dpyhJepbTd/4Df9nO"
@@ -5297,17 +5288,17 @@
       "__type__": "cc.Node",
       "_name": "question_choose",
       "_parent": {
-        "__id__": 50
+        "__id__": 48
       },
       "_children": [
+        {
+          "__id__": 62
+        },
         {
           "__id__": 64
         },
         {
           "__id__": 66
-        },
-        {
-          "__id__": 68
         }
       ],
       "_position": {
@@ -5319,7 +5310,54 @@
       "__type__": "cc.Node",
       "_name": "sp1",
       "_parent": {
-        "__id__": 63
+        "__id__": 61
+      },
+      "_components": [
+        {
+          "__id__": 63
+        },
+        {
+          "__type__": "cc.Button",
+          "node": {
+            "__id__": 62
+          },
+          "clickEvents": [
+            {
+              "__type__": "cc.ClickEvent",
+              "target": {
+                "__id__": 48
+              },
+              "component": "ui_question_layer",
+              "handler": "onChooseAnswerClicked",
+              "customEventData": "0"
+            }
+          ],
+          "_N$target": {
+            "__id__": 62
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 223,
+        "height": 223
+      }
+    },
+    {
+      "__type__": "cc.Sprite",
+      "node": {
+        "__id__": 62
+      },
+      "_spriteFrame": {
+        "__uuid__": "c8iHa40nJFCaKt+gXr+KKH"
+      },
+      "_sizeMode": 0
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "sp2",
+      "_parent": {
+        "__id__": 61
       },
       "_components": [
         {
@@ -5334,11 +5372,11 @@
             {
               "__type__": "cc.ClickEvent",
               "target": {
-                "__id__": 50
+                "__id__": 48
               },
               "component": "ui_question_layer",
               "handler": "onChooseAnswerClicked",
-              "customEventData": "0"
+              "customEventData": "1"
             }
           ],
           "_N$target": {
@@ -5358,15 +5396,15 @@
         "__id__": 64
       },
       "_spriteFrame": {
-        "__uuid__": "c8iHa40nJFCaKt+gXr+KKH"
+        "__uuid__": "64HBZrd7BNsapRm9ygZWsY"
       },
       "_sizeMode": 0
     },
     {
       "__type__": "cc.Node",
-      "_name": "sp2",
+      "_name": "sp3",
       "_parent": {
-        "__id__": 63
+        "__id__": 61
       },
       "_components": [
         {
@@ -5381,11 +5419,11 @@
             {
               "__type__": "cc.ClickEvent",
               "target": {
-                "__id__": 50
+                "__id__": 48
               },
               "component": "ui_question_layer",
               "handler": "onChooseAnswerClicked",
-              "customEventData": "1"
+              "customEventData": "2"
             }
           ],
           "_N$target": {
@@ -5405,53 +5443,6 @@
         "__id__": 66
       },
       "_spriteFrame": {
-        "__uuid__": "64HBZrd7BNsapRm9ygZWsY"
-      },
-      "_sizeMode": 0
-    },
-    {
-      "__type__": "cc.Node",
-      "_name": "sp3",
-      "_parent": {
-        "__id__": 63
-      },
-      "_components": [
-        {
-          "__id__": 69
-        },
-        {
-          "__type__": "cc.Button",
-          "node": {
-            "__id__": 68
-          },
-          "clickEvents": [
-            {
-              "__type__": "cc.ClickEvent",
-              "target": {
-                "__id__": 50
-              },
-              "component": "ui_question_layer",
-              "handler": "onChooseAnswerClicked",
-              "customEventData": "2"
-            }
-          ],
-          "_N$target": {
-            "__id__": 68
-          }
-        }
-      ],
-      "_contentSize": {
-        "__type__": "cc.Size",
-        "width": 223,
-        "height": 223
-      }
-    },
-    {
-      "__type__": "cc.Sprite",
-      "node": {
-        "__id__": 68
-      },
-      "_spriteFrame": {
         "__uuid__": "c9xA9Z9xxPBpmzySl08F/H"
       },
       "_sizeMode": 0
@@ -5466,7 +5457,7 @@
         {
           "__type__": "cc.Sprite",
           "node": {
-            "__id__": 70
+            "__id__": 68
           },
           "_spriteFrame": {
             "__uuid__": "545AsJ+01IybyqRpyVpczX"
@@ -5477,7 +5468,7 @@
         {
           "__type__": "cc.Button",
           "node": {
-            "__id__": 70
+            "__id__": 68
           },
           "transition": 3,
           "pressedColor": {
@@ -5510,13 +5501,13 @@
             "b": 255
           },
           "_N$target": {
-            "__id__": 70
+            "__id__": 68
           }
         },
         {
           "__type__": "cc.Widget",
           "node": {
-            "__id__": 70
+            "__id__": 68
           },
           "_enabled": false,
           "_target": {
@@ -5548,7 +5539,7 @@
         {
           "__type__": "cc.Sprite",
           "node": {
-            "__id__": 71
+            "__id__": 69
           },
           "_spriteFrame": {
             "__uuid__": "a2MjXRFdtLlYQ5ouAFv/+R"
@@ -5558,7 +5549,7 @@
         {
           "__type__": "cc.Widget",
           "node": {
-            "__id__": 71
+            "__id__": 69
           },
           "_target": {
             "__id__": 2

@@ -1037,7 +1037,6 @@ require = function e(t, n, r) {
       onLoad: function onLoad() {},
       start: function start() {
         var self = this;
-        cc.view.enableAntiAlias(false);
         cc.log("on game loaded");
         var size = cc.view.getFrameSize();
         cc.log(size.height, size.width);
@@ -1431,7 +1430,7 @@ require = function e(t, n, r) {
         });
         _global2.default.account.gameCtl.onTipsEnd(function(data) {
           cc.log("on tip end，", data);
-          if (_global2.default.account.playerData.power >= 1) {
+          if (_global2.default.account.playerData.power >= 4) {
             _this.enterSuperMode();
             return;
           }
@@ -1662,8 +1661,8 @@ require = function e(t, n, r) {
       onLoad: function onLoad() {
         var self = this;
         "middle" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed + self.speedOffset);
-        "forward" === self.bgType && (self.bgSpeed = 1.3 * _global2.default.account.playerData.speed + self.speedOffset);
-        "after" === self.bgType && (self.bgSpeed = .7 * _global2.default.account.playerData.speed + self.speedOffset);
+        "forward" === self.bgType && (self.bgSpeed = 1.1 * _global2.default.account.playerData.speed + self.speedOffset);
+        "after" === self.bgType && (self.bgSpeed = .9 * _global2.default.account.playerData.speed + self.speedOffset);
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
           if ("middle" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
@@ -1671,11 +1670,11 @@ require = function e(t, n, r) {
           }
           if ("forward" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = 1.3 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = 1.1 * opt.speedValue + self.speedOffset;
           }
           if ("after" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = .7 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = .9 * opt.speedValue + self.speedOffset;
           }
           opt.speedValue <= 0 && (self.bgSpeed = 0);
         });
@@ -1716,8 +1715,8 @@ require = function e(t, n, r) {
       onLoad: function onLoad() {
         var self = this;
         "middle" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed + self.speedOffset);
-        "forward" === self.bgType && (self.bgSpeed = 1.3 * _global2.default.account.playerData.speed + self.speedOffset);
-        "after" === self.bgType && (self.bgSpeed = .7 * _global2.default.account.playerData.speed + self.speedOffset);
+        "forward" === self.bgType && (self.bgSpeed = 1.1 * _global2.default.account.playerData.speed + self.speedOffset);
+        "after" === self.bgType && (self.bgSpeed = .9 * _global2.default.account.playerData.speed + self.speedOffset);
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
           if ("middle" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
@@ -1725,11 +1724,11 @@ require = function e(t, n, r) {
           }
           if ("forward" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = 1.3 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = 1.1 * opt.speedValue + self.speedOffset;
           }
           if ("after" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = .7 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = .9 * opt.speedValue + self.speedOffset;
           }
           opt.speedValue <= 0 && (self.bgSpeed = 0);
         });
@@ -2035,9 +2034,9 @@ require = function e(t, n, r) {
           default: null,
           type: cc.Node
         },
-        progressSpeed: {
+        nodeSpeedIcon: {
           default: null,
-          type: cc.ProgressBar
+          type: cc.Node
         },
         labelCoinCount: {
           default: null,
@@ -2059,6 +2058,7 @@ require = function e(t, n, r) {
         this.progressSuperPower.progress = _global2.default.account.playerData.power / 4;
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
           self.progressSuperPower.progress = _global2.default.account.playerData.power / 4;
+          self.nodeSpeedIcon.rotation = opt.currentLevel / opt.maxLevel * 300 - 150;
         });
         _global2.default.account.gameCtl.event.on("quick", function(opt) {
           cc.log("quick mode begin");
