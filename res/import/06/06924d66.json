@@ -48,8 +48,8 @@
       "name": "icon_headrank_4",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1134,
-        1420,
+        1550,
+        1243,
         38,
         40
       ],
@@ -69,8 +69,8 @@
       "name": "icon_rankline",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1,
-        1502,
+        785,
+        655,
         568,
         3
       ],
@@ -81,7 +81,8 @@
       "originalSize": [
         568,
         3
-      ]
+      ],
+      "rotated": 1
     }
   },
   {
@@ -90,8 +91,8 @@
       "name": "img_role_r_3",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1512,
-        1041,
+        886,
+        1148,
         104,
         219
       ],
@@ -111,8 +112,8 @@
       "name": "icon_nb2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1380,
-        1495,
+        1656,
+        1140,
         28,
         41
       ],
@@ -155,8 +156,8 @@
       "name": "icon_clock",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        939,
-        1352,
+        1159,
+        1338,
         72,
         85
       ],
@@ -176,20 +177,19 @@
       "name": "bt_run4",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        716,
-        1385,
-        25,
-        75
+        1673,
+        874,
+        16,
+        39
       ],
       "offset": [
         0,
         0
       ],
       "originalSize": [
-        25,
-        75
-      ],
-      "rotated": 1
+        16,
+        39
+      ]
     }
   },
   {
@@ -198,8 +198,8 @@
       "name": "icon_star",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1554,
-        869,
+        1460,
+        1235,
         48,
         50
       ],
@@ -219,8 +219,8 @@
       "name": "img_role_r_1",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1145,
-        927,
+        790,
+        1148,
         94,
         220
       ],
@@ -231,8 +231,7 @@
       "originalSize": [
         94,
         220
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -241,8 +240,8 @@
       "name": "bt_guanbi",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1250,
-        1364,
+        1634,
+        764,
         55,
         56
       ],
@@ -253,8 +252,7 @@
       "originalSize": [
         55,
         56
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -275,7 +273,8 @@
       "originalSize": [
         739,
         786
-      ]
+      ],
+      "rotated": 1
     }
   },
   {
@@ -334,8 +333,8 @@
       "name": "icon_headrank_1b",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1095,
-        1469,
+        1590,
+        1243,
         38,
         38
       ],
@@ -355,8 +354,8 @@
       "name": "img_role_r_2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        836,
-        1204,
+        992,
+        1156,
         101,
         219
       ],
@@ -367,7 +366,8 @@
       "originalSize": [
         101,
         219
-      ]
+      ],
+      "rotated": 1
     }
   },
   {
@@ -376,8 +376,8 @@
       "name": "img_role_box2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1370,
-        702,
+        1296,
+        686,
         182,
         258
       ],
@@ -388,7 +388,8 @@
       "originalSize": [
         182,
         258
-      ]
+      ],
+      "rotated": 1
     }
   },
   {
@@ -397,8 +398,8 @@
       "name": "bt_enter_game",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1094,
-        1286,
+        1556,
+        686,
         227,
         76
       ],
@@ -409,7 +410,8 @@
       "originalSize": [
         227,
         76
-      ]
+      ],
+      "rotated": 1
     }
   },
   {
@@ -418,8 +420,8 @@
       "name": "icon_nb6",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1265,
-        1421,
+        1477,
+        1323,
         31,
         33
       ],
@@ -430,8 +432,7 @@
       "originalSize": [
         31,
         33
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -440,8 +441,8 @@
       "name": "icon_headrank_3",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1543,
-        1491,
+        1510,
+        1243,
         38,
         40
       ],
@@ -452,8 +453,7 @@
       "originalSize": [
         38,
         40
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -462,8 +462,8 @@
       "name": "icon_headrank",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        952,
-        1479,
+        1634,
+        822,
         50,
         50
       ],
@@ -484,7 +484,7 @@
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
         1,
-        1479,
+        1410,
         949,
         21
       ],
@@ -504,18 +504,18 @@
       "name": "icon_run_bar2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1129,
-        1023,
-        194,
-        182
+        1221,
+        1224,
+        110,
+        103
       ],
       "offset": [
         0,
         0
       ],
       "originalSize": [
-        194,
-        182
+        110,
+        103
       ]
     }
   },
@@ -525,8 +525,8 @@
       "name": "icon_headrank_3b",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1175,
-        1451,
+        1024,
+        1383,
         38,
         38
       ],
@@ -546,8 +546,8 @@
       "name": "card_1",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        716,
-        655,
+        790,
+        686,
         504,
         164
       ],
@@ -558,8 +558,7 @@
       "originalSize": [
         512,
         256
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -589,8 +588,8 @@
       "name": "icon_gold",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1464,
-        1215,
+        1390,
+        1340,
         45,
         46
       ],
@@ -601,8 +600,7 @@
       "originalSize": [
         45,
         46
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -611,8 +609,8 @@
       "name": "icon_smallhead1",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        836,
-        1161,
+        1656,
+        1056,
         41,
         41
       ],
@@ -644,8 +642,7 @@
       "originalSize": [
         699,
         683
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -654,8 +651,8 @@
       "name": "bt_pause_normal",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1013,
-        1352,
+        1379,
+        1235,
         79,
         73
       ],
@@ -675,8 +672,8 @@
       "name": "bt_jump2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        939,
-        1197,
+        1234,
+        1069,
         153,
         153
       ],
@@ -717,8 +714,8 @@
       "name": "icon_carrot",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1174,
-        1420,
+        790,
+        655,
         29,
         48
       ],
@@ -740,7 +737,7 @@
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
         1,
-        1439,
+        1370,
         981,
         38
       ],
@@ -781,8 +778,8 @@
       "name": "card_bag2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1145,
-        702,
+        1005,
+        852,
         223,
         223
       ],
@@ -802,8 +799,8 @@
       "name": "icon_role",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1463,
-        1403,
+        1530,
+        1157,
         84,
         98
       ],
@@ -846,18 +843,18 @@
       "name": "gold_4",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1095,
-        1420,
-        37,
-        47
+        1333,
+        1282,
+        44,
+        56
       ],
       "offset": [
         0,
         0
       ],
       "originalSize": [
-        47,
-        47
+        56,
+        56
       ]
     }
   },
@@ -867,8 +864,8 @@
       "name": "icon_smallhead2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        793,
-        1385,
+        1656,
+        1099,
         39,
         41
       ],
@@ -889,18 +886,18 @@
       "name": "progress_speed",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1325,
-        1041,
-        185,
-        172
+        1549,
+        1056,
+        105,
+        99
       ],
       "offset": [
         0,
         0
       ],
       "originalSize": [
-        185,
-        172
+        105,
+        99
       ]
     }
   },
@@ -910,8 +907,8 @@
       "name": "icon_headrank_2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1503,
-        1489,
+        1437,
+        1340,
         38,
         40
       ],
@@ -958,20 +955,19 @@
       "name": "gold_2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1563,
-        1452,
-        37,
-        47
+        1333,
+        1224,
+        44,
+        56
       ],
       "offset": [
         0,
         0
       ],
       "originalSize": [
-        47,
-        47
-      ],
-      "rotated": 1
+        56,
+        56
+      ]
     }
   },
   {
@@ -980,18 +976,18 @@
       "name": "gold_1",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1563,
-        1403,
-        47,
-        47
+        1634,
+        706,
+        56,
+        56
       ],
       "offset": [
         0,
         0
       ],
       "originalSize": [
-        47,
-        47
+        56,
+        56
       ]
     }
   },
@@ -1001,8 +997,8 @@
       "name": "bt_back",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1367,
-        962,
+        1005,
+        1077,
         227,
         77
       ],
@@ -1022,8 +1018,8 @@
       "name": "icon_nb1",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1224,
-        1421,
+        1423,
+        1310,
         28,
         39
       ],
@@ -1044,8 +1040,8 @@
       "name": "icon_nb4",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1423,
-        1495,
+        1596,
+        1283,
         31,
         33
       ],
@@ -1056,8 +1052,7 @@
       "originalSize": [
         31,
         33
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -1088,8 +1083,8 @@
       "name": "bt_run2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1464,
-        1262,
+        1549,
+        915,
         139,
         139
       ],
@@ -1109,8 +1104,8 @@
       "name": "img_role_r_4",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        716,
-        1161,
+        1429,
+        870,
         118,
         222
       ],
@@ -1130,8 +1125,8 @@
       "name": "icon_nb3",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1215,
-        1451,
+        1379,
+        1310,
         28,
         42
       ],
@@ -1142,7 +1137,8 @@
       "originalSize": [
         28,
         42
-      ]
+      ],
+      "rotated": 1
     }
   },
   {
@@ -1151,8 +1147,8 @@
       "name": "icon_headrank_2b",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1135,
-        1462,
+        984,
+        1383,
         38,
         38
       ],
@@ -1172,8 +1168,8 @@
       "name": "icon_nb8",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1314,
-        1495,
+        1530,
+        1285,
         31,
         34
       ],
@@ -1193,8 +1189,8 @@
       "name": "img_role_box3",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        930,
-        702,
+        790,
+        852,
         213,
         294
       ],
@@ -1214,8 +1210,8 @@
       "name": "bt_run1",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1323,
-        1215,
+        1389,
+        1094,
         139,
         139
       ],
@@ -1256,8 +1252,8 @@
       "name": "icon_headrank_4b",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1175,
-        1491,
+        1064,
+        1383,
         38,
         38
       ],
@@ -1289,8 +1285,8 @@
       "name": "bt_resume_normal",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1013,
-        1427,
+        1233,
+        1329,
         80,
         74
       ],
@@ -1310,8 +1306,8 @@
       "name": "card_bag",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1145,
-        702,
+        1005,
+        852,
         223,
         223
       ],
@@ -1331,20 +1327,19 @@
       "name": "bt_run3",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1323,
-        1356,
-        137,
-        138
+        1315,
+        1340,
+        73,
+        73
       ],
       "offset": [
         0,
         0
       ],
       "originalSize": [
-        137,
-        138
-      ],
-      "rotated": 1
+        73,
+        73
+      ]
     }
   },
   {
@@ -1353,8 +1348,8 @@
       "name": "bt_bagin",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1094,
-        1207,
+        992,
+        1259,
         227,
         77
       ],
@@ -1374,8 +1369,8 @@
       "name": "icon_nb7",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1281,
-        1495,
+        1497,
+        1287,
         31,
         34
       ],
@@ -1602,18 +1597,18 @@
       "name": "gold_3",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1,
-        1507,
-        15,
-        47
+        1230,
+        852,
+        16,
+        54
       ],
       "offset": [
         0,
-        0
+        1
       ],
       "originalSize": [
-        47,
-        47
+        56,
+        56
       ],
       "rotated": 1
     }
@@ -1624,8 +1619,8 @@
       "name": "icon_nb9",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1347,
-        1495,
+        1563,
+        1285,
         31,
         34
       ],
@@ -1645,8 +1640,8 @@
       "name": "icon_jump",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        930,
-        998,
+        1230,
+        870,
         197,
         197
       ],
@@ -2727,8 +2722,8 @@
       "name": "icon_headrank_1",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1463,
-        1489,
+        1390,
+        1388,
         38,
         40
       ],
@@ -2739,7 +2734,8 @@
       "originalSize": [
         38,
         40
-      ]
+      ],
+      "rotated": 1
     }
   },
   {
@@ -2748,8 +2744,8 @@
       "name": "card_bag1",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1145,
-        702,
+        1005,
+        852,
         223,
         223
       ],
@@ -2769,8 +2765,8 @@
       "name": "card_bag3",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1145,
-        702,
+        1005,
+        852,
         223,
         223
       ],
@@ -2790,8 +2786,8 @@
       "name": "m",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1554,
-        921,
+        1634,
+        874,
         37,
         39
       ],
@@ -2811,8 +2807,8 @@
       "name": "icon_nb5",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1248,
-        1495,
+        1464,
+        1287,
         31,
         34
       ],
@@ -4225,8 +4221,8 @@
       "name": "icon_rankleft",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1129,
-        998,
+        1530,
+        1094,
         14,
         17
       ],
@@ -4237,7 +4233,8 @@
       "originalSize": [
         14,
         17
-      ]
+      ],
+      "rotated": 1
     }
   },
   {
@@ -4273,8 +4270,8 @@
       "name": "icon_rankright",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1605,
-        1262,
+        1530,
+        1110,
         14,
         17
       ],
@@ -4295,8 +4292,8 @@
       "name": "icon_nb10",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1215,
-        1495,
+        1104,
+        1383,
         31,
         34
       ],
@@ -4316,8 +4313,8 @@
       "name": "box",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1554,
-        702,
+        992,
+        1338,
         165,
         43
       ],
@@ -4328,8 +4325,7 @@
       "originalSize": [
         165,
         43
-      ],
-      "rotated": 1
+      ]
     }
   },
   {
@@ -4338,8 +4334,8 @@
       "name": "icon_rankyellow",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        882,
-        655,
+        1640,
+        1,
         547,
         46
       ],
@@ -4402,8 +4398,8 @@
       "name": "box2",
       "texture": "c0GzcWGItKJpRvUEF/Kk0p",
       "rect": [
-        1094,
-        1364,
+        1640,
+        550,
         154,
         54
       ],
@@ -4414,7 +4410,8 @@
       "originalSize": [
         154,
         54
-      ]
+      ],
+      "rotated": 1
     }
   }
 ]

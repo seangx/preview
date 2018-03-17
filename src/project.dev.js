@@ -1716,7 +1716,7 @@ require = function e(t, n, r) {
         var self = this;
         "middle" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed + self.speedOffset);
         "forward" === self.bgType && (self.bgSpeed = 1.1 * _global2.default.account.playerData.speed + self.speedOffset);
-        "after" === self.bgType && (self.bgSpeed = .9 * _global2.default.account.playerData.speed + self.speedOffset);
+        "after" === self.bgType && (self.bgSpeed = 1 * _global2.default.account.playerData.speed + self.speedOffset);
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
           if ("middle" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
@@ -1728,7 +1728,7 @@ require = function e(t, n, r) {
           }
           if ("after" === self.bgType) {
             cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = .9 * opt.speedValue + self.speedOffset;
+            self.bgSpeed = 1 * opt.speedValue + self.speedOffset;
           }
           opt.speedValue <= 0 && (self.bgSpeed = 0);
         });

@@ -1172,7 +1172,7 @@
           "node": {
             "__id__": 30
           },
-          "totalTime": 300,
+          "totalTime": 210,
           "progressTime": {
             "__id__": 38
           },
@@ -1264,8 +1264,8 @@
       ],
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 47,
-        "height": 47
+        "width": 56,
+        "height": 56
       },
       "_position": {
         "__type__": "cc.Vec2",
@@ -1681,8 +1681,8 @@
       ],
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 194,
-        "height": 182
+        "width": 290,
+        "height": 274
       }
     },
     {
@@ -1705,8 +1705,8 @@
       },
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 185,
-        "height": 172
+        "width": 278,
+        "height": 261
       },
       "_position": {
         "__type__": "cc.Vec2",
@@ -1813,8 +1813,8 @@
       ],
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 137,
-        "height": 138
+        "width": 198,
+        "height": 198
       }
     },
     {
@@ -1841,8 +1841,8 @@
       },
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 25,
-        "height": 75
+        "width": 44,
+        "height": 107
       },
       "_rotationX": -150,
       "_rotationY": -150,
@@ -2397,6 +2397,7 @@
       "_parent": {
         "__id__": 2
       },
+      "_active": false,
       "_components": [
         {
           "__type__": "cc.Sprite",
