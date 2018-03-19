@@ -1120,6 +1120,7 @@ require = function e(t, n, r) {
         var _this = this;
         var self = this;
         this.timeScale = _global2.default.account.playerData.speedScale;
+        cc.view.enableRetina();
         _global2.default.account.gameCtl.event.on("jump", this.jump.bind(this));
         this.initPosY = this.node.position.y;
         this.node.on("time-scale", function(event) {
@@ -1171,11 +1172,14 @@ require = function e(t, n, r) {
     cc.Class({
       extends: cc.Component,
       properties: {
-        labelGold: cc.Label
+        labelGold: cc.Label,
+        labelTest: cc.Label
       },
       onLoad: function onLoad() {
         var size = cc.view.getFrameSize();
         75 === parseInt(size.width / size.height * 100) && cc.log("4:3");
+        var canvas = document.getElementById("GameCanvas");
+        canvas && (this.labelTest.string = canvas.width + "/" + canvas.height);
         this.labelGold && (this.labelGold.string = _global2.default.account.playerData.goldCount);
         this.role = 0;
       },
