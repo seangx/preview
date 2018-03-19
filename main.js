@@ -78,7 +78,7 @@
             if (!false) {
                 // UC browser on many android devices have performance issue with retina display
                 if (cc.sys.os !== cc.sys.OS_ANDROID || cc.sys.browserType !== cc.sys.BROWSER_TYPE_UC) {
-                    cc.view.enableRetina(true);
+                    cc.view.enableRetina(false);
                 }
                 if (cc.sys.isBrowser) {
                     setLoadingDisplay();
