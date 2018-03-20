@@ -198,7 +198,7 @@
           },
           "_designResolution": {
             "__type__": "cc.Size",
-            "width": 1280,
+            "width": 1136,
             "height": 720
           }
         },
@@ -339,18 +339,21 @@
           },
           "_clip": {
             "__uuid__": "dfOB80po5II6SnjimMi9T5"
-          }
+          },
+          "_loop": true,
+          "playOnLoad": true,
+          "preload": true
         }
       ],
       "_id": "247J2DQ1VAzb8tRiqlYUwC",
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 1280,
+        "width": 1136,
         "height": 720
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 640,
+        "x": 568,
         "y": 360
       }
     },
@@ -406,16 +409,16 @@
               "__id__": 7
             },
             {
-              "__id__": 8
-            },
-            {
-              "__id__": 9
+              "__id__": 11
             },
             {
               "__id__": 10
             },
             {
-              "__id__": 11
+              "__id__": 9
+            },
+            {
+              "__id__": 8
             }
           ],
           "bgSpeed": 200,
@@ -451,7 +454,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -2261
+        "x": -2213
       }
     },
     {
@@ -478,7 +481,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -1619
+        "x": -1571
       }
     },
     {
@@ -505,7 +508,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -977
+        "x": -929
       }
     },
     {
@@ -532,88 +535,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -335
-      }
-    },
-    {
-      "__type__": "cc.Node",
-      "_name": "after_scene_1",
-      "_parent": {
-        "__id__": 3
-      },
-      "_components": [
-        {
-          "__type__": "cc.Sprite",
-          "node": {
-            "__id__": 8
-          },
-          "_spriteFrame": {
-            "__uuid__": "23o3v9b3BHyr6GpGeq8HkK"
-          }
-        }
-      ],
-      "_contentSize": {
-        "__type__": "cc.Size",
-        "width": 642,
-        "height": 382
-      },
-      "_position": {
-        "__type__": "cc.Vec2",
-        "x": 307
-      }
-    },
-    {
-      "__type__": "cc.Node",
-      "_name": "after_scene_2",
-      "_parent": {
-        "__id__": 3
-      },
-      "_components": [
-        {
-          "__type__": "cc.Sprite",
-          "node": {
-            "__id__": 9
-          },
-          "_spriteFrame": {
-            "__uuid__": "3cFwSmZ9BCBpX04UZ7QWp5"
-          }
-        }
-      ],
-      "_contentSize": {
-        "__type__": "cc.Size",
-        "width": 642,
-        "height": 382
-      },
-      "_position": {
-        "__type__": "cc.Vec2",
-        "x": 949
-      }
-    },
-    {
-      "__type__": "cc.Node",
-      "_name": "after_scene_3",
-      "_parent": {
-        "__id__": 3
-      },
-      "_components": [
-        {
-          "__type__": "cc.Sprite",
-          "node": {
-            "__id__": 10
-          },
-          "_spriteFrame": {
-            "__uuid__": "efESXqR/tCv7CKq/qnliG9"
-          }
-        }
-      ],
-      "_contentSize": {
-        "__type__": "cc.Size",
-        "width": 642,
-        "height": 382
-      },
-      "_position": {
-        "__type__": "cc.Vec2",
-        "x": 1591
+        "x": -287
       }
     },
     {
@@ -626,7 +548,7 @@
         {
           "__type__": "cc.Sprite",
           "node": {
-            "__id__": 11
+            "__id__": 8
           },
           "_spriteFrame": {
             "__uuid__": "01lA/xNK1CX5WGeNv4IOg6"
@@ -640,7 +562,88 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 2233
+        "x": 2281
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "after_scene_3",
+      "_parent": {
+        "__id__": 3
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 9
+          },
+          "_spriteFrame": {
+            "__uuid__": "efESXqR/tCv7CKq/qnliG9"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 642,
+        "height": 382
+      },
+      "_position": {
+        "__type__": "cc.Vec2",
+        "x": 1639
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "after_scene_2",
+      "_parent": {
+        "__id__": 3
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 10
+          },
+          "_spriteFrame": {
+            "__uuid__": "3cFwSmZ9BCBpX04UZ7QWp5"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 642,
+        "height": 382
+      },
+      "_position": {
+        "__type__": "cc.Vec2",
+        "x": 997
+      }
+    },
+    {
+      "__type__": "cc.Node",
+      "_name": "after_scene_1",
+      "_parent": {
+        "__id__": 3
+      },
+      "_components": [
+        {
+          "__type__": "cc.Sprite",
+          "node": {
+            "__id__": 11
+          },
+          "_spriteFrame": {
+            "__uuid__": "23o3v9b3BHyr6GpGeq8HkK"
+          }
+        }
+      ],
+      "_contentSize": {
+        "__type__": "cc.Size",
+        "width": 642,
+        "height": 382
+      },
+      "_position": {
+        "__type__": "cc.Vec2",
+        "x": 355
       }
     },
     {
@@ -855,7 +858,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 305,
+        "x": 355,
         "y": 190
       }
     },
@@ -883,7 +886,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 947,
+        "x": 997,
         "y": 189
       }
     },
@@ -912,7 +915,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 1589,
+        "x": 1639,
         "y": 189
       }
     },
@@ -941,7 +944,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 2231,
+        "x": 2281,
         "y": 189
       }
     },
@@ -1042,7 +1045,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -2253
+        "x": -2217
       }
     },
     {
@@ -1069,7 +1072,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -1611
+        "x": -1575
       }
     },
     {
@@ -1096,7 +1099,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -969
+        "x": -933
       }
     },
     {
@@ -1123,7 +1126,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -327
+        "x": -291
       }
     },
     {
@@ -1150,7 +1153,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 315
+        "x": 351
       }
     },
     {
@@ -1177,7 +1180,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 957
+        "x": 993
       }
     },
     {
@@ -1204,7 +1207,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 1599
+        "x": 1635
       }
     },
     {
@@ -1231,7 +1234,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 2241
+        "x": 2277
       }
     },
     {
@@ -1581,7 +1584,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -2088
+        "x": -2046
       }
     },
     {
@@ -1608,7 +1611,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -1462
+        "x": -1420
       }
     },
     {
@@ -1635,7 +1638,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -843
+        "x": -801
       }
     },
     {
@@ -1662,7 +1665,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": -205
+        "x": -163
       }
     },
     {
@@ -1689,7 +1692,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 431
+        "x": 473
       }
     },
     {
@@ -1716,7 +1719,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 1057
+        "x": 1099
       }
     },
     {
@@ -1743,7 +1746,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 1676
+        "x": 1718
       }
     },
     {
@@ -1770,7 +1773,7 @@
       },
       "_position": {
         "__type__": "cc.Vec2",
-        "x": 2314
+        "x": 2356
       }
     },
     {

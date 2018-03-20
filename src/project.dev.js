@@ -1739,16 +1739,16 @@ require = function e(t, n, r) {
       },
       changeSpeed: function changeSpeed(self, speed, offset) {
         "road" === self.bgType && (self.bgSpeed = speed + offset);
-        "middle" === self.bgType && (self.bgSpeed = .8 * speed + offset);
+        "middle" === self.bgType && (self.bgSpeed = .4 * speed + offset);
         "forward" === self.bgType && (self.bgSpeed = 1.1 * speed + offset);
-        "after" === self.bgType && (self.bgSpeed = .6 * speed + offset);
+        "after" === self.bgType && (self.bgSpeed = .3 * speed + offset);
         speed <= 0 && (self.bgSpeed = 0);
       },
       update: function update(dt) {
         if (!_global2.default.account.gameCtl.isRunning() || _global2.default.account.gameCtl.state() === GameState.endScene) return;
         var dis = this.bgSpeed * dt;
         for (var i in this.bgList) this.bgList[i].x -= dis;
-        if (this.bgList[0].x <= -1400) {
+        if (this.bgList[0].x <= -1700) {
           var item = this.bgList.shift();
           var lastItem = this.bgList[this.bgList.length - 1];
           item.x = lastItem.x + lastItem.width;
