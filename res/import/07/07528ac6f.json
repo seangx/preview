@@ -2603,8 +2603,7 @@
             }
           ],
           "bgSpeed": 200,
-          "bgType": "after",
-          "speedScaleRate": 0.5
+          "bgType": "after"
         }
       ],
       "_position": {
@@ -2827,8 +2826,7 @@
               "__id__": 16
             }
           ],
-          "bgSpeed": 400,
-          "speedScaleRate": 1
+          "bgSpeed": 400
         }
       ],
       "_position": {
@@ -3301,8 +3299,7 @@
             }
           ],
           "bgSpeed": 450,
-          "bgType": "forward",
-          "speedScaleRate": 1.4
+          "bgType": "forward"
         }
       ],
       "_position": {

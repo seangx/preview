@@ -3445,8 +3445,7 @@
             }
           ],
           "bgSpeed": 200,
-          "bgType": "after",
-          "speedScaleRate": 0.5
+          "bgType": "after"
         },
         {
           "__type__": "cc.Widget",
@@ -3647,8 +3646,7 @@
               "__id__": 14
             }
           ],
-          "bgSpeed": 400,
-          "speedScaleRate": 1
+          "bgSpeed": 400
         },
         {
           "__type__": "cc.Widget",
@@ -4120,8 +4118,7 @@
             }
           ],
           "bgSpeed": 450,
-          "bgType": "forward",
-          "speedScaleRate": 1.4
+          "bgType": "forward"
         },
         {
           "__type__": "cc.Widget",

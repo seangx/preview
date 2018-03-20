@@ -1178,6 +1178,7 @@ require = function e(t, n, r) {
       onLoad: function onLoad() {
         var size = cc.view.getFrameSize();
         75 === parseInt(size.width / size.height * 100) && cc.log("4:3");
+        cc.log(cc.sys.MACOS);
         var canvas = document.getElementById("GameCanvas");
         canvas && (this.labelTest.string = canvas.width + "/" + canvas.height);
         this.labelGold && (this.labelGold.string = _global2.default.account.playerData.goldCount);
@@ -1683,24 +1684,18 @@ require = function e(t, n, r) {
       },
       onLoad: function onLoad() {
         var self = this;
-        "middle" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed + self.speedOffset);
-        "forward" === self.bgType && (self.bgSpeed = 1.2 * _global2.default.account.playerData.speed + self.speedOffset);
-        "after" === self.bgType && (self.bgSpeed = .9 * _global2.default.account.playerData.speed + self.speedOffset);
+        self.changeSpeed(self, _global2.default.account.playerData.speed, self.speedOffset);
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
-          if ("middle" === self.bgType) {
-            cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = opt.speedValue + self.speedOffset;
-          }
-          if ("forward" === self.bgType) {
-            cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = 1.2 * opt.speedValue + self.speedOffset;
-          }
-          if ("after" === self.bgType) {
-            cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = .9 * opt.speedValue + self.speedOffset;
-          }
-          opt.speedValue <= 0 && (self.bgSpeed = 0);
+          cc.log("on speed changed,", opt.speedValue);
+          self.changeSpeed(self, opt.speedValue, self.speedOffset);
         });
+      },
+      changeSpeed: function changeSpeed(self, speed, offset) {
+        "road" === self.bgType && (self.bgSpeed = speed + offset);
+        "middle" === self.bgType && (self.bgSpeed = .7 * speed + offset);
+        "forward" === self.bgType && (self.bgSpeed = 1.2 * speed + offset);
+        "after" === self.bgType && (self.bgSpeed = .5 * speed + offset);
+        speed <= 0 && (self.bgSpeed = 0);
       },
       update: function update(dt) {
         if (!_global2.default.account.gameCtl.isRunning() || this.bgList.length <= 0 || _global2.default.account.gameCtl.state() === GameState.endScene) return;
@@ -1732,35 +1727,28 @@ require = function e(t, n, r) {
         },
         bgSpeed: 0,
         bgType: "middle",
-        speedScaleRate: 0,
         speedOffset: 0
       },
       onLoad: function onLoad() {
         var self = this;
-        "middle" === self.bgType && (self.bgSpeed = _global2.default.account.playerData.speed + self.speedOffset);
-        "forward" === self.bgType && (self.bgSpeed = 1.2 * _global2.default.account.playerData.speed + self.speedOffset);
-        "after" === self.bgType && (self.bgSpeed = 1 * _global2.default.account.playerData.speed + self.speedOffset);
+        self.changeSpeed(self, _global2.default.account.playerData.speed, self.speedOffset);
         _global2.default.account.gameCtl.event.on("speed-changed", function(opt) {
-          if ("middle" === self.bgType) {
-            cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = opt.speedValue + self.speedOffset;
-          }
-          if ("forward" === self.bgType) {
-            cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = 1.2 * opt.speedValue + self.speedOffset;
-          }
-          if ("after" === self.bgType) {
-            cc.log("on speed changed,", opt.speedValue);
-            self.bgSpeed = 1 * opt.speedValue + self.speedOffset;
-          }
-          opt.speedValue <= 0 && (self.bgSpeed = 0);
+          cc.log("on speed changed,", opt.speedValue);
+          self.changeSpeed(self, opt.speedValue, self.speedOffset);
         });
+      },
+      changeSpeed: function changeSpeed(self, speed, offset) {
+        "road" === self.bgType && (self.bgSpeed = speed + offset);
+        "middle" === self.bgType && (self.bgSpeed = .8 * speed + offset);
+        "forward" === self.bgType && (self.bgSpeed = 1.1 * speed + offset);
+        "after" === self.bgType && (self.bgSpeed = .6 * speed + offset);
+        speed <= 0 && (self.bgSpeed = 0);
       },
       update: function update(dt) {
         if (!_global2.default.account.gameCtl.isRunning() || _global2.default.account.gameCtl.state() === GameState.endScene) return;
         var dis = this.bgSpeed * dt;
         for (var i in this.bgList) this.bgList[i].x -= dis;
-        if (this.bgList[0].x <= -1e3) {
+        if (this.bgList[0].x <= -1400) {
           var item = this.bgList.shift();
           var lastItem = this.bgList[this.bgList.length - 1];
           item.x = lastItem.x + lastItem.width;
@@ -1999,7 +1987,7 @@ require = function e(t, n, r) {
         this.poolManager = poolManager;
       },
       update: function update(dt) {
-        this.node.x < -2e3 && this.poolManager.returnTerrain(this.terrainType, this.node);
+        this.node.x < -2500 && this.poolManager.returnTerrain(this.terrainType, this.node);
         if (this.node.parent) {
           var player = this.node.parent.getChildByName("player");
           if (Math.abs(this.node.x - player.x) <= 450) for (var i in this.node.children) this.node.children[i].emit("near-player");
