@@ -1172,15 +1172,11 @@ require = function e(t, n, r) {
     cc.Class({
       extends: cc.Component,
       properties: {
-        labelGold: cc.Label,
-        labelTest: cc.Label
+        labelGold: cc.Label
       },
       onLoad: function onLoad() {
         var size = cc.view.getFrameSize();
         75 === parseInt(size.width / size.height * 100) && cc.log("4:3");
-        cc.log(cc.sys.MACOS);
-        var canvas = document.getElementById("GameCanvas");
-        canvas && (this.labelTest.string = canvas.width + "/" + canvas.height);
         this.labelGold && (this.labelGold.string = _global2.default.account.playerData.goldCount);
         this.role = 0;
       },
@@ -1691,10 +1687,10 @@ require = function e(t, n, r) {
         });
       },
       changeSpeed: function changeSpeed(self, speed, offset) {
-        "road" === self.bgType && (self.bgSpeed = speed + offset);
-        "middle" === self.bgType && (self.bgSpeed = .7 * speed + offset);
+        "middle" === self.bgType && (self.bgSpeed = speed + offset);
+        "after2" === self.bgType && (self.bgSpeed = .8 * speed + offset);
         "forward" === self.bgType && (self.bgSpeed = 1.2 * speed + offset);
-        "after" === self.bgType && (self.bgSpeed = .5 * speed + offset);
+        "after" === self.bgType && (self.bgSpeed = .9 * speed + offset);
         speed <= 0 && (self.bgSpeed = 0);
       },
       update: function update(dt) {
@@ -1738,10 +1734,10 @@ require = function e(t, n, r) {
         });
       },
       changeSpeed: function changeSpeed(self, speed, offset) {
-        "road" === self.bgType && (self.bgSpeed = speed + offset);
-        "middle" === self.bgType && (self.bgSpeed = .4 * speed + offset);
+        "middle" === self.bgType && (self.bgSpeed = speed + offset);
+        "after2" === self.bgType && (self.bgSpeed = .9 * speed + offset);
         "forward" === self.bgType && (self.bgSpeed = 1.1 * speed + offset);
-        "after" === self.bgType && (self.bgSpeed = .3 * speed + offset);
+        "after" === self.bgType && (self.bgSpeed = .8 * speed + offset);
         speed <= 0 && (self.bgSpeed = 0);
       },
       update: function update(dt) {
